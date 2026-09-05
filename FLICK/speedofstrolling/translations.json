@@ -1,0 +1,17 @@
+{
+  "$SPEEDNAME": "旅行大修",
+  "$ROADSPEEDSETTING": "道路速度倍率",
+  "$MUDSPEEDSETTING": "泥地速度倍率",
+  "$SNOWSPEEDSETTING": "雪地速度倍率",
+  "$GRASSSPEEDSETTING": "草地速度倍率",
+  "$HELP_ROAD": "在道路上时的速度倍率",
+  "$HELP_MUD": "在泥泞地面上时的速度倍率",
+  "$HELP_SNOW": "在雪地中行走时的速度倍率",
+  "$HELP_GRASS": "穿过草地时的速度倍率",
+  "$SANDSPEEDSETTING": "沙地速度倍率",
+  "$ENABLEROADNPCSETTING": "NPC 道路速度",
+  "$ENABLEWATERSLOWDOWN": "水中减速",
+  "$HELP_SAND": "在沙地上行走时的速度倍率",
+  "$HELP_ENABLENPCROADS": "为NPC启用道路速度变化。目前此功能仍处于实验阶段",
+  "$HELP_ENABLEWATERSPEED": "根据水深调整移动速度。不影响游泳速度！"
+}

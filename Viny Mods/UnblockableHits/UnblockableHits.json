@@ -1,0 +1,8 @@
+{
+  "unblockable": {
+      "name": "Unblockable hits taken",
+      "desc": "How many unblockable hits you took",
+      "category": "{{$General}}"
+    }
+
+}

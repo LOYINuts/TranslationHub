@@ -1,0 +1,63 @@
+{
+  "common": {
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "menu": {
+    "settings": "Rules",
+    "reload": "Reload rules",
+    "new_rule": "New rule",
+    "filters": "Filters",
+    "filter_text": "Text",
+    "filter_unit": "Duration unit",
+    "no_rules": "No rules found.",
+    "no_filter_results": "No rules match the current filters.",
+    "enabled": "Enabled",
+    "duration": "Duration",
+    "start_after": "Start after",
+    "loop": "Loop",
+    "finish_after_loops": "Finish after a number of loops",
+    "max_loops": "Finish after loops",
+    "notify_enabled": "Notify",
+    "notify_every": "Notify every",
+    "notify_message": "Notification text",
+    "show_remaining": "Show remaining time",
+	"notify_on_trigger": "Notify when the event triggers",
+	"trigger_notification_message": "Event notification text",
+	"notification_preview": "Reminder",
+	"trigger_notification_preview": "On event",
+    "count_wait_time": "Count wait/sleep time",
+    "notify_on_wait": "Notify when triggered by wait",
+    "notify_on_sleep": "Notify when triggered by sleep",
+    "wait_notification_message": "Wait notification text",
+    "sleep_notification_message": "Sleep notification text",
+    "edit_rule": "Edit rule",
+    "create_rule": "Create rule",
+    "rule_id": "Rule ID",
+    "rule_name": "Name",
+    "no_notification": "Notifications disabled"
+  },
+  "hud": {
+    "default_notification": "Time is ticking.",
+	"default_trigger_notification": "Time is up.",
+    "default_wait_notification": "Time passed while waiting.",
+    "default_sleep_notification": "Time passed while sleeping.",
+    "remaining_suffix": "remaining."
+  },
+  "time": {
+    "minutes": "Minutes",
+    "hours": "Hours",
+    "days": "Days",
+    "weeks": "Weeks"
+  },
+  "error": {
+    "invalid_id": "Rule ID can only use letters, numbers, '_' and '-'.",
+    "duplicate_id": "Another rule already uses this ID.",
+    "save_failed": "Failed to save rule."
+  }
+}

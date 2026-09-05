@@ -1,0 +1,51 @@
+{
+  "btn": {
+    "save_apply": "Save and Apply"
+  },
+  "col": {
+    "formid": "FormID",
+    "name": "Name / EditorID",
+    "status": "Status (Applied Rule)"
+  },
+  "db": {
+    "build": "Refresh Database (Build DB)",
+    "default": "Default",
+    "filter": "Filter Name/EditorID",
+    "force_scan": "Force Scan",
+    "modified": "MODIFIED: %s",
+    "no_npcs": "No NPCs loaded into memory.",
+    "only_modified": "Only Modified NPCs",
+    "showing": "Showing %d NPCs"
+  },
+  "debug": {
+    "desc_all": "Enable All: Logs EVERYTHING that enters/exits (Actors, Projectiles, etc).",
+    "desc_disable": "Disable: No trigger logs are recorded.",
+    "desc_player": "Enable Player: Logs IN-GAME and to LOG only if the Caster is the Player.",
+    "enable_log": "Enable Log in UI",
+    "title": "Debug Settings"
+  },
+  "menu": {
+    "database": "Database",
+    "debug": "Debug",
+    "rules": "Rules",
+    "section": "NPC Senses"
+  },
+  "msg": {
+    "rules_updated": "Vision Rules updated!"
+  },
+  "rule": {
+    "aura": "Aura:",
+    "dup_name": "[!] Duplicate Name",
+    "enabled": "Enabled",
+    "filter": "Filter Rules by Name",
+    "name": "Name",
+    "new": "New Rule",
+    "new_default": "New Rule",
+    "node": "Node",
+    "remove": "Remove",
+    "target": "Target",
+    "type": "Type",
+    "use_los": "Vision uses Line of Sight (LOS)",
+    "vision": "Vision:"
+  }
+}

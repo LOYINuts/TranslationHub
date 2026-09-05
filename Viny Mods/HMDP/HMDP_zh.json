@@ -1,0 +1,8 @@
+{
+  "HMDP": {
+      "name": "存活天数",
+      "desc": "你存活了多少天。",
+      "category": "{{$General}}"
+    }
+
+}

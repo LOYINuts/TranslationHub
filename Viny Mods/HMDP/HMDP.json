@@ -1,0 +1,8 @@
+{
+  "HMDP": {
+      "name": "Days Survived",
+      "desc": "How many days you survived.",
+      "category": "{{$General}}"
+    }
+
+}

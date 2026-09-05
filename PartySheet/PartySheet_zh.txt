@@ -1,0 +1,442 @@
+; =============================================================================
+; PartySheet Translation File - English
+; =============================================================================
+; IMPORTANT: Do NOT remove or modify the format specifiers (%d, %s) in values!
+; These are placeholders for dynamic values:
+;   %d = number (e.g., level, count)
+;   %s = text (e.g., race name, item name)
+; Removing or reordering them will cause the game to CRASH!
+; =============================================================================
+
+[Common]
+Unknown=未知
+None=无
+Other=其他
+Level=Lv
+LevelShort=Lv %d
+LevelFull=Lv %d (%s)
+Empty=(空)
+NoParty=无小队成员
+PartyMembers=小队成员
+Player=玩家
+Ally=盟友
+Essential=关键
+Protected=受保护
+Friend=朋友
+Acquaintance=熟人
+Foe=敌对
+Lover=恋人
+Confidant=知己
+Rival=对手
+Enemy=敌人
+Archnemesis=死敌
+
+[Stats]
+Health=生命值
+Magicka=魔力
+Stamina=耐力
+Armor=护甲
+Damage=伤害
+DPS=每秒伤害
+DamageResist=伤害抗性
+Magic=魔法
+Move=移动速度
+Speed=速度
+Reach=攻击范围
+Stagger=硬直
+Defense=防御
+Combat=战斗
+; Regen / multiplier AVs
+HealthRegen=生命恢复
+MagickaRegen=魔力恢复
+StaminaRegen=耐力恢复
+HealthRegenMult=生命恢复倍率
+MagickaRegenMult=魔力恢复倍率
+StaminaRegenMult=耐力恢复倍率
+
+[Equipment]
+Title=装备
+SectionEquipped=已装备
+SectionArmor=护甲
+Unarmed=徒手
+Arrows=箭矢
+ArrowsCount=(%d) 支箭矢
+BadgeLeft=L
+BadgeRight=R
+BadgeShout=Z
+
+[Skills]
+Title=技能
+SectionTitle=技能
+HeavyArmor=重甲
+LightArmor=轻甲
+OneHanded=单手
+TwoHanded=双手
+Archery=箭术
+Block=格挡
+Smithing=锻造
+Alteration=变化系
+Conjuration=召唤系
+Destruction=毁灭系
+Illusion=幻术系
+Restoration=恢复系
+Enchanting=附魔
+Sneak=潜行
+Lockpicking=开锁
+Pickpocket=扒窃
+Speech=口才
+Alchemy=炼金
+
+[Resistances]
+Title=抗性
+Fire=火焰抗性
+Frost=寒霜抗性
+Shock=闪电抗性
+Magic=魔法抗性
+Poison=毒素抗性
+Disease=疾病抗性
+
+[CharacterSheet]
+; Equipment Slots
+slot_right_hand=右手
+slot_left_hand=左手
+slot_head=头
+slot_chest=胸
+slot_hands=手
+slot_feet=脚
+slot_amulet=护符
+slot_ring=戒指
+slot_main=主手
+slot_off=副手
+
+; Equipment Defaults
+none=无
+spell=魔法
+empty=空
+no_arrows=无箭矢
+
+; Additional Stats
+dmg_resist=伤害抗性
+gold=金币
+weight=负重
+souls=龙魂
+perks=技能点
+
+; Headers
+header_warrior=战士
+header_thief=盗贼
+header_mage=法师
+header_status=状态
+header_faction_status=派系状态
+header_champion_status=勇士状态
+header_thane_status=武卫状态
+header_disease_status=疾病状态
+
+; Status Labels
+member=成员
+champion=勇士
+opposed=敌对
+dragonborn=龙裔
+Status.Dawnguard=黎明守卫
+Status.Volkihar=沃基哈尔家族
+Status.Telvanni=泰瓦尼家族
+Status.OrcKinTitle=血亲
+Status.ThanePrefix=武卫-
+no_major_factions=没有派系或头衔
+
+; Bar Headers
+shout_format=龙吼 %.0f%%
+
+[PlayerResources]
+weather_clear=晴朗
+weather_cloudy=多云
+weather_rain=下雨
+weather_snow=下雪
+interior_fallback=室内
+
+[Survival]
+need_cold=寒冷
+need_hunger=饥饿
+need_fatigue=疲劳
+cold_0=温暖
+cold_1=舒适
+cold_2=微凉
+cold_3=严寒
+cold_4=冰寒
+cold_5=冻僵
+hunger_0=饱腹
+hunger_1=不饿
+hunger_2=微饿
+hunger_3=饥饿
+hunger_4=极饿
+hunger_5=饥肠辘辘
+fatigue_0=休息充分
+fatigue_1=振作
+fatigue_2=微疲
+fatigue_3=疲劳
+fatigue_4=疲惫
+fatigue_5=力竭
+; Starfrost survival overhaul
+sf_hunger_0=进食
+sf_hunger_1=饥饿
+sf_hunger_2=很饿
+sf_hunger_3=极饿
+sf_cold_0=温暖
+sf_cold_1=舒适
+sf_cold_2=微凉
+sf_cold_3=寒冷
+sf_cold_4=严寒
+sf_cold_5=冰寒
+sf_fatigue_0=休息充分
+sf_fatigue_1=振作
+sf_fatigue_2=微疲
+sf_fatigue_3=疲劳
+sf_fatigue_4=很疲
+sf_fatigue_5=力竭
+; Last Seed Vitality — derived condition tier, not a need. Tier words come from the
+; live SPEL names (already localized by the game), so only the label is here.
+need_vitality=活力
+; SunHelm survival
+need_thirst=口渴
+sh_hunger_0=饱腹
+sh_hunger_1=满足
+sh_hunger_2=微饿
+sh_hunger_3=饥饿
+sh_hunger_4=极饿
+sh_hunger_5=饥肠辘辘
+sh_thirst_0=解渴
+sh_thirst_1=满足
+sh_thirst_2=口渴
+sh_thirst_3=干渴
+sh_thirst_4=脱水
+sh_thirst_5=严重脱水
+sh_fatigue_0=休息充分
+sh_fatigue_1=已休息
+sh_fatigue_2=微疲
+sh_fatigue_3=疲劳
+sh_fatigue_4=疲惫
+sh_fatigue_5=力竭
+sh_cold_0=温暖
+sh_cold_1=舒适
+sh_cold_2=微凉
+sh_cold_3=寒冷
+sh_cold_4=冰寒
+sh_cold_5=刺骨严寒
+; Frostfall (Chesko). Cold-only mod, composes on top of any needs backend, so
+; these render alongside another backend's hunger/thirst/fatigue.
+; Exposure is SEVEN stages (0-6), the only axis above 5: Frostfall's ladder is
+; -1..6 and our reader clamps -1 (its "totally warm") to 0.
+; Words match Frostfall's own tiers as shipped by iWant Frostfall Widgets — do
+; not "improve" them or the card disagrees with Frostfall's own messages.
+need_exposure=暴露
+need_wetness=湿度
+ff_exposure_0=温暖
+ff_exposure_1=舒适
+ff_exposure_2=寒冷
+ff_exposure_3=严寒
+ff_exposure_4=冰寒
+ff_exposure_5=冻死
+ff_exposure_6=最大暴露
+ff_wetness_0=未湿
+ff_wetness_1=微湿
+ff_wetness_2=潮湿
+ff_wetness_3=湿透
+; Last Seed (Chesko). Needs-only backend, ships no cold axis, so there is no
+; ls_cold_* set. Words from SeedUtil.psc's own API doc comments.
+ls_hunger_0=饱腹
+ls_hunger_1=满足
+ls_hunger_2=饥饿
+ls_hunger_3=很饿
+ls_hunger_4=极饿
+ls_hunger_5=饥肠辘辘
+ls_thirst_0=解渴
+ls_thirst_1=清爽
+ls_thirst_2=口渴
+ls_thirst_3=很渴
+ls_thirst_4=干渴
+ls_thirst_5=脱水
+ls_fatigue_0=休息充分
+ls_fatigue_1=敏锐
+ls_fatigue_2=微疲
+ls_fatigue_3=疲劳
+ls_fatigue_4=憔悴
+ls_fatigue_5=力竭
+
+[Disease]
+; Tier words are per-backend. CC Survival / SMI / Starfrost ladder
+; Infected -> Severe -> Crippling; SunHelmDiseases.esp ladders
+; Infected -> Acute -> Severe. Stage 1 shares disease_stage_infected.
+disease_stage_infected=感染
+disease_stage_severe=严重
+disease_stage_crippling=致残
+disease_sh_stage_acute=急性
+disease_sh_stage_severe=严重
+
+[KnowYourEnemy]
+; Section header + tier rows
+Header=KNOW YOUR ENEMY
+WeakTo=弱点
+ResistantTo=抗性
+HighlyResistantTo=高抗性
+
+; Trait / type badges
+Cold Adapted=寒冷适应
+Troll Blood=巨魔之血
+Frozen=冻结
+Daedra=迪德拉
+Lycanthrope=狼人
+
+; Intelligence badges
+Unintelligent=无智力
+Aware=有意识
+Intelligent=有智力
+
+; Armor badges
+Heavy Armor=重甲
+Light Armor=轻甲
+Cuirass=胸甲
+Full Set=全套
+Leather=皮革
+Metal=金属
+Robes=长袍
+
+; Damage / resistance types
+Blade=利刃
+Blunt=钝击
+Axe=斧击
+Bow=弓箭
+Crossbow=弩箭
+Fist=徒手
+Bash=盾击
+Fire=火焰
+Frost=寒霜
+Shock=闪电
+Poison=毒素
+Disease=疾病
+Sneak=潜行
+Drain=吸取
+Illusion=幻术
+Sun=阳光
+
+[Traits]
+; Tier prefixes (skill level thresholds: 15/40/60/80)
+Trait.Tier.Apprentice=学徒级
+Trait.Tier.Adept=老手级
+Trait.Tier.Expert=专家级
+Trait.Tier.Master=大师级
+
+; Skill-based trait names (18 skills)
+Trait.OneHanded=剑士
+Trait.TwoHanded=狂战
+Trait.Block=盾卫
+Trait.LightArmor=斥候
+Trait.HeavyArmor=重装卫士
+Trait.Smithing=锻造大师
+Trait.Destruction=战斗法师
+Trait.Restoration=疗愈师
+Trait.Conjuration=召唤师
+Trait.Alteration=秘术师
+Trait.Illusion=夜刃
+Trait.Enchanting=附魔工匠
+Trait.Sneak=暗影行者
+Trait.Lockpicking=渗透者
+Trait.Pickpocket=扒手
+Trait.Archery=神射手
+Trait.Alchemy=炼金师
+Trait.Speech=巧舌者
+
+[Widgets]
+barenziah=巴兰兹亚宝石
+nirnroot=深红奈恩根
+jiub=鸠步的巨著
+lockpick=开锁器
+health_potion=生命药水
+magicka_potion=魔力药水
+stamina_potion=耐力药水
+dragonpriest_mask=龙祭司面具
+dragon_claw=龙爪
+vale_paragon=遗忘山谷圣石
+black_book=黑暗经书
+
+[AI]
+AI.Aggression.Unaggressive=无攻击性
+AI.Aggression.Aggressive=有攻击性
+AI.Aggression.VeryAggressive=高攻击性
+AI.Aggression.Frenzied=疯狂
+AI.Confidence.Cowardly=懦弱
+AI.Confidence.Cautious=谨慎
+AI.Confidence.Average=普通
+AI.Confidence.Brave=勇敢
+AI.Confidence.Foolhardy=鲁莽
+AI.Assistance.Nobody=不协助
+AI.Assistance.Allies=协助盟友
+AI.Assistance.FriendsAndAllies=协助朋友与盟友
+AI.Aggression.Label=攻击性
+AI.Confidence.Label=自信
+AI.Assistance.Label=协助
+
+[PartySheetV2]
+EffectsAndSpells=效果 & 法术
+Inventory=背包
+ControlsHint=[ TAB ] 返回
+SpellTypeAbility=天赋
+SpellTypePower=种族能力
+SpellTypeLesserPower=小型能力
+SpellTypeSpell=法术
+SectionRace=种族
+SectionPassive=被动效果
+SectionEquipment=装备
+SectionBlessings=祝福
+SectionActive=主动效果
+SectionSpells=法术列表
+SectionNeeds=需求
+SectionVitality=活力
+SectionDiseases=疾病
+
+[Inventory]
+TypeWeapon=武器
+TypeArmor=护甲
+TypePotion=药水
+TypeFood=食物
+TypeAmmo=弹药
+TypeIngredient=材料
+TypeSoulGem=灵魂石
+TypeKey=钥匙
+TypeBook=书籍
+TypeScroll=卷轴
+TypeMisc=杂项
+TabAll=全部
+TabWeapons=武器
+TabArmor=护甲
+TabPotions=药水
+TabFood=食物
+TabIngredients=材料
+TabBooks=书籍
+TabMisc=杂项
+ColName=名称
+ColType=类型
+ColWeight=重量
+ColValue=价值
+ColQty=数量
+Empty=这里空空如也
+
+[HorsePicker]
+Title=召唤坐骑
+Prompt=选择要召唤的坐骑:
+NoHorses=尚未登记坐骑
+NoHorsesHint=骑乘你所拥有的坐骑以登记
+BlockedInterior=禁止在室内召唤
+BlockedCity=禁止在城镇内召唤
+UnknownHorse=未知坐骑
+NearbyTooltip=已在附近
+NotOwnedTooltip=你不再拥有这匹坐骑
+IHManaged=坐骑由 Immersive Horses 管理
+
+[InspectCard]
+ConcentrationFades=你的专注力逐渐消散……
+LowAlterationEssence=检查失败. 你的变化系等级过低
+
+[Hotkeys]
+ModAlt=Alt
+ModCtrl=Ctrl
+ModShift=Shift

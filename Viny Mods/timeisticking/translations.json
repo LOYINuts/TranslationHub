@@ -1,0 +1,63 @@
+{
+  "common": {
+    "all": "全部",
+    "yes": "是",
+    "no": "否",
+    "edit": "编辑",
+    "delete": "删除",
+    "save": "保存",
+    "cancel": "取消"
+  },
+  "menu": {
+    "settings": "规则",
+    "reload": "重新加载规则",
+    "new_rule": "新建规则",
+    "filters": "筛选",
+    "filter_text": "文本",
+    "filter_unit": "持续时间单位",
+    "no_rules": "未找到规则",
+    "no_filter_results": "没有规则匹配当前筛选条件",
+    "enabled": "启用",
+    "duration": "持续时间",
+    "start_after": "开始于",
+    "loop": "循环",
+    "finish_after_loops": "循环若干次后结束",
+    "max_loops": "结束于循环次数",
+    "notify_enabled": "通知",
+    "notify_every": "每隔",
+    "notify_message": "通知文本",
+    "show_remaining": "显示剩余时间",
+    "notify_on_trigger": "事件触发时通知",
+    "trigger_notification_message": "事件通知文本",
+    "notification_preview": "提醒",
+    "trigger_notification_preview": "事件发生时",
+    "count_wait_time": "计入等待/睡眠时间",
+    "notify_on_wait": "等待触发时通知",
+    "notify_on_sleep": "睡眠触发时通知",
+    "wait_notification_message": "等待通知文本",
+    "sleep_notification_message": "睡眠通知文本",
+    "edit_rule": "编辑规则",
+    "create_rule": "创建规则",
+    "rule_id": "规则 ID",
+    "rule_name": "名称",
+    "no_notification": "通知已禁用"
+  },
+  "hud": {
+    "default_notification": "时间在流逝",
+    "default_trigger_notification": "时间到了",
+    "default_wait_notification": "等待期间时间已过去",
+    "default_sleep_notification": "睡眠期间时间已过去",
+    "remaining_suffix": "剩余"
+  },
+  "time": {
+    "minutes": "分钟",
+    "hours": "小时",
+    "days": "天",
+    "weeks": "周"
+  },
+  "error": {
+    "invalid_id": "规则 ID 只能使用字母, 数字, '_' 和 '-'",
+    "duplicate_id": "已有其他规则使用此 ID",
+    "save_failed": "保存规则失败"
+  }
+}

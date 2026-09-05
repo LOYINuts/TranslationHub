@@ -1,0 +1,10 @@
+{
+  "dodge": {
+      "name": "Hits Dodged",
+      "name2": "Hits Perfect Dodged",
+      "desc": "How many hits you dodged",
+      "desc2": "How many hits you perfect dodged",
+      "category": "{{$General}}"
+    }
+
+}

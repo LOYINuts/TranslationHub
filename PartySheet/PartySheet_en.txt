@@ -1,0 +1,442 @@
+; =============================================================================
+; PartySheet Translation File - English
+; =============================================================================
+; IMPORTANT: Do NOT remove or modify the format specifiers (%d, %s) in values!
+; These are placeholders for dynamic values:
+;   %d = number (e.g., level, count)
+;   %s = text (e.g., race name, item name)
+; Removing or reordering them will cause the game to CRASH!
+; =============================================================================
+
+[Common]
+Unknown=Unknown
+None=None
+Other=Other
+Level=Lv
+LevelShort=Lv %d
+LevelFull=Lv %d (%s)
+Empty=(none)
+NoParty=No party members
+PartyMembers=Party Members
+Player=Player
+Ally=Ally
+Essential=Essential
+Protected=Protected
+Friend=Friend
+Acquaintance=Acquaintance
+Foe=Foe
+Lover=Lover
+Confidant=Confidant
+Rival=Rival
+Enemy=Enemy
+Archnemesis=Archnemesis
+
+[Stats]
+Health=Health
+Magicka=Magicka
+Stamina=Stamina
+Armor=Armor
+Damage=Damage
+DPS=DPS
+DamageResist=Dmg Resist
+Magic=Magic
+Move=Move
+Speed=Speed
+Reach=Reach
+Stagger=Stagger
+Defense=Defense
+Combat=Combat
+; Regen / multiplier AVs
+HealthRegen=Health Regen
+MagickaRegen=Magicka Regen
+StaminaRegen=Stamina Regen
+HealthRegenMult=Health Regen Mult
+MagickaRegenMult=Magicka Regen Mult
+StaminaRegenMult=Stamina Regen Mult
+
+[Equipment]
+Title=EQUIPMENT
+SectionEquipped=Equipped
+SectionArmor=Armor
+Unarmed=Unarmed
+Arrows=Arrows
+ArrowsCount=Arrows (%d)
+BadgeLeft=L
+BadgeRight=R
+BadgeShout=Z
+
+[Skills]
+Title=SKILLS
+SectionTitle=Skills
+HeavyArmor=Heavy Armor
+LightArmor=Light Armor
+OneHanded=One-Handed
+TwoHanded=Two-Handed
+Archery=Archery
+Block=Block
+Smithing=Smithing
+Alteration=Alteration
+Conjuration=Conjuration
+Destruction=Destruction
+Illusion=Illusion
+Restoration=Restoration
+Enchanting=Enchanting
+Sneak=Sneak
+Lockpicking=Lockpicking
+Pickpocket=Pickpocket
+Speech=Speech
+Alchemy=Alchemy
+
+[Resistances]
+Title=RESIST
+Fire=Fire
+Frost=Frost
+Shock=Shock
+Magic=Magic
+Poison=Poison
+Disease=Disease
+
+[CharacterSheet]
+; Equipment Slots
+slot_right_hand=Right Hand
+slot_left_hand=Left Hand
+slot_head=Head
+slot_chest=Chest
+slot_hands=Hands
+slot_feet=Feet
+slot_amulet=Amulet
+slot_ring=Ring
+slot_main=Main
+slot_off=Off
+
+; Equipment Defaults
+none=None
+spell=Spell
+empty=empty
+no_arrows=No Arrows
+
+; Additional Stats
+dmg_resist=Dmg Resist
+gold=Gold
+weight=Weight
+souls=Souls
+perks=Perks
+
+; Headers
+header_warrior=WARRIOR
+header_thief=THIEF
+header_mage=MAGE
+header_status=STATUS
+header_faction_status=FACTION STATUS
+header_champion_status=CHAMPION STATUS
+header_thane_status=THANE STATUS
+header_disease_status=DISEASES
+
+; Status Labels
+member=Member
+champion=Champion
+opposed=Opposed
+dragonborn=Dragonborn
+Status.Dawnguard=Dawnguard
+Status.Volkihar=Volkihar Clan
+Status.Telvanni=House Telvanni
+Status.OrcKinTitle=Blood-Kin
+Status.ThanePrefix=Thane of
+no_major_factions=No factions or titles
+
+; Bar Headers
+shout_format=Shout %.0f%%
+
+[PlayerResources]
+weather_clear=Clear
+weather_cloudy=Cloudy
+weather_rain=Rain
+weather_snow=Snow
+interior_fallback=Interior
+
+[Survival]
+need_cold=Cold
+need_hunger=Hunger
+need_fatigue=Fatigue
+cold_0=Warm
+cold_1=Comfortable
+cold_2=Chilly
+cold_3=Very Cold
+cold_4=Freezing
+cold_5=Numb
+hunger_0=Well Fed
+hunger_1=Fed
+hunger_2=Peckish
+hunger_3=Hungry
+hunger_4=Famished
+hunger_5=Starving
+fatigue_0=Rested
+fatigue_1=Refreshed
+fatigue_2=Slightly Tired
+fatigue_3=Tired
+fatigue_4=Weary
+fatigue_5=Debilitated
+; Starfrost survival overhaul
+sf_hunger_0=Fed
+sf_hunger_1=Hungry
+sf_hunger_2=Very Hungry
+sf_hunger_3=Famished
+sf_cold_0=Warm
+sf_cold_1=Comfortable
+sf_cold_2=Chilly
+sf_cold_3=Cold
+sf_cold_4=Very Cold
+sf_cold_5=Freezing
+sf_fatigue_0=Rested
+sf_fatigue_1=Refreshed
+sf_fatigue_2=Slightly Tired
+sf_fatigue_3=Tired
+sf_fatigue_4=Very Tired
+sf_fatigue_5=Exhausted
+; Last Seed Vitality — derived condition tier, not a need. Tier words come from the
+; live SPEL names (already localized by the game), so only the label is here.
+need_vitality=Vitality
+; SunHelm survival
+need_thirst=Thirst
+sh_hunger_0=Well Fed
+sh_hunger_1=Satisfied
+sh_hunger_2=Peckish
+sh_hunger_3=Hungry
+sh_hunger_4=Ravenous
+sh_hunger_5=Starving
+sh_thirst_0=Quenched
+sh_thirst_1=Sated
+sh_thirst_2=Thirsty
+sh_thirst_3=Parched
+sh_thirst_4=Dehydrated
+sh_thirst_5=Severely Dehydrated
+sh_fatigue_0=Well Rested
+sh_fatigue_1=Rested
+sh_fatigue_2=Slightly Tired
+sh_fatigue_3=Tired
+sh_fatigue_4=Weary
+sh_fatigue_5=Exhausted
+sh_cold_0=Warm
+sh_cold_1=Comfortable
+sh_cold_2=Chilly
+sh_cold_3=Cold
+sh_cold_4=Freezing
+sh_cold_5=Frigid
+; Frostfall (Chesko). Cold-only mod, composes on top of any needs backend, so
+; these render alongside another backend's hunger/thirst/fatigue.
+; Exposure is SEVEN stages (0-6), the only axis above 5: Frostfall's ladder is
+; -1..6 and our reader clamps -1 (its "totally warm") to 0.
+; Words match Frostfall's own tiers as shipped by iWant Frostfall Widgets — do
+; not "improve" them or the card disagrees with Frostfall's own messages.
+need_exposure=Exposure
+need_wetness=Wetness
+ff_exposure_0=Warm
+ff_exposure_1=Comfortable
+ff_exposure_2=Cold
+ff_exposure_3=Very Cold
+ff_exposure_4=Freezing
+ff_exposure_5=Freezing to Death
+ff_exposure_6=Maximum Exposure
+ff_wetness_0=Not Wet
+ff_wetness_1=Damp
+ff_wetness_2=Wet
+ff_wetness_3=Drenched
+; Last Seed (Chesko). Needs-only backend, ships no cold axis, so there is no
+; ls_cold_* set. Words from SeedUtil.psc's own API doc comments.
+ls_hunger_0=Well Fed
+ls_hunger_1=Satisfied
+ls_hunger_2=Hungry
+ls_hunger_3=Very Hungry
+ls_hunger_4=Ravenous
+ls_hunger_5=Starving
+ls_thirst_0=Quenched
+ls_thirst_1=Refreshed
+ls_thirst_2=Thirsty
+ls_thirst_3=Very Thirsty
+ls_thirst_4=Parched
+ls_thirst_5=Dehydrated
+ls_fatigue_0=Rested
+ls_fatigue_1=Sharp
+ls_fatigue_2=Tired
+ls_fatigue_3=Very Tired
+ls_fatigue_4=Haggard
+ls_fatigue_5=Exhausted
+
+[Disease]
+; Tier words are per-backend. CC Survival / SMI / Starfrost ladder
+; Infected -> Severe -> Crippling; SunHelmDiseases.esp ladders
+; Infected -> Acute -> Severe. Stage 1 shares disease_stage_infected.
+disease_stage_infected=Infected
+disease_stage_severe=Severe
+disease_stage_crippling=Crippling
+disease_sh_stage_acute=Acute
+disease_sh_stage_severe=Severe
+
+[KnowYourEnemy]
+; Section header + tier rows
+Header=KNOW YOUR ENEMY
+WeakTo=Weak to
+ResistantTo=Resistant to
+HighlyResistantTo=Highly resistant to
+
+; Trait / type badges
+Cold Adapted=Cold Adapted
+Troll Blood=Troll Blood
+Frozen=Frozen
+Daedra=Daedra
+Lycanthrope=Lycanthrope
+
+; Intelligence badges
+Unintelligent=Unintelligent
+Aware=Aware
+Intelligent=Intelligent
+
+; Armor badges
+Heavy Armor=Heavy Armor
+Light Armor=Light Armor
+Cuirass=Cuirass
+Full Set=Full Set
+Leather=Leather
+Metal=Metal
+Robes=Robes
+
+; Damage / resistance types
+Blade=Blade
+Blunt=Blunt
+Axe=Axe
+Bow=Bow
+Crossbow=Crossbow
+Fist=Fist
+Bash=Bash
+Fire=Fire
+Frost=Frost
+Shock=Shock
+Poison=Poison
+Disease=Disease
+Sneak=Sneak
+Drain=Drain
+Illusion=Illusion
+Sun=Sun
+
+[Traits]
+; Tier prefixes (skill level thresholds: 15/40/60/80)
+Trait.Tier.Apprentice=Apprentice
+Trait.Tier.Adept=Adept
+Trait.Tier.Expert=Expert
+Trait.Tier.Master=Master
+
+; Skill-based trait names (18 skills)
+Trait.OneHanded=Bladesman
+Trait.TwoHanded=Barbarian
+Trait.Block=Guardian
+Trait.LightArmor=Strider
+Trait.HeavyArmor=Juggernaut
+Trait.Smithing=Forgemaster
+Trait.Destruction=Battlemage
+Trait.Restoration=Healer
+Trait.Conjuration=Summoner
+Trait.Alteration=Mystic
+Trait.Illusion=Nightblade
+Trait.Enchanting=Artificer
+Trait.Sneak=Shadow
+Trait.Lockpicking=Infiltrator
+Trait.Pickpocket=Pickpocket
+Trait.Archery=Marksman
+Trait.Alchemy=Alchemist
+Trait.Speech=Silver Tongue
+
+[Widgets]
+barenziah=Stones of Barenziah
+nirnroot=Crimson Nirnroot
+jiub=Jiubs Opus Pages
+lockpick=Lockpicks
+health_potion=Health Potions
+magicka_potion=Magicka Potions
+stamina_potion=Stamina Potions
+dragonpriest_mask=Dragon Priest Masks
+dragon_claw=Dragon Claws
+vale_paragon=Vale Paragons
+black_book=Black Books
+
+[AI]
+AI.Aggression.Unaggressive=Unaggressive
+AI.Aggression.Aggressive=Aggressive
+AI.Aggression.VeryAggressive=Very Aggress.
+AI.Aggression.Frenzied=Frenzied
+AI.Confidence.Cowardly=Cowardly
+AI.Confidence.Cautious=Cautious
+AI.Confidence.Average=Average
+AI.Confidence.Brave=Brave
+AI.Confidence.Foolhardy=Foolhardy
+AI.Assistance.Nobody=Nobody
+AI.Assistance.Allies=Allies
+AI.Assistance.FriendsAndAllies=Friends+Allies
+AI.Aggression.Label=Aggression
+AI.Confidence.Label=Confidence
+AI.Assistance.Label=Assistance
+
+[PartySheetV2]
+EffectsAndSpells=Effects & Spells
+Inventory=Inventory
+ControlsHint=[ TAB ]  RETURN
+SpellTypeAbility=Ability
+SpellTypePower=Power
+SpellTypeLesserPower=Lesser Power
+SpellTypeSpell=Spell
+SectionRace=Race
+SectionPassive=Passive
+SectionEquipment=Equipment
+SectionBlessings=Blessings
+SectionActive=Active
+SectionSpells=Spells
+SectionNeeds=Needs
+SectionVitality=Vitality
+SectionDiseases=Diseases
+
+[Inventory]
+TypeWeapon=Weapon
+TypeArmor=Armor
+TypePotion=Potion
+TypeFood=Food
+TypeAmmo=Ammo
+TypeIngredient=Ingredient
+TypeSoulGem=Soul Gem
+TypeKey=Key
+TypeBook=Book
+TypeScroll=Scroll
+TypeMisc=Misc
+TabAll=All
+TabWeapons=Weapons
+TabArmor=Armor
+TabPotions=Potions
+TabFood=Food
+TabIngredients=Ingredients
+TabBooks=Books
+TabMisc=Misc
+ColName=Name
+ColType=Type
+ColWeight=Wgt
+ColValue=Val
+ColQty=Qty
+Empty=Nothing here.
+
+[HorsePicker]
+Title=Summon Horse
+Prompt=Select a horse to summon:
+NoHorses=No registered horses yet.
+NoHorsesHint=Ride a horse you own to register it.
+BlockedInterior=Summoning is not allowed inside interiors.
+BlockedCity=Summoning is disabled in cities.
+UnknownHorse=Unknown Horse
+NearbyTooltip=Already nearby.
+NotOwnedTooltip=You no longer own this horse.
+IHManaged=Horses are managed by Immersive Horses.
+
+[InspectCard]
+ConcentrationFades=Your concentration fades...
+LowAlterationEssence=Inspection failed. Your Alteration is too low.
+
+[Hotkeys]
+ModAlt=Alt
+ModCtrl=Ctrl
+ModShift=Shift

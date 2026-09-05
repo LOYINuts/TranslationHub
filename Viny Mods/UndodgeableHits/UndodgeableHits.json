@@ -1,0 +1,8 @@
+{
+  "undodgeable": {
+      "name": "Undodgeable hits taken",
+      "desc": "How many undodgeable hits you took",
+      "category": "{{$General}}"
+    }
+
+}

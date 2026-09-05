@@ -1,0 +1,98 @@
+[General]
+Title=Music Conductor
+Settings=Settings
+
+[Settings]
+Title=Settings
+MusicConductor=Music Conductor
+TrackNotification=Track Notification
+TrackBar=Track Bar
+Hotkey=Hotkey
+GlobalHotkey=Global Hotkey
+SkipTrackHotkey=Skip Track
+PressAnyKey=Press any key...
+Cancel=Cancel
+None=(None)
+HotkeyHint=Click to rebind. Hold a modifier (Alt/Ctrl/Shift) then press a key.
+Background=Background
+BackgroundButton=Background
+PauseGame=Pause Game
+SelectBackground=Select Background
+NoImagesFound=No images found in Data/Interface/MusicConductor/Images
+NamedBackgroundPattern=Named: Background-*.png
+Enable=Enable
+AlwaysVisible=Always Visible
+TileStyle=Tile Style
+TileButton=Tile
+CustomColor=Custom Color
+BackgroundColor=Background Color
+Position=Position
+DragNotification=Drag the notification on screen to reposition
+DragBar=Drag the bar on screen to reposition
+XY=X / Y
+Scale=Scale
+Width=Width
+Height=Height
+TextColor=Text Color
+IconColor=Icon Color
+LoadingScreen=Loading Screen
+Hide=Hide
+NowPlayingLabel=Now Playing Label
+ArtistName=Artist Name
+SelectTile=Select Tile
+NamedTilePattern=Named: Tile-*.png
+DebugNoteLine1=For debug. Shows internal
+DebugNoteLine2=track names (e.g. MUS_Dungeon01).
+
+[Labels]
+NowPlaying=NOW PLAYING
+Browser=NOW VIEWING
+
+[Buttons]
+Browse=Browse
+
+[Browser]
+Title=Music Type Browser
+SearchHint=Search...
+MusicTypeColumn=Music Type
+TracksColumn=Tracks
+OtherUncategorized=OTHER / UNCATEGORIZED
+SelectType=<Select Type>
+
+[NowPlaying]
+TitleLabel=Title
+TypeLabel=Type
+AlbumLabel=Album
+ViewTypeTooltip=Click to view tracks for this type
+NoType=<No Type>
+
+[Track]
+Silence=Silence
+Unknown=<Unknown Track>
+NoActive=<No Track Active>
+
+[TrackList]
+TrackColumn=Track
+LengthColumn=Length
+Moving=Moving
+
+[Preview]
+Track=Preview Track
+Artist=Artist Name
+TrackBar=Track Bar Preview
+
+[Group]
+Skyrim=SKYRIM
+Dawnguard=DAWNGUARD
+Dragonborn=DRAGONBORN
+CreationClub=CREATION CLUB
+Other=OTHER
+
+[Category]
+Combat=Combat
+Exploration=Exploration
+Dungeons=Dungeons
+TownsAndTaverns=Towns & Taverns
+PlayerHomes=Player Homes
+Special=Special / Scripted
+Other=Other

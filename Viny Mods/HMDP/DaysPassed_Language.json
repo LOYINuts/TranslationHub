@@ -1,0 +1,54 @@
+{
+  "menu.header_passed": "Total de Dias Passados",
+  "menu.enable_tracker_passed": "Ativar Rastreador de Dias Totais",
+  "menu.enable_auto_passed": "Ativar Mensagem Automática",
+  "menu.auto_interval_passed": "Mostrar a cada X dias",
+  "menu.enable_input_passed": "Ativar Atalhos",
+  "menu.check_passed": "Atalhos: Verificar Dias Totais",
+
+  "menu.header_survived": "Dias Sobrevividos",
+  "menu.enable_tracker_survived": "Ativar Rastreador de Dias Sobrevividos",
+  "menu.enable_auto_survived": "Ativar Mensagem Automática",
+  "menu.auto_interval_survived": "Mostrar a cada X dias",
+  "menu.enable_input_survived": "Ativar Atalhos",
+  "menu.check_alive": "Atalhos: Verificar Dias Sobrevividos",
+
+  "menu.header_combined": "Dias Passados + Sobrevividos",
+  "menu.enable_tracker_combined": "Ativar Rastreador Combinado",
+  "menu.enable_auto_combined": "Ativar Mensagem Automática",
+  "menu.auto_interval_combined": "Mostrar a cada X dias",
+  "menu.enable_input_combined": "Ativar Atalhos",
+  "menu.check_combined": "Atalhos: Verificar Dias Passados + Sobrevividos",
+
+  "common.save": "Guardar Configurações",
+  "common.cancel": "Cancelar",
+  "common.edit": "Editar",
+  "common.actions": "Ações",
+  "common.motions": "Movimentos",
+  "common.search_placeholder": "Filtrar...",
+  "common.id": "ID",
+  "common.name": "Nome",
+  "common.unnamed": "Sem Nome",
+  "common.action": "Ação",
+
+  "menu.editing_action": "Editando ação",
+  "menu.save_error": "Erro: Conflito detetado ou entrada inválida!",
+  "menu.input_details": "Detalhes do Input",
+  "menu.no_info": "Nenhuma informação disponível.",
+  
+  "menu.pc_main_key": "Tecla Principal (PC)",
+  "menu.pc_mod_key": "Tecla Modificadora (PC)",
+  "menu.pad_main_key": "Botão Principal (Gamepad)",
+  "menu.pad_mod_key": "Botão Modificador (Gamepad)",
+  
+  "menu.custom_timings": "Tempos Personalizados",
+  "menu.tap_window": "Janela de Toque",
+  "menu.hold": "Manter Premido",
+  "menu.time_window": "Janela de Tempo",
+  "menu.pc_seq_size": "Sequência (PC)",
+  "menu.pad_seq_size": "Sequência (Gamepad)",
+
+  "hud.days_passed_total": "%d dias passaram no mundo.",
+  "hud.days_alive": "Você sobreviveu por %d dias.",
+  "hud.days_combined": "Dia %d | Sobrevividos: %d"
+}

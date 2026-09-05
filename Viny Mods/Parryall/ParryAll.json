@@ -1,0 +1,10 @@
+{
+  "parry": {
+      "name": "Hits Parried",
+      "name2": "Hits Perfect Parried",
+      "desc": "How many hits you parried",
+      "desc2": "How many hits you perfect parried",
+      "category": "{{$General}}"
+    }
+
+}

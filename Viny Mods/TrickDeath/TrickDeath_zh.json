@@ -1,0 +1,10 @@
+{
+  "trick_death": {
+    "stats": {
+      "deaths": {
+        "name": "死亡次数",
+        "description": "本次游戏中被 Trick Death 拦截的死亡次数。"
+      }
+    }
+  }
+}

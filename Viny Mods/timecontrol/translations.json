@@ -1,0 +1,46 @@
+{
+  "menu": {
+    "section": "Time Control",
+    "settings": "设置",
+    "mode": "模式",
+    "disabled_hint": "时间流速控制已禁用",
+    "runtime_status": "运行状态",
+    "external_control": "外部控制",
+    "external_control_hint": "仅当此选项启用时, 时间控制才可运行",
+    "override_pause": "时间流速覆盖保护",
+    "override_pause_hint": "激活表示另一个时间流速源正在被尊重",
+    "override_depth": "覆盖深度",
+    "detected_override": "检测到外部时间流速变化",
+    "pause_external_changes": "当其他效果改变时间流速时暂停",
+    "period_full_day": "全天",
+    "period_day": "白天",
+    "period_afternoon": "下午",
+    "period_night": "夜晚",
+    "full_day_timescale": "全天时间流速",
+    "day_timescale": "白天时间流速",
+    "afternoon_timescale": "下午时间流速",
+    "night_timescale": "夜晚时间流速",
+    "day_start": "白天开始于",
+    "afternoon_start": "下午开始于",
+    "night_start": "夜晚开始于",
+    "context_overrides": "场景覆盖",
+    "dialogue_override": "对话时使用不同时间流速",
+    "dialogue_timescale": "对话时间流速",
+    "dungeon_override": "地下城时使用不同时间流速",
+    "dungeon_timescale": "地下城时间流速",
+    "interior_override": "室内时使用不同时间流速",
+    "interior_timescale": "室内时间流速"
+  },
+  "mode": {
+    "disabled": "禁用",
+    "full_day": "全天",
+    "day_night": "白天与夜晚",
+    "day_afternoon_night": "白天, 下午和夜晚"
+  },
+  "common": {
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "active": "激活",
+    "inactive": "未激活"
+  }
+}

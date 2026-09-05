@@ -1,0 +1,8 @@
+{
+  "undodgeable": {
+      "name": "承受的不可闪避攻击次数",
+      "desc": "你承受了多少次不可闪避攻击",
+      "category": "{{$General}}"
+    }
+
+}

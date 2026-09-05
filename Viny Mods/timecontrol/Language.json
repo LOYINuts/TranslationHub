@@ -1,0 +1,46 @@
+{
+  "menu": {
+    "section": "Time Control",
+    "settings": "Settings",
+    "mode": "Mode",
+    "disabled_hint": "Timescale control is disabled.",
+    "runtime_status": "Runtime status",
+    "external_control": "External control",
+    "external_control_hint": "Time Control may run only while this is enabled.",
+    "override_pause": "Timescale override protection",
+    "override_pause_hint": "Active means another timescale source is being respected.",
+    "override_depth": "Override depth",
+    "detected_override": "External timescale change detected.",
+    "pause_external_changes": "Pause while another effect changes timescale",
+    "context_overrides": "Context overrides",
+    "dialogue_override": "Use a different timescale during dialogue",
+    "dialogue_timescale": "Dialogue timescale",
+    "dungeon_override": "Use a different timescale in dungeons",
+    "dungeon_timescale": "Dungeon timescale",
+    "interior_override": "Use a different timescale in interiors",
+    "interior_timescale": "Interior timescale",
+    "period_full_day": "Full day",
+    "period_day": "Day",
+    "period_afternoon": "Afternoon",
+    "period_night": "Night",
+    "full_day_timescale": "Full day timescale",
+    "day_timescale": "Day timescale",
+    "afternoon_timescale": "Afternoon timescale",
+    "night_timescale": "Night timescale",
+    "day_start": "Day starts at",
+    "afternoon_start": "Afternoon starts at",
+    "night_start": "Night starts at"
+  },
+  "mode": {
+    "disabled": "Disabled",
+    "full_day": "Full day",
+    "day_night": "Day and night",
+    "day_afternoon_night": "Day, afternoon and night"
+  },
+  "common": {
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "active": "Active",
+    "inactive": "Inactive"
+  }
+}

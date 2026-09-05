@@ -1,0 +1,29 @@
+DebugSection                   -- 调试 --
+DebugCheckbox                  启用调试日志
+DebugHelp                      在模组日志文件中显示额外信息，帮助诊断问题。
+CategorySection                -- 分类 --
+BlacklistSection               -- 黑名单 --
+BlacklistEntries               黑名单条目
+BlacklistInputHint             输入物品名称的一部分...
+BlacklistAdd                   添加
+BlacklistAddHelp               屏蔽名称包含此文本的物品。不区分大小写。
+BlacklistHelp                  名称与此处任何条目匹配的物品将不会被自动拾取。不区分大小写。
+CategoryEnabled                启用
+CategoryEnabledHelp            开启或关闭此分类。
+CategoryRadius                 拾取半径
+CategoryRadiusHelp             围绕你搜索匹配物品的范围。数字越大 = 范围越广。
+CategoryMatchSpecific          匹配特定物品
+CategoryMatchSpecificHelp      开启：仅拾取完全相同的物品。关闭：拾取此类型的所有物品。
+Ammo                           弹药
+Armor                          护甲
+Books                          书籍
+Ingredients                    材料
+Keys                           钥匙
+Misc                           杂项物品
+Potions                        药水
+Food                           食物
+Scrolls                        卷轴
+SoulGems                       灵魂石
+Weapons                        武器
+Harvest                        采集
+ModName                        拾取半径

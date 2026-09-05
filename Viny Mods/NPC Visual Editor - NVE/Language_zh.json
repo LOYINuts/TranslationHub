@@ -1,0 +1,23 @@
+{
+    "menu.editor": "编辑器",
+    "menu.presets": "预设",
+    "menu.database": "数据库",
+    "menu.export": "导出",
+    "menu.debug": "调试",
+    "export.title": "导出包",
+    "export.description": "选择要导出到 ZIP 包中的预设和 NPC 编辑内容。",
+    "export.refresh": "刷新列表",
+    "export.export_selected": "导出选中项",
+    "export.output_hint": "ZIP 文件保存到 Data/Viny Mods/NPC Visual/Export。",
+    "debug.title": "调试工具",
+    "debug.reload_data": "重新加载数据",
+    "debug.reload_data_hint": "刷新内部表单数据库。动态表单模组注入或更新表单后使用此功能。",
+    "debug.rebuild_facegen_cache": "重建 FaceGen 缓存",
+    "debug.rebuild_facegen_cache_hint": "强制 NPC Visual 重新打开 FaceGen NIF 并重建烘焙几何缓存。",
+    "debug.facegen_cache_status": "FaceGen 缓存：%u 个面部，%u 个烘焙几何体，%u 个重复几何体已忽略。",
+    "debug.test_build_facegen": "在角色上构建并安装 FaceGen",
+    "debug.test_build_facegen_hint": "实验性：将当前编辑器值应用于 TESNPC，构建一个 FaceGen 节点，将其安装为角色的官方面部，然后在可用时应用选定的 FaceGeom NIF 变形。",
+    "debug.test_build_facegen_no_npc": "在构建和安装 FaceGen 前，先在编辑器标签页中加载一个角色。",
+    "debug.apply_editor_to_tesnpc": "将编辑器数据应用于 TESNPC",
+    "debug.apply_editor_to_tesnpc_hint": "将当前编辑器值直接应用于 TESNPC 基础表单，无需重置或修改角色的已加载 3D。"
+}

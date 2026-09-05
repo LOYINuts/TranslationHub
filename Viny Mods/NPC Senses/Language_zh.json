@@ -1,0 +1,51 @@
+{
+  "btn": {
+    "save_apply": "保存并应用"
+  },
+  "col": {
+    "formid": "FormID",
+    "name": "名称 / EditorID",
+    "status": "状态（已应用的规则）"
+  },
+  "db": {
+    "build": "刷新数据库（构建数据库）",
+    "default": "默认",
+    "filter": "筛选名称 / EditorID",
+    "force_scan": "强制扫描",
+    "modified": "已修改: %s",
+    "no_npcs": "未加载 NPC 到内存中",
+    "only_modified": "仅已修改的 NPC",
+    "showing": "显示 %d 个 NPC"
+  },
+  "debug": {
+    "desc_all": "启用全部：记录进入/退出的所有内容（角色、投射物等）",
+    "desc_disable": "禁用：不记录任何触发日志",
+    "desc_player": "启用玩家：仅在施法者为玩家时在游戏中记录，并写入 LOG",
+    "enable_log": "在 UI 中启用日志",
+    "title": "调试设置"
+  },
+  "menu": {
+    "database": "数据库",
+    "debug": "调试",
+    "rules": "规则",
+    "section": "NPC Senses"
+  },
+  "msg": {
+    "rules_updated": "视野规则已更新！"
+  },
+  "rule": {
+    "aura": "光环:",
+    "dup_name": "[!] 名称重复",
+    "enabled": "启用",
+    "filter": "按名称筛选规则",
+    "name": "名称",
+    "new": "新规则",
+    "new_default": "新规则",
+    "node": "节点",
+    "remove": "移除",
+    "target": "目标",
+    "type": "类型",
+    "use_los": "视野使用视线检测 (LOS)",
+    "vision": "视野:"
+  }
+}
