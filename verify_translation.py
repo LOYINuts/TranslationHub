@@ -34,11 +34,12 @@ from locale_utils import read_lines
 def get_mod_configs():
     """导入 build_all.py 中的 MOD_CONFIGS + JSON_MODS + SCRIPT_MODS。"""
     import importlib.util
-    spec = importlib.util.spec_from_file_location("build_all", "build_all.py")
+
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "build_all.py")
+    spec = importlib.util.spec_from_file_location("build_all", path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return mod.MOD_CONFIGS, mod.JSON_MODS, mod.SCRIPT_MODS
-
+    return mod.MOD_CONFIGS, mod.JSON_MODS, mod.SCRIPT_MODS, mod.matches_filter
 
 LINE_CFG_CACHE = None
 
@@ -47,7 +48,7 @@ def get_line_configs():
     global LINE_CFG_CACHE
     if LINE_CFG_CACHE is not None:
         return LINE_CFG_CACHE
-    configs, _, _ = get_mod_configs()
+    configs, _, _, _ = get_mod_configs()
     LINE_CFG_CACHE = {c.dir: c for c in configs}
     return LINE_CFG_CACHE
 
@@ -144,6 +145,7 @@ def verify_mod(mod_dir: str, root: str) -> list:
             continue
         key, val = _split_line(line, sep)
         if key:
+            key = key.strip()  # 与 build_one 查找逻辑一致：剥离对齐空格
             full_key = f"{current_section}.{key}" if current_section and not key.startswith(f"{current_section}.") else key
             en_map[full_key] = val
 
@@ -230,6 +232,7 @@ def verify_mod(mod_dir: str, root: str) -> list:
                 continue
             key, _ = _split_line(line, sep or "\t")
             if key:
+                key = key.strip()  # 与 build_one 查找逻辑一致
                 full_key = f"{current_section}.{key}" if current_section and not key.startswith(f"{current_section}.") else key
                 cn_out_keys.add(full_key)
         missing_in_output = cn_keys - cn_out_keys
@@ -256,7 +259,7 @@ def main():
     root = os.path.dirname(os.path.abspath(__file__))
     filters = set(sys.argv[1:]) if len(sys.argv) > 1 else None
 
-    configs, json_mods, script_mods = get_mod_configs()
+    configs, json_mods, script_mods, matches_filter = get_mod_configs()
 
     # JSON 型模组需单独检查（格式不同），此处只检查 line-based 模组
     all_configs = [(c.dir, "line") for c in configs]
@@ -264,9 +267,8 @@ def main():
     exit_code = 0
 
     for mod_dir, mod_type in all_configs:
-        if filters and mod_dir not in filters:
+        if not matches_filter(mod_dir, filters):
             continue
-
         # 跳过脚本型模组
         if any(s.dir == mod_dir for s in script_mods):
             continue

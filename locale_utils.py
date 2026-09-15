@@ -183,3 +183,86 @@ def check_json_keys(english_path: str, chinese_path: str) -> dict:
         "extra": extra,
         "match": not missing and not extra,
     }
+
+
+def detect_encoding(path: str) -> str:
+    """BOM sniff. utf16-le-bom | utf16-be-bom | utf-8-bom | utf-8."""
+    with open(path, "rb") as f:
+        raw = f.read(4)
+    if raw.startswith(BOM_UTF16_LE):
+        return "utf16-le-bom"
+    if raw.startswith(BOM_UTF16_BE):
+        return "utf16-be-bom"
+    if raw.startswith(BOM_UTF8):
+        return "utf-8-bom"
+    return "utf-8"
+
+
+def _force_utf8_stdout() -> None:
+    import io
+    import sys
+
+    if hasattr(sys.stdout, "buffer"):
+        if not (
+            isinstance(sys.stdout, io.TextIOWrapper)
+            and (sys.stdout.encoding or "").lower() == "utf-8"
+        ):
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
+
+def _self_check() -> None:
+    import tempfile
+
+    dir_ = tempfile.mkdtemp()
+    path = os.path.join(dir_, "t.txt")
+    write_utf16le_bom(path, "k\tv\r\n")
+    assert detect_encoding(path) == "utf16-le-bom"
+    assert read_text(path) == "k\tv\r\n"
+    assert read_lines(path) == ["k\tv"]
+    print("ok")
+
+
+def main(argv: list[str] | None = None) -> int:
+    import sys
+
+    args = list(sys.argv[1:] if argv is None else argv)
+    if not args or args[0] in ("-h", "--help"):
+        print("usage: python locale_utils.py detect PATH")
+        print("       python locale_utils.py dump PATH [-o OUT.txt]")
+        print("       python locale_utils.py --self-check")
+        return 0
+    if args[0] == "--self-check":
+        _self_check()
+        return 0
+    cmd, *rest = args
+    if cmd == "detect" and len(rest) == 1:
+        _force_utf8_stdout()
+        print(detect_encoding(rest[0]))
+        return 0
+    if cmd == "dump" and rest:
+        path = rest[0]
+        out = None
+        if len(rest) == 3 and rest[1] == "-o":
+            out = rest[2]
+        elif len(rest) != 1:
+            print("usage: python locale_utils.py dump PATH [-o OUT.txt]")
+            return 2
+        text = read_text(path)
+        if out:
+            write_utf8(out, text)
+            return 0
+        _force_utf8_stdout()
+        import sys
+
+        sys.stdout.write(text)
+        if text and not text.endswith("\n"):
+            sys.stdout.write("\n")
+        return 0
+    print("usage: python locale_utils.py detect|dump PATH")
+    return 2
+
+
+if __name__ == "__main__":
+    import sys
+
+    raise SystemExit(main())

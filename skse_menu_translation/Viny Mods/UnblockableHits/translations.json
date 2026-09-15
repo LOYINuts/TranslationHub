@@ -1,0 +1,42 @@
+{
+  "menu": {
+    "rules_header": "规则（按perk）",
+    "add_rule": "添加规则",
+    "rule_name": "规则名称",
+    "target_perk": "目标perk",
+    "settings": "设置",
+    "remove_rule": "移除规则",
+    "enabled": "已启用",
+    "visual_effects": "视觉效果",
+    "effect_shader": "效果着色器",
+    "shader_duration": "着色器持续时间（秒）",
+    "sound_effects": "音效",
+    "stagger_hit": "命中时击退",
+    "magnetism": "攻击吸附",
+    "magnetism_tooltip": "仅在安装了TCB时生效。",
+    "base_weight": "基础权重",
+    "health_mult": "缺失生命倍率",
+    "aggro_mult": "攻击性倍率",
+    "skill_mult": "技能倍率",
+    "difficulty": "全局难度",
+    "slow_time": "触发时慢放时间",
+    "time_mult": "时间倍率",
+    "duration_ms": "持续时间（毫秒）",
+    "probability_logic": "概率逻辑：",
+    "sim_bandit_normal": "普通强盗 - HP: 100%% -> 概率: %.2f%%",
+    "sim_bandit_injured": "普通强盗 - HP: 25%% -> 概率: %.2f%%",
+    "sim_skilled_npc": "熟练NPC - HP: 100%%, 攻击性: 2.0, 武器技能: 40 -> 概率: %.2f%%",
+    "sim_high_skill_npc": "高技能NPC - HP: 50%%, 攻击性: 3.0, 武器技能: 100 -> 概率: %.2f%%",
+    "exclusion_normal": "排除perk（禁用普通攻击）",
+    "global_normal_title": "普通攻击全局设置",
+    "normal_label": "普通攻击",
+    "exclusion_power": "排除perk（禁用重击）",
+    "global_power_title": "重击全局设置",
+    "power_label": "重击"
+  },
+  "unblockable": {
+    "name": "承受的不可格挡攻击次数",
+    "desc": "你承受了多少次不可格挡攻击",
+    "category": "{{$General}}"
+  }
+}

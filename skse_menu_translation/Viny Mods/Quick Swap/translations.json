@@ -1,0 +1,15 @@
+{
+  "menu": {
+    "section": "Viny Mods",
+    "quick_swap_settings": "快速切换设置",
+    "quick_swap_header": "快速切换",
+    "enable_quick_swap": "启用快速切换",
+    "quick_swap_perk": "快速切换需要perk解锁",
+    "non_cancel_attack_header": "攻击不中断",
+    "enable_non_cancel_attack": "启用攻击不中断",
+    "non_cancel_attack_perk": "攻击不中断需要perk解锁"
+  },
+  "common": {
+    "none": "无"
+  }
+}

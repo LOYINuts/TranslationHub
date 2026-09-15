@@ -1,0 +1,8 @@
+{
+  "unblockable": {
+      "name": "承受的不可格挡攻击次数",
+      "desc": "你承受了多少次不可格挡攻击",
+      "category": "{{$General}}"
+    }
+
+}

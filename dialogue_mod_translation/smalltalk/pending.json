@@ -1,0 +1,2021 @@
+{
+  "xml": "dialogue_mod_translation/smalltalk/SmallTalk_22C67F4D.xml",
+  "grups": [
+    "BOOK",
+    "DIAL",
+    "INFO",
+    "NPC_"
+  ],
+  "items": [
+    {
+      "id": "051F100B",
+      "edid": "ST01OptionsMenu",
+      "grup": "BOOK",
+      "champ": "FULL",
+      "original": "Small Talk Options",
+      "traduit": "小聊选项",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "051F100B",
+      "edid": "ST01OptionsMenu",
+      "grup": "BOOK",
+      "champ": "DESC",
+      "original": "<font face='$HandwrittenFont'>\r\nSmall Talk Chatter Frequency Settings\r\n</font>",
+      "traduit": "<font face='$HandwrittenFont'>\r\n小聊闲谈频率设置\r\n</font>",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C0B34",
+      "edid": "ST01Debug",
+      "grup": "BOOK",
+      "champ": "FULL",
+      "original": "Small Talk Options",
+      "traduit": "小聊选项",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C0B34",
+      "edid": "ST01Debug",
+      "grup": "BOOK",
+      "champ": "DESC",
+      "original": "<font face='$HandwrittenFont'>\r\nSmall Talk Debug\r\n</font>",
+      "traduit": "<font face='$HandwrittenFont'>\r\n小聊调试\r\n</font>",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "050D01C7",
+      "edid": "ST01ScenesDEBUG1",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "START SCENE",
+      "traduit": "开始场景",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "050D01C8",
+      "edid": "ST01ScenesDEBUG1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "START SCENE 1",
+      "traduit": "开始场景 1",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052C5C40",
+      "edid": "ST01SmallTalkScenesMainStart",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "DEBUG",
+      "traduit": "调试",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "051F611A",
+      "edid": "ST01SmallTalkScenesWomPlr1",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Good to be traveling with company.",
+      "traduit": "有人同行，旅途总是好些。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "051FB21E",
+      "edid": "ST01SmallTalkScenesWomPlr2",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Feeling sharper than usual today.",
+      "traduit": "今天感觉比平时机灵。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "051FB220",
+      "edid": "ST01SmallTalkScenesWomPlr3",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Got a lot weighing on my mind.",
+      "traduit": "心里压着一大堆事。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "051FB222",
+      "edid": "ST01SmallTalkScenesWomPlr4",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Everything feels a bit heavy today.",
+      "traduit": "今天感觉什么都沉甸甸的。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "051FB224",
+      "edid": "ST01SmallTalkScenesWomPlr5",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Just thinking about the road ahead.",
+      "traduit": "只是想想前面的路。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "051FB226",
+      "edid": "ST01SmallTalkScenesWomPlr6",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Trying to keep my thoughts straight.",
+      "traduit": "努力让思绪保持清晰。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "051FB228",
+      "edid": "ST01SmallTalkScenesWomPlr7",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Trying to recall... something.",
+      "traduit": "努力回想……某件事。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "05205462",
+      "edid": "ST01Transition2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Alright, what is it?",
+      "traduit": "好吧，怎么了？",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "051FB245",
+      "edid": "ST01Wom1a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200350",
+      "edid": "ST01Wom2a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200351",
+      "edid": "ST01Wom3a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200352",
+      "edid": "ST01Wom4a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200353",
+      "edid": "ST01Wom5a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200354",
+      "edid": "ST01Wom6a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200355",
+      "edid": "ST01Wom7a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200356",
+      "edid": "ST01Wom8a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200357",
+      "edid": "ST01Wom9a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05200358",
+      "edid": "ST01Wom10a",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Shares a random thought...",
+      "traduit": "……随口说了句什么……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520545F",
+      "edid": "ST01TavernOpen1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Im really getting tired.",
+      "traduit": "我真是越来越累了。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205460",
+      "edid": "ST01TavernOpen2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "just stoke the fire. Take a seat and get the cold out.",
+      "traduit": "把火添旺，坐下来驱驱寒。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205461",
+      "edid": "ST01TavernOpen3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "What news have you heard?",
+      "traduit": "你听说了什么消息？",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205463",
+      "edid": "ST01Rumor1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205464",
+      "edid": "ST01Rumor2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205465",
+      "edid": "ST01Rumor3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205466",
+      "edid": "ST01Rumor4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205467",
+      "edid": "ST01Rumor5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205468",
+      "edid": "ST01Rumor6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205469",
+      "edid": "ST01Rumor7",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520546A",
+      "edid": "ST01Rumor8",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520546B",
+      "edid": "ST01Rumor9",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520546C",
+      "edid": "ST01Rumor10",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an interesting rumor...",
+      "traduit": "……讲了个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDE4",
+      "edid": "ST01Rumor11",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates another interesting rumor...",
+      "traduit": "……讲了另一个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDE5",
+      "edid": "ST01Rumor12",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates another interesting rumor...",
+      "traduit": "……讲了另一个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDE6",
+      "edid": "ST01Rumor13",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates another interesting rumor...",
+      "traduit": "……讲了另一个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDE7",
+      "edid": "ST01Rumor14",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates another interesting rumor...",
+      "traduit": "……讲了另一个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDE8",
+      "edid": "ST01Rumor15",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates another interesting rumor...",
+      "traduit": "……讲了另一个有趣的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDE9",
+      "edid": "ST01RumorTall1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an outrageous rumor...",
+      "traduit": "……讲了个离谱的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDEA",
+      "edid": "ST01RumorTall2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an outrageous rumor...",
+      "traduit": "……讲了个离谱的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDEB",
+      "edid": "ST01RumorTall3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an outrageous rumor...",
+      "traduit": "……讲了个离谱的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDEC",
+      "edid": "ST01RumorTall4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an outrageous rumor...",
+      "traduit": "……讲了个离谱的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDED",
+      "edid": "ST01RumorTall5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates an outrageous rumor...",
+      "traduit": "……讲了个离谱的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDEE",
+      "edid": "ST01RumorTallRpl1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "You can't expect me to belive that",
+      "traduit": "你不能指望我会相信这个。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDEF",
+      "edid": "ST01RumorTallRpl2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "You can't expect me to belive that",
+      "traduit": "你不能指望我会相信这个。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDF0",
+      "edid": "ST01RumorConv1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates a convincing rumor...",
+      "traduit": "……讲了个可信的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDF1",
+      "edid": "ST01RumorConv2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates a convincing rumor...",
+      "traduit": "……讲了个可信的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDF2",
+      "edid": "ST01RumorConv3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates a convincing rumor...",
+      "traduit": "……讲了个可信的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDF3",
+      "edid": "ST01RumorConv4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates a convincing rumor...",
+      "traduit": "……讲了个可信的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDF4",
+      "edid": "ST01RumorConv5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Relates a convincing rumor...",
+      "traduit": "……讲了个可信的传闻……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDF5",
+      "edid": "ST01RumorConvRpl1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Thats concerning",
+      "traduit": "这可令人担忧。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0531BDF6",
+      "edid": "ST01RumorConvRpl2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Thats concerning",
+      "traduit": "这可令人担忧。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205477",
+      "edid": "ST01PlcDSa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Dawnstar...",
+      "traduit": "……谈起了晨星……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A579",
+      "edid": "ST01PlcFRa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Falkreath...",
+      "traduit": "……谈起了佛克瑞斯……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A57B",
+      "edid": "ST01PlcMKa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Markarth...",
+      "traduit": "……谈起了马卡斯……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A57D",
+      "edid": "ST01PlcMTa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Morthal...",
+      "traduit": "……谈起了莫萨尔……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A57F",
+      "edid": "ST01PlcRFa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Riften...",
+      "traduit": "……谈起了裂谷城……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A581",
+      "edid": "ST01PlcRSa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Rorikstead...",
+      "traduit": "……谈起了洛里克镇……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A583",
+      "edid": "ST01PlcRWa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Riverwood...",
+      "traduit": "……谈起了溪木镇……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A585",
+      "edid": "ST01PlcSLa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Solitude...",
+      "traduit": "……谈起了独孤城……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A587",
+      "edid": "ST01PlcWHa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Windhelm...",
+      "traduit": "……谈起了风盔城……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A589",
+      "edid": "ST01PlcWRa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Whiterun...",
+      "traduit": "……谈起了雪漫城……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A58B",
+      "edid": "ST01PlcWTa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Winterhold...",
+      "traduit": "……谈起了冬堡……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A58D",
+      "edid": "ST01PlcZZa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on Current Location...",
+      "traduit": "……谈起了当前所在的位置……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A5A8",
+      "edid": "ST01WthrCLa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on cloudy weather...",
+      "traduit": "……谈起了阴天……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A5AA",
+      "edid": "ST01WthrRNa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on rainy weather...",
+      "traduit": "……谈起了雨天……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A5AC",
+      "edid": "ST01WthrSNa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on snowy weather...",
+      "traduit": "……谈起了雪天……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A5AE",
+      "edid": "ST01WthrSUa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on sunny weather...",
+      "traduit": "……谈起了晴天……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0520A5B0",
+      "edid": "ST01WthrZZa",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Comments on current weather...",
+      "traduit": "……谈起了眼下的天气……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052C5C41",
+      "edid": "ST01OpenWeather",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Weather�s shifting.",
+      "traduit": "天气变了。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052C5C42",
+      "edid": "ST01OpenWom",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "What are you thinking about?",
+      "traduit": "你在想什么？",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052C5C44",
+      "edid": "ST01OpenRumor",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "There�s talk going around.",
+      "traduit": "最近有些传闻。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAAC",
+      "edid": "ST01perStoryInit1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Can you tell me a story?",
+      "traduit": "你能给我讲个故事吗？",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAAD",
+      "edid": "ST01perStoryInit2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Tell me a story",
+      "traduit": "给我讲个故事。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4265",
+      "edid": "ST01perStoryA1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4265",
+      "edid": "ST01perStoryA1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4265",
+      "edid": "ST01perStoryA1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4266",
+      "edid": "ST01perStoryA2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4266",
+      "edid": "ST01perStoryA2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4266",
+      "edid": "ST01perStoryA2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4267",
+      "edid": "ST01perStoryA3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4267",
+      "edid": "ST01perStoryA3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4267",
+      "edid": "ST01perStoryA3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4268",
+      "edid": "ST01perStoryA4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4268",
+      "edid": "ST01perStoryA4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4268",
+      "edid": "ST01perStoryA4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4269",
+      "edid": "ST01perStoryA5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4269",
+      "edid": "ST01perStoryA5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4269",
+      "edid": "ST01perStoryA5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426A",
+      "edid": "ST01perStoryA6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426A",
+      "edid": "ST01perStoryA6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426A",
+      "edid": "ST01perStoryA6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426B",
+      "edid": "ST01perStoryB1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426B",
+      "edid": "ST01perStoryB1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426B",
+      "edid": "ST01perStoryB1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426C",
+      "edid": "ST01perStoryB2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426C",
+      "edid": "ST01perStoryB2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426C",
+      "edid": "ST01perStoryB2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426D",
+      "edid": "ST01perStoryB3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426D",
+      "edid": "ST01perStoryB3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426D",
+      "edid": "ST01perStoryB3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426E",
+      "edid": "ST01perStoryB4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426E",
+      "edid": "ST01perStoryB4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426E",
+      "edid": "ST01perStoryB4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426F",
+      "edid": "ST01perStoryB5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426F",
+      "edid": "ST01perStoryB5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E426F",
+      "edid": "ST01perStoryB5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4270",
+      "edid": "ST01perStoryB6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4270",
+      "edid": "ST01perStoryB6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4270",
+      "edid": "ST01perStoryB6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4271",
+      "edid": "ST01perStoryC1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4271",
+      "edid": "ST01perStoryC1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4271",
+      "edid": "ST01perStoryC1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4272",
+      "edid": "ST01perStoryC2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4272",
+      "edid": "ST01perStoryC2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4272",
+      "edid": "ST01perStoryC2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4273",
+      "edid": "ST01perStoryC3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4273",
+      "edid": "ST01perStoryC3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4273",
+      "edid": "ST01perStoryC3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4274",
+      "edid": "ST01perStoryC4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4274",
+      "edid": "ST01perStoryC4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4274",
+      "edid": "ST01perStoryC4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4275",
+      "edid": "ST01perStoryC5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4275",
+      "edid": "ST01perStoryC5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4275",
+      "edid": "ST01perStoryC5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4276",
+      "edid": "ST01perStoryC6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4276",
+      "edid": "ST01perStoryC6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4276",
+      "edid": "ST01perStoryC6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a personal story...",
+      "traduit": "……讲起了自己的故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAA6",
+      "edid": "ST01perStoryTrn1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...responds to a story...",
+      "traduit": "……回应了这个故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAA7",
+      "edid": "ST01perStoryTrn2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...responds to a story...",
+      "traduit": "……回应了这个故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAA8",
+      "edid": "ST01perStoryTrn3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...responds to a story...",
+      "traduit": "……回应了这个故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAA9",
+      "edid": "ST01perStoryTrn4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...responds to a story...",
+      "traduit": "……回应了这个故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAAA",
+      "edid": "ST01perStoryTrn5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...responds to a story...",
+      "traduit": "……回应了这个故事……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAAE",
+      "edid": "ST01perStoryEnd1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Great story",
+      "traduit": "好故事。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "0530CAAF",
+      "edid": "ST01perStoryEnd2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Nice story",
+      "traduit": "故事不错。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4277",
+      "edid": "ST01tellMeSelf1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4277",
+      "edid": "ST01tellMeSelf1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4277",
+      "edid": "ST01tellMeSelf1",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4278",
+      "edid": "ST01tellMeSelf2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4278",
+      "edid": "ST01tellMeSelf2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4278",
+      "edid": "ST01tellMeSelf2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4279",
+      "edid": "ST01tellMeSelf3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4279",
+      "edid": "ST01tellMeSelf3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E4279",
+      "edid": "ST01tellMeSelf3",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427A",
+      "edid": "ST01tellMeSelf4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427A",
+      "edid": "ST01tellMeSelf4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427A",
+      "edid": "ST01tellMeSelf4",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427B",
+      "edid": "ST01tellMeSelf5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427B",
+      "edid": "ST01tellMeSelf5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427B",
+      "edid": "ST01tellMeSelf5",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427C",
+      "edid": "ST01tellMeSelf6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427C",
+      "edid": "ST01tellMeSelf6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427C",
+      "edid": "ST01tellMeSelf6",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427D",
+      "edid": "ST01tellMeSelf7",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427D",
+      "edid": "ST01tellMeSelf7",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427D",
+      "edid": "ST01tellMeSelf7",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427E",
+      "edid": "ST01tellMeSelf8",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427E",
+      "edid": "ST01tellMeSelf8",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427E",
+      "edid": "ST01tellMeSelf8",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427F",
+      "edid": "ST01tellMeSelf9",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427F",
+      "edid": "ST01tellMeSelf9",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E427F",
+      "edid": "ST01tellMeSelf9",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...Tells a about self...",
+      "traduit": "……讲起了自己的事情……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05311BC9",
+      "edid": "ST01tellMeSelfEnd",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Good to know",
+      "traduit": "这样啊。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05311BCA",
+      "edid": "ST01tellMeSelfEnd2",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "Thanks for telling me",
+      "traduit": "谢谢你告诉我。",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "05205459",
+      "edid": "ST01SmallTalkScenesWlcmToTeam",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Welcome to the team",
+      "traduit": "欢迎加入队伍。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0520545C",
+      "edid": "ST01SmallTalkScenesOpts1",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Could I please have the Small Talk options?",
+      "traduit": "能给我打开小聊选项吗？",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0520546E",
+      "edid": "ST01SmallTalkScenesPlcPlr1",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Has a certain charm to it",
+      "traduit": "还挺有魅力的。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "05205471",
+      "edid": "ST01SmallTalkScenesPlcPlr2",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Doesn't sit right with me",
+      "traduit": "我总觉得不太对劲。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "05205473",
+      "edid": "ST01SmallTalkScenesPlcPlr3",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Hard to form an opinion yet",
+      "traduit": "现在还很难说。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "05205475",
+      "edid": "ST01SmallTalkScenesPlcPlr4",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Strange... it brings something to mind",
+      "traduit": "奇怪……让我想起了什么。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0520A5A7",
+      "edid": "ST01SmallTalkScenesWthrMain",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "What do you think of the weather?",
+      "traduit": "你觉得天气怎么样？",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0520A5B2",
+      "edid": "ST01SmallTalkScenesWthrPlr1",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Feels like a good day to be out",
+      "traduit": "今天很适合出门。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0520A5B4",
+      "edid": "ST01SmallTalkScenesWthrPlr2",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Not really in the mood for it today",
+      "traduit": "今天没什么心情。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0520A5B6",
+      "edid": "ST01SmallTalkScenesWthrPlr3",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Hard to say... it's just weather",
+      "traduit": "很难说……不过就是天气。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0520A5B8",
+      "edid": "ST01SmallTalkScenesWthrPlr4",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Makes me think of... something, I guess",
+      "traduit": "让我想起了……某件事吧。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052AC72E",
+      "edid": "ST01SmallTalkScenesWlcmSerana",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Welcome to the team Serana",
+      "traduit": "欢迎加入队伍，瑟拉娜。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C5C35",
+      "edid": "ST01SmallTalkScenesDEBUG",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "DEBUG",
+      "traduit": "调试",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C5C37",
+      "edid": "ST01SmallTalkScenesDEBUG",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "debug",
+      "traduit": "调试",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052C5C38",
+      "edid": "ST01SmallTalkScenesDebugInit",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "INIT",
+      "traduit": "初始化",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C5C39",
+      "edid": "ST01SmallTalkScenesDebugInit",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "init",
+      "traduit": "初始化",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052C5C3A",
+      "edid": "ST01SmallTalkScenesDebugClearAll",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Clear Aliases",
+      "traduit": "清除别名",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C5C3C",
+      "edid": "ST01SmallTalkScenesDebugTestScene",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Try Scene",
+      "traduit": "尝试场景",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C5C3D",
+      "edid": "ST01SmallTalkScenesDebugTestScene",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "try scene",
+      "traduit": "尝试场景",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052C5C3E",
+      "edid": "ST01SmallTalkScenesDebugPrint",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Debug Variables",
+      "traduit": "调试变量",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052C5C3F",
+      "edid": "ST01SmallTalkScenesDebugPrint",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "debug vars",
+      "traduit": "调试变量",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E9380",
+      "edid": "ST01SmallTalkScenesDebugTestmain",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "WOM TEST START",
+      "traduit": "女性测试开始",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052E9381",
+      "edid": "ST01SmallTalkScenesDebugTestmain",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "..saying whats on my mind...",
+      "traduit": "……说出心里话……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052E9386",
+      "edid": "ST01SmallTalkScenesDebugPlrRsp",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "This is the player response",
+      "traduit": "这是玩家回应",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052E9387",
+      "edid": "ST01SmallTalkScenesDebugPlrRsp",
+      "grup": "INFO",
+      "champ": "NAM1",
+      "original": "...sounds about right...",
+      "traduit": "……听起来差不多……",
+      "emotion": "Neutral",
+      "bdd": []
+    },
+    {
+      "id": "052EE489",
+      "edid": "ST01SmallTalkScenesWthrTrn1",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Yea, pretty much.",
+      "traduit": "对，差不多吧。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "052F868F",
+      "edid": "ST01SmallTalkScenesPlcTrn1",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Yea, i can see that.",
+      "traduit": "对，我能看出来。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0530CAA5",
+      "edid": "ST01SmallTalkScenesPerStryMain",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Got a story to share?",
+      "traduit": "有故事想分享吗？",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "05316CD6",
+      "edid": "ST01SmallTalkScenesTavMain",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "It's good to rest a bit.",
+      "traduit": "休息一会儿也好。",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "05316CD8",
+      "edid": "ST01SmallTalkScenesTav2",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Heard anything lately?",
+      "traduit": "最近听说什么消息了吗？",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0532B1D4",
+      "edid": "ST01SmallTalkScenesTav3",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Got any good tales?",
+      "traduit": "有什么精彩故事吗？",
+      "emotion": "",
+      "bdd": []
+    },
+    {
+      "id": "0532B1D5",
+      "edid": "ST01SmallTalkScenesTav4",
+      "grup": "DIAL",
+      "champ": "FULL",
+      "original": "Anything� worth paying attention to?",
+      "traduit": "有什么值得注意的事吗？",
+      "emotion": "",
+      "bdd": []
+    }
+  ]
+}

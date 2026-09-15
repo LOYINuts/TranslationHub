@@ -4,7 +4,7 @@
 用法：
   uv run python build_all.py          # 构建所有模组
   uv run python build_all.py --stats   # 仅统计，不生成
-  uv run python build_all.py FLICK/FUCK FLICK/KillFeed  # 只构建指定模组
+  uv run python build_all.py FUCK KillFeed  # 短名或完整相对路径均可
 
 数据驱动：每个模组的翻译数据存放在 {mod_dir}/translations.json，
 构建配置见下方 MOD_CONFIGS 列表。
@@ -68,56 +68,62 @@ class ModConfig:
 
 # 所有可构建的模组
 MOD_CONFIGS: list[ModConfig] = [
-    # ── 制表符分隔 + UTF-16 LE BOM ──
-    ModConfig("FLICK/FUCK", "FUCK_ENGLISH.txt", "FUCK_CHINESE.txt"),
-    ModConfig("skyprompt", "SkyPrompt_ENGLISH.txt", "SkyPrompt_CHINESE.txt"),
-    ModConfig("ostim", "OStim_ENGLISH.txt", "OStim_CHINESE.txt"),
-    ModConfig("FLICK/FUCKQTY", "FUCK-QTY_ENGLISH.txt", "FUCK-QTY_CHINESE.txt"),
-    ModConfig("FLICK/FUCKRACE", "FUCK-RACE_ENGLISH.txt", "FUCK-RACE_CHINESE.txt"),
-    ModConfig("FLICK/KillFeed", "KillFeed_ENGLISH.txt", "KillFeed_CHINESE.txt"),
-    ModConfig("feetofskyrim", "FeetOfSkyrim_ENGLISH.txt", "FeetOfSkyrim_CHINESE.txt"),
-    ModConfig("FLICK/fittingroom", "Fitting Room_ENGLISH.txt", "Fitting Room_CHINESE.txt"),
-    ModConfig("morehud", "ahzmorehud_english.txt", "ahzmorehud_chinese.txt"),
-    # ── 等号分隔 + UTF-8 ──
+    # ── interface: 制表符分隔 + UTF-16 LE BOM ──
+    ModConfig("interface_translation/FUCK", "FUCK_ENGLISH.txt", "FUCK_CHINESE.txt"),
+    ModConfig("interface_translation/ostim", "OStim_ENGLISH.txt", "OStim_CHINESE.txt"),
+    ModConfig("interface_translation/FUCKQTY", "FUCK-QTY_ENGLISH.txt", "FUCK-QTY_CHINESE.txt"),
+    ModConfig("interface_translation/FUCKRACE", "FUCK-RACE_ENGLISH.txt", "FUCK-RACE_CHINESE.txt"),
+    ModConfig("interface_translation/KillFeed", "KillFeed_ENGLISH.txt", "KillFeed_CHINESE.txt"),
+    ModConfig("interface_translation/feetofskyrim", "FeetOfSkyrim_ENGLISH.txt", "FeetOfSkyrim_CHINESE.txt"),
+    ModConfig("interface_translation/fittingroom", "Fitting Room_ENGLISH.txt", "Fitting Room_CHINESE.txt"),
+    ModConfig("interface_translation/morehud", "ahzmorehud_english.txt", "ahzmorehud_chinese.txt"),
+    ModConfig("interface_translation/DialogueHistory", "DialogueHistory_ENGLISH.txt", "DialogueHistory_CHINESE.txt"),
+    ModConfig("interface_translation/TDM", "TrueDirectionalMovement_english.txt", "TrueDirectionalMovement_chinese.txt"),
+    ModConfig("interface_translation/ConvenientHorses", "convenient horses_english.txt", "convenient horses_chinese.txt"),
+    # ── interface: 等号分隔 + UTF-8 ──
+    ModConfig("interface_translation/musicconductor", "MusicConductor_en.txt", "MusicConductor_zh.txt", sep="=", encoding="utf-8"),
+    ModConfig("interface_translation/smartsearch", "SmartSearch_en.ini", "SmartSearch_zhcn.ini", sep=" = ", encoding="utf-8"),
     ModConfig(
-        "Press F To Pay Respects",
-        "PressFtoPayRespects_Translation.ini",
-        "PressFtoPayRespects_Translation_zh.ini",
-        sep="=",
-        encoding="utf-8",
-    ),
-    ModConfig(
-        "RealTimeNPCStatScaler",
-        "RealTimeNPCStatScaler_Translation.ini",
-        "RealTimeNPCStatScaler_Translation_zh.ini",
-        sep=" = ",
-        encoding="utf-8",
-    ),
-    ModConfig(
-        "PartySheet",
+        "interface_translation/PartySheet",
         "PartySheet_en.txt",
         "PartySheet_zh.txt",
         sep="=",
         encoding="utf-8",
     ),
     ModConfig(
-        "consolecommander",
+        "interface_translation/consolecommander",
         "ConsoleCommander_Translation.txt",
         "ConsoleCommander_Translation_zh.txt",
         sep=" = ",
         encoding="utf-8",
     ),
-    # ── 等号分隔 + UTF-8 BOM ──
+    # ── skse menu: 制表符分隔 + UTF-16 LE BOM ──
+    ModConfig("skse_menu_translation/skyprompt", "SkyPrompt_ENGLISH.txt", "SkyPrompt_CHINESE.txt"),
+    # ── skse menu: 等号分隔 + UTF-8 ──
     ModConfig(
-        "pickupradius",
+        "skse_menu_translation/Press F To Pay Respects",
+        "PressFtoPayRespects_Translation.ini",
+        "PressFtoPayRespects_Translation_zh.ini",
+        sep="=",
+        encoding="utf-8",
+    ),
+    ModConfig(
+        "skse_menu_translation/RealTimeNPCStatScaler",
+        "RealTimeNPCStatScaler_Translation.ini",
+        "RealTimeNPCStatScaler_Translation_zh.ini",
+        sep=" = ",
+        encoding="utf-8",
+    ),
+    ModConfig(
+        "skse_menu_translation/pickupradius",
         "PickUpRadiusSKSE_Translation.ini",
         "PickUpRadiusSKSE_Translation_zh.ini",
         sep=" = ",
         encoding="utf-8",
     ),
-    # ── 空白分隔（3 空格）→ 制表符输出 ──
+    # ── skse menu: 空白分隔（3 空格）→ 制表符输出 ──
     ModConfig(
-        "FLICK/speedofstrolling",
+        "skse_menu_translation/speedofstrolling",
         "styyx-move-speed_ENGLISH.txt",
         "styyx-move-speed_CHINESE.txt",
         sep=None,  # 按任意空白拆分
@@ -158,23 +164,34 @@ class ModJson:
 
 
 JSON_MODS: list[ModJson] = [
-    ModJson("SKSE Menu Framework", "SKSEMenuFrameworkStrings.json"),
-    ModJson("MCMMemory", "Translation.json"),
-
-    ModJson("Risas All In One Menu/RisaAllInOneMenu", "en.json", "zh-cn.json"),
-    ModJson("Risas All In One Menu/RisaUI", "en.json", "zh-cn.json"),
-    ModJson("swiftpotionng", "SwiftPotionNG_Translation.json"),
-    ModJson("Viny Mods/timecontrol", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/timeisticking", "en.json", "zh.json"),
-    ModJson("Viny Mods/Input Manager", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/DMK", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/NPC Visual Editor - NVE", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/NPC Stats Editor", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/NPC Senses", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/DFG", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/Parryall", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/EDF", "Language.json", "Language_zh.json"),
-    ModJson("Viny Mods/quickcommands", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/SKSE Menu Framework", "SKSEMenuFrameworkStrings.json"),
+    ModJson("skse_menu_translation/MCMMemory", "Translation.json"),
+    ModJson("skse_menu_translation/swiftpotionng", "SwiftPotionNG_Translation.json"),
+    ModJson("skse_menu_translation/Viny Mods/timecontrol", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/timeisticking", "en.json", "zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/Input Manager", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/DMK", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/NPC Visual Editor - NVE", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/NPC Stats Editor", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/NPC Senses", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/DFG", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/Parryall", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/EDF", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/quickcommands", "Language.json", "Language_zh.json"),
+    ModJson("interface_translation/Modex", "english.json", "chinese.json"),
+    ModJson("skse_menu_translation/Viny Mods/BFCONG", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/HMDP", "DaysPassed_Language.json", "DaysPassed_Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/Just a block", "JusBlock_Language.json", "JusBlock_Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/Quick Swap", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/STM", "STM_Localization.json", "STM_Localization_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/TrickDeath", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/TrickDeath", "TrickDeath.json", "TrickDeath_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/TrickDeath/Localization", "en.json", "zh.json"),
+    # 注: Localization/DeathMessages.json 使用数组结构，build_json_one 仅支持键值对，无法构建
+    ModJson("skse_menu_translation/Viny Mods/UnblockableHits", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/UnblockableHits", "UnblockableHits.json", "UnblockableHits_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/UndodgeableHits", "Language.json", "Language_zh.json"),
+    ModJson("skse_menu_translation/Viny Mods/UndodgeableHits", "UndodgeableHits.json", "UndodgeableHits_zh.json"),
 ]
 
 
@@ -190,7 +207,7 @@ class ModScript:
 
 
 SCRIPT_MODS: list[ModScript] = [
-    ModScript("Viny Mods/Dodgeall"),
+    ModScript("skse_menu_translation/Viny Mods/Dodgeall"),
 ]
 
 
@@ -254,11 +271,12 @@ def build_one(cfg: ModConfig, root_dir: str) -> int:
 
         key, val = _split_line(line, cfg.sep)
         if key is not None:
-            lookup = key
+            # 键两侧可能有对齐空格（如 ini），查找时剥离，输出仍用原格式
+            lookup = key.strip()
             if current_section:
                 # key 可能已含节名前缀（如 AI 节内 AI.Aggression.Aggressive），避免重复
-                if not key.startswith(f"{current_section}."):
-                    prefixed = f"{current_section}.{key}"
+                if not lookup.startswith(f"{current_section}."):
+                    prefixed = f"{current_section}.{lookup}"
                     if prefixed in translations:
                         lookup = prefixed
             if lookup in translations:
@@ -384,19 +402,32 @@ def build_script_one(smod: ModScript, root_dir: str) -> int:
     return 0
 
 
+def matches_filter(mod_dir: str, filters: Optional[set[str]]) -> bool:
+    """No filter = all. Accept full path, path suffix, or basename (old FLICK/FUCK still works)."""
+    if not filters:
+        return True
+    norm = mod_dir.replace("\\", "/")
+    base = os.path.basename(norm)
+    for raw in filters:
+        f = raw.replace("\\", "/").rstrip("/")
+        if norm == f or norm.endswith("/" + f) or base == f or base == os.path.basename(f):
+            return True
+    return False
+
+
 def build_all(root_dir: str, filters: Optional[set[str]] = None) -> int:
     """构建所有（或指定）模组，返回总翻译条目数。"""
     total = 0
     for cfg in MOD_CONFIGS:
-        if filters and cfg.dir not in filters:
+        if not matches_filter(cfg.dir, filters):
             continue
         total += build_one(cfg, root_dir)
     for jcfg in JSON_MODS:
-        if filters and jcfg.dir not in filters:
+        if not matches_filter(jcfg.dir, filters):
             continue
         total += build_json_one(jcfg, root_dir)
     for smod in SCRIPT_MODS:
-        if filters and smod.dir not in filters:
+        if not matches_filter(smod.dir, filters):
             continue
         total += build_script_one(smod, root_dir)
     return total
@@ -421,33 +452,44 @@ def _load_translation_count(path: str) -> Optional[int]:
 
 
 def show_stats(root_dir: str):
-    """统计各模组翻译数据"""
-    print(f"{pad_cjk('模组', 26)}{pad_cjk('条目数', 8)} 类型")
-    print("-" * 46)
+    """统计各模组翻译数据（同目录多个源文件只计一次，避免重复计数）"""
+    name_w = 64
+    print(f"{pad_cjk('模组', name_w)}{pad_cjk('条目数', 8)} 类型")
+    print("-" * 80)
     total = 0
+    seen_dirs: set[str] = set()
     for cfg in MOD_CONFIGS:
+        if cfg.dir in seen_dirs:
+            continue
+        seen_dirs.add(cfg.dir)
         count = _load_translation_count(os.path.join(root_dir, cfg.dir, "translations.json"))
         if count is not None:
             total += count
-            print(f"{pad_cjk(cfg.dir, 26)}{count:<8} line")
+            print(f"{pad_cjk(cfg.dir, name_w)}{count:<8} line")
         else:
-            print(f"{pad_cjk(cfg.dir, 26)}{'-':<8} MISS")
+            print(f"{pad_cjk(cfg.dir, name_w)}{'-':<8} MISS")
     for jcfg in JSON_MODS:
+        if jcfg.dir in seen_dirs:
+            continue
+        seen_dirs.add(jcfg.dir)
         count = _load_translation_count(os.path.join(root_dir, jcfg.dir, "translations.json"))
         if count is not None:
             total += count
-            print(f"{pad_cjk(jcfg.dir, 26)}{count:<8} json")
+            print(f"{pad_cjk(jcfg.dir, name_w)}{count:<8} json")
         else:
-            print(f"{pad_cjk(jcfg.dir, 26)}{'-':<8} MISS")
+            print(f"{pad_cjk(jcfg.dir, name_w)}{'-':<8} MISS")
     for smod in SCRIPT_MODS:
+        if smod.dir in seen_dirs:
+            continue
+        seen_dirs.add(smod.dir)
         count = _load_translation_count(os.path.join(root_dir, smod.dir, "translations.json"))
         if count is not None:
             total += count
-            print(f"{pad_cjk(smod.dir, 26)}{count:<8} script")
+            print(f"{pad_cjk(smod.dir, name_w)}{count:<8} script")
         else:
-            print(f"{pad_cjk(smod.dir, 26)}{'-':<8} MISS")
-    print("-" * 46)
-    print(f"{pad_cjk('总计', 26)}{total:<8}")
+            print(f"{pad_cjk(smod.dir, name_w)}{'-':<8} MISS")
+    print("-" * 80)
+    print(f"{pad_cjk('总计', name_w)}{total:<8}")
 
 
 # ── 入口 ─────────────────────────────────────────────────────────────────────
