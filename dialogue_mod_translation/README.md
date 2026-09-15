@@ -6,7 +6,7 @@
 dialogue_mod_translation/<mod>/Something_XXXXXXXX.xml
 ```
 
-对 agent 说「翻译 smalltalk」或「翻译这个 XML」。流程见 `.agents/skills/dialogue-xml/SKILL.md`。
+对 agent 说「翻译 smalltalk」或「翻译这个 XML」。流程见 `.agents/skills/dialogue-xml/SKILL.md`，译法见 `.agents/skills/game-translation/SKILL.md`。
 
 手工命令：
 
