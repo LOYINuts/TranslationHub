@@ -49,11 +49,16 @@
 
   "Profile.Delete.Title": "删除配置文件",
   "Profile.Delete.Prompt": "删除 {0} 配置文件？",
+  "Profile.Forget.Title": "遗忘已保存设置",
+  "Profile.Forget.Prompt": "将配置文件“{1}”中的 {0} 个 MCM 送入湮灭？",
+  "Profile.Forget.Failed": "无法更新活动配置文件。",
 
   "Profile.Automation.Backup": "自动备份",
   "Profile.Automation.Restore": "自动恢复",
   "Profile.Automation.Backup.Tooltip": "更改 MCM 设置时保持活动配置文件为最新",
   "Profile.Automation.Restore.Tooltip": "新游戏中 MCM 注册完成后恢复活动配置文件。加载存档时不会运行",
+  "Profile.Automation.Record": "记录操作",
+  "Profile.Automation.Record.Tooltip": "记住你更改设置的顺序，以便必须先启用的 MCM 能正确恢复。需要开启自动备份。",
 
   "Profile.MCM.Header": "MCM 管理",
   "Profile.MCM.Waiting": "正在等待 MCM 注册...",
@@ -63,16 +68,18 @@
   "Profile.MCM.HideUnavailable": "隐藏不可用的 MCM",
   "Profile.MCM.BackUpSelected": "备份所选",
   "Profile.MCM.RestoreSelected": "恢复所选",
+  "Profile.MCM.ForgetSelected": "遗忘所选",
   "Profile.MCM.SelectAll.Tooltip": "选择所有可见且已注册的 MCM",
   "Profile.MCM.Clear.Tooltip": "清除当前的 MCM 选择",
-  "Profile.MCM.HideUnavailable.Tooltip": "隐藏其 MCM 未在当前游戏中注册的配置文件条目",
+  "Profile.MCM.HideUnavailable.Tooltip": "隐藏当前游戏中未注册的 MCM",
   "Profile.MCM.BackUpSelected.Tooltip": "仅将选中的 MCM 备份到活动配置文件",
   "Profile.MCM.RestoreSelected.Tooltip": "仅恢复已保存过设置的所选 MCM",
+  "Profile.MCM.ForgetSelected.Tooltip": "从活动配置文件中移除所选 MCM 的已保存设置。MCM 本身不会被更改。",
 
   "Profile.MCM.Column.Selected": "已选",
   "Profile.MCM.Column.SavedSettings": "已保存设置",
   "Profile.MCM.Column.AutoRestore": "自动恢复",
-  "Profile.MCM.Column.Selected.Tooltip": "使用“备份所选”或“恢复所选”时包含此 MCM",
+  "Profile.MCM.Column.Selected.Tooltip": "使用“备份所选”“恢复所选”或“遗忘所选”时包含此 MCM。已卸载的 MCM 仍可选中，以遗忘其已保存设置。",
   "Profile.MCM.Column.AutoRestore.Tooltip": "在自动恢复中包含此 MCM。手动恢复不受影响",
 
   "Profile.MCM.Tooltip.BackupRestore": "选择此 MCM 以备份或恢复其设置",
@@ -80,8 +87,8 @@
   "Profile.MCM.Tooltip.Unavailable": "此 MCM 已保存在配置文件中，但当前未注册",
   "Profile.MCM.Excluded": "已排除",
   "Profile.MCM.Tooltip.Excluded": "已被 MCM Memory 忽略。",
-  "Profile.MCM.Unresponsive": "无响应",
-  "Profile.MCM.Tooltip.Unresponsive": "由于此 MCM 上一次脚本操作未安全完成，已跳过。手动更改仍会被记录。",
+  "Profile.MCM.Unresponsive": "不可用",
+  "Profile.MCM.Tooltip.Unresponsive": "因该 MCM 未完成此前的脚本操作而跳过。手动更改仍会记录。",
 
   "Profile.MCM.Count.Registered": "已注册",
   "Profile.MCM.Count.Selected": "已选",
