@@ -50,7 +50,7 @@
   "Profile.Delete.Title": "删除配置文件",
   "Profile.Delete.Prompt": "删除 {0} 配置文件？",
   "Profile.Forget.Title": "遗忘已保存设置",
-  "Profile.Forget.Prompt": "将配置文件“{1}”中的 {0} 个 MCM 送入湮灭？",
+  "Profile.Forget.Prompt": "将配置文件“{1}”中的 {0} 个 MCM 删除？",
   "Profile.Forget.Failed": "无法更新活动配置文件。",
 
   "Profile.Automation.Backup": "自动备份",
