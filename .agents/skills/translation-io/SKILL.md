@@ -15,23 +15,58 @@ python locale_utils.py dump PATH    # 读取内容
 ❌ 禁止：直接用 Pi `read` 读 TXT/INI（会误判 UTF-16）
 
 `locale_utils.py` 自动处理 UTF-16 LE/BE、UTF-8 BOM、UTF-8。
-## 决策流程
+## 决策流程与文件角色
 
 ```
 有 translations.json?
-├─ 是 → python build_all.py <mod_name>
-│       → python verify_translation.py <mod_name>
+├─ 是 → translations.json = 翻译源（可编辑）
+│       TXT/INI = 构建产物（只读，会被覆盖）
+│       
+│       更新翻译：
+│       1. 编辑 translations.json 添加/修改条目
+│       2. python build_all.py <name>  # 生成 TXT/INI
+│       3. python verify_translation.py <name>
+│       
+│       ❌ 禁止：直接编辑生成的 TXT/INI（下次构建会覆盖）
+│
 └─ 否 → Descriptionmods/?
         ├─ 是 → 直接编辑 Descriptionmods/zh/ 对应文件
+        │       （无构建步骤，直接修改）
+        │
         └─ 否 → 成对 TXT/INI
-                → 读英文，写中文，保持格式
+                → 读英文源，写中文文件，保持格式
+                → 无 JSON，直接编辑 TXT/INI
 ```
 
+常用命令：
+```bash
+# 预览构建
+python build_all.py --dry-run <name>
+
+# 构建模组（basename 支持）
+python build_all.py FUCK KillFeed
+
+# 显示统计
+python build_all.py --stats
+
+# 详细输出
+python build_all.py -v <name>
+```
+
+分隔符默认 `\t`，等号分隔用 `" = "`.
+
+## 写入规则
+
+**有 translations.json**：
+- 只编辑 translations.json
+- 运行 `python build_all.py <name>` 生成 TXT/INI
+- TXT/INI 是自动生成的，不要手动改
+
+**无 translations.json**：
+- Descriptionmods：直接编辑 zh/ 下文件
+- 成对 TXT/INI：手动写中文文件，用 `locale_utils.write_utf16le_bom` / `write_utf8_bom` / `write_utf8`
+
 分隔符默认 `\t`，等号分隔用 `" = "`。
-## 写入
-
-优先 `python build_all.py <name>`。手写时用 `locale_utils.write_utf16le_bom` / `write_utf8_bom` / `write_utf8`。
-
 ❌ 禁止：`Path.write_text(..., encoding="utf-16")`（换行会损坏）
 ## 必须保留
 
