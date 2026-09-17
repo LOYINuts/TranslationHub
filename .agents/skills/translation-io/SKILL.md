@@ -38,7 +38,24 @@ python locale_utils.py dump PATH    # 读取内容
                 → 无 JSON，直接编辑 TXT/INI
 ```
 
-常用命令：
+### 同步新词条
+
+```bash
+# 检查英文源文件新增的词条
+python sync_translation.py <name> --check
+
+# 自动添加缺失词条（英文占位）
+python sync_translation.py <name> --sync
+
+# 交互式添加翻译
+python sync_translation.py <name> --interactive
+
+# 检查所有模组
+python sync_translation.py --all --check
+```
+
+### 构建与验证
+
 ```bash
 # 预览构建
 python build_all.py --dry-run <name>
@@ -48,6 +65,9 @@ python build_all.py FUCK KillFeed
 
 # 显示统计
 python build_all.py --stats
+
+# 验证翻译
+python verify_translation.py <name>
 
 # 详细输出
 python build_all.py -v <name>

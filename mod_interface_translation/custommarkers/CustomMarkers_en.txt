@@ -180,6 +180,7 @@ GlanceShape=Shape
 Circle=Circle
 Square=Square
 Gold=Gold
+CoinPurses=Coin Purses
 CustomBg=Custom Background
 HideInCombat=Hide In Combat
 SelectBackground=Select Background

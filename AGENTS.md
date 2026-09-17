@@ -32,6 +32,18 @@ All mod configs live in `mods.toml`. Core logic in `config.py` + `locale_utils.p
 - 成对 TXT/INI: 直接编辑中文文件，无构建步骤
 
 ```bash
+# 检查英文源文件新增的词条
+python sync_translation.py <name> --check
+
+# 自动添加缺失词条（英文占位）
+python sync_translation.py <name> --sync
+
+# 交互式添加翻译
+python sync_translation.py <name> --interactive
+
+# 检查所有模组
+python sync_translation.py --all --check
+
 # Preview build
 python build_all.py --dry-run <name>
 

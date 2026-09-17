@@ -8,11 +8,24 @@
 import json
 import os
 
+import sys
+from typing import Optional
 # ── BOM 常量 ──────────────────────────────────────────────────────────────────
 BOM_UTF16_LE = b"\xff\xfe"
 BOM_UTF16_BE = b"\xfe\xff"
 BOM_UTF8 = b"\xef\xbb\xbf"
 
+
+# ── UTF-8 强制 ────────────────────────────────────────────────────────────────
+
+
+def force_utf8_stdout() -> None:
+    """强制 stdout 使用 UTF-8 编码（Windows GBK 环境）。"""
+    if hasattr(sys.stdout, 'buffer'):
+        import io
+        # 已是 UTF-8 时不再重复包装，避免包装对象被 GC 时关闭底层 buffer
+        if not (isinstance(sys.stdout, io.TextIOWrapper) and (sys.stdout.encoding or '').lower() == 'utf-8'):
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 # ── 读取 ──────────────────────────────────────────────────────────────────────
 
@@ -107,6 +120,57 @@ def rebuild_tab_lines_with_translation(
             out.append(f"{key}{sep}")
     return out
 
+
+
+# ── 行分割与键解析 ───────────────────────────────────────────────────────────
+
+
+def split_line(line: str, sep: Optional[str] = "\t") -> tuple[Optional[str], str]:
+    """按分隔符拆分一行，返回 (key, value)。
+    
+    sep=None 按任意空白拆分。不含分隔符的行返回 (None, line)。
+    """
+    stripped = line.strip("\r\n")
+    if not stripped:
+        return None, stripped
+    if sep is None:
+        parts = stripped.split(None, 1)
+        if len(parts) < 2:
+            return None, stripped
+        return parts[0], parts[1]
+    else:
+        if sep not in stripped:
+            return None, stripped
+        return stripped.split(sep, 1)
+
+
+def resolve_key_with_section(key: str, current_section: str, translations: dict[str, str]) -> Optional[str]:
+    """尝试在翻译字典中解析键（支持节前缀 fallback）。
+    
+    优先级：
+    1. 完整键（key 本身）
+    2. 带节前缀（section.key）
+    3. 裸键（去掉节前缀后的部分）
+    
+    返回找到的键名，或 None。
+    """
+    # 直接匹配
+    if key in translations:
+        return key
+    
+    # 尝试添加节前缀
+    if current_section and not key.startswith(f"{current_section}."):
+        prefixed = f"{current_section}.{key}"
+        if prefixed in translations:
+            return prefixed
+    
+    # 尝试去掉节前缀
+    if "." in key:
+        bare = key.split(".", 1)[1]
+        if bare in translations:
+            return bare
+    
+    return None
 
 # ── 等号分隔行处理（INI 风格） ────────────────────────────────────────────────
 

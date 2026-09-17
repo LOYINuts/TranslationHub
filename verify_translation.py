@@ -17,41 +17,47 @@ import json
 import os
 import re
 import sys
+import logging
 
-# Force UTF-8 for stdout (avoid GBK encoding errors)
-if hasattr(sys.stdout, 'buffer'):
-    import io
-    # 已是 UTF-8 时不再重复包装，避免包装对象被 GC 时关闭底层 buffer
-    if not (isinstance(sys.stdout, io.TextIOWrapper) and (sys.stdout.encoding or '').lower() == 'utf-8'):
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+# Force UTF-8 for stdout (avoid GBK encoding errors) - MUST be before logging.basicConfig
+from locale_utils import read_lines, split_line, resolve_key_with_section, force_utf8_stdout
+force_utf8_stdout()
 
-from locale_utils import read_lines
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(levelname)s: %(message)s',
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
 
 
-# ── 从 build_all.py 复用模组配置 ─────────────────────────────────────────────
+# ── 从 config.py 加载配置 ─────────────────────────────────────────────────
+
+
+from config import ModConfig, ModJson, ModScript, load_configs_from_toml
+
+
+CONFIG_CACHE = None
 
 
 def get_mod_configs():
-    """导入 build_all.py 中的 MOD_CONFIGS + JSON_MODS + SCRIPT_MODS。"""
-    import importlib.util
-
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "build_all.py")
-    spec = importlib.util.spec_from_file_location("build_all", path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod.MOD_CONFIGS, mod.JSON_MODS, mod.SCRIPT_MODS, mod.matches_filter
-
-LINE_CFG_CACHE = None
+    """加载 mods.toml 配置。"""
+    global CONFIG_CACHE
+    if CONFIG_CACHE is not None:
+        return CONFIG_CACHE
+    
+    toml_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mods.toml")
+    if not os.path.exists(toml_path):
+        raise FileNotFoundError(f"未找到 {toml_path}")
+    
+    line_configs, json_configs, script_configs = load_configs_from_toml(toml_path)
+    CONFIG_CACHE = (line_configs, json_configs, script_configs)
+    return CONFIG_CACHE
 
 
 def get_line_configs():
-    global LINE_CFG_CACHE
-    if LINE_CFG_CACHE is not None:
-        return LINE_CFG_CACHE
-    configs, _, _, _ = get_mod_configs()
-    LINE_CFG_CACHE = {c.dir: c for c in configs}
-    return LINE_CFG_CACHE
-
+    configs, _, _ = get_mod_configs()
+    return {c.dir: c for c in configs}
 
 # ── 校验函数 ─────────────────────────────────────────────────────────────────
 
@@ -97,20 +103,6 @@ def find_translation_files(mod_dir: str, root: str) -> dict:
     }
 
 
-def _split_line(line: str, sep: str = "\t"):
-    """拆分一行，返回 (key, value)。"""
-    stripped = line.strip("\r\n")
-    if not stripped:
-        return None, stripped
-    if sep is None:
-        parts = stripped.split(None, 1)
-        if len(parts) < 2:
-            return None, stripped
-        return parts[0], parts[1]
-    if sep not in stripped:
-        return None, stripped
-    return stripped.split(sep, 1)
-
 
 def verify_mod(mod_dir: str, root: str) -> list:
     """校验单个模组，返回问题列表。"""
@@ -143,11 +135,18 @@ def verify_mod(mod_dir: str, root: str) -> list:
             continue
         if stripped.startswith(";"):
             continue
-        key, val = _split_line(line, sep)
+        key, val = split_line(line, sep)
         if key:
             key = key.strip()  # 与 build_one 查找逻辑一致：剥离对齐空格
-            full_key = f"{current_section}.{key}" if current_section and not key.startswith(f"{current_section}.") else key
-            en_map[full_key] = val
+            # 使用统一键解析逻辑
+            resolved = resolve_key_with_section(key, current_section, {})
+            # 对于 en_map 我们直接使用解析后的键作为存储键
+            if resolved:
+                en_map[resolved] = val
+            else:
+                # fallback: 如果没有 section 或键已经完整
+                full_key = f"{current_section}.{key}" if current_section and not key.startswith(f"{current_section}.") else key
+                en_map[full_key] = val
 
     # ── 读取翻译 ──
     with open(json_path, "r", encoding="utf-8") as f:
@@ -156,33 +155,19 @@ def verify_mod(mod_dir: str, root: str) -> list:
     en_keys = set(en_map.keys())
     cn_keys = set(cn_map.keys())
 
-    # 1. 键完整性 — 支持节前缀 fallback
-    # translations.json 可能用裸键（无节前缀）或带节前缀的键
-    # 如果有节前缀且 cn 中无匹配，fallback 到裸键
-    def resolve(k):
-        """尝试在 cn_map 中找到 key 的匹配"""
-        if k in cn_map:
-            return k
-        # 去掉节前缀再试（如 "Strings.Ammo" → "Ammo"）
-        if "." in k:
-            bare = k.split(".", 1)[1]
-            if bare in cn_map:
-                return bare
-        return None
-
+    # 1. 键完整性 — 使用统一键解析逻辑
     missing = []
     for k in sorted(en_keys):
-        if resolve(k) is None:
+        if resolve_key_with_section(k, "", cn_map) is None:
             missing.append(k)
-    extra = cn_keys - en_keys
+    
     # 排除由节前缀 fallback 匹配的 cn 键
     matched_cn = set()
     for k in en_keys:
-        r = resolve(k)
-        if r:
-            matched_cn.add(r)
+        resolved = resolve_key_with_section(k, "", cn_map)
+        if resolved:
+            matched_cn.add(resolved)
     extra = cn_keys - matched_cn
-
     if missing:
         issues.append(f"[缺失] {len(missing)} 条：{', '.join(missing[:10])}{'...' if len(missing) > 10 else ''}")
     if extra:
@@ -192,10 +177,9 @@ def verify_mod(mod_dir: str, root: str) -> list:
     # 构建反向映射：cn_key → en_key
     cn_to_en = {}
     for ek in en_keys:
-        r = resolve(ek)
-        if r:
-            cn_to_en[r] = ek
-
+        resolved = resolve_key_with_section(ek, "", cn_map)
+        if resolved:
+            cn_to_en[resolved] = ek
     for k in sorted(cn_keys):
         ek = cn_to_en.get(k, "")
         en_v = en_map.get(ek, "")
@@ -230,7 +214,7 @@ def verify_mod(mod_dir: str, root: str) -> list:
             if stripped.startswith("[") and stripped.endswith("]"):
                 current_section = stripped[1:-1]
                 continue
-            key, _ = _split_line(line, sep or "\t")
+            key, _ = split_line(line, sep or "\t")
             if key:
                 key = key.strip()  # 与 build_one 查找逻辑一致
                 full_key = f"{current_section}.{key}" if current_section and not key.startswith(f"{current_section}.") else key
@@ -259,8 +243,19 @@ def main():
     root = os.path.dirname(os.path.abspath(__file__))
     filters = set(sys.argv[1:]) if len(sys.argv) > 1 else None
 
-    configs, json_mods, script_mods, matches_filter = get_mod_configs()
+    configs, json_mods, script_mods = get_mod_configs()
 
+    
+    def matches_filter(mod_dir: str, filters):
+        """No filter = all. Accept full path or basename."""
+        if not filters:
+            return True
+        norm = mod_dir.replace("\\", "/")
+        base = os.path.basename(norm)
+        for f in filters:
+            if norm == f or base == f:
+                return True
+        return False
     # JSON 型模组需单独检查（格式不同），此处只检查 line-based 模组
     all_configs = [(c.dir, "line") for c in configs]
 
@@ -274,22 +269,22 @@ def main():
             continue
 
         print(f"\n{'='*60}")
-        print(f"  {mod_dir} ({mod_type})")
+        logging.info(f"{mod_dir} ({mod_type})")
         print(f"{'='*60}")
 
         issues = verify_mod(mod_dir, root)
         for issue in issues:
             if issue.startswith("[OK]"):
-                print(f"  {issue}")
+                logging.info(issue)
             else:
-                print(f"  !! {issue}")
+                logging.error(issue)
                 exit_code = 1
 
     print(f"\n{'='*60}")
     if exit_code:
-        print("  存在未通过项，请修复。")
+        logging.error("存在未通过项，请修复。")
     else:
-        print("  全部通过 [OK]")
+        logging.info("全部通过 [OK]")
     print(f"{'='*60}")
 
     sys.exit(exit_code)
