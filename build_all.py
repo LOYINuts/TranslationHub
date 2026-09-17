@@ -91,6 +91,13 @@ MOD_CONFIGS: list[ModConfig] = [
         encoding="utf-8",
     ),
     ModConfig(
+        "mod_interface_translation/custommarkers",
+        "CustomMarkers_en.txt",
+        "CustomMarkers_zh.txt",
+        sep="=",
+        encoding="utf-8",
+    ),
+    ModConfig(
         "mcm_flick_translation/consolecommander",
         "ConsoleCommander_Translation.txt",
         "ConsoleCommander_Translation_zh.txt",
@@ -123,6 +130,7 @@ MOD_CONFIGS: list[ModConfig] = [
     ),
     # ── mcm_flick: 制表符分隔 + UTF-16 LE BOM ──
     ModConfig("mcm_flick_translation/fittingroom", "Fitting Room_ENGLISH.txt", "Fitting Room_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/CEE", "Conditional Expressions_ENGLISH.txt", "Conditional Expressions_CHINESE.txt"),
     # ── skse menu: 空白分隔（3 空格）→ 制表符输出 ──
     ModConfig(
         "skse_menu_translation/speedofstrolling",

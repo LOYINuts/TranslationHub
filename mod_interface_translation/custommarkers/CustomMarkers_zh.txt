@@ -1,7 +1,7 @@
-; Custom Markers - Chinese strings.
-; 仅翻译等号右侧。请勿重命名键或 [节名]。
-; 保留 {} 占位符；可在行内调整其位置。
-; 未翻译的行将回退显示英文。
+; Custom Markers - English strings.
+; Translate the right side of "=" only. Do not rename keys or [Sections].
+; Keep the {} placeholders; you may move them within the line.
+; Untranslated lines fall back to English.
 
 [Labels]
 MapFilters=图例
