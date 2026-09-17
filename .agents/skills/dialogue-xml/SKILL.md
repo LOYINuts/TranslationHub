@@ -1,63 +1,33 @@
 ---
 name: dialogue-xml
-description: Translate Skyrim xTranslator XML under dialogue_mod_translation/. Use when the user drops an XML, names a folder like smalltalk/Remiel/FDEJenassa, mentions pending.json or bdd.tsv, or asks to translate BOOK/INFO/DIAL/NPC_ dialogue with context.
+description: Translate Skyrim xTranslator XML under dialogue_mod_translation/. Use for BOOK, INFO, DIAL, and NPC_ records, with context and existing terminology.
 ---
 
 # 对话 XML 翻译
 
-先读 `.agents/skills/game-translation/SKILL.md`（译法），再按本流程改文件。译文写入 XML / `pending.json`，不要只在聊天里倒译文。
+先读 `game-translation`，再按本流程改文件。译文写入 XML 或 `pending.json`，不要只在聊天中输出。
 
-目标：结合说话者、话题、情绪、已有译文和名词表，译成这个人会说的中文。禁止逐条互不参照的生硬对译。
+## 范围
 
-## 输入
+- 输入：`dialogue_mod_translation/<mod>/*.xml`
+- 词典：仓库根 `bdd.tsv`；模组目录内对照表、角色档案优先
+- 默认 GRUP：`BOOK`、`INFO`、`DIAL`、`NPC_`。`SCPT`、`TES4`、`MESG`、`QUST`、`FACT` 仅按用户要求处理
+- STATUS `0` 待译；`80`、`98`、`99` 是已有译文，只作样本；写回使用 `90`
 
-- 模组目录：`dialogue_mod_translation/<mod>/`
-- XML：同目录下 `*.xml`（xTranslator `<ESP>` 记录）
-- 词典：仓库根 `bdd.tsv`（`grup \t original \t traduit`）
-- 可选：同目录 `*对照表.md`、`*档案.md`、`*角色*.md` — **对照表优先于 bdd**
+## 流程
 
-默认 GRUP：`BOOK` `INFO` `DIAL` `NPC_`。不要译 `SCPT` `TES4`，除非用户点名。`MESG` `QUST` `FACT` 同样等用户说。用户点名时：`--grups MESG,QUST`。
+```bash
+python dialogue_mod_translation/translate.py stats XML_OR_DIR
+python dialogue_mod_translation/translate.py pending XML --fill-bdd
+python dialogue_mod_translation/translate.py apply MOD/pending.json
+python dialogue_mod_translation/translate.py stats XML_OR_DIR
+python dialogue_mod_translation/translate.py --self-check
+```
 
-STATUS：`0` 待译；`80`/`98`/`99` 已有译文，勿覆盖（当口吻样本读）；写回用 `90`。
+先读上下文和已有译文，再翻译 `pending.json` 的 `groups[].traduit`。按 `edids` 连贯处理；同一组可复用，但有语境差异时拆开。`BOOK DESC` 保留 HTML、`[pagebreak]` 和段落结构；`INFO NAM1` 按说话者调整口吻。
 
-## 步骤
+可用 `jaq` 查看/更新 JSON；不可用时用 Python 标准库 `json`，不要因此停工。`sd` 只用于确认后的固定文本替换；不可用时手动精确修改 JSON。不要用正则改 XML。
 
-1. `python dialogue_mod_translation/translate.py stats <xml-or-dir>`
-   - 支持单个 XML 或目录。先看默认 GRUP 待译数。
-   - `UnicodeDecodeError` 或输出含替换字符（U+FFFD）：先 `python locale_utils.py detect PATH`，不要把乱码当原文译。
-2. 读模组目录里的对照表 / 角色档案（有则读）。再扫若干已译 STATUS 80/98/99，对齐称呼、口头禅、语气。
-3. `python dialogue_mod_translation/translate.py pending <xml> --fill-bdd`
-   - `(GRUP, 原文)` 在 bdd 中**唯一**命中的，直接写入 XML。
-   - 其余进入同目录 `pending.json`。
-   - `pending.json` 同时包含：
-     - `items`：全部待译记录，保留精确 XML 写回目标。不要删除、改动其 `id`、`champ`、`original`。
-     - `groups`：按 `GRUP + CHAMP + ORIGINAL` 去重后的翻译单元。优先翻译这里。
-   - 已有 `pending.json` 且部分 `traduit` 已填：脚本会合并，勿手删。
-4. 翻译 `groups[].traduit`。先按 `edids` 把同一话题排在一起，再下笔：
-   - 同组文本默认可复用；存在 `candidates` 或语境/口吻差异时，拆开译，不盲目套用。
-   - `DIAL`/`NPC_`/`BOOK` 的 `FULL`：短名，跟已有译名和 bdd。
-   - `BOOK` `DESC`：可含 `<font>`、`[pagebreak]`、`<p>`。标签原样留，只译可见英文。标题口吻不要套进正文。
-   - `INFO` `NAM1`：台词。按说话者和 `emotion` 调整口吻。同一 `edid` 是同一话题，前后句要接得上。
-   - 已有译文、对照表、角色档案 > 唯一 bdd 命中 > 你的临场判断。bdd 有多项：选对语境的，不要盲填。
-   - 占位符不改：`<mag>` `%s` `{...}` `$Player` `$HandwrittenFont` 等。
-5. 用高性能工具处理待译 JSON：
-   - `jaq -r '.groups[] | [.grup, .champ, .count, .original] | @tsv' pending.json`：查看唯一文本。
-   - 先用 `jaq` 无写入运行验证过滤器，再用 `jaq -i` 更新 JSON。结构化 JSON 优先用 `jaq`，不要用正则硬改。
-   - `sd -p` 预览纯文本替换；确认后才用 `sd -F` 做固定字符串批量替换。不要用 `sd` 改 XML 标签、占位符或 ID。
-6. 每完成一批唯一翻译组：
-   `python dialogue_mod_translation/translate.py apply <mod>/pending.json`
-   - `apply` 会按 `groups` 的精确目标展开译文，并校验标签 / 占位符。
-   - 再继续下一批；批次按唯一翻译组数量计算，不按重复 XML 条目数量计算。
-7. `python dialogue_mod_translation/translate.py stats <xml>`
-   `python dialogue_mod_translation/translate.py --self-check`
-   默认 GRUP 待译必须为 0；自检失败或出现格式警告时停止。
+## 保护与检查
 
-## 禁区
-
-- 不改 `ORIGINAL`、`ID`、`EDID`、`CHAMP`、`GRUP`。
-- 不跑 ElementTree 整文件重写（会毁掉空标签和缩进）。XML 写回只用 `translate.py`。
-- 不把 SCPT 脚本字符串当对话译。
-- 不用 `sd` 正则批量改 XML 结构、标签、占位符或记录标识。
-- 词典多行 BOOK 正文经常不在 bdd 索引里（tsv 破行）— 当普通文本译，仍遵守名词表。
-- 不忽略解码失败、占位符 / 标签校验错误；先修源文本或停下报告。
-- 不抛开上下文逐条硬译；同一角色全篇口吻要像同一个人。
+不改 `ORIGINAL`、`ID`、`EDID`、`CHAMP`、`GRUP`、标签或占位符（如 `<mag>`、`%s`、`{...}`、`$Player`）。不使用 ElementTree 整文件重写；只用 `translate.py` 写回。解码失败、标签/占位符校验失败或默认待译数非零时停止并报告。

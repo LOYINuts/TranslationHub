@@ -69,29 +69,29 @@ class ModConfig:
 # 所有可构建的模组
 MOD_CONFIGS: list[ModConfig] = [
     # ── interface: 制表符分隔 + UTF-16 LE BOM ──
-    ModConfig("interface_translation/FUCK", "FUCK_ENGLISH.txt", "FUCK_CHINESE.txt"),
-    ModConfig("interface_translation/ostim", "OStim_ENGLISH.txt", "OStim_CHINESE.txt"),
-    ModConfig("interface_translation/FUCKQTY", "FUCK-QTY_ENGLISH.txt", "FUCK-QTY_CHINESE.txt"),
-    ModConfig("interface_translation/FUCKRACE", "FUCK-RACE_ENGLISH.txt", "FUCK-RACE_CHINESE.txt"),
-    ModConfig("interface_translation/KillFeed", "KillFeed_ENGLISH.txt", "KillFeed_CHINESE.txt"),
-    ModConfig("interface_translation/feetofskyrim", "FeetOfSkyrim_ENGLISH.txt", "FeetOfSkyrim_CHINESE.txt"),
-    ModConfig("interface_translation/fittingroom", "Fitting Room_ENGLISH.txt", "Fitting Room_CHINESE.txt"),
-    ModConfig("interface_translation/morehud", "ahzmorehud_english.txt", "ahzmorehud_chinese.txt"),
-    ModConfig("interface_translation/DialogueHistory", "DialogueHistory_ENGLISH.txt", "DialogueHistory_CHINESE.txt"),
-    ModConfig("interface_translation/TDM", "TrueDirectionalMovement_english.txt", "TrueDirectionalMovement_chinese.txt"),
-    ModConfig("interface_translation/ConvenientHorses", "convenient horses_english.txt", "convenient horses_chinese.txt"),
+    ModConfig("mcm_flick_translation/FUCK", "FUCK_ENGLISH.txt", "FUCK_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/ostim", "OStim_ENGLISH.txt", "OStim_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/FUCKQTY", "FUCK-QTY_ENGLISH.txt", "FUCK-QTY_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/FUCKRACE", "FUCK-RACE_ENGLISH.txt", "FUCK-RACE_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/KillFeed", "KillFeed_ENGLISH.txt", "KillFeed_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/feetofskyrim", "FeetOfSkyrim_ENGLISH.txt", "FeetOfSkyrim_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/fittingroom", "Fitting Room_ENGLISH.txt", "Fitting Room_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/morehud", "ahzmorehud_english.txt", "ahzmorehud_chinese.txt"),
+    ModConfig("mcm_flick_translation/DialogueHistory", "DialogueHistory_ENGLISH.txt", "DialogueHistory_CHINESE.txt"),
+    ModConfig("mcm_flick_translation/TDM", "TrueDirectionalMovement_english.txt", "TrueDirectionalMovement_chinese.txt"),
+    ModConfig("mcm_flick_translation/ConvenientHorses", "convenient horses_english.txt", "convenient horses_chinese.txt"),
     # ── interface: 等号分隔 + UTF-8 ──
-    ModConfig("interface_translation/musicconductor", "MusicConductor_en.txt", "MusicConductor_zh.txt", sep="=", encoding="utf-8"),
-    ModConfig("interface_translation/smartsearch", "SmartSearch_en.ini", "SmartSearch_zhcn.ini", sep=" = ", encoding="utf-8"),
+    ModConfig("mod_interface_translation/musicconductor", "MusicConductor_en.txt", "MusicConductor_zh.txt", sep="=", encoding="utf-8"),
+    ModConfig("mod_interface_translation/smartsearch", "SmartSearch_en.ini", "SmartSearch_zhcn.ini", sep=" = ", encoding="utf-8"),
     ModConfig(
-        "interface_translation/PartySheet",
+        "mod_interface_translation/PartySheet",
         "PartySheet_en.txt",
         "PartySheet_zh.txt",
         sep="=",
         encoding="utf-8",
     ),
     ModConfig(
-        "interface_translation/consolecommander",
+        "mcm_flick_translation/consolecommander",
         "ConsoleCommander_Translation.txt",
         "ConsoleCommander_Translation_zh.txt",
         sep=" = ",
@@ -121,6 +121,8 @@ MOD_CONFIGS: list[ModConfig] = [
         sep=" = ",
         encoding="utf-8",
     ),
+    # ── mcm_flick: 制表符分隔 + UTF-16 LE BOM ──
+    ModConfig("mcm_flick_translation/fittingroom", "Fitting Room_ENGLISH.txt", "Fitting Room_CHINESE.txt"),
     # ── skse menu: 空白分隔（3 空格）→ 制表符输出 ──
     ModConfig(
         "skse_menu_translation/speedofstrolling",
@@ -178,7 +180,7 @@ JSON_MODS: list[ModJson] = [
     ModJson("skse_menu_translation/Viny Mods/Parryall", "Language.json", "Language_zh.json"),
     ModJson("skse_menu_translation/Viny Mods/EDF", "Language.json", "Language_zh.json"),
     ModJson("skse_menu_translation/Viny Mods/quickcommands", "Language.json", "Language_zh.json"),
-    ModJson("interface_translation/Modex", "english.json", "chinese.json"),
+    ModJson("mod_interface_translation/Modex", "english.json", "chinese.json"),
     ModJson("skse_menu_translation/Viny Mods/BFCONG", "Language.json", "Language_zh.json"),
     ModJson("skse_menu_translation/Viny Mods/HMDP", "DaysPassed_Language.json", "DaysPassed_Language_zh.json"),
     ModJson("skse_menu_translation/Viny Mods/Just a block", "JusBlock_Language.json", "JusBlock_Language_zh.json"),
