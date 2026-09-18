@@ -17,8 +17,9 @@
 
 ## Build & Verification
 
-All mod configs live in `mods.toml`. Core logic in `config.py` + `locale_utils.py`.
+All mod configs live in `mods.toml`. `config.py` defines config data classes and TOML loading; `locale_utils.py` owns shared encoding, parsing, and JSON helpers.
 
+`config.toml` is not used by project code and is not present in repository. `.gitignore` keeps its name ignored as a defensive rule for local/private configuration; do not create or use it for mod configuration.
 ### 文件角色：源 vs 产物
 
 **有 translations.json**：
@@ -59,6 +60,17 @@ python verify_translation.py <name>
 # Verbose output
 python build_all.py -v <name>
 ```
+
+### 验证范围
+`verify_translation.py` 同时检查 line-based TXT/INI 和 JSON 模组：
+- 键缺失与多余键
+- `%s`、`%d`、`%f` 占位符
+- 中文输出文件是否存在
+- JSON 源文件允许 `//` 与 `/* ... */` 注释
+- XML 与特殊脚本使用各自流程，不由该命令验证
+
+不要直接修改 `build_all.py` 中的模组列表；新增模组应编辑 `mods.toml`。
+
 
 Dialogue XML: Follow dialogue-xml skill checks.
 Dependencies: Use `locale_utils.py` and Python stdlib only.

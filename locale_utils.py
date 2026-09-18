@@ -6,6 +6,8 @@
 """
 
 import json
+from collections import Counter
+import re
 import os
 
 import sys
@@ -172,6 +174,21 @@ def resolve_key_with_section(key: str, current_section: str, translations: dict[
     
     return None
 
+
+_FORMAT_TOKEN_RE = re.compile(r"%[sdf]|\{[^{}\r\n]*\}|\$[A-Za-z_][A-Za-z0-9_]*\$|</?[^>]+>")
+
+def translation_format_issues(source: str, translated: str, line_based: bool = False) -> list[str]:
+    """Return format-preservation errors for one translated value."""
+    issues: list[str] = []
+    if line_based:
+        if "\n" in translated:
+            issues.append("real newline")
+        if r"\n" in source and r"\n" not in translated:
+            issues.append("missing \\n escape")
+    if Counter(_FORMAT_TOKEN_RE.findall(source)) != Counter(_FORMAT_TOKEN_RE.findall(translated)):
+        issues.append("placeholder or tag mismatch")
+    return issues
+
 # ── 等号分隔行处理（INI 风格） ────────────────────────────────────────────────
 
 
@@ -206,6 +223,59 @@ def rebuild_eq_lines_with_translation(
 
 # ── JSON 键完整性检查 ─────────────────────────────────────────────────────────
 
+def load_json(path: str):
+    """Load JSON and tolerate // or /* */ comments used by mod sources."""
+    with open(path, encoding="utf-8") as f:
+        text = f.read()
+    out = []
+    i = 0
+    in_string = False
+    escaped = False
+    block_comment = False
+    line_comment = False
+    while i < len(text):
+        char = text[i]
+        nxt = text[i + 1] if i + 1 < len(text) else ""
+        if line_comment:
+            if char == "\n":
+                line_comment = False
+                out.append(char)
+            i += 1
+            continue
+        if block_comment:
+            if char == "*" and nxt == "/":
+                block_comment = False
+                i += 2
+            else:
+                i += 1
+            continue
+        if in_string:
+            out.append(char)
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            i += 1
+            continue
+        if char == '"':
+            in_string = True
+            out.append(char)
+        elif char == "/" and nxt == "/":
+            line_comment = True
+            i += 2
+            continue
+        elif char == "/" and nxt == "*":
+            block_comment = True
+            i += 2
+            continue
+        else:
+            out.append(char)
+        i += 1
+    return json.loads("".join(out))
+
+
 
 def check_json_keys(english_path: str, chinese_path: str) -> dict:
     """检查中英文 JSON 文件键是否一致。
@@ -219,10 +289,8 @@ def check_json_keys(english_path: str, chinese_path: str) -> dict:
             "match": bool
         }
     """
-    with open(english_path, "r", encoding="utf-8") as f:
-        en = json.load(f)
-    with open(chinese_path, "r", encoding="utf-8") as f:
-        zh = json.load(f)
+    en = load_json(english_path)
+    zh = load_json(chinese_path)
 
     def _flat_keys(d: dict, prefix: str = "") -> list[str]:
         keys: list[str] = []
@@ -262,17 +330,6 @@ def detect_encoding(path: str) -> str:
     return "utf-8"
 
 
-def _force_utf8_stdout() -> None:
-    import io
-    import sys
-
-    if hasattr(sys.stdout, "buffer"):
-        if not (
-            isinstance(sys.stdout, io.TextIOWrapper)
-            and (sys.stdout.encoding or "").lower() == "utf-8"
-        ):
-            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-
 
 def _self_check() -> None:
     import tempfile
@@ -283,6 +340,8 @@ def _self_check() -> None:
     assert detect_encoding(path) == "utf16-le-bom"
     assert read_text(path) == "k\tv\r\n"
     assert read_lines(path) == ["k\tv"]
+    assert translation_format_issues(r"a\n", r"中\n", line_based=True) == []
+    assert translation_format_issues(r"a\n", "中\n", line_based=True) == ["real newline", "missing \\n escape"]
     print("ok")
 
 
@@ -300,7 +359,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     cmd, *rest = args
     if cmd == "detect" and len(rest) == 1:
-        _force_utf8_stdout()
+        force_utf8_stdout()
         print(detect_encoding(rest[0]))
         return 0
     if cmd == "dump" and rest:
@@ -315,7 +374,7 @@ def main(argv: list[str] | None = None) -> int:
         if out:
             write_utf8(out, text)
             return 0
-        _force_utf8_stdout()
+        force_utf8_stdout()
         import sys
 
         sys.stdout.write(text)

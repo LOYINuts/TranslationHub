@@ -28,14 +28,13 @@ from locale_utils import (
     write_utf16le_bom,
     write_utf8_bom,
     write_utf8,
-    rebuild_tab_lines_with_translation,
     split_line,
     resolve_key_with_section,
+    force_utf8_stdout,
+    load_json,
+    translation_format_issues,
 )
 
-
-# Force UTF-8 for stdout (avoid GBK encoding errors on Windows console)
-from locale_utils import force_utf8_stdout
 force_utf8_stdout()
 
 # 配置日志
@@ -82,8 +81,7 @@ def build_one(cfg: ModConfig, root_dir: str) -> int:
         return 0
 
     try:
-        with open(trans_path, "r", encoding="utf-8") as f:
-            translations = json.load(f)
+        translations = load_json(trans_path)
     except (json.JSONDecodeError, UnicodeDecodeError) as e:
         logging.error(f"无法读取 {trans_path}: {e}")
         raise
@@ -120,7 +118,11 @@ def build_one(cfg: ModConfig, root_dir: str) -> int:
             lookup_key = key.strip()
             resolved = resolve_key_with_section(lookup_key, current_section, translations)
             if resolved:
-                out_lines.append(f"{key}{cfg.output_sep}{translations[resolved]}")
+                translated = translations[resolved]
+                format_issues = translation_format_issues(val, translated, line_based=True)
+                if format_issues:
+                    raise ValueError(f"{cfg.dir} {lookup_key}: {'; '.join(format_issues)}")
+                out_lines.append(f"{key}{cfg.output_sep}{translated}")
                 continue
         out_lines.append(line)
 
@@ -183,6 +185,18 @@ def apply_translations_to_json(obj, translations: dict, path: str = ""):
     else:
         return obj
 
+
+def iter_json_string_pairs(source, translated, path=""):
+    if isinstance(source, dict) and isinstance(translated, dict):
+        for key in source.keys() & translated.keys():
+            child_path = f"{path}.{key}" if path else key
+            yield from iter_json_string_pairs(source[key], translated[key], child_path)
+    elif isinstance(source, list) and isinstance(translated, list):
+        for index, (source_item, translated_item) in enumerate(zip(source, translated)):
+            yield from iter_json_string_pairs(source_item, translated_item, f"{path}[{index}]")
+    elif isinstance(source, str) and isinstance(translated, str):
+        yield path, source, translated
+
 def build_json_one(jcfg: ModJson, root_dir: str) -> int:
     """构建 JSON 模组，返回翻译条目数。
     
@@ -197,8 +211,7 @@ def build_json_one(jcfg: ModJson, root_dir: str) -> int:
         return 0
 
     try:
-        with open(trans_path, "r", encoding="utf-8") as f:
-            translations = json.load(f)
+        translations = load_json(trans_path)
     except (json.JSONDecodeError, UnicodeDecodeError) as e:
         logging.error(f"无法读取 {trans_path}: {e}")
         raise
@@ -210,14 +223,17 @@ def build_json_one(jcfg: ModJson, root_dir: str) -> int:
         return 0
 
     try:
-        with open(src_path, "r", encoding="utf-8") as f:
-            source_data = json.load(f)
+        source_data = load_json(src_path)
     except (json.JSONDecodeError, UnicodeDecodeError) as e:
         logging.error(f"无法读取 {src_path}: {e}")
         raise
 
     # 应用翻译
     translated_data = apply_translations_to_json(source_data, translations)
+    for path, source_value, translated_value in iter_json_string_pairs(source_data, translated_data):
+        format_issues = translation_format_issues(source_value, translated_value)
+        if format_issues:
+            raise ValueError(f"{jcfg.dir} {path}: {'; '.join(format_issues)}")
 
     # 写入输出
     out_path = os.path.join(mod_path, jcfg.output)
@@ -295,12 +311,17 @@ def iter_all_mods():
             seen_dirs.add(smod.dir)
             yield (smod.dir, "script", smod)
 
+def iter_build_tasks():
+    """Yield every configured build task, including multiple files per directory."""
+    yield from ((cfg, "line") for cfg in MOD_CONFIGS)
+    yield from ((cfg, "json") for cfg in JSON_MODS)
+    yield from ((cfg, "script") for cfg in SCRIPT_MODS)
+
+
 def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
     """构建所有（或指定）模组，返回统计信息。"""
     # 计算总数用于进度显示
-    all_mods = [(cfg, "line") for cfg in MOD_CONFIGS] + \
-               [(cfg, "json") for cfg in JSON_MODS] + \
-               [(cfg, "script") for cfg in SCRIPT_MODS]
+    all_mods = list(iter_build_tasks())
     
     if filters:
         all_mods = [(cfg, typ) for cfg, typ in all_mods if matches_filter(cfg.dir, filters)]
@@ -355,8 +376,7 @@ def _load_translation_count(path: str) -> Optional[int]:
     """读取 translations.json 并统计条目数（嵌套 JSON 按叶子计数）。"""
     if not os.path.exists(path):
         return None
-    with open(path, "r", encoding="utf-8") as f:
-        return count_leaves(json.load(f))
+    return count_leaves(load_json(path))
 
 
 def show_stats(root_dir: str):
@@ -430,9 +450,7 @@ def main():
     
     # 预览模式
     if args.dry_run:
-        all_mods = [(cfg, "line") for cfg in MOD_CONFIGS] + \
-                   [(cfg, "json") for cfg in JSON_MODS] + \
-                   [(cfg, "script") for cfg in SCRIPT_MODS]
+        all_mods = list(iter_build_tasks())
         
         if filters:
             all_mods = [(cfg, typ) for cfg, typ in all_mods if matches_filter(cfg.dir, filters)]
