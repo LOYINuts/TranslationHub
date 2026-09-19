@@ -5,7 +5,7 @@
 # 类型说明：
 # - line: 行分隔文件（TXT/INI），需指定 source, output, sep, encoding
 # - json: JSON 文件，需指定 source, output（可选，默认自动生成 _zh.json）
-# - script: 运行独立脚本，需指定 script（默认 generate_zh.py）
+# - script: 运行独立脚本，需指定 script；必须指定 verify 验证脚本
 # 目录名以 mods.toml 中的 dir 为准；重命名目录后同步更新此文件。
 
 # ── LINE-BASED MODS ────────────────────────────────────────────────────────
@@ -308,3 +308,4 @@ output = "UndodgeableHits_zh.json"
 [[script]]
 dir = "skse_menu_translation/vinymods/Dodgeall"
 script = "generate_zh.py"
+verify = "check_keys.py"

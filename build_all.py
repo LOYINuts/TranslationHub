@@ -6,9 +6,7 @@
   uv run python build_all.py --stats   # 仅统计，不生成
   uv run python build_all.py FUCK KillFeed  # 短名或完整相对路径均可
 
-数据驱动：每个模组的翻译数据存放在 {mod_dir}/translations.json，
-构建配置见下方 MOD_CONFIGS 列表。
-
+数据驱动：翻译源位于各模组的 translations.json，构建配置位于 mods.toml。
 支持三种模组类型：
   1. line-based：按行替换（制表符/等号分隔的 .txt/.ini）
   2. json-based：flat JSON 键值替换（.json）
@@ -70,39 +68,21 @@ def count_leaves(d):
 
 
 
-def build_one(cfg: ModConfig, root_dir: str) -> int:
-    """构建单个模组，返回翻译条目数。"""
+def render_line_one(cfg: ModConfig, root_dir: str) -> tuple[str, int]:
+    """Render one line-based mod without writing its output file."""
     mod_path = os.path.join(root_dir, cfg.dir)
-
-    # 读取 translations.json
     trans_path = os.path.join(mod_path, "translations.json")
-    if not os.path.exists(trans_path):
-        logging.warning(f"跳过 {cfg.dir}: 未找到 translations.json")
-        return 0
-
-    try:
-        translations = load_json(trans_path)
-    except (json.JSONDecodeError, UnicodeDecodeError) as e:
-        logging.error(f"无法读取 {trans_path}: {e}")
-        raise
-
-    # 读取源文件
     src_path = os.path.join(mod_path, cfg.source)
+    if not os.path.exists(trans_path):
+        raise FileNotFoundError(f"未找到翻译源: {trans_path}")
     if not os.path.exists(src_path):
-        logging.warning(f"跳过 {cfg.dir}: 未找到源文件 {cfg.source}")
-        return 0
+        raise FileNotFoundError(f"未找到源文件: {src_path}")
 
-    try:
-        lines = read_lines(src_path)
-    except Exception as e:
-        logging.error(f"无法读取 {src_path}: {e}")
-        raise
-
+    translations = load_json(trans_path)
+    lines = read_lines(src_path)
     out_lines = []
     current_section = ""
-
     for line in lines:
-        # 跟踪章节头 [Section]
         stripped = line.strip()
         if stripped.startswith("[") and stripped.endswith("]"):
             current_section = stripped[1:-1]
@@ -112,78 +92,59 @@ def build_one(cfg: ModConfig, root_dir: str) -> int:
             out_lines.append(line)
             continue
 
-        key, val = split_line(line, cfg.sep)
+        key, value = split_line(line, cfg.sep)
         if key is not None:
-            # 键两侧可能有对齐空格（如 ini），查找时剥离，输出仍用原格式
             lookup_key = key.strip()
             resolved = resolve_key_with_section(lookup_key, current_section, translations)
             if resolved:
                 translated = translations[resolved]
-                format_issues = translation_format_issues(val, translated, line_based=True)
+                format_issues = translation_format_issues(value, translated, line_based=True)
                 if format_issues:
                     raise ValueError(f"{cfg.dir} {lookup_key}: {'; '.join(format_issues)}")
                 out_lines.append(f"{key}{cfg.output_sep}{translated}")
                 continue
         out_lines.append(line)
+    return "\r\n".join(out_lines) + "\r\n", len(translations)
 
-    # 写入输出文件
-    content = "\r\n".join(out_lines) + "\r\n"
-    out_path = os.path.join(mod_path, cfg.output)
+
+def build_one(cfg: ModConfig, root_dir: str) -> int:
+    """Build one line-based mod and return its translation count."""
+    content, count = render_line_one(cfg, root_dir)
+    out_path = os.path.join(root_dir, cfg.dir, cfg.output)
     writer = WRITERS.get(cfg.encoding)
     if writer is None:
-        logging.error(f"未知编码: {cfg.encoding}")
         raise ValueError(f"不支持的编码: {cfg.encoding}")
-    
-    try:
-        writer(out_path, content)
-    except Exception as e:
-        logging.error(f"写入文件失败 {out_path}: {e}")
-        raise
+    writer(out_path, content)
+    logging.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}")
+    return count
 
-    logging.info(f"[OK] {cfg.dir}: {len(translations)} 条 -> {cfg.output}")
-    return len(translations)
+def flatten_json_values(value, prefix: str = "", out: dict | None = None) -> dict:
+    """Flatten nested translation JSON to source paths."""
+    out = {} if out is None else out
+    if isinstance(value, dict):
+        for key, child in value.items():
+            flatten_json_values(child, f"{prefix}.{key}" if prefix else key, out)
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            flatten_json_values(child, f"{prefix}[{index}]", out)
+    else:
+        out[prefix] = value
+    return out
 
 
 def apply_translations_to_json(obj, translations: dict, path: str = ""):
-    """递归地将翻译应用到 JSON 对象。
-    
-    支持嵌套字典，路径用点分隔（如 'parent.child.key'）。
-    """
+    """Apply a flat path-to-value translation map to nested JSON."""
     if isinstance(obj, dict):
-        result = {}
-        for key, value in obj.items():
-            # 构建完整路径
-            full_path = f"{path}.{key}" if path else key
-            
-            # 先尝试直接匹配（优先级最高）
-            if full_path in translations:
-                result[key] = translations[full_path]
-            elif key in translations:
-                result[key] = translations[key]
-            elif isinstance(value, dict):
-                # 递归处理嵌套字典
-                result[key] = apply_translations_to_json(value, translations, full_path)
-            elif isinstance(value, list):
-                # 处理数组（递归处理元素）
-                result[key] = [
-                    apply_translations_to_json(item, translations, f"{full_path}[{i}]")
-                    if isinstance(item, (dict, list))
-                    else item
-                    for i, item in enumerate(value)
-                ]
-            else:
-                # 保持原值
-                result[key] = value
-        return result
-    elif isinstance(obj, list):
+        return {
+            key: apply_translations_to_json(value, translations, f"{path}.{key}" if path else key)
+            for key, value in obj.items()
+        }
+    if isinstance(obj, list):
         return [
-            apply_translations_to_json(item, translations, f"{path}[{i}]")
-            if isinstance(item, (dict, list))
-            else item
-            for i, item in enumerate(obj)
+            apply_translations_to_json(value, translations, f"{path}[{index}]")
+            for index, value in enumerate(obj)
         ]
-    else:
-        return obj
+    return translations.get(path, obj)
 
 
 def iter_json_string_pairs(source, translated, path=""):
@@ -197,63 +158,43 @@ def iter_json_string_pairs(source, translated, path=""):
     elif isinstance(source, str) and isinstance(translated, str):
         yield path, source, translated
 
-def build_json_one(jcfg: ModJson, root_dir: str) -> int:
-    """构建 JSON 模组，返回翻译条目数。
-    
-    使用递归遍历替换 json.load 基于正则的逐行解析。
-    """
+
+def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int]:
+    """Render one JSON mod without writing its output file."""
     mod_path = os.path.join(root_dir, jcfg.dir)
-
-    # 读取 translations.json
     trans_path = os.path.join(mod_path, "translations.json")
-    if not os.path.exists(trans_path):
-        logging.warning(f"跳过 {jcfg.dir}: 未找到 translations.json")
-        return 0
-
-    try:
-        translations = load_json(trans_path)
-    except (json.JSONDecodeError, UnicodeDecodeError) as e:
-        logging.error(f"无法读取 {trans_path}: {e}")
-        raise
-
-    # 读取源 JSON 文件
     src_path = os.path.join(mod_path, jcfg.source)
+    if not os.path.exists(trans_path):
+        raise FileNotFoundError(f"未找到翻译源: {trans_path}")
     if not os.path.exists(src_path):
-        logging.warning(f"跳过 {jcfg.dir}: 未找到源文件 {jcfg.source}")
-        return 0
+        raise FileNotFoundError(f"未找到源文件: {src_path}")
 
-    try:
-        source_data = load_json(src_path)
-    except (json.JSONDecodeError, UnicodeDecodeError) as e:
-        logging.error(f"无法读取 {src_path}: {e}")
-        raise
-
-    # 应用翻译
-    translated_data = apply_translations_to_json(source_data, translations)
+    translations = load_json(trans_path)
+    source_data = load_json(src_path)
+    flat_translations = flatten_json_values(translations)
+    translated_data = apply_translations_to_json(source_data, flat_translations)
     for path, source_value, translated_value in iter_json_string_pairs(source_data, translated_data):
         format_issues = translation_format_issues(source_value, translated_value)
         if format_issues:
             raise ValueError(f"{jcfg.dir} {path}: {'; '.join(format_issues)}")
+    return translated_data, count_leaves(translations)
 
-    # 写入输出
-    out_path = os.path.join(mod_path, jcfg.output)
-    try:
-        with open(out_path, "w", encoding="utf-8", newline="\n") as f:
-            json.dump(translated_data, f, ensure_ascii=False, indent=2)
-    except Exception as e:
-        logging.error(f"写入文件失败 {out_path}: {e}")
-        raise
 
-    logging.info(f"[OK] {jcfg.dir}: {count_leaves(translations)} 条 -> {jcfg.output}")
-    return count_leaves(translations)
-
+def build_json_one(jcfg: ModJson, root_dir: str) -> int:
+    """Build one JSON mod and return its translation count."""
+    translated_data, count = render_json_one(jcfg, root_dir)
+    out_path = os.path.join(root_dir, jcfg.dir, jcfg.output)
+    with open(out_path, "w", encoding="utf-8", newline="\n") as file:
+        json.dump(translated_data, file, ensure_ascii=False, indent=2)
+        file.write("\n")
+    logging.info(f"[OK] {jcfg.dir}: {count} 条 -> {jcfg.output}")
+    return count
 def build_script_one(smod: ModScript, root_dir: str) -> int:
     """运行脚本型模组的生成脚本，返回翻译条目数。"""
     mod_path = os.path.join(root_dir, smod.dir)
     script_path = os.path.join(mod_path, smod.script)
     if not os.path.exists(script_path):
-        logging.warning(f"跳过 {smod.dir}: 未找到脚本 {smod.script}")
-        return 0
+        raise FileNotFoundError(f"未找到脚本: {script_path}")
 
     try:
         result = subprocess.run(
@@ -282,11 +223,11 @@ def matches_filter(mod_dir: str, filters: Optional[set[str]]) -> bool:
     """检查模组是否匹配过滤器。支持完整路径或 basename。"""
     if not filters:
         return True
-    norm = mod_dir.replace("\\", "/")
+    norm = mod_dir.replace("\\", "/").lower()
     base = os.path.basename(norm)
-    for f in filters:
-        f_norm = f.replace("\\", "/").rstrip("/")
-        if norm == f_norm or base == f_norm:
+    for value in filters:
+        filter_norm = value.replace("\\", "/").rstrip("/").lower()
+        if norm == filter_norm or base == filter_norm:
             return True
     return False
 
@@ -398,6 +339,17 @@ def show_stats(root_dir: str):
     print("-" * 80)
     print(f"{pad_cjk('总计', name_w)}{total:<8}")
 
+def _self_check() -> None:
+    source = {"section": {"label": "nested"}, "label": "root"}
+    translations = flatten_json_values({"section": {"label": "嵌套"}, "label": "根"})
+    assert apply_translations_to_json(source, translations) == {
+        "section": {"label": "嵌套"},
+        "label": "根",
+    }
+    assert apply_translations_to_json(source, {"label": "根"})["section"]["label"] == "nested"
+    print("self-check OK")
+
+
 # ── 入口 ─────────────────────────────────────────────────────────────────────
 
 
@@ -417,9 +369,14 @@ def main():
     parser.add_argument('--stats', action='store_true', help='统计模组翻译数据，不执行构建')
     parser.add_argument('--dry-run', action='store_true', help='预览要构建的模组，不实际执行')
     parser.add_argument('--verbose', '-v', action='store_true', help='显示详细日志')
+    parser.add_argument('--self-check', action='store_true', help='运行构建逻辑自检')
     
     args = parser.parse_args()
     
+    if args.self_check:
+        _self_check()
+        return 0
+
     # 设置日志级别
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
@@ -430,7 +387,7 @@ def main():
     toml_path = os.path.join(root, "mods.toml")
     if not os.path.exists(toml_path):
         logging.error(f"未找到 {toml_path}，请创建模组配置文件")
-        sys.exit(1)
+        return 1
     
     global MOD_CONFIGS, JSON_MODS, SCRIPT_MODS
     try:
@@ -438,16 +395,20 @@ def main():
         logging.info(f"从 {toml_path} 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(SCRIPT_MODS)} script")
     except Exception as e:
         logging.error(f"无法加载 mods.toml: {e}")
-        sys.exit(1)
+        return 1
     
     # 统计模式
     if args.stats:
         show_stats(root)
-        return
+        return 0
     
     # 过滤器
     filters = set(args.mods) if args.mods else None
     
+    if filters and not any(matches_filter(cfg.dir, filters) for cfg, _ in iter_build_tasks()):
+        logging.error(f"未找到模组: {', '.join(sorted(filters))}")
+        return 2
+
     # 预览模式
     if args.dry_run:
         all_mods = list(iter_build_tasks())
@@ -458,7 +419,7 @@ def main():
         print(f"将构建 {len(all_mods)} 个模组:")
         for cfg, mod_type in all_mods:
             print(f"  - {cfg.dir} ({mod_type})")
-        return
+        return 0
     
     # 执行构建
     result = build_all(root, filters)
@@ -485,7 +446,8 @@ def main():
             print(f"  ... 及其他 {len(result['skipped']) - 5} 个")
     
     print(f"{'='*60}")
+    return 1 if result["failed"] else 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

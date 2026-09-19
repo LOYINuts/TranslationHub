@@ -175,7 +175,32 @@ def resolve_key_with_section(key: str, current_section: str, translations: dict[
     return None
 
 
-_FORMAT_TOKEN_RE = re.compile(r"%[sdf]|\{[^{}\r\n]*\}|\$[A-Za-z_][A-Za-z0-9_]*\$|</?[^>]+>")
+_PRINTF_TOKEN_RE = re.compile(
+    r"%(?:\d+\$)?[-+#0']*\d*(?:\.\d+)?(?:hh|h|ll|l|j|z|t|L)?[diuoxXfFeEgGaAcspn%]"
+)
+_QT_TOKEN_RE = re.compile(r"%(?:L)?[1-9]\d*")
+_BRACE_TOKEN_RE = re.compile(r"\{[^{}\r\n]*\}")
+_DOLLAR_TOKEN_RE = re.compile(r"\$[A-Za-z_][A-Za-z0-9_]*\$")
+_MARKUP_TOKEN_RE = re.compile(r"</?([A-Za-z][\w:-]*)(?:\s+[^<>]*)?>")
+_BRACKET_TAG_RE = re.compile(r"\[/?(?:br|pagebreak)\]", re.IGNORECASE)
+
+
+def format_tokens(text: str) -> list[str]:
+    """Extract placeholders and real paired/attributed markup tags."""
+    tokens: list[str] = []
+    for regex in (_PRINTF_TOKEN_RE, _QT_TOKEN_RE, _BRACE_TOKEN_RE, _DOLLAR_TOKEN_RE):
+        tokens.extend(regex.findall(text))
+    tokens.extend(_BRACKET_TAG_RE.findall(text))
+
+    markup = list(_MARKUP_TOKEN_RE.finditer(text))
+    closing_names = {m.group(1).lower() for m in markup if m.group(0).startswith("</")}
+    for match in markup:
+        token = match.group(0)
+        name = match.group(1).lower()
+        if token.startswith("</") or name in closing_names or "=" in token:
+            tokens.append(token)
+    return tokens
+
 
 def translation_format_issues(source: str, translated: str, line_based: bool = False) -> list[str]:
     """Return format-preservation errors for one translated value."""
@@ -185,7 +210,7 @@ def translation_format_issues(source: str, translated: str, line_based: bool = F
             issues.append("real newline")
         if r"\n" in source and r"\n" not in translated:
             issues.append("missing \\n escape")
-    if Counter(_FORMAT_TOKEN_RE.findall(source)) != Counter(_FORMAT_TOKEN_RE.findall(translated)):
+    if Counter(format_tokens(source)) != Counter(format_tokens(translated)):
         issues.append("placeholder or tag mismatch")
     return issues
 
@@ -342,6 +367,11 @@ def _self_check() -> None:
     assert read_lines(path) == ["k\tv"]
     assert translation_format_issues(r"a\n", r"中\n", line_based=True) == []
     assert translation_format_issues(r"a\n", "中\n", line_based=True) == ["real newline", "missing \\n escape"]
+    assert translation_format_issues("%llu %zu %1 {name}", "%llu %zu %1 {name}") == []
+    assert translation_format_issues("<Select Type>", "<选择类型>") == []
+    assert translation_format_issues("<font color='red'>x</font>", "<font color='red'>中</font>") == []
+    assert translation_format_issues("a[br]b", "甲[br]乙") == []
+    assert translation_format_issues("a[br]b", "甲乙") == ["placeholder or tag mismatch"]
     print("ok")
 
 

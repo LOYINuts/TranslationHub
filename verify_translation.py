@@ -7,27 +7,30 @@
   uv run python verify_translation.py FUCK FUCKRACE  # 校验多个
 
 检查项：
-  - 键完整性（有无缺失/多余）
-  - 转义序列 \n 格式（是否存成真实换行符）
-  - 格式占位符 %d/%s 是否保留
-  - 疑似未翻译项（EN==CN 且非全大写）
+  - 翻译键覆盖
+  - 转义、printf/Python/Qt 占位符和标记
+  - 生成产物是否等于当前 translations.json 构建结果
+  - script 模组声明的验证脚本
+  - Eslifer Qt TS 和 Descriptionmods 结构
 """
 
 import json
 import os
-import re
+import subprocess
+import xml.etree.ElementTree as ET
 import sys
 import logging
 
 from locale_utils import (
     read_lines,
+    read_text,
     split_line,
     resolve_key_with_section,
     force_utf8_stdout,
-    check_json_keys,
     load_json,
     translation_format_issues,
  )
+from build_all import flatten_json_values, render_json_one, render_line_one
 force_utf8_stdout()
 
 # 配置日志
@@ -40,7 +43,7 @@ logging.basicConfig(
 
 # ── 从 config.py 加载配置 ─────────────────────────────────────────────────
 
-from config import load_configs_from_toml
+from config import ModJson, load_configs_from_toml
 
 
 CONFIG_CACHE = None
@@ -105,49 +108,33 @@ def find_translation_files(mod_dir: str, root: str) -> dict:
 
 
 
-def _flatten_json(value, prefix="") -> dict[str, object]:
-    if isinstance(value, dict):
-        out = {}
-        for key, child in value.items():
-            path = f"{prefix}.{key}" if prefix else key
-            out.update(_flatten_json(child, path))
-        return out
-    if isinstance(value, list):
-        out = {}
-        for index, child in enumerate(value):
-            out.update(_flatten_json(child, f"{prefix}[{index}]"))
-        return out
-    return {prefix: value}
-
-
 def verify_json_mod(mod_config, root: str) -> list[str]:
-    """Verify source/output JSON keys and format placeholders."""
+    """Verify translation coverage, formatting, and generated JSON output."""
     mod_path = os.path.join(root, mod_config.dir)
     source_path = os.path.join(mod_path, mod_config.source)
     output_path = os.path.join(mod_path, mod_config.output)
-    issues = []
-    if not os.path.exists(source_path):
-        return [f"[跳过] 未找到英文 JSON: {source_path}"]
-    if not os.path.exists(output_path):
-        return [f"[缺失] 未找到中文 JSON: {output_path}"]
+    trans_path = os.path.join(mod_path, "translations.json")
+    for label, path in (("英文 JSON", source_path), ("翻译源", trans_path), ("中文 JSON", output_path)):
+        if not os.path.exists(path):
+            return [f"[缺失] 未找到{label}: {path}"]
+
     try:
-        key_result = check_json_keys(source_path, output_path)
-    except (OSError, json.JSONDecodeError, UnicodeDecodeError) as exc:
-        return [f"[错误] JSON 无法读取: {exc}"]
-    if key_result["missing"]:
-        issues.append(f"[缺失] {len(key_result['missing'])} 个 JSON 键：{', '.join(key_result['missing'][:10])}")
-    if key_result["extra"]:
-        issues.append(f"[多余] {len(key_result['extra'])} 个 JSON 键：{', '.join(key_result['extra'][:10])}")
-    source = _flatten_json(load_json(source_path))
-    output = _flatten_json(load_json(output_path))
-    for key in sorted(source.keys() & output.keys()):
-        original = source[key]
-        translated = output[key]
-        if not isinstance(original, str) or not isinstance(translated, str):
-            continue
-        format_issues = translation_format_issues(original, translated)
-        if format_issues:
-            issues.append(f"[格式] {key}: {'; '.join(format_issues)}")
+        source = flatten_json_values(load_json(source_path))
+        translations = flatten_json_values(load_json(trans_path))
+        expected, _ = render_json_one(mod_config, root)
+        actual = load_json(output_path)
+    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+        return [f"[错误] JSON 无法验证: {exc}"]
+
+    missing = sorted(
+        path for path, value in source.items()
+        if isinstance(value, str) and path not in translations
+    )
+    issues = []
+    if missing:
+        issues.append(f"[缺失] {len(missing)} 个翻译键：{', '.join(missing[:10])}")
+    if actual != expected:
+        issues.append("[过期] 中文 JSON 与 translations.json 构建结果不一致")
     return issues or ["[OK] 全部检查通过"]
 
 
@@ -276,34 +263,149 @@ def verify_mod(mod_dir: str, root: str) -> list:
             if format_issues:
                 issues.append(f"[格式] {k}: {'; '.join(format_issues)}")
 
-        # 检查疑似未翻译（EN==CN 且非全大写/品牌名）
-    # 3. 检查中文输出文件是否存在且与 translations.json 条目一致
-    if cn_path and os.path.exists(cn_path):
-        cn_out_lines = read_lines(cn_path)
-        cn_out_keys = set()
-        current_section = ""
-        for line in cn_out_lines:
-            stripped = line.strip()
-            if stripped.startswith("[") and stripped.endswith("]"):
-                current_section = stripped[1:-1]
-                continue
-            key, _ = split_line(line, sep or "\t")
-            if key:
-                key = key.strip()  # 与 build_one 查找逻辑一致
-                full_key = f"{current_section}.{key}" if current_section and not key.startswith(f"{current_section}.") else key
-                cn_out_keys.add(full_key)
-        cn_out_resolved = cn_out_keys | {k.split('.', 1)[1] for k in cn_out_keys if '.' in k}
-        missing_in_output = cn_keys - cn_out_resolved
-        if missing_in_output:
-            issues.append(f"[输出缺失] 中文文件缺少 {len(missing_in_output)} 条：{', '.join(sorted(missing_in_output)[:5])}")
-
+    # 3. Confirm generated output is current.
+    try:
+        expected, _ = render_line_one(get_line_configs()[mod_dir], root)
+        if read_text(cn_path) != expected:
+            issues.append("[过期] 中文文件与 translations.json 构建结果不一致")
+    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+        issues.append(f"[错误] 无法重建预期输出: {exc}")
     if not issues:
         issues.append("[OK] 全部检查通过")
 
     return issues
 
 
+def verify_script_mod(mod_config, root: str) -> list[str]:
+    """Run configured verifier for a script-built mod."""
+    if not mod_config.verify:
+        return ["[缺失] script 配置未声明 verify"]
+    mod_path = os.path.join(root, mod_config.dir)
+    verify_path = os.path.join(mod_path, mod_config.verify)
+    if not os.path.exists(verify_path):
+        return [f"[缺失] 未找到验证脚本: {verify_path}"]
+    result = subprocess.run(
+        [sys.executable, verify_path],
+        cwd=mod_path,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        return [f"[错误] 验证脚本失败: {detail or f'exit {result.returncode}'}"]
+    return ["[OK] 全部检查通过"]
+
+
+def verify_qt_ts(root: str) -> list[str]:
+    """Verify Eslifer Qt TS source/translation pairing and placeholders."""
+    source_path = os.path.join(root, "Eslifer", "origin", "eslifier_translation.ts")
+    target_path = os.path.join(root, "Eslifer", "eslifier_translation.ts")
+    try:
+        source_messages = ET.parse(source_path).getroot().findall(".//message")
+        target_messages = ET.parse(target_path).getroot().findall(".//message")
+    except (OSError, ET.ParseError) as exc:
+        return [f"[错误] Qt TS 无法读取: {exc}"]
+    if len(source_messages) != len(target_messages):
+        return [f"[结构] Qt TS 条目数不同：源 {len(source_messages)}，译文 {len(target_messages)}"]
+
+    issues = []
+    for index, (source_message, target_message) in enumerate(zip(source_messages, target_messages), 1):
+        source = "".join(source_message.findtext("source", default=""))
+        target_source = "".join(target_message.findtext("source", default=""))
+        translation_node = target_message.find("translation")
+        translation = "" if translation_node is None else "".join(translation_node.itertext())
+        if source != target_source:
+            issues.append(f"[结构] Qt TS 第 {index} 条 source 不一致")
+        if not translation.strip() or (translation_node is not None and translation_node.get("type") == "unfinished"):
+            issues.append(f"[缺失] Qt TS 第 {index} 条未翻译")
+            continue
+        format_issues = translation_format_issues(source, translation)
+        if format_issues:
+            issues.append(f"[格式] Qt TS 第 {index} 条: {'; '.join(format_issues)}")
+    return issues or ["[OK] 全部检查通过"]
+
+
+def verify_descriptionmods(root: str) -> list[str]:
+    """Verify Descriptionmods source/target file and line structure."""
+    base = os.path.join(root, "Descriptionmods")
+    target_base = os.path.join(base, "zh")
+    source_files = []
+    for dirpath, dirnames, filenames in os.walk(base):
+        dirnames[:] = [name for name in dirnames if name != "zh"]
+        source_files.extend(os.path.join(dirpath, name) for name in filenames if name.lower().endswith(".ini"))
+    issues = []
+    expected_targets = set()
+    for source_path in sorted(source_files):
+        relative = os.path.relpath(source_path, base)
+        target_path = os.path.join(target_base, relative)
+        expected_targets.add(os.path.normcase(target_path))
+        if not os.path.exists(target_path):
+            issues.append(f"[缺失] Descriptionmods/zh/{relative}")
+            continue
+        def entries(path: str) -> dict[str, list[list[str]]]:
+            result = {}
+            for line in read_lines(path):
+                if not line or line.startswith("#"):
+                    continue
+                parts = line.split("|")
+                if len(parts) >= 2:
+                    result.setdefault(parts[0], []).append(parts)
+            return result
+
+        source_entries = entries(source_path)
+        target_entries = entries(target_path)
+        missing = sorted(source_entries.keys() - target_entries.keys())
+        extra = sorted(target_entries.keys() - source_entries.keys())
+        if missing:
+            issues.append(f"[缺失] {relative}: {', '.join(missing[:10])}")
+        if extra:
+            issues.append(f"[多余] {relative}: {', '.join(extra[:10])}")
+        for key in sorted(source_entries.keys() & target_entries.keys()):
+            source_values = source_entries[key]
+            target_values = target_entries[key]
+            if len(source_values) != len(target_values):
+                issues.append(f"[结构] {relative}:{key} 重复条目数不同")
+                continue
+            for source_parts, target_parts in zip(source_values, target_values):
+                source_meta = [part.strip() for part in source_parts[2:]]
+                target_meta = [part.strip() for part in target_parts[2:]]
+                if len(source_parts) != len(target_parts) or source_meta != target_meta:
+                    issues.append(f"[结构] {relative}:{key} 元字段不一致")
+                    continue
+                format_issues = translation_format_issues(source_parts[1], target_parts[1])
+                if format_issues:
+                    issues.append(f"[格式] {relative}:{key}: {'; '.join(format_issues)}")
+    for dirpath, _, filenames in os.walk(target_base):
+        for name in filenames:
+            target_path = os.path.join(dirpath, name)
+            if name.lower().endswith(".ini") and os.path.normcase(target_path) not in expected_targets:
+                issues.append(f"[多余] {os.path.relpath(target_path, target_base)}")
+    return issues or ["[OK] 全部检查通过"]
+
+
+def _self_check() -> None:
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as root:
+        mod_path = os.path.join(root, "mod")
+        os.mkdir(mod_path)
+        data = {
+            "en.json": {"key": "Value %1"},
+            "translations.json": {"key": "值 %1"},
+            "zh.json": {"key": "stale %1"},
+        }
+        for name, value in data.items():
+            with open(os.path.join(mod_path, name), "w", encoding="utf-8") as file:
+                json.dump(value, file, ensure_ascii=False)
+        issues = verify_json_mod(ModJson("mod", "en.json", "zh.json"), root)
+        assert any(issue.startswith("[过期]") for issue in issues), issues
+    print("self-check OK")
+
+
 def main():
+    if sys.argv[1:] == ["--self-check"]:
+        _self_check()
+        return 0
     root = os.path.dirname(os.path.abspath(__file__))
     filters = set(sys.argv[1:]) if len(sys.argv) > 1 else None
 
@@ -314,13 +416,22 @@ def main():
         """No filter = all. Accept full path or basename."""
         if not filters:
             return True
-        norm = mod_dir.replace("\\", "/")
+        norm = mod_dir.replace("\\", "/").lower()
         base = os.path.basename(norm)
-        for f in filters:
-            if norm == f or base == f:
+        for value in filters:
+            filter_norm = value.replace("\\", "/").rstrip("/").lower()
+            if norm == filter_norm or base == filter_norm:
                 return True
         return False
-    tasks = [(c.dir, "line", c) for c in configs] + [(c.dir, "json", c) for c in json_mods]
+    tasks = (
+        [(c.dir, "line", c) for c in configs]
+        + [(c.dir, "json", c) for c in json_mods]
+        + [(c.dir, "script", c) for c in script_mods]
+        + [("Eslifer", "qt", None), ("Descriptionmods", "description", None)]
+    )
+    if filters and not any(matches_filter(mod_dir, filters) for mod_dir, _, _ in tasks):
+        logging.error(f"未找到模组: {', '.join(sorted(filters))}")
+        return 2
     exit_code = 0
 
     for mod_dir, mod_type, config in tasks:
@@ -333,6 +444,12 @@ def main():
 
         if mod_type == "json":
             issues = verify_json_mod(config, root)
+        elif mod_type == "script":
+            issues = verify_script_mod(config, root)
+        elif mod_type == "qt":
+            issues = verify_qt_ts(root)
+        elif mod_type == "description":
+            issues = verify_descriptionmods(root)
         else:
             issues = verify_mod(mod_dir, root)
         for issue in issues:
@@ -349,8 +466,8 @@ def main():
         logging.info("全部通过 [OK]")
     print(f"{'='*60}")
 
-    sys.exit(exit_code)
+    return exit_code
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

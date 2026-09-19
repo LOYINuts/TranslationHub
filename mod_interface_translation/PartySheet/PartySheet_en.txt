@@ -1,4 +1,4 @@
-; =============================================================================
+﻿; =============================================================================
 ; PartySheet Translation File - English
 ; =============================================================================
 ; IMPORTANT: Do NOT remove or modify the format specifiers (%d, %s) in values!
@@ -177,10 +177,12 @@ fatigue_3=Tired
 fatigue_4=Weary
 fatigue_5=Debilitated
 ; Starfrost survival overhaul
-sf_hunger_0=Fed
-sf_hunger_1=Hungry
-sf_hunger_2=Very Hungry
-sf_hunger_3=Famished
+sf_hunger_0=Not Hungry
+sf_hunger_1=Neutral
+sf_hunger_2=Neutral
+sf_hunger_3=Hungry
+sf_hunger_4=Very Hungry
+sf_hunger_5=Starving
 sf_cold_0=Warm
 sf_cold_1=Comfortable
 sf_cold_2=Chilly

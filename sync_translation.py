@@ -14,7 +14,7 @@ import sys
 import logging
 from typing import Optional
 
-from locale_utils import read_lines, split_line, force_utf8_stdout
+from locale_utils import read_lines, split_line, force_utf8_stdout, load_json
 from config import ModConfig, load_configs_from_toml
 
 force_utf8_stdout()
@@ -66,37 +66,22 @@ def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, s
     
     返回: (缺失的 {key: 英文值}, translations.json 中存在的键集合)
     """
-    # 读取英文源文件
     source_path = os.path.join(mod_path, mod_config.source)
     if not os.path.exists(source_path):
-        logging.error(f"源文件不存在: {source_path}")
-        return {}, set()
-    
+        raise FileNotFoundError(f"源文件不存在: {source_path}")
     source_keys = extract_keys_from_source(source_path, mod_config.sep)
-    
-    # 读取 translations.json
+
     trans_path = os.path.join(mod_path, "translations.json")
-    if not os.path.exists(trans_path):
-        logging.error(f"translations.json 不存在: {trans_path}")
-        return source_keys, set()  # 全部缺失
-    
-    try:
-        with open(trans_path, "r", encoding="utf-8") as f:
-            translations = json.load(f)
-    except (json.JSONDecodeError, UnicodeDecodeError) as e:
-        logging.error(f"无法读取 {trans_path}: {e}")
-        return {}, set()
-    
-    # 对比
-    trans_keys = set(translations.keys())
+    translations = load_json(trans_path) if os.path.exists(trans_path) else {}
+    if not isinstance(translations, dict):
+        raise ValueError(f"翻译源必须是 JSON 对象: {trans_path}")
+
+    trans_keys = set(translations)
     missing = {}
-    
     for full_key, en_value in source_keys.items():
-        # 检查完整键或裸键是否存在
         bare_key = full_key.split(".", 1)[-1] if "." in full_key else full_key
         if full_key not in trans_keys and bare_key not in trans_keys:
             missing[full_key] = en_value
-    
     return missing, trans_keys
 
 
@@ -138,42 +123,31 @@ def sync_translations(mod_config: ModConfig, mod_path: str, missing: dict[str, s
     logging.info(f"已更新 {trans_path}，新增 {len(missing)} 条")
 
 
-def process_mod(mod_config: ModConfig, root_dir: str, check_only: bool, interactive: bool):
-    """处理单个模组。"""
+def process_mod(mod_config: ModConfig, root_dir: str, check_only: bool, interactive: bool) -> bool:
+    """Process one mod. Return True when keys are missing or processing fails."""
     mod_path = os.path.join(root_dir, mod_config.dir)
-    
-    if not os.path.exists(mod_path):
-        logging.warning(f"模组目录不存在: {mod_path}")
-        return
-    
     logging.info(f"\n检查模组: {mod_config.dir}")
-    
-    missing, existing = find_missing_keys(mod_config, mod_path)
-    
+    try:
+        missing, existing = find_missing_keys(mod_config, mod_path)
+    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+        logging.error(f"检查失败: {exc}")
+        return True
+
     if not missing:
-        logging.info(f"[✓] 无缺失词条（已有 {len(existing)} 条翻译）")
-        return
-    
-    # 显示缺失词条
+        logging.info(f"[OK] 无缺失词条（已有 {len(existing)} 条翻译）")
+        return False
+
     print(f"\n发现 {len(missing)} 个新词条需要翻译：")
     for key, en_value in sorted(missing.items()):
         print(f"  {key} = \"{en_value}\"")
-    
     if check_only:
-        return
-    
-    # 同步
-    if interactive:
-        confirm = input(f"\n交互式添加翻译？[y/N] ").strip().lower()
-        if confirm != 'y':
-            return
-    else:
-        confirm = input(f"\n自动添加（英文占位）？[y/N] ").strip().lower()
-        if confirm != 'y':
-            return
-    
-    sync_translations(mod_config, mod_path, missing, interactive)
+        return True
 
+    prompt = "交互式添加翻译？[y/N] " if interactive else "自动添加（英文占位）？[y/N] "
+    if input(f"\n{prompt}").strip().lower() != "y":
+        return True
+    sync_translations(mod_config, mod_path, missing, interactive)
+    return False
 
 def main():
     import argparse
@@ -193,36 +167,43 @@ def main():
     
     if not os.path.exists(toml_path):
         logging.error(f"未找到 mods.toml: {toml_path}")
-        sys.exit(1)
+        return 1
     
     line_configs, json_configs, script_configs = load_configs_from_toml(toml_path)
     
     # 只处理 line-based 模组（TXT/INI）
     all_configs = line_configs
     
+    selection_failed = False
     if args.all:
         configs_to_process = all_configs
     elif args.mods:
         configs_to_process = []
         for name in args.mods:
-            # 支持短名或完整路径
-            matched = [c for c in all_configs if name.lower() in c.dir.lower() or c.dir == name]
+            normalized = name.replace("\\", "/").rstrip("/").lower()
+            matched = [
+                c for c in all_configs
+                if c.dir.replace("\\", "/").lower() == normalized
+                or os.path.basename(c.dir).lower() == normalized
+            ]
             if not matched:
-                logging.warning(f"未找到模组: {name}")
+                logging.error(f"未找到模组: {name}")
+                selection_failed = True
                 continue
             configs_to_process.extend(matched)
     else:
         parser.print_help()
-        sys.exit(0)
+        return 0
     
     # 确定模式
     check_only = args.check or not (args.sync or args.interactive)
     interactive = args.interactive
     
-    # 处理
+    failed = False
     for cfg in configs_to_process:
-        process_mod(cfg, root_dir, check_only, interactive)
+        failed = process_mod(cfg, root_dir, check_only, interactive) or failed
+    return 1 if failed or selection_failed else 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

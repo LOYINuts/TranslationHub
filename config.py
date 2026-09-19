@@ -1,9 +1,9 @@
 """模组配置加载和数据类定义。"""
 
 import os
+import tomllib
 from dataclasses import dataclass
 from typing import Optional
-
 
 @dataclass
 class ModConfig:
@@ -38,18 +38,10 @@ class ModScript:
     """脚本型模组配置。"""
     dir: str
     script: str = "generate_zh.py"
-
+    verify: str = ""
 
 def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJson], list[ModScript]]:
     """从 TOML 文件加载模组配置。"""
-    try:
-        import tomllib  # Python 3.11+
-    except ImportError:
-        try:
-            import tomli as tomllib  # fallback
-        except ImportError:
-            raise ImportError("需要 tomli 库：pip install tomli")
-
     with open(toml_path, "rb") as f:
         data = tomllib.load(f)
 
@@ -98,6 +90,7 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
         cfg = ModScript(
             dir=item["dir"],
             script=item.get("script", "generate_zh.py"),
+            verify=item.get("verify", ""),
         )
         script_configs.append(cfg)
     return line_configs, json_configs, script_configs

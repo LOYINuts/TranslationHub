@@ -1,39 +1,45 @@
-import json
 import os
+import sys
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-en = json.load(open(os.path.join(script_dir, 'Language.json'), 'r', encoding='utf-8'))
-zh = json.load(open(os.path.join(script_dir, 'Language_zh.json'), 'r', encoding='utf-8'))
-def count_keys(d):
-    n = 0
-    for k,v in d.items():
-        if isinstance(v, dict):
-            n += count_keys(v)
-        else:
-            n += 1
-    return n
-def flat_keys(d, prefix=''):
-    keys = []
-    for k,v in d.items():
-        key = f'{prefix}.{k}' if prefix else k
-        if isinstance(v, dict):
-            keys.extend(flat_keys(v, key))
-        else:
-            keys.append(key)
-    return keys
-en_keys = set(flat_keys(en))
-zh_keys = set(flat_keys(zh))
-missing = sorted(en_keys - zh_keys)
-extra = sorted(zh_keys - en_keys)
-print(f'EN keys: {len(en_keys)}')
-print(f'ZH keys: {len(zh_keys)}')
+root_dir = os.path.abspath(os.path.join(script_dir, "..", "..", ".."))
+sys.path.insert(0, root_dir)
+
+from locale_utils import load_json, translation_format_issues
+
+
+def flatten(value, prefix="", out=None):
+    out = {} if out is None else out
+    if isinstance(value, dict):
+        for key, child in value.items():
+            flatten(child, f"{prefix}.{key}" if prefix else key, out)
+    else:
+        out[prefix] = value
+    return out
+
+
+source = flatten(load_json(os.path.join(script_dir, "Language.json")))
+output = flatten(load_json(os.path.join(script_dir, "Language_zh.json")))
+translations = load_json(os.path.join(script_dir, "translations.json"))
+issues = []
+
+missing = sorted(source.keys() - output.keys())
+extra = sorted(output.keys() - source.keys())
 if missing:
-    print(f'Missing in ZH ({len(missing)}):')
-    for m in missing:
-        print(f'  {m}')
+    issues.append(f"Missing in ZH ({len(missing)}): {', '.join(missing[:10])}")
 if extra:
-    print(f'Extra in ZH ({len(extra)}):')
-    for e in extra:
-        print(f'  {e}')
-if not missing and not extra:
-    print('Perfect match!')
+    issues.append(f"Extra in ZH ({len(extra)}): {', '.join(extra[:10])}")
+for path, translated in translations.items():
+    if output.get(path) != translated:
+        issues.append(f"Stale translation: {path}")
+for path in sorted(source.keys() & output.keys()):
+    if isinstance(source[path], str) and isinstance(output[path], str):
+        format_issues = translation_format_issues(source[path], output[path])
+        if format_issues:
+            issues.append(f"Format mismatch: {path}: {'; '.join(format_issues)}")
+
+if issues:
+    print("\n".join(issues))
+else:
+    print(f"Perfect match: {len(output)} keys, {len(translations)} managed translations")
+raise SystemExit(bool(issues))
