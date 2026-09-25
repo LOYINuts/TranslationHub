@@ -25,7 +25,7 @@
     "probability_logic": "概率逻辑：",
     "sim_bandit_normal": "普通强盗 - HP: 100%% -> 概率: %.2f%%",
     "sim_bandit_injured": "普通强盗 - HP: 25%% -> 概率: %.2f%%",
-   "sim_skilled_npc": "熟练NPC - HP: 100%%, 攻击性: 2.0, 武器技能: 40 -> 概率: %.2f%%",
+    "sim_skilled_npc": "熟练NPC - HP: 100%%, 攻击性: 2.0, 武器技能: 40 -> 概率: %.2f%%",
     "sim_high_skill_npc": "高技能NPC - HP: 50%%, 攻击性: 3.0, 武器技能: 100 -> 概率: %.2f%%",
     "exclusion_normal": "排除perk（禁用普通攻击）",
     "global_normal_title": "普通攻击全局设置",

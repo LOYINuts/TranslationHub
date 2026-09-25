@@ -167,12 +167,34 @@ sep = ""  # 空字符串表示任意空白
 output_sep = "\t"
 encoding = "utf16-le-bom"
 
+
 [[line]]
 dir = "mcm_flick_translation/classicsprintingredone"
 source = "ClassicSprintingRedone_ENGLISH.txt"
 output = "ClassicSprintingRedone_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
+
+[[line]]
+dir = "skse_menu_translation/consolecommander"
+source = "ConsoleCommander_Translation.txt"
+output = "ConsoleCommander_Translation_zh.txt"
+sep = " = "
+encoding = "utf-8"
+
+[[line]]
+dir = "mcm_flick_translation/riverwoodhaswalls"
+source = "Riverwood Has Walls_english.txt"
+output = "Riverwood Has Walls_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
+dir = "skse_menu_translation/coldbreathng"
+source = "ColdBreathNG_Translation.ini"
+output = "ColdBreathNG_Translation_zh.ini"
+sep = "="
+encoding = "utf-8"
 
 # ── JSON-BASED MODS ────────────────────────────────────────────────────────
 
@@ -248,6 +270,7 @@ dir = "mod_interface_translation/Modex"
 source = "english.json"
 output = "chinese.json"
 
+
 [[json]]
 dir = "mod_interface_translation/newskillmenu"
 source = "NSM_Language.json"
@@ -316,9 +339,20 @@ source = "UndodgeableHits.json"
 output = "UndodgeableHits_zh.json"
 
 [[json]]
+dir = "skse_menu_translation/flightframework"
+source = "FlightFrameworkStrings.json"
+output = "FlightFrameworkStrings_zh.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/inventoryextension"
+source = "Localization.json"
+output = "Localization_zh.json"
+
+[[json]]
 dir = "skse_menu_translation/vinymods/moreragdoll"
 source = "Language.json"
 output = "Language_zh.json"
+
 
 # ── SCRIPT-BASED MODS ──────────────────────────────────────────────────────
 
@@ -326,3 +360,9 @@ output = "Language_zh.json"
 dir = "skse_menu_translation/vinymods/Dodgeall"
 script = "generate_zh.py"
 verify = "check_keys.py"
+
+
+[[script]]
+dir = "skse_menu_translation/logwatcher"
+script = "generate_zh.py"
+verify = "check_translation.py"

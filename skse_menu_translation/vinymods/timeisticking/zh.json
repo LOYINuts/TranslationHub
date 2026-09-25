@@ -27,10 +27,10 @@
     "notify_every": "每隔",
     "notify_message": "通知文本",
     "show_remaining": "显示剩余时间",
-	"notify_on_trigger": "事件触发时通知",
-	"trigger_notification_message": "事件通知文本",
-	"notification_preview": "提醒",
-	"trigger_notification_preview": "事件发生时",
+    "notify_on_trigger": "事件触发时通知",
+    "trigger_notification_message": "事件通知文本",
+    "notification_preview": "提醒",
+    "trigger_notification_preview": "事件发生时",
     "count_wait_time": "计入等待/睡眠时间",
     "notify_on_wait": "等待触发时通知",
     "notify_on_sleep": "睡眠触发时通知",
@@ -44,7 +44,7 @@
   },
   "hud": {
     "default_notification": "时间在流逝",
-	"default_trigger_notification": "时间到了",
+    "default_trigger_notification": "时间到了",
     "default_wait_notification": "等待期间时间已过去",
     "default_sleep_notification": "睡眠期间时间已过去",
     "remaining_suffix": "剩余"
