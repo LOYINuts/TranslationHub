@@ -167,6 +167,13 @@ sep = ""  # 空字符串表示任意空白
 output_sep = "\t"
 encoding = "utf16-le-bom"
 
+[[line]]
+dir = "mcm_flick_translation/classicsprintingredone"
+source = "ClassicSprintingRedone_ENGLISH.txt"
+output = "ClassicSprintingRedone_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
 # ── JSON-BASED MODS ────────────────────────────────────────────────────────
 
 [[json]]
@@ -242,6 +249,11 @@ source = "english.json"
 output = "chinese.json"
 
 [[json]]
+dir = "mod_interface_translation/newskillmenu"
+source = "NSM_Language.json"
+output = "NSM_Language_zh.json"
+
+[[json]]
 dir = "skse_menu_translation/vinymods/BFCONG"
 source = "Language.json"
 output = "Language_zh.json"
@@ -302,6 +314,11 @@ output = "Language_zh.json"
 dir = "skse_menu_translation/vinymods/UndodgeableHits"
 source = "UndodgeableHits.json"
 output = "UndodgeableHits_zh.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/moreragdoll"
+source = "Language.json"
+output = "Language_zh.json"
 
 # ── SCRIPT-BASED MODS ──────────────────────────────────────────────────────
 
