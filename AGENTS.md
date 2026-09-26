@@ -13,6 +13,7 @@
 ## Source Of Truth
 
 - Directory contains `translations.json`: edit it, then build output. Generated TXT/INI/JSON is read-only.
+- When a request adds a mod or new game-text files, treat it as a new mod until you confirm it is configured. Inspect its source and output format, add its `line`, `json`, or `script` entry to `mods.toml`, and create `translations.json` before translating. Never translate generated output.
 - `Descriptionmods/`: edit matching file under `Descriptionmods/zh/` directly.
 - `Eslifer/`: `origin/eslifier_translation.ts` is source; edit `eslifier_translation.ts`.
 - Dialogue XML: use `pending.json` and `dialogue_mod_translation/translate.py`; never regex-edit XML.

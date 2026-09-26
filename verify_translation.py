@@ -324,6 +324,28 @@ def verify_qt_ts(root: str) -> list[str]:
             issues.append(f"[格式] Qt TS 第 {index} 条: {'; '.join(format_issues)}")
     return issues or ["[OK] 全部检查通过"]
 
+def find_unregistered_translation_dirs(root: str, registered_dirs: set[str]) -> list[str]:
+    """Find translations.json directories that have no build configuration."""
+    normalize = lambda path: os.path.normcase(os.path.normpath(path))
+    registered = {normalize(path) for path in registered_dirs}
+    unregistered = []
+    for dirpath, dirnames, filenames in os.walk(root):
+        dirnames[:] = [name for name in dirnames if name != ".git"]
+        if "translations.json" in filenames:
+            relative = os.path.relpath(dirpath, root)
+            if normalize(relative) not in registered:
+                unregistered.append(relative.replace(os.sep, "/"))
+    return sorted(unregistered)
+
+
+def verify_translation_registry(root: str, registered_dirs: set[str]) -> list[str]:
+    unregistered = find_unregistered_translation_dirs(root, registered_dirs)
+    return (
+        [f"[未登记] {path} 包含 translations.json，但未在 mods.toml 注册" for path in unregistered]
+        or ["[OK] 所有 translations.json 均已登记"]
+    )
+
+
 
 def verify_descriptionmods(root: str) -> list[str]:
     """Verify Descriptionmods source/target file and line structure."""
@@ -399,6 +421,8 @@ def _self_check() -> None:
                 json.dump(value, file, ensure_ascii=False)
         issues = verify_json_mod(ModJson("mod", "en.json", "zh.json"), root)
         assert any(issue.startswith("[过期]") for issue in issues), issues
+        assert find_unregistered_translation_dirs(root, set()) == ["mod"]
+        assert find_unregistered_translation_dirs(root, {"mod"}) == []
     print("self-check OK")
 
 
@@ -433,6 +457,16 @@ def main():
         logging.error(f"未找到模组: {', '.join(sorted(filters))}")
         return 2
     exit_code = 0
+    if filters is None:
+        print(f"\n{'='*60}")
+        logging.info("translations.json registration")
+        registered_dirs = {config.dir for config in configs + json_mods + script_mods}
+        for issue in verify_translation_registry(root, registered_dirs):
+            if issue.startswith("[OK]"):
+                logging.info(issue)
+            else:
+                logging.error(issue)
+                exit_code = 1
 
     for mod_dir, mod_type, config in tasks:
         if not matches_filter(mod_dir, filters):
