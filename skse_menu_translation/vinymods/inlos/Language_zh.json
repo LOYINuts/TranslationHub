@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "section": "INLOS",
+    "loot_rules": "战利品规则",
+    "processed_encounters": "已处理的遭遇",
+    "settings": "设置",
+    "export": "导出"
+  },
+  "auto": {
+    "death": "死亡",
+    "defeat": "击败",
+    "both": "死亡或击败",
+    "victim": "受害者 / 尸体",
+    "player": "玩家",
+    "experience": "经验",
+    "skill_experience": "技能经验",
+    "export_packages": "导出包",
+    "export_selection_help": "选择要导出的包和规则。包和规则标识（包括已保存的版本历史）都会保留。",
+    "export_location": "ZIP 文件保存在 Data/Viny Mods/INLOS/Export。",
+    "archive_name": "压缩包名称",
+    "clear_selection": "清除选择",
+    "export_selected": "导出所选项",
+    "export": "导出",
+    "rule": "规则",
+    "version": "版本",
+    "selected_rules_and_packages": "已选择：%d 条规则，来自 %d 个包"
+  }
+}

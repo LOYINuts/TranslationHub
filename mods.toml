@@ -196,6 +196,14 @@ output = "ColdBreathNG_Translation_zh.ini"
 sep = "="
 encoding = "utf-8"
 
+[[line]]
+dir = "skse_menu_translation/skyrimsoulsre"
+source = "SkyrimSoulsRE_ENGLISH.txt"
+output = "SkyrimSoulsRE_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+
 # ── JSON-BASED MODS ────────────────────────────────────────────────────────
 
 [[json]]
@@ -257,6 +265,17 @@ output = "Language_zh.json"
 
 [[json]]
 dir = "skse_menu_translation/vinymods/EDF"
+source = "Language.json"
+output = "Language_zh.json"
+
+
+[[json]]
+dir = "skse_menu_translation/vinymods/inlos"
+source = "Language.json"
+output = "Language_zh.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/booksofperks"
 source = "Language.json"
 output = "Language_zh.json"
 

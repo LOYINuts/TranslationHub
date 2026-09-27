@@ -1,0 +1,66 @@
+{
+  "tab": {
+    "books": "技能书",
+    "blacklist": "黑名单"
+  },
+  "table": {
+    "perk": "技能",
+    "plugin": "插件",
+    "dfg_slot": "DFG 插槽",
+    "name": "名称",
+    "editorid": "EditorID",
+    "perk_key": "技能键",
+    "actions": "操作",
+    "weight": "重量",
+    "value": "价值"
+  },
+  "field": {
+    "name": "名称",
+    "model_path": "NIF 模型路径",
+    "editorid_readonly": "EditorID",
+    "weight": "重量",
+    "value": "价值",
+    "filter": "筛选",
+    "blacklisted_perk_filter": "筛选已列入黑名单的技能",
+    "perk_key": "技能键",
+    "plugin_name": "插件名称",
+    "base_book": "基础书籍"
+  },
+  "button": {
+    "save": "保存",
+    "reset_overrides": "重置覆盖项",
+    "blacklist_delete": "加入黑名单 / 删除",
+    "refresh_rebuild": "刷新 / 重建",
+    "add_perk": "添加技能",
+    "add_plugin": "添加插件",
+    "remove": "移除",
+    "clear_base_book": "清除基础书籍"
+  },
+  "section": {
+    "plugins": "插件",
+    "perks": "技能"
+  },
+  "menu": {
+    "section": "技能书",
+    "select_book": "选择一本书。",
+    "editing": "正在编辑"
+  },
+  "status": {
+    "invalid_perk": "技能无效。",
+    "book_saved": "已保存书籍。",
+    "override_removed": "已移除覆盖项。",
+    "perk_blacklisted": "已将技能移入黑名单。",
+    "rebuild_complete": "重建完成。",
+    "base_book_saved": "已保存基础书籍。",
+    "base_book_cleared": "已清除基础书籍。"
+  },
+  "common": {
+    "select": "选择",
+    "automatic": "自动"
+  },
+  "tooltip": {
+    "runtime_plugin": "运行时插件",
+    "full_formid": "完整 FormID",
+    "perk_plugin": "技能所属插件"
+  }
+}
