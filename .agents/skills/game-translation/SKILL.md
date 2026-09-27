@@ -3,27 +3,37 @@ name: game-translation
 description: Translate English game text into natural Simplified Chinese. Use for dialogue, UI, quests, descriptions, and proofreading.
 ---
 
-# 英译中
+# English-to-Chinese Game Translation
 
-先按 `AGENTS.md` 路由加载文件流程。改仓库文件时写回文件，不只在聊天中输出。
+Follow the file workflow selected by `AGENTS.md`. Write changes to repository
+files, not only to chat.
 
 ## Translation
 
-- First infer purpose, speaker/user, tone, and context; then write natural Simplified Chinese.
-- Preserve meaning, logic, scope, conditions, tense, modality, and attitude. Do not omit or invent content.
-- Dialogue should sound spoken; UI should be concise; literary text should preserve imagery and voice.
-- Terminology priority: mod-local glossary/profile, nearby existing translation, repository terminology, established game translation.
-- Reorder grammar freely for Chinese. Avoid literal English syntax and redundant pronouns/articles.
+- Identify the purpose, speaker or user, tone, and context before translating
+  into natural Simplified Chinese.
+- Preserve meaning, logic, scope, conditions, tense, modality, and attitude.
+  Do not omit or invent content.
+- Make dialogue sound spoken. Keep UI concise. Preserve imagery and voice in
+  literary text.
+- Use terminology in this order: mod-local glossary or profile, nearby
+  translations, repository terminology, then established game translations.
+- Use natural Chinese grammar. Avoid literal English syntax and redundant
+  pronouns or articles.
 
 ## Immutable Content
 
-Preserve keys, code, links, paths, numbers, units, placeholders, escapes, and markup unless source format explicitly localizes them.
+Preserve keys, code, links, paths, numbers, units, placeholders, escapes, and
+markup unless the source format explicitly translates them.
 
-Examples: `{name}`, `{0}`, `%s`, `%llu`, Qt `%1`, `$PLAYER$`, `<color>`, `</color>`, `[br]`, literal `\\n`.
+Examples: `{name}`, `{0}`, `%s`, `%llu`, Qt `%1`, `$PLAYER$`, `<color>`,
+`</color>`, `[br]`, and literal `\\n`.
 
 ## Final Check
 
-1. Natural and accurate Chinese; consistent names, terminology, and register.
-2. Numbers, tags, placeholders, escapes, and structural fields preserved.
-3. Resolve context-supported ambiguity directly; report only ambiguity that cannot be resolved.
+1. Confirm the Chinese is natural and accurate. Keep names, terms, and register
+   consistent.
+2. Preserve numbers, tags, placeholders, escapes, and structural fields.
+3. Resolve ambiguity from context. Report only ambiguity that context cannot
+   resolve.
 4. Run format-specific verification and require exit code 0.

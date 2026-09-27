@@ -4,12 +4,12 @@
 
 | File type | Path | Required skill/process |
 |---|---|---|
-| New or unknown files | Any mod folder | `translation-io` intake, then type-specific process |
 | xTranslator XML | `dialogue_mod_translation/` | `dialogue-xml` + `game-translation` |
+| Qt Linguist TS | `Eslifer/*.ts` | `translations.json` → generated TS |
 | TXT/INI | Any mod folder | `translation-io` + `game-translation` |
 | Description files | `Descriptionmods/` | `translation-io` + `game-translation` |
-| Qt Linguist TS | `Eslifer/*.ts` | `translations.json` → generated TS |
 | JSON localization | Any configured mod | Shared `json` builder + `game-translation` |
+| New or unknown files | Any mod folder | `translation-io` intake, then type-specific process |
 | Any game text | any | `game-translation` |
 
 ## Source Of Truth
