@@ -385,3 +385,14 @@ verify = "check_keys.py"
 dir = "skse_menu_translation/logwatcher"
 script = "generate_zh.py"
 verify = "check_translation.py"
+
+
+[[script]]
+dir = "Descriptionmods"
+script = "generate_zh.py"
+verify = "check_translation.py"
+
+[[script]]
+dir = "Eslifer"
+script = "generate_zh.py"
+verify = "check_translation.py"

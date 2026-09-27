@@ -1,6 +1,6 @@
 {
   "menu": {
-    "section": "Time Control",
+    "section": "时间控制",
     "settings": "设置",
     "mode": "模式",
     "disabled_hint": "时间流速控制已禁用",

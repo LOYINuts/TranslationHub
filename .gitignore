@@ -20,7 +20,6 @@ Thumbs.db
 BDD_LOYI_WL1.51.xml
 *.db
 bdd.tsv
-bdd_extracted.json
 *.log
 *.zip
 */Export/

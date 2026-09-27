@@ -42,8 +42,8 @@
     "command_executed": "控制台命令"
   },
   "menu": {
-    "section": "Quick Commands",
-    "title": "Quick Commands",
+    "section": "快速命令",
+    "title": "快速命令",
     "quick_commands": "设置",
     "quick_command": "快捷命令",
     "command": "命令",

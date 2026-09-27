@@ -59,9 +59,13 @@ WRITERS = {
     "utf-8": write_utf8,
 }
 
-def count_leaves(d):
-    """递归统计翻译条目数：嵌套 JSON 按叶子计数。"""
-    return sum(count_leaves(v) if isinstance(v, dict) else 1 for v in d.values())
+def count_leaves(value):
+    """统计嵌套字典和列表中的翻译值。"""
+    if isinstance(value, dict):
+        return sum(count_leaves(item) for item in value.values())
+    if isinstance(value, list):
+        return sum(count_leaves(item) for item in value)
+    return 1
 
 
 # ── 构建函数 ──────────────────────────────────────────────────────────────────
@@ -346,6 +350,7 @@ def _self_check() -> None:
         "section": {"label": "嵌套"},
         "label": "根",
     }
+    assert count_leaves({"records": ["first", "second"], "one": "third"}) == 3
     assert apply_translations_to_json(source, {"label": "根"})["section"]["label"] == "nested"
     print("self-check OK")
 

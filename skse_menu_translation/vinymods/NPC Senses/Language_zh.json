@@ -28,7 +28,7 @@
     "database": "数据库",
     "debug": "调试",
     "rules": "规则",
-    "section": "NPC Senses"
+    "section": "NPC 感知"
   },
   "msg": {
     "rules_updated": "视野规则已更新！"

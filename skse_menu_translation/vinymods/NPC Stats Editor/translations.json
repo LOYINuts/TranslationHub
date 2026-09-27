@@ -45,7 +45,7 @@
     "database": "数据库",
     "editor": "编辑器",
     "presets": "预设",
-    "section": "NPC Stats Editor"
+    "section": "NPC 属性编辑器"
   },
   "modal": {
     "confirm_delete": "确认删除预设",

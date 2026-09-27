@@ -6,23 +6,28 @@
 |---|---|---|
 | xTranslator XML | `dialogue_mod_translation/` | `dialogue-xml` + `game-translation` |
 | TXT/INI | `*_translation/` | `translation-io` + `game-translation` |
-| Description files | `Descriptionmods/` | `translation-io` + `game-translation` |
-| Qt Linguist TS | `Eslifer/*.ts` | `game-translation`; preserve XML and Qt `%1` placeholders |
+| Description files | `Descriptionmods/` | `translations.json` → `zh/` |
+| Qt Linguist TS | `Eslifer/*.ts` | `translations.json` → generated TS |
 | Any game text | any | `game-translation` |
 
 ## Source Of Truth
 
-- Directory contains `translations.json`: edit it, then build output. Generated TXT/INI/JSON is read-only.
-- When a request adds a mod or new game-text files, treat it as a new mod until you confirm it is configured. Inspect its source and output format, add its `line`, `json`, or `script` entry to `mods.toml`, and create `translations.json` before translating. Never translate generated output.
-- `Descriptionmods/`: edit matching file under `Descriptionmods/zh/` directly.
-- `Eslifer/`: `origin/eslifier_translation.ts` is source; edit `eslifier_translation.ts`.
-- Dialogue XML: use `pending.json` and `dialogue_mod_translation/translate.py`; never regex-edit XML.
-- Unconfigured paired files: edit Chinese file directly and preserve source encoding/format.
+- `translations.json` is the source for every configured non-dialogue mod.
+  Edit it, then build output.
+- Register each new non-dialogue mod in `mods.toml`. Create its
+  `translations.json` before translation. Use `line`, `json`, or `script`.
+- `Descriptionmods/`: edit `Descriptionmods/translations.json`.
+  Build files under `Descriptionmods/zh/`.
+- `Eslifer/`: edit `Eslifer/translations.json`. Build the TS file from
+  `origin/eslifier_translation.ts`.
+- Dialogue XML stays outside `mods.toml`. Use `pending.json` and
+  `dialogue_mod_translation/translate.py`.
+- Do not edit generated TXT/INI/JSON/TS files. Preserve source format.
 
 ## Required Workflow
 
 1. Inspect source encoding, target convention, context, and existing terminology.
-2. Preserve keys, order where required, separators, tags, placeholders, escapes, and line structure.
+2. Preserve keys, order, format, tags, placeholders, escapes, and line structure.
 3. Edit translation source, not generated output.
 4. Run smallest relevant build and verification command.
 5. Treat any nonzero command exit as failure; do not report completion.
@@ -41,6 +46,9 @@ python verify_translation.py <name>
 python verify_translation.py
 ```
 
-`verify_translation.py` covers configured line/JSON/script mods, `Eslifer`, and `Descriptionmods`. Dialogue XML uses its skill-specific checks.
+`verify_translation.py` covers configured mods, Eslifer, and Descriptionmods.
+Dialogue XML uses its own checks.
 
-All build configuration lives in `mods.toml`. Add mods there; never hard-code lists in scripts. `config.toml` is unused and must not be created. Python requirement: 3.11+. Dependencies: Python standard library only.
+All build configuration lives in `mods.toml`. Never hard-code mod lists.
+Do not create the unused `config.toml`. Python 3.11+ and the standard library
+are the only requirements.

@@ -7,20 +7,21 @@ description: Read and write Skyrim translation TXT/INI files safely, including U
 
 ## First Decision
 
-1. If directory has `translations.json`, edit only that file; output TXT/INI/JSON is generated.
-2. Under `Descriptionmods/`, edit matching `Descriptionmods/zh/...` file directly.
-3. Otherwise edit Chinese TXT/INI directly.
+1. For configured mods, edit only `translations.json`. Build the output files.
+2. For `Descriptionmods`, edit `Descriptionmods/translations.json`, then run
+   `python build_all.py Descriptionmods`.
 
 ## Encoding
 
-Before direct TXT/INI edits:
+Read source encoding before you inspect TXT/INI files:
 
 ```bash
 python locale_utils.py detect PATH
 python locale_utils.py dump PATH
 ```
 
-Do not use Pi `read` for UTF-16 files. For direct writes, use `locale_utils.write_utf16le_bom`, `write_utf8_bom`, or `write_utf8`; preserve existing encoding and newline convention.
+Do not use Pi `read` for UTF-16 files. Generated output keeps the source
+encoding and newline convention. Use `build_all.py` to make output files.
 
 ## Configured Mods
 
@@ -32,11 +33,15 @@ python build_all.py <name>
 python verify_translation.py <name>
 ```
 
-Separator and encoding come from `mods.toml`; never infer a global `=` spacing rule. Preserve keys, sections, ordering, comments, placeholders, tags, escaped `\\n`, and other nontranslated fields.
+Separator and encoding come from `mods.toml`. Do not infer a global `=` rule.
+Preserve keys, sections, order, comments, placeholders, tags, escaped `\\n`,
+and other nontranslated fields.
 
-For `Descriptionmods`, preserve each `key|description|metadata...` record and verify with:
+For `Descriptionmods`, preserve every `key|description|metadata...` record.
+Build and verify it with:
 
 ```bash
+python build_all.py Descriptionmods
 python verify_translation.py Descriptionmods
 ```
 
