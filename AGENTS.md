@@ -4,10 +4,12 @@
 
 | File type | Path | Required skill/process |
 |---|---|---|
+| New or unknown files | Any mod folder | `translation-io` intake, then type-specific process |
 | xTranslator XML | `dialogue_mod_translation/` | `dialogue-xml` + `game-translation` |
-| TXT/INI | `*_translation/` | `translation-io` + `game-translation` |
-| Description files | `Descriptionmods/` | `translations.json` → `zh/` |
+| TXT/INI | Any mod folder | `translation-io` + `game-translation` |
+| Description files | `Descriptionmods/` | `translation-io` + `game-translation` |
 | Qt Linguist TS | `Eslifer/*.ts` | `translations.json` → generated TS |
+| JSON localization | Any configured mod | Shared `json` builder + `game-translation` |
 | Any game text | any | `game-translation` |
 
 ## Source Of Truth
@@ -25,12 +27,35 @@
   `dialogue_mod_translation/translate.py`.
 - Do not edit generated TXT/INI/JSON/TS files. Preserve source format.
 
+## New Mod Intake
+
+Before translation, inspect the mod folder. Classify each candidate source
+and target file.
+Do not infer a file type or encoding from its name alone.
+
+1. List files with `rg --files <mod-dir>`. Exclude archives and binaries from text
+   parsing.
+2. Run these commands for each likely text file:
+   `python locale_utils.py detect <file>`
+   `python locale_utils.py dump <file>`
+   `detect` checks BOMs only. `dump` strictly decodes BOM-less files as UTF-8.
+   A successful decode does not prove the source encoding.
+3. Inspect a text dump and the file structure. Use JSON/XML parsers for
+   structured files. Compare source and target samples to identify keys,
+   separators, comments, and line endings.
+4. If decoding fails or file type, source, target, or output encoding stays
+   unclear, stop and ask. Do not guess another encoding.
+   Do not edit or build an unclassified file.
+5. Register the mod in `mods.toml` as `line`, `json`, or `qt`. Keep dialogue XML
+   separate. Create and translate `translations.json` from confirmed source keys.
+   Run `python build_all.py --dry-run <mod>`, then build and verify the mod.
+
 ## Required Workflow
 
-1. Inspect source encoding, target convention, context, and existing terminology.
+1. For a new mod, follow New Mod Intake. Never guess file type or encoding.
 2. Preserve keys, order, format, tags, placeholders, escapes, and line structure.
 3. Edit translation source, not generated output.
-4. Run smallest relevant build and verification command.
+4. Run the smallest relevant build and verification command.
 5. Treat any nonzero command exit as failure; do not report completion.
 6. Write changes to repository files; never return a translation-only dump in chat.
 
