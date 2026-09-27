@@ -3,9 +3,10 @@
 # 每个模组需要 translations.json 文件
 # 
 # 类型说明：
-# - line: 行分隔文件（TXT/INI），需指定 source, output, sep, encoding
-# - json: JSON 文件，需指定 source, output（可选，默认自动生成 _zh.json）
-# - script: 运行独立脚本，需指定 script；必须指定 verify 验证脚本
+# - line: 分隔文本文件，指定 source, output, sep, encoding
+# - json: JSON 源和 JSON 产物
+# - qt: Qt TS 源和目标，由共享 Qt 处理器生成
+# 使用通配符的 line 配置会逐文件构建，并用文件作用域键查找译文。
 # 目录名以 mods.toml 中的 dir 为准；重命名目录后同步更新此文件。
 
 # ── LINE-BASED MODS ────────────────────────────────────────────────────────
@@ -204,6 +205,16 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 
+[[line]]
+dir = "Descriptionmods"
+source = "**/*.ini"
+output = "zh"
+sep = "|"
+encoding = "utf-8"
+value_field = 1
+trim_trailing_fields = true
+
+
 # ── JSON-BASED MODS ────────────────────────────────────────────────────────
 
 [[json]]
@@ -373,26 +384,17 @@ source = "Language.json"
 output = "Language_zh.json"
 
 
-# ── SCRIPT-BASED MODS ──────────────────────────────────────────────────────
-
-[[script]]
+[[json]]
 dir = "skse_menu_translation/vinymods/Dodgeall"
-script = "generate_zh.py"
-verify = "check_keys.py"
+source = "Language.json"
+output = "Language_zh.json"
 
-
-[[script]]
+[[json]]
 dir = "skse_menu_translation/logwatcher"
-script = "generate_zh.py"
-verify = "check_translation.py"
+source = "LogWatcherTranslation.json"
+output = "LogWatcherTranslation_zh.json"
 
-
-[[script]]
-dir = "Descriptionmods"
-script = "generate_zh.py"
-verify = "check_translation.py"
-
-[[script]]
+[[qt]]
 dir = "Eslifer"
-script = "generate_zh.py"
-verify = "check_translation.py"
+source = "origin/eslifier_translation.ts"
+output = "eslifier_translation.ts"

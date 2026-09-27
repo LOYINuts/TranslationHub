@@ -15,7 +15,8 @@
 - `translations.json` is the source for every configured non-dialogue mod.
   Edit it, then build output.
 - Register each new non-dialogue mod in `mods.toml`. Create its
-  `translations.json` before translation. Use `line`, `json`, or `script`.
+  `translations.json` before translation. Use `line` or `json`.
+  Qt TS uses the shared `qt` handler.
 - `Descriptionmods/`: edit `Descriptionmods/translations.json`.
   Build files under `Descriptionmods/zh/`.
 - `Eslifer/`: edit `Eslifer/translations.json`. Build the TS file from

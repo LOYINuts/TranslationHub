@@ -11,6 +11,7 @@
 import json
 import os
 import sys
+import glob
 import logging
 from typing import Optional
 
@@ -66,11 +67,37 @@ def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, s
     
     返回: (缺失的 {key: 英文值}, translations.json 中存在的键集合)
     """
-    source_path = os.path.join(mod_path, mod_config.source)
-    if not os.path.exists(source_path):
-        raise FileNotFoundError(f"源文件不存在: {source_path}")
-    source_keys = extract_keys_from_source(source_path, mod_config.sep)
-
+    if glob.has_magic(mod_config.source):
+        source_keys = {}
+        source_paths = sorted(glob.glob(os.path.join(mod_path, mod_config.source), recursive=True))
+        output_root = os.path.join(mod_path, mod_config.output)
+        source_paths = [
+            path for path in source_paths
+            if os.path.isfile(path)
+            and os.path.commonpath([os.path.abspath(output_root), os.path.abspath(path)])
+            != os.path.abspath(output_root)
+        ]
+        if not source_paths:
+            raise FileNotFoundError(f"没有文件匹配: {mod_config.source}")
+        for source_path in source_paths:
+            relative = os.path.relpath(source_path, mod_path).replace(os.sep, "/")
+            occurrences = {}
+            for line in read_lines(source_path):
+                if mod_config.sep not in line:
+                    continue
+                fields = line.split(mod_config.sep)
+                if mod_config.value_field >= len(fields):
+                    continue
+                key = fields[0].strip()
+                index = occurrences.get(key, 0)
+                occurrences[key] = index + 1
+                source_key = f"{relative}::{key}#{index}"
+                source_keys[source_key] = fields[mod_config.value_field].strip()
+    else:
+        source_path = os.path.join(mod_path, mod_config.source)
+        if not os.path.exists(source_path):
+            raise FileNotFoundError(f"源文件不存在: {source_path}")
+        source_keys = extract_keys_from_source(source_path, mod_config.sep)
     trans_path = os.path.join(mod_path, "translations.json")
     translations = load_json(trans_path) if os.path.exists(trans_path) else {}
     if not isinstance(translations, dict):
@@ -80,7 +107,7 @@ def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, s
     missing = {}
     for full_key, en_value in source_keys.items():
         bare_key = full_key.split(".", 1)[-1] if "." in full_key else full_key
-        if full_key not in trans_keys and bare_key not in trans_keys:
+        if full_key not in trans_keys and (glob.has_magic(mod_config.source) or bare_key not in trans_keys):
             missing[full_key] = en_value
     return missing, trans_keys
 
@@ -169,9 +196,7 @@ def main():
         logging.error(f"未找到 mods.toml: {toml_path}")
         return 1
     
-    line_configs, json_configs, script_configs = load_configs_from_toml(toml_path)
-    
-    # 只处理 line-based 模组（TXT/INI）
+    line_configs, _, _ = load_configs_from_toml(toml_path)
     all_configs = line_configs
     
     selection_failed = False

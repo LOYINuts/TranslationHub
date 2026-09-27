@@ -7,15 +7,14 @@
   uv run python build_all.py FUCK KillFeed  # 短名或完整相对路径均可
 
 数据驱动：翻译源位于各模组的 translations.json，构建配置位于 mods.toml。
-支持三种模组类型：
-  1. line-based：按行替换（制表符/等号分隔的 .txt/.ini）
-  2. json-based：flat JSON 键值替换（.json）
-  3. script-based：运行模组目录下的独立脚本（如 IED 的 JSON→JSON 转换）
+数据源统一为各模组的 `translations.json`，配置统一放在 `mods.toml`。
+支持 `line`、`json` 和单一共享的 `qt` 处理器。
 """
 
 import json
+import xml.etree.ElementTree as ET
 import os
-import subprocess
+import glob
 import sys
 from typing import Optional
 
@@ -23,6 +22,7 @@ import logging
 import argparse
 from locale_utils import (
     read_lines,
+    read_text,
     write_utf16le_bom,
     write_utf8_bom,
     write_utf8,
@@ -45,12 +45,12 @@ logging.basicConfig(
 # ── 模组构建配置 ─────────────────────────────────────────────────────────────
 
 
-from config import ModConfig, ModJson, ModScript, load_configs_from_toml
+from config import ModConfig, ModJson, ModQt, load_configs_from_toml
 
 # 模组配置从 mods.toml 加载，这些全局变量在 main() 中赋值
 MOD_CONFIGS: list[ModConfig] = []
 JSON_MODS: list = []
-SCRIPT_MODS: list = []
+QT_MODS: list[ModQt] = []
 
 # 写入器映射
 WRITERS = {
@@ -110,18 +110,76 @@ def render_line_one(cfg: ModConfig, root_dir: str) -> tuple[str, int]:
         out_lines.append(line)
     return "\r\n".join(out_lines) + "\r\n", len(translations)
 
+def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, str]], int]:
+    """Render a configured line-file glob with file-scoped translation keys."""
+    mod_path = os.path.join(root_dir, cfg.dir)
+    trans_path = os.path.join(mod_path, "translations.json")
+    translations = load_json(trans_path)
+    output_root = os.path.join(mod_path, cfg.output)
+    source_paths = sorted(glob.glob(os.path.join(mod_path, cfg.source), recursive=True))
+    source_paths = [
+        path for path in source_paths
+        if os.path.isfile(path)
+        and os.path.commonpath([os.path.abspath(output_root), os.path.abspath(path)])
+        != os.path.abspath(output_root)
+    ]
+    if not source_paths:
+        raise FileNotFoundError(f"No files match: {os.path.join(mod_path, cfg.source)}")
+    artifacts = []
+    used = set()
+    count = 0
+    for source_path in source_paths:
+        relative = os.path.relpath(source_path, mod_path).replace(os.sep, "/")
+        occurrences = {}
+        output_lines = []
+        for line in read_lines(source_path):
+            if not line or (line.startswith("#") and cfg.sep not in line) or cfg.sep not in line:
+                output_lines.append(line)
+                continue
+            fields = line.split(cfg.sep)
+            if cfg.value_field >= len(fields):
+                raise ValueError(f"Missing field {cfg.value_field}: {relative}")
+            key = fields[0].strip()
+            index = occurrences.get(key, 0)
+            occurrences[key] = index + 1
+            lookup = f"{relative}::{key}#{index}"
+            if lookup not in translations:
+                raise ValueError(f"Missing translation: {lookup}")
+            translated = translations[lookup]
+            issues = translation_format_issues(fields[cfg.value_field], translated, line_based=True)
+            if issues:
+                raise ValueError(f"{lookup}: {'; '.join(issues)}")
+            fields[cfg.value_field] = translated
+            if cfg.trim_trailing_fields:
+                fields[cfg.value_field + 1:] = [field.rstrip() for field in fields[cfg.value_field + 1:]]
+            output_lines.append(cfg.sep.join(fields))
+            used.add(lookup)
+            count += 1
+        artifacts.append((os.path.join(output_root, relative), "\r\n".join(output_lines) + "\r\n"))
+    extra = set(translations) - used
+    if extra:
+        raise ValueError(f"Unused scoped translation keys: {sorted(extra)[:10]}")
+    return artifacts, count
+
+
 
 def build_one(cfg: ModConfig, root_dir: str) -> int:
-    """Build one line-based mod and return its translation count."""
-    content, count = render_line_one(cfg, root_dir)
-    out_path = os.path.join(root_dir, cfg.dir, cfg.output)
+    """Build one configured line task."""
     writer = WRITERS.get(cfg.encoding)
     if writer is None:
         raise ValueError(f"不支持的编码: {cfg.encoding}")
+    if glob.has_magic(cfg.source):
+        artifacts, count = render_line_group(cfg, root_dir)
+        for output_path, content in artifacts:
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            writer(output_path, content)
+        logging.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}/")
+        return count
+    content, count = render_line_one(cfg, root_dir)
+    out_path = os.path.join(root_dir, cfg.dir, cfg.output)
     writer(out_path, content)
     logging.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}")
     return count
-
 def flatten_json_values(value, prefix: str = "", out: dict | None = None) -> dict:
     """Flatten nested translation JSON to source paths."""
     out = {} if out is None else out
@@ -176,6 +234,11 @@ def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int]:
     translations = load_json(trans_path)
     source_data = load_json(src_path)
     flat_translations = flatten_json_values(translations)
+    source_flat = flatten_json_values(source_data)
+    expected_keys = {key for key, value in source_flat.items() if isinstance(value, str)}
+    missing = expected_keys - flat_translations.keys()
+    if missing:
+        raise ValueError(f"Missing translation keys: {sorted(missing)[:10]}")
     translated_data = apply_translations_to_json(source_data, flat_translations)
     for path, source_value, translated_value in iter_json_string_pairs(source_data, translated_data):
         format_issues = translation_format_issues(source_value, translated_value)
@@ -193,34 +256,52 @@ def build_json_one(jcfg: ModJson, root_dir: str) -> int:
         file.write("\n")
     logging.info(f"[OK] {jcfg.dir}: {count} 条 -> {jcfg.output}")
     return count
-def build_script_one(smod: ModScript, root_dir: str) -> int:
-    """运行脚本型模组的生成脚本，返回翻译条目数。"""
-    mod_path = os.path.join(root_dir, smod.dir)
-    script_path = os.path.join(mod_path, smod.script)
-    if not os.path.exists(script_path):
-        raise FileNotFoundError(f"未找到脚本: {script_path}")
+def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int]:
+    mod_path = os.path.join(root_dir, config.dir)
+    source_path = os.path.join(mod_path, config.source)
+    translation_path = os.path.join(mod_path, "translations.json")
+    source_text = read_text(source_path)
+    translations = load_json(translation_path)
+    root = ET.fromstring(source_text)
+    used = set()
+    for message in root.findall(".//message"):
+        source_node = message.find("source")
+        if source_node is None:
+            raise ValueError("Qt TS message has no source element")
+        source = "".join(source_node.itertext())
+        if source not in translations:
+            raise ValueError(f"Missing Qt translation: {source}")
+        translated = translations[source]
+        issues = translation_format_issues(source, translated)
+        if issues:
+            raise ValueError(f"{source}: {'; '.join(issues)}")
+        node = message.find("translation")
+        if node is None:
+            node = ET.SubElement(message, "translation")
+        node.attrib.pop("type", None)
+        node.text = translated
+        used.add(source)
+    extra = set(translations) - used
+    if extra:
+        raise ValueError(f"Unused Qt translation keys: {len(extra)}")
+    start = source_text.find("<TS")
+    closing = "</TS>"
+    end = source_text.rfind(closing)
+    if start < 0 or end < 0:
+        raise ValueError("Invalid Qt TS root")
+    end += len(closing)
+    newline = "\r\n" if "\r\n" in source_text else "\n"
+    body = ET.tostring(root, encoding="unicode", short_empty_elements=True)
+    body = body.replace("\r\n", "\n").replace("\n", newline)
+    return source_text[:start] + body + source_text[end:], len(translations)
 
-    try:
-        result = subprocess.run(
-            [sys.executable, script_path],
-            cwd=mod_path,
-            capture_output=True,
-            text=True,
-            check=True,  # 失败时抛异常
-        )
-    except subprocess.CalledProcessError as e:
-        logging.error(f"{smod.dir} 脚本执行失败: {e.stderr.strip()}")
-        raise
 
-    logging.info(f"[OK] {smod.dir}: {result.stdout.strip()}")
-    # 从脚本输出解析条目数
-    for line in result.stdout.splitlines():
-        if "总计:" in line:
-            try:
-                return int(line.split(":")[1].strip())
-            except (ValueError, IndexError):
-                pass
-    return 0
+def build_qt_one(config: ModQt, root_dir: str) -> int:
+    content, count = render_qt_one(config, root_dir)
+    output_path = os.path.join(root_dir, config.dir, config.output)
+    write_utf8(output_path, content)
+    logging.info(f"[OK] {config.dir}: {count} 条 -> {config.output}")
+    return count
 
 
 def matches_filter(mod_dir: str, filters: Optional[set[str]]) -> bool:
@@ -238,10 +319,7 @@ def matches_filter(mod_dir: str, filters: Optional[set[str]]) -> bool:
 
 
 def iter_all_mods():
-    """遍历所有模组配置，返回 (dir, type, config) 元组。
-    
-    去重：同一 dir 只返回一次。
-    """
+    """Yield one configuration row per translation directory."""
     seen_dirs: set[str] = set()
     for cfg in MOD_CONFIGS:
         if cfg.dir not in seen_dirs:
@@ -251,16 +329,16 @@ def iter_all_mods():
         if jcfg.dir not in seen_dirs:
             seen_dirs.add(jcfg.dir)
             yield (jcfg.dir, "json", jcfg)
-    for smod in SCRIPT_MODS:
-        if smod.dir not in seen_dirs:
-            seen_dirs.add(smod.dir)
-            yield (smod.dir, "script", smod)
+    for qcfg in QT_MODS:
+        if qcfg.dir not in seen_dirs:
+            seen_dirs.add(qcfg.dir)
+            yield (qcfg.dir, "qt", qcfg)
 
 def iter_build_tasks():
     """Yield every configured build task, including multiple files per directory."""
     yield from ((cfg, "line") for cfg in MOD_CONFIGS)
     yield from ((cfg, "json") for cfg in JSON_MODS)
-    yield from ((cfg, "script") for cfg in SCRIPT_MODS)
+    yield from ((cfg, "qt") for cfg in QT_MODS)
 
 
 def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
@@ -287,8 +365,8 @@ def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
                 count = build_one(cfg, root_dir)
             elif mod_type == "json":
                 count = build_json_one(cfg, root_dir)
-            else:  # script
-                count = build_script_one(cfg, root_dir)
+            elif mod_type == "qt":
+                count = build_qt_one(cfg, root_dir)
             
             if count > 0:
                 succeeded.append(cfg.dir)
@@ -394,10 +472,10 @@ def main():
         logging.error(f"未找到 {toml_path}，请创建模组配置文件")
         return 1
     
-    global MOD_CONFIGS, JSON_MODS, SCRIPT_MODS
+    global MOD_CONFIGS, JSON_MODS, QT_MODS
     try:
-        MOD_CONFIGS, JSON_MODS, SCRIPT_MODS = load_configs_from_toml(toml_path)
-        logging.info(f"从 {toml_path} 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(SCRIPT_MODS)} script")
+        MOD_CONFIGS, JSON_MODS, QT_MODS = load_configs_from_toml(toml_path)
+        logging.info(f"从 {toml_path} 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(QT_MODS)} qt")
     except Exception as e:
         logging.error(f"无法加载 mods.toml: {e}")
         return 1

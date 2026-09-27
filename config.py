@@ -14,6 +14,8 @@ class ModConfig:
     sep: Optional[str] = "\t"
     encoding: str = "utf16-le-bom"
     output_sep: Optional[str] = None
+    value_field: int = 1
+    trim_trailing_fields: bool = False
 
     def __post_init__(self):
         if self.output_sep is None:
@@ -34,13 +36,13 @@ class ModJson:
 
 
 @dataclass
-class ModScript:
-    """脚本型模组配置。"""
+class ModQt:
+    """Qt Linguist TS translation configuration."""
     dir: str
-    script: str = "generate_zh.py"
-    verify: str = ""
+    source: str
+    output: str
 
-def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJson], list[ModScript]]:
+def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJson], list[ModQt]]:
     """从 TOML 文件加载模组配置。"""
     with open(toml_path, "rb") as f:
         data = tomllib.load(f)
@@ -65,6 +67,8 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             sep=sep,
             encoding=item.get("encoding", "utf16-le-bom"),
             output_sep=item.get("output_sep"),
+            value_field=item.get("value_field", 1),
+            trim_trailing_fields=item.get("trim_trailing_fields", False),
         )
         line_configs.append(cfg)
     json_configs = []
@@ -81,16 +85,12 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             output=item.get("output", ""),
         )
         json_configs.append(cfg)
-    script_configs = []
-    for idx, item in enumerate(data.get("script", [])):
-        # Validate required fields
-        if "dir" not in item:
-            raise ValueError(f"script[{idx}]: missing required field 'dir'")
-        
-        cfg = ModScript(
-            dir=item["dir"],
-            script=item.get("script", "generate_zh.py"),
-            verify=item.get("verify", ""),
+    qt_configs = []
+    for idx, item in enumerate(data.get("qt", [])):
+        for field in ("dir", "source", "output"):
+            if field not in item:
+                raise ValueError(f"qt[{idx}]: missing required field '{field}'")
+        qt_configs.append(
+            ModQt(dir=item["dir"], source=item["source"], output=item["output"])
         )
-        script_configs.append(cfg)
-    return line_configs, json_configs, script_configs
+    return line_configs, json_configs, qt_configs

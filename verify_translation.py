@@ -10,13 +10,13 @@
   - 翻译键覆盖
   - 转义、printf/Python/Qt 占位符和标记
   - 生成产物是否等于当前 translations.json 构建结果
-  - script 模组声明的验证脚本
-  - Eslifer Qt TS 和 Descriptionmods 结构
+  - translations.json 键覆盖、格式和构建产物状态
+  - Eslifer Qt TS 结构和占位符
 """
 
 import json
 import os
-import subprocess
+import glob
 import xml.etree.ElementTree as ET
 import sys
 import logging
@@ -30,7 +30,7 @@ from locale_utils import (
     load_json,
     translation_format_issues,
  )
-from build_all import flatten_json_values, render_json_one, render_line_one
+from build_all import flatten_json_values, render_json_one, render_line_group, render_line_one, render_qt_one
 force_utf8_stdout()
 
 # 配置日志
@@ -43,7 +43,7 @@ logging.basicConfig(
 
 # ── 从 config.py 加载配置 ─────────────────────────────────────────────────
 
-from config import ModJson, load_configs_from_toml
+from config import ModJson, ModQt, load_configs_from_toml
 
 
 CONFIG_CACHE = None
@@ -59,8 +59,8 @@ def get_mod_configs():
     if not os.path.exists(toml_path):
         raise FileNotFoundError(f"未找到 {toml_path}")
     
-    line_configs, json_configs, script_configs = load_configs_from_toml(toml_path)
-    CONFIG_CACHE = (line_configs, json_configs, script_configs)
+    line_configs, json_configs, qt_configs = load_configs_from_toml(toml_path)
+    CONFIG_CACHE = (line_configs, json_configs, qt_configs)
     return CONFIG_CACHE
 
 
@@ -136,6 +136,30 @@ def verify_json_mod(mod_config, root: str) -> list[str]:
     if actual != expected:
         issues.append("[过期] 中文 JSON 与 translations.json 构建结果不一致")
     return issues or ["[OK] 全部检查通过"]
+def verify_json_translation_registry(mod_configs, root: str) -> list[str]:
+    """Check that a shared JSON map covers exactly its configured sources."""
+    if not mod_configs:
+        return ["[OK] 没有 JSON 源"]
+    mod_dir = mod_configs[0].dir
+    mod_path = os.path.join(root, mod_dir)
+    source_keys = set()
+    try:
+        translations = flatten_json_values(load_json(os.path.join(mod_path, "translations.json")))
+        for config in mod_configs:
+            source = flatten_json_values(load_json(os.path.join(mod_path, config.source)))
+            source_keys.update(key for key, value in source.items() if isinstance(value, str))
+    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+        return [f"[错误] 无法检查 JSON 译文键: {exc}"]
+    missing = sorted(source_keys - translations.keys())
+    extra = sorted(translations.keys() - source_keys)
+    issues = []
+    if missing:
+        issues.append(f"[缺失] {len(missing)} 个 JSON 翻译键：{', '.join(missing[:10])}")
+    if extra:
+        issues.append(f"[多余] {len(extra)} 个 JSON 翻译键：{', '.join(extra[:10])}")
+    return issues or ["[OK] 全部 JSON 翻译键已登记"]
+
+
 
 
 def _read_line_map(path: str, sep) -> dict[str, str]:
@@ -276,56 +300,59 @@ def verify_mod(mod_dir: str, root: str) -> list:
     return issues
 
 
-def verify_script_mod(mod_config, root: str) -> list[str]:
-    """Run configured verifier for a script-built mod."""
-    if not mod_config.verify:
-        return ["[缺失] script 配置未声明 verify"]
-    mod_path = os.path.join(root, mod_config.dir)
-    verify_path = os.path.join(mod_path, mod_config.verify)
-    if not os.path.exists(verify_path):
-        return [f"[缺失] 未找到验证脚本: {verify_path}"]
-    result = subprocess.run(
-        [sys.executable, verify_path],
-        cwd=mod_path,
-        capture_output=True,
-        text=True,
-    )
-    if result.returncode:
-        detail = (result.stderr or result.stdout).strip()
-        return [f"[错误] 验证脚本失败: {detail or f'exit {result.returncode}'}"]
-    return ["[OK] 全部检查通过"]
+def verify_line_config(config, root: str) -> list[str]:
+    if not glob.has_magic(config.source):
+        return verify_mod(config.dir, root)
+    try:
+        artifacts, _ = render_line_group(config, root)
+    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+        return [f"[错误] 无法重建行文件: {exc}"]
+    expected = {os.path.normcase(path): content for path, content in artifacts}
+    issues = []
+    for path, content in artifacts:
+        if not os.path.exists(path):
+            issues.append(f"[缺失] {path}")
+        elif read_text(path) != content:
+            issues.append(f"[过期] {path}")
+    output_root = os.path.join(root, config.dir, config.output)
+    for dirpath, _, filenames in os.walk(output_root):
+        for name in filenames:
+            path = os.path.join(dirpath, name)
+            if name.lower().endswith(".ini") and os.path.normcase(path) not in expected:
+                issues.append(f"[多余] {path}")
+    return issues or ["[OK] 全部检查通过"]
 
 
-def verify_qt_ts(root: str) -> list[str]:
-    """Verify Eslifer Qt TS source/translation pairing and placeholders."""
-    source_path = os.path.join(root, "Eslifer", "origin", "eslifier_translation.ts")
-    target_path = os.path.join(root, "Eslifer", "eslifier_translation.ts")
+def verify_qt_ts(config: ModQt, root: str) -> list[str]:
+    """Verify a configured Qt TS source, translation, and generated output."""
+    mod_path = os.path.join(root, config.dir)
+    source_path = os.path.join(mod_path, config.source)
+    target_path = os.path.join(mod_path, config.output)
     try:
         source_messages = ET.parse(source_path).getroot().findall(".//message")
         target_messages = ET.parse(target_path).getroot().findall(".//message")
-    except (OSError, ET.ParseError) as exc:
-        return [f"[错误] Qt TS 无法读取: {exc}"]
+        expected, _ = render_qt_one(config, root)
+    except (OSError, ET.ParseError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+        return [f"[错误] Qt TS 无法验证: {exc}"]
     if len(source_messages) != len(target_messages):
         return [f"[结构] Qt TS 条目数不同：源 {len(source_messages)}，译文 {len(target_messages)}"]
-
     issues = []
     for index, (source_message, target_message) in enumerate(zip(source_messages, target_messages), 1):
         source = "".join(source_message.findtext("source", default=""))
         target_source = "".join(target_message.findtext("source", default=""))
-        translation_node = target_message.find("translation")
-        translation = "" if translation_node is None else "".join(translation_node.itertext())
+        node = target_message.find("translation")
+        translated = "" if node is None else "".join(node.itertext())
         if source != target_source:
             issues.append(f"[结构] Qt TS 第 {index} 条 source 不一致")
-        if not translation.strip() or (translation_node is not None and translation_node.get("type") == "unfinished"):
+        if not translated.strip() or (node is not None and node.get("type") == "unfinished"):
             issues.append(f"[缺失] Qt TS 第 {index} 条未翻译")
-            continue
-        format_issues = translation_format_issues(source, translation)
-        if format_issues:
-            issues.append(f"[格式] Qt TS 第 {index} 条: {'; '.join(format_issues)}")
+        elif translation_format_issues(source, translated):
+            issues.append(f"[格式] Qt TS 第 {index} 条占位符不一致")
+    if read_text(target_path) != expected:
+        issues.append("[过期] Qt TS 与 translations.json 构建结果不一致")
     return issues or ["[OK] 全部检查通过"]
-
 def find_unregistered_translation_dirs(root: str, registered_dirs: set[str]) -> list[str]:
-    """Find translations.json directories that have no build configuration."""
+    """Find translation sources without a mods.toml entry."""
     normalize = lambda path: os.path.normcase(os.path.normpath(path))
     registered = {normalize(path) for path in registered_dirs}
     unregistered = []
@@ -345,64 +372,6 @@ def verify_translation_registry(root: str, registered_dirs: set[str]) -> list[st
         or ["[OK] 所有 translations.json 均已登记"]
     )
 
-
-
-def verify_descriptionmods(root: str) -> list[str]:
-    """Verify Descriptionmods source/target file and line structure."""
-    base = os.path.join(root, "Descriptionmods")
-    target_base = os.path.join(base, "zh")
-    source_files = []
-    for dirpath, dirnames, filenames in os.walk(base):
-        dirnames[:] = [name for name in dirnames if name != "zh"]
-        source_files.extend(os.path.join(dirpath, name) for name in filenames if name.lower().endswith(".ini"))
-    issues = []
-    expected_targets = set()
-    for source_path in sorted(source_files):
-        relative = os.path.relpath(source_path, base)
-        target_path = os.path.join(target_base, relative)
-        expected_targets.add(os.path.normcase(target_path))
-        if not os.path.exists(target_path):
-            issues.append(f"[缺失] Descriptionmods/zh/{relative}")
-            continue
-        def entries(path: str) -> dict[str, list[list[str]]]:
-            result = {}
-            for line in read_lines(path):
-                if not line or line.startswith("#"):
-                    continue
-                parts = line.split("|")
-                if len(parts) >= 2:
-                    result.setdefault(parts[0], []).append(parts)
-            return result
-
-        source_entries = entries(source_path)
-        target_entries = entries(target_path)
-        missing = sorted(source_entries.keys() - target_entries.keys())
-        extra = sorted(target_entries.keys() - source_entries.keys())
-        if missing:
-            issues.append(f"[缺失] {relative}: {', '.join(missing[:10])}")
-        if extra:
-            issues.append(f"[多余] {relative}: {', '.join(extra[:10])}")
-        for key in sorted(source_entries.keys() & target_entries.keys()):
-            source_values = source_entries[key]
-            target_values = target_entries[key]
-            if len(source_values) != len(target_values):
-                issues.append(f"[结构] {relative}:{key} 重复条目数不同")
-                continue
-            for source_parts, target_parts in zip(source_values, target_values):
-                source_meta = [part.strip() for part in source_parts[2:]]
-                target_meta = [part.strip() for part in target_parts[2:]]
-                if len(source_parts) != len(target_parts) or source_meta != target_meta:
-                    issues.append(f"[结构] {relative}:{key} 元字段不一致")
-                    continue
-                format_issues = translation_format_issues(source_parts[1], target_parts[1])
-                if format_issues:
-                    issues.append(f"[格式] {relative}:{key}: {'; '.join(format_issues)}")
-    for dirpath, _, filenames in os.walk(target_base):
-        for name in filenames:
-            target_path = os.path.join(dirpath, name)
-            if name.lower().endswith(".ini") and os.path.normcase(target_path) not in expected_targets:
-                issues.append(f"[多余] {os.path.relpath(target_path, target_base)}")
-    return issues or ["[OK] 全部检查通过"]
 
 
 def _self_check() -> None:
@@ -433,7 +402,7 @@ def main():
     root = os.path.dirname(os.path.abspath(__file__))
     filters = set(sys.argv[1:]) if len(sys.argv) > 1 else None
 
-    configs, json_mods, script_mods = get_mod_configs()
+    configs, json_mods, qt_mods = get_mod_configs()
 
     
     def matches_filter(mod_dir: str, filters):
@@ -447,11 +416,14 @@ def main():
             if norm == filter_norm or base == filter_norm:
                 return True
         return False
+    json_groups = {}
+    for config in json_mods:
+        json_groups.setdefault(config.dir, []).append(config)
     tasks = (
-        [(c.dir, "line", c) for c in configs]
-        + [(c.dir, "json", c) for c in json_mods]
-        + [(c.dir, "script", c) for c in script_mods]
-        + [("Eslifer", "qt", None), ("Descriptionmods", "description", None)]
+        [(config.dir, "line", config) for config in configs]
+        + [(config.dir, "json", config) for config in json_mods]
+        + [(directory, "json-map", group) for directory, group in json_groups.items()]
+        + [(config.dir, "qt", config) for config in qt_mods]
     )
     if filters and not any(matches_filter(mod_dir, filters) for mod_dir, _, _ in tasks):
         logging.error(f"未找到模组: {', '.join(sorted(filters))}")
@@ -460,7 +432,7 @@ def main():
     if filters is None:
         print(f"\n{'='*60}")
         logging.info("translations.json registration")
-        registered_dirs = {config.dir for config in configs + json_mods + script_mods}
+        registered_dirs = {config.dir for config in configs + json_mods + qt_mods}
         for issue in verify_translation_registry(root, registered_dirs):
             if issue.startswith("[OK]"):
                 logging.info(issue)
@@ -476,16 +448,14 @@ def main():
         logging.info(f"{mod_dir} ({mod_type})")
         print(f"{'='*60}")
 
-        if mod_type == "json":
+        if mod_type == "line":
+            issues = verify_line_config(config, root)
+        elif mod_type == "json":
             issues = verify_json_mod(config, root)
-        elif mod_type == "script":
-            issues = verify_script_mod(config, root)
-        elif mod_type == "qt":
-            issues = verify_qt_ts(root)
-        elif mod_type == "description":
-            issues = verify_descriptionmods(root)
+        elif mod_type == "json-map":
+            issues = verify_json_translation_registry(config, root)
         else:
-            issues = verify_mod(mod_dir, root)
+            issues = verify_qt_ts(config, root)
         for issue in issues:
             if issue.startswith("[OK]"):
                 logging.info(issue)
