@@ -31,7 +31,6 @@
   "$FUCK_Settings_SidebarOnRight": "侧边栏在右侧",
   "$FUCK_Settings_Reset": "重置",
   "$FUCK_Settings_Unmap": "解除绑定",
-  "$FUCK_Settings_Controller": "手柄",
   "$FUCK_Sidebar_Title": "侧边栏自定义",
   "$FUCK_Sidebar_ShowFilter": "显示筛选",
   "$FUCK_Sidebar_ShowFavourites": "显示收藏",
@@ -132,5 +131,10 @@
   "$FUCK_Styles_SoundTab": "切换标签",
   "$FUCK_Console_Opened": "F.U.C.K. 菜单已打开。",
   "$FUCK_Console_Closed": "F.U.C.K. 菜单已关闭。",
-  "$FUCK_Console_Help": "打开 F.U.C.K. 菜单界面。"
+  "$FUCK_Console_Help": "打开 F.U.C.K. 菜单界面。",
+  "$FUCK_Settings_InjectControllerOnly": "仅手柄",
+  "$FUCK_Settings_InjectNo": "否",
+  "$FUCK_Settings_InjectYes": "是",
+  "$FUCK_Settings_SystemMenu": "系统菜单",
+  "$FUCK_Styles_InvertButtonCorners": "反转按钮圆角"
 }
