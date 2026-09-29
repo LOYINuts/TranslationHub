@@ -5,6 +5,20 @@ import tomllib
 from dataclasses import dataclass
 from typing import Optional
 
+
+
+def setup_cli_logging(verbose: bool = False) -> None:
+    """One logging setup for all CLIs. ponytail: kills 3 basicConfig copies."""
+    import logging
+    import sys
+    from locale_utils import force_utf8_stdout
+    force_utf8_stdout()
+    logging.basicConfig(
+        level=logging.DEBUG if verbose else logging.INFO,
+        format="%(levelname)s: %(message)s",
+        handlers=[logging.StreamHandler(sys.stdout)],
+        force=True,
+    )
 @dataclass
 class ModConfig:
     """行分隔文件模组配置（TXT/INI）。"""
@@ -42,6 +56,26 @@ class ModQt:
     source: str
     output: str
 
+def matches_filter(mod_dir: str, filters) -> bool:
+    """No filter = all. Accept full path or basename."""
+    if not filters:
+        return True
+    norm = mod_dir.replace("\\", "/").lower()
+    base = os.path.basename(norm)
+    for value in filters:
+        want = value.replace("\\", "/").rstrip("/").lower()
+        if norm == want or base == want:
+            return True
+    return False
+
+
+def repo_root() -> str:
+    return os.path.dirname(os.path.abspath(__file__))
+
+
+def load_repo_configs(root: str | None = None):
+    root = root or repo_root()
+    return load_configs_from_toml(os.path.join(root, "mods.toml"))
 def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJson], list[ModQt]]:
     """从 TOML 文件加载模组配置。"""
     with open(toml_path, "rb") as f:

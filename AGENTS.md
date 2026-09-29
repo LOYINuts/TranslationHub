@@ -1,5 +1,15 @@
 # Project Translation Rules
 
+本地门禁（按序运行，非零即失败）：
+
+```bash
+python sync_translation.py <mod> --check
+python build_all.py --dry-run <mod> && python build_all.py <mod>
+python verify_translation.py <mod>
+```
+
+对话 XML 用 `translate.py`：`stats → pending --fill-bdd → apply → stats`。
+
 ## Routing
 
 | File type | Path | Required skill/process |
@@ -53,23 +63,21 @@ Do not infer a file type or encoding from its name alone.
 ## Required Workflow
 
 1. For a new mod, follow New Mod Intake. Never guess file type or encoding.
-2. Preserve keys, order, format, tags, placeholders, escapes, and line structure.
-3. Edit translation source, not generated output.
-4. Run the smallest relevant build and verification command.
-5. Treat any nonzero command exit as failure; do not report completion.
-6. Write changes to repository files; never return a translation-only dump in chat.
+2. Use term order: mod glossary/profile > nearby translations >
+   `bdd.tsv` (dialogue XML) > established game terms.
+3. Preserve keys, order, format, tags, placeholders, escapes, and line structure.
+4. Edit translation source, not generated output.
+5. Run the smallest relevant build and verification command.
+6. Treat any nonzero command exit as failure; do not report completion.
+7. Write changes to repository files; never return a translation-only dump in chat.
 
-## Commands
+## Gate (run in this order, nonzero = fail)
 
 ```bash
-python sync_translation.py <name> --check
-python sync_translation.py <name> --sync
-python sync_translation.py --all --check
-python build_all.py --dry-run <name>
-python build_all.py <name1> <name2>
-python build_all.py --stats
-python verify_translation.py <name>
-python verify_translation.py
+python sync_translation.py <name> --check   # line+json+qt 缺键
+python build_all.py --dry-run <name>          # 预览
+python build_all.py <name1> <name2>            # 构建
+python verify_translation.py <name>          # 缺键 + 新鲜度
 ```
 
 `verify_translation.py` covers configured mods, Eslifer, and Descriptionmods.

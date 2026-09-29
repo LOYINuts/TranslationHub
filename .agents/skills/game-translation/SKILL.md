@@ -36,4 +36,4 @@ Examples: `{name}`, `{0}`, `%s`, `%llu`, Qt `%1`, `$PLAYER$`, `<color>`,
 2. Preserve numbers, tags, placeholders, escapes, and structural fields.
 3. Resolve ambiguity from context. Report only ambiguity that context cannot
    resolve.
-4. Run format-specific verification and require exit code 0.
+4. Run the AGENTS.md gate for the file type and require exit code 0.

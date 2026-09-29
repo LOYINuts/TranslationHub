@@ -18,14 +18,13 @@ not only in chat.
 - STATUS `0` means pending. STATUS `80`, `98`, and `99` contain existing
   translations for reference. Write translated records with STATUS `90`.
 
-## Workflow
+## Workflow (same gate shape: stats → pending → apply → stats)
 
 ```bash
 python dialogue_mod_translation/translate.py stats XML_OR_DIR
 python dialogue_mod_translation/translate.py pending XML --fill-bdd
 python dialogue_mod_translation/translate.py apply MOD/pending.json
 python dialogue_mod_translation/translate.py stats XML_OR_DIR
-python dialogue_mod_translation/translate.py --self-check
 ```
 
 Read context and existing translations before translating `groups[].traduit` in

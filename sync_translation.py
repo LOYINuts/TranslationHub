@@ -15,16 +15,10 @@ import glob
 import logging
 from typing import Optional
 
-from locale_utils import read_lines, split_line, force_utf8_stdout, load_json
-from config import ModConfig, load_configs_from_toml
-
-force_utf8_stdout()
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(levelname)s: %(message)s',
-    handlers=[logging.StreamHandler(sys.stdout)]
-)
+from locale_utils import read_lines, split_line, load_json
+from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
+from build_all import flatten_json_values
+setup_cli_logging()  # ponytail: single logging setup
 
 
 def extract_keys_from_source(source_path: str, sep: Optional[str]) -> dict[str, str]:
@@ -111,70 +105,97 @@ def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, s
             missing[full_key] = en_value
     return missing, trans_keys
 
-
-def sync_translations(mod_config: ModConfig, mod_path: str, missing: dict[str, str], interactive: bool = False):
-    """将缺失的键添加到 translations.json。
-    
-    Args:
-        mod_config: 模组配置
-        mod_path: 模组路径
-        missing: 缺失的 {key: 英文值}
-        interactive: 是否交互式输入翻译（否则用英文占位）
-    """
+def find_missing_json(jcfg: ModJson, mod_path: str):
+    """Diff flat source keys vs flat translation keys. ponytail: reuse build flatten."""
+    src = flatten_json_values(load_json(os.path.join(mod_path, jcfg.source)))
     trans_path = os.path.join(mod_path, "translations.json")
-    
-    # 读取现有翻译
-    if os.path.exists(trans_path):
-        with open(trans_path, "r", encoding="utf-8") as f:
-            translations = json.load(f)
+    trans = flatten_json_values(load_json(trans_path)) if os.path.exists(trans_path) else {}
+    want = {k for k, v in src.items() if isinstance(v, str)}
+    missing = {k: src[k] for k in sorted(want - set(trans))}
+    return missing, set(trans)
+
+
+def find_missing_qt(qcfg: ModQt, mod_path: str):
+    import xml.etree.ElementTree as ET
+    from locale_utils import read_text
+    root = ET.fromstring(read_text(os.path.join(mod_path, qcfg.source)))
+    msgs = ["".join(m.find("source").itertext()) for m in root.findall(".//message") if m.find("source") is not None]
+    trans_path = os.path.join(mod_path, "translations.json")
+    trans = load_json(trans_path) if os.path.exists(trans_path) else {}
+    missing = {m: m for m in msgs if m not in trans}
+    return missing, set(trans)
+
+def _unflatten(flat: dict) -> dict:
+    """Rebuild nested dict from dotted flat keys. ponytail: ceil=flat-only files skip this."""
+    out: dict = {}
+    for key, value in flat.items():
+        node = out
+        *heads, tail = key.split(".")
+        for head in heads:
+            node = node.setdefault(head, {})
+        node[tail] = value
+    return out
+
+
+def _nested_shape(translations) -> bool:
+    return isinstance(translations, dict) and any(isinstance(v, dict) for v in translations.values())
+
+
+def sync_translations(mod_path: str, missing: dict, interactive: bool = False):
+    """Append missing keys with EN placeholder. Keeps nested shape when present."""
+    trans_path = os.path.join(mod_path, "translations.json")
+    translations = load_json(trans_path) if os.path.exists(trans_path) else {}
+    if _nested_shape(translations):
+        flat = flatten_json_values(translations)
+        for key in sorted(missing):
+            if interactive:
+                print(f"\n[{key}]")
+                print(f"  英文: {missing[key]}")
+                got = input("  中文: ").strip() or missing[key]
+            else:
+                got = missing[key]
+            flat[key] = got
+        translations = _unflatten(flat)
     else:
-        translations = {}
-    
-    # 添加缺失项
-    for key, en_value in sorted(missing.items()):
-        if interactive:
-            print(f"\n[{key}]")
-            print(f"  英文: {en_value}")
-            cn_value = input("  中文: ").strip()
-            if not cn_value:
-                cn_value = en_value  # 空输入用英文占位
-        else:
-            cn_value = en_value  # 英文占位
-        
-        translations[key] = cn_value
-    
-    # 写回 translations.json（保持排序）
+        for key in sorted(missing):
+            if interactive:
+                print(f"\n[{key}]")
+                print(f"  英文: {missing[key]}")
+                translations[key] = input("  中文: ").strip() or missing[key]
+            else:
+                translations[key] = missing[key]
     with open(trans_path, "w", encoding="utf-8") as f:
         json.dump(translations, f, ensure_ascii=False, indent=2)
-    
     logging.info(f"已更新 {trans_path}，新增 {len(missing)} 条")
 
 
-def process_mod(mod_config: ModConfig, root_dir: str, check_only: bool, interactive: bool) -> bool:
-    """Process one mod. Return True when keys are missing or processing fails."""
-    mod_path = os.path.join(root_dir, mod_config.dir)
-    logging.info(f"\n检查模组: {mod_config.dir}")
+def process_task(kind: str, cfg, mod_path: str, check_only: bool, interactive: bool) -> bool:
+    """Process one task. Return True when keys are missing or processing fails."""
+    logging.info(f"\n检查模组: {cfg.dir} ({kind})")
     try:
-        missing, existing = find_missing_keys(mod_config, mod_path)
+        if kind == "line":
+            missing, existing = find_missing_keys(cfg, mod_path)
+        elif kind == "json":
+            missing, existing = find_missing_json(cfg, mod_path)
+        else:
+            missing, existing = find_missing_qt(cfg, mod_path)
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         logging.error(f"检查失败: {exc}")
         return True
-
     if not missing:
         logging.info(f"[OK] 无缺失词条（已有 {len(existing)} 条翻译）")
         return False
-
     print(f"\n发现 {len(missing)} 个新词条需要翻译：")
     for key, en_value in sorted(missing.items()):
         print(f"  {key} = \"{en_value}\"")
     if check_only:
         return True
-
     prompt = "交互式添加翻译？[y/N] " if interactive else "自动添加（英文占位）？[y/N] "
     if input(f"\n{prompt}").strip().lower() != "y":
         return True
-    sync_translations(mod_config, mod_path, missing, interactive)
+    sync_translations(mod_path, missing, interactive)
     return False
+
 
 def main():
     import argparse
@@ -188,45 +209,28 @@ def main():
     
     args = parser.parse_args()
     
-    # 加载配置
     root_dir = os.path.dirname(os.path.abspath(__file__))
-    toml_path = os.path.join(root_dir, "mods.toml")
-    
-    if not os.path.exists(toml_path):
-        logging.error(f"未找到 mods.toml: {toml_path}")
-        return 1
-    
-    line_configs, _, _ = load_configs_from_toml(toml_path)
-    all_configs = line_configs
-    
+    line_configs, json_configs, qt_configs = load_repo_configs(root_dir)
+    tasks = [("line", c) for c in line_configs] + [("json", c) for c in json_configs] + [("qt", c) for c in qt_configs]
     selection_failed = False
     if args.all:
-        configs_to_process = all_configs
+        picked = tasks
     elif args.mods:
-        configs_to_process = []
+        picked = []  # placeholder, recomputed below
+        # ponytail: one matcher from config.py; report unknown names once
+        known = {c.dir for _, c in tasks}
         for name in args.mods:
-            normalized = name.replace("\\", "/").rstrip("/").lower()
-            matched = [
-                c for c in all_configs
-                if c.dir.replace("\\", "/").lower() == normalized
-                or os.path.basename(c.dir).lower() == normalized
-            ]
-            if not matched:
+            if not any(matches_filter(d, {name}) for d in known):
                 logging.error(f"未找到模组: {name}")
                 selection_failed = True
-                continue
-            configs_to_process.extend(matched)
+        picked = [(k, c) for k, c in tasks if any(matches_filter(c.dir, {m}) for m in args.mods)]
     else:
         parser.print_help()
         return 0
-    
-    # 确定模式
     check_only = args.check or not (args.sync or args.interactive)
-    interactive = args.interactive
-    
     failed = False
-    for cfg in configs_to_process:
-        failed = process_mod(cfg, root_dir, check_only, interactive) or failed
+    for kind, cfg in picked:
+        failed = process_task(kind, cfg, os.path.join(root_dir, cfg.dir), check_only, args.interactive) or failed
     return 1 if failed or selection_failed else 0
 
 

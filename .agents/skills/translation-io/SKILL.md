@@ -43,11 +43,10 @@ python locale_utils.py dump PATH
 Do not use Pi `read` for UTF-16 files. The generated output keeps the configured
 encoding and newline convention. Use `build_all.py` to generate output files.
 
-## Configured Mods
+## Commands (see AGENTS.md for the full gate)
 
 ```bash
-python sync_translation.py <name> --check
-python sync_translation.py <name> --sync
+python sync_translation.py <name> --check   # line+json+qt 缺键
 python build_all.py --dry-run <name>
 python build_all.py <name>
 python verify_translation.py <name>
@@ -59,11 +58,6 @@ Preserve keys, sections, order, comments, placeholders, tags, escaped `\\n`,
 and other non-translated fields.
 
 For `Descriptionmods`, preserve every `key|description|metadata...` record.
-Build and verify it with:
-
-```bash
-python build_all.py Descriptionmods
-python verify_translation.py Descriptionmods
-```
+Run the same gate with `<name>` = `Descriptionmods`.
 
 Any nonzero exit code means the work is incomplete.

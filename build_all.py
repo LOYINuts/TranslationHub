@@ -28,24 +28,17 @@ from locale_utils import (
     write_utf8,
     split_line,
     resolve_key_with_section,
-    force_utf8_stdout,
     load_json,
     translation_format_issues,
 )
 
-force_utf8_stdout()
-
-# 配置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(levelname)s: %(message)s',
-    handlers=[logging.StreamHandler(sys.stdout)]
-)
+from config import setup_cli_logging  # noqa: E402
+setup_cli_logging()  # ponytail: single logging setup, stdout stays UTF-8
 
 # ── 模组构建配置 ─────────────────────────────────────────────────────────────
 
 
-from config import ModConfig, ModJson, ModQt, load_configs_from_toml
+from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter
 
 # 模组配置从 mods.toml 加载，这些全局变量在 main() 中赋值
 MOD_CONFIGS: list[ModConfig] = []
@@ -304,36 +297,6 @@ def build_qt_one(config: ModQt, root_dir: str) -> int:
     return count
 
 
-def matches_filter(mod_dir: str, filters: Optional[set[str]]) -> bool:
-    """检查模组是否匹配过滤器。支持完整路径或 basename。"""
-    if not filters:
-        return True
-    norm = mod_dir.replace("\\", "/").lower()
-    base = os.path.basename(norm)
-    for value in filters:
-        filter_norm = value.replace("\\", "/").rstrip("/").lower()
-        if norm == filter_norm or base == filter_norm:
-            return True
-    return False
-
-
-
-def iter_all_mods():
-    """Yield one configuration row per translation directory."""
-    seen_dirs: set[str] = set()
-    for cfg in MOD_CONFIGS:
-        if cfg.dir not in seen_dirs:
-            seen_dirs.add(cfg.dir)
-            yield (cfg.dir, "line", cfg)
-    for jcfg in JSON_MODS:
-        if jcfg.dir not in seen_dirs:
-            seen_dirs.add(jcfg.dir)
-            yield (jcfg.dir, "json", jcfg)
-    for qcfg in QT_MODS:
-        if qcfg.dir not in seen_dirs:
-            seen_dirs.add(qcfg.dir)
-            yield (qcfg.dir, "qt", qcfg)
-
 def iter_build_tasks():
     """Yield every configured build task, including multiple files per directory."""
     yield from ((cfg, "line") for cfg in MOD_CONFIGS)
@@ -410,14 +373,17 @@ def show_stats(root_dir: str):
     print("-" * 80)
     total = 0
     
-    for mod_dir, mod_type, cfg in iter_all_mods():
-        count = _load_translation_count(os.path.join(root_dir, mod_dir, "translations.json"))
+    seen: set[str] = set()
+    for cfg, mod_type in iter_build_tasks():
+        if cfg.dir in seen:
+            continue
+        seen.add(cfg.dir)
+        count = _load_translation_count(os.path.join(root_dir, cfg.dir, "translations.json"))
         if count is not None:
             total += count
-            print(f"{pad_cjk(mod_dir, name_w)}{count:<8} {mod_type}")
+            print(f"{pad_cjk(cfg.dir, name_w)}{count:<8} {mod_type}")
         else:
-            print(f"{pad_cjk(mod_dir, name_w)}{'-':<8} MISS")
-    
+            print(f"{pad_cjk(cfg.dir, name_w)}{'-':<8} MISS")
     print("-" * 80)
     print(f"{pad_cjk('总计', name_w)}{total:<8}")
 
@@ -441,12 +407,11 @@ def main():
         description='批量生成模组的中文翻译文件',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
-示例:
-  %(prog)s --stats              # 统计所有模组
-  %(prog)s                      # 构建所有模组
-  %(prog)s FUCK KillFeed        # 只构建指定模组
-  %(prog)s --dry-run FUCK       # 预览会构建的模组
-        '''
+本地门禁 (sync→build→verify, 非零即失败):
+  python sync_translation.py <mod> --check
+  %(prog)s --dry-run <mod> && %(prog)s <mod> && python verify_translation.py <mod>
+对话 XML 另走 translate.py: stats → pending --fill-bdd → apply → stats
+'''
     )
     parser.add_argument('mods', nargs='*', help='要构建的模组（完整路径或 basename），留空则构建所有')
     parser.add_argument('--stats', action='store_true', help='统计模组翻译数据，不执行构建')
@@ -460,26 +425,18 @@ def main():
         _self_check()
         return 0
 
-    # 设置日志级别
-    if args.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
-    
+    setup_cli_logging(verbose=args.verbose)
+
     root = os.path.dirname(os.path.abspath(__file__))
     
-    # 加载配置
-    toml_path = os.path.join(root, "mods.toml")
-    if not os.path.exists(toml_path):
-        logging.error(f"未找到 {toml_path}，请创建模组配置文件")
-        return 1
-    
+    # 加载配置 ponytail: single loader in config.py
     global MOD_CONFIGS, JSON_MODS, QT_MODS
     try:
-        MOD_CONFIGS, JSON_MODS, QT_MODS = load_configs_from_toml(toml_path)
-        logging.info(f"从 {toml_path} 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(QT_MODS)} qt")
+        MOD_CONFIGS, JSON_MODS, QT_MODS = load_repo_configs(root)
+        logging.info(f"从 mods.toml 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(QT_MODS)} qt")
     except Exception as e:
         logging.error(f"无法加载 mods.toml: {e}")
         return 1
-    
     # 统计模式
     if args.stats:
         show_stats(root)
