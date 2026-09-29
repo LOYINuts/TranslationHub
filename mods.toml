@@ -346,7 +346,10 @@ dir = "skse_menu_translation/vinymods/TrickDeath/Localization"
 source = "en.json"
 output = "zh.json"
 
-# 注: Localization/DeathMessages.json 使用数组结构，需手工处理
+[[json]]
+dir = "skse_menu_translation/vinymods/TrickDeath/Localization"
+source = "DeathMessages.json"
+output = "DeathMessages_zh.json"
 
 [[json]]
 dir = "skse_menu_translation/vinymods/UnblockableHits"

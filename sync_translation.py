@@ -10,7 +10,6 @@
 
 import json
 import os
-import sys
 import glob
 import logging
 from typing import Optional
@@ -125,20 +124,39 @@ def find_missing_qt(qcfg: ModQt, mod_path: str):
     missing = {m: m for m in msgs if m not in trans}
     return missing, set(trans)
 
-def _unflatten(flat: dict) -> dict:
-    """Rebuild nested dict from dotted flat keys. ponytail: ceil=flat-only files skip this."""
-    out: dict = {}
-    for key, value in flat.items():
-        node = out
-        *heads, tail = key.split(".")
-        for head in heads:
-            node = node.setdefault(head, {})
-        node[tail] = value
-    return out
+def _set_flat_path(root, flat_key: str, value) -> None:
+    """Set dotted/list flat key into nested dict+list."""
+    import re  # stdlib; ponytail: ceil=DeathMessages now registered, no manual step
+    node = root
+    parts = flat_key.split(".")
+    for i, part in enumerate(parts):
+        tokens: list = [int(c[1:-1]) if c.startswith("[") else c for c in re.findall(r"[^\[\]]+|\[\d+\]", part)]
+        last = i == len(parts) - 1
+        for j, tok in enumerate(tokens):
+            end = last and j == len(tokens) - 1
+            if isinstance(tok, int):
+                while len(node) <= tok:
+                    node.append({} if not end else value)
+                if end:
+                    node[tok] = value
+                else:
+                    if not isinstance(node[tok], (dict, list)):
+                        node[tok] = {}
+                    node = node[tok]
+            else:
+                if end:
+                    node[tok] = value
+                else:
+                    nxt = tokens[j + 1] if j + 1 < len(tokens) else parts[i + 1] if i + 1 < len(parts) else None
+                    want = [] if isinstance(nxt, int) else {}
+                    cur = node.get(tok)
+                    if not isinstance(cur, type(want)):
+                        node[tok] = want
+                    node = node[tok]
 
 
 def _nested_shape(translations) -> bool:
-    return isinstance(translations, dict) and any(isinstance(v, dict) for v in translations.values())
+    return isinstance(translations, dict) and any(isinstance(v, (dict, list)) for v in translations.values())
 
 
 def sync_translations(mod_path: str, missing: dict, interactive: bool = False):
@@ -146,7 +164,6 @@ def sync_translations(mod_path: str, missing: dict, interactive: bool = False):
     trans_path = os.path.join(mod_path, "translations.json")
     translations = load_json(trans_path) if os.path.exists(trans_path) else {}
     if _nested_shape(translations):
-        flat = flatten_json_values(translations)
         for key in sorted(missing):
             if interactive:
                 print(f"\n[{key}]")
@@ -154,9 +171,7 @@ def sync_translations(mod_path: str, missing: dict, interactive: bool = False):
                 got = input("  中文: ").strip() or missing[key]
             else:
                 got = missing[key]
-            flat[key] = got
-        translations = _unflatten(flat)
-    else:
+            _set_flat_path(translations, key, got)
         for key in sorted(missing):
             if interactive:
                 print(f"\n[{key}]")
@@ -216,7 +231,6 @@ def main():
     if args.all:
         picked = tasks
     elif args.mods:
-        picked = []  # placeholder, recomputed below
         # ponytail: one matcher from config.py; report unknown names once
         known = {c.dir for _, c in tasks}
         for name in args.mods:

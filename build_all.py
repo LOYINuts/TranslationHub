@@ -15,7 +15,6 @@ import json
 import xml.etree.ElementTree as ET
 import os
 import glob
-import sys
 from typing import Optional
 
 import logging
@@ -32,7 +31,7 @@ from locale_utils import (
     translation_format_issues,
 )
 
-from config import setup_cli_logging  # noqa: E402
+from config import setup_cli_logging
 setup_cli_logging()  # ponytail: single logging setup, stdout stays UTF-8
 
 # ── 模组构建配置 ─────────────────────────────────────────────────────────────
@@ -313,14 +312,11 @@ def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
         all_mods = [(cfg, typ) for cfg, typ in all_mods if matches_filter(cfg.dir, filters)]
     
     total_count = len(all_mods)
-    current = 0
     succeeded = []
     failed = []
     skipped = []
     total_entries = 0
-    
-    for cfg, mod_type in all_mods:
-        current += 1
+    for current, (cfg, mod_type) in enumerate(all_mods, 1):
         logging.info(f"[{current}/{total_count}] {cfg.dir}")
         
         try:
@@ -465,27 +461,27 @@ def main():
     result = build_all(root, filters)
     
     # 显示详细摘要
-    print(f"\n{'='*60}")
-    print(f"构建完成")
-    print(f"{'='*60}")
+    print("\n" + "=" * 60)
+    print("构建完成")
+    print("=" * 60)
     print(f"成功: {len(result['succeeded'])}")
     print(f"失败: {len(result['failed'])}")
     print(f"跳过: {len(result['skipped'])}")
     print(f"总翻译条目: {result['total_entries']}")
     
     if result['failed']:
-        print(f"\n失败模组:")
+        print("\n失败模组:")
         for mod_dir, error in result['failed']:
             print(f"  - {mod_dir}: {error}")
     
     if result['skipped']:
-        print(f"\n跳过模组 (无翻译或文件缺失):")
+        print("\n跳过模组 (无翻译或文件缺失):")
         for mod_dir in result['skipped'][:5]:
             print(f"  - {mod_dir}")
         if len(result['skipped']) > 5:
             print(f"  ... 及其他 {len(result['skipped']) - 5} 个")
     
-    print(f"{'='*60}")
+    print("=" * 60)
     return 1 if result["failed"] else 0
 
 

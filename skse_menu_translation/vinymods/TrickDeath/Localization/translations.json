@@ -78,5 +78,23 @@
     "unavailable_last_sleep": "没有可用的上次睡眠地点",
     "unavailable_checkpoint": "没有可用的外部检查点",
     "unavailable_reload": "无法重新加载当前存档"
+  },
+  "death_messages": {
+    "generic": [
+      "{$player.name} 倒下了。",
+      "{$player.name} 在 {$death.location} 被击败。"
+    ],
+    "fall": [
+      "{$player.name} 坠落身亡。",
+      "从 {$death.location} 坠落，最终没能活下来。"
+    ],
+    "sword": [
+      "{$killer.name} 击败了 {$player.name}。",
+      "这场战斗的胜负取决于 {$death.weapon}。"
+    ],
+    "magic": [
+      "魔法吞噬了 {$player.name}。",
+      "在 {$death.location}，{$death.magic} 造成了致命一击。"
+    ]
   }
 }

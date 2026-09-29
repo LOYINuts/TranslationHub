@@ -18,12 +18,11 @@ import json
 import os
 import glob
 import xml.etree.ElementTree as ET
-import sys
 import logging
 
 from locale_utils import read_text, load_json
 from build_all import flatten_json_values, render_json_one, render_line_group, render_line_one, render_qt_one
-from config import setup_cli_logging  # noqa: E402
+from config import setup_cli_logging
 setup_cli_logging()  # ponytail: single logging setup
 
 
