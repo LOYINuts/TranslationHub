@@ -18,6 +18,7 @@ import glob
 from typing import Optional
 
 import logging
+log = logging.getLogger(__name__)  # ponytail: named logger per spec
 import argparse
 from locale_utils import (
     read_lines,
@@ -165,12 +166,12 @@ def build_one(cfg: ModConfig, root_dir: str) -> int:
         for output_path, content in artifacts:
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             writer(output_path, content)
-        logging.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}/")
+        log.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}/")
         return count
     content, count = render_line_one(cfg, root_dir)
     out_path = os.path.join(root_dir, cfg.dir, cfg.output)
     writer(out_path, content)
-    logging.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}")
+    log.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}")
     return count
 def flatten_json_values(value, prefix: str = "", out: dict | None = None) -> dict:
     """Flatten nested translation JSON to source paths."""
@@ -246,7 +247,7 @@ def build_json_one(jcfg: ModJson, root_dir: str) -> int:
     with open(out_path, "w", encoding="utf-8", newline="\n") as file:
         json.dump(translated_data, file, ensure_ascii=False, indent=2)
         file.write("\n")
-    logging.info(f"[OK] {jcfg.dir}: {count} 条 -> {jcfg.output}")
+    log.info(f"[OK] {jcfg.dir}: {count} 条 -> {jcfg.output}")
     return count
 def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int]:
     mod_path = os.path.join(root_dir, config.dir)
@@ -292,7 +293,7 @@ def build_qt_one(config: ModQt, root_dir: str) -> int:
     content, count = render_qt_one(config, root_dir)
     output_path = os.path.join(root_dir, config.dir, config.output)
     write_utf8(output_path, content)
-    logging.info(f"[OK] {config.dir}: {count} 条 -> {config.output}")
+    log.info(f"[OK] {config.dir}: {count} 条 -> {config.output}")
     return count
 
 
@@ -317,7 +318,7 @@ def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
     skipped = []
     total_entries = 0
     for current, (cfg, mod_type) in enumerate(all_mods, 1):
-        logging.info(f"[{current}/{total_count}] {cfg.dir}")
+        log.info(f"[{current}/{total_count}] {cfg.dir}")
         
         try:
             if mod_type == "line":
@@ -333,7 +334,7 @@ def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
             else:
                 skipped.append(cfg.dir)
         except Exception as e:
-            logging.error(f"构建失败 {cfg.dir}: {e}")
+            log.error(f"构建失败 {cfg.dir}: {e}")
             failed.append((cfg.dir, str(e)))
     
     return {
@@ -429,9 +430,9 @@ def main():
     global MOD_CONFIGS, JSON_MODS, QT_MODS
     try:
         MOD_CONFIGS, JSON_MODS, QT_MODS = load_repo_configs(root)
-        logging.info(f"从 mods.toml 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(QT_MODS)} qt")
+        log.info(f"从 mods.toml 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(QT_MODS)} qt")
     except Exception as e:
-        logging.error(f"无法加载 mods.toml: {e}")
+        log.error(f"无法加载 mods.toml: {e}")
         return 1
     # 统计模式
     if args.stats:
@@ -442,7 +443,7 @@ def main():
     filters = set(args.mods) if args.mods else None
     
     if filters and not any(matches_filter(cfg.dir, filters) for cfg, _ in iter_build_tasks()):
-        logging.error(f"未找到模组: {', '.join(sorted(filters))}")
+        log.error(f"未找到模组: {', '.join(sorted(filters))}")
         return 2
 
     # 预览模式

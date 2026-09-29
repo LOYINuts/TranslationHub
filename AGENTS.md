@@ -71,6 +71,13 @@ Do not infer a file type or encoding from its name alone.
 6. Treat any nonzero command exit as failure; do not report completion.
 7. Write changes to repository files; never return a translation-only dump in chat.
 
+## Logging (all CLIs via `config.setup_cli_logging`)
+
+- One UTF-8 stdout handler. INFO default, DEBUG on `--verbose`.
+- Named loggers only: `log = logging.getLogger(__name__)`.
+- `print` for tables, summaries, and user prompts only.
+- Never log `translations.json` values. Gate reads exit codes, not text.
+
 ## Gate (run in this order, nonzero = fail)
 
 ```bash

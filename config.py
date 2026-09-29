@@ -8,10 +8,16 @@ from typing import Optional
 
 
 def setup_cli_logging(verbose: bool = False) -> None:
-    """One logging setup for all CLIs. ponytail: kills 3 basicConfig copies."""
+    """Logging spec: one UTF-8 stdout handler, INFO default, DEBUG on --verbose.
+
+    Use `log = logging.getLogger(__name__)` in each CLI.
+    `print` is for tables, summaries, and prompts only.
+    Never log translation values. Exit code is the gate signal."""
     import logging
     import sys
+
     from locale_utils import force_utf8_stdout
+
     force_utf8_stdout()
     logging.basicConfig(
         level=logging.DEBUG if verbose else logging.INFO,

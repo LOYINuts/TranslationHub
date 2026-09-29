@@ -19,6 +19,7 @@ import os
 import glob
 import xml.etree.ElementTree as ET
 import logging
+log = logging.getLogger(__name__)  # ponytail: named logger per spec
 
 from locale_utils import read_text, load_json
 from build_all import flatten_json_values, render_json_one, render_line_group, render_line_one, render_qt_one
@@ -203,18 +204,18 @@ def main(argv=None):
              + [(config.dir, "json", config) for config in json_mods]
              + [(config.dir, "qt", config) for config in qt_mods])
     if filters and not any(matches_filter(mod_dir, filters) for mod_dir, _, _ in tasks):
-        logging.error(f"未找到模组: {', '.join(sorted(filters))}")
+        log.error(f"未找到模组: {', '.join(sorted(filters))}")
         return 2
     exit_code = 0
     if filters is None:
         print(f"\n{'='*60}")
-        logging.info("translations.json registration")
+        log.info("translations.json registration")
         registered_dirs = {config.dir for config in configs + json_mods + qt_mods}
         for issue in verify_translation_registry(root, registered_dirs):
             if issue.startswith("[OK]"):
-                logging.info(issue)
+                log.info(issue)
             else:
-                logging.error(issue)
+                log.error(issue)
                 exit_code = 1
 
     for mod_dir, mod_type, config in tasks:
@@ -222,7 +223,7 @@ def main(argv=None):
             continue
 
         print(f"\n{'='*60}")
-        logging.info(f"{mod_dir} ({mod_type})")
+        log.info(f"{mod_dir} ({mod_type})")
         print(f"{'='*60}")
 
         if mod_type == "line":
@@ -233,19 +234,19 @@ def main(argv=None):
             issues = verify_qt_ts(config, root)
         for issue in issues:
             if issue.startswith("[OK]"):
-                logging.info(issue)
+                log.info(issue)
             else:
-                logging.error(issue)
+                log.error(issue)
                 exit_code = 1
 
     for issue in verify_json_dir_extra(json_mods, root, filters):
-        logging.error(issue)
+        log.error(issue)
         exit_code = 1
     print(f"\n{'='*60}")
     if exit_code:
-        logging.error("存在未通过项，请修复。")
+        log.error("存在未通过项，请修复。")
     else:
-        logging.info("全部通过 [OK]")
+        log.info("全部通过 [OK]")
     print(f"{'='*60}")
 
     return exit_code

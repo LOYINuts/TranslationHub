@@ -12,6 +12,7 @@ import json
 import os
 import glob
 import logging
+log = logging.getLogger(__name__)  # ponytail: named logger per spec
 from typing import Optional
 
 from locale_utils import read_lines, split_line, load_json
@@ -181,12 +182,12 @@ def sync_translations(mod_path: str, missing: dict, interactive: bool = False):
                 translations[key] = missing[key]
     with open(trans_path, "w", encoding="utf-8") as f:
         json.dump(translations, f, ensure_ascii=False, indent=2)
-    logging.info(f"已更新 {trans_path}，新增 {len(missing)} 条")
+    log.info(f"已更新 {trans_path}，新增 {len(missing)} 条")
 
 
 def process_task(kind: str, cfg, mod_path: str, check_only: bool, interactive: bool) -> bool:
     """Process one task. Return True when keys are missing or processing fails."""
-    logging.info(f"\n检查模组: {cfg.dir} ({kind})")
+    log.info(f"\n检查模组: {cfg.dir} ({kind})")
     try:
         if kind == "line":
             missing, existing = find_missing_keys(cfg, mod_path)
@@ -195,10 +196,10 @@ def process_task(kind: str, cfg, mod_path: str, check_only: bool, interactive: b
         else:
             missing, existing = find_missing_qt(cfg, mod_path)
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
-        logging.error(f"检查失败: {exc}")
+        log.error(f"检查失败: {exc}")
         return True
     if not missing:
-        logging.info(f"[OK] 无缺失词条（已有 {len(existing)} 条翻译）")
+        log.info(f"[OK] 无缺失词条（已有 {len(existing)} 条翻译）")
         return False
     print(f"\n发现 {len(missing)} 个新词条需要翻译：")
     for key, en_value in sorted(missing.items()):
@@ -235,7 +236,7 @@ def main():
         known = {c.dir for _, c in tasks}
         for name in args.mods:
             if not any(matches_filter(d, {name}) for d in known):
-                logging.error(f"未找到模组: {name}")
+                log.error(f"未找到模组: {name}")
                 selection_failed = True
         picked = [(k, c) for k, c in tasks if any(matches_filter(c.dir, {m}) for m in args.mods)]
     else:
