@@ -131,6 +131,13 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "mcm_flick_translation/btps"
+source = "BetterThirdPersonSelection_english.txt"
+output = "BetterThirdPersonSelection_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "skse_menu_translation/skyparkour"
 source = "SkyParkour_English.txt"
 output = "SkyParkour_Chinese.txt"

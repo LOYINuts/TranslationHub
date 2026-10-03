@@ -40,6 +40,8 @@
   "Profile.Automation.Restore.Tooltip": "新游戏中 MCM 注册完成后恢复活动配置文件。加载存档时不会运行",
   "Profile.Automation.Record": "记录操作",
   "Profile.Automation.Record.Tooltip": "记住你更改设置的顺序，以便必须先启用的 MCM 能正确恢复。需要开启自动备份。",
+  "Profile.Automation.Messages": "关闭单按钮游戏消息",
+  "Profile.Automation.Messages.Tooltip": "在自动和手动恢复期间自动确认单按钮游戏消息框。多选消息框不受影响。由于恢复期间 MCM 菜单处于关闭状态，SkyUI 的单按钮对话框始终会被确认。已关闭的消息会写入日志。",
   "Profile.MCM.Header": "MCM 管理",
   "Profile.MCM.Waiting": "正在等待 MCM 注册...",
   "Profile.MCM.NoMatches": "没有与当前筛选条件匹配的 MCM",
