@@ -66,10 +66,12 @@ Do not infer a file type or encoding from its name alone.
 2. Use term order: mod glossary/profile > nearby translations >
    `bdd.tsv` (dialogue XML) > established game terms.
 3. Preserve keys, order, format, tags, placeholders, escapes, and line structure.
-4. Edit translation source, not generated output.
-5. Run the smallest relevant build and verification command.
-6. Treat any nonzero command exit as failure; do not report completion.
-7. Write changes to repository files; never return a translation-only dump in chat.
+4. Keep `perk` in English by default. Translate it only when the game context
+   requires a localized term.
+5. Edit translation source, not generated output.
+6. Run the smallest relevant build and verification command.
+7. Treat any nonzero command exit as failure; do not report completion.
+8. Write changes to repository files; never return a translation-only dump in chat.
 
 ## Logging (all CLIs via `config.setup_cli_logging`)
 

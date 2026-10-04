@@ -4,10 +4,10 @@
     "quick_swap_settings": "快速切换设置",
     "quick_swap_header": "快速切换",
     "enable_quick_swap": "启用快速切换",
-    "quick_swap_perk": "快速切换需要相关技能",
+    "quick_swap_perk": "快速切换需要perk解锁",
     "non_cancel_attack_header": "不可取消攻击",
     "enable_non_cancel_attack": "启用不可取消攻击",
-    "non_cancel_attack_perk": "不可取消攻击需要相关技能",
+    "non_cancel_attack_perk": "不可取消攻击需要perk解锁",
     "form_list_empty": "未加载任何 FormList"
   },
   "common": {
