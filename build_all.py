@@ -214,6 +214,18 @@ def iter_json_string_pairs(source, translated, path=""):
         yield path, source, translated
 
 
+def translation_data(jcfg: ModJson, root_dir: str):
+    """Load one JSON source's translation map, optionally from a shared section."""
+    mod_path = os.path.join(root_dir, jcfg.dir)
+    data = load_json(os.path.join(mod_path, "translations.json"))
+    if jcfg.translation_section:
+        try:
+            data = data[jcfg.translation_section]
+        except (KeyError, TypeError):
+            raise ValueError(f"Missing translation section: {jcfg.translation_section}")
+    return data
+
+
 def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int]:
     """Render one JSON mod without writing its output file."""
     mod_path = os.path.join(root_dir, jcfg.dir)
@@ -224,7 +236,7 @@ def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int]:
     if not os.path.exists(src_path):
         raise FileNotFoundError(f"未找到源文件: {src_path}")
 
-    translations = load_json(trans_path)
+    translations = translation_data(jcfg, root_dir)
     source_data = load_json(src_path)
     flat_translations = flatten_json_values(translations)
     source_flat = flatten_json_values(source_data)

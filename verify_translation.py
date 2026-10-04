@@ -22,7 +22,7 @@ import logging
 log = logging.getLogger(__name__)  # ponytail: named logger per spec
 
 from locale_utils import read_text, load_json
-from build_all import flatten_json_values, render_json_one, render_line_group, render_line_one, render_qt_one
+from build_all import flatten_json_values, render_json_one, render_line_group, render_line_one, render_qt_one, translation_data
 from config import setup_cli_logging
 setup_cli_logging()  # ponytail: single logging setup
 
@@ -113,15 +113,16 @@ def verify_json_dir_extra(all_json: list, root: str, filters) -> list[str]:
             continue
         mod_path = os.path.join(root, mod_dir)
         try:
-            translations = flatten_json_values(load_json(os.path.join(mod_path, "translations.json")))
+            translated_keys: set[str] = set()
             want: set[str] = set()
             for cfg in group:
+                translated_keys.update(flatten_json_values(translation_data(cfg, root)))
                 src = flatten_json_values(load_json(os.path.join(mod_path, cfg.source)))
                 want.update(k for k, v in src.items() if isinstance(v, str))
         except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
             issues.append(f"[错误] {mod_dir}: {exc}")
             continue
-        extra = sorted(set(translations) - want)
+        extra = sorted(translated_keys - want)
         if extra:
             issues.append(f"[多余] {mod_dir}: {len(extra)} 个键：{', '.join(extra[:5])}")
     return issues

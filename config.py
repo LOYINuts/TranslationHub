@@ -48,6 +48,7 @@ class ModJson:
     dir: str
     source: str
     output: str = ""
+    translation_section: Optional[str] = None
 
     def __post_init__(self):
         if not self.output:
@@ -123,6 +124,7 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             dir=item["dir"],
             source=item["source"],
             output=item.get("output", ""),
+            translation_section=item.get("translation_section"),
         )
         json_configs.append(cfg)
     qt_configs = []

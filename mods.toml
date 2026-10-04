@@ -138,6 +138,14 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "mcm_flick_translation/obodyng"
+source = "OBody_ENGLISH.txt"
+output = "OBody_CHINESE.txt"
+sep = ""
+output_sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "skse_menu_translation/skyparkour"
 source = "SkyParkour_English.txt"
 output = "SkyParkour_Chinese.txt"
@@ -227,6 +235,11 @@ trim_trailing_fields = true
 [[json]]
 dir = "skse_menu_translation/sksemenuframework"
 source = "SKSEMenuFrameworkStrings.json"
+
+[[json]]
+dir = "skse_menu_translation/hudng"
+source = "english.json"
+output = "chinese.json"
 
 [[json]]
 dir = "skse_menu_translation/mcmmemory"
@@ -334,19 +347,51 @@ source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/STM"
+dir = "skse_menu_translation/vinymods/statstracker/Localization"
+source = "DodgeAll.json"
+output = "DodgeAll_zh.json"
+translation_section = "DodgeAll.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/statstracker/Localization"
+source = "HMDP.json"
+output = "HMDP_zh.json"
+translation_section = "HMDP.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/statstracker/Localization"
+source = "ParryAll.json"
+output = "ParryAll_zh.json"
+translation_section = "ParryAll.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/statstracker/Localization"
 source = "STM_Localization.json"
 output = "STM_Localization_zh.json"
+translation_section = "STM_Localization.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/statstracker/Localization"
+source = "TrickDeath.json"
+output = "TrickDeath_zh.json"
+translation_section = "TrickDeath.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/statstracker/Localization"
+source = "UnblockableHits.json"
+output = "UnblockableHits_zh.json"
+translation_section = "UnblockableHits.json"
+
+[[json]]
+dir = "skse_menu_translation/vinymods/statstracker/Localization"
+source = "UndodgeableHits.json"
+output = "UndodgeableHits_zh.json"
+translation_section = "UndodgeableHits.json"
 
 [[json]]
 dir = "skse_menu_translation/vinymods/TrickDeath"
 source = "Language.json"
 output = "Language_zh.json"
-
-[[json]]
-dir = "skse_menu_translation/vinymods/TrickDeath"
-source = "TrickDeath.json"
-output = "TrickDeath_zh.json"
 
 [[json]]
 dir = "skse_menu_translation/vinymods/TrickDeath/Localization"
@@ -364,19 +409,9 @@ source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/UnblockableHits"
-source = "UnblockableHits.json"
-output = "UnblockableHits_zh.json"
-
-[[json]]
 dir = "skse_menu_translation/vinymods/UndodgeableHits"
 source = "Language.json"
 output = "Language_zh.json"
-
-[[json]]
-dir = "skse_menu_translation/vinymods/UndodgeableHits"
-source = "UndodgeableHits.json"
-output = "UndodgeableHits_zh.json"
 
 [[json]]
 dir = "skse_menu_translation/flightframework"

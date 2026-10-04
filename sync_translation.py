@@ -109,7 +109,10 @@ def find_missing_json(jcfg: ModJson, mod_path: str):
     """Diff flat source keys vs flat translation keys. ponytail: reuse build flatten."""
     src = flatten_json_values(load_json(os.path.join(mod_path, jcfg.source)))
     trans_path = os.path.join(mod_path, "translations.json")
-    trans = flatten_json_values(load_json(trans_path)) if os.path.exists(trans_path) else {}
+    trans = load_json(trans_path) if os.path.exists(trans_path) else {}
+    if jcfg.translation_section:
+        trans = trans.get(jcfg.translation_section, {})
+    trans = flatten_json_values(trans)
     want = {k for k, v in src.items() if isinstance(v, str)}
     missing = {k: src[k] for k in sorted(want - set(trans))}
     return missing, set(trans)
@@ -160,26 +163,26 @@ def _nested_shape(translations) -> bool:
     return isinstance(translations, dict) and any(isinstance(v, (dict, list)) for v in translations.values())
 
 
-def sync_translations(mod_path: str, missing: dict, interactive: bool = False):
-    """Append missing keys with EN placeholder. Keeps nested shape when present."""
+def sync_translations(mod_path: str, missing: dict, interactive: bool = False, section: str | None = None):
+    """Append missing keys with EN placeholder while preserving shared sections."""
     trans_path = os.path.join(mod_path, "translations.json")
     translations = load_json(trans_path) if os.path.exists(trans_path) else {}
-    if _nested_shape(translations):
-        for key in sorted(missing):
-            if interactive:
-                print(f"\n[{key}]")
-                print(f"  英文: {missing[key]}")
-                got = input("  中文: ").strip() or missing[key]
-            else:
-                got = missing[key]
-            _set_flat_path(translations, key, got)
-        for key in sorted(missing):
-            if interactive:
-                print(f"\n[{key}]")
-                print(f"  英文: {missing[key]}")
-                translations[key] = input("  中文: ").strip() or missing[key]
-            else:
-                translations[key] = missing[key]
+    target = translations
+    if section:
+        if not isinstance(translations, dict):
+            raise ValueError(f"翻译源必须是 JSON 对象: {trans_path}")
+        target = translations.setdefault(section, {})
+    for key in sorted(missing):
+        if interactive:
+            print(f"\n[{key}]")
+            print(f"  英文: {missing[key]}")
+            target_value = input("  中文: ").strip() or missing[key]
+        else:
+            target_value = missing[key]
+        if _nested_shape(target):
+            _set_flat_path(target, key, target_value)
+        else:
+            target[key] = target_value
     with open(trans_path, "w", encoding="utf-8") as f:
         json.dump(translations, f, ensure_ascii=False, indent=2)
     log.info(f"已更新 {trans_path}，新增 {len(missing)} 条")
@@ -209,7 +212,12 @@ def process_task(kind: str, cfg, mod_path: str, check_only: bool, interactive: b
     prompt = "交互式添加翻译？[y/N] " if interactive else "自动添加（英文占位）？[y/N] "
     if input(f"\n{prompt}").strip().lower() != "y":
         return True
-    sync_translations(mod_path, missing, interactive)
+    sync_translations(
+        mod_path,
+        missing,
+        interactive,
+        getattr(cfg, "translation_section", None) if kind == "json" else None,
+    )
     return False
 
 
