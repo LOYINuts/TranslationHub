@@ -189,6 +189,7 @@
   "HUD.Failure.RestoreStopped": "恢复已停止",
   "HUD.Failure.ExistingProfileUnreadable": "无法读取现有配置文件",
   "HUD.Failure.NoSelectedMCMs": "没有可用的已选 MCM",
+  "HUD.Failure.RecordedMCMsSkipped": "手动备份会跳过已记录的 MCM；如需更新，请重新记录更改",
   "HUD.Failure.ProfileUnchanged": "现有配置文件未更改",
   "HUD.Failure.ProfileSavePending": "更改尚未保存；请重新打开并关闭暂停菜单，然后重试保存。",
   "HUD.Failure.ProfileLoadFailed": "无法加载配置文件",

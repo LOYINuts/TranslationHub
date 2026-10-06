@@ -358,5 +358,6 @@
   "InspectCard.LowAlterationEssence": "检查失败. 你的变化系等级过低",
   "Hotkeys.ModAlt": "Alt",
   "Hotkeys.ModCtrl": "Ctrl",
-  "Hotkeys.ModShift": "Shift"
+  "Hotkeys.ModShift": "Shift",
+  "Common.XP": "XP"
 }

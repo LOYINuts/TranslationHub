@@ -27,5 +27,10 @@
   "$obody_current_preset": "当前预设",
   "$obody_none": "无",
   "$obody_skse_menu_framework_failure": "未找到用于显示 OBody 预设选择菜单的 SKSE Menu Framework。这意味着你未安装 SKSE Menu Framework，或安装不正确。请立即退出游戏，并参阅模组页面中的安装说明。",
-  "$obody_preset_list_failure": "解析 Bodyslide 预设文件时发生严重错误。最可能的原因是某个 Bodyslide 预设已损坏，或预设名称包含特殊/不兼容字符。因此，OBody 菜单中的预设列表将为空。请立即退出游戏，并参阅 OBody NG 模组页面了解更多信息。"
+  "$obody_preset_list_failure": "解析 Bodyslide 预设文件时发生严重错误。最可能的原因是某个 Bodyslide 预设已损坏，或预设名称包含特殊/不兼容字符。因此，OBody 菜单中的预设列表将为空。请立即退出游戏，并参阅 OBody NG 模组页面了解更多信息。",
+  "$obody_collapse_all": "全部折叠",
+  "$obody_config_viewer_tab": "JSON 配置查看器",
+  "$obody_copy_json": "复制 JSON",
+  "$obody_expand_all": "全部展开",
+  "$obody_presets_tab": "预设选择"
 }

@@ -197,5 +197,6 @@
   "Profile.Pages.Mode.All": "全部排除",
   "Profile.Pages.Empty": "未找到页面。请打开或激活 MCM，再刷新。",
   "Profile.Pages.Apply": "应用",
-  "Profile.Pages.SaveFailed": "无法保存页面排除设置。更改仍保留在此窗口中。点击“应用”重试。"
+  "Profile.Pages.SaveFailed": "无法保存页面排除设置。更改仍保留在此窗口中。点击“应用”重试。",
+  "HUD.Failure.RecordedMCMsSkipped": "手动备份会跳过已记录的 MCM；如需更新，请重新记录更改"
 }
