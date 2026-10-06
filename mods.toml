@@ -131,7 +131,6 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-[[line]]
 dir = "skse_menu_translation/obodyng"
 source = "OBody_ENGLISH.txt"
 output = "OBody_CHINESE.txt"
