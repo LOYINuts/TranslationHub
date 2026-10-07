@@ -222,6 +222,7 @@
 "RESET_INVENTORY_DESC": "Reset Inventory:\n\nResetting an Inventory will restore it to its original contents when initially spawned.\n\nAre you sure you want to proceed?",
 "ADD_AMOUNT_DESC": "Please enter the desired quantity you would like.",
 "INVALID_AMOUNT_DESC": "Must be a valid positive integer. (e.g. 10)",
+"NON_PLAYER_TARGET": "Adding to a non-player target",
 
 "_CONTAINER_VIEW": "======== Container View Actions ========",
 "CONTAINER_VIEW": "Show Results In-game",

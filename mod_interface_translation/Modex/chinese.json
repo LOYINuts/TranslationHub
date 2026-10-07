@@ -207,6 +207,7 @@
   "RESET_INVENTORY_DESC": "重置物品栏：\n\n重置物品栏将使其恢复到初始生成时的原始内容。\n\n你确定要继续吗？",
   "ADD_AMOUNT_DESC": "请输入你想要的数量。",
   "INVALID_AMOUNT_DESC": "必须是有效的正整数。（例如：10）",
+  "NON_PLAYER_TARGET": "添加到非玩家目标",
   "_CONTAINER_VIEW": "======== 容器视图操作 ========",
   "CONTAINER_VIEW": "在游戏中显示结果",
   "CONTAINER_VIEW_TOOLTIP": "显示结果\n\n在游戏内容器中查看搜索内容。你可以在游戏内直接预览或拾取物品。",
