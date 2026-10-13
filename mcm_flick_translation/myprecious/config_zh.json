@@ -44,9 +44,9 @@
         {
           "position": 2,
           "id": "bUnequipAllClearsExtraRings:General",
-          "text": "遵循 UnequipAll",
+          "text": "遵循全部脱下指令 (UnequipAll)",
           "type": "toggle",
-          "help": "运行 UnequipAll 时清除额外戒指，然后在狼人或吸血鬼领主等种族变身后恢复它们。",
+          "help": "运行全部脱下指令 (UnequipAll) 时清除额外戒指，然后在狼人或吸血鬼领主等种族变身后恢复它们。",
           "valueOptions": {
             "sourceType": "ModSettingBool",
             "defaultValue": true
