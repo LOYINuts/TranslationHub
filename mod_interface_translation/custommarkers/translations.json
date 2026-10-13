@@ -303,5 +303,15 @@
   "Settings.WindowTitle": "自定义标记设置",
   "Settings.WorldBeaconsHeader": "目的地信标",
   "Settings.ZoomMap": "缩放地图",
-  "Settings.ZoomMapRadarMode": "缩放地图（雷达模式）"
+  "Settings.ZoomMapRadarMode": "缩放地图（雷达模式）",
+  "Navigation.CardinalE": "E",
+  "Navigation.CardinalN": "N",
+  "Navigation.CardinalS": "S",
+  "Navigation.CardinalW": "W",
+  "Settings.GlanceShowCardinals": "显示罗盘方向",
+  "Settings.GlanceShowLocation": "显示地点名称",
+  "Settings.LootBeamBottomWidth": "底部宽度",
+  "Settings.LootBeamGroundGlow": "地面光晕",
+  "Settings.LootBeamTopWidth": "顶部宽度",
+  "Settings.TrackDroppedWeapons": "追踪掉落武器"
 }

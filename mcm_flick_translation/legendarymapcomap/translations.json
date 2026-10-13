@@ -1,0 +1,23 @@
+{
+  "$LEGENDMAP_TOGGLE": "切换图例",
+  "$LEGENDMAP_TOGGLEALL": "切换全部",
+  "$LEGENDMAP_HIDEUNDISC": "切换未发现标记",
+  "$LEGENDMAP_HIDEQUEST": "切换任务标记",
+  "$LEGENDMAP_MCM_NAME": "传奇地图",
+  "$LEGENDMAP_MCM_TOGGLE_HELP": "显示或隐藏地图图例。",
+  "$LEGENDMAP_MCM_TOGGLEALL_HELP": "显示或隐藏所有图例标记类型。",
+  "$LEGENDMAP_MCM_HIDEUNDISC_HELP": "显示或隐藏所有未发现的地图标记。",
+  "$LEGENDMAP_MCM_HIDEQUEST_HELP": "显示或隐藏任务目标地图标记。",
+  "$LEGENDMAP_MCM_KEYBOARD_HEADER": "键盘控制",
+  "$LEGENDMAP_MCM_GAMEPAD_HEADER": "手柄控制",
+  "$LEGENDMAP_HIDE_LEGEND": "隐藏图例",
+  "$LEGENDMAP_SHOW_LEGEND": "显示图例",
+  "$LEGENDMAP_HIDE_ALL": "全部隐藏",
+  "$LEGENDMAP_SHOW_ALL": "全部显示",
+  "$LEGENDMAP_HIDE_UNDISCOVERED": "隐藏未发现标记",
+  "$LEGENDMAP_SHOW_UNDISCOVERED": "显示未发现标记",
+  "$LEGENDMAP_HIDE_QUEST_MARKERS": "隐藏任务标记",
+  "$LEGENDMAP_SHOW_QUEST_MARKERS": "显示任务标记",
+  "$LEGENDMAP_MCM_FUNCTIONS_HEADER": "已启用的功能",
+  "$LEGENDMAP_MCM_FUNCTION_HELP": "启用或禁用此地图图例功能。"
+}

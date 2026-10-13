@@ -44,5 +44,11 @@
   "$RACE_ShowInFittingRoom": "在试衣间显示",
   "$RACE_SmoothCamera": "电影镜头",
   "$RACE_SpeedFOV_GP": "视野速度",
-  "$RACE_StopTooltip": "默认待机动作"
+  "$RACE_StopTooltip": "默认待机动作",
+  "$RACE_CinematicCamera": "电影镜头",
+  "$RACE_Color": "颜色",
+  "$RACE_ColorRecent": "最近使用",
+  "$RACE_ColorSwatches": "色板",
+  "$RACE_FOV": "视野",
+  "$RACE_ShowFov": "显示视野"
 }

@@ -40,6 +40,20 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "mcm_flick_translation/myprecious"
+source = "MyPreciouses_ENGLISH.txt"
+output = "MyPreciouses_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
+dir = "mcm_flick_translation/legendarymapcomap"
+source = "Legendary Map_english.txt"
+output = "Legendary Map_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "mcm_flick_translation/KillFeed"
 source = "KillFeed_ENGLISH.txt"
 output = "KillFeed_CHINESE.txt"
@@ -313,6 +327,11 @@ dir = "mod_interface_translation/Modex"
 source = "english.json"
 output = "chinese.json"
 
+
+[[json]]
+dir = "mcm_flick_translation/myprecious"
+source = "config.json"
+output = "config_zh.json"
 
 [[json]]
 dir = "mod_interface_translation/newskillmenu"

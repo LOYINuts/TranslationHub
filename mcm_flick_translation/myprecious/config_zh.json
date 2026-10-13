@@ -1,0 +1,390 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Exit-9B/MCM-Helper/main/docs/config.schema.json",
+  "modName": "MyPreciouses",
+  "displayName": "MyPreciouses",
+  "minMcmVersion": 13,
+  "customContent": {
+    "source": "MyPreciouses/logo.dds",
+    "x": 0,
+    "y": 11
+  },
+  "pages": [
+    {
+      "pageDisplayName": "通用",
+      "cursorFillMode": "topToBottom",
+      "content": [
+        {
+          "type": "hiddenToggle",
+          "text": "已选择固定强度",
+          "groupControl": 1,
+          "valueOptions": {
+            "sourceType": "PropertyValueBool",
+            "propertyName": "bFixedStrengthSelected"
+          }
+        },
+        {
+          "type": "hiddenToggle",
+          "text": "已选择外观额外戒指",
+          "groupControl": 2,
+          "valueOptions": {
+            "sourceType": "PropertyValueBool",
+            "propertyName": "bCosmeticExtraRingsSelected"
+          }
+        },
+        {
+          "position": 0,
+          "text": "通用",
+          "type": "header"
+        },
+        {
+          "position": 1,
+          "text": "平衡",
+          "type": "header"
+        },
+        {
+          "position": 2,
+          "id": "bUnequipAllClearsExtraRings:General",
+          "text": "遵循 UnequipAll",
+          "type": "toggle",
+          "help": "运行 UnequipAll 时清除额外戒指，然后在狼人或吸血鬼领主等种族变身后恢复它们。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 3,
+          "id": "iExtraRingMode:General",
+          "text": "额外戒指模式",
+          "type": "enum",
+          "help": "功能模式会应用普通戒指的附魔和脚本；外观模式仅显示戒指模型。仅适用于额外戒指。原版右手食指戒指不受影响。",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "defaultValue": 0,
+            "options": [
+              "Functional",
+              "Cosmetic"
+            ]
+          }
+        },
+        {
+          "position": 5,
+          "id": "iEnchantmentStrengthMode:General",
+          "text": "附魔强度",
+          "type": "enum",
+          "groupCondition": {
+            "NOT": 2
+          },
+          "groupBehavior": "disable",
+          "help": "完整模式保持正常强度；固定模式使用选定的强度；分配模式会将 100% 强度平均分配给计数中的戒指。只有至少拥有一个非零强度附魔效果的已装备戒指会被计数，包括原版右手食指戒指。",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "defaultValue": 0,
+            "options": [
+              "Full strength",
+              "Fixed strength",
+              "Split strength"
+            ]
+          }
+        },
+        {
+          "position": 7,
+          "id": "iFixedEnchantmentStrengthPercent:General",
+          "text": "固定强度",
+          "type": "slider",
+          "groupCondition": {
+            "AND": [
+              1,
+              {
+                "NOT": 2
+              }
+            ]
+          },
+          "groupBehavior": "hide",
+          "help": "供固定强度模式使用。只有至少拥有一个非零强度附魔效果的已装备戒指会被计数，包括原版右手食指戒指。",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "defaultValue": 50,
+            "min": 5,
+            "max": 100,
+            "step": 5,
+            "formatString": "{0}%"
+          }
+        },
+        {
+          "position": 4,
+          "id": "bDebugLogging:General",
+          "text": "调试日志",
+          "type": "toggle",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": false
+          }
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "NPC",
+      "content": [
+        {
+          "id": "bEnableNpcSupport:NPCs",
+          "text": "启用 NPC 支持",
+          "type": "toggle",
+          "help": "为玩家以外的角色启用虚拟戒指支持，包括随从和普通 NPC。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "特殊戒指",
+      "content": [
+        {
+          "position": 0,
+          "text": "将白头之约佩戴在左手无名指",
+          "type": "header"
+        },
+        {
+          "position": 1,
+          "id": "bPlayerAlwaysEquipBondOfMatrimonyOnLeftRingFinger:SpecialRings",
+          "text": "玩家",
+          "type": "toggle",
+          "help": "始终将白头之约及其可升级的白头之约变体装备在玩家的左手无名指上。即使该虚拟槽位已禁用，此设置仍然有效；装备/装备到左手也不会为此戒指打开手指选择器。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": false
+          }
+        },
+        {
+          "position": 2,
+          "id": "bNpcAlwaysEquipBondOfMatrimonyOnLeftRingFinger:SpecialRings",
+          "text": "NPC",
+          "type": "toggle",
+          "help": "当 NPC 支持自动装备戒指时，始终将白头之约及其可升级的白头之约变体装备在 NPC（包括随从）的左手无名指上。即使该虚拟槽位已禁用，此设置仍然有效。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "手指选择",
+      "content": [
+        {
+          "type": "hiddenToggle",
+          "text": "已选择手柄输入",
+          "groupControl": 3,
+          "valueOptions": {
+            "sourceType": "PropertyValueBool",
+            "propertyName": "bControllerInputSelected"
+          }
+        },
+        {
+          "id": "bAlwaysChooseFinger:FingerSelector",
+          "text": "始终选择手指",
+          "type": "toggle",
+          "help": "每当你对戒指使用装备或装备到左手，且未按下修饰键时，始终显示手指选择菜单。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": false
+          }
+        },
+        {
+          "id": "iFingerSelectModifierKey:FingerSelector",
+          "text": "手指选择修饰键",
+          "type": "keymap",
+          "ignoreConflicts": true,
+          "groupCondition": {
+            "NOT": 3
+          },
+          "groupBehavior": "skip",
+          "help": "装备戒指时按住此按键以选择手指。",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "defaultValue": 42
+          }
+        },
+        {
+          "id": "iFingerSelectModifierButton:FingerSelector",
+          "text": "手指选择修饰键",
+          "type": "keymap",
+          "ignoreConflicts": true,
+          "groupCondition": 3,
+          "groupBehavior": "skip",
+          "help": "装备戒指时按住此按钮以选择手指。",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "defaultValue": 275
+          }
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "虚拟槽位",
+      "cursorFillMode": "topToBottom",
+      "content": [
+        {
+          "type": "hiddenToggle",
+          "text": "右手食指可配置",
+          "groupControl": 4,
+          "valueOptions": {
+            "sourceType": "PropertyValueBool",
+            "propertyName": "bRightIndexSlotConfigurable"
+          }
+        },
+        {
+          "position": 0,
+          "text": "虚拟戒指预设",
+          "type": "enum",
+          "help": "全部会启用所有虚拟槽位。仅左手食指只保留一个额外的左手戒指槽位。自定义会使用下方各个槽位的开关。",
+          "valueOptions": {
+            "sourceType": "PropertyValueInt",
+            "propertyName": "VirtualSlotPreset",
+            "defaultValue": 0,
+            "options": [
+              "All",
+              "Left index only",
+              "Custom"
+            ]
+          },
+          "action": {
+            "type": "CallFunction",
+            "function": "ApplyVirtualSlotPreset",
+            "params": [
+              "{value}"
+            ]
+          }
+        },
+        {
+          "position": 1,
+          "type": "empty"
+        },
+        {
+          "position": 2,
+          "text": "左手",
+          "type": "header"
+        },
+        {
+          "position": 3,
+          "text": "右手",
+          "type": "header"
+        },
+        {
+          "position": 4,
+          "id": "bEnableLeftThumb:VirtualSlots",
+          "text": "左手拇指",
+          "type": "toggle",
+          "help": "启用左手拇指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 6,
+          "id": "bEnableLeftIndex:VirtualSlots",
+          "text": "左手食指",
+          "type": "toggle",
+          "help": "启用左手食指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 8,
+          "id": "bEnableLeftMiddle:VirtualSlots",
+          "text": "左手中指",
+          "type": "toggle",
+          "help": "启用左手中指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 10,
+          "id": "bEnableLeftRing:VirtualSlots",
+          "text": "左手无名指",
+          "type": "toggle",
+          "help": "启用左手无名指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 12,
+          "id": "bEnableLeftPinky:VirtualSlots",
+          "text": "左手小指",
+          "type": "toggle",
+          "help": "启用左手小指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 5,
+          "id": "bEnableRightThumb:VirtualSlots",
+          "text": "右手拇指",
+          "type": "toggle",
+          "help": "启用右手拇指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 7,
+          "text": "右手食指",
+          "type": "toggle",
+          "groupCondition": 4,
+          "groupBehavior": "disable",
+          "help": "原版右手食指始终可用，无法禁用。",
+          "valueOptions": {
+            "sourceType": "PropertyValueBool",
+            "propertyName": "bRightIndexSlotDisplayed",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 9,
+          "id": "bEnableRightMiddle:VirtualSlots",
+          "text": "右手中指",
+          "type": "toggle",
+          "help": "启用右手中指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 11,
+          "id": "bEnableRightRing:VirtualSlots",
+          "text": "右手无名指",
+          "type": "toggle",
+          "help": "启用右手无名指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        },
+        {
+          "position": 13,
+          "id": "bEnableRightPinky:VirtualSlots",
+          "text": "右手小指",
+          "type": "toggle",
+          "help": "启用右手小指虚拟戒指槽位。",
+          "valueOptions": {
+            "sourceType": "ModSettingBool",
+            "defaultValue": true
+          }
+        }
+      ]
+    }
+  ]
+}
