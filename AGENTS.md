@@ -3,9 +3,9 @@
 Run local gates in order. Any nonzero exit code means failure.
 
 ```bash
-python sync_translation.py <mod> --check
-python build_all.py --dry-run <mod> && python build_all.py <mod>
-python verify_translation.py <mod>
+uv run sync_translation.py <mod> --check
+uv run build_all.py --dry-run <mod> && uv run build_all.py <mod>
+uv run verify_translation.py <mod>
 ```
 
 For dialogue XML, use `translate.py` in this order: `stats → pending --fill-bdd → apply → stats`.
@@ -37,12 +37,12 @@ Before translating a new mod, inspect its folder and classify every candidate so
 
 1. List files with `rg --files <mod-dir>`. Exclude archives and binaries from text parsing.
 2. Run these commands for each likely text file:
-   `python locale_utils.py detect <file>`
-   `python locale_utils.py dump <file>`
+   `uv run locale_utils.py detect <file>`
+   `uv run locale_utils.py dump <file>`
    `detect` checks BOMs only. `dump` strictly decodes BOM-less files as UTF-8. Successful decoding does not prove the source encoding.
 3. Inspect a text dump and file structure. Use JSON/XML parsers for structured files. Compare source and target samples to identify keys, separators, comments, and line endings.
 4. If decoding fails or file type, source, target, or output encoding is unclear, stop and ask. Do not guess another encoding. Do not edit or build an unclassified file.
-5. Register the mod in `mods.toml` as `line`, `json`, or `qt`. Keep dialogue XML separate. Create and translate `translations.json` from confirmed source keys. Run `python build_all.py --dry-run <mod>`, then build and verify.
+5. Register the mod in `mods.toml` as `line`, `json`, or `qt`. Keep dialogue XML separate. Create and translate `translations.json` from confirmed source keys. Run `uv run build_all.py --dry-run <mod>`, then build and verify.
 
 ## Required Workflow
 
@@ -70,10 +70,10 @@ All CLIs use `config.setup_cli_logging`:
 Run these commands in order. Any nonzero exit code means failure.
 
 ```bash
-python sync_translation.py <name> --check
-python build_all.py --dry-run <name>
-python build_all.py <name1> <name2>
-python verify_translation.py <name>
+uv run sync_translation.py <name> --check
+uv run build_all.py --dry-run <name>
+uv run build_all.py <name1> <name2>
+uv run verify_translation.py <name>
 ```
 
 `verify_translation.py` covers configured mods, Eslifer, and Descriptionmods. Dialogue XML uses its own checks.
