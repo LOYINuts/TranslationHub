@@ -131,6 +131,13 @@ sep = "="
 encoding = "utf-8"
 
 [[line]]
+dir = "mod_interface_translation/veldunui"
+source = "skyui_se_english.txt"
+output = "skyui_se_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "skse_menu_translation/skyprompt"
 source = "SkyPrompt_ENGLISH.txt"
 output = "SkyPrompt_CHINESE.txt"
@@ -218,14 +225,6 @@ source = "ColdBreathNG_Translation.ini"
 output = "ColdBreathNG_Translation_zh.ini"
 sep = "="
 encoding = "utf-8"
-
-[[line]]
-dir = "skse_menu_translation/skyrimsoulsre"
-source = "SkyrimSoulsRE_ENGLISH.txt"
-output = "SkyrimSoulsRE_CHINESE.txt"
-sep = "\t"
-encoding = "utf16-le-bom"
-
 
 [[line]]
 dir = "Descriptionmods"
