@@ -1,10 +1,10 @@
 """xTranslator XML 工作脚本：词典填充、待译导出、写回。
 
 用法（仓库根目录）：
-  python dialogue_mod_translation/translate.py stats <xml-or-dir>
-  python dialogue_mod_translation/translate.py pending <xml> [--fill-bdd]
-  python dialogue_mod_translation/translate.py apply <pending.json>
-  python dialogue_mod_translation/translate.py --self-check
+  uv run dialogue_mod_translation/translate.py stats <xml-or-dir>
+  uv run dialogue_mod_translation/translate.py pending <xml> [--fill-bdd]
+  uv run dialogue_mod_translation/translate.py apply <pending.json>
+  uv run dialogue_mod_translation/translate.py --self-check
 """
 
 from __future__ import annotations

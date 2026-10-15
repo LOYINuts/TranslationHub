@@ -252,9 +252,9 @@ def main(argv: list[str] | None = None) -> int:
 
     args = list(sys.argv[1:] if argv is None else argv)
     if not args or args[0] in ("-h", "--help"):
-        print("usage: python locale_utils.py detect PATH")
-        print("       python locale_utils.py dump PATH [-o OUT.txt]")
-        print("       python locale_utils.py --self-check")
+        print("usage: uv run locale_utils.py detect PATH")
+        print("       uv run locale_utils.py dump PATH [-o OUT.txt]")
+        print("       uv run locale_utils.py --self-check")
         return 0
     if args[0] == "--self-check":
         _self_check()
@@ -270,7 +270,7 @@ def main(argv: list[str] | None = None) -> int:
         if len(rest) == 3 and rest[1] == "-o":
             out = rest[2]
         elif len(rest) != 1:
-            print("usage: python locale_utils.py dump PATH [-o OUT.txt]")
+            print("usage: uv run locale_utils.py dump PATH [-o OUT.txt]")
             return 2
         text = read_text(path)
         if out:
@@ -283,7 +283,7 @@ def main(argv: list[str] | None = None) -> int:
         if text and not text.endswith("\n"):
             sys.stdout.write("\n")
         return 0
-    print("usage: python locale_utils.py detect|dump PATH")
+    print("usage: uv run locale_utils.py detect|dump PATH")
     return 2
 
 

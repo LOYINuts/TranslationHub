@@ -10,15 +10,15 @@ description: Inspect and process translation text files safely, including UTF-16
 1. For configured mods, edit only `translations.json`, then build the output
    files.
 2. For `Descriptionmods`, edit `Descriptionmods/translations.json`, then run
-   `python build_all.py Descriptionmods`.
+   `uv run build_all.py Descriptionmods`.
 
 ## New or Unconfigured Folders
 
 1. List files with `rg --files <mod-dir>`. Do not use Pi `read` before you
    know the encoding.
 2. For likely text files, run:
-   `python locale_utils.py detect PATH`
-   `python locale_utils.py dump PATH`
+   `uv run locale_utils.py detect PATH`
+   `uv run locale_utils.py dump PATH`
 3. `detect` checks BOMs only. `dump` strictly decodes BOM-less files as UTF-8.
    A successful decode does not prove the original encoding.
 4. Inspect the file structure and compare source and target files. Parse JSON
@@ -29,15 +29,15 @@ description: Inspect and process translation text files safely, including UTF-16
 6. Register the mod in `mods.toml` as `line`, `json`, or `qt`. Keep dialogue
    XML separate.
 7. Create and translate `translations.json` from confirmed source keys.
-   Run `python build_all.py --dry-run <mod>`, then build and verify.
+   Run `uv run build_all.py --dry-run <mod>`, then build and verify.
 
 ## Encoding
 
 Check source encoding before inspecting TXT or INI files:
 
 ```bash
-python locale_utils.py detect PATH
-python locale_utils.py dump PATH
+uv run locale_utils.py detect PATH
+uv run locale_utils.py dump PATH
 ```
 
 Do not use Pi `read` for UTF-16 files. The generated output keeps the configured
@@ -46,10 +46,10 @@ encoding and newline convention. Use `build_all.py` to generate output files.
 ## Commands (see AGENTS.md for the full gate)
 
 ```bash
-python sync_translation.py <name> --check   # line+json+qt 缺键
-python build_all.py --dry-run <name>
-python build_all.py <name>
-python verify_translation.py <name>
+uv run sync_translation.py <name> --check
+uv run build_all.py --dry-run <name>
+uv run build_all.py <name>
+uv run verify_translation.py <name>
 ```
 
 Use the separator and encoding in `mods.toml`. Do not assume that all files use

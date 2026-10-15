@@ -2,10 +2,10 @@
 同步翻译工具：检测英文源文件中的新词条，更新 translations.json
 
 用法：
-  python sync_translation.py custommarkers --check        # 检查缺失的词条
-  python sync_translation.py custommarkers --sync         # 自动添加缺失词条（英文原文作为占位）
-  python sync_translation.py custommarkers --interactive  # 交互式添加翻译
-  python sync_translation.py --all --check                # 检查所有模组
+  uv run sync_translation.py custommarkers --check        # 检查缺失的词条
+  uv run sync_translation.py custommarkers --sync         # 自动添加缺失词条（英文原文作为占位）
+  uv run sync_translation.py custommarkers --interactive  # 交互式添加翻译
+  uv run sync_translation.py --all --check                # 检查所有模组
 """
 
 import json

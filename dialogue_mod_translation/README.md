@@ -13,9 +13,9 @@ Tell the agent "Translate smalltalk" or "Translate this XML". Follow
 手工命令：
 
 ```bash
-python dialogue_mod_translation/translate.py stats <xml>
-python dialogue_mod_translation/translate.py pending <xml> --fill-bdd
-python dialogue_mod_translation/translate.py apply <mod>/pending.json
+uv run dialogue_mod_translation/translate.py stats <xml>
+uv run dialogue_mod_translation/translate.py pending <xml> --fill-bdd
+uv run dialogue_mod_translation/translate.py apply <mod>/pending.json
 ```
 
 默认只动 `BOOK` `INFO` `DIAL` `NPC_`。词典：仓库根目录 `bdd.tsv`。

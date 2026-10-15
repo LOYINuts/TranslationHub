@@ -2,9 +2,9 @@
 统一构建脚本：批量生成所有模组的中文翻译文件。
 
 用法：
-  uv run python build_all.py          # 构建所有模组
-  uv run python build_all.py --stats   # 仅统计，不生成
-  uv run python build_all.py FUCK KillFeed  # 短名或完整相对路径均可
+  uv run build_all.py                 # Build all mods
+  uv run build_all.py --stats          # Show stats without building
+  uv run build_all.py FUCK KillFeed    # Short names or relative paths are accepted
 
 数据驱动：翻译源位于各模组的 translations.json，构建配置位于 mods.toml。
 数据源统一为各模组的 `translations.json`，配置统一放在 `mods.toml`。
@@ -417,8 +417,8 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 本地门禁 (sync→build→verify, 非零即失败):
-  python sync_translation.py <mod> --check
-  %(prog)s --dry-run <mod> && %(prog)s <mod> && python verify_translation.py <mod>
+  uv run sync_translation.py <mod> --check
+  uv run build_all.py --dry-run <mod> && uv run build_all.py <mod> && uv run verify_translation.py <mod>
 对话 XML 另走 translate.py: stats → pending --fill-bdd → apply → stats
 '''
     )

@@ -21,10 +21,10 @@ not only in chat.
 ## Workflow (same gate shape: stats → pending → apply → stats)
 
 ```bash
-python dialogue_mod_translation/translate.py stats XML_OR_DIR
-python dialogue_mod_translation/translate.py pending XML --fill-bdd
-python dialogue_mod_translation/translate.py apply MOD/pending.json
-python dialogue_mod_translation/translate.py stats XML_OR_DIR
+uv run dialogue_mod_translation/translate.py stats XML_OR_DIR
+uv run dialogue_mod_translation/translate.py pending XML --fill-bdd
+uv run dialogue_mod_translation/translate.py apply MOD/pending.json
+uv run dialogue_mod_translation/translate.py stats XML_OR_DIR
 ```
 
 Read context and existing translations before translating `groups[].traduit` in

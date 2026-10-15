@@ -22,6 +22,17 @@ For dialogue XML, use `translate.py` in this order: `stats → pending --fill-bd
 | New or unknown files | Any mod folder | `translation-io` intake, then type-specific process |
 | Any game text | Any path | `game-translation` |
 
+## Python And Dependencies
+
+This repository is a uv-managed, non-packaged project. It requires Python 3.11+ and currently has no third-party dependencies.
+
+- Run repository scripts directly with `uv run <script.py>`. Do not add `python` between `uv run` and the script path.
+- Prefer the standard library. Do not install a package when the task can be handled without one.
+- Add persistent runtime dependencies with `uv add <package>` and development-only tools with `uv add --dev <package>`. Commit both `pyproject.toml` and `uv.lock`.
+- Use `uv sync` to synchronize the local `.venv` after dependency changes. Use `uv sync --locked` in checks that must not modify the lockfile.
+- For one-off Python scripts, use `uv run --with <package> --script <script.py>`. For standalone CLI tools, use `uvx <tool>`.
+- Never install packages with `pip` or modify the global Python environment.
+
 ## Source Of Truth
 
 - `translations.json` is the source for every configured non-dialogue mod. Edit it, then build output files.
@@ -78,4 +89,4 @@ uv run verify_translation.py <name>
 
 `verify_translation.py` covers configured mods, Eslifer, and Descriptionmods. Dialogue XML uses its own checks.
 
-All build configuration lives in `mods.toml`. Never hard-code mod lists. Do not create the unused `config.toml`. Python 3.11+ and the standard library are the only requirements.
+The project currently requires Python 3.11+ and uses only the standard library at runtime.
