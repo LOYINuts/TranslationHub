@@ -206,6 +206,20 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "skse_menu_translation/journalredesigned"
+source = "Journal Redesigned_english.txt"
+output = "Journal Redesigned_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
+dir = "skse_menu_translation/startmenuredesigned"
+source = "StartMenuRedesigned_english.txt"
+output = "StartMenuRedesigned_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "skse_menu_translation/consolecommander"
 source = "ConsoleCommander_Translation.txt"
 output = "ConsoleCommander_Translation_zh.txt"

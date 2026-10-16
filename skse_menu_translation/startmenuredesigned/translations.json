@@ -1,0 +1,16 @@
+{
+  "$SMR_START_CHARACTERS": "角色",
+  "$SMR_START_SAVES": "存档",
+  "$SMR_START_SELECT_CHARACTER_TO_VIEW_SAVES": "选择角色以查看其存档。",
+  "$SMR_START_PLAYTIME": "游戏时长",
+  "$SMR_START_DATE": "日期",
+  "$SMR_START_LOCATION": "地点",
+  "$SMR_START_LOADING_SAVE": "正在载入最新存档……",
+  "$SMR_START_CONTINUE_CONFIRM": "要继续载入此存档吗？",
+  "$SMR_START_NO_SAVES": "没有可用的存档。",
+  "$SMR_START_PREVIEW_FAILED": "无法预览最新存档。",
+  "$SMR_START_CHECKING_SAVE": "正在检查存档……",
+  "$SMR_START_SAVE_CORRUPT": "此存档已损坏，无法载入。",
+  "$SMR_START_SAVE_OBSOLETE": "此存档来自较旧版本，无法载入。",
+  "$SMR_START_QUIT_CONFIRM": "要退出到桌面吗？"
+}
