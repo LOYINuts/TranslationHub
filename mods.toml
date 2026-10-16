@@ -220,6 +220,13 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "skse_menu_translation/mapmenuredesigned"
+source = "MapMenuRedesigned_english.txt"
+output = "MapMenuRedesigned_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "skse_menu_translation/consolecommander"
 source = "ConsoleCommander_Translation.txt"
 output = "ConsoleCommander_Translation_zh.txt"
