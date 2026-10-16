@@ -124,5 +124,18 @@
   "$mHUD_ShowsInventoryCountEventWhenZero": "启用后，即使玩家物品栏中没有该物品，也会显示物品栏计数",
   "$mHUD_IconSize": "图标大小",
   "$mHUD_IconSizeDescription": "设置图标的大小，例如已读书籍图标或已知附魔。所有图标都将设置为该大小",
-  "$mHUD_Icons": "图标"
+  "$mHUD_Icons": "图标",
+  "$mHUD_LocationStatus": "地点状态",
+  "$mHUD_ShowLocationStatus": "显示地点状态",
+  "$mHUD_LocationStatusDungeonsOnly": "仅限地城",
+  "$mHUD_LocationStatusHideUnvisited": "隐藏未探索状态",
+  "$mHUD_ShowLocationStatusInfo": "显示室内地点是否未探索、已探索或已清理。",
+  "$mHUD_LocationStatusDungeonsOnlyInfo": "仅显示标记为地城的目的地地点状态。",
+  "$mHUD_LocationStatusHideUnvisitedInfo": "隐藏“未探索”标记，但仍显示“已探索”和“已清理”状态。",
+  "$mHUD_LocationStatusUnvisited": "未探索",
+  "$mHUD_LocationStatusVisited": "已探索",
+  "$mHUD_LocationStatusVisitedNotCleared": "已探索（未清理）",
+  "$mHUD_LocationStatusCleared": "已清理",
+  "$mHUD_LocationStatusExteriorOnly": "仅限室外入口",
+  "$mHUD_LocationStatusExteriorOnlyInfo": "仅从室外世界空间进入室内时显示地点状态；嵌套室内区域之间的门不显示状态。"
 }
