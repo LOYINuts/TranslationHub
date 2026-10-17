@@ -163,7 +163,7 @@ def translation_format_issues(source: str, translated: str, line_based: bool = F
 
 def load_json(path: str):
     """Load JSON and tolerate // or /* */ comments used by mod sources."""
-    with open(path, encoding="utf-8") as f:
+    with open(path, encoding="utf-8-sig") as f:
         text = f.read()
     out = []
     i = 0
