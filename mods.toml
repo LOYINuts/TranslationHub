@@ -12,6 +12,41 @@
 # ── LINE-BASED MODS ────────────────────────────────────────────────────────
 
 [[line]]
+dir = "mcm_flick_translation/achievementinjector"
+source = "AchievementInjector_english.txt"
+output = "AchievementInjector_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
+dir = "mcm_flick_translation/achievementinjector"
+source = "AchievementsData/Localizations/Dawnguard_EN.txt"
+output = "AchievementsData/Localizations/Dawnguard_ZH.txt"
+sep = "\t"
+encoding = "utf-8"
+
+[[line]]
+dir = "mcm_flick_translation/achievementinjector"
+source = "AchievementsData/Localizations/Dragonborn_EN.txt"
+output = "AchievementsData/Localizations/Dragonborn_ZH.txt"
+sep = "\t"
+encoding = "utf-8"
+
+[[line]]
+dir = "mcm_flick_translation/achievementinjector"
+source = "AchievementsData/Localizations/Hearthfire_EN.txt"
+output = "AchievementsData/Localizations/Hearthfire_ZH.txt"
+sep = "\t"
+encoding = "utf-8"
+
+[[line]]
+dir = "mcm_flick_translation/achievementinjector"
+source = "AchievementsData/Localizations/SkyrimSE_EN.txt"
+output = "AchievementsData/Localizations/SkyrimSE_ZH.txt"
+sep = "\t"
+encoding = "utf-8"
+
+[[line]]
 dir = "mcm_flick_translation/FUCK"
 source = "FUCK_ENGLISH.txt"
 output = "FUCK_CHINESE.txt"

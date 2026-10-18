@@ -17,9 +17,7 @@ Thumbs.db
 .pi-lens/
 
 # ── Generated / large artifacts ──
-BDD_LOYI_WL1.51.xml
 *.db
-bdd.tsv
 *.log
 *.zip
 */Export/
