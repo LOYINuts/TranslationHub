@@ -43,3 +43,15 @@ such as `<mag>`, `%s`, `{...}`, and `$Player`. Do not rewrite the full XML with
 ElementTree. Use only `translate.py` to write XML. Stop and report decoding
 errors, tag or placeholder check failures, or pending records that remain after
 the final stats check.
+
+`bdd.tsv` is a quoted TSV whose fields may span lines. Never split it by line
+and tab by hand. Use the `bdd` subcommand:
+
+```bash
+uv run dialogue_mod_translation/translate.py bdd              # report
+uv run dialogue_mod_translation/translate.py bdd --check      # nonzero on duplicates
+uv run dialogue_mod_translation/translate.py bdd --normalize  # drop duplicate records
+```
+
+Run `--normalize` after appending records. It deletes only byte-identical
+duplicate records, so kept lines never change.

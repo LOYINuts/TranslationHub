@@ -1,4 +1,4 @@
-"""一次性本地门禁：自检 + 同步检查 + 构建 + 校验。
+"""一次性本地门禁：自检 + 词典检查 + 同步检查 + 构建 + 校验。
 
 用法：
   uv run check_all.py              # 全部门禁
@@ -29,6 +29,7 @@ SELF_CHECKS = (
 )
 
 GATE = (
+    ("dialogue_mod_translation/translate.py", "bdd", "--check"),
     ("sync_translation.py", "--all", "--check"),
     ("build_all.py",),
     ("verify_translation.py",),
@@ -46,7 +47,7 @@ def run(script: str, *args: str) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="运行全部本地门禁：自检 → sync → build → verify")
+    parser = argparse.ArgumentParser(description="运行全部本地门禁：自检 → bdd → sync → build → verify")
     parser.add_argument("--self-check", action="store_true", help="只运行脚本自检")
     parser.add_argument("--verbose", "-v", action="store_true", help="显示详细日志")
     args = parser.parse_args(argv)

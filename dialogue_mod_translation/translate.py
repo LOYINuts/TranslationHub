@@ -4,12 +4,16 @@
   uv run dialogue_mod_translation/translate.py stats <xml-or-dir>
   uv run dialogue_mod_translation/translate.py pending <xml> [--fill-bdd]
   uv run dialogue_mod_translation/translate.py apply <pending.json>
+  uv run dialogue_mod_translation/translate.py bdd [--check|--normalize]
   uv run dialogue_mod_translation/translate.py --self-check
 """
 
 from __future__ import annotations
 
+import contextlib
+import csv
 import html
+import io
 import json
 import os
 import re
@@ -162,29 +166,145 @@ def validate_translation(original: str, traduit: str) -> None:
     if issues:
         raise ValueError(f"{'; '.join(issues)}: {original!r} -> {traduit!r}")
 
+BDD_HEADER = ("grup", "original", "traduit")
+
+
+def bdd_blocks(path: str = BDD_PATH):
+    """Yield the raw text of every TSV record. A record ends at a newline outside quotes."""
+    buffer: list[str] = []
+    quotes = 0
+    with open(path, encoding="utf-8", newline="") as handle:
+        for line in handle:
+            buffer.append(line)
+            quotes += line.count('"')
+            if quotes % 2 == 0:
+                yield "".join(buffer)
+                buffer = []
+    if buffer:
+        yield "".join(buffer)
+
+
+def bdd_fields(block: str) -> list[str]:
+    """Split one TSV record into columns, honouring quoted fields."""
+    row = next(csv.reader(io.StringIO(block), delimiter="\t", quotechar='"', doublequote=True), [])
+    # A CRLF checkout would otherwise leave \r\n inside a quoted field, and no XML
+    # ORIGINAL (where the XML parser normalises newlines) would ever match that key.
+    return [field.replace("\r\n", "\n") for field in row]
+
+
+def parse_bdd_block(block: str) -> tuple[str, str, str] | None:
+    """Parse one record. None when it is not 3 columns or carries an unusable grup."""
+    row = bdd_fields(block)
+    if len(row) != 3:
+        return None
+    grup, original, traduit = row
+    if not GRUP_RE.match(grup) or not original or not traduit:
+        return None
+    return grup, original, traduit
+
+
+def iter_bdd_blocks(path: str = BDD_PATH):
+    """Yield (parsed record or None, raw block) for every record, header excluded.
+
+    ponytail: csv handles the quoted multi-line BOOK/INFO text that the old
+    line-and-tab splitter threw away.
+    """
+    for position, block in enumerate(bdd_blocks(path)):
+        if position == 0:
+            if tuple(bdd_fields(block)) != BDD_HEADER:
+                raise ValueError(f"bdd.tsv 表头不是 {BDD_HEADER}: {block[:60]!r}")
+            continue
+        yield parse_bdd_block(block), block
+
+
 def load_bdd(path: str = BDD_PATH) -> dict[tuple[str, str], list[str]]:
-    """(grup, original) -> unique traduit list. Skip malformed/multiline TSV rows."""
+    """(grup, original) -> unique traduit list, in file order."""
     index: dict[tuple[str, str], list[str]] = {}
     seen: dict[tuple[str, str], set[str]] = defaultdict(set)
-    with open(path, encoding="utf-8") as f:
-        next(f, None)
-        for line in f:
-            parts = line.rstrip("\n").split("\t")
-            if len(parts) != 3:
-                continue
-            grup, original, traduit = parts
-            if not GRUP_RE.match(grup) or not original or not traduit:
-                continue
-            key = (grup, original)
-            if traduit in seen[key]:
-                continue
-            seen[key].add(traduit)
-            index.setdefault(key, []).append(traduit)
+    for row, _ in iter_bdd_blocks(path):
+        if row is None:
+            continue
+        grup, original, traduit = row
+        key = (grup, original)
+        if traduit in seen[key]:
+            continue
+        seen[key].add(traduit)
+        index.setdefault(key, []).append(traduit)
     return index
 
 
 def bdd_hits(index: dict[tuple[str, str], list[str]], grup: str, original: str) -> list[str]:
     return list(index.get((grup, original), ()))
+
+
+def scan_bdd(path: str = BDD_PATH) -> dict[str, int]:
+    """Summarize bdd.tsv: records, duplicates, ambiguous keys, multi-line records."""
+    records = malformed = duplicates = multi_line = 0
+    triples: set[tuple[str, str, str]] = set()
+    variants: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for row, block in iter_bdd_blocks(path):
+        if row is None:
+            malformed += 1
+            continue
+        records += 1
+        if row in triples:
+            duplicates += 1
+        else:
+            triples.add(row)
+        variants[(row[0], row[1])].add(row[2])
+        if block.count("\n") > 1:
+            multi_line += 1
+    ambiguous = sum(1 for values in variants.values() if len(values) > 1)
+    return {
+        "records": records,
+        "malformed": malformed,
+        "unique": len(triples),
+        "duplicates": duplicates,
+        "keys": len(variants),
+        "ambiguous": ambiguous,
+        "fillable": len(variants) - ambiguous,
+        "multi_line": multi_line,
+    }
+
+
+def cmd_bdd(path: str = BDD_PATH, check: bool = False, normalize: bool = False) -> int:
+    """Report bdd.tsv health, or drop exact duplicate records when --normalize is given."""
+    summary = scan_bdd(path)
+    print(f"记录 {summary['records']} | 唯一 {summary['unique']} | 重复 {summary['duplicates']}"
+          f" | 畸形 {summary['malformed']}")
+    print(
+        f"键 {summary['keys']} | 可自动填充 {summary['fillable']} | 多义键 {summary['ambiguous']}"
+        f" | 多行记录 {summary['multi_line']}"
+    )
+    if check:
+        if summary["duplicates"] or summary["malformed"]:
+            print("需要规范化：uv run dialogue_mod_translation/translate.py bdd --normalize")
+            return 1
+        return 0
+    if not normalize:
+        return 0
+    if not summary["duplicates"]:
+        print("无重复记录")
+        return 0
+    kept: list[str] = []
+    seen: set[tuple[str, str, str]] = set()
+    dropped = 0
+    for position, block in enumerate(bdd_blocks(path)):
+        if position == 0:
+            kept.append(block)
+            continue
+        row = parse_bdd_block(block)
+        if row is None:
+            kept.append(block)  # ponytail: keep what we cannot classify, --check reports it
+        elif row in seen:
+            dropped += 1
+        else:
+            seen.add(row)
+            kept.append(block)
+    with open(path, "wb") as handle:
+        handle.write("".join(kept).encode("utf-8"))
+    print(f"已删除 {dropped} 条重复记录（保留记录逐字节未变）")
+    return 0
 
 
 def pending_blocks(xml: str, grups: set[str]) -> list[tuple[str, dict]]:
@@ -331,8 +451,12 @@ def cmd_pending(xml_path: str, grups: set[str], do_fill: bool, out_path: str) ->
             }
         )
     merge_old_traduit(items, out_path)
+    try:
+        xml_ref = os.path.relpath(xml_path, ROOT)
+    except ValueError:  # 不同盘符：relpath 无解，直接存绝对路径
+        xml_ref = os.path.abspath(xml_path)
     payload = {
-        "xml": os.path.relpath(xml_path, ROOT).replace("\\", "/"),
+        "xml": xml_ref.replace("\\", "/"),
         "grups": sorted(grups),
         "items": items,
         "groups": grouped_items(items),
@@ -411,6 +535,42 @@ def _self_check() -> None:
             write_xml(target, sample, has_bom)
             text, seen_bom = read_xml(target)
             assert seen_bom is has_bom and text == sample
+
+    # bdd.tsv 的字段可带引号并跨行；旧的逐行拆分会丢掉这些记录。
+    with tempfile.TemporaryDirectory() as tmp:
+        bdd = os.path.join(tmp, "bdd.tsv")
+        with open(bdd, "w", encoding="utf-8", newline="") as handle:
+            handle.write("grup\toriginal\ttraduit\n")
+            handle.write('BOOK\t"line one\n\nline two"\t"段落一\n\n段落二"\n')
+            handle.write("ACTI\tButton\t按钮\n")
+            handle.write("ACTI\tButton\t按钮\n")
+        index = load_bdd(bdd)
+        assert index[("BOOK", "line one\n\nline two")] == ["段落一\n\n段落二"], index
+        assert index[("ACTI", "Button")] == ["按钮"]
+        summary = scan_bdd(bdd)
+        assert summary == {
+            "records": 3, "malformed": 0, "unique": 2, "duplicates": 1,
+            "keys": 2, "ambiguous": 0, "fillable": 2, "multi_line": 1,
+        }, summary
+        with contextlib.redirect_stdout(io.StringIO()):
+            assert cmd_bdd(bdd, check=True) == 1
+            assert cmd_bdd(bdd, normalize=True) == 0
+            assert cmd_bdd(bdd, check=True) == 0
+        assert scan_bdd(bdd)["duplicates"] == 0
+        with open(bdd, encoding="utf-8", newline="") as handle:
+            assert handle.read().endswith("ACTI\tButton\t按钮\n")
+        # CRLF checkout：键必须与 LF 一致，且规范化不得改写换行
+        crlf = os.path.join(tmp, "crlf.tsv")
+        sample_crlf = 'grup\toriginal\ttraduit\nBOOK\t"line one\n\nline two"\t"段落一\n\n段落二"\nACTI\tButton\t按钮\n'
+        with open(crlf, "wb") as handle:
+            handle.write(sample_crlf.replace("\n", "\r\n").encode("utf-8"))
+        assert load_bdd(crlf) == {("BOOK", "line one\n\nline two"): ["段落一\n\n段落二"], ("ACTI", "Button"): ["按钮"]}
+        with open(crlf, "rb") as handle:
+            before = handle.read()
+        with contextlib.redirect_stdout(io.StringIO()):
+            assert cmd_bdd(crlf, normalize=True) == 0
+        with open(crlf, "rb") as handle:
+            assert handle.read() == before
     print("self-check OK")
 
 
@@ -425,6 +585,9 @@ def main(argv: list[str]) -> None:
     if "--self-check" in argv:
         _self_check()
         return
+    if len(argv) >= 2 and argv[1] == "bdd":
+        path = argv[argv.index("--bdd") + 1] if "--bdd" in argv else BDD_PATH
+        sys.exit(cmd_bdd(path, check="--check" in argv, normalize="--normalize" in argv))
     if len(argv) < 3:
         print(__doc__.strip(), file=sys.stderr)
         sys.exit(2)
