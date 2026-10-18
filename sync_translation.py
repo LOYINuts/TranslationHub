@@ -8,40 +8,41 @@
   uv run sync_translation.py --all --check                # 检查所有模组
 """
 
-import json
-import os
 import glob
+import json
 import logging
-log = logging.getLogger(__name__)  # ponytail: named logger per spec
-from typing import Optional
+import os
+import re
+import xml.etree.ElementTree as ET
 
-from locale_utils import read_lines, split_line, load_json
-from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
 from build_all import flatten_json_values
-setup_cli_logging()  # ponytail: single logging setup
+from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
+from locale_utils import load_json, read_lines, read_text, split_line
+
+log = logging.getLogger(__name__)  # ponytail: named logger per spec
 
 
-def extract_keys_from_source(source_path: str, sep: Optional[str]) -> dict[str, str]:
+def extract_keys_from_source(source_path: str, sep: str | None) -> dict[str, str]:
     """从英文源文件提取所有 key=value 对。
-    
+
     返回: {完整键: 英文值} 字典
     """
     lines = read_lines(source_path)
     keys = {}
     current_section = ""
-    
+
     for line in lines:
         stripped = line.strip()
-        
+
         # 跟踪节
         if stripped.startswith("[") and stripped.endswith("]"):
             current_section = stripped[1:-1]
             continue
-        
+
         # 跳过注释
         if stripped.startswith(";"):
             continue
-        
+
         # 解析键值对
         key, val = split_line(line, sep)
         if key is not None and val is not None:
@@ -52,13 +53,13 @@ def extract_keys_from_source(source_path: str, sep: Optional[str]) -> dict[str, 
             else:
                 full_key = lookup_key
             keys[full_key] = val.strip()
-    
+
     return keys
 
 
 def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, str], set[str]]:
     """找出 translations.json 中缺失的键。
-    
+
     返回: (缺失的 {key: 英文值}, translations.json 中存在的键集合)
     """
     if glob.has_magic(mod_config.source):
@@ -95,7 +96,7 @@ def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, s
     trans_path = os.path.join(mod_path, "translations.json")
     translations = load_json(trans_path) if os.path.exists(trans_path) else {}
     if not isinstance(translations, dict):
-        raise ValueError(f"翻译源必须是 JSON 对象: {trans_path}")
+        raise TypeError(f"翻译源必须是 JSON 对象: {trans_path}")
 
     trans_keys = set(translations)
     missing = {}
@@ -119,8 +120,6 @@ def find_missing_json(jcfg: ModJson, mod_path: str):
 
 
 def find_missing_qt(qcfg: ModQt, mod_path: str):
-    import xml.etree.ElementTree as ET
-    from locale_utils import read_text
     root = ET.fromstring(read_text(os.path.join(mod_path, qcfg.source)))
     msgs = ["".join(m.find("source").itertext()) for m in root.findall(".//message") if m.find("source") is not None]
     trans_path = os.path.join(mod_path, "translations.json")
@@ -130,7 +129,6 @@ def find_missing_qt(qcfg: ModQt, mod_path: str):
 
 def _set_flat_path(root, flat_key: str, value) -> None:
     """Set dotted/list flat key into nested dict+list."""
-    import re  # stdlib; ponytail: ceil=DeathMessages now registered, no manual step
     node = root
     parts = flat_key.split(".")
     for i, part in enumerate(parts):
@@ -223,16 +221,17 @@ def process_task(kind: str, cfg, mod_path: str, check_only: bool, interactive: b
 
 def main():
     import argparse
-    
+
     parser = argparse.ArgumentParser(description="同步翻译工具")
     parser.add_argument("mods", nargs="*", help="模组名称（支持短名或完整路径）")
     parser.add_argument("--all", action="store_true", help="处理所有模组")
     parser.add_argument("--check", action="store_true", help="仅检查，不修改")
     parser.add_argument("--sync", action="store_true", help="自动同步（英文占位）")
     parser.add_argument("--interactive", action="store_true", help="交互式输入翻译")
-    
+
     args = parser.parse_args()
-    
+    setup_cli_logging()  # ponytail: logging set up in main, not at import
+
     root_dir = os.path.dirname(os.path.abspath(__file__))
     line_configs, json_configs, qt_configs = load_repo_configs(root_dir)
     tasks = [("line", c) for c in line_configs] + [("json", c) for c in json_configs] + [("qt", c) for c in qt_configs]

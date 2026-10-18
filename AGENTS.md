@@ -3,10 +3,14 @@
 Run local gates in order. Any nonzero exit code means failure.
 
 ```bash
+uv run check_all.py                # all scripts' self-checks + sync + build + verify
 uv run sync_translation.py <mod> --check
 uv run build_all.py --dry-run <mod> && uv run build_all.py <mod>
 uv run verify_translation.py <mod>
 ```
+
+`check_all.py` is the one-shot gate for the whole repository. Run the individual
+commands for a single mod.
 
 For dialogue XML, use `translate.py` in this order: `stats → pending --fill-bdd → apply → stats`.
 

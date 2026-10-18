@@ -11,41 +11,37 @@
 支持 `line`、`json` 和单一共享的 `qt` 处理器。
 """
 
-import json
-import xml.etree.ElementTree as ET
-import os
-import glob
-from typing import Optional
-
-import logging
-log = logging.getLogger(__name__)  # ponytail: named logger per spec
 import argparse
+import glob
+import json
+import logging
+import os
+import tomllib
+import xml.etree.ElementTree as ET
+
+from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
 from locale_utils import (
+    WRITE_ENCODINGS,
+    load_json,
     read_lines,
     read_text,
-    write_utf16le_bom,
-    write_utf8_bom,
-    write_utf8,
-    split_line,
     resolve_key_with_section,
-    load_json,
+    split_line,
     translation_format_issues,
+    write_utf8,
+    write_utf8_bom,
+    write_utf16le_bom,
 )
 
-from config import setup_cli_logging
-setup_cli_logging()  # ponytail: single logging setup, stdout stays UTF-8
+log = logging.getLogger(__name__)  # ponytail: named logger per spec
 
 # ── 模组构建配置 ─────────────────────────────────────────────────────────────
-
-
-from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter
-
 # 模组配置从 mods.toml 加载，这些全局变量在 main() 中赋值
 MOD_CONFIGS: list[ModConfig] = []
 JSON_MODS: list = []
 QT_MODS: list[ModQt] = []
 
-# 写入器映射
+# 写入器映射，键必须与 locale_utils.WRITE_ENCODINGS 一致（_self_check 断言）
 WRITERS = {
     "utf16-le-bom": write_utf16le_bom,
     "utf-8-bom": write_utf8_bom,
@@ -65,8 +61,8 @@ def count_leaves(value):
 
 
 
-def render_line_one(cfg: ModConfig, root_dir: str) -> tuple[str, int]:
-    """Render one line-based mod without writing its output file."""
+def render_line_one(cfg: ModConfig, root_dir: str) -> tuple[str, int, set[str]]:
+    """Render one line-based mod without writing its output file. Returns used keys."""
     mod_path = os.path.join(root_dir, cfg.dir)
     trans_path = os.path.join(mod_path, "translations.json")
     src_path = os.path.join(mod_path, cfg.source)
@@ -78,6 +74,7 @@ def render_line_one(cfg: ModConfig, root_dir: str) -> tuple[str, int]:
     translations = load_json(trans_path)
     lines = read_lines(src_path)
     out_lines = []
+    used: set[str] = set()
     current_section = ""
     for line in lines:
         stripped = line.strip()
@@ -99,11 +96,12 @@ def render_line_one(cfg: ModConfig, root_dir: str) -> tuple[str, int]:
                 if format_issues:
                     raise ValueError(f"{cfg.dir} {lookup_key}: {'; '.join(format_issues)}")
                 out_lines.append(f"{key}{cfg.output_sep}{translated}")
+                used.add(resolved)
                 continue
         out_lines.append(line)
-    return "\r\n".join(out_lines) + "\r\n", len(translations)
+    return "\r\n".join(out_lines) + "\r\n", len(translations), used
 
-def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, str]], int]:
+def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, str]], int, set[str]]:
     """Render a configured line-file glob with file-scoped translation keys."""
     mod_path = os.path.join(root_dir, cfg.dir)
     trans_path = os.path.join(mod_path, "translations.json")
@@ -152,7 +150,7 @@ def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, st
     extra = set(translations) - used
     if extra:
         raise ValueError(f"Unused scoped translation keys: {sorted(extra)[:10]}")
-    return artifacts, count
+    return artifacts, count, used
 
 
 
@@ -162,13 +160,13 @@ def build_one(cfg: ModConfig, root_dir: str) -> int:
     if writer is None:
         raise ValueError(f"不支持的编码: {cfg.encoding}")
     if glob.has_magic(cfg.source):
-        artifacts, count = render_line_group(cfg, root_dir)
+        artifacts, count, _ = render_line_group(cfg, root_dir)
         for output_path, content in artifacts:
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             writer(output_path, content)
         log.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}/")
         return count
-    content, count = render_line_one(cfg, root_dir)
+    content, count, _ = render_line_one(cfg, root_dir)
     out_path = os.path.join(root_dir, cfg.dir, cfg.output)
     writer(out_path, content)
     log.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}")
@@ -208,7 +206,7 @@ def iter_json_string_pairs(source, translated, path=""):
             child_path = f"{path}.{key}" if path else key
             yield from iter_json_string_pairs(source[key], translated[key], child_path)
     elif isinstance(source, list) and isinstance(translated, list):
-        for index, (source_item, translated_item) in enumerate(zip(source, translated)):
+        for index, (source_item, translated_item) in enumerate(zip(source, translated, strict=False)):
             yield from iter_json_string_pairs(source_item, translated_item, f"{path}[{index}]")
     elif isinstance(source, str) and isinstance(translated, str):
         yield path, source, translated
@@ -222,12 +220,12 @@ def translation_data(jcfg: ModJson, root_dir: str):
         try:
             data = data[jcfg.translation_section]
         except (KeyError, TypeError):
-            raise ValueError(f"Missing translation section: {jcfg.translation_section}")
+            raise ValueError(f"Missing translation section: {jcfg.translation_section}") from None
     return data
 
 
-def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int]:
-    """Render one JSON mod without writing its output file."""
+def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int, set[str]]:
+    """Render one JSON mod without writing its output file. Returns used keys."""
     mod_path = os.path.join(root_dir, jcfg.dir)
     trans_path = os.path.join(mod_path, "translations.json")
     src_path = os.path.join(mod_path, jcfg.source)
@@ -249,19 +247,20 @@ def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int]:
         format_issues = translation_format_issues(source_value, translated_value)
         if format_issues:
             raise ValueError(f"{jcfg.dir} {path}: {'; '.join(format_issues)}")
-    return translated_data, count_leaves(translations)
+    used = set(flat_translations) & set(source_flat)
+    return translated_data, count_leaves(translations), used
 
 
 def build_json_one(jcfg: ModJson, root_dir: str) -> int:
     """Build one JSON mod and return its translation count."""
-    translated_data, count = render_json_one(jcfg, root_dir)
+    translated_data, count, _ = render_json_one(jcfg, root_dir)
     out_path = os.path.join(root_dir, jcfg.dir, jcfg.output)
     with open(out_path, "w", encoding="utf-8", newline="\n") as file:
         json.dump(translated_data, file, ensure_ascii=False, indent=2)
         file.write("\n")
     log.info(f"[OK] {jcfg.dir}: {count} 条 -> {jcfg.output}")
     return count
-def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int]:
+def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int, set[str]]:
     mod_path = os.path.join(root_dir, config.dir)
     source_path = os.path.join(mod_path, config.source)
     translation_path = os.path.join(mod_path, "translations.json")
@@ -298,11 +297,11 @@ def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int]:
     newline = "\r\n" if "\r\n" in source_text else "\n"
     body = ET.tostring(root, encoding="unicode", short_empty_elements=True)
     body = body.replace("\r\n", "\n").replace("\n", newline)
-    return source_text[:start] + body + source_text[end:], len(translations)
+    return source_text[:start] + body + source_text[end:], len(translations), used
 
 
 def build_qt_one(config: ModQt, root_dir: str) -> int:
-    content, count = render_qt_one(config, root_dir)
+    content, count, _ = render_qt_one(config, root_dir)
     output_path = os.path.join(root_dir, config.dir, config.output)
     write_utf8(output_path, content)
     log.info(f"[OK] {config.dir}: {count} 条 -> {config.output}")
@@ -316,14 +315,14 @@ def iter_build_tasks():
     yield from ((cfg, "qt") for cfg in QT_MODS)
 
 
-def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
+def build_all(root_dir: str, filters: set[str] | None = None) -> dict:
     """构建所有（或指定）模组，返回统计信息。"""
     # 计算总数用于进度显示
     all_mods = list(iter_build_tasks())
-    
+
     if filters:
         all_mods = [(cfg, typ) for cfg, typ in all_mods if matches_filter(cfg.dir, filters)]
-    
+
     total_count = len(all_mods)
     succeeded = []
     failed = []
@@ -331,7 +330,7 @@ def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
     total_entries = 0
     for current, (cfg, mod_type) in enumerate(all_mods, 1):
         log.info(f"[{current}/{total_count}] {cfg.dir}")
-        
+
         try:
             if mod_type == "line":
                 count = build_one(cfg, root_dir)
@@ -339,16 +338,16 @@ def build_all(root_dir: str, filters: Optional[set[str]] = None) -> dict:
                 count = build_json_one(cfg, root_dir)
             elif mod_type == "qt":
                 count = build_qt_one(cfg, root_dir)
-            
+
             if count > 0:
                 succeeded.append(cfg.dir)
                 total_entries += count
             else:
                 skipped.append(cfg.dir)
-        except Exception as e:
+        except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as e:
             log.error(f"构建失败 {cfg.dir}: {e}")
             failed.append((cfg.dir, str(e)))
-    
+
     return {
         "succeeded": succeeded,
         "failed": failed,
@@ -367,7 +366,7 @@ def pad_cjk(s: str, width: int) -> str:
     return s + " " * max(0, width - display_width(s))
 
 
-def _load_translation_count(path: str) -> Optional[int]:
+def _load_translation_count(path: str) -> int | None:
     """读取 translations.json 并统计条目数（嵌套 JSON 按叶子计数）。"""
     if not os.path.exists(path):
         return None
@@ -381,7 +380,7 @@ def show_stats(root_dir: str):
     print(f"{pad_cjk('模组', name_w)}{pad_cjk('条目数', 8)} 类型")
     print("-" * 80)
     total = 0
-    
+
     seen: set[str] = set()
     for cfg, mod_type in iter_build_tasks():
         if cfg.dir in seen:
@@ -397,6 +396,7 @@ def show_stats(root_dir: str):
     print(f"{pad_cjk('总计', name_w)}{total:<8}")
 
 def _self_check() -> None:
+    assert set(WRITERS) == set(WRITE_ENCODINGS), "WRITERS 与 WRITE_ENCODINGS 不同步"
     source = {"section": {"label": "nested"}, "label": "root"}
     translations = flatten_json_values({"section": {"label": "嵌套"}, "label": "根"})
     assert apply_translations_to_json(source, translations) == {
@@ -427,9 +427,9 @@ def main():
     parser.add_argument('--dry-run', action='store_true', help='预览要构建的模组，不实际执行')
     parser.add_argument('--verbose', '-v', action='store_true', help='显示详细日志')
     parser.add_argument('--self-check', action='store_true', help='运行构建逻辑自检')
-    
+
     args = parser.parse_args()
-    
+
     if args.self_check:
         _self_check()
         return 0
@@ -437,23 +437,23 @@ def main():
     setup_cli_logging(verbose=args.verbose)
 
     root = os.path.dirname(os.path.abspath(__file__))
-    
+
     # 加载配置 ponytail: single loader in config.py
     global MOD_CONFIGS, JSON_MODS, QT_MODS
     try:
         MOD_CONFIGS, JSON_MODS, QT_MODS = load_repo_configs(root)
         log.info(f"从 mods.toml 加载配置：{len(MOD_CONFIGS)} line + {len(JSON_MODS)} json + {len(QT_MODS)} qt")
-    except Exception as e:
+    except (OSError, ValueError, tomllib.TOMLDecodeError) as e:
         log.error(f"无法加载 mods.toml: {e}")
         return 1
     # 统计模式
     if args.stats:
         show_stats(root)
         return 0
-    
+
     # 过滤器
     filters = set(args.mods) if args.mods else None
-    
+
     if filters and not any(matches_filter(cfg.dir, filters) for cfg, _ in iter_build_tasks()):
         log.error(f"未找到模组: {', '.join(sorted(filters))}")
         return 2
@@ -461,18 +461,18 @@ def main():
     # 预览模式
     if args.dry_run:
         all_mods = list(iter_build_tasks())
-        
+
         if filters:
             all_mods = [(cfg, typ) for cfg, typ in all_mods if matches_filter(cfg.dir, filters)]
-        
+
         print(f"将构建 {len(all_mods)} 个模组:")
         for cfg, mod_type in all_mods:
             print(f"  - {cfg.dir} ({mod_type})")
         return 0
-    
+
     # 执行构建
     result = build_all(root, filters)
-    
+
     # 显示详细摘要
     print("\n" + "=" * 60)
     print("构建完成")
@@ -481,19 +481,19 @@ def main():
     print(f"失败: {len(result['failed'])}")
     print(f"跳过: {len(result['skipped'])}")
     print(f"总翻译条目: {result['total_entries']}")
-    
+
     if result['failed']:
         print("\n失败模组:")
         for mod_dir, error in result['failed']:
             print(f"  - {mod_dir}: {error}")
-    
+
     if result['skipped']:
         print("\n跳过模组 (无翻译或文件缺失):")
         for mod_dir in result['skipped'][:5]:
             print(f"  - {mod_dir}")
         if len(result['skipped']) > 5:
             print(f"  ... 及其他 {len(result['skipped']) - 5} 个")
-    
+
     print("=" * 60)
     return 1 if result["failed"] else 0
 

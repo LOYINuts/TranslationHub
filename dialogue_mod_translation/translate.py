@@ -14,7 +14,18 @@ import json
 import os
 import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from locale_utils import (
+    BOM_UTF8,
+    force_utf8_stdout,
+    translation_format_issues,
+)
+from locale_utils import (
+    format_tokens as _shared_format_tokens,
+)
 
 DEFAULT_GRUPS = ("BOOK", "INFO", "DIAL", "NPC_")
 DONE_STATUS = "90"
@@ -25,12 +36,25 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BDD_PATH = os.path.join(ROOT, "bdd.tsv")
 
 
-def _utf8_stdio() -> None:
-    if hasattr(sys.stdout, "buffer"):
-        import io
+def read_xml(path: str) -> tuple[str, bool]:
+    """Read a UTF-8 xTranslator XML and report whether it had a BOM."""
+    with open(path, "rb") as handle:
+        raw = handle.read()
+    if raw[:2] in (b"\xff\xfe", b"\xfe\xff"):
+        raise ValueError(f"xTranslator XML 应为 UTF-8，实际为 UTF-16: {path}")
+    has_bom = raw.startswith(BOM_UTF8)
+    return (raw[len(BOM_UTF8):] if has_bom else raw).decode("utf-8"), has_bom
 
-        if not (isinstance(sys.stdout, io.TextIOWrapper) and (sys.stdout.encoding or "").lower() == "utf-8"):
-            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
+def write_xml(path: str, text: str, has_bom: bool) -> None:
+    """Write the XML back with its original BOM state. ponytail: preserve the xTranslator byte shape."""
+    payload = text.encode("utf-8")
+    with open(path, "wb") as handle:
+        handle.write((BOM_UTF8 + payload) if has_bom else payload)
+
+
+def _utf8_stdio() -> None:
+    force_utf8_stdout()
 
 
 def xml_escape(s: str) -> str:
@@ -74,7 +98,7 @@ def parse_esp(block: str) -> dict:
         "champ": get_tag(block, "CHAMP"),
         "original": html.unescape(original_raw),
         "traduit": html.unescape(traduit_raw),
-        "status": get_tag(block, "STATUS"),
+        "status": get_tag(block, "STATUS").strip(),
         "emotion": emotion,
     }
 
@@ -123,22 +147,26 @@ def grouped_items(items: list[dict]) -> list[dict]:
     return list(groups.values())
 
 
-PLACEHOLDER_RE = re.compile(r"%[A-Za-z]|\\[A-Za-z]+|\$[A-Za-z_][A-Za-z0-9_]*|\{[^{}]+\}|\[[^\]]+\]|<[^>]+>")
+# 共享 token 提取（locale_utils）+ XML 转义和裸尖括号，后者是旧校验器的覆盖面
+_EXTRA_TOKEN_RE = re.compile(r"\\[A-Za-z]+|<[^>]+>")
 
 
 def format_tokens(text: str) -> list[str]:
-    return sorted(PLACEHOLDER_RE.findall(text))
+    return _shared_format_tokens(text) + _EXTRA_TOKEN_RE.findall(text)
 
 
 def validate_translation(original: str, traduit: str) -> None:
-    if format_tokens(original) != format_tokens(traduit):
-        raise ValueError(f"placeholder/tag mismatch: {original!r} -> {traduit!r}")
+    issues = translation_format_issues(original, traduit)
+    if Counter(format_tokens(original)) != Counter(format_tokens(traduit)):
+        issues.append("placeholder/tag mismatch")
+    if issues:
+        raise ValueError(f"{'; '.join(issues)}: {original!r} -> {traduit!r}")
 
 def load_bdd(path: str = BDD_PATH) -> dict[tuple[str, str], list[str]]:
     """(grup, original) -> unique traduit list. Skip malformed/multiline TSV rows."""
     index: dict[tuple[str, str], list[str]] = {}
     seen: dict[tuple[str, str], set[str]] = defaultdict(set)
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, encoding="utf-8") as f:
         next(f, None)
         for line in f:
             parts = line.rstrip("\n").split("\t")
@@ -266,7 +294,7 @@ def pending_path_for(xml_path: str) -> str:
 def merge_old_traduit(items: list[dict], old_path: str) -> None:
     if not os.path.exists(old_path):
         return
-    with open(old_path, "r", encoding="utf-8") as f:
+    with open(old_path, encoding="utf-8") as f:
         old = json.load(f)
     prev = {item_key(it): it.get("traduit", "") for it in old.get("items", [])}
     prev_groups = {group_key(group): group.get("traduit", "") for group in old.get("groups", [])}
@@ -276,13 +304,12 @@ def merge_old_traduit(items: list[dict], old_path: str) -> None:
             item["traduit"] = text
 
 def cmd_pending(xml_path: str, grups: set[str], do_fill: bool, out_path: str) -> None:
-    xml = open(xml_path, encoding="utf-8-sig", newline="").read()
+    xml, has_bom = read_xml(xml_path)
     filled = 0
     if do_fill:
         index = load_bdd()
         xml, filled = fill_bdd(xml, index, grups)
-        with open(xml_path, "w", encoding="utf-8", newline="") as f:
-            f.write(xml)
+        write_xml(xml_path, xml, has_bom)
         print(f"bdd 唯一命中已写入 {filled} 条")
         index_for_hits = index
     else:
@@ -315,18 +342,20 @@ def cmd_pending(xml_path: str, grups: set[str], do_fill: bool, out_path: str) ->
         f.write("\n")
     empty = sum(1 for it in items if not it["traduit"])
     group_empty = sum(1 for group in payload["groups"] if not group["traduit"])
-    print(f"pending {len(items)} 条，去重为 {len(payload['groups'])} 组（其中 {empty} 条 / {group_empty} 组无译文）-> {out_path}")
+    print(
+        f"pending {len(items)} 条，去重为 {len(payload['groups'])} 组"
+        f"（其中 {empty} 条 / {group_empty} 组无译文）-> {out_path}"
+    )
 
 def cmd_apply(pending_file: str) -> None:
-    with open(pending_file, "r", encoding="utf-8") as f:
+    with open(pending_file, encoding="utf-8") as f:
         payload = json.load(f)
     xml_path = payload["xml"]
     if not os.path.isabs(xml_path):
         xml_path = os.path.join(ROOT, xml_path)
-    xml = open(xml_path, encoding="utf-8-sig", newline="").read()
+    xml, has_bom = read_xml(xml_path)
     xml, n = apply_pending(xml, payload.get("items", []), payload.get("groups", []))
-    with open(xml_path, "w", encoding="utf-8", newline="") as f:
-        f.write(xml)
+    write_xml(xml_path, xml, has_bom)
     left = sum(1 for _, rec in pending_blocks(xml, set(payload.get("grups", DEFAULT_GRUPS))))
     print(f"写入 {n} 条 -> {xml_path}；剩余待译 {left}")
 
@@ -373,6 +402,15 @@ def _self_check() -> None:
         "id": "00000001", "champ": "FULL", "original": "Hello & Hi", "traduit": "旧译",
     }], groups)
     assert n3 == 1 and "<TRADUIT>你好</TRADUIT>" in applied_group
+
+    import tempfile
+
+    for has_bom in (False, True):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = os.path.join(tmp, "t.xml")
+            write_xml(target, sample, has_bom)
+            text, seen_bom = read_xml(target)
+            assert seen_bom is has_bom and text == sample
     print("self-check OK")
 
 
@@ -384,7 +422,7 @@ def parse_grups(arg: str | None) -> set[str]:
 
 def main(argv: list[str]) -> None:
     _utf8_stdio()
-    if "--self-check" in argv or (len(argv) > 1 and argv[1] == "--self-check"):
+    if "--self-check" in argv:
         _self_check()
         return
     if len(argv) < 3:
@@ -400,7 +438,7 @@ def main(argv: list[str]) -> None:
         for path in paths:
             if len(paths) > 1 or os.path.isdir(argv[2]):
                 print(f"\n## {path}")
-            stats(open(path, encoding="utf-8-sig", newline="").read(), grups)
+            stats(read_xml(path)[0], grups)
         return
     if cmd == "pending":
         xml_path = argv[2]

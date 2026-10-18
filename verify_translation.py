@@ -14,23 +14,27 @@
   - Eslifer Qt TS 结构和占位符
 """
 
-import json
-import os
 import glob
-import xml.etree.ElementTree as ET
+import json
 import logging
-log = logging.getLogger(__name__)  # ponytail: named logger per spec
+import os
+import xml.etree.ElementTree as ET
 
-from locale_utils import read_text, load_json
-from build_all import flatten_json_values, render_json_one, render_line_group, render_line_one, render_qt_one, translation_data
-from config import setup_cli_logging
-setup_cli_logging()  # ponytail: single logging setup
-
+from build_all import (
+    flatten_json_values,
+    render_json_one,
+    render_line_group,
+    render_line_one,
+    render_qt_one,
+    translation_data,
+)
 
 # ── 从 config.py 加载配置 ─────────────────────────────────────────────────
+from config import ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
+from locale_utils import load_json, read_text
+from sync_translation import find_missing_json, find_missing_keys, find_missing_qt
 
-from config import ModJson, ModQt, load_repo_configs, matches_filter
-from sync_translation import find_missing_keys, find_missing_json, find_missing_qt
+log = logging.getLogger(__name__)  # ponytail: named logger per spec
 
 # ── 校验函数 ─────────────────────────────────────────────────────────────────
 
@@ -42,7 +46,7 @@ def verify_line_single(config, root: str) -> list[str]:
         return [f"[错误] 目录不存在: {mod_path}"]
     try:
         missing, _ = find_missing_keys(config, mod_path)
-        expected, _ = render_line_one(config, root)
+        expected, _, _ = render_line_one(config, root)
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] 无法重建行文件: {exc}"]
     issues = []
@@ -59,7 +63,7 @@ def verify_line_single(config, root: str) -> list[str]:
 def verify_line_group(config, root: str) -> list[str]:
     """Verify glob line task via render rebuild only."""
     try:
-        artifacts, _ = render_line_group(config, root)
+        artifacts, _, _ = render_line_group(config, root)
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] 无法重建行文件: {exc}"]
     expected = {os.path.normcase(path): content for path, content in artifacts}
@@ -70,10 +74,11 @@ def verify_line_group(config, root: str) -> list[str]:
         elif read_text(path) != content:
             issues.append(f"[过期] {path}")
     output_root = os.path.join(root, config.dir, config.output)
+    expected_suffixes = {os.path.splitext(path)[1].lower() for path in expected}
     for dirpath, _, filenames in os.walk(output_root):
         for name in filenames:
             path = os.path.join(dirpath, name)
-            if name.lower().endswith(".ini") and os.path.normcase(path) not in expected:
+            if os.path.splitext(name)[1].lower() in expected_suffixes and os.path.normcase(path) not in expected:
                 issues.append(f"[多余] {path}")
     return issues or ["[OK] 全部检查通过"]
 
@@ -88,7 +93,7 @@ def verify_json_mod(mod_config, root: str) -> list[str]:
     mod_path = os.path.join(root, mod_config.dir)
     try:
         missing, _ = find_missing_json(mod_config, mod_path)
-        expected, _ = render_json_one(mod_config, root)
+        expected, _, _ = render_json_one(mod_config, root)
         actual = load_json(os.path.join(mod_path, mod_config.output))
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] JSON 无法验证: {exc}"]
@@ -100,31 +105,61 @@ def verify_json_mod(mod_config, root: str) -> list[str]:
     return issues or ["[OK] 全部检查通过"]
 
 
-def verify_json_dir_extra(all_json: list, root: str, filters) -> list[str]:
-    """One extra-key pass per dir for shared translations.json. Runs only on full verify."""
-    seen: dict[str, list] = {}
-    for cfg in all_json:
-        seen.setdefault(cfg.dir, []).append(cfg)
-    issues = []
-    for mod_dir, group in sorted(seen.items()):
+def declared_keys(config, mod_type: str, root: str) -> set[str]:
+    """Translation keys a config declares. Mirrors translation_data for json sections."""
+    translations = load_json(os.path.join(root, config.dir, "translations.json"))
+    if mod_type != "json":
+        return set(translations)
+    return set(flatten_json_values(translation_data(config, root)))
+
+
+def used_keys(config, mod_type: str, root: str) -> set[str]:
+    """Keys the render actually consumed."""
+    if mod_type == "line":
+        if glob.has_magic(config.source):
+            return render_line_group(config, root)[2]
+        return render_line_one(config, root)[2]
+    if mod_type == "json":
+        return render_json_one(config, root)[2]
+    return render_qt_one(config, root)[2]
+
+
+def unconsumed_keys(declared: set[str], used: set[str]) -> list[str]:
+    """Declared keys that no render consumed. Container paths stay legal when a child key is used."""
+    containers: set[str] = set()
+    for key in used:
+        for sep in (".", "["):
+            index = key.find(sep)
+            while index != -1:
+                containers.add(key[:index])
+                index = key.find(sep, index + 1)
+    return sorted(declared - used - containers)
+
+
+def verify_dir_extra_keys(tasks: list, root: str, filters) -> list[str]:
+    """Flag translation keys no config in the same dir consumes.
+
+    ponytail: one union per dir, so a shared translations.json stays legal.
+    """
+    usage: dict[str, tuple[set[str], set[str]]] = {}
+    for mod_dir, mod_type, config in tasks:
         if filters and not matches_filter(mod_dir, filters):
             continue
-        if len(group) < 2:
-            continue
-        mod_path = os.path.join(root, mod_dir)
         try:
-            translated_keys: set[str] = set()
-            want: set[str] = set()
-            for cfg in group:
-                translated_keys.update(flatten_json_values(translation_data(cfg, root)))
-                src = flatten_json_values(load_json(os.path.join(mod_path, cfg.source)))
-                want.update(k for k, v in src.items() if isinstance(v, str))
-        except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
-            issues.append(f"[错误] {mod_dir}: {exc}")
+            declared = declared_keys(config, mod_type, root)
+            used = used_keys(config, mod_type, root)
+        except (OSError, ValueError, KeyError, TypeError,
+                json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
+            log.debug(f"{mod_dir} ({mod_type}) 多余键检查跳过: {exc}")
             continue
-        extra = sorted(translated_keys - want)
+        acc_declared, acc_used = usage.setdefault(mod_dir, (set(), set()))
+        acc_declared |= declared
+        acc_used |= used
+    issues = []
+    for mod_dir, (declared, used) in sorted(usage.items()):
+        extra = unconsumed_keys(declared, used)
         if extra:
-            issues.append(f"[多余] {mod_dir}: {len(extra)} 个键：{', '.join(extra[:5])}")
+            issues.append(f"[多余] {mod_dir}: {len(extra)} 个未使用键：{', '.join(extra[:5])}")
     return issues
 
 
@@ -135,7 +170,7 @@ def verify_qt_ts(config: ModQt, root: str) -> list[str]:
     mod_path = os.path.join(root, config.dir)
     try:
         missing, _ = find_missing_qt(config, mod_path)
-        expected, _ = render_qt_one(config, root)
+        expected, _, _ = render_qt_one(config, root)
         actual = read_text(os.path.join(mod_path, config.output))
     except (OSError, ET.ParseError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] Qt TS 无法验证: {exc}"]
@@ -147,7 +182,9 @@ def verify_qt_ts(config: ModQt, root: str) -> list[str]:
     return issues or ["[OK] 全部检查通过"]
 def find_unregistered_translation_dirs(root: str, registered_dirs: set[str]) -> list[str]:
     """Find translation sources without a mods.toml entry."""
-    normalize = lambda path: os.path.normcase(os.path.normpath(path))
+    def normalize(path: str) -> str:
+        return os.path.normcase(os.path.normpath(path))
+
     registered = {normalize(path) for path in registered_dirs}
     unregistered = []
     for dirpath, dirnames, filenames in os.walk(root):
@@ -176,7 +213,7 @@ def _self_check() -> None:
         os.mkdir(mod_path)
         data = {
             "en.json": {"key": "Value %1"},
-            "translations.json": {"key": "值 %1"},
+            "translations.json": {"key": "值 %1", "stale": "旧键 %1"},
             "zh.json": {"key": "stale %1"},
         }
         for name, value in data.items():
@@ -184,6 +221,8 @@ def _self_check() -> None:
                 json.dump(value, file, ensure_ascii=False)
         issues = verify_json_mod(ModJson("mod", "en.json", "zh.json"), root)
         assert any(issue.startswith("[过期]") for issue in issues), issues
+        extra = verify_dir_extra_keys([("mod", "json", ModJson("mod", "en.json", "zh.json"))], root, None)
+        assert extra and "stale" in extra[0], extra
         assert find_unregistered_translation_dirs(root, set()) == ["mod"]
         assert find_unregistered_translation_dirs(root, {"mod"}) == []
     print("self-check OK")
@@ -198,6 +237,7 @@ def main(argv=None):
     if args.self_check:
         _self_check()
         return 0
+    setup_cli_logging()  # ponytail: logging set up in main, not at import
     root = os.path.dirname(os.path.abspath(__file__))
     filters = set(args.mods) if args.mods else None
     configs, json_mods, qt_mods = load_repo_configs(root)
@@ -240,7 +280,7 @@ def main(argv=None):
                 log.error(issue)
                 exit_code = 1
 
-    for issue in verify_json_dir_extra(json_mods, root, filters):
+    for issue in verify_dir_extra_keys(tasks, root, filters):
         log.error(issue)
         exit_code = 1
     print(f"\n{'='*60}")

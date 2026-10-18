@@ -6,16 +6,19 @@
 """
 
 import json
-from collections import Counter
-import re
 import os
-
+import re
 import sys
-from typing import Optional
+from collections import Counter
+
 # ── BOM 常量 ──────────────────────────────────────────────────────────────────
 BOM_UTF16_LE = b"\xff\xfe"
 BOM_UTF16_BE = b"\xfe\xff"
 BOM_UTF8 = b"\xef\xbb\xbf"
+
+# ── 输出编码白名单 ────────────────────────────────────────────────────────────
+# config.py 用它校验 mods.toml，build_all.py 用它建立写入器映射。
+WRITE_ENCODINGS = ("utf-8", "utf-8-bom", "utf16-le-bom")
 
 
 # ── UTF-8 强制 ────────────────────────────────────────────────────────────────
@@ -37,7 +40,8 @@ def read_text(path: str) -> str:
     检测顺序：UTF-16 LE → UTF-16 BE → UTF-8（含 BOM）。
     始终去除 \ufeff（BOM 字符）。
     """
-    raw = open(path, "rb").read()
+    with open(path, "rb") as handle:
+        raw = handle.read()
     if raw[:2] == BOM_UTF16_LE:
         text = raw.decode("utf-16-le")
     elif raw[:2] == BOM_UTF16_BE:
@@ -73,9 +77,9 @@ def write_utf8(path: str, content: str) -> None:
         f.write(content.encode("utf-8"))
 
 
-def split_line(line: str, sep: Optional[str] = "\t") -> tuple[Optional[str], str]:
+def split_line(line: str, sep: str | None = "\t") -> tuple[str | None, str]:
     """按分隔符拆分一行，返回 (key, value)。
-    
+
     sep=None 按任意空白拆分。不含分隔符的行返回 (None, line)。
     """
     stripped = line.strip("\r\n")
@@ -92,32 +96,32 @@ def split_line(line: str, sep: Optional[str] = "\t") -> tuple[Optional[str], str
         return stripped.split(sep, 1)
 
 
-def resolve_key_with_section(key: str, current_section: str, translations: dict[str, str]) -> Optional[str]:
+def resolve_key_with_section(key: str, current_section: str, translations: dict[str, str]) -> str | None:
     """尝试在翻译字典中解析键（支持节前缀 fallback）。
-    
+
     优先级：
     1. 完整键（key 本身）
     2. 带节前缀（section.key）
     3. 裸键（去掉节前缀后的部分）
-    
+
     返回找到的键名，或 None。
     """
     # 直接匹配
     if key in translations:
         return key
-    
+
     # 尝试添加节前缀
     if current_section and not key.startswith(f"{current_section}."):
         prefixed = f"{current_section}.{key}"
         if prefixed in translations:
             return prefixed
-    
+
     # 尝试去掉节前缀
     if "." in key:
         bare = key.split(".", 1)[1]
         if bare in translations:
             return bare
-    
+
     return None
 
 

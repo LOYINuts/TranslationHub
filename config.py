@@ -3,8 +3,8 @@
 import os
 import tomllib
 from dataclasses import dataclass
-from typing import Optional
 
+from locale_utils import WRITE_ENCODINGS
 
 
 def setup_cli_logging(verbose: bool = False) -> None:
@@ -31,9 +31,9 @@ class ModConfig:
     dir: str
     source: str
     output: str
-    sep: Optional[str] = "\t"
+    sep: str | None = "\t"
     encoding: str = "utf16-le-bom"
-    output_sep: Optional[str] = None
+    output_sep: str | None = None
     value_field: int = 1
     trim_trailing_fields: bool = False
 
@@ -41,14 +41,13 @@ class ModConfig:
         if self.output_sep is None:
             self.output_sep = self.sep if self.sep is not None else "\t"
 
-
 @dataclass
 class ModJson:
     """JSON 文件模组配置。"""
     dir: str
     source: str
     output: str = ""
-    translation_section: Optional[str] = None
+    translation_section: str | None = None
 
     def __post_init__(self):
         if not self.output:
@@ -97,7 +96,14 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             raise ValueError(f"line[{idx}]: missing required field 'source'")
         if "output" not in item:
             raise ValueError(f"line[{idx}]: missing required field 'output'")
-        
+
+        encoding = item.get("encoding", "utf16-le-bom")
+        if encoding not in WRITE_ENCODINGS:
+            raise ValueError(
+                f"line[{idx}] {item['dir']}: 不支持的 encoding {encoding!r}，"
+                f"可用：{', '.join(WRITE_ENCODINGS)}"
+            )
+
         sep = item.get("sep", "\t")
         if sep == "":  # 空字符串表示 None（任意空白）
             sep = None
@@ -106,7 +112,7 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             source=item["source"],
             output=item["output"],
             sep=sep,
-            encoding=item.get("encoding", "utf16-le-bom"),
+            encoding=encoding,
             output_sep=item.get("output_sep"),
             value_field=item.get("value_field", 1),
             trim_trailing_fields=item.get("trim_trailing_fields", False),
@@ -119,7 +125,7 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             raise ValueError(f"json[{idx}]: missing required field 'dir'")
         if "source" not in item:
             raise ValueError(f"json[{idx}]: missing required field 'source'")
-        
+
         cfg = ModJson(
             dir=item["dir"],
             source=item["source"],
