@@ -7,14 +7,14 @@ $DESC_The Path of Knowledge	完成“知识之道”
 $NAME_At the Summit of Apocrypha	异典之巅
 $DESC_At the Summit of Apocrypha	完成“异典之巅”
 $NAME_Dragon Aspect	龙之化身
-$DESC_Dragon Aspect	学会龙形态的全部 3 个词
+$DESC_Dragon Aspect	学会龙之化身的全部 3 个词
 $NAME_Hidden Knowledge	隐藏的知识
-$DESC_Hidden Knowledge	了解 5 本黑书的秘密
+$DESC_Hidden Knowledge	了解 5 本黑暗经书的秘密
 $NAME_Stalhrim Crafter	魔冰工匠
 $DESC_Stalhrim Crafter	用魔冰制作一件物品
 $NAME_Dragonrider	驭龙者
 $DESC_Dragonrider	驯服并骑乘 5 条龙
-$NAME_Raven Rock Owner	乌鸦岩领主
-$DESC_Raven Rock Owner	在乌鸦岩拥有一栋房屋
+$NAME_Raven Rock Owner	鸦石镇房主
+$DESC_Raven Rock Owner	在鸦石镇拥有一栋房屋
 $NAME_Solstheim Explorer	索瑟海姆探险家
-$DESC_Solstheim Explorer	发现索瑟海姆岛上的 30 个地点
+$DESC_Solstheim Explorer	发现索瑟海姆上的 30 个地点

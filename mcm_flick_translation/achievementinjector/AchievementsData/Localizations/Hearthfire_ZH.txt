@@ -3,7 +3,7 @@ $DESC_Proud Parent	收养一名孩子
 $NAME_Landowner	地主
 $DESC_Landowner	购买一块土地
 $NAME_Architect	建筑师
-$DESC_Architect	为一栋房屋建造三个侧翼
+$DESC_Architect	为一栋房屋建造三个附属建筑
 $NAME_Land Baron	土地大亨
 $DESC_Land Baron	购买三块土地
 $NAME_Master Architect	建筑大师

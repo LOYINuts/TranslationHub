@@ -9,7 +9,7 @@ $DESC_Lost to the Ages	完成“遗忘时光”
 $NAME_Soul Tear	灵魂撕裂
 $DESC_Soul Tear	学会灵魂撕裂的全部三个词
 $NAME_Auriel's Bow	奥瑞艾尔之弓
-$DESC_Auriel's Bow	使用阿锐尔之弓的特殊力量
+$DESC_Auriel's Bow	使用奥瑞艾尔之弓的特殊力量
 $NAME_Werewolf Mastered	狼人精通
 $DESC_Werewolf Mastered	获得 11 个狼人技能
 $NAME_Vampire Mastered	吸血鬼精通
@@ -17,5 +17,5 @@ $DESC_Vampire Mastered	获得 11 个吸血鬼技能
 $NAME_A New You	焕然一新
 $DESC_A New You	改变容貌
 $NAME_Legend	传奇
-$DESC_Legend	击败传奇龙
+$DESC_Legend	击败传说龙
 $Legendary Dragon	传说龙
