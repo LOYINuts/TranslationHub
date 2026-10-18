@@ -33,10 +33,5 @@
     "exclusion_power": "排除perk（禁用重击）",
     "global_power_title": "重击全局设置",
     "power_label": "重击"
-  },
-  "unblockable": {
-    "name": "承受的不可格挡攻击次数",
-    "desc": "你承受了多少次不可格挡攻击",
-    "category": "{{$General}}"
   }
 }
