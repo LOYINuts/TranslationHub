@@ -147,15 +147,11 @@ def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, st
             used.add(lookup)
             count += 1
         artifacts.append((os.path.join(output_root, relative), "\r\n".join(output_lines) + "\r\n"))
-    extra = set(translations) - used
-    if extra:
-        raise ValueError(f"Unused scoped translation keys: {sorted(extra)[:10]}")
     return artifacts, count, used
 
 
-
 def build_one(cfg: ModConfig, root_dir: str) -> int:
-    """Build one configured line task."""
+    """Build one configured line task. Orphan keys are reported per directory by dir_extra_keys."""
     writer = WRITERS.get(cfg.encoding)
     if writer is None:
         raise ValueError(f"不支持的编码: {cfg.encoding}")
@@ -285,9 +281,6 @@ def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int, set[str]]:
         node.attrib.pop("type", None)
         node.text = translated
         used.add(source)
-    extra = set(translations) - used
-    if extra:
-        raise ValueError(f"Unused Qt translation keys: {len(extra)}")
     start = source_text.find("<TS")
     closing = "</TS>"
     end = source_text.rfind(closing)
@@ -313,6 +306,76 @@ def iter_build_tasks():
     yield from ((cfg, "line") for cfg in MOD_CONFIGS)
     yield from ((cfg, "json") for cfg in JSON_MODS)
     yield from ((cfg, "qt") for cfg in QT_MODS)
+
+
+def task_kind(cfg) -> str:
+    """Map a config object to its build type. ponytail: type comes from the class, not a parallel list."""
+    if isinstance(cfg, ModConfig):
+        return "line"
+    if isinstance(cfg, ModJson):
+        return "json"
+    if isinstance(cfg, ModQt):
+        return "qt"
+    raise TypeError(f"未知模组配置类型: {type(cfg).__name__}")
+
+
+def declared_keys(cfg, root_dir: str) -> set[str]:
+    """Translation keys one config declares. Mirrors translation_data for json sections."""
+    translations = load_json(os.path.join(root_dir, cfg.dir, "translations.json"))
+    if task_kind(cfg) != "json":
+        return set(translations)
+    return set(flatten_json_values(translation_data(cfg, root_dir)))
+
+
+def used_keys(cfg, root_dir: str) -> set[str]:
+    """Keys the render for one config actually consumed."""
+    kind = task_kind(cfg)
+    if kind == "line":
+        if glob.has_magic(cfg.source):
+            return render_line_group(cfg, root_dir)[2]
+        return render_line_one(cfg, root_dir)[2]
+    if kind == "json":
+        return render_json_one(cfg, root_dir)[2]
+    return render_qt_one(cfg, root_dir)[2]
+
+
+def unconsumed_keys(declared: set[str], used: set[str]) -> list[str]:
+    """Declared keys no render consumed. Container paths stay legal while a child key is used."""
+    containers: set[str] = set()
+    for key in used:
+        for separator in (".", "["):
+            index = key.find(separator)
+            while index != -1:
+                containers.add(key[:index])
+                index = key.find(separator, index + 1)
+    return sorted(declared - used - containers)
+
+
+def dir_extra_keys(root_dir: str, configs, filters=None) -> dict[str, list[str]]:
+    """Map each mod directory to declared keys that none of its configs consume.
+
+    ponytail: union per directory, so several configs may share one translations.json.
+    A config whose render raises is skipped instead of being reported as fully orphaned.
+    """
+    usage: dict[str, tuple[set[str], set[str]]] = {}
+    for cfg in configs:
+        if not matches_filter(cfg.dir, filters or ()):
+            continue
+        try:
+            declared = declared_keys(cfg, root_dir)
+            used = used_keys(cfg, root_dir)
+        except (OSError, ValueError, KeyError, TypeError,
+                json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
+            log.debug(f"{cfg.dir} 多余键检查跳过: {exc}")
+            continue
+        acc_declared, acc_used = usage.setdefault(cfg.dir, (set(), set()))
+        acc_declared |= declared
+        acc_used |= used
+    return {
+        mod_dir: extra
+        for mod_dir, (declared, used) in sorted(usage.items())
+        if (extra := unconsumed_keys(declared, used))
+    }
 
 
 def build_all(root_dir: str, filters: set[str] | None = None) -> dict:
@@ -347,6 +410,14 @@ def build_all(root_dir: str, filters: set[str] | None = None) -> dict:
         except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as e:
             log.error(f"构建失败 {cfg.dir}: {e}")
             failed.append((cfg.dir, str(e)))
+
+    failed_dirs = {mod_dir for mod_dir, _ in failed}
+    for mod_dir, extra in dir_extra_keys(root_dir, [cfg for cfg, _ in all_mods]).items():
+        if mod_dir in failed_dirs:
+            continue
+        message = f"未使用键 {len(extra)} 个：{', '.join(extra[:5])}"
+        log.error(f"[多余] {mod_dir}: {message}")
+        failed.append((mod_dir, message))
 
     return {
         "succeeded": succeeded,

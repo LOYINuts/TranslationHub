@@ -21,16 +21,15 @@ import os
 import xml.etree.ElementTree as ET
 
 from build_all import (
-    flatten_json_values,
+    dir_extra_keys,
     render_json_one,
     render_line_group,
     render_line_one,
     render_qt_one,
-    translation_data,
 )
 
 # ── 从 config.py 加载配置 ─────────────────────────────────────────────────
-from config import ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
+from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
 from locale_utils import load_json, read_text
 from sync_translation import find_missing_json, find_missing_keys, find_missing_qt
 
@@ -105,62 +104,12 @@ def verify_json_mod(mod_config, root: str) -> list[str]:
     return issues or ["[OK] 全部检查通过"]
 
 
-def declared_keys(config, mod_type: str, root: str) -> set[str]:
-    """Translation keys a config declares. Mirrors translation_data for json sections."""
-    translations = load_json(os.path.join(root, config.dir, "translations.json"))
-    if mod_type != "json":
-        return set(translations)
-    return set(flatten_json_values(translation_data(config, root)))
-
-
-def used_keys(config, mod_type: str, root: str) -> set[str]:
-    """Keys the render actually consumed."""
-    if mod_type == "line":
-        if glob.has_magic(config.source):
-            return render_line_group(config, root)[2]
-        return render_line_one(config, root)[2]
-    if mod_type == "json":
-        return render_json_one(config, root)[2]
-    return render_qt_one(config, root)[2]
-
-
-def unconsumed_keys(declared: set[str], used: set[str]) -> list[str]:
-    """Declared keys that no render consumed. Container paths stay legal when a child key is used."""
-    containers: set[str] = set()
-    for key in used:
-        for sep in (".", "["):
-            index = key.find(sep)
-            while index != -1:
-                containers.add(key[:index])
-                index = key.find(sep, index + 1)
-    return sorted(declared - used - containers)
-
-
-def verify_dir_extra_keys(tasks: list, root: str, filters) -> list[str]:
-    """Flag translation keys no config in the same dir consumes.
-
-    ponytail: one union per dir, so a shared translations.json stays legal.
-    """
-    usage: dict[str, tuple[set[str], set[str]]] = {}
-    for mod_dir, mod_type, config in tasks:
-        if filters and not matches_filter(mod_dir, filters):
-            continue
-        try:
-            declared = declared_keys(config, mod_type, root)
-            used = used_keys(config, mod_type, root)
-        except (OSError, ValueError, KeyError, TypeError,
-                json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
-            log.debug(f"{mod_dir} ({mod_type}) 多余键检查跳过: {exc}")
-            continue
-        acc_declared, acc_used = usage.setdefault(mod_dir, (set(), set()))
-        acc_declared |= declared
-        acc_used |= used
-    issues = []
-    for mod_dir, (declared, used) in sorted(usage.items()):
-        extra = unconsumed_keys(declared, used)
-        if extra:
-            issues.append(f"[多余] {mod_dir}: {len(extra)} 个未使用键：{', '.join(extra[:5])}")
-    return issues
+def verify_dir_extra_keys(configs, root: str, filters) -> list[str]:
+    """Report translation keys no config in the same directory consumes."""
+    return [
+        f"[多余] {mod_dir}: {len(extra)} 个未使用键：{', '.join(extra[:5])}"
+        for mod_dir, extra in dir_extra_keys(root, configs, filters).items()
+    ]
 
 
 
@@ -221,10 +170,28 @@ def _self_check() -> None:
                 json.dump(value, file, ensure_ascii=False)
         issues = verify_json_mod(ModJson("mod", "en.json", "zh.json"), root)
         assert any(issue.startswith("[过期]") for issue in issues), issues
-        extra = verify_dir_extra_keys([("mod", "json", ModJson("mod", "en.json", "zh.json"))], root, None)
+        extra = verify_dir_extra_keys([ModJson("mod", "en.json", "zh.json")], root, None)
         assert extra and "stale" in extra[0], extra
         assert find_unregistered_translation_dirs(root, set()) == ["mod"]
         assert find_unregistered_translation_dirs(root, {"mod"}) == []
+
+        # A glob line config and a json config may share one translations.json.
+        shared = os.path.join(root, "shared")
+        os.makedirs(os.path.join(shared, "src"))
+        with open(os.path.join(shared, "src", "a.ini"), "w", encoding="utf-8") as file:
+            file.write("k|v\n")
+        with open(os.path.join(shared, "en.json"), "w", encoding="utf-8") as file:
+            json.dump({"greeting": "Hi"}, file)
+        line_cfg = ModConfig("shared", "**/*.ini", "zh", sep="|")
+        json_cfg = ModJson("shared", "en.json", "zh.json")
+        share_path = os.path.join(shared, "translations.json")
+        with open(share_path, "w", encoding="utf-8") as file:
+            json.dump({"src/a.ini::k#0": "值", "greeting": "你好"}, file, ensure_ascii=False)
+        assert verify_dir_extra_keys([line_cfg, json_cfg], root, None) == [], "共享目录不应误报"
+        with open(share_path, "w", encoding="utf-8") as file:
+            json.dump({"src/a.ini::k#0": "值", "greeting": "你好", "orphan": "孤儿"}, file, ensure_ascii=False)
+        shared_extra = verify_dir_extra_keys([line_cfg, json_cfg], root, None)
+        assert shared_extra and "orphan" in shared_extra[0], shared_extra
     print("self-check OK")
 
 
@@ -280,7 +247,7 @@ def main(argv=None):
                 log.error(issue)
                 exit_code = 1
 
-    for issue in verify_dir_extra_keys(tasks, root, filters):
+    for issue in verify_dir_extra_keys(configs + json_mods + qt_mods, root, filters):
         log.error(issue)
         exit_code = 1
     print(f"\n{'='*60}")
