@@ -150,23 +150,23 @@ def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, st
     return artifacts, count, used
 
 
-def build_one(cfg: ModConfig, root_dir: str) -> int:
-    """Build one configured line task. Orphan keys are reported per directory by dir_extra_keys."""
+def build_one(cfg: ModConfig, root_dir: str) -> tuple[int, set[str]]:
+    """Build one line task. Returns (translation count, consumed keys) for dir_extra_keys."""
     writer = WRITERS.get(cfg.encoding)
     if writer is None:
         raise ValueError(f"不支持的编码: {cfg.encoding}")
     if glob.has_magic(cfg.source):
-        artifacts, count, _ = render_line_group(cfg, root_dir)
+        artifacts, count, used = render_line_group(cfg, root_dir)
         for output_path, content in artifacts:
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             writer(output_path, content)
         log.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}/")
-        return count
-    content, count, _ = render_line_one(cfg, root_dir)
+        return count, used
+    content, count, used = render_line_one(cfg, root_dir)
     out_path = os.path.join(root_dir, cfg.dir, cfg.output)
     writer(out_path, content)
     log.info(f"[OK] {cfg.dir}: {count} 条 -> {cfg.output}")
-    return count
+    return count, used
 def flatten_json_values(value, prefix: str = "", out: dict | None = None) -> dict:
     """Flatten nested translation JSON to source paths."""
     out = {} if out is None else out
@@ -247,15 +247,15 @@ def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int, set[str]
     return translated_data, count_leaves(translations), used
 
 
-def build_json_one(jcfg: ModJson, root_dir: str) -> int:
-    """Build one JSON mod and return its translation count."""
-    translated_data, count, _ = render_json_one(jcfg, root_dir)
+def build_json_one(jcfg: ModJson, root_dir: str) -> tuple[int, set[str]]:
+    """Build one JSON mod. Returns (translation count, consumed keys)."""
+    translated_data, count, used = render_json_one(jcfg, root_dir)
     out_path = os.path.join(root_dir, jcfg.dir, jcfg.output)
     with open(out_path, "w", encoding="utf-8", newline="\n") as file:
         json.dump(translated_data, file, ensure_ascii=False, indent=2)
         file.write("\n")
     log.info(f"[OK] {jcfg.dir}: {count} 条 -> {jcfg.output}")
-    return count
+    return count, used
 def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int, set[str]]:
     mod_path = os.path.join(root_dir, config.dir)
     source_path = os.path.join(mod_path, config.source)
@@ -293,12 +293,13 @@ def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int, set[str]]:
     return source_text[:start] + body + source_text[end:], len(translations), used
 
 
-def build_qt_one(config: ModQt, root_dir: str) -> int:
-    content, count, _ = render_qt_one(config, root_dir)
+def build_qt_one(config: ModQt, root_dir: str) -> tuple[int, set[str]]:
+    """Build one Qt TS mod. Returns (translation count, consumed keys)."""
+    content, count, used = render_qt_one(config, root_dir)
     output_path = os.path.join(root_dir, config.dir, config.output)
     write_utf8(output_path, content)
     log.info(f"[OK] {config.dir}: {count} 条 -> {config.output}")
-    return count
+    return count, used
 
 
 def iter_build_tasks():
@@ -351,30 +352,33 @@ def unconsumed_keys(declared: set[str], used: set[str]) -> list[str]:
     return sorted(declared - used - containers)
 
 
-def dir_extra_keys(root_dir: str, configs, filters=None) -> dict[str, list[str]]:
+def dir_extra_keys(root_dir: str, configs, filters=None,
+                  usage: dict[str, tuple[set[str], set[str]]] | None = None) -> dict[str, list[str]]:
     """Map each mod directory to declared keys that none of its configs consume.
 
     ponytail: union per directory, so several configs may share one translations.json.
     A config whose render raises is skipped instead of being reported as fully orphaned.
+    `usage` from a finished build replaces the re-render pass.
     """
-    usage: dict[str, tuple[set[str], set[str]]] = {}
-    for cfg in configs:
-        if not matches_filter(cfg.dir, filters or ()):
-            continue
-        try:
-            declared = declared_keys(cfg, root_dir)
-            used = used_keys(cfg, root_dir)
-        except (OSError, ValueError, KeyError, TypeError,
-                json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
-            log.debug(f"{cfg.dir} 多余键检查跳过: {exc}")
-            continue
-        acc_declared, acc_used = usage.setdefault(cfg.dir, (set(), set()))
-        acc_declared |= declared
-        acc_used |= used
+    if usage is None:
+        collected: dict[str, tuple[set[str], set[str]]] = {}
+        for cfg in configs:
+            if not matches_filter(cfg.dir, filters or ()):
+                continue
+            try:
+                declared = declared_keys(cfg, root_dir)
+                used = used_keys(cfg, root_dir)
+            except (OSError, ValueError, KeyError, TypeError,
+                    json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
+                log.debug(f"{cfg.dir} 多余键检查跳过: {exc}")
+                continue
+            acc_declared, acc_used = collected.setdefault(cfg.dir, (set(), set()))
+            collected[cfg.dir] = (acc_declared | declared, acc_used | used)
+        usage = collected
     return {
         mod_dir: extra
         for mod_dir, (declared, used) in sorted(usage.items())
-        if (extra := unconsumed_keys(declared, used))
+        if matches_filter(mod_dir, filters or ()) and (extra := unconsumed_keys(declared, used))
     }
 
 
@@ -391,16 +395,22 @@ def build_all(root_dir: str, filters: set[str] | None = None) -> dict:
     failed = []
     skipped = []
     total_entries = 0
+    usage: dict[str, tuple[set[str], set[str]]] = {}
     for current, (cfg, mod_type) in enumerate(all_mods, 1):
         log.info(f"[{current}/{total_count}] {cfg.dir}")
 
         try:
             if mod_type == "line":
-                count = build_one(cfg, root_dir)
+                count, used = build_one(cfg, root_dir)
             elif mod_type == "json":
-                count = build_json_one(cfg, root_dir)
+                count, used = build_json_one(cfg, root_dir)
             elif mod_type == "qt":
-                count = build_qt_one(cfg, root_dir)
+                count, used = build_qt_one(cfg, root_dir)
+            else:
+                raise TypeError(f"未知模组类型: {mod_type}")
+
+            acc_declared, acc_used = usage.setdefault(cfg.dir, (set(), set()))
+            usage[cfg.dir] = (acc_declared | declared_keys(cfg, root_dir), acc_used | used)
 
             if count > 0:
                 succeeded.append(cfg.dir)
@@ -412,7 +422,7 @@ def build_all(root_dir: str, filters: set[str] | None = None) -> dict:
             failed.append((cfg.dir, str(e)))
 
     failed_dirs = {mod_dir for mod_dir, _ in failed}
-    for mod_dir, extra in dir_extra_keys(root_dir, [cfg for cfg, _ in all_mods]).items():
+    for mod_dir, extra in dir_extra_keys(root_dir, [cfg for cfg, _ in all_mods], usage=usage).items():
         if mod_dir in failed_dirs:
             continue
         message = f"未使用键 {len(extra)} 个：{', '.join(extra[:5])}"
@@ -476,6 +486,24 @@ def _self_check() -> None:
     }
     assert count_leaves({"records": ["first", "second"], "one": "third"}) == 3
     assert apply_translations_to_json(source, {"label": "根"})["section"]["label"] == "nested"
+
+    # dir_extra_keys 复用构建期 usage 时必须与重新渲染得到同一结果
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as root:
+        os.makedirs(os.path.join(root, "m"))
+        with open(os.path.join(root, "m", "en.json"), "w", encoding="utf-8") as file:
+            json.dump({"a": "A"}, file)
+        with open(os.path.join(root, "m", "translations.json"), "w", encoding="utf-8") as file:
+            json.dump({"a": "甲", "extra": "多余"}, file, ensure_ascii=False)
+        cfg = ModJson("m", "en.json", "zh.json")
+        auto = dir_extra_keys(root, [cfg])
+        reused = dir_extra_keys(
+            root, [cfg],
+            usage={cfg.dir: (declared_keys(cfg, root), used_keys(cfg, root))},
+        )
+        assert auto == reused, (auto, reused)
+        assert auto == {cfg.dir: ["extra"]}, auto
     print("self-check OK")
 
 
@@ -495,7 +523,7 @@ def main():
     )
     parser.add_argument('mods', nargs='*', help='要构建的模组（完整路径或 basename），留空则构建所有')
     parser.add_argument('--stats', action='store_true', help='统计模组翻译数据，不执行构建')
-    parser.add_argument('--dry-run', action='store_true', help='预览要构建的模组，不实际执行')
+    parser.add_argument('--dry-run', action='store_true', help='预检：渲染全部任务但不写文件，失败返回非零')
     parser.add_argument('--verbose', '-v', action='store_true', help='显示详细日志')
     parser.add_argument('--self-check', action='store_true', help='运行构建逻辑自检')
 
@@ -529,17 +557,26 @@ def main():
         log.error(f"未找到模组: {', '.join(sorted(filters))}")
         return 2
 
-    # 预览模式
+    # 预检模式：渲染每个任务但不写文件，捕获缺键/占位符错误
     if args.dry_run:
         all_mods = list(iter_build_tasks())
 
         if filters:
             all_mods = [(cfg, typ) for cfg, typ in all_mods if matches_filter(cfg.dir, filters)]
 
-        print(f"将构建 {len(all_mods)} 个模组:")
+        print(f"预检 {len(all_mods)} 个任务（不写文件）:")
+        failed = []
         for cfg, mod_type in all_mods:
-            print(f"  - {cfg.dir} ({mod_type})")
-        return 0
+            try:
+                used_keys(cfg, root)
+            except (OSError, ValueError, KeyError, TypeError,
+                    json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as e:
+                log.error(f"[预检失败] {cfg.dir}: {e}")
+                failed.append(cfg.dir)
+            else:
+                print(f"  - {cfg.dir} ({mod_type})")
+        print(f"预检通过 {len(all_mods) - len(failed)} / {len(all_mods)}")
+        return 1 if failed else 0
 
     # 执行构建
     result = build_all(root, filters)

@@ -196,7 +196,7 @@ def process_task(kind: str, cfg, mod_path: str, check_only: bool, interactive: b
             missing, existing = find_missing_json(cfg, mod_path)
         else:
             missing, existing = find_missing_qt(cfg, mod_path)
-    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
         log.error(f"检查失败: {exc}")
         return True
     if not missing:
