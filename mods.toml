@@ -430,7 +430,7 @@ output = "Language_zh.json"
 [[json]]
 dir = "mod_interface_translation/outfitdistributor"
 source = "en.json"
-output = "zh.json"
+output = "zh-cn.json"
 
 [[json]]
 dir = "skse_menu_translation/vinymods/statstracker/Localization"
