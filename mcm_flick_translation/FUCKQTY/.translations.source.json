@@ -1,0 +1,27 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "line:mcm_flick_translation/FUCKQTY:FUCK-QTY_ENGLISH.txt": {
+      "$QTY_AllButton": "(Hold) Stack",
+      "$QTY_BarterMenu": "Barter Menu",
+      "$QTY_ConfigTitle": "Stacks or Singles",
+      "$QTY_ContainerMenu": "Container Menu",
+      "$QTY_Controller": "Controller",
+      "$QTY_GiftMenu": "Gift Menu",
+      "$QTY_HideHint": "Hide Hint",
+      "$QTY_HideHintTip": "The hint won't show in the bottom bar, but the hotkey still works.",
+      "$QTY_HintLabels": "Hint Labels",
+      "$QTY_InventoryMenu": "Inventory Menu",
+      "$QTY_KBM": "Keyboard",
+      "$QTY_Keybinds": "Keybinds",
+      "$QTY_LabelAll": "Label: Stack",
+      "$QTY_LabelOne": "Label: Single",
+      "$QTY_OneButton": "(Hold) Single",
+      "$QTY_ResetToDefault": "Reset",
+      "$QTY_Unmap": "Unmap",
+      "$QTY_VisibilityAll": "Visibility: Stack",
+      "$QTY_VisibilityOne": "Visibility: Single"
+    }
+  },
+  "version": 1
+}

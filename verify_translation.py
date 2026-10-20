@@ -31,6 +31,13 @@ from build_all import (
 # ── 从 config.py 加载配置 ─────────────────────────────────────────────────
 from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
 from locale_utils import load_json, read_text
+from source_baseline import (
+    baseline_issues,
+    baseline_path,
+    compare_baseline,
+    source_key,
+    update_baseline,
+)
 from sync_translation import find_missing_json, find_missing_keys, find_missing_qt
 
 log = logging.getLogger(__name__)  # ponytail: named logger per spec
@@ -44,11 +51,12 @@ def verify_line_single(config, root: str) -> list[str]:
     if not os.path.isdir(mod_path):
         return [f"[错误] 目录不存在: {mod_path}"]
     try:
-        missing, _ = find_missing_keys(config, mod_path)
+        missing, _, current = find_missing_keys(config, mod_path)
         expected, _, _ = render_line_one(config, root)
+        baseline = baseline_issues("line", config, mod_path, current)
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] 无法重建行文件: {exc}"]
-    issues = []
+    issues = list(baseline)
     if missing:
         issues.append(f"[缺失] {len(missing)} 条：{', '.join(sorted(missing)[:10])}")
     out_path = os.path.join(mod_path, config.output)
@@ -60,13 +68,15 @@ def verify_line_single(config, root: str) -> list[str]:
 
 
 def verify_line_group(config, root: str) -> list[str]:
-    """Verify glob line task via render rebuild only."""
+    """Verify glob line task via render rebuild and baseline."""
     try:
+        _, _, current = find_missing_keys(config, os.path.join(root, config.dir))
         artifacts, _, _ = render_line_group(config, root)
+        baseline = baseline_issues("line", config, os.path.join(root, config.dir), current)
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] 无法重建行文件: {exc}"]
     expected = {os.path.normcase(path): content for path, content in artifacts}
-    issues = []
+    issues = list(baseline)
     for path, content in artifacts:
         if not os.path.exists(path):
             issues.append(f"[缺失] {path}")
@@ -91,12 +101,13 @@ def verify_json_mod(mod_config, root: str) -> list[str]:
     """Coverage via sync diff, freshness via render rebuild. ponytail: extra keys ride along per dir."""
     mod_path = os.path.join(root, mod_config.dir)
     try:
-        missing, _ = find_missing_json(mod_config, mod_path)
+        missing, _, current = find_missing_json(mod_config, mod_path)
         expected, _, _ = render_json_one(mod_config, root)
         actual = load_json(os.path.join(mod_path, mod_config.output))
+        baseline = baseline_issues("json", mod_config, mod_path, current)
     except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] JSON 无法验证: {exc}"]
-    issues = []
+    issues = list(baseline)
     if missing:
         issues.append(f"[缺失] {len(missing)} 个翻译键：{', '.join(sorted(missing)[:10])}")
     if actual != expected:
@@ -168,8 +179,38 @@ def _self_check() -> None:
         for name, value in data.items():
             with open(os.path.join(mod_path, name), "w", encoding="utf-8") as file:
                 json.dump(value, file, ensure_ascii=False)
-        issues = verify_json_mod(ModJson("mod", "en.json", "zh.json"), root)
+        cfg = ModJson("mod", "en.json", "zh.json")
+        key = source_key("json", cfg)
+        update_baseline(mod_path, key, {"key": "Value %1"}, replace=True)
+        issues = verify_json_mod(cfg, root)
         assert any(issue.startswith("[过期]") for issue in issues), issues
+        assert not any(
+            issue.startswith("[变更]") or issue.startswith("[未基线]") for issue in issues
+        ), issues
+
+        changed, unbaselined, initialized = compare_baseline(
+            mod_path, key, {"key": "Changed"}
+        )
+        assert initialized and changed == {"key": ("Value %1", "Changed")}, changed
+        assert not unbaselined, unbaselined
+
+        changed, unbaselined, _ = compare_baseline(
+            mod_path, key, {"key": "Value %1", "new": "N"}
+        )
+        assert not changed and unbaselined == ["new"], (changed, unbaselined)
+
+        update_baseline(mod_path, key, {"key": "Changed"}, replace=True)
+        changed, unbaselined, initialized = compare_baseline(
+            mod_path, key, {"key": "Changed"}
+        )
+        assert initialized and not changed and not unbaselined
+
+        os.remove(baseline_path(mod_path))
+        changed, unbaselined, initialized = compare_baseline(
+            mod_path, key, {"key": "Changed"}
+        )
+        assert not initialized and sorted(unbaselined) == ["key"]
+
         extra = verify_dir_extra_keys([ModJson("mod", "en.json", "zh.json")], root, None)
         assert extra and "stale" in extra[0], extra
         assert find_unregistered_translation_dirs(root, set()) == ["mod"]

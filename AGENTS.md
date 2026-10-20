@@ -8,7 +8,7 @@
 
 ```bash
 uv run check_all.py                          # 全仓库一次性门禁
-uv run sync_translation.py <name> --check    # 单模组
+uv run sync_translation.py <name> --check    # 单模组（缺键 + 英文基线变更）
 uv run build_all.py --dry-run <name>
 uv run build_all.py <name1> <name2>
 uv run verify_translation.py <name>
@@ -31,19 +31,27 @@ uv run verify_translation.py <name>
 
 除 `dialogue_mod_translation/` 外，所有模组都以 `translations.json` 为唯一可编辑源。
 禁止直接编辑构建产物。英文源默认只读，只在同步上游版本时修改。Dialogue XML 不登记在 `mods.toml`。
+各 line/json 模组目录下的 `.translations.source.json` 是英文基线，由 `sync_translation.py` 生成和维护，提交到仓库，不要手改。Qt TS 不使用基线，因为源文本本身就是键。
 
 ## 日常流程
 
 ```bash
-# 1. 检查上游是否新增行文本键
+# 1. 检查上游是否新增键或改动已有英文
 uv run sync_translation.py <mod> --check
 
-# 2. 编辑 translations.json 后构建
+# 2. 翻译 [变更] 条目后，确认英文基线
+uv run sync_translation.py <mod> --accept-source
+
+# 3. 编辑 translations.json 后构建
 uv run build_all.py <mod>
 
-# 3. 验证键覆盖、未使用键、占位符、转义和产物是否最新
+# 4. 验证键覆盖、未使用键、占位符、转义、英文基线和产物是否最新
 uv run verify_translation.py <mod>
 ```
+
+`--check` 发现已翻译键的英文原文变化时返回 `[变更]`，没有基线时返回 `[未基线]`，两种情况都非零退出。
+`--sync` 会补缺失键并把新键写入基线，但不会接受已有键的英文变更；`--accept-source` 只更新基线，不修改 `translations.json`。
+首次启用或新增 line/json 模组时，先运行 `uv run sync_translation.py --all --accept-source`（或对单模组运行），提交生成的基线文件。
 
 Dialogue XML 用 `translate.py`，顺序为 `stats → pending --fill-bdd → apply → stats`。
 

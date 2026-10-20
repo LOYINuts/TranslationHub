@@ -1,0 +1,30 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "json:skse_menu_translation/vinymods/inlos:Language.json": {
+      "auto.archive_name": "Archive Name",
+      "auto.both": "Death or Defeat",
+      "auto.clear_selection": "Clear Selection",
+      "auto.death": "Death",
+      "auto.defeat": "Defeat",
+      "auto.experience": "Experience",
+      "auto.export": "Export",
+      "auto.export_location": "ZIP files are saved to Data/Viny Mods/INLOS/Export.",
+      "auto.export_packages": "Export Packages",
+      "auto.export_selected": "Export Selected",
+      "auto.export_selection_help": "Select packages and rules to export. Package and rule identities, including saved version history, are preserved.",
+      "auto.player": "Player",
+      "auto.rule": "Rule",
+      "auto.selected_rules_and_packages": "Selected: %d rule(s) from %d package(s)",
+      "auto.skill_experience": "Skill Experience",
+      "auto.version": "Version",
+      "auto.victim": "Victim / Corpse",
+      "menu.export": "Export",
+      "menu.loot_rules": "Loot Rules",
+      "menu.processed_encounters": "Processed Encounters",
+      "menu.section": "INLOS",
+      "menu.settings": "Settings"
+    }
+  },
+  "version": 1
+}

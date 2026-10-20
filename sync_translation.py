@@ -2,9 +2,10 @@
 同步翻译工具：检测英文源文件中的新词条，更新 translations.json
 
 用法：
-  uv run sync_translation.py custommarkers --check        # 检查缺失的词条
+  uv run sync_translation.py custommarkers --check        # 检查缺失词条和英文变更
   uv run sync_translation.py custommarkers --sync         # 自动添加缺失词条（英文原文作为占位）
   uv run sync_translation.py custommarkers --interactive  # 交互式添加翻译
+  uv run sync_translation.py custommarkers --accept-source # 确认英文变更并更新基线
   uv run sync_translation.py --all --check                # 检查所有模组
 """
 
@@ -18,6 +19,12 @@ import xml.etree.ElementTree as ET
 from build_all import flatten_json_values
 from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
 from locale_utils import load_json, read_lines, read_text, split_line
+from source_baseline import (
+    compare_baseline,
+    describe_baseline,
+    source_key,
+    update_baseline,
+)
 
 log = logging.getLogger(__name__)  # ponytail: named logger per spec
 
@@ -57,12 +64,16 @@ def extract_keys_from_source(source_path: str, sep: str | None) -> dict[str, str
     return keys
 
 
-def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, str], set[str]]:
-    """找出 translations.json 中缺失的键。
+def find_missing_keys(
+    mod_config: ModConfig, mod_path: str
+) -> tuple[dict[str, str], set[str], dict[str, str]]:
+    """找出 translations.json 中缺失的键，并返回已翻译键的当前英文。
 
-    返回: (缺失的 {key: 英文值}, translations.json 中存在的键集合)
+    返回: (缺失的 {key: 英文值}, translations.json 中的键集合,
+           已翻译键 -> 当前英文值)
     """
-    if glob.has_magic(mod_config.source):
+    is_glob = glob.has_magic(mod_config.source)
+    if is_glob:
         source_keys = {}
         source_paths = sorted(glob.glob(os.path.join(mod_path, mod_config.source), recursive=True))
         output_root = os.path.join(mod_path, mod_config.output)
@@ -86,8 +97,8 @@ def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, s
                 key = fields[0].strip()
                 index = occurrences.get(key, 0)
                 occurrences[key] = index + 1
-                source_key = f"{relative}::{key}#{index}"
-                source_keys[source_key] = fields[mod_config.value_field].strip()
+                glob_key = f"{relative}::{key}#{index}"
+                source_keys[glob_key] = fields[mod_config.value_field].strip()
     else:
         source_path = os.path.join(mod_path, mod_config.source)
         if not os.path.exists(source_path):
@@ -100,13 +111,27 @@ def find_missing_keys(mod_config: ModConfig, mod_path: str) -> tuple[dict[str, s
 
     trans_keys = set(translations)
     missing = {}
+    current = {}
     for full_key, en_value in source_keys.items():
         bare_key = full_key.split(".", 1)[-1] if "." in full_key else full_key
-        if full_key not in trans_keys and (glob.has_magic(mod_config.source) or bare_key not in trans_keys):
+        if full_key in trans_keys:
+            lookup = full_key
+        elif not is_glob and bare_key in trans_keys:
+            lookup = bare_key
+        else:
             missing[full_key] = en_value
-    return missing, trans_keys
+            continue
+        if lookup in current and current[lookup] != en_value:
+            raise ValueError(
+                f"键 {lookup} 在不同节中的英文不一致，无法共用译文；"
+                "请在 translations.json 使用节前缀"
+            )
+        current[lookup] = en_value
+    return missing, trans_keys, current
 
-def find_missing_json(jcfg: ModJson, mod_path: str):
+def find_missing_json(
+    jcfg: ModJson, mod_path: str
+) -> tuple[dict[str, str], set[str], dict[str, str]]:
     """Diff flat source keys vs flat translation keys. ponytail: reuse build flatten."""
     src = flatten_json_values(load_json(os.path.join(mod_path, jcfg.source)))
     trans_path = os.path.join(mod_path, "translations.json")
@@ -114,9 +139,10 @@ def find_missing_json(jcfg: ModJson, mod_path: str):
     if jcfg.translation_section:
         trans = trans.get(jcfg.translation_section, {})
     trans = flatten_json_values(trans)
-    want = {k for k, v in src.items() if isinstance(v, str)}
-    missing = {k: src[k] for k in sorted(want - set(trans))}
-    return missing, set(trans)
+    want = {k: v for k, v in src.items() if isinstance(v, str)}
+    missing = {k: want[k] for k in sorted(set(want) - set(trans))}
+    current = {k: want[k] for k in want if k in trans}
+    return missing, set(trans), current
 
 
 def find_missing_qt(qcfg: ModQt, mod_path: str):
@@ -161,7 +187,12 @@ def _nested_shape(translations) -> bool:
     return isinstance(translations, dict) and any(isinstance(v, (dict, list)) for v in translations.values())
 
 
-def sync_translations(mod_path: str, missing: dict, interactive: bool = False, section: str | None = None):
+def sync_translations(
+    mod_path: str,
+    missing: dict,
+    interactive: bool = False,
+    section: str | None = None,
+) -> set[str]:
     """Append missing keys with EN placeholder while preserving shared sections."""
     trans_path = os.path.join(mod_path, "translations.json")
     translations = load_json(trans_path) if os.path.exists(trans_path) else {}
@@ -170,6 +201,7 @@ def sync_translations(mod_path: str, missing: dict, interactive: bool = False, s
         if not isinstance(translations, dict):
             raise ValueError(f"翻译源必须是 JSON 对象: {trans_path}")
         target = translations.setdefault(section, {})
+    added = set()
     for key in sorted(missing):
         if interactive:
             print(f"\n[{key}]")
@@ -181,42 +213,93 @@ def sync_translations(mod_path: str, missing: dict, interactive: bool = False, s
             _set_flat_path(target, key, target_value)
         else:
             target[key] = target_value
+        added.add(key)
     with open(trans_path, "w", encoding="utf-8") as f:
         json.dump(translations, f, ensure_ascii=False, indent=2)
-    log.info(f"已更新 {trans_path}，新增 {len(missing)} 条")
+    log.info(f"已更新 {trans_path}，新增 {len(added)} 条")
+    return added
 
 
-def process_task(kind: str, cfg, mod_path: str, check_only: bool, interactive: bool) -> bool:
-    """Process one task. Return True when keys are missing or processing fails."""
+def process_task(
+    kind: str,
+    cfg,
+    mod_path: str,
+    check_only: bool,
+    interactive: bool,
+    *,
+    accept_source: bool = False,
+    allow_write: bool = False,
+) -> bool:
+    """Process one task. Return True when issues remain or processing fails."""
     log.info(f"\n检查模组: {cfg.dir} ({kind})")
+    current: dict[str, str] = {}
     try:
         if kind == "line":
-            missing, existing = find_missing_keys(cfg, mod_path)
+            missing, existing, current = find_missing_keys(cfg, mod_path)
         elif kind == "json":
-            missing, existing = find_missing_json(cfg, mod_path)
+            missing, existing, current = find_missing_json(cfg, mod_path)
         else:
             missing, existing = find_missing_qt(cfg, mod_path)
-    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
+        changed, unbaselined, initialized = {}, [], True
+        if kind in ("line", "json") and current:
+            changed, unbaselined, initialized = compare_baseline(
+                mod_path, source_key(kind, cfg), current
+            )
+    except (OSError, ValueError, TypeError, json.JSONDecodeError, UnicodeDecodeError, ET.ParseError) as exc:
         log.error(f"检查失败: {exc}")
         return True
-    if not missing:
-        log.info(f"[OK] 无缺失词条（已有 {len(existing)} 条翻译）")
-        return False
-    print(f"\n发现 {len(missing)} 个新词条需要翻译：")
-    for key, en_value in sorted(missing.items()):
-        print(f"  {key} = \"{en_value}\"")
+
+    for line in describe_baseline(changed, unbaselined, initialized):
+        print(line)
+
+    if missing:
+        print(f"\n发现 {len(missing)} 个新词条需要翻译：")
+        for key, en_value in sorted(missing.items()):
+            print(f"  {key} = \"{en_value}\"")
+
     if check_only:
+        return bool(missing or changed or unbaselined or (current and not initialized))
+
+    added: set[str] = set()
+    if missing and allow_write:
+        prompt = "交互式添加翻译？[y/N] " if interactive else "自动添加（英文占位）？[y/N] "
+        if input(f"\n{prompt}").strip().lower() == "y":
+            try:
+                added = sync_translations(
+                    mod_path,
+                    missing,
+                    interactive,
+                    getattr(cfg, "translation_section", None) if kind == "json" else None,
+                )
+            except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+                log.error(f"同步失败: {exc}")
+                return True
+            current.update({key: missing[key] for key in added})
+
+    if kind in ("line", "json") and current:
+        try:
+            if accept_source:
+                update_baseline(mod_path, source_key(kind, cfg), current, replace=True)
+                changed, unbaselined, initialized = {}, [], True
+            else:
+                seed = {}
+                if not initialized:
+                    seed.update(current)
+                else:
+                    seed.update({key: current[key] for key in unbaselined if key in current})
+                seed.update({key: current[key] for key in added if key in current})
+                if seed:
+                    update_baseline(mod_path, source_key(kind, cfg), seed, replace=False)
+                unbaselined, initialized = [], True
+        except (OSError, ValueError) as exc:
+            log.error(f"英文基线处理失败: {exc}")
+            return True
+
+    if not missing and not changed and not unbaselined and (initialized or not current):
+        log.info(f"[OK] 无缺失词条（已有 {len(existing)} 条翻译）")
+    if missing and not added:
         return True
-    prompt = "交互式添加翻译？[y/N] " if interactive else "自动添加（英文占位）？[y/N] "
-    if input(f"\n{prompt}").strip().lower() != "y":
-        return True
-    sync_translations(
-        mod_path,
-        missing,
-        interactive,
-        getattr(cfg, "translation_section", None) if kind == "json" else None,
-    )
-    return False
+    return bool(changed or unbaselined or (current and not initialized))
 
 
 def main():
@@ -228,9 +311,16 @@ def main():
     parser.add_argument("--check", action="store_true", help="仅检查，不修改")
     parser.add_argument("--sync", action="store_true", help="自动同步（英文占位）")
     parser.add_argument("--interactive", action="store_true", help="交互式输入翻译")
+    parser.add_argument(
+        "--accept-source",
+        action="store_true",
+        help="确认英文源变更并更新基线（首次运行即初始化）",
+    )
 
     args = parser.parse_args()
     setup_cli_logging()  # ponytail: logging set up in main, not at import
+    if args.check and (args.sync or args.interactive or args.accept_source):
+        parser.error("--check 不能与 --sync/--interactive/--accept-source 同时使用")
 
     root_dir = os.path.dirname(os.path.abspath(__file__))
     line_configs, json_configs, qt_configs = load_repo_configs(root_dir)
@@ -249,10 +339,19 @@ def main():
     else:
         parser.print_help()
         return 0
-    check_only = args.check or not (args.sync or args.interactive)
+    allow_write = args.sync or args.interactive
+    check_only = not (allow_write or args.accept_source)
     failed = False
     for kind, cfg in picked:
-        failed = process_task(kind, cfg, os.path.join(root_dir, cfg.dir), check_only, args.interactive) or failed
+        failed = process_task(
+            kind,
+            cfg,
+            os.path.join(root_dir, cfg.dir),
+            check_only,
+            args.interactive,
+            accept_source=args.accept_source,
+            allow_write=allow_write,
+        ) or failed
     return 1 if failed or selection_failed else 0
 
 
