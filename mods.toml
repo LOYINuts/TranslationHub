@@ -276,6 +276,20 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "mcm_flick_translation/showplayerininventory"
+source = "ShowPlayerInInventory_ENGLISH.txt"
+output = "ShowPlayerInInventory_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
+dir = "mcm_flick_translation/qucikitemtransfer"
+source = "Quick Item Transfer_english.txt"
+output = "Quick Item Transfer_chinese.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "skse_menu_translation/coldbreathng"
 source = "ColdBreathNG_Translation.ini"
 output = "ColdBreathNG_Translation_zh.ini"
