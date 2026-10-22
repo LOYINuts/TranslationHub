@@ -180,7 +180,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Riften sits on the eastern shore of Lake Honrich, partly built over its waters. The canal that spans the city was once a major thoroughfare for merchants and fishermen.",
-      "traduit": "裂谷城坐落在霍恩里奇湖东岸，部分城区建在水面之上。贯穿城市的运河曾是商人和渔夫往来的主要通道。",
+      "traduit": "裂谷城坐落在霍利奇湖东岸，部分城区建在水面之上。贯穿城市的运河曾是商人和渔夫往来的主要通道。",
       "emotion": "",
       "bdd": []
     },
@@ -250,7 +250,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Jarl of Windhelm resides in the Palace of Kings, seated upon the ancient throne of Ysgramor like many legendary figures before him.",
-      "traduit": "风舵城的领主居住在国王宫殿，像他之前的许多传奇人物一样，坐在伊斯格拉默的古老王座上。",
+      "traduit": "风舵城的领主居住在众王之殿，像他之前的许多传奇人物一样，坐在伊斯格拉默的古老王座上。",
       "emotion": "",
       "bdd": []
     },
@@ -390,7 +390,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Despite being raised by necromancers, a bone wolf can become a loyal companion, rewarding friendship by carrying items and boosting the effectiveness of attacks against the undead.",
-      "traduit": "尽管由死灵法师培育，骨狼仍能成为忠诚的伙伴，以替主人携带物品、增强对亡灵攻击的效果来回报友谊。",
+      "traduit": "尽管由死灵法师复活，骨狼仍能成为忠诚的伙伴，以替主人携带物品、增强对亡灵攻击的效果来回报友谊。",
       "emotion": "",
       "bdd": []
     },
@@ -410,7 +410,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Elytra are mantis-like arthropods indigenous to the Shivering Isles. Those from the Mania region are more colorful than, but otherwise identical to, their counterparts from Dementia.",
-      "traduit": "鞘翅虫是螳螂般的节肢动物，原产于战栗孤岛。来自狂躁区的鞘翅虫色彩更鲜艳，除此之外与痴呆区的同类并无二致。",
+      "traduit": "鞘翅虫是螳螂般的节肢动物，原产于战栗群岛。来自狂热区的鞘翅虫色彩更鲜艳，除此之外与痴呆区的同类并无二致。",
       "emotion": "",
       "bdd": []
     },
@@ -440,7 +440,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Giants are semi-nomadic, migrating with their mammoth herds to establish camps across Skyrim. They are generally peaceful, so long as potential threats keep their distance.",
-      "traduit": "巨人是半游牧民族，随猛犸群迁徙，在天际各处建立营地。只要潜在威胁保持距离，它们通常很和平。",
+      "traduit": "巨人过着半游牧生活，随猛犸群迁徙，在天际各处建立营地。只要潜在威胁保持距离，他们通常很和平。",
       "emotion": "",
       "bdd": []
     },
@@ -450,7 +450,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Wanderers should steer clear of the camps of giants, lest they find themselves the target of powerful blows from the giants' clubs... or the wrath of their mammoths.",
-      "traduit": "漫游者应远离巨人的营地，以免遭到巨人棍棒的重击……或激怒他们的猛犸。",
+      "traduit": "漫游者应远离巨人的营地，以免遭到巨人棍棒的重击……或招来他们猛犸的怒火。",
       "emotion": "",
       "bdd": []
     },
@@ -620,7 +620,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "\"I told him about the most powerful tribe of vampires in Skyrim, the Volkihar, paranoid and cruel, whose very breath could freeze their victims' blood in the veins.\" - Anonymous, Immortal Blood",
-      "traduit": "“我向他讲述了天际最强大的吸血鬼部族——沃尔基哈。他们偏执而残忍，连呼吸都能让受害者的血液在血管中冻结。”——佚名，《永生之血》",
+      "traduit": "“我向他讲述了天际最强大的吸血鬼部族——沃基哈尔。他们偏执而残忍，连呼吸都能让受害者的血液在血管中冻结。”——佚名，《永生之血》",
       "emotion": "",
       "bdd": []
     },
@@ -772,7 +772,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Golden Saints are proud daedric warriors tasked with guarding the Mania half of the Shivering Isles. They are the rivals of the Dark Seducers, with whom they compete eternally for Sheogorath's favor.",
-      "traduit": "黄金圣徒是骄傲的迪德拉战士，负责守卫战栗孤岛的狂躁半区。它们与黑暗诱惑者互为对手，为争夺谢尔格拉的青睐而永远竞争。",
+      "traduit": "黄金圣徒是骄傲的迪德拉战士，负责守卫战栗群岛的狂热半区。它们与黑暗诱惑者互为对手，为争夺谢尔格拉的青睐而永远竞争。",
       "emotion": "",
       "bdd": []
     },
@@ -792,7 +792,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Golden Saints and Dark Seducers refer to themselves as \"the Aureal\" and \"the Mazken,\" respectively, and both treat all men as inferior.",
-      "traduit": "黄金圣徒和黑暗诱惑者分别自称“奥瑞尔”和“马兹肯”，两者都将所有人类视为低等存在。",
+      "traduit": "黄金圣徒和黑暗诱惑者分别自称“奥瑞尔”和“马兹肯”，两者都将所有凡人视为低等存在。",
       "emotion": "",
       "bdd": []
     },
@@ -802,7 +802,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Dark Seducers are cunning daedric warriors tasked with guarding the Dementia half of the Shivering Isles. They are the rivals of the Golden Saints, with whom they compete eternally for Sheogorath's favor.",
-      "traduit": "黑暗诱惑者是狡诈的迪德拉战士，负责守卫战栗孤岛的痴呆半区。它们与黄金圣徒互为对手，为争夺谢尔格拉的青睐而永远竞争。",
+      "traduit": "黑暗诱惑者是狡诈的迪德拉战士，负责守卫战栗群岛的痴呆半区。它们与黄金圣徒互为对手，为争夺谢尔格拉的青睐而永远竞争。",
       "emotion": "",
       "bdd": []
     },
@@ -822,7 +822,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "\"Any resident of the Shivering Isles can confirm that it is unwise to provoke the Golden Saints and Dark Seducers. They thrive on conflict and warfare, and are quick to punish any and all who disobey.\" - Andoche Marie, Saints and Seducers",
-      "traduit": "“战栗孤岛的任何居民都能证实，招惹黄金圣徒和黑暗诱惑者是极不明智的。它们以冲突和战争为生，对任何违抗者都会迅速施以惩罚。”——安德谢·玛丽，《圣徒与诱惑者》",
+      "traduit": "“战栗群岛的任何居民都能证实，招惹黄金圣徒和黑暗诱惑者是极不明智的。它们以冲突和战争为生，对任何违抗者都会迅速施以惩罚。”——安德谢·玛丽，《圣徒与诱惑者》",
       "emotion": "",
       "bdd": []
     },
@@ -902,7 +902,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Jyggalag is the Daedric Prince of logical order and deduction. He was cursed in antiquity to live as Sheogorath, resuming his true form to reclaim the Shivering Isles at the end of every era.",
-      "traduit": "吉格拉格是逻辑秩序与推演的迪德拉君王。他在远古受到诅咒，以谢尔格拉的身份存在；每个纪元终结时，他会恢复真身，夺回战栗孤岛。",
+      "traduit": "杰盖拉格是逻辑秩序与推演的迪德拉君王。他在远古受到诅咒，以谢尔格拉的身份存在；每个纪元终结时，他会恢复真身，夺回战栗群岛。",
       "emotion": "",
       "bdd": []
     },
@@ -1062,7 +1062,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Kynareth, called Kyne by the Nords, is the goddess of the Storm and widowed warrior-wife of Shor. She guides fallen souls to Sovngarde, earning her the moniker \"Kiss at the End.\"",
-      "traduit": "凯娜瑞丝，诺德人称之为凯娜，是风暴女神，也是战士舒尔的遗孀。她引导堕落的灵魂前往松加德，因而获得“终末之吻”的称号。",
+      "traduit": "凯娜瑞丝，诺德人称之为凯娜，是风暴女神，也是战士舒尔的遗孀。她引导阵亡者的灵魂前往松加德，因而获得“终末之吻”的称号。",
       "emotion": "",
       "bdd": []
     },
@@ -1102,7 +1102,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Ysmir, the \"Dragon of the North,\" is an important hero-god of the Nords and a title bestowed upon great heroes such as Tiber Septim, with King Wulfharth as the first.",
-      "traduit": "伊斯米尔，“北方巨龙”，是诺德人的重要英雄神，也是授予伟大英雄的称号，泰伯·塞普汀即获此称号，而第一位获此殊荣的是乌尔夫哈斯王。",
+      "traduit": "伊斯米尔，“北方巨龙”，是诺德人的重要英雄神，也是授予伟大英雄的称号，泰伯·塞普汀即获此称号，而第一位获此殊荣的是武夫哈斯王。",
       "emotion": "",
       "bdd": []
     },
@@ -1202,7 +1202,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "While dragons, and Dragonborn, possess an innate understanding of the Dragon Language - properly known as Thu'um - anyone can learn to shout with adequate training.",
-      "traduit": "巨龙与龙裔天生理解龙语——正式名称为“吼声”——但任何人只要经过充分训练，都能学会龙吼。",
+      "traduit": "巨龙与龙裔天生理解龙语——正式名称为“吐'目”——但任何人只要经过充分训练，都能学会龙吼。",
       "emotion": "",
       "bdd": []
     },
@@ -1222,7 +1222,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Alduin is the self-proclaimed First-Born of Akatosh who, during the days of the Dragon Cult, forsook his destiny as the World-Eater to conquer Mundus for himself.",
-      "traduit": "奥杜因自称阿卡托什的长子，在巨龙教团时代，他背弃了作为世界吞噬者的命运，转而为自己征服凡世。",
+      "traduit": "奥杜因自称阿卡托什的长子，在拜龙教时代，他背弃了作为世界吞噬者的命运，转而为自己征服梦达思。",
       "emotion": "",
       "bdd": []
     },
@@ -1252,7 +1252,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Originally the first lieutenant and brother of Alduin, Paarthurnax betrayed his kin and taught the power of the Voice to mankind, thereby creating the first Tongues.",
-      "traduit": "帕图纳克斯原本是奥杜因的第一副官兼兄弟，后来背叛了自己的同族，将“声音”的力量传授给人类，从而造就了第一批舌者。",
+      "traduit": "帕图纳克斯原本是奥杜因的第一副官兼兄弟，后来背叛了自己的同族，将吼声的力量传授给人类，从而造就了第一批发声者。",
       "emotion": "",
       "bdd": []
     },
@@ -1362,7 +1362,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Woe to the unwary explorer who delves deep into the burial crypts of the ancient Nords and disturbs the draugr that dwell within.",
-      "traduit": "对于那些粗心的探险者来说，踏入古诺德人墓葬、搅扰住在其中的尸鬼无疑是一场灾难。",
+      "traduit": "粗心的探险者若深入古诺德人的墓葬、搅扰其中的尸鬼，必遭厄运。",
       "emotion": "",
       "bdd": []
     },
@@ -1452,7 +1452,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Falmer tend to make their lairs near Dwemer technology, as if unwilling to wander far from where their ancestors took shelter from the Nords.",
-      "traduit": "伐莫倾向于把巢穴建在锻莫技术附近，仿佛不愿远离祖先躲避诺德人的庇护所。",
+      "traduit": "伐莫倾向于把巢穴建在锻莫技术附近，仿佛不愿远离祖先当年躲避诺德人的庇护所。",
       "emotion": "",
       "bdd": []
     },
@@ -1502,7 +1502,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "When souls trapped in black soul gems are used to power an enchantment, their remnants are sent to the Soul Cairn to wander for eternity.",
-      "traduit": "当被困在黑灵魂石中的灵魂被用来为附魔提供能量时，它们的残迹会被送往灵魂石冢，永远游荡。",
+      "traduit": "当被困在黑色灵魂石中的灵魂被用来为附魔提供能量时，它们的残迹会被送往灵魂石冢，永远游荡。",
       "emotion": "",
       "bdd": []
     },
@@ -1552,7 +1552,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Moth Priests are members of the Cult of the Ancestor Moth who believe their sacred duty is to study the Elder Scrolls - an act that often renders them blind.",
-      "traduit": "先祖蛾祭司是先祖蛾教团的成员，他们相信自己神圣的职责是研究上古卷轴——这一行为常使他们失明。",
+      "traduit": "蛾祭司是先祖蛾教团的成员，他们相信自己神圣的职责是研究上古卷轴——这一行为常使他们失明。",
       "emotion": "",
       "bdd": []
     },
@@ -1612,7 +1612,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Greybeards are an honored cult of monks who live at the ancient monastery of High Hrothgar. They are the most famous of the Tongues, or masters of the Voice.",
-      "traduit": "灰胡子是一支受人尊敬的僧侣教团，居住在古老的霍斯加修道院。他们是最著名的舌者，即声音的大师。",
+      "traduit": "灰胡子是一支受人尊敬的僧侣教团，居住在古老的霍斯加修道院。他们是最著名的发声者，即吼声大师。",
       "emotion": "",
       "bdd": []
     },
@@ -1632,7 +1632,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Followers of the Way of the Voice are generally peaceful, tolerating violence only in times of \"true need.\"",
-      "traduit": "声音之道的追随者通常爱好和平，只在“真正需要”时才容忍暴力。",
+      "traduit": "吼声之道的追随者通常爱好和平，只在“真正需要”时才容忍暴力。",
       "emotion": "",
       "bdd": []
     },
@@ -1642,7 +1642,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The primary task of the Penitus Oculatus (meaning \"the Inner Eyes\") is to protect the Emperor, serving as the eyes, sword, and shield of the Mede Dynasty.",
-      "traduit": "洞察眼（意为“内眼”）的主要任务是保护皇帝，充当梅德王朝的眼睛、剑与盾。",
+      "traduit": "洞察眼（意为“内眼”）的主要任务是保护皇帝，充当迈德王朝的眼睛、剑与盾。",
       "emotion": "",
       "bdd": []
     },
@@ -1662,7 +1662,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Thalmor are the governing council of the Third Aldmeri Dominion. They maintain an embassy in Skyrim and are known to capture and imprison anyone who questions their doctrines.",
-      "traduit": "梭默是第三先祖神州的统治议会。他们在天际设有一座大使馆，并以抓捕和囚禁任何质疑其教义者而闻名。",
+      "traduit": "梭默是第三先祖神洲的统治议会。他们在天际设有一座大使馆，并以抓捕和囚禁任何质疑其教义者而闻名。",
       "emotion": "",
       "bdd": []
     },
@@ -1672,7 +1672,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The First Aldmeri Dominion was an empire founded by Queen Ayrenn in 2E 580. Each of its three incarnations has sought the same objective: to reassert Elven dominance over Tamriel.",
-      "traduit": "第一先祖神州是女王艾琳于 2E 580 年建立的帝国。它的三个化身都追求同一个目标：重新确立精灵对泰姆瑞尔的统治。",
+      "traduit": "第一先祖神洲是女王艾琳于 2E 580 年建立的帝国。先后三次建立的先祖神洲都追求同一个目标：重新确立精灵对泰姆瑞尔的统治。",
       "emotion": "",
       "bdd": []
     },
@@ -1722,7 +1722,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The High King or Queen of Skyrim inherits the throne by birth and holds it for life. When no clear heir exists, a successor is chosen by a Moot of jarls.",
-      "traduit": "天际的至高王或至高女王依血统继承王位，并终身持有。若没有明确的继承人，则由领主们组成的选王会选出继任者。",
+      "traduit": "天际的至高王或至高女王依血统继承王位，并终身持有。若没有明确的继承人，则则由领主议会选出继任者。",
       "emotion": "",
       "bdd": []
     },
@@ -1792,7 +1792,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Oblivion Gates are otherworldly portals used by daedric forces to travel between their various realms and Mundus.",
-      "traduit": "湮灭之门是异界传送门，迪德拉势力利用它们在各个领域与凡世之间往来。",
+      "traduit": "湮灭之门是异界传送门，迪德拉势力利用它们在各个领域与梦达思之间往来。",
       "emotion": "",
       "bdd": []
     },
@@ -1802,7 +1802,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The sale and furnishing of houses are left to a jarl's steward. Several properties are available for purchase in Skyrim's major cities.",
-      "traduit": "房屋的出售和布置由领主的管家负责。天际的主要城市中有几处房产可供购买。",
+      "traduit": "房屋的出售和布置由领主的总管负责。天际的主要城市中有几处房产可供购买。",
       "emotion": "",
       "bdd": []
     },
@@ -1842,7 +1842,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Throughout the wilderness stand runed stones attuned to the heavens. Although their origins are a mystery, they are reputed to grant power to those deemed worthy.",
-      "traduit": "荒野中矗立着与天象相应的符文石。它们的起源是个谜，但据说会赐予被认为有资格者力量。",
+      "traduit": "荒野中矗立着与天象相应的立石。它们的起源是个谜，但据说会赐予被认为有资格者力量。",
       "emotion": "",
       "bdd": []
     },
@@ -1902,7 +1902,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "It is said that prospective members of the Dark Brotherhood must be contacted directly, indicating just how selective the shadowy assassins are in their recruitment.",
-      "traduit": "据说，有意加入黑暗兄弟会的人必须被直接接触，这表明这些暗影刺客在招募时有多么挑剔。",
+      "traduit": "据说，有意加入黑暗兄弟会的人必须由兄弟会主动接触，这表明这些暗影刺客在招募时有多么挑剔。",
       "emotion": "",
       "bdd": []
     },
@@ -1912,7 +1912,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Dark Brotherhood is but a shadow of its former self. Once a feared cult of assassins devoted to the Night Mother, it now operates as little more than a band of murderers for hire.",
-      "traduit": "黑暗兄弟会如今只是昔日自我的一道影子。它曾是一个侍奉夜母、令人恐惧的刺客教团，如今不过是一群受雇杀手。",
+      "traduit": "黑暗兄弟会如今只是昔日的一道影子。它曾是一个侍奉夜母、令人恐惧的刺客教团，如今不过是一群受雇杀手。",
       "emotion": "",
       "bdd": []
     },
@@ -1922,7 +1922,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The ruling council of the Dark Brotherhood, called the Black Hand, consists of four Speakers and one Listener, symbolizing four fingers and a thumb.",
-      "traduit": "黑暗兄弟会的统治议会被称为“黑手”，由四位发言人和一位聆听者组成，象征四根手指和一根拇指。",
+      "traduit": "黑暗兄弟会的统治议会被称为“黑手”，由四位发言者和一位聆听者组成，象征四根手指和一根拇指。",
       "emotion": "",
       "bdd": []
     },
@@ -1992,7 +1992,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Most of the city of Winterhold was lost to the sea in the Great Collapse of 4E 122, but the College was left mysteriously unharmed.",
-      "traduit": "在 4E 122 年的大塌陷中，冬堡城的大部分都沉入大海，但学院却神秘地毫发无损。",
+      "traduit": "在 4E 122 年的大坍陷中，冬堡城的大部分都沉入大海，但学院却神秘地毫发无损。",
       "emotion": "",
       "bdd": []
     },
@@ -2052,7 +2052,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Warriors seeking adventure and kinship may join the Companions in Whiterun, a guild that traces its legacy back to the original Five Hundred Companions of Ysgramor.",
-      "traduit": "寻求冒险与归属感的战士可以加入白漫城的战友团，这个公会的传承可追溯到伊斯格拉默最初的五百勇士。",
+      "traduit": "寻求冒险与归属感的战士可以加入白漫城的战友团，这个公会的传承可追溯到伊斯格拉默最初的五百战友。",
       "emotion": "",
       "bdd": []
     },
@@ -2062,7 +2062,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Circle of Jorrvaskr comprises the most trusted veterans among the ranks of the Companions. They venerate the old ways of \"honor through blood\" and secretly practice lycanthropy.",
-      "traduit": "月瓦斯卡圆环由战友团中最受信任的老兵组成。他们崇尚“以血证荣”的古老方式，并秘密修习狼人化。",
+      "traduit": "月瓦斯卡圆环由战友团中最受信任的老兵组成。他们崇尚“以血证荣”的古道，并秘密修习狼人化。",
       "emotion": "",
       "bdd": []
     },
@@ -2072,7 +2072,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Companions' only recognized leader is the Harbinger, named after Ysgramor, the \"harbinger of us all.\" Their word is highly respected both within Jorrvaskr and around all the nine holds.",
-      "traduit": "战友团唯一公认的领袖是“先驱”，这一称号源自伊斯格拉默——“我们所有人的先驱”。他们的话在月瓦斯卡内部以及九大领都备受尊重。",
+      "traduit": "战友团唯一公认的领袖是“先驱”，这一称号源自伊斯格拉默——“我们所有人的先驱”。他的话在月瓦斯卡内部以及九大领都备受尊重。",
       "emotion": "",
       "bdd": []
     },
@@ -2222,7 +2222,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Chitin is a type of light armor from Morrowind that is crafted from insect shells layered together with resinous glues.",
-      "traduit": "几丁质是来自晨风的一种轻甲，由昆虫外壳与树脂胶层层粘合制成。",
+      "traduit": "甲壳护甲是来自晨风的一种轻甲，由昆虫外壳与树脂胶层层粘合制成。",
       "emotion": "",
       "bdd": []
     },
@@ -2242,7 +2242,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Elven weapons and armor are lightweight and ornately designed, forged from moonstone through techniques perfected by the High Elves.",
-      "traduit": "精灵武器和护甲轻巧且装饰精美，由月长石锻造，采用高精灵完善的技术。",
+      "traduit": "精灵武器和护甲轻巧且装饰精美，由月石锻造，由高精灵完善的技术。",
       "emotion": "",
       "bdd": []
     },
@@ -2372,7 +2372,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Dragons tend to make their lairs atop secluded mountain peaks or near Nordic ruins. They seem to guard - or are perhaps simply drawn to - word walls etched with the Dragon Language.",
-      "traduit": "巨龙倾向于把巢穴建在僻静的山峰之巅或诺德废墟附近。它们似乎在守护——或者只是被吸引到——刻有龙语的文字墙。",
+      "traduit": "巨龙倾向于把巢穴建在僻静的山峰之巅或诺德废墟附近。它们似乎在守护——或者只是被吸引到——刻满龙语的龙语墙。",
       "emotion": "",
       "bdd": []
     },
@@ -2422,7 +2422,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Haafingar is a coastal hold in northwestern Skyrim featuring the famed city of Solitude. It borders High Rock to the west, where the Druadach Mountains begin to diminish.",
-      "traduit": "海芬加领是天际西北部的沿海领，拥有著名的独孤城。它西临高岩，德鲁阿达奇山脉在那里逐渐低缓。",
+      "traduit": "海芬加领是天际西北部的沿海领，拥有著名的独孤城。它西临高岩，德鲁阿达赫山脉在那里逐渐低缓。",
       "emotion": "",
       "bdd": []
     },
@@ -2522,7 +2522,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Evergloam is Nocturnal's ever-shifting domain of twilight and gloom that seems somehow adjacent to all other planes of reality. It can almost be glimpsed in the dark with a quick turn and glance.",
-      "traduit": "永恒黄昏是诺克图娜尔不断变幻的暮色与幽暗领域，似乎以某种方式毗邻所有其他现实位面。在黑暗中迅速转身一瞥，几乎就能看见它。",
+      "traduit": "永暮是诺克图娜尔不断变幻的暮色与幽暗领域，似乎以某种方式毗邻所有其他现实位面。在黑暗中迅速转身一瞥，几乎就能看见它。",
       "emotion": "",
       "bdd": []
     },
@@ -2542,7 +2542,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Shivering Isles, ruled by Sheogorath, are divided into two parts: Mania in the north and Dementia in the south, mirroring the mad god's own split personality.",
-      "traduit": "战栗孤岛由谢尔格拉统治，分为两部分：北方的狂躁与南方的痴呆，映照着这位疯狂之神自己的分裂人格。",
+      "traduit": "战栗群岛由谢尔格拉统治，分为两部分：北方的狂热与南方的痴呆，映照着这位疯狂之神自己的分裂人格。",
       "emotion": "",
       "bdd": []
     },
@@ -2612,7 +2612,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The labyrinth for which Labyrinthian is known was built by Archmage Shalidor in the First Era. The ruins themselves are much older, being what remains of the city of Bromjunaar, capital of the Dragon Cult.",
-      "traduit": "迷城因其迷宫而闻名，这座迷宫由大法师沙利多在第一纪元建造。废墟本身则古老得多，是巨龙教团首都布罗姆琼那城的遗迹。",
+      "traduit": "迷城因其迷宫而闻名，这座迷宫由大法师沙利多在第一纪元建造。废墟本身则古老得多，是拜龙教首都布罗姆琼那城的遗迹。",
       "emotion": "",
       "bdd": []
     },
@@ -2632,7 +2632,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Deep within the Velothi Mountains stands Skuldafn, an ancient Nord temple that holds the only known portal into Sovngarde. Through it, mortals may walk among the dead without dying - if they are able to open it.",
-      "traduit": "维洛西山脉深处矗立着斯库达芬，一座古诺德神庙，拥有已知唯一通往松加德的传送门。通过它，凡人可以在不死亡的情况下行走于亡者之间——前提是他们能够打开它。",
+      "traduit": "维洛锡山脉深处矗立着斯库达芬，一座古诺德神庙，拥有已知唯一通往松加德的传送门。通过它，凡人可以在不死亡的情况下行走于亡者之间——前提是他们能够打开它。",
       "emotion": "",
       "bdd": []
     },
@@ -2652,7 +2652,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Chantry of Auri-El was at last overwhelmed by the sheer numbers of the Falmer sometime in the First Era, and so fell the final bastion of the Snow Elves.",
-      "traduit": "奥瑞尔圣堂最终在第一纪元的某个时候被数量众多的伐莫攻陷，雪精灵最后的堡垒就此陷落。",
+      "traduit": "奥瑞艾尔圣堂最终在第一纪元的某个时候被数量众多的伐莫攻陷，雪精灵最后的堡垒就此陷落。",
       "emotion": "",
       "bdd": []
     },
@@ -2712,7 +2712,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Great War was a large-scale conflict that occurred in Cyrodiil and Hammerfell between the Third Empire of Tamriel and the invading Aldmeri Dominion from 4E 171 to 4E 175.",
-      "traduit": "浩大战争是泰姆瑞尔第三帝国与入侵的先祖神州于 4E 171 至 4E 175 年间，在赛洛迪尔和落锤爆发的大规模冲突。",
+      "traduit": "浩大战争是泰姆瑞尔第三帝国与入侵的先祖神洲于 4E 171 至 4E 175 年间，在希罗帝尔和落锤爆发的大规模冲突。",
       "emotion": "",
       "bdd": []
     },
@@ -2722,7 +2722,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Only by signing the peace treaty known as the White-Gold Concordat was the Empire able to survive the onslaught of the high-elven Aldmeri Dominion, and thus end the Great War.",
-      "traduit": "帝国只有签署名为《白金协定》的和平条约，才得以在高精灵先祖神州的猛攻下幸存，从而结束浩大战争。",
+      "traduit": "帝国只有签署名为《白金协定》的和平条约，才得以在高精灵先祖神洲的猛攻下幸存，从而结束浩大战争。",
       "emotion": "",
       "bdd": []
     },
@@ -2732,7 +2732,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Empress Katariah I was the thirteenth ruler of the Septim Dynasty, presiding over the Third Empire from 3E 153 to 3E 200. The personal ship of Emperor Titus Mede II was named in her honor.",
-      "traduit": "卡塔莉亚一世女皇是塞普汀王朝的第十三位统治者，于 3E 153 至 3E 200 年统治第三帝国。提图斯·梅德二世皇帝的私人船只以她的名字命名。",
+      "traduit": "卡塔瑞亚一世女皇是塞普汀王朝的第十三位统治者，于 3E 153 至 3E 200 年统治第三帝国。提图斯·迈德二世皇帝的私人船只以她的名字命名。",
       "emotion": "",
       "bdd": []
     },
@@ -2742,7 +2742,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Staff of Worms was once owned by Mannimarco, the King of Worms, an Altmer lich who founded the Order of the Black Worm.",
-      "traduit": "蠕虫之杖曾属于曼尼马可——“蠕虫之王”，一位创立黑虫教团的高精灵巫妖。",
+      "traduit": "蠕虫之杖曾属于曼尼马可——“蠕虫之王”，一位创立黑虫教团的傲特莫巫妖。",
       "emotion": "",
       "bdd": []
     },
@@ -2762,7 +2762,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Oblivion Crisis was a total war between the people of Tamriel and the invading daedric hordes of Mehrunes Dagon. It began with the assassination of Uriel Septim VII and all his known heirs in 3E 433.",
-      "traduit": "湮灭危机是泰姆瑞尔人民与梅鲁涅斯·大衮入侵的迪德拉大军之间的全面战争。它始于 3E 433 年乌里尔·塞普汀七世及其所有已知继承人遇刺。",
+      "traduit": "湮灭危机是泰姆瑞尔人民与梅鲁涅斯·大衮入侵的迪德拉大军之间的全面战争。它始于 3E 433 年尤瑞尔·塞普汀七世及其所有已知继承人遇刺。",
       "emotion": "",
       "bdd": []
     },
@@ -2772,7 +2772,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Myths passed down by the Reachmen tell of a mighty king who, armed with a flaming sword, rallied his people to repel the armies of Cyrodiil in the First Era.",
-      "traduit": "瑞驰人流传的神话说，一位强大的国王手持燃烧之剑，在第一纪元集结他的人民击退了赛洛迪尔的军队。",
+      "traduit": "瑞驰人流传的神话说，一位强大的国王手持燃烧之剑，在第一纪元集结他的人民击退了希罗帝尔的军队。",
       "emotion": "",
       "bdd": []
     },
@@ -2782,7 +2782,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The \"Red Year\" was the name given to the disaster of 4E 5 when the meteor Baar Dau crashed into Vivec City, leading to the eruption of Red Mountain.",
-      "traduit": "“红年”是 4E 5 年那场灾难的名称：流星巴尔·道坠入维威克城，引发红山喷发。",
+      "traduit": "“红色之年”是 4E 5 年那场灾难的名称：流星巴尔·达乌坠入维威克城，引发红山喷发。",
       "emotion": "",
       "bdd": []
     },
@@ -2792,7 +2792,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Saint Jiub the Eradicator is a hero of Morrowind, widely esteemed for driving the cliff racers from the island of Vvardenfell.",
-      "traduit": "“根除者”圣朱布是晨风的英雄，因将崖跃兽赶出瓦登费尔岛而广受尊崇。",
+      "traduit": "“根除者”圣鸠步是晨风的英雄，因将峭壁行者赶出瓦登费尔岛而广受尊崇。",
       "emotion": "",
       "bdd": []
     },
@@ -2862,7 +2862,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Mede Dynasty seized the Ruby Throne in 4E 22 with the crowning of the warlord Titus Mede I. Their reign continues with Titus Mede II, the current Emperor of Tamriel.",
-      "traduit": "梅德王朝于 4E 22 年通过拥立军阀提图斯·梅德一世而夺取红宝石王座。其统治延续至现任泰姆瑞尔皇帝提图斯·梅德二世。",
+      "traduit": "迈德王朝于 4E 22 年通过拥立军阀提图斯·迈德一世而夺取红宝石王座。其统治延续至现任泰姆瑞尔皇帝提图斯·迈德二世。",
       "emotion": "",
       "bdd": []
     },
@@ -2872,7 +2872,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The War of the Red Diamond began in 3E 121 when Uriel III seized the Imperial throne with his mother, Queen Potema. It ended in 3E 137 with her defeat at the Siege of Solitude.",
-      "traduit": "红钻战争始于 3E 121 年，乌里尔三世与其母波特玛王后夺取帝位。战争于 3E 137 年以波特玛在独孤城之围中失败而告终。",
+      "traduit": "红钻战争始于 3E 121 年，尤瑞尔三世与其母波特玛王后夺取帝位。战争于 3E 137 年以波特玛在独孤城之围中失败而告终。",
       "emotion": "",
       "bdd": []
     },
@@ -2882,7 +2882,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Nord heroes Felldir the Old, Gormlaith Golden-Hilt, and Hakon One-Eye used the Dragonrend shout and an Elder Scroll to cast Alduin adrift through time - an act that granted mankind the edge to end the Dragon War.",
-      "traduit": "诺德英雄“老人”费迪尔、戈姆莱斯·金柄和“独眼”哈孔使用龙魂撕裂龙吼和一卷上古卷轴，将奥杜因放逐到时间之中——这一举动为人类赢得了结束巨龙战争的优势。",
+      "traduit": "诺德英雄“老人”费迪尔、葛姆拉丝·金柄和“独眼”哈肯使用龙魂撕裂龙吼和一卷上古卷轴，将奥杜因放逐到时间之中——这一举动为人类赢得了结束巨龙战争的优势。",
       "emotion": "",
       "bdd": []
     },
@@ -2922,7 +2922,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Greybeards follow the teachings of Jurgen Windcaller, who believed that the power of the Voice was a means of attaining enlightenment.",
-      "traduit": "灰胡子遵循尤根·唤风者的教诲，他认为“声音”的力量是达到启迪的手段。",
+      "traduit": "灰胡子遵循约根·唤风者的教诲，他认为吼声的力量是达到启迪的手段。",
       "emotion": "",
       "bdd": []
     },
@@ -2932,7 +2932,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Atromancy is a branch of Conjuration focused on the summoning of atronachs, elemental daedra from the planes of Oblivion.",
-      "traduit": "元素召唤是召唤系的一个分支，专注于召唤元素迪德拉——来自湮灭位面的元素生物。",
+      "traduit": "侍灵召唤是召唤系的一个分支，专注于召唤侍灵——来自湮灭位面的元素迪德拉。",
       "emotion": "",
       "bdd": []
     },
@@ -3122,7 +3122,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Some of Morrowind's most hostile wilderness is home to the nomadic Dunmeri people known as Ashlanders, who have worshipped the three Good Daedra for millennia.",
-      "traduit": "晨风最险恶的一些荒野中，居住着被称为“灰烬之民”的游牧暗精灵，他们崇拜三位善神已有数千年之久。",
+      "traduit": "晨风最险恶的一些荒野中，居住着被称为“灰地民”的游牧暗精灵，他们崇拜三位善神已有数千年之久。",
       "emotion": "",
       "bdd": []
     },
@@ -3132,7 +3132,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Ashlanders practice the ancestor-worshipping tribal culture left behind by the House Dunmer. Each tribe is led by the strongest warrior among them, who serves as their Ashkhan.",
-      "traduit": "灰烬之民延续着定居暗精灵各大氏族留下的祖先崇拜部落文化。每个部落由其中最强大的战士领导，他被称为“灰烬可汗”。",
+      "traduit": "灰地民延续着大家族暗精灵留下的祖先崇拜部落文化。每个部落由其中最强大的战士领导，他被称为“灰地可汗”。",
       "emotion": "",
       "bdd": []
     },
@@ -3142,7 +3142,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Morag Tong is an ancient guild of assassins who serve the Daedric Prince Mephala. The last Emperor of the Reman Dynasty, Reman Cyrodiil III, is counted among their victims.",
-      "traduit": "莫拉格·汤是一支古老的刺客公会，侍奉迪德拉君王梅法拉。雷曼王朝的最后一位皇帝雷曼·赛洛迪尔三世也在其受害者之列。",
+      "traduit": "莫拉格堂是一支古老的刺客公会，侍奉迪德拉君王梅法拉。雷曼王朝的最后一位皇帝雷曼·希罗帝尔三世也在其受害者之列。",
       "emotion": "",
       "bdd": []
     },
@@ -3152,7 +3152,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Sanctioned to perform legal murder, the Morag Tong were frequently hired by the Great Houses to eliminate their rivals - a preferred alternative to open conflict.",
-      "traduit": "莫拉格·汤获准执行合法谋杀，常被各大氏族雇佣来除掉对手——这是比公开冲突更受青睐的选择。",
+      "traduit": "莫拉格堂获准执行合法谋杀，常被各大家族雇佣来除掉对手——这是比公开冲突更受青睐的选择。",
       "emotion": "",
       "bdd": []
     },
@@ -3162,7 +3162,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Ordinators were guards and priest-soldiers of the Tribunal Temple. Once tasked with enforcing Temple law, they are now persecuted by the New Temple as heretics.",
-      "traduit": "审判席教团的守卫与祭司战士被称为“秩序官”。他们曾负责执行教团法律，如今却被新教团当作异端迫害。",
+      "traduit": "审判席教团的守卫与祭司战士被称为“协调使”。他们曾负责执行教团法律，如今却被新神殿当作异端迫害。",
       "emotion": "",
       "bdd": []
     },
@@ -3172,7 +3172,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Raven Rock, Solstheim's primary settlement, is firmly under the control of House Redoran, the most powerful of the Great Houses of Morrowind.",
-      "traduit": "乌鸦岩是索瑟海姆的主要定居点，牢牢控制在晨风最强大的大氏族——瑞多然家族手中。",
+      "traduit": "鸦石镇是索瑟海姆的主要定居点，牢牢控制在晨风最强大的大家族——瑞多然家族手中。",
       "emotion": "",
       "bdd": []
     },
@@ -3182,7 +3182,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Vvardenfell is dominated by a massive volcano called Red Mountain, said to have formed where the Heart of Lorkhan fell. Formerly the tallest mountain in Tamriel, its height was permanently reduced by the Red Year eruption.",
-      "traduit": "瓦登费尔岛被一座名为红山的巨大火山所主宰，据说它形成于洛克汗之心坠落之处。它曾是泰姆瑞尔最高的山，但红年喷发永久降低了它的高度。",
+      "traduit": "瓦登费尔岛被一座名为红山的巨大火山所主宰，据说它形成于洛克汗之心坠落之处。它曾是泰姆瑞尔最高的山，但红色之年的喷发永久降低了它的高度。",
       "emotion": "",
       "bdd": []
     },
@@ -3192,7 +3192,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Following the disappearance of the Tribunal, the New Temple restored the original Dunmer faith: worship of the three Good Daedra - Azura, Mephala, and Boethiah - referred to as \"the Reclamations.\"",
-      "traduit": "审判席消失后，新教团恢复了暗精灵的原始信仰：崇拜三位善神——阿祖拉、梅法拉和波耶西亚——被称为“回归者”。",
+      "traduit": "审判席消失后，新神殿恢复了暗精灵的原始信仰：崇拜三位善神——阿祖拉、梅法拉和波耶西亚——这三位善神被称为“收复者”。",
       "emotion": "",
       "bdd": []
     },
@@ -3202,7 +3202,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Morrowind is governed by the Grand Council of five Great Houses, which function as political parties: House Redoran, House Telvanni, House Sadras, House Indoril, and House Dres.",
-      "traduit": "晨风由五个大氏族的长老议会统治，这些氏族充当政党：瑞多然家族、泰尔瓦尼家族、萨德拉斯家族、因多里尔家族和德雷斯家族。",
+      "traduit": "晨风由五个大家族的大议会统治，这些大家族充当政党：瑞多然家族、泰瓦尼家族、萨德拉斯家族、因多瑞尔家族和德莱斯家族。",
       "emotion": "",
       "bdd": []
     },
@@ -3212,7 +3212,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "House Dres is focused mainly on agriculture. Its members, despite their notorious history as slavers, have since accepted Imperial rule and renounced the trade.",
-      "traduit": "德雷斯家族主要专注于农业。其成员虽有臭名昭著的奴隶主历史，但后来接受了帝国统治并放弃了奴隶贸易。",
+      "traduit": "德莱斯家族主要专注于农业。其成员虽有臭名昭著的奴隶主历史，但后来接受了帝国统治并放弃了奴隶贸易。",
       "emotion": "",
       "bdd": []
     },
@@ -3222,7 +3222,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "House Hlaalu was concerned with business and diplomacy. Its alliance with the Empire, amid rising anti-Imperial sentiment, left it stripped of its Great House status in the early Fourth Era.",
-      "traduit": "哈拉鲁家族关注商业与外交。在反帝国情绪高涨之际，它与帝国的结盟使其在第四纪元早期被剥夺了大氏族地位。",
+      "traduit": "哈拉鲁家族关注商业与外交。在反帝国情绪高涨之际，它与帝国的结盟使其在第四纪元早期被剥夺了大家族地位。",
       "emotion": "",
       "bdd": []
     },
@@ -3232,7 +3232,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "House Indoril claims kinship with the Tribunal and boasts such heroes as Indoril Nerevar. Its members are now considered one and the same with the priesthood of the New Temple.",
-      "traduit": "因多里尔家族声称与审判席有亲缘关系，并拥有因多里尔·尼瑞瓦这样的英雄。如今其成员被视为与新教团祭司阶层融为一体。",
+      "traduit": "因多瑞尔家族声称与审判席有亲缘关系，并拥有因多瑞尔·尼瑞瓦这样的英雄。如今其成员被视为与新神殿祭司阶层融为一体。",
       "emotion": "",
       "bdd": []
     },
@@ -3242,7 +3242,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "\"Duty, gravity, and piety: these are our watchwords. We are the wartime defenders of the House Dunmer of Morrowind.\" - Vindamea Redoran, Crafting Motif 52",
-      "traduit": "“责任、庄重与虔诚：这些是我们的箴言。我们是晨风定居暗精灵的战时保卫者。”——温达梅亚·瑞多然，《制作样式 52》",
+      "traduit": "“责任、庄重与虔诚：这些是我们的箴言。我们是晨风大家族暗精灵的战时保卫者。”——温达梅亚·瑞多然，《制作样式 52》",
       "emotion": "",
       "bdd": []
     },
@@ -3252,7 +3252,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The wizard-lords of House Telvanni have been mostly peaceful throughout history, tending to isolate themselves in mushroom-hut villages to pursue wisdom and arcane mastery.",
-      "traduit": "泰尔瓦尼家族的法师领主在历史上大多爱好和平，倾向于把自己隔绝在蘑菇屋村落中，追求智慧与奥术精通。",
+      "traduit": "泰瓦尼家族的法师领主在历史上大多爱好和平，倾向于把自己隔绝在蘑菇屋村落中，追求智慧与奥术精通。",
       "emotion": "",
       "bdd": []
     },
@@ -3272,7 +3272,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Before ascending as the mother-goddess, Almalexia was the mortal wife of Indoril Nerevar. She was worshipped in the Tribunal as the source of compassion and the protector of the weak.",
-      "traduit": "在升格为母神之前，阿玛莱西亚是因多里尔·尼瑞瓦的凡人妻子。她在审判席中被崇拜为慈悲之源与弱者保护者。",
+      "traduit": "在升格为母神之前，阿玛莱西亚是因多瑞尔·尼瑞瓦的凡人妻子。她在审判席中被崇拜为慈悲之源与弱者保护者。",
       "emotion": "",
       "bdd": []
     },
@@ -3302,7 +3302,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Altmer, also known as High Elves, are the tall elven inhabitants of the Summerset Isles. They are recognized as the longest-living race in Tamriel and the most gifted in the magical arts.",
-      "traduit": "奥德莫，又称高精灵，是居住在夏暮群岛的高个子精灵。他们被公认为泰姆瑞尔最长寿的种族，也是最具魔法天赋的种族。",
+      "traduit": "傲特莫，又称高精灵，是居住在夏暮岛的高个子精灵。他们被公认为泰姆瑞尔最长寿的种族，也是最具魔法天赋的种族。",
       "emotion": "",
       "bdd": []
     },
@@ -3322,7 +3322,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The early Aldmer believed they descended from the Aedra (which roughly translates to \"our ancestors\"), who populated Mundus in the aftermath of Lorkhan's deception.",
-      "traduit": "早期奥德莫相信自己是伊德拉的后裔（大致意为“我们的祖先”），这些伊德拉在洛克汗的欺骗之后为孟达斯带来了生灵。",
+      "traduit": "早期奥德莫相信自己是伊德拉的后裔（大致意为“我们的祖先”），这些伊德拉在洛克汗的欺骗之后于梦达思繁衍生灵。",
       "emotion": "",
       "bdd": []
     },
@@ -3332,7 +3332,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Argonians are a reptilian race of beastfolk native to Black Marsh. They excel in stealth and spellcasting, naturally resist poison and disease, and can breathe underwater.",
-      "traduit": "阿尔贡是原生于黑沼的爬行类兽人种族。他们擅长潜行与施法，天生抵抗毒素与疾病，还能在水下呼吸。",
+      "traduit": "阿尔贡是原生于黑沼泽的爬行类兽族。他们擅长潜行与施法，天生抵抗毒素与疾病，还能在水下呼吸。",
       "emotion": "",
       "bdd": []
     },
@@ -3342,7 +3342,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Deep within the swamps of Black Marsh grows a race of giant spore trees called the Hist. They are believed to be sentient and to have given life to Argonians, who call themselves \"the people of the root.\"",
-      "traduit": "黑沼沼泽深处生长着一种名为“希斯特”的巨型孢子树。据信它们具有感知能力，并赋予阿尔贡生命，阿尔贡人称自己为“根之子民”。",
+      "traduit": "黑沼泽的沼泽深处生长着一种名为“希斯特”的巨型孢子树。据信它们具有感知能力，并赋予阿尔贡生命，阿尔贡人称自己为“根之子民”。",
       "emotion": "",
       "bdd": []
     },
@@ -3362,7 +3362,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Bosmer, also known as Wood Elves, are the elven clanfolk of Valenwood. Well-suited for scouting and thievery, they have an affinity for archery and the ability to command simple-minded beasts.",
-      "traduit": "波斯莫，又称木精灵，是瓦伦森林的精灵部族。他们非常适合侦察与偷窃，擅长箭术，并能驱使头脑简单的野兽。",
+      "traduit": "波斯莫，又称木精灵，是威伦森林的精灵部族。他们非常适合侦察与偷窃，擅长箭术，并能驱使头脑简单的野兽。",
       "emotion": "",
       "bdd": []
     },
@@ -3372,7 +3372,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Green Pact is a strict code upheld by the Bosmer of Valenwood that forbids harming the forest. Its Meat Mandate involves strict carnivory and the rite of consuming the flesh of fallen foes.",
-      "traduit": "绿色契约是瓦伦森林的波斯莫所遵守的严格准则，禁止伤害森林。其中的“食肉令”要求严格食肉，并包括食用倒下的敌人之肉的仪式。",
+      "traduit": "绿约是威伦森林的波斯莫所遵守的严格准则，禁止伤害森林。其中的“食肉令”要求严格食肉，并包括食用倒下的敌人之肉的仪式。",
       "emotion": "",
       "bdd": []
     },
@@ -3422,7 +3422,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Dunmer, also known as Dark Elves, are the gray-skinned elven inhabitants of Morrowind. They possess an innate resistance to fire and can skillfully integrate swords, bows, and Destruction magic in battle.",
-      "traduit": "暗精灵是晨风的灰皮肤精灵，天生抗火，能在战斗中巧妙结合剑、弓与毁灭系魔法。",
+      "traduit": "丹莫，又称暗精灵，是晨风的灰皮肤精灵，天生抗火，能在战斗中巧妙结合剑、弓与毁灭系魔法。",
       "emotion": "",
       "bdd": []
     },
@@ -3442,7 +3442,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "As punishment for the betrayal of Indoril Nerevar, the Dunmer were cursed by the Daedric Prince Azura with ashen skin and fiery eyes, binding their fate to the Tribunal until the end of time.",
-      "traduit": "作为对背叛因多里尔·尼瑞瓦的惩罚，暗精灵被迪德拉君王阿祖拉诅咒，皮肤化为灰烬色、双眼燃火，命运被束缚于审判席，直到时间终结。",
+      "traduit": "作为对背叛因多瑞尔·尼瑞瓦的惩罚，暗精灵被迪德拉君王阿祖拉诅咒，皮肤化为灰烬色、双眼燃火，命运被束缚于审判席，直到时间终结。",
       "emotion": "",
       "bdd": []
     },
@@ -3452,7 +3452,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Imperials are the well-spoken human denizens of Cyrodiil, known for the discipline and training of their citizen armies, as well as their respect for the rule of law.",
-      "traduit": "帝国人是赛洛迪尔的健谈人类居民，以其公民军的纪律与训练以及对法治的尊重而闻名。",
+      "traduit": "帝国人是希罗帝尔能言善辩的人类居民，以其公民军的纪律与训练以及对法治的尊重而闻名。",
       "emotion": "",
       "bdd": []
     },
@@ -3482,7 +3482,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Khajiit are a feline race of beastfolk native to Elsweyr. Their intelligence and agility make them natural thieves and acrobats, while their ferocity makes them equally capable warriors.",
-      "traduit": "卡吉特是原生于艾斯维尔的猫科兽人种族。他们的智慧与敏捷使他们成为天生的盗贼和杂技演员，而他们的凶猛也使他们同样能成为战士。",
+      "traduit": "卡吉特是原生于艾斯维尔的猫科兽族。他们的智慧与敏捷使他们成为天生的盗贼和杂技演员，而他们的凶猛也使他们同样能成为战士。",
       "emotion": "",
       "bdd": []
     },
@@ -3592,7 +3592,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The cultural identity of the Redguards is deeply rooted in the sands of the Alik'r Desert. The youth of Hammerfell must undergo a rite of passage in its desolate wastes to prove their endurance and discipline.",
-      "traduit": "红卫人的文化身份深深植根于阿利克沙漠的沙土之中。落锤的年轻人必须在荒凉的沙漠中经历成年礼，以证明自己的耐力与纪律。",
+      "traduit": "红卫人的文化身份深深植根于阿里克’尔沙漠的沙土之中。落锤的年轻人必须在荒凉的沙漠中经历成年礼，以证明自己的耐力与纪律。",
       "emotion": "",
       "bdd": []
     },
@@ -3602,7 +3602,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Ayleids were a powerful elven race with a culture steeped in magic and mystery. Having disappeared sometime in the First Era, their age-worn ruins are scattered across Cyrodiil.",
-      "traduit": "亚历德是一个强大的精灵种族，其文化浸透着魔法与神秘。他们在第一纪元的某个时候消失，饱经岁月侵蚀的废墟散布在赛洛迪尔。",
+      "traduit": "亚历德是一个强大的精灵种族，其文化浸透着魔法与神秘。他们在第一纪元的某个时候消失，饱经岁月侵蚀的废墟散布在希罗帝尔。",
       "emotion": "",
       "bdd": []
     },
@@ -3662,7 +3662,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Dragon Cult built high temples to honor the dragons and inter the faithful. Many still stand as forsaken ruins, haunted in undeath by those entombed within.",
-      "traduit": "巨龙教团建造高耸的神庙来荣耀巨龙并安葬信徒。许多神庙仍作为废弃废墟矗立，被埋葬其中的亡者以亡灵之身萦绕。",
+      "traduit": "拜龙教建造高耸的神庙来荣耀巨龙并安葬信徒。许多神庙仍作为废弃废墟矗立，被埋葬其中的亡者以亡灵之身萦绕。",
       "emotion": "",
       "bdd": []
     },
@@ -3672,7 +3672,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "In days of old, when dragons ruled over the land, there lived mortal men who worshipped them as gods. This Dragon Cult has long since died out, though their ruins still loom over Skyrim.",
-      "traduit": "古时，巨龙统治大地，有凡人将它们奉为神明。这个巨龙教团早已消亡，但他们的废墟仍矗立在天际之上。",
+      "traduit": "古时，巨龙统治大地，有凡人将它们奉为神明。这个拜龙教早已消亡，但它的废墟仍矗立在天际之上。",
       "emotion": "",
       "bdd": []
     },
@@ -3682,7 +3682,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The ancient Nords followed the Old Ways: the worship of animal gods, most notably the dragon, in the form of totems.",
-      "traduit": "古诺德人遵循古老方式：以图腾形式崇拜动物神，其中最著名的是龙。",
+      "traduit": "古诺德人遵循古道：以图腾形式崇拜动物神，其中最著名的是龙。",
       "emotion": "",
       "bdd": []
     },
@@ -3692,7 +3692,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Nordic ruins often contain word walls, inscribed with long-forgotten power through words in the Dragon Language - a series of etched runes resembling claw marks.",
-      "traduit": "诺德废墟中常有文字墙，上面刻着龙语词语所承载的早已被遗忘的力量——一系列类似爪痕的符文。",
+      "traduit": "诺德废墟中常有龙语墙，上面刻着龙语词语所承载的早已被遗忘的力量——一系列类似爪痕的符文。",
       "emotion": "",
       "bdd": []
     },
@@ -3702,7 +3702,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Nords believe the Storm Voice is a gift from Kyne, through which a Tongue can channel their vital essence into a Shout - a powerful form of magic once unique to dragons.",
-      "traduit": "诺德人相信风暴之音是凯娜的恩赐，舌者可以通过它将自身生命力注入吼声——一种曾为巨龙独有的强大魔法。",
+      "traduit": "诺德人相信风暴之音是凯娜的恩赐，发声者可以通过它将自身生命力注入吼声——一种曾为巨龙独有的强大魔法。",
       "emotion": "",
       "bdd": []
     },
@@ -3722,7 +3722,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "By invoking Dragon Aspect, skilled wielders of the Voice can enhance their attack power, bolster their defense with spectral armor, and hasten shout recovery.",
-      "traduit": "通过唤起“龙之化身”，熟练的“声音”使用者能提升攻击力、以幽灵护甲强化防御，并加快吼声恢复。",
+      "traduit": "通过唤起“龙之化身”，熟练的吼声使用者能提升攻击力、以幽灵护甲强化防御，并加快吼声恢复。",
       "emotion": "",
       "bdd": []
     },
@@ -3742,7 +3742,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Learning to use the Thu'um typically demands many years of meditation and training. The most powerful Tongues can cause great devastation with so little as a whisper.",
-      "traduit": "学习使用“吼声”通常需要多年冥想与训练。最强大的舌者只需低语，便能造成巨大破坏。",
+      "traduit": "学习使用“吐'目”通常需要多年冥想与训练。最强大的发声者只需低语，便能造成巨大破坏。",
       "emotion": "",
       "bdd": []
     },
@@ -3762,7 +3762,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The three words of Unrelenting Force (Force, Balance, Push) chain together to hurl objects great distances and briefly render enemies helpless.",
-      "traduit": "“无情之力”的三个词（力、均衡、推）串联起来，能将物体抛向远方，并短暂使敌人失去行动能力。",
+      "traduit": "“冷酷之力”的三个词（力、均衡、推）串联起来，能将物体抛向远方，并短暂使敌人失去行动能力。",
       "emotion": "",
       "bdd": []
     },
@@ -3772,7 +3772,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The ancient Nords erected many word walls across the land. Their true power lies dormant, awaiting a worthy Dragonborn - and the souls of slain dragons - to awaken it.",
-      "traduit": "古诺德人在大地上竖立了许多文字墙。它们真正的力量处于休眠状态，等待一位值得的龙裔——以及被杀巨龙的灵魂——来唤醒。",
+      "traduit": "古诺德人在大地上竖立了许多龙语墙。它们真正的力量处于休眠状态，等待一位值得的龙裔——以及被杀巨龙的灵魂——来唤醒。",
       "emotion": "",
       "bdd": []
     },
@@ -3932,7 +3932,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Ruby Throne in Cyrodiil's White-Gold Tower has been the ruling seat of the Empire of Tamriel since the First Empire of Saint Alessia. As of the Fourth Era, the Third Empire comprises only Skyrim, High Rock, and Cyrodiil.",
-      "traduit": "赛洛迪尔白金塔中的红宝石王座，自圣阿莱西亚的第一帝国以来一直是泰姆瑞尔帝国的统治宝座。到第四纪元，第三帝国仅包括天际、高岩和赛洛迪尔。",
+      "traduit": "希罗帝尔白金塔中的红宝石王座，自圣阿莱西亚的第一帝国以来一直是泰姆瑞尔帝国的统治宝座。到第四纪元，第三帝国仅包括天际、高岩和希罗帝尔。",
       "emotion": "",
       "bdd": []
     },
@@ -3942,7 +3942,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Black Marsh, also known as Argonia, is a dense swampland region in southeastern Tamriel inhabited by the Argonians. It is a land teeming with poisonous plants and violent predators.",
-      "traduit": "黑沼，又称阿尔戈尼亚，是泰姆瑞尔东南部一片茂密的沼泽地区，居住着阿尔贡人。这片土地上遍布有毒植物和凶猛的掠食者。",
+      "traduit": "黑沼泽，又称阿尔戈尼亚，是泰姆瑞尔东南部一片茂密的沼泽地区，居住着阿尔贡人。这片土地上遍布有毒植物和凶猛的掠食者。",
       "emotion": "",
       "bdd": []
     },
@@ -3952,7 +3952,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Cyrodiil, sometimes called \"the Heartland,\" is a temperate province in central Tamriel from which the Imperials hail. It holds the Empire's capital, the Imperial City, with the White-Gold Tower at its heart.",
-      "traduit": "赛洛迪尔有时被称为“心脏之地”，是泰姆瑞尔中部一个气候温和的省份，帝国人便来自这里。它拥有帝国首都帝都，白金塔位于其中心。",
+      "traduit": "希罗帝尔有时被称为“中心腹地”，是泰姆瑞尔中部一个气候温和的省份，帝国人便来自这里。它拥有帝国的首都——帝都，白金塔位于其中心。",
       "emotion": "",
       "bdd": []
     },
@@ -3972,7 +3972,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Hammerfell is a rugged province in western Tamriel from which the Redguards hail. The region boasts a variety of landscapes, including subtropical beaches, lush jungles, and the vast Alik'r Desert.",
-      "traduit": "落锤是泰姆瑞尔西部一个崎岖的省份，红卫人便来自这里。该地区拥有多样的地貌，包括亚热带海滩、茂密丛林和广袤的阿利克沙漠。",
+      "traduit": "落锤是泰姆瑞尔西部一个崎岖的省份，红卫人便来自这里。该地区拥有多样的地貌，包括亚热带海滩、茂密丛林和广袤的阿里克’尔沙漠。",
       "emotion": "",
       "bdd": []
     },
@@ -4012,7 +4012,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Summerset Isles lie southwest of Tamriel in the Sea of Pearls and are home to the High Elves. Consisting of fourteen islands, they make up a warm region with colorful forests and idyllic meadows.",
-      "traduit": "夏暮群岛位于泰姆瑞尔西南的珍珠海，是高精灵的家园。它由十四个岛屿组成，构成一个拥有绚丽森林和田园牧歌般草甸的温暖地区。",
+      "traduit": "夏暮岛位于泰姆瑞尔西南的珍珠海，是高精灵的家园。它由十四个岛屿组成，构成一个拥有绚丽森林和田园牧歌般草甸的温暖地区。",
       "emotion": "",
       "bdd": []
     },
@@ -4022,7 +4022,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Valenwood is a densely forested region in southwestern Tamriel, inhabited by the Wood Elves. Its rainforests are roamed by gigantic, migratory trees whose branches host entire cities.",
-      "traduit": "瓦伦森林是泰姆瑞尔西南部一片森林茂密的地区，居住着木精灵。其雨林中游荡着巨大的迁徙树木，树枝上承载着整座城市。",
+      "traduit": "威伦森林是泰姆瑞尔西南部一片森林茂密的地区，居住着木精灵。其雨林中游荡着巨大的迁徙树木，树枝上承载着整座城市。",
       "emotion": "",
       "bdd": []
     },
@@ -4042,7 +4042,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The horses of Skyrim may be slower than those from Cyrodiil, but what they lack in swiftness is made up for in hardiness.",
-      "traduit": "天际的马可能比赛洛迪尔的马慢，但它们缺乏的速度由坚韧弥补。",
+      "traduit": "天际的马可能比希罗帝尔的马慢，但速度上的不足由坚韧弥补。",
       "emotion": "",
       "bdd": []
     },
@@ -4132,7 +4132,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Revered dragons stand out from their kin with a beaked mouth and distinct lack of teeth. The true danger lies in their unique shout, which drains the life force of its unlucky targets.",
-      "traduit": "尊龙以其喙状嘴和明显缺少牙齿而在同类中脱颖而出。真正的危险在于它们独特的吼声，能吸取不幸目标的生命力。",
+      "traduit": "庄严龙以其喙状嘴和明显缺少牙齿而在同类中脱颖而出。真正的危险在于它们独特的吼声，能吸取不幸目标的生命力。",
       "emotion": "",
       "bdd": []
     },
@@ -4152,7 +4152,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Vigil of Stendarr is an order of holy warriors who dedicate themselves to eradicating daedra and other \"abominations\" in the name of the Divine they revere.",
-      "traduit": "斯丹达尔警觉会是一支神圣战士教团，以他们所崇敬的圣灵之名，致力于消灭迪德拉和其他“可憎之物”。",
+      "traduit": "斯丹达尔警戒者是一支神圣战士教团，以他们所崇敬的圣灵之名，致力于消灭迪德拉和其他“可憎之物”。",
       "emotion": "",
       "bdd": []
     },
@@ -4272,7 +4272,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Magicka is the raw energy of magic that flows from Aetherius into Mundus via the sun and stars. Known to mages as the Higher Arts, it has many purposes: to heal, to harm, or to fulfill selfish ends.",
-      "traduit": "魔力是从光界经由太阳与星辰流入凡世的原始魔法能量。法师称之为高阶技艺，它有许多用途：治疗、伤害，或达成自私的目的。",
+      "traduit": "魔力是从光界经由太阳与星辰流入梦达思的原始魔法能量。法师称之为高阶技艺，它有许多用途：治疗、伤害，或达成自私的目的。",
       "emotion": "",
       "bdd": []
     },
@@ -4302,7 +4302,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "By casting Soul Trap on a creature at the moment of its death, a spellcaster may capture its soul in a soul gem - provided one of suitable size is empty and available.",
-      "traduit": "在生物死亡的那一刻对其施放灵魂陷阱，施法者就可以将其灵魂捕获到灵魂石中——前提是有一块大小合适且空置的灵魂石。",
+      "traduit": "在生物死亡的那一刻对其施放摄魂陷阱，施法者就可以将其灵魂捕获到灵魂石中——前提是有一块大小合适且空置的灵魂石。",
       "emotion": "",
       "bdd": []
     },
@@ -4322,7 +4322,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The High King of Skyrim formally ceded the island of Solstheim to Morrowind in 4E 16 to serve as a refuge for the Dunmer following the devastation of the Red Year.",
-      "traduit": "天际至高王于 4E 16 年正式将索瑟海姆岛割让给晨风，作为红年灾难后暗精灵的避难所。",
+      "traduit": "天际至高王于 4E 16 年正式将索瑟海姆岛割让给晨风，作为红色之年灾难后暗精灵的避难所。",
       "emotion": "",
       "bdd": []
     },
@@ -4352,7 +4352,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The old Nord phrase \"season unending\" casts war as an endless cycle, where combatants pause only to gather strength before the next battle.",
-      "traduit": "诺德古语“无尽之季”将战争描绘成无休止的循环，交战者只是停下来积蓄力量，准备下一场战斗。",
+      "traduit": "诺德古语“无休之季”将战争描绘成无休止的循环，交战者只是停下来积蓄力量，准备下一场战斗。",
       "emotion": "",
       "bdd": []
     },
@@ -4462,7 +4462,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The standing stones that dot Skyrim's landscape correspond to the constellations within Tamriel's night sky. Among them, the Warrior, the Mage, and the Thief stand together as the \"guardians.\"",
-      "traduit": "点缀天际景观的符文石与泰姆瑞尔夜空中的星座相对应。其中，战士、法师和盗贼三块石头并立，被称为“守护者”。",
+      "traduit": "点缀天际景观的立石与泰姆瑞尔夜空中的星座相对应。其中，战士、法师和盗贼三块石头并立，被称为“守护石”。",
       "emotion": "",
       "bdd": []
     },
@@ -4472,7 +4472,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Bards College is Skyrim's foremost school for aspiring bards - or \"skalds,\" as they are known in the province.",
-      "traduit": "吟游诗人学院是天际培养有抱负的吟游诗人——或该省所称的“诗匠”——的首要学校。",
+      "traduit": "吟游诗人学院是天际培养有抱负的吟游诗人——或该省所称的“吟唱者”——的最高学府。",
       "emotion": "",
       "bdd": []
     },
@@ -4522,7 +4522,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Amulet of Kings symbolized the divine right of the Cyrodiilic emperors. Its near four-thousand-year history ended when it was shattered in the Third Era to seal shut the gates of Oblivion forever.",
-      "traduit": "君王护符象征赛洛迪尔皇帝的神授统治权。它近四千年的历史在第三纪元终结，被击碎以永远封死湮灭之门。",
+      "traduit": "诸王护符象征希罗帝尔皇帝的神授统治权。它近四千年的历史在第三纪元终结，被击碎以永远封死湮灭之门。",
       "emotion": "",
       "bdd": []
     },
@@ -4552,7 +4552,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "\"Are you in need of a flame spell? Conjure a Flame Atronach. You'll have command of a dozen such spells in the form of a fiery avatar.\" - Warlock Aldaale, Where Magical Paths Meet",
-      "traduit": "“你需要火焰法术吗？召唤一个火焰元素。你将驾驭十几种这样的法术，化身为炽热的化身。”——术士阿尔达勒，《魔法之路交汇处》",
+      "traduit": "“你需要火焰法术吗？召唤一个火焰侍灵。你将驾驭十几种这样的法术，化身为炽热的化身。”——术士阿尔达勒，《魔法之路交汇处》",
       "emotion": "",
       "bdd": []
     },
@@ -4592,7 +4592,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "The Hist connects every Argonian in Black Marsh, where its sap is ingested to mark namings, bondings, and passages into death. The darkest rituals use sacrifice to keep lurking things beneath the mires...",
-      "traduit": "希斯特连接着黑沼的每一个阿尔贡人，其树液会被饮下，以标记命名、结合与死亡仪式。最黑暗的仪式会用献祭来安抚沼泽下潜伏的东西……",
+      "traduit": "希斯特连接着黑沼泽的每一个阿尔贡人，其树液会被饮下，以标记命名、结合与死亡仪式。最黑暗的仪式会用献祭来安抚沼泽下潜伏的东西……",
       "emotion": "",
       "bdd": []
     },
@@ -4612,7 +4612,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Shorter lifespans put the Bretons at a disadvantage against elves, yet they have produced some of history's greatest mages - second only to the Altmer, with room to surpass them given the chance.",
-      "traduit": "较短的寿命使布莱顿人相对于精灵处于劣势，但他们孕育了历史上一些最伟大的法师——仅次于高精灵，若有机会，甚至可能超越他们。",
+      "traduit": "较短的寿命使布莱顿人相对于精灵处于劣势，但他们孕育了历史上一些最伟大的法师——仅次于傲特莫，若有机会，甚至可能超越他们。",
       "emotion": "",
       "bdd": []
     },
@@ -4642,7 +4642,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Khajiit are a type of Betmeri, the so-called \"beast races\" - a term popularized by the Reman Empire to justify conquering them. Though their nature sometimes draws prejudice, they answer it with pride, not shame.",
-      "traduit": "卡吉特是兽人的一种，即所谓“兽族”——这一术语由雷曼帝国推广，以为征服他们辩护。尽管他们的天性有时招致偏见，他们以骄傲而非羞耻回应。",
+      "traduit": "卡吉特是贝特梅里的一支，即所谓“兽族”——这一术语由雷曼帝国推广，以为征服他们辩护。尽管他们的天性有时招致偏见，他们以骄傲而非羞耻回应。",
       "emotion": "",
       "bdd": []
     },
@@ -4652,7 +4652,7 @@
       "grup": "LSCR",
       "champ": "DESC",
       "original": "Ysgramor gathered the Five Hundred Companions to avenge the razing of Saarthal in the Night of Tears. Untold numbers of elves fell to their blades, leaving the Nords with a bitter resentment for elvenkind that endures still.",
-      "traduit": "伊斯格拉默召集五百勇士，为“泪之夜”中萨瑟尔被焚毁而复仇。无数精灵死于他们的刀下，使诺德人对精灵怀有至今未消的深切怨恨。",
+      "traduit": "伊斯格拉默召集五百战友，为“泪之夜”中萨瑟尔被焚毁而复仇。无数精灵死于他们的刀下，使诺德人对精灵怀有至今未消的深切怨恨。",
       "emotion": "",
       "bdd": []
     },
