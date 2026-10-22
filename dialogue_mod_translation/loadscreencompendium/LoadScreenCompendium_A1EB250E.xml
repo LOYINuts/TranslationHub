@@ -1552,7 +1552,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DivineYsmir</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ysmir, the "Dragon of the North," is an important hero-god of the Nords and a title bestowed upon great heroes such as Tiber Septim, with King Wulfharth as the first.</ORIGINAL>
-    <TRADUIT>伊斯米尔，“北方巨龙”，是诺德人的重要英雄神，也是一个授予伟大英雄的头衔，泰伯·塞普汀即获此衔，而第一位获此殊荣的是武夫哈斯王。</TRADUIT>
+    <TRADUIT>伊斯米尔，“北方巨龙”，是诺德人的重要英雄神，也是授予伟大英雄的头衔，泰伯·塞普汀即获此衔，而第一位获此殊荣的是武夫哈斯王。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1664,7 +1664,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonSoulAbsorb</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The link between a dragon's soul and its remains is stronger than that of a mortal, allowing it to rise again after defeat. Only when absorbed by another dov can it be permanently destroyed.</ORIGINAL>
-    <TRADUIT>巨龙灵魂与其遗骸之间的联系比凡人更紧密，使其在战败后仍能再度崛起。只有被另一条龙吸收，它才会被永久消灭。</TRADUIT>
+    <TRADUIT>巨龙灵魂与其遗骸之间的联系比凡人的更为紧密，使其在战败后仍能再度崛起。只有被另一条龙吸收，它才会被永久消灭。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2070,7 +2070,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyFalmerShadowmaster</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Long thought extinct at the hands of the Nords, the Falmer are actually the disfigured remnants of the Snow Elves, twisted by centuries of subterranean slavery under the Dwemer.</ORIGINAL>
-    <TRADUIT>人们长期认为伐莫已在诺德人手中灭绝，但它们实际上是雪精灵的畸形残存者，在锻莫统治下经历了数个世纪的地下奴役而被扭曲。</TRADUIT>
+    <TRADUIT>人们长期认为伐莫已在诺德人手中灭绝，但它们实际上是雪精灵的畸形残存者，在锻莫统治下经历数个世纪的地下奴役，因而被扭曲。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2910,7 +2910,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCompanionIncendiary</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Companions' only recognized leader is the Harbinger, named after Ysgramor, the "harbinger of us all." Their word is highly respected both within Jorrvaskr and around all the nine holds.</ORIGINAL>
-    <TRADUIT>战友团唯一公认的领袖是“先驱”，这一称号源自伊斯格拉默——“我们所有人的先驱”。他的话在月瓦斯卡内部以及九大领都备受尊重。</TRADUIT>
+    <TRADUIT>战友团唯一公认的领袖是“先驱”，这一称号源自伊斯格拉默——“我们所有人的先驱”。他的话在月瓦斯卡和九大领都备受尊重。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3022,7 +3022,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesSmuggler</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Like any trade guild, the Thieves Guild is an organization of professionals - except that, in this case, its members specialize in burglary, pickpocketing, and other illicit activities.</ORIGINAL>
-    <TRADUIT>与任何行业公会一样，盗贼公会是一个专业人士的组织——只不过在这里，成员专精于入室盗窃、扒窃和其他非法活动。</TRADUIT>
+    <TRADUIT>与任何行业公会一样，盗贼公会是一个由专业人士组成的组织——只不过在这里，成员专精于入室盗窃、扒窃和其他非法活动。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3806,7 +3806,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreGreatWar01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Great War was a large-scale conflict that occurred in Cyrodiil and Hammerfell between the Third Empire of Tamriel and the invading Aldmeri Dominion from 4E 171 to 4E 175.</ORIGINAL>
-    <TRADUIT>浩大战争是泰姆瑞尔第三帝国与入侵的先祖神洲于 4E 171 至 4E 175 年间，在希罗帝尔和落锤爆发的大规模冲突。</TRADUIT>
+    <TRADUIT>浩大战争是泰姆瑞尔第三帝国与入侵的先祖神洲于 4E 171 至 4E 175 年间在希罗帝尔和落锤爆发的大规模冲突。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3848,7 +3848,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMannimarco</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Staff of Worms was once owned by Mannimarco, the King of Worms, an Altmer lich who founded the Order of the Black Worm.</ORIGINAL>
-    <TRADUIT>蠕虫之杖曾属于曼尼马可——“蠕虫之王”，一位创立黑虫教团的傲特莫巫妖。</TRADUIT>
+    <TRADUIT>蠕虫之杖曾属于“蠕虫之王”曼尼马可，一位创立黑虫教团的傲特莫巫妖。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3862,7 +3862,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMiraak</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Miraak is the First Dragonborn and a former Dragon Priest. He rebelled against the dragons as Hermaeus Mora's champion after refusing to help the ancient Nords defeat Alduin.</ORIGINAL>
-    <TRADUIT>米拉克是第一位龙裔，也曾是一位龙祭司。他拒绝帮助古诺德人击败奥杜因，随后作为赫麦尤斯·莫拉的勇士反叛巨龙。</TRADUIT>
+    <TRADUIT>米拉克是第一位龙裔，也曾是龙祭司。他拒绝帮助古诺德人击败奥杜因，随后作为赫麦尤斯·莫拉的勇士反叛巨龙。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3946,7 +3946,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSithis</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Despite being revered as a god by some, Sithis is neither aedric nor daedric in nature; rather, he personifies the primordial state of chaos.</ORIGINAL>
-    <TRADUIT>尽管被一些人奉为神明，西帝斯在本质上既不属于伊德拉，也不属于迪德拉；他体现的是原初的混沌状态。</TRADUIT>
+    <TRADUIT>尽管被一些人奉为神明，西帝斯在本质上既不属于伊德拉，也不属于迪德拉；他本身就是原初混沌的化身。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3960,7 +3960,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSkyrim</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Skyrim, also known as the Old Kingdom or the Fatherland, was the first region of Tamriel settled by humans: the hardy, brave, warlike Nords, whose descendants still occupy this rugged land." - Pocket Guide to the Empire, 1st Edition/Skyrim</ORIGINAL>
-    <TRADUIT>“天际，又称旧王国或父土，是人类在泰姆瑞尔最早定居的地区：坚韧、勇敢、好战的诺德人，他们的后裔至今仍生活在这片崎岖的土地上。”——《帝国袖珍指南》第 1 版/天际</TRADUIT>
+    <TRADUIT>“天际，又称旧王国或父土，是人类在泰姆瑞尔最早定居的地区：坚韧、勇敢、好战的诺德人，他们的后裔至今仍生活在这片崎岖的土地上。”——《帝国袖珍指南》第一版/天际</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3988,7 +3988,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSovngardeHall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Hall of Valor, the legendary mead hall of Sovngarde, may only be entered by those honored Nord dead who triumph in battle against Tsun, Shor's mighty shield-thane.</ORIGINAL>
-    <TRADUIT>勇士大厅是松加德传说中的蜜酒大厅，只有那些在与舒尔的强力盾卫苏恩战斗中获胜的荣耀诺德亡者才能进入。</TRADUIT>
+    <TRADUIT>勇士大厅是松加德传说中的蜜酒大厅，只有荣耀的诺德亡者，在与舒尔的强大盾卫苏恩交战并获胜后，才能进入。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4044,7 +4044,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMainAlduinAdrift</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Nord heroes Felldir the Old, Gormlaith Golden-Hilt, and Hakon One-Eye used the Dragonrend shout and an Elder Scroll to cast Alduin adrift through time - an act that granted mankind the edge to end the Dragon War.</ORIGINAL>
-    <TRADUIT>诺德英雄“老人”费迪尔、葛姆拉丝·金柄和“独眼”哈肯使用龙魂撕裂龙吼和一卷上古卷轴，将奥杜因放逐到时间之中——这一举动为人类赢得了结束巨龙战争的优势。</TRADUIT>
+    <TRADUIT>诺德英雄“老人”费迪尔、葛姆拉丝·金柄和“独眼”哈肯使用龙魂撕裂和一卷上古卷轴，将奥杜因放逐于时间洪流之中——这一举动为人类赢得了结束巨龙战争的优势。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4114,7 +4114,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicAtromancy</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Atromancy is a branch of Conjuration focused on the summoning of atronachs, elemental daedra from the planes of Oblivion.</ORIGINAL>
-    <TRADUIT>侍灵召唤是召唤系的一个分支，专注于召唤侍灵——来自湮灭位面的元素迪德拉。</TRADUIT>
+    <TRADUIT>侍灵召唤是召唤系的分支，专注于召唤侍灵——来自湮灭位面的元素迪德拉。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4184,7 +4184,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicScroll</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Scrolls can be purchased from any court wizard in service to a jarl, as well as from certain members of the College of Winterhold.</ORIGINAL>
-    <TRADUIT>卷轴可从任何侍奉领主的宫廷法师，以及冬堡学院的某些成员处购得。</TRADUIT>
+    <TRADUIT>卷轴可从任何侍奉领主的宫廷法师或冬堡学院的某些成员处购得。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4478,7 +4478,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindTemple</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Following the disappearance of the Tribunal, the New Temple restored the original Dunmer faith: worship of the three Good Daedra - Azura, Mephala, and Boethiah - referred to as "the Reclamations."</ORIGINAL>
-    <TRADUIT>审判席消失后，新神殿恢复了暗精灵的原始信仰：崇拜三位善神——阿祖拉、梅法拉和波耶西亚——这三位善神被称为“收复者”。</TRADUIT>
+    <TRADUIT>审判席消失后，新神殿恢复了暗精灵的原始信仰：崇拜阿祖拉、梅法拉和波耶西亚这三位善神，即所谓的“收复者”。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4492,7 +4492,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindHouse01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Morrowind is governed by the Grand Council of five Great Houses, which function as political parties: House Redoran, House Telvanni, House Sadras, House Indoril, and House Dres.</ORIGINAL>
-    <TRADUIT>晨风由五个大家族的大议会统治，这些大家族充当政党：瑞多然家族、泰瓦尼家族、萨德拉斯家族、因多瑞尔家族和德莱斯家族。</TRADUIT>
+    <TRADUIT>晨风由五个大家族的大议会统治，这些大家族如同政党：瑞多然家族、泰瓦尼家族、萨德拉斯家族、因多瑞尔家族和德莱斯家族。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4703,7 +4703,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceArgonianShadowscale</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Centuries of defending their borders have made Argonians masters of guerrilla warfare - fierce enough that, when Oblivion Gates opened in their homeland, the Daedra sealed them shut rather than be overrun.</ORIGINAL>
-    <TRADUIT>数百年的边境防卫使阿尔贡人成为游击战大师——他们强悍到当湮灭之门在他们的家园开启时，迪德拉宁愿将门封死，也不愿被他们冲垮。</TRADUIT>
+    <TRADUIT>数百年的边境防卫使阿尔贡人成为游击战大师——他们强悍至极，当湮灭之门在家园开启时，迪德拉宁愿将门封死，也不愿被他们冲垮。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4787,7 +4787,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBretonStalwart</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Knighthood is pivotal to the Breton identity, as knights of old liberated their forebears from elven rule and created a legacy for future generations through daring quests for glory.</ORIGINAL>
-    <TRADUIT>骑士精神对布莱顿人的身份至关重要，因为古代骑士将他们的祖先从精灵统治下解放出来，并通过勇敢追求荣耀的冒险为后代留下了遗产。</TRADUIT>
+    <TRADUIT>骑士精神对布莱顿人的身份至关重要，因为古代骑士将他们的祖先从精灵统治下解放出来，并通过勇敢追求荣耀的冒险为后代留下了传承。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5123,7 +5123,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsDwemerHall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Theories vary on why or how the Dwemer disappeared, but some believe that Lord Kagrenac, one of their chief architects, caused the event by tampering with the heart of a god.</ORIGINAL>
-    <TRADUIT>关于锻莫消失的原因与方式，众说纷纭，但一些人认为他们的首席建筑师之一卡格瑞纳克领主因篡改一位神的心脏而引发了这一事件。</TRADUIT>
+    <TRADUIT>关于锻莫消失的原因与方式，众说纷纭，但一些人认为他们的首席建筑师之一、卡格瑞纳克领主因篡改一位神的心脏而引发了这一事件。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5137,7 +5137,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsNordic01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Dragon Cult built high temples to honor the dragons and inter the faithful. Many still stand as forsaken ruins, haunted in undeath by those entombed within.</ORIGINAL>
-    <TRADUIT>拜龙教建造高耸的神庙来崇敬巨龙并安葬信徒。许多神庙仍作为废弃废墟矗立，埋葬其中的亡者化为亡灵，在此徘徊。</TRADUIT>
+    <TRADUIT>拜龙教建造高耸的神庙来崇敬巨龙并安葬信徒。许多神庙至今仍矗立为荒废的遗迹，埋葬其中的亡者化为亡灵，在此徘徊。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5151,7 +5151,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsNordicPeak</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>In days of old, when dragons ruled over the land, there lived mortal men who worshipped them as gods. This Dragon Cult has long since died out, though their ruins still loom over Skyrim.</ORIGINAL>
-    <TRADUIT>古时，巨龙统治大地，有凡人将它们奉为神明。这个拜龙教早已消亡，但这个教派的废墟仍耸立在天际大地上。</TRADUIT>
+    <TRADUIT>古时，巨龙统治大地，有凡人将它们奉为神明。这个拜龙教早已消亡，但它的废墟仍耸立在天际大地上。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5277,7 +5277,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutUnrelentingForce</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The three words of Unrelenting Force (Force, Balance, Push) chain together to hurl objects great distances and briefly render enemies helpless.</ORIGINAL>
-    <TRADUIT>“冷酷之力”的三个词（力、均衡、推）串联起来，能将物体抛向远方，并短暂使敌人失去行动能力。</TRADUIT>
+    <TRADUIT>“冷酷之力”的三个词（力、均衡、推）串联起来，能将物体抛向远方，并使敌人短暂失去行动能力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5291,7 +5291,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutWordWall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The ancient Nords erected many word walls across the land. Their true power lies dormant, awaiting a worthy Dragonborn - and the souls of slain dragons - to awaken it.</ORIGINAL>
-    <TRADUIT>古诺德人在大地上竖立了许多龙语墙。它们真正的力量处于休眠状态，等待一位配得上它的龙裔——以及被杀巨龙的灵魂——来唤醒。</TRADUIT>
+    <TRADUIT>古诺德人在大地上竖立了许多龙语墙。它们真正的力量处于休眠状态，等待一位配得上它的龙裔，以及被杀巨龙的灵魂，前来将它唤醒。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5543,7 +5543,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceCyrodiil</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Cyrodiil, sometimes called "the Heartland," is a temperate province in central Tamriel from which the Imperials hail. It holds the Empire's capital, the Imperial City, with the White-Gold Tower at its heart.</ORIGINAL>
-    <TRADUIT>希罗帝尔有时被称为“中心腹地”，是泰姆瑞尔中部一个气候温和的省份，帝国人便来自这里。它拥有帝国的首都——帝都，白金塔位于其中心。</TRADUIT>
+    <TRADUIT>希罗帝尔有时被称为“中心腹地”，是泰姆瑞尔中部一个气候温和的省份，帝国人便来自这里。帝国的首都帝都坐落于此，白金塔位于城市中心。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5557,7 +5557,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceElsweyr</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Elsweyr lies on the southern coast of Tamriel and is home to the feline Khajiit. The land is divided by two distinct climates: arid wastes in the north, and fertile jungle in the south.</ORIGINAL>
-    <TRADUIT>艾斯维尔位于泰姆瑞尔南部海岸，是猫科卡吉特的家园。这片土地分为两种截然不同的气候带：北方干旱的荒原和南方肥沃的丛林。</TRADUIT>
+    <TRADUIT>艾斯维尔位于泰姆瑞尔南部海岸，是猫形种族卡吉特的家园。这片土地分为两种截然不同的气候带：北方干旱的荒原和南方肥沃的丛林。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5599,7 +5599,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceMorrowind</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Morrowind is a volcanic region in northeastern Tamriel from which the Dark Elves hail. The mainland is isolated by vast mountain ranges, with the island of Vvardenfell and the ash-spewing Red Mountain at its core.</ORIGINAL>
-    <TRADUIT>晨风是泰姆瑞尔东北部一个火山地区，暗精灵便来自这里。大陆被广阔的山脉隔绝，核心是瓦登费尔岛和喷吐灰烬的红山。</TRADUIT>
+    <TRADUIT>晨风是泰姆瑞尔东北部一个火山地区，暗精灵便来自这里。大陆被广袤的山脉隔断，核心是瓦登费尔岛和喷吐灰烬的红山。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5627,7 +5627,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceSummersetIsles</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Summerset Isles lie southwest of Tamriel in the Sea of Pearls and are home to the High Elves. Consisting of fourteen islands, they make up a warm region with colorful forests and idyllic meadows.</ORIGINAL>
-    <TRADUIT>夏暮岛位于泰姆瑞尔西南的珍珠海，是高精灵的家园。它由十四个岛屿组成，构成一个拥有绚丽森林和田园牧歌般草甸的温暖地区。</TRADUIT>
+    <TRADUIT>夏暮岛位于泰姆瑞尔西南方的珍珠海中，是高精灵的家园。它由十四座岛屿组成，构成一片拥有绚丽森林与田园般草甸的温暖地区。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5725,7 +5725,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureWerewolf02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Werewolves are skin-changers infected with lycanthropy, a contagious supernatural disease that seeps into the spirit. Their bloodthirsty nature has left them widely reviled.</ORIGINAL>
-    <TRADUIT>狼人是感染了狼人化的变形者，这是一种渗入灵魂的传染性超自然疾病。其嗜血本性使它们广受憎恶。</TRADUIT>
+    <TRADUIT>狼人是感染了狼人化的变形者，这是一种侵入灵魂、具有传染性的超自然疾病。其嗜血本性使它们广受憎恶。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5809,7 +5809,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyUndeadLich</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Liches are necromancers who have shed mortality itself to embrace the most sophisticated form of undeath. Dragon Priests are a particular Nordic variety.</ORIGINAL>
-    <TRADUIT>巫妖是舍去凡人之躯、拥抱最深奥的亡灵形态的死灵法师。龙祭司是诺德人的一种特殊巫妖。</TRADUIT>
+    <TRADUIT>巫妖是舍去凡人之躯、拥抱最深奥的亡灵形态的死灵法师。龙祭司是诺德人中一种特殊的巫妖。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6173,7 +6173,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionMythicDawnZealot</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Mythic Dawn called their enemies the "Dragon's Blood," evoking Queen Alessia's covenant with Akatosh that shielded Nirn from Oblivion - and the line of rulers who kept the Dragonfires burning.</ORIGINAL>
-    <TRADUIT>神话黎明将他们的敌人称为“龙之血”，这让人想起阿莱西亚女王与阿卡托什的盟约——它保护奈恩免受湮灭侵扰——以及维持龙火不灭的统治者血脉。</TRADUIT>
+    <TRADUIT>神话黎明将他们的敌人称为“龙之血”，这让人想起阿莱西亚女王与阿卡托什的盟约：盟约保护奈恩免受湮灭侵扰，而统治者的血脉则维持龙火不灭。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6229,7 +6229,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralNavigation</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>A map is just one way to navigate Skyrim. Road signs are posted at crossroads throughout the province, pointing travelers toward cities, villages, and prominent landmarks.</ORIGINAL>
-    <TRADUIT>地图只是在天际导航的一种方式。省内各十字路口都设有路标，指引旅人前往城市、村庄和著名地标。</TRADUIT>
+    <TRADUIT>地图只是在天际导航的方式之一。省内各十字路口都设有路标，指引旅人前往城市、村庄和著名地标。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6271,7 +6271,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBardCollegeSkald</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Bards College is Skyrim's foremost school for aspiring bards - or "skalds," as they are known in the province.</ORIGINAL>
-    <TRADUIT>吟游诗人学院是天际培养有抱负的吟游诗人——或该省所称的“吟唱者”——的最高学府。</TRADUIT>
+    <TRADUIT>吟游诗人学院是天际培养有抱负的吟游诗人的最高学府——这些人在该省被称为“吟唱者”。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6369,7 +6369,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMorrowind</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Empire withdrew its legions from Morrowind during the Oblivion Crisis, and lacked the strength to return. This seeming indifference to their plight drove the Dunmer to retake their homeland for themselves.</ORIGINAL>
-    <TRADUIT>帝国在湮灭危机期间从晨风撤走军团，此后无力返回。这种对他们困境的明显漠视，促使暗精灵自行夺回家园。</TRADUIT>
+    <TRADUIT>帝国在湮灭危机期间从晨风撤走军团，此后无力返回。这种对其困境看似漠不关心的态度，促使暗精灵自行夺回家园。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6425,7 +6425,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceAltmerAldmer</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>High Elves regard themselves as the purest, most unaltered heirs of the Aldmer - the ancient elves who first arrived on Tamriel from the mythical lost continent of Aldmeris.</ORIGINAL>
-    <TRADUIT>高精灵视自己为奥德莫最纯粹、最未经改变的后裔——奥德莫是最早从神话中失落的奥德莫瑞斯大陆来到泰姆瑞尔的古老精灵。</TRADUIT>
+    <TRADUIT>高精灵视自己为奥德莫最纯正、最未受改变的后裔——奥德莫是最早从传说中失落的奥德莫瑞斯大陆来到泰姆瑞尔的古老精灵。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6467,7 +6467,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBretonMage</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Shorter lifespans put the Bretons at a disadvantage against elves, yet they have produced some of history's greatest mages - second only to the Altmer, with room to surpass them given the chance.</ORIGINAL>
-    <TRADUIT>较短的寿命使布莱顿人相对于精灵处于劣势，但他们孕育了历史上一些最伟大的法师——仅次于傲特莫，若有机会，甚至可能超越他们。</TRADUIT>
+    <TRADUIT>布莱顿人的寿命较短，与精灵相比处于劣势，但他们孕育了历史上一些最伟大的法师——仅次于傲特莫，若有机会，甚至可能超越他们。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6509,7 +6509,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceKhajiitAvatar</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Khajiit are a type of Betmeri, the so-called "beast races" - a term popularized by the Reman Empire to justify conquering them. Though their nature sometimes draws prejudice, they answer it with pride, not shame.</ORIGINAL>
-    <TRADUIT>卡吉特是贝特梅里的一支，即所谓“兽族”——这一术语由雷曼帝国推广，以为征服他们辩护。尽管他们的天性有时招致偏见，他们以骄傲而非羞耻回应。</TRADUIT>
+    <TRADUIT>卡吉特是贝特梅里的一支，即所谓“兽族”——这一术语由雷曼帝国推广，用以替征服他们辩护。尽管他们的天性有时招致偏见，他们以骄傲而非羞耻回应。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6537,7 +6537,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceOrcShaman</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Despite their long-standing reputation as mere barbarians, Orcs are as cultured as any other race in Tamriel, having ever striven to be recognized as actual people.</ORIGINAL>
-    <TRADUIT>尽管长期以来背负着只是野蛮人的名声，兽人却和泰姆瑞尔任何其他种族一样有文化，一直努力争取被承认为真正的人。</TRADUIT>
+    <TRADUIT>尽管长期以来背负着只是野蛮人的名声，兽人却和泰姆瑞尔其他任何种族一样文明，始终努力争取被承认为真正的人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6565,7 +6565,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillSneakingDetection</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The stealthiest approach can still be undone by a single careless footstep, a flickering torch, or the sharp eyes of a watchful guard.</ORIGINAL>
-    <TRADUIT>最隐秘的接近也可能被一次不慎的脚步声、一支摇曳的火把，或警惕守卫锐利的目光所破坏。</TRADUIT>
+    <TRADUIT>最隐秘的接近，也可能因一步失慎、一支摇曳的火把，或警惕守卫锐利的目光而败露。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
