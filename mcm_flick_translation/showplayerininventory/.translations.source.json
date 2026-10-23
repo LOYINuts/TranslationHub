@@ -3,10 +3,12 @@
   "sources": {
     "line:mcm_flick_translation/showplayerininventory:ShowPlayerInInventory_ENGLISH.txt": {
       "$SPII_Advanced": "Advanced",
+      "$SPII_AllowMovement": "Allow Movement",
+      "$SPII_AllowMovementTT": "Your character can walk while the menu is open, and the camera follows them.\\n[Skyrim Souls only, as the menus pause the game otherwise.]",
       "$SPII_Animate": "Animate Character",
       "$SPII_AnimateTT": "Keeps your character's idle animation playing. Off, they hold still.",
       "$SPII_BarterMenu": "Barter Menu",
-      "$SPII_BarterMenuTT": "Shows your character in the barter menu. May conflict with Alternate Conversation Camera.",
+      "$SPII_BarterMenuTT": "Shows your character in the barter menu.\\n[May conflict with Conversational camera-type mods.]",
       "$SPII_Camera": "CAMERA",
       "$SPII_CameraControls": "Camera Controls",
       "$SPII_CameraControlsTT": "Move the camera with the mouse and controller. Off, only the sliders under Position move it. Turning your character works either way.",
@@ -46,7 +48,7 @@
       "$SPII_Title": "Show Player In Inventory",
       "$SPII_Turn": "Turn your character",
       "$SPII_TurnCharacter": "Turn Character",
-      "$SPII_TurnCharacterTT": "Your character turns to face the camera where it is. Off, the camera comes round to face your character instead, so they stay as they are.",
+      "$SPII_TurnCharacterTT": "Your character turns to face the camera where it is. Off, the camera comes round to face your character instead, so they stay as they are.\\n[Barter and chests always turn your character, to mitigate view obstruction.]",
       "$SPII_Zoom": "Zoom"
     }
   },
