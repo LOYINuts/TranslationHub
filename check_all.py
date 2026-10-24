@@ -36,10 +36,12 @@ GATE = (
 )
 
 
-def run(script: str, *args: str) -> int:
+def run(script: str, *args: str, verbose: bool = False) -> int:
     """Run one project CLI with the current interpreter. Return its exit code."""
     command = [sys.executable, os.path.join(ROOT, script), *args]
-    log.info("uv run %s", " ".join((script, *args)))
+    if verbose:
+        command.append("--verbose")
+    log.info("uv run %s", " ".join((script, *args, *(["--verbose"] if verbose else []))))
     result = subprocess.run(command, cwd=ROOT)
     if result.returncode != 0:
         log.error("%s %s -> exit %d", script, " ".join(args), result.returncode)
@@ -58,7 +60,7 @@ def main(argv: list[str] | None = None) -> int:
         steps += list(GATE)
 
     for step in steps:
-        code = run(*step)
+        code = run(*step, verbose=args.verbose)
         if code != 0:
             return code
     log.info("全部门禁通过（%d 步）", len(steps))

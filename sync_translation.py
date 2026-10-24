@@ -216,6 +216,7 @@ def sync_translations(
         added.add(key)
     with open(trans_path, "w", encoding="utf-8") as f:
         json.dump(translations, f, ensure_ascii=False, indent=2)
+        f.write("\n")
     log.info(f"已更新 {trans_path}，新增 {len(added)} 条")
     return added
 
@@ -316,9 +317,10 @@ def main():
         action="store_true",
         help="确认英文源变更并更新基线（首次运行即初始化）",
     )
+    parser.add_argument("--verbose", "-v", action="store_true", help="显示详细日志")
 
     args = parser.parse_args()
-    setup_cli_logging()  # ponytail: logging set up in main, not at import
+    setup_cli_logging(verbose=args.verbose)  # ponytail: logging set up in main, not at import
     if args.check and (args.sync or args.interactive or args.accept_source):
         parser.error("--check 不能与 --sync/--interactive/--accept-source 同时使用")
 

@@ -18,6 +18,7 @@ import glob
 import json
 import logging
 import os
+import shutil
 import xml.etree.ElementTree as ET
 
 from build_all import (
@@ -30,7 +31,7 @@ from build_all import (
 
 # ── 从 config.py 加载配置 ─────────────────────────────────────────────────
 from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
-from locale_utils import load_json, read_text
+from locale_utils import detect_encoding, load_json, read_text, write_utf8, write_utf16le_bom
 from source_baseline import (
     baseline_issues,
     baseline_path,
@@ -62,6 +63,8 @@ def verify_line_single(config, root: str) -> list[str]:
     out_path = os.path.join(mod_path, config.output)
     if not os.path.exists(out_path):
         issues.append(f"[缺失] 未找到中文输出文件: {out_path}")
+    elif detect_encoding(out_path) != config.encoding:
+        issues.append(f"[过期] 中文文件编码不是 {config.encoding}（实际 {detect_encoding(out_path)}）")
     elif read_text(out_path) != expected:
         issues.append("[过期] 中文文件与 translations.json 构建结果不一致")
     return issues or ["[OK] 全部检查通过"]
@@ -80,6 +83,8 @@ def verify_line_group(config, root: str) -> list[str]:
     for path, content in artifacts:
         if not os.path.exists(path):
             issues.append(f"[缺失] {path}")
+        elif detect_encoding(path) != config.encoding:
+            issues.append(f"[过期] 编码不是 {config.encoding}（实际 {detect_encoding(path)}）: {path}")
         elif read_text(path) != content:
             issues.append(f"[过期] {path}")
     output_root = os.path.join(root, config.dir, config.output)
@@ -213,8 +218,25 @@ def _self_check() -> None:
 
         extra = verify_dir_extra_keys([ModJson("mod", "en.json", "zh.json")], root, None)
         assert extra and "stale" in extra[0], extra
-        assert find_unregistered_translation_dirs(root, set()) == ["mod"]
-        assert find_unregistered_translation_dirs(root, {"mod"}) == []
+
+        # 编码必须按 mods.toml 声明校验：文本相同但编码错也算过期。
+        line_mod = os.path.join(root, "linemod")
+        os.mkdir(line_mod)
+        with open(os.path.join(line_mod, "en.txt"), "w", encoding="utf-8", newline="") as file:
+            file.write("k\tv\n")
+        with open(os.path.join(line_mod, "translations.json"), "w", encoding="utf-8") as file:
+            json.dump({"k": "值"}, file, ensure_ascii=False)
+        line_cfg = ModConfig("linemod", "en.txt", "zh.txt", sep="\t", encoding="utf16-le-bom")
+        write_utf16le_bom(os.path.join(line_mod, "zh.txt"), "k\t值\r\n")
+        update_baseline(line_mod, source_key("line", line_cfg), {"k": "v"}, replace=True)
+        assert verify_line_config(line_cfg, root) == ["[OK] 全部检查通过"], verify_line_config(line_cfg, root)
+        write_utf8(os.path.join(line_mod, "zh.txt"), "k\t值\r\n")  # 同文本、错编码
+        encoding_issues = verify_line_config(line_cfg, root)
+        assert any(issue.startswith("[过期] 中文文件编码") for issue in encoding_issues), encoding_issues
+
+        assert find_unregistered_translation_dirs(root, set()) == ["linemod", "mod"]
+        assert find_unregistered_translation_dirs(root, {"mod", "linemod"}) == []
+        shutil.rmtree(line_mod)  # 后面的共享目录用例假设 root 下只有它自己的模组
 
         # A glob line config and a json config may share one translations.json.
         shared = os.path.join(root, "shared")
@@ -241,11 +263,12 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="校验翻译完整性：sync 缺键 + render 新鲜度")
     parser.add_argument("mods", nargs="*", help="模组名（完整路径或 basename），留空校验全部")
     parser.add_argument("--self-check", action="store_true", help="运行自检")
+    parser.add_argument("--verbose", "-v", action="store_true", help="显示详细日志")
     args = parser.parse_args(argv)
     if args.self_check:
         _self_check()
         return 0
-    setup_cli_logging()  # ponytail: logging set up in main, not at import
+    setup_cli_logging(verbose=args.verbose)  # ponytail: logging set up in main, not at import
     root = os.path.dirname(os.path.abspath(__file__))
     filters = set(args.mods) if args.mods else None
     configs, json_mods, qt_mods = load_repo_configs(root)
