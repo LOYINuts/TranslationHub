@@ -13,7 +13,7 @@
   "$obody_message_performance_mode": "即将启用性能模式。这可能导致更频繁的崩溃。详情请参阅模组页面。\\n\\n除非你清楚自己在做什么，否则不建议启用性能模式。\\n\\n如果要继续，请点击“接受”。",
   "$obody_highlight_refit": "角色穿着衣物时，调整滑块以模拟衣物对身体各部位的影响。根据测试，CBBE 和 UNP 系列身体（包括 CBBE 3BA 和 BHUNP）均可正常使用。如果出现异常结果，请禁用此选项。更改此设置后需要重新为角色穿衣才能生效。",
   "$obody_highlight_nipple_sliders_orefit": "如果使用 ORefit 后乳头或乳晕出现凹陷或异常，请关闭此选项以缓解问题。需要重新为角色穿衣才能生效。",
-  "$obody_highlight_nipple": "通过程序生成来随机化乳头。理论上仅适用于 CBBE 系列身体。",
+  "$obody_highlight_nipple": "通过程序生成来随机化乳头与乳晕。理论上仅适用于 CBBE 系列身体。",
   "$obody_highlight_genitals": "通过程序生成来随机化生殖器。理论上仅适用于 CBBE 3BA 身体。",
   "$obody_highlight_performance_mode": "启用性能模式后，你可能会在首次遇到 NPC 时看到身体变形应用到 NPC 身上，视觉上可能比较突兀。不过这种情况非常少见，只会在首次遇到 NPC 时发生！启用性能模式也可能导致频繁崩溃，详情请参阅模组页面。如果关闭性能模式，在大型模组列表或较旧的硬件上可能出现卡顿或 FPS 下降。大多数情况下建议保持关闭。",
   "$obody_highlight_force_application_immediate": "由于 Racemenu/SSE Engine Fixes 的一个漏洞，从预设列表菜单应用预设有时不会立即在视觉上生效。OBody 会通过重新为角色穿上主体服装来规避此问题，从而强制立即应用新的身体变形。如果不喜欢由此产生的视觉效果，请关闭此选项。",
