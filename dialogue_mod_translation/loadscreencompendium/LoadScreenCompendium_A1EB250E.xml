@@ -180,7 +180,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalWolf</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Travelers should beware of Skyrim's wolves, even on the roads. They are feral beasts that hunt in packs to take down any prey available - whether it walks on four legs or two.</ORIGINAL>
-    <TRADUIT>旅人即使走在官道上也要提防天际的狼。它们是野性十足的野兽，成群狩猎，任何能捕到的猎物都不放过——无论对方是四条腿还是两条腿。</TRADUIT>
+    <TRADUIT>旅人即使在路上行走也要提防天际的狼。它们是野性十足的野兽，成群狩猎，任何能捕到的猎物都不放过——无论对方是四条腿还是两条腿。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -684,7 +684,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureHagraven</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Few creatures match the cunning, depravity, and repulsiveness of hagravens. A terrible conjoining of woman and bird, they will take through savagery what they cannot win through guile.</ORIGINAL>
-    <TRADUIT>少有生物比得上乌鸦鬼婆的狡诈、堕落与丑恶。她们是女人与鸟的可怕结合体，用诡计得不到的东西，就用野蛮手段抢夺。</TRADUIT>
+    <TRADUIT>少有生物比得上乌鸦鬼婆的狡诈、堕落与丑恶。她们是女人与鸟的可怕结合体，用诡计得不到的，就用野蛮手段抢夺。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1902,7 +1902,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDraugr01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>No one is certain why the draugr still walk the halls of their burial crypts, but some believe they served the dragons and their priests ages ago... and have been cursed with undeath for their treachery.</ORIGINAL>
-    <TRADUIT>无人确知尸鬼为何仍在墓葬的厅堂中游荡，但有人认为它们远古时曾侍奉巨龙与龙祭司……并因背叛而被诅咒为不死之身。</TRADUIT>
+    <TRADUIT>无人确知尸鬼为何仍在墓葬的厅堂中游荡，但有人认为它们远古时曾侍奉巨龙与龙祭司……并因背叛而被诅咒，永世不得安息。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2476,7 +2476,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralMerchant01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Most merchants open their shops a few hours after dawn and close just after sunset. If a shop is closed, return in the morning... or pick the lock to browse for free.</ORIGINAL>
-    <TRADUIT>大多数商人天亮后几小时开店，日落后不久打烊。若店铺已关，可以早上再来……或者撬锁进去白看。</TRADUIT>
+    <TRADUIT>大多数商人天亮后几小时开门，日落后不久打烊。若店铺已关，可以早上再来……或者撬锁进去免费翻看。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2602,7 +2602,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralStealing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Preferably done without detection or bloodshed, stealing is one of the easiest ways to acquire gold... or become a wanted criminal.</ORIGINAL>
-    <TRADUIT>偷窃最好做得无人察觉、不见血光，它是弄到金币最省事的法子之一……也可能让你成为通缉犯。</TRADUIT>
+    <TRADUIT>偷窃最好做得无人察觉、不见血光，它是获取金币最省事的法子之一……也可能让你成为通缉犯。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4296,7 +4296,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellFlames</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Mastering Destruction magic requires practice in combat against real foes. To truly understand what it means to kill with fire, the target must be something that screams.</ORIGINAL>
-    <TRADUIT>掌握毁灭系魔法需要在与真正敌人的战斗中练习。要真正理解用火焰杀戮意味着什么，目标得是会惨叫的东西。</TRADUIT>
+    <TRADUIT>掌握毁灭系魔法需要在与真正敌人的战斗中练习。要真正理解用火焰杀戮意味着什么，目标得是会惨叫的活物。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5375,7 +5375,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillAlchemyAlchemist</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Alchemists commonly consume samples of ingredients to determine their properties - be they beneficial or harmful.</ORIGINAL>
-    <TRADUIT>炼金师通常会亲口尝一点材料，以判断其特性——无论有益还是有害。</TRADUIT>
+    <TRADUIT>炼金师通常会亲尝少量材料，以判断其特性——无论有益还是有害。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5795,7 +5795,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonVariantRevered</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Revered dragons stand out from their kin with a beaked mouth and distinct lack of teeth. The true danger lies in their unique shout, which drains the life force of its unlucky targets.</ORIGINAL>
-    <TRADUIT>庄严龙以喙状的嘴和明显缺失的牙齿在同类中独树一帜。真正的危险在于它们独特的吼声，能吸取不幸目标的生命力。</TRADUIT>
+    <TRADUIT>庄严龙以喙状的嘴和明显缺失的牙齿在同类中显得独特。真正的危险在于它们独特的吼声，能吸取不幸目标的生命力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5865,7 +5865,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralHunter</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Game is abundant in Skyrim's countryside, ripe for the harvest. Many hunters roam the wilds in pursuit of elk and other animals, occasionally trading their spoils along the way.</ORIGINAL>
-    <TRADUIT>天际的乡野间猎物丰富，正当收获之时。许多猎人游荡在荒野中追逐麋鹿和其他动物，偶尔沿途把猎物换些钱。</TRADUIT>
+    <TRADUIT>天际的乡野间猎物丰富，正当收获之时。许多猎人游荡在荒野中追逐麋鹿和其他动物，沿途偶尔把猎获换成钱。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5921,7 +5921,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationCave</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The bold adventurer may unearth hidden treasures in Skyrim's darkest depths, but countless dangers await in the shadows... and some are better left undisturbed.</ORIGINAL>
-    <TRADUIT>大胆的冒险者或许能在天际最幽暗的深处发掘隐藏的宝藏，但阴影中潜伏着无数危险……有些东西最好别去打扰。</TRADUIT>
+    <TRADUIT>大胆的冒险者或许能在天际最幽暗的深处发掘隐藏的宝藏，但阴影中潜伏着无数危险……有些存在最好别去打扰。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5935,7 +5935,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationUniqueBlackreach02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Blackreach is an immense, naturally-lit cavern that can be accessed through certain Dwarven ruins and once served as a highway connecting several Dwemeri cities.</ORIGINAL>
-    <TRADUIT>黑境是一座巨大、有天然照明的洞窟，可通过某些矮人废墟进入，曾是连接数座锻莫城市的通衢。</TRADUIT>
+    <TRADUIT>黑境是一座巨大、有天然照明的洞窟，可通过某些矮人废墟进入，曾是连接数座锻莫城市的通道。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6145,7 +6145,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonMystic</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Stripped of their power in the Dragon War, dragons were largely killed off thereafter and vanished from Tamriel. The few who survived did so in seclusion and obscurity, believed extinct by almost all.</ORIGINAL>
-    <TRADUIT>巨龙在巨龙战争中被剥夺力量，此后大多遭到屠戮，从泰姆瑞尔消失。少数幸存者隐居藏形，几乎所有人都以为它们已经灭绝。</TRADUIT>
+    <TRADUIT>巨龙在巨龙战争中被剥夺力量，此后大多遭到屠戮，从泰姆瑞尔消失。少数幸存者避世隐匿，几乎所有人都以为它们已经灭绝。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6439,7 +6439,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceArgonianBlessing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Hist connects every Argonian in Black Marsh, where its sap is ingested to mark namings, bondings, and passages into death. The darkest rituals use sacrifice to keep lurking things beneath the mires...</ORIGINAL>
-    <TRADUIT>希斯特连接着黑沼泽的每一个阿尔贡人，其树液会被饮下，以标记命名、结合与死亡的仪式。最黑暗的仪式则用献祭安抚沼泽下潜伏的东西……</TRADUIT>
+    <TRADUIT>希斯特连接着黑沼泽的每一个阿尔贡人，其树液会被饮下，以标记命名、结合与死亡的仪式。最黑暗的仪式则以献祭安抚沼泽下潜伏的造物……</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6551,7 +6551,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceRedguardQuartermaster</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nearly all Redguards are taught to fight, but only the fittest become true warriors. They must face death to prove themselves, and it is never far - even their pastime of snake charming tempts its grasp.</ORIGINAL>
-    <TRADUIT>几乎所有红卫人都被教导战斗，但只有最强健者才能成为真正的战士。他们必须直面死亡来证明自己，而死亡从不遥远——连他们弄蛇的消遣，也会引来死神的魔爪。</TRADUIT>
+    <TRADUIT>几乎所有红卫人都被教导战斗，但只有最强健者才能成为真正的战士。他们必须直面死亡来证明自己，而死亡从不遥远——连他们耍蛇的消遣，也会引来死神的魔爪。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
