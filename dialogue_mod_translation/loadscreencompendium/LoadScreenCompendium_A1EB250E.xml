@@ -26,7 +26,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalBear</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Many species of bears roam the wilderness. Most would rather be left alone, but make for fearsome foes when provoked.</ORIGINAL>
-    <TRADUIT>荒野中游荡着许多种类的熊。它们大多不愿被打扰，但一旦被激怒，就会成为可怕的敌人。</TRADUIT>
+    <TRADUIT>荒野中栖息着许多种类的熊。它们大多不愿被打扰，可一旦被激怒，便是可怕的对手。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -40,7 +40,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalDog</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dogs can be found on farmsteads and city streets trailing close behind their masters, ever ready to fight at their sides.</ORIGINAL>
-    <TRADUIT>农场和城市街道上都能见到狗，它们紧紧跟在主人身后，随时准备并肩作战。</TRADUIT>
+    <TRADUIT>农庄和城市街道上都能见到狗，它们紧跟在主人身后，随时准备并肩作战。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -68,7 +68,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalGoat</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Goats and cows are a common sight in Skyrim's farming settlements. The Nords depend on the meat, milk, and hides of these animals to keep their bellies full and the cold at bay.</ORIGINAL>
-    <TRADUIT>山羊和奶牛在天际的农业定居点十分常见。诺德人依靠这些动物的肉、奶和皮革填饱肚子、抵御严寒。</TRADUIT>
+    <TRADUIT>山羊和奶牛在天际的农庄聚落中十分常见。诺德人靠这些动物的肉、奶和皮革填饱肚子、抵御严寒。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -82,7 +82,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalHorker</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The frigid waters of the north are inhabited by horkers - large creatures that can be easily outrun and are widely hunted for their tusks and meat.</ORIGINAL>
-    <TRADUIT>北方的冰冷水域中栖息着海象——这种大型生物很容易被甩开，人们常为获取长牙和肉而猎杀它们。</TRADUIT>
+    <TRADUIT>北方的冰冷海域中栖息着海象——这种庞然大物很容易被甩开，人们常为取长牙和肉而猎杀它们。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -110,7 +110,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalNixHound</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nix-hounds are insectoid pack hunters that use their long proboscises to drain their prey of blood, leaving behind only an empty husk.</ORIGINAL>
-    <TRADUIT>尼克斯猎犬是群居的昆虫形猎手，它们用长长的口器吸干猎物的血液，只留下一具空壳。</TRADUIT>
+    <TRADUIT>尼克斯猎犬是成群狩猎的昆虫形生物，它们用长长的口器吸干猎物的血液，只留下一具空壳。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -124,7 +124,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalSabreCat</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Beware of sabre cats stalking the wilderness. These ferocious predators are all too eager to ambush travelers who stray from the well-trodden path.</ORIGINAL>
-    <TRADUIT>当心荒野中潜行的剑齿虎。这些凶猛的掠食者非常乐意伏击偏离大路的旅人。</TRADUIT>
+    <TRADUIT>当心荒野中潜行的剑齿虎。这些凶猛的掠食者极乐意伏击偏离大道的旅人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -138,7 +138,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalSkeever</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Skeevers are large rodents that make their nests in caves and sewers. Although easy to kill, they pose a challenge in groups and carry debilitating diseases.</ORIGINAL>
-    <TRADUIT>恶鼠是大型啮齿动物，在洞穴和下水道中筑巢。它们虽然容易杀死，但成群出现时颇具威胁，还会传播令人衰弱的疾病。</TRADUIT>
+    <TRADUIT>恶鼠是大型啮齿动物，在洞穴和下水道中筑巢。它们虽容易杀死，成群时却颇具威胁，还会传播使人衰弱的疾病。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -166,7 +166,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalSpider</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Frostbite spiders rank among Skyrim's most despised creatures. Attacking indiscriminately with fangs and toxic venom, they are as deadly as the affliction for which they are named.</ORIGINAL>
-    <TRADUIT>霜噬蜘蛛是天际最令人厌恶的生物之一。它们用毒牙和剧毒无差别地攻击，致命程度不亚于与其同名的冻伤。</TRADUIT>
+    <TRADUIT>霜噬蜘蛛是天际最令人厌恶的生物之一。它们用毒牙和剧毒无差别攻击，致命程度不亚于与其同名的冻伤。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -180,7 +180,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalWolf</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Travelers should beware of Skyrim's wolves, even on the roads. They are feral beasts that hunt in packs to take down any prey available - whether it walks on four legs or two.</ORIGINAL>
-    <TRADUIT>旅人应当提防天际的狼，哪怕是在大路上。它们是野性十足的野兽，成群狩猎，能扑倒任何能找到的猎物——无论对方是四条腿还是两条腿。</TRADUIT>
+    <TRADUIT>旅人即使走在官道上也要提防天际的狼。它们是野性十足的野兽，成群狩猎，任何能捕到的猎物都不放过——无论对方是四条腿还是两条腿。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -194,7 +194,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>City01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Each of Skyrim's nine holds features a capital city with its own jarl, laws, and culture. Of these, five are considered major cities: Riften, Solitude, Markarth, Whiterun, and Windhelm.</ORIGINAL>
-    <TRADUIT>天际的九大领各有一座首府，拥有自己的领主、法律和文化。其中五座被视为主要城市：裂谷城、独孤城、马卡斯城、白漫城和风舵城。</TRADUIT>
+    <TRADUIT>天际的九大领各有一座首府，各有其领主、律法与风土。其中五座被视为主要城市：裂谷城、独孤城、马卡斯城、白漫城与风舵城。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -208,7 +208,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityGuardRiften</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Skyrim's settlements are patrolled by guards, whose duty is to respond to crime and defend their hold's inhabitants. Respect the law to avoid confrontation.</ORIGINAL>
-    <TRADUIT>天际的定居点由守卫巡逻，他们的职责是应对犯罪、保护领内居民。遵守法律，避免冲突。</TRADUIT>
+    <TRADUIT>天际的聚落由守卫巡逻，他们的职责是应对犯罪、保护领内居民。守法便不会与他们起冲突。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -222,7 +222,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityGuardSolitude</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Guards may sometimes be persuaded to overlook petty crimes. Those with titles of prestige may find lawkeepers to be more lenient.</ORIGINAL>
-    <TRADUIT>守卫有时可以被说服，对轻微罪行睁一只眼闭一只眼。有显赫头衔的人，执法者或许也会宽容几分。</TRADUIT>
+    <TRADUIT>有时能说服守卫对轻微罪行睁一只眼闭一只眼。有显赫头衔的人，执法者往往也更宽容。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -250,7 +250,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityMarkarth</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Nords first conquered Markarth from the native people of the Reach thousands of years ago. In 4E 174, a group of Reachmen briefly seized the city during an event known as the Markarth Incident.</ORIGINAL>
-    <TRADUIT>数千年前，诺德人从瑞驰原住民手中首次夺取了马卡斯城。4E 174 年，一群瑞驰人在被称为“马卡斯事件”的变故中短暂占领了这座城市。</TRADUIT>
+    <TRADUIT>数千年前，诺德人从瑞驰原住民手中首次夺取马卡斯城。4E 174 年，一群瑞驰人在史称「马卡斯事件」的变故中短暂占领了这座城市。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -264,7 +264,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityRiften</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Riften sits on the eastern shore of Lake Honrich, partly built over its waters. The canal that spans the city was once a major thoroughfare for merchants and fishermen.</ORIGINAL>
-    <TRADUIT>裂谷城坐落在霍利奇湖东岸，部分城区建在水面之上。贯穿城市的运河曾是商人和渔夫往来的主要通道。</TRADUIT>
+    <TRADUIT>裂谷城坐落在霍利奇湖东岸，部分城区建在水面之上。横贯城市的运河曾是商人和渔夫往来的主要水道。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -278,7 +278,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityRiftenRatway</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Beneath the city of Riften lies a network of sewer tunnels known as the Ratway - a hideout for various lowlifes and the base of operations for the notorious Thieves Guild.</ORIGINAL>
-    <TRADUIT>裂谷城下方有一片被称为“鼠道”的下水道网络——各类不法之徒的藏身处，也是臭名昭著的盗贼公会的行动基地。</TRADUIT>
+    <TRADUIT>裂谷城地下有一片名为「鼠道」的下水道网络——各类亡命之徒的藏身处，也是恶名昭著的盗贼公会的行动基地。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -292,7 +292,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CitySolitude</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Skyrim's capital, Solitude, is the heart of Imperial power in the province. The city was built atop a natural arch, lending its port much-needed shelter from the winds of the Sea of Ghosts.</ORIGINAL>
-    <TRADUIT>天际的首府独孤城是该省帝国势力的中心。这座城市建在一座天然拱门之上，挡住幽灵海的风，为港口提供亟需的庇护。</TRADUIT>
+    <TRADUIT>天际首府独孤城是帝国在本省势力的中心。城市建在一道天然拱门之上，为港口挡住幽灵海的风，提供了亟需的屏障。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -306,7 +306,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CitySolitudeCastle</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The stone-walled Castle Dour is the oldest structure in Solitude. It acts as the Imperial army's base of command, while the jarl resides in the Blue Palace.</ORIGINAL>
-    <TRADUIT>石墙环绕的阴郁堡是独孤城最古老的建筑。它是帝国军队的指挥基地，而领主则住在蓝宫。</TRADUIT>
+    <TRADUIT>石墙环绕的阴郁堡是独孤城最古老的建筑。它既是帝国军队的指挥基地，领主则居于蓝宫。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -320,7 +320,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityWhiterun</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Whiterun's central location in Skyrim has made it a major trading hub. The city comprises three districts, with the towering fortress of Dragonsreach dominating the highest.</ORIGINAL>
-    <TRADUIT>白漫城地处天际中部，因而成为重要的贸易枢纽。城市由三个城区组成，高耸的龙临宫雄踞最高的城区。</TRADUIT>
+    <TRADUIT>白漫城地处天际中部，因而成为重要的贸易枢纽。全城由三个城区组成，高耸的龙临宫雄踞最高的城区。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -334,7 +334,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityWhiterunSkyforge</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>No one is certain who built the Skyforge, where the Companions' weapons are made. Its discovery led to the construction of Jorrvaskr and the Companions as they are recognized today.</ORIGINAL>
-    <TRADUIT>无人确知天空锻炉由谁建造，战友团的武器便是在那里锻造的。它的发现促成了月瓦斯卡的建造，也造就了今日为人熟知的战友团。</TRADUIT>
+    <TRADUIT>无人确知天空锻炉由谁建造，战友团的武器便出自那里。它的发现促成了月瓦斯卡的建造，也造就了今日为人熟知的战友团。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -348,7 +348,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityWindhelm</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Windhelm is a former capital of Skyrim and the oldest human city on the continent. Built as a monument to mankind, it has withstood multiple sackings in its long history.</ORIGINAL>
-    <TRADUIT>风舵城是天际的前首都，也是大陆上最古老的人类城市。它为纪念人类而建，在漫长历史中历经多次劫掠仍屹立不倒。</TRADUIT>
+    <TRADUIT>风舵城是天际的前首都，也是大陆上最古老的人类城市。它为纪念人类而建，漫长历史中历经多次洗劫仍屹立不倒。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -362,7 +362,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CityWindhelmPalace</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Jarl of Windhelm resides in the Palace of Kings, seated upon the ancient throne of Ysgramor like many legendary figures before him.</ORIGINAL>
-    <TRADUIT>风舵城的领主居住在众王之殿，像他之前的许多传奇人物一样，坐在伊斯格拉默的古老王座上。</TRADUIT>
+    <TRADUIT>风舵城的领主居于众王之殿，像他之前的许多传奇人物一样，坐在伊斯格拉默的古老王座上。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -404,7 +404,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarCampRaid</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>War camps are usually well-manned, but lack the proper defenses of a castle. Raiding enemy encampments is an effective tactic for weakening their positions.</ORIGINAL>
-    <TRADUIT>战营通常人手充足，却缺乏城堡那样的完备防御。突袭敌军营地是削弱其阵地的有效战术。</TRADUIT>
+    <TRADUIT>战营通常人手充足，却缺少城堡那样的完备防御。突袭敌军营地是削弱其阵地的有效战术。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -432,7 +432,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarLegion02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Empire claimed victory in the Great War, but narrowly - at the cost of Hammerfell and much of its former might. The Legion now fights to quell the rebellion and keep Skyrim within the fold.</ORIGINAL>
-    <TRADUIT>帝国在浩大战争中宣称获胜，但只是险胜——代价是失去落锤省和昔日的大部分国力。如今军团为镇压叛乱、将天际留在帝国版图内而战。</TRADUIT>
+    <TRADUIT>帝国在浩大战争中宣称获胜，却只是险胜——代价是失去落锤省和昔日大半国力。如今军团为镇压叛乱、将天际留在帝国版图内而战。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -446,7 +446,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarLegionGeneral</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>General Tullius is the Military Governor of Skyrim tasked with crushing the Stormcloak Rebellion, viewing its leader as nothing more than a power-hungry usurper.</ORIGINAL>
-    <TRADUIT>图留斯将军是天际的军事总督，受命镇压风暴斗篷叛乱，他视其领袖为一个只知争权夺利的篡位者。</TRADUIT>
+    <TRADUIT>图留斯将军是天际的军事总督，受命镇压风暴斗篷叛乱；他视其领袖为只知争权的篡位者。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -460,7 +460,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarLegionPatrol</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"May those above judge me, and those below take me, if I fail in my duty. Long live the Emperor! Long live the Empire!" - Part of the Imperial Oath</ORIGINAL>
-    <TRADUIT>“若我未能履行职责，愿上方的诸神审判我，愿下方的亡者收留我。皇帝万岁！帝国万岁！”——帝国誓词的一部分</TRADUIT>
+    <TRADUIT>「若我失职，愿天上诸神审判我，愿地下亡者收留我。皇帝万岁！帝国万岁！」——帝国誓词节选</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -488,7 +488,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarStormcloak01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Stormcloaks are rising up against Imperial rule to reclaim religious and political freedom in Skyrim. They view Ulfric Stormcloak as the true High King and a paragon of Nordic values.</ORIGINAL>
-    <TRADUIT>风暴斗篷奋起反抗帝国统治，以夺回天际的宗教与政治自由。他们视乌弗瑞克·风暴斗篷为真正的至高王，是诺德价值观的典范。</TRADUIT>
+    <TRADUIT>风暴斗篷奋起反抗帝国统治，要夺回天际的宗教与政治自由。他们视乌弗瑞克·风暴斗篷为真正的至高王，是诺德价值观的典范。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -502,7 +502,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarStormcloakRebellion</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>High King Torygg was recently killed by Ulfric Stormcloak, who shouted him apart with the power of the Thu'um. Ulfric was thereafter branded a traitor by the Empire, and the Stormcloak Rebellion began in earnest.</ORIGINAL>
-    <TRADUIT>至高王托依格最近被乌弗瑞克·风暴斗篷杀死，后者用吐'目之力将他撕成碎片。此后乌弗瑞克被帝国斥为叛徒，风暴斗篷叛乱全面爆发。</TRADUIT>
+    <TRADUIT>至高王托依格不久前被乌弗瑞克·风暴斗篷所杀——后者以吐'目之力将他吼得四分五裂。此后帝国将乌弗瑞克斥为叛徒，风暴斗篷叛乱正式爆发。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -516,7 +516,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarStormcloakSkirmisher</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Throw off the shackles of Imperial oppression. Do not bow to the yoke of a false emperor. Be true to your blood, to your homeland." - Anonymous, Nords Arise!</ORIGINAL>
-    <TRADUIT>“挣脱帝国压迫的枷锁。不要向伪帝的枷锁低头。忠于你的血脉，忠于你的故土。”——佚名，《诺德人，崛起！》</TRADUIT>
+    <TRADUIT>「挣脱帝国压迫的枷锁。不要向伪帝的轭低头。忠于你的血脉，忠于你的故土。」——佚名，《诺德人，崛起！》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -530,7 +530,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarStormcloakSoldier</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>While their ranks are not limited to Nords, the Stormcloaks assert that they alone are the true sons and daughters of Skyrim.</ORIGINAL>
-    <TRADUIT>虽然风暴斗篷的行列并不限于诺德人，但他们宣称唯有自己才是天际真正的儿女。</TRADUIT>
+    <TRADUIT>风暴斗篷的队伍虽不限于诺德人，他们却宣称唯有自己才是天际真正的儿女。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -544,7 +544,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarStormcloakUlfric</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ulfric Stormcloak is the rebellious Jarl of Windhelm, a veteran of the Great War who harbors deep resentment for the White-Gold Concordat and its ban on Talos worship.</ORIGINAL>
-    <TRADUIT>乌弗瑞克·风暴斗篷是风舵城那位反叛的领主，一位浩大战争的老兵，对《白金协定》及其禁止塔洛斯信仰的条款怀有深切怨恨。</TRADUIT>
+    <TRADUIT>乌弗瑞克·风暴斗篷是风舵城那位反叛的领主，也是浩大战争的老兵，对《白金协定》及其禁止塔洛斯信仰的条款怀有深切怨恨。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -558,7 +558,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureBoneWolf</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Despite being raised by necromancers, a bone wolf can become a loyal companion, rewarding friendship by carrying items and boosting the effectiveness of attacks against the undead.</ORIGINAL>
-    <TRADUIT>尽管由死灵法师复活，骨狼仍能成为忠诚的伙伴，以替主人携带物品、增强对亡灵攻击的效果来回报友谊。</TRADUIT>
+    <TRADUIT>骨狼虽由死灵法师唤起，却仍能成为忠诚的伙伴——它以替主人驮运物品、增强对亡灵的杀伤来回报情谊。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -572,7 +572,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureChaurus</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Those venturing into Skyrim's deepest underground reaches should be wary of chaurus - giant insects that spit poison and bite with razor-sharp mandibles.</ORIGINAL>
-    <TRADUIT>深入天际地下最深处的人应当提防查鲁斯——这种巨型昆虫会喷射毒液，并用锋利的下颚咬人。</TRADUIT>
+    <TRADUIT>深入天际地下最深处的人应当提防查鲁斯——这种巨型昆虫会喷射毒液，并用锋利的下颚撕咬。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -614,7 +614,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureGargoyle</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>When stationary, gargoyles form a stony skin to disguise themselves as statues, bursting forth to ambush the unsuspecting with deadly claws that drain their victims' life forces.</ORIGINAL>
-    <TRADUIT>静止不动时，石像鬼会形成石质皮肤，伪装成雕像，一旦有人靠近便猛然跃出，用致命的爪子伏击毫无防备者，吸取受害者的生命力。</TRADUIT>
+    <TRADUIT>静止不动时，石像鬼会凝出一层石质皮肤，伪装成雕像；一旦有人靠近便猛然扑出，用致命的利爪伏击毫无防备者，吸走他们的生命力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -628,7 +628,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureGiant01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Giants are semi-nomadic, migrating with their mammoth herds to establish camps across Skyrim. They are generally peaceful, so long as potential threats keep their distance.</ORIGINAL>
-    <TRADUIT>巨人过着半游牧生活，随猛犸群迁徙，在天际各处建立营地。只要潜在威胁保持距离，他们通常很和平。</TRADUIT>
+    <TRADUIT>巨人过着半游牧生活，随猛犸群迁徙，在天际各处扎营。只要潜在威胁保持距离，他们通常很平和。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -684,7 +684,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureHagraven</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Few creatures match the cunning, depravity, and repulsiveness of hagravens. A terrible conjoining of woman and bird, they will take through savagery what they cannot win through guile.</ORIGINAL>
-    <TRADUIT>很少有生物能比得上乌鸦鬼婆的狡诈、堕落与丑恶。它们是女人与鸟的可怕结合体，无法用诡计赢得的东西，就会用野蛮手段夺取。</TRADUIT>
+    <TRADUIT>少有生物比得上乌鸦鬼婆的狡诈、堕落与丑恶。她们是女人与鸟的可怕结合体，用诡计得不到的东西，就用野蛮手段抢夺。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -698,7 +698,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureIceWraith</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The wintry reaches of northern Skyrim are haunted by elemental spirits known as ice wraiths. Their icy glow makes them difficult to see or hit, leaping from the snow as if conjured from the frost itself.</ORIGINAL>
-    <TRADUIT>天际北部的寒冬地带游荡着被称为冰怒灵的元素精魂。它们冰冷的辉光令人难以看清或击中，会从雪中跃出，仿佛由霜本身召唤而来。</TRADUIT>
+    <TRADUIT>天际北部的寒冬地带游荡着被称为冰怒灵的元素精魂。它们冰冷的辉光令人难以看清、难以击中，会从雪中跃出，仿佛由寒霜本身召唤而来。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -712,7 +712,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureSpriggan</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Little is known of the mysterious spriggans, save that they revere Skyrim's forests and will defend these regions with their lives.</ORIGINAL>
-    <TRADUIT>人们对神秘的木灵所知甚少，只知道它们崇敬天际的森林，并会以生命捍卫这些区域。</TRADUIT>
+    <TRADUIT>人们对神秘的木灵所知甚少，只知道它们敬奉天际的森林，会以性命捍卫这些林地。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -726,7 +726,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureTroll01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Trolls are formidable creatures that can regenerate their health - an ability that fire can all too easily burn away.</ORIGINAL>
-    <TRADUIT>巨魔是强大的生物，能够恢复生命——而火焰很容易将其烧毁。</TRADUIT>
+    <TRADUIT>巨魔是强大的生物，能够自行恢复生命——而火焰很容易将这能力烧尽。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -768,7 +768,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureUnicorn</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The unicorn is a mythical creature so rare its existence is constantly doubted. Native to the Hunting Grounds, it was conceived by Hircine to be agile and fierce, embodying the qualities of the perfect prey to be hunted.</ORIGINAL>
-    <TRADUIT>独角兽是一种神话生物，极为罕见，其存在始终受到质疑。它原生于狩猎场，由海尔辛创造，敏捷而凶猛，堪称完美的猎物。</TRADUIT>
+    <TRADUIT>独角兽是神话中的生物，稀有到其存在始终备受质疑。它原生于狩猎场，由海尔辛创造得敏捷而凶猛，是完美猎物的化身。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -796,7 +796,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureWispLights</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Wisps may enchant the hapless adventurer, but these ethereal floating entities are usually accompanied by a wispmother, who does not respond kindly to threats against her "children."</ORIGINAL>
-    <TRADUIT>幽魂可能会迷惑不幸的冒险者，但这些空灵漂浮的存在通常有一位幽魂之母相伴，而她对任何威胁其“孩子”的行为都不会客气。</TRADUIT>
+    <TRADUIT>幽魂或许会迷惑不幸的冒险者，但这些空灵飘荡的存在通常有一位幽魂之母相伴，而她对任何威胁其「孩子」的举动都不会客气。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -810,7 +810,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureVampire01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Vampires are immune to age, resilient to harm, and dependent only upon blood and darkness. As their endless time marches on, they only tend to grow in strength.</ORIGINAL>
-    <TRADUIT>吸血鬼不受衰老影响，能抵御伤害，只依赖鲜血与黑暗。随着无尽岁月流逝，它们的力量往往只会不断增强。</TRADUIT>
+    <TRADUIT>吸血鬼不受岁月侵蚀，能抵御伤害，只依赖鲜血与黑暗。无尽岁月流逝，它们的力量往往只增不减。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -824,7 +824,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureVampireKhajiit</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Victims of the disease Sanguinare Vampiris will feel suddenly weak during the day and acquire a peculiar thirst, which progresses to Vampirism if not cured within three days.</ORIGINAL>
-    <TRADUIT>感染血腥吸血热的人会在白天突然感到虚弱，并产生一种奇特的渴求；若三日内未治愈，就会发展为吸血鬼化。</TRADUIT>
+    <TRADUIT>感染血腥吸血热的人会在白天突然虚弱，并生出一种奇特的渴求；若三日内未治愈，便会化为吸血鬼。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -852,7 +852,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureVampireMage</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>While vampires possess unnatural speed, strength, and magical talent, their ability to spread the disease to others - a fate described as worse than death - is among the most frightening.</ORIGINAL>
-    <TRADUIT>吸血鬼拥有超乎寻常的速度、力量和魔法天赋，但它们将疾病传染给他人的能力——一种被形容为比死亡更悲惨的命运——才是最令人恐惧的能力之一。</TRADUIT>
+    <TRADUIT>吸血鬼拥有超乎寻常的速度、力量与魔法天赋，但它们把疾病传染给他人——一种被形容为比死更惨的命运——才是最令人恐惧的能力之一。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -908,7 +908,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureWerewolfTerror</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Those with the blood of a werewolf are said to be cursed with wild dreams, seldom benefiting from a restful night's sleep - no matter how comfortable their bed might be.</ORIGINAL>
-    <TRADUIT>据说，拥有狼人之血的人会受到狂野梦境的诅咒，难得一夜安眠——无论他们的床铺多么舒适。</TRADUIT>
+    <TRADUIT>据说身怀狼人之血的人受狂野梦境所困，难得一夜安眠——无论床铺多么舒适。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -922,7 +922,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureWerewolfCorpselight</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Lycanthropy was created by the Daedric Prince Hircine, who is known to bestow it upon those he favors. Thus, it is referred to as "Hircine's Gift" - or "Curse," by those who view it as such.</ORIGINAL>
-    <TRADUIT>狼人化由迪德拉君王海尔辛创造，据说他会将此赐予自己青睐的人。因此，它被称为“海尔辛的恩赐”——或者，在将其视为诅咒的人口中，被称为“海尔辛的诅咒”。</TRADUIT>
+    <TRADUIT>狼人化由迪德拉君王海尔辛创造，据说他会将此赐予自己青睐的人。因此它被称为「海尔辛的恩赐」——而在视之为诅咒的人口中，则是「海尔辛的诅咒」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -936,7 +936,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureWerewolfRavager</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The strength of a werewolf's bloodlust seems to vary, with some maintaining control during a transformation and others becoming little more than feral beasts.</ORIGINAL>
-    <TRADUIT>狼人嗜血本能的强度似乎因人而异：有些人在变身期间仍能保持控制，另一些人则几乎沦为纯粹的野兽。</TRADUIT>
+    <TRADUIT>狼人嗜血冲动的强度似乎因人而异：有些人在变身时仍能保持控制，另一些人则几乎沦为纯粹的野兽。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -950,7 +950,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>Daedra01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The term "daedra" refers to entities that inhabit the planes of Oblivion. Because they are not bound to Nirn, they cannot be permanently killed, only banished.</ORIGINAL>
-    <TRADUIT>“迪德拉”一词指的是栖息于湮灭位面的实体。由于它们不受奈恩束缚，因此无法被永久杀死，只能被放逐。</TRADUIT>
+    <TRADUIT>「迪德拉」一词指栖息于湮灭位面的存在。由于它们不受奈恩束缚，无法被永久杀死，只能被放逐。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -964,7 +964,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraCreatureClannfear</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Recognized by their large head crest, sharp beak, and long talons, clannfears are reptilian daedra that serve many Daedric Princes.</ORIGINAL>
-    <TRADUIT>克兰费尔是爬行类迪德拉，特征是巨大的头冠、尖喙和长爪，侍奉许多迪德拉君王。</TRADUIT>
+    <TRADUIT>克兰费尔是爬行类迪德拉，以巨大的头冠、尖喙和长爪为特征，侍奉多位迪德拉君王。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -978,7 +978,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraCreatureDaedroth</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Commonly associated with Molag Bal, daedroths are crocodile-headed daedra that possess long clawed arms, a powerful bite, and a maw that spews flame.</ORIGINAL>
-    <TRADUIT>迪德拉鳄常与莫拉格·巴尔联系在一起，是长着鳄鱼头的迪德拉，拥有长爪手臂、强有力的咬合和喷吐火焰的大嘴。</TRADUIT>
+    <TRADUIT>迪德拉鳄常与莫拉格·巴尔联系在一起，是长着鳄鱼头的迪德拉，拥有带长爪的手臂、强力的咬合与喷火的大嘴。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -992,7 +992,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraCreatureHunger</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Hungers are vicious daedra that serve Boethiah, using their paralyzing touch, razor-sharp claws, and long tongues to siphon the life from their prey.</ORIGINAL>
-    <TRADUIT>饥饿魔是侍奉波耶西亚的凶残迪德拉，用麻痹之触、锋利的爪子和长舌吸取猎物的生命。</TRADUIT>
+    <TRADUIT>饥饿魔是侍奉波耶西亚的凶残迪德拉，用麻痹之触、锋利爪牙和长舌吸走猎物的生命。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1006,7 +1006,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraCreatureLurker</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Hailing from the murky waters of Apocrypha, lurkers are amphibious daedra that serve their Prince by guarding forbidden knowledge.</ORIGINAL>
-    <TRADUIT>深潜者来自异典的浑浊水域，是两栖迪德拉，通过守护禁忌知识来侍奉他们的君王。</TRADUIT>
+    <TRADUIT>深潜者来自异典的浑浊水域，是两栖迪德拉，以守护禁忌知识来侍奉它们的君王。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1020,7 +1020,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraCreatureScamp</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Lesser daedra called scamps regularly enter the mortal plane to cause mischief and carry out errands for their Princes - mainly Mehrunes Dagon.</ORIGINAL>
-    <TRADUIT>被称为小恶魔的次级迪德拉经常进入凡世，制造恶作剧，并为他们的君王——主要是梅鲁涅斯·大衮——跑腿。</TRADUIT>
+    <TRADUIT>被称为小恶魔的次级迪德拉经常闯入凡世制造恶作剧，并为君王——主要是梅鲁涅斯·大衮——跑腿办事。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1034,7 +1034,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraDremora01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dremora are a warlike daedric race commonly encountered throughout Oblivion. Highly intelligent, they consider themselves both superior to other daedra and beyond notions of good or evil.</ORIGINAL>
-    <TRADUIT>魔人是好战的迪德拉种族，在湮灭各地都很常见。它们智力极高，自认为优于其他迪德拉，也超脱于善恶观念之外。</TRADUIT>
+    <TRADUIT>魔人是好战的迪德拉种族，在湮灭各地都很常见。它们智力极高，自认优于其他迪德拉，也超脱于善恶之外。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1048,7 +1048,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraDremoraAttuned</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dremora who serve Daedric Princes exist to fulfill their Princes' purposes and often act as intermediaries for mortals seeking to make pacts with them.</ORIGINAL>
-    <TRADUIT>侍奉迪德拉君王的魔人存在的意义就是实现君王的意图，它们常充当寻求与君王缔结契约的凡人的中间人。</TRADUIT>
+    <TRADUIT>侍奉迪德拉君王的魔人为实现君王的意图而存在，常充当凡人向君王求约时的中间人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1076,7 +1076,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraDremoraKynreeve</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dremora society is a tiered clan system that values oaths, pride, and loyalty - to both the clan and to the lord they serve, whom they also venerate as a god.</ORIGINAL>
-    <TRADUIT>魔人社会是等级森严的氏族制度，重视誓言、自尊与忠诚——既忠于氏族，也忠于他们所侍奉、并奉为神明的领主。</TRADUIT>
+    <TRADUIT>魔人社会是等级森严的氏族制，重视誓言、自尊与忠诚——既忠于氏族，也忠于所侍奉并奉为神明的领主。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1090,7 +1090,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraSaint01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Golden Saints are proud daedric warriors tasked with guarding the Mania half of the Shivering Isles. They are the rivals of the Dark Seducers, with whom they compete eternally for Sheogorath's favor.</ORIGINAL>
-    <TRADUIT>黄金圣徒是骄傲的迪德拉战士，负责守卫战栗群岛的狂热半区。它们与黑暗诱惑者互为对手，为争夺谢尔格拉的青睐而永世相争。</TRADUIT>
+    <TRADUIT>黄金圣徒是骄傲的迪德拉战士，负责守卫战栗群岛的狂热半区。它们与黑暗诱惑者互为宿敌，为争夺谢尔格拉的青睐而永世相争。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1104,7 +1104,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraSaintCommander</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>In spite of their kind name and appearance, the Golden Saints are an arrogant race with little love for mortals, quick to anger and cruel in their punishments.</ORIGINAL>
-    <TRADUIT>尽管名称与外表显得友善，黄金圣徒却是傲慢的种族，对凡人毫无好感，易怒且惩罚残酷。</TRADUIT>
+    <TRADUIT>尽管名号与外表可亲，黄金圣徒却是傲慢的种族，对凡人毫无好感，易怒且惩罚残酷。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1132,7 +1132,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraSeducer01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dark Seducers are cunning daedric warriors tasked with guarding the Dementia half of the Shivering Isles. They are the rivals of the Golden Saints, with whom they compete eternally for Sheogorath's favor.</ORIGINAL>
-    <TRADUIT>黑暗诱惑者是狡诈的迪德拉战士，负责守卫战栗群岛的痴呆半区。它们与黄金圣徒互为对手，为争夺谢尔格拉的青睐而永世相争。</TRADUIT>
+    <TRADUIT>黑暗诱惑者是狡诈的迪德拉战士，负责守卫战栗群岛的痴呆半区。它们与黄金圣徒互为宿敌，为争夺谢尔格拉的青睐而永世相争。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1146,7 +1146,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraSeducer02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Despite their menacing name and appearance, the Dark Seducers are an outwardly polite race with more patience for mortals than their rivals... to an extent.</ORIGINAL>
-    <TRADUIT>尽管名字和外表凶险，黑暗诱惑者却是表面礼貌的种族，对凡人比它们的对手更有耐心……在一定程度上。</TRADUIT>
+    <TRADUIT>尽管名号与外表凶险，黑暗诱惑者却是表面彬彬有礼的种族，对凡人比宿敌更有耐心……多少有一些。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1174,7 +1174,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrince01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Daedric Princes are god-like beings that inhabit the realms of Oblivion. Considered evil by most, their worshippers must build shrines to them far from civilized places. </ORIGINAL>
-    <TRADUIT>迪德拉君王是栖居于湮灭位面的神一般的存在。它们被大多数人视为邪恶，其崇拜者必须在远离文明之地为它们建造祭坛。</TRADUIT>
+    <TRADUIT>迪德拉君王是栖居于湮灭位面的神性存在。它们被大多数人视为邪恶，其崇拜者必须在远离文明之地为它们建起祭坛。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1188,7 +1188,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrince02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Daedric Princes are the most powerful of the daedra and thus worshipped by some mortals as deities. Each oversees their own plane of Oblivion and may manifest in male or female forms.</ORIGINAL>
-    <TRADUIT>迪德拉君王是迪德拉中最强大者，因此被一些凡人奉为神明。每位君王掌管自己的湮灭位面，并可以男性或女性形态显现。</TRADUIT>
+    <TRADUIT>迪德拉君王是迪德拉中最强大者，因此被一些凡人奉为神明。每位君王掌管自己的湮灭位面，并可显现为男身或女身。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1202,7 +1202,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceAzura</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Azura is the Daedric Prince of dusk and dawn - the magic between realms of twilight. She is one of the few of her kind not considered by mortals to be wholly evil.</ORIGINAL>
-    <TRADUIT>阿祖拉是黄昏与黎明的迪德拉君王，掌管暮色领域的魔法。她是同类中少数不被凡人视为全然邪恶的存在。</TRADUIT>
+    <TRADUIT>阿祖拉是黄昏与黎明的迪德拉君王——执掌暮色之间的魔法。她是同类中少数不被凡人视为全然邪恶者。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1230,7 +1230,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceClavicus</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Clavicus Vile is the Daedric Prince of power, trickery, and bargains, often accompanied by his hound, Barbas. He enjoys enticing mortals with tempting pacts that they usually come to regret.</ORIGINAL>
-    <TRADUIT>卡拉威库斯·维尔是力量、诡计与交易的迪德拉君王，常由他的猎犬巴巴斯陪伴。他喜欢用诱人的契约引诱凡人，而这些人通常会后悔。</TRADUIT>
+    <TRADUIT>卡拉威库斯·维尔是力量、诡计与交易的迪德拉君王，常由猎犬巴巴斯伴随。他喜欢用诱人的契约引诱凡人，而这些人往往随后就后悔。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1244,7 +1244,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceHermaeus</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Hermaeus Mora is the Daedric Prince of fate, knowledge, and memory. In his rare dealings with mortals, he usually chooses to appear as a grotesque mass of tentacles.</ORIGINAL>
-    <TRADUIT>赫麦尤斯·莫拉是命运、知识与记忆的迪德拉君王。在他与凡人罕见的往来中，他通常选择以一团怪诞的触手形态出现。</TRADUIT>
+    <TRADUIT>赫麦尤斯·莫拉是命运、知识与记忆的迪德拉君王。在他与凡人罕见的往来中，通常选择以一团怪诞的触手现身。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1258,7 +1258,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceHircine</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Hircine is the Daedric Prince of the hunt and master of beasts. He acts as the guardian of were-creatures, commonly referred to as his "children."</ORIGINAL>
-    <TRADUIT>海尔辛是狩猎的迪德拉君王、野兽之主。他充当兽化生物的守护者，这些生物通常被称为他的“孩子”。</TRADUIT>
+    <TRADUIT>海尔辛是狩猎的迪德拉君王、野兽之主。他守护兽化生物，它们通常被称为他的「孩子」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1272,7 +1272,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceJyggalag</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Jyggalag is the Daedric Prince of logical order and deduction. He was cursed in antiquity to live as Sheogorath, resuming his true form to reclaim the Shivering Isles at the end of every era.</ORIGINAL>
-    <TRADUIT>杰盖拉格是逻辑秩序与推演的迪德拉君王。他在远古受到诅咒，以谢尔格拉的身份存在；每个纪元终结时，他会恢复真身，夺回战栗群岛。</TRADUIT>
+    <TRADUIT>杰盖拉格是逻辑秩序与推演的迪德拉君王。他在远古受到诅咒，以谢尔格拉的身份存续；每个纪元终结时，他会恢复真身，夺回战栗群岛。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1286,7 +1286,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceMalacath</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Malacath is the Daedric Prince of curses and the spurned, venerated by the Orcs. Legend suggests he was once an Aedra who was transformed by Boethiah into his current, vengeful form.</ORIGINAL>
-    <TRADUIT>玛拉凯斯是诅咒与被唾弃者的迪德拉君王，受兽人尊崇。传说他原本是一位伊德拉，被波耶西亚变成了如今这副满怀复仇之心的模样。</TRADUIT>
+    <TRADUIT>玛拉凯斯是诅咒与被唾弃者的迪德拉君王，受兽人尊崇。传说他本是伊德拉，被波耶西亚变成如今这副满怀复仇之心的模样。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1300,7 +1300,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceMehrunes</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Mehrunes Dagon is the Daedric Prince of destruction, revolution, and ambition. He caused the Oblivion Crisis when he attempted to enter Tamriel in his true and terrible form.</ORIGINAL>
-    <TRADUIT>梅鲁涅斯·大衮是破坏、革命与野心的迪德拉君王。他试图以真实而可怖的形态进入泰姆瑞尔，由此引发了湮灭危机。</TRADUIT>
+    <TRADUIT>梅鲁涅斯·大衮是破坏、革命与野心的迪德拉君王。他曾试图以真身那可怖的形态进入泰姆瑞尔，由此引发湮灭危机。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1314,7 +1314,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceMephala</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Mephala is the Daedric Prince of lies, sex, and secrets, ever weaving webs of intrigue and terror. She thoroughly enjoys meddling in the affairs of mortals.</ORIGINAL>
-    <TRADUIT>梅法拉是谎言、性与秘密的迪德拉君王，不断编织阴谋与恐怖的网。她非常喜欢插手凡人的事务。</TRADUIT>
+    <TRADUIT>梅法拉是谎言、情欲与秘密的迪德拉君王，不断编织阴谋与恐怖的网。她极爱插手凡人的事务。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1342,7 +1342,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceMolag</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Molag Bal is the Daedric Prince of brutality and enslavement. His ultimate desire is to reap the souls of all mortals by sowing strife and discord in the mortal realms.</ORIGINAL>
-    <TRADUIT>莫拉格·巴尔是残暴与奴役的迪德拉君王。他的终极欲望是通过在凡世播撒纷争与不和，收割所有凡人的灵魂。</TRADUIT>
+    <TRADUIT>莫拉格·巴尔是残暴与奴役的迪德拉君王。他的终极欲望是在凡世播撒纷争与不和，收割所有凡人的灵魂。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1356,7 +1356,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceNamira</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Namira is the Daedric Prince of darkness and revulsion. As the patron of squalor and vermin, she holds ties to disease, insects, and other repulsive creatures.</ORIGINAL>
-    <TRADUIT>娜米拉是黑暗与厌恶的迪德拉君王。作为肮脏与害虫的守护神，她与疾病、昆虫以及其他令人作呕的生物有所关联。</TRADUIT>
+    <TRADUIT>娜米拉是黑暗与厌恶的迪德拉君王。作为污秽与害虫的守护者，她与疾病、昆虫以及其他令人作呕的生物有所牵连。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1370,7 +1370,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceNocturnal</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nocturnal is the Daedric Prince of night and mystery, associated with ravens and crows. Many thieves take her as their patron, striving to become one with the shadows she commands.</ORIGINAL>
-    <TRADUIT>诺克图娜尔是夜晚与神秘的迪德拉君王，与渡鸦和乌鸦相关。许多盗贼奉她为守护神，努力与她所统御的阴影融为一体。</TRADUIT>
+    <TRADUIT>诺克图娜尔是夜晚与神秘的迪德拉君王，与渡鸦和乌鸦相关。许多盗贼奉她为守护者，努力与她所统御的阴影融为一体。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1398,7 +1398,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceSanguine</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Sanguine is the Daedric Prince of debauchery and dark indulgence. He is known for hosting lavish parties where the revelry is always mixed with malice.</ORIGINAL>
-    <TRADUIT>桑吉恩是放荡与黑暗纵欲的迪德拉君王。他以举办奢华宴会而闻名，而宴会上的狂欢总是掺杂着恶意。</TRADUIT>
+    <TRADUIT>桑吉恩是放荡与黑暗纵欲的迪德拉君王。他以举办奢华宴饮闻名，而席间的狂欢总掺着恶意。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1412,7 +1412,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedricPrinceSheogorath</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Sheogorath is the Daedric Prince of madness and creativity. He is utterly unpredictable and may hinder or help any mortal unlucky enough to cross his path.</ORIGINAL>
-    <TRADUIT>谢尔格拉是疯狂与创造力的迪德拉君王。他完全无法预测，可能会阻碍或帮助任何不幸与他相遇的凡人。</TRADUIT>
+    <TRADUIT>谢尔格拉是疯狂与创造力的迪德拉君王。他全然不可预测，可能阻挠也可能帮助任何不幸与他相遇的凡人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1440,7 +1440,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>Divine01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The religion of the Eight Divines is a fusion of the Aldmeri and Nordic pantheons instituted by Saint Alessia in the First Era. Talos was declared the ninth Divine in the early Third Era.</ORIGINAL>
-    <TRADUIT>八圣灵信仰是圣阿莱西亚在第一纪元创立的，融合了奥德莫与诺德神系。塔洛斯在第三纪元早期被宣布为第九位圣灵。</TRADUIT>
+    <TRADUIT>八圣灵信仰由圣阿莱西亚在第一纪元创立，融合了奥德莫与诺德神系。塔洛斯在第三纪元早期被尊为第九位圣灵。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1454,7 +1454,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DivineAkatosh</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Akatosh, the dragon god of time, is the chief deity of the Divines and defender of the Empire, upholding the qualities of endurance, invincibility, and everlasting legitimacy.</ORIGINAL>
-    <TRADUIT>阿卡托什，时间之龙神，是圣灵之首、帝国的守护者，秉持忍耐、无敌与永恒法统的品质。</TRADUIT>
+    <TRADUIT>阿卡托什，时间之龙神，是圣灵之首、帝国的守护者，秉持坚忍、不可战胜与永恒法统的品质。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1496,7 +1496,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DivinePriestKyne</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Kynareth, called Kyne by the Nords, is the goddess of the Storm and widowed warrior-wife of Shor. She guides fallen souls to Sovngarde, earning her the moniker "Kiss at the End."</ORIGINAL>
-    <TRADUIT>凯娜瑞丝，诺德人称之为凯娜，是风暴女神，也是舒尔的遗孀与战士。她引导阵亡者的灵魂前往松加德，因而获得“终末之吻”的称号。</TRADUIT>
+    <TRADUIT>凯娜瑞丝，诺德人称之为凯娜，是风暴女神，也是舒尔的遗孀与战士之妻。她引导阵亡者的灵魂前往松加德，因而得名「终末之吻」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1524,7 +1524,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DivineTalos</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Talos, the hero-god of mankind, was a mortal and Dragonborn named Tiber Septim who ascended to godhood upon his death. His worship was banned in the Fourth Era as part of the White-Gold Concordat.</ORIGINAL>
-    <TRADUIT>塔洛斯，人类的英雄神，生前是一位名叫泰伯·塞普汀的凡人与龙裔，死后升格为神。第四纪元，作为《白金协定》的一部分，他的信仰被禁止。</TRADUIT>
+    <TRADUIT>塔洛斯，人类的英雄神，生前是名叫泰伯·塞普汀的凡人与龙裔，死后升格为神。第四纪元，作为《白金协定》的一部分，对他的信仰被明令禁止。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1552,7 +1552,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DivineYsmir</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ysmir, the "Dragon of the North," is an important hero-god of the Nords and a title bestowed upon great heroes such as Tiber Septim, with King Wulfharth as the first.</ORIGINAL>
-    <TRADUIT>伊斯米尔，“北方巨龙”，是诺德人的重要英雄神，也是授予伟大英雄的头衔，泰伯·塞普汀即获此衔，而第一位获此殊荣的是武夫哈斯王。</TRADUIT>
+    <TRADUIT>伊斯米尔，「北方之龙」，是诺德人的重要英雄神，也是授予伟大英雄的头衔。泰伯·塞普汀即获此衔，而首位获此殊荣的是武夫哈斯王。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1566,7 +1566,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonAkatosh</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>No credible stories explain how dragons came to be. They are said to have simply always been - eternal and unchanging, neither born nor hatched, yet given to feelings of pride and melancholy.</ORIGINAL>
-    <TRADUIT>没有可信的故事解释巨龙的起源。据说它们一直存在——永恒不变，既非胎生也非孵化，却仍会感到骄傲与忧郁。</TRADUIT>
+    <TRADUIT>没有可信的说法能解释巨龙的由来。据说它们一直存在——永恒不变，既非胎生也非孵化，却仍会生出骄傲与忧郁之情。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1608,7 +1608,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonFury</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Dragons, being dragons, embraced their role as god-kings over men... Were they not superior in every way to the hordes of small, soft creatures that worshipped them?" - Torhal Bjorik, The Dragon War</ORIGINAL>
-    <TRADUIT>“巨龙，作为巨龙，欣然接受了自己作为人类神王的角色……它们在各方面都优于那些崇拜它们的渺小而柔软的造物，难道不是吗？”——托哈尔·比约里克，《巨龙战争》</TRADUIT>
+    <TRADUIT>「巨龙既是巨龙，便欣然接受了作为人类神王的角色……那些崇拜它们的渺小而柔软的造物，哪一方面比得上它们呢？」——托哈尔·比约里克，《巨龙战争》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1636,7 +1636,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonRazorSnow</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Maw unleashing razor snow, Of dragons from the blue brought down, Births the walking winter's woe, The High King in his Jagged Crown." - Ancient Nord Verse</ORIGINAL>
-    <TRADUIT>“巨口喷吐剃刀般的雪，群龙自苍穹坠落，诞下行走的凛冬之祸，至高王戴着他的锯齿王冠。”——古代诺德诗歌</TRADUIT>
+    <TRADUIT>「巨口喷吐剃刀般的雪，群龙自苍穹坠落，诞下行走的凛冬之祸，至高王戴着他的锯齿王冠。」——古代诺德诗歌</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1664,7 +1664,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonSoulAbsorb</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The link between a dragon's soul and its remains is stronger than that of a mortal, allowing it to rise again after defeat. Only when absorbed by another dov can it be permanently destroyed.</ORIGINAL>
-    <TRADUIT>巨龙灵魂与其遗骸之间的联系比凡人的更为紧密，使其在战败后仍能再度崛起。只有被另一条龙吸收，它才会被永久消灭。</TRADUIT>
+    <TRADUIT>巨龙灵魂与其遗骸的联系比凡人更为紧密，使其在战败后仍能再度崛起。只有被另一条龙吸收，它才会被永久消灭。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1678,7 +1678,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonSupreme</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Although some tales of old recount dragons coming to Tamriel from Atmora, most agree that they originate from the continent of Akavir, meaning "Dragon Land."</ORIGINAL>
-    <TRADUIT>尽管一些古老传说称巨龙从阿特莫拉来到泰姆瑞尔，但大多数人认为它们起源于阿卡维尔大陆，其意为“龙之地”。</TRADUIT>
+    <TRADUIT>尽管一些古老传说称巨龙从阿特莫拉来到泰姆瑞尔，但多数人认为它们起源于阿卡维尔大陆，其意为「龙之地」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1692,7 +1692,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonThuum</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>While dragons, and Dragonborn, possess an innate understanding of the Dragon Language - properly known as Thu'um - anyone can learn to shout with adequate training.</ORIGINAL>
-    <TRADUIT>巨龙与龙裔天生理解龙语——正式名称为“吐'目”——但任何人只要经过充分训练，都能学会龙吼。</TRADUIT>
+    <TRADUIT>巨龙与龙裔天生通晓龙语——其正式名称为「吐'目」——但任何人只要经过充分训练，都能学会龙吼。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1706,7 +1706,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonNamedAlduin01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nordic myth regards Alduin as a harbinger of the apocalypse who is older than Nirn itself, having destroyed the last world to create the current one.</ORIGINAL>
-    <TRADUIT>诺德神话将奥杜因视为末日的先驱，他比奈恩本身更古老，曾摧毁上一个世界以创造当前世界。</TRADUIT>
+    <TRADUIT>诺德神话将奥杜因视为末日的先驱，他比奈恩本身更古老，曾摧毁上一个世界以造就当前这个世界。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1720,7 +1720,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonNamedAlduin02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Alduin is the self-proclaimed First-Born of Akatosh who, during the days of the Dragon Cult, forsook his destiny as the World-Eater to conquer Mundus for himself.</ORIGINAL>
-    <TRADUIT>奥杜因自称阿卡托什的长子，在拜龙教时代，他背弃了作为世界吞噬者的命运，转而为自己征服梦达思。</TRADUIT>
+    <TRADUIT>奥杜因自称阿卡托什的长子。在拜龙教时代，他背弃了身为世界吞噬者的天命，转而为自己征服梦达思。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1734,7 +1734,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonNamedAlduin03</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"And the Scrolls have foretold, of black wings in the cold, That when brothers wage war come unfurled! Alduin, Bane of Kings, ancient shadow unbound, With a hunger to swallow the world!" - Song of the Dragonborn</ORIGINAL>
-    <TRADUIT>而卷轴已然预言，当兄弟兵戎相见之时，寒天之上出现黑翼！奥杜因，诸王之灾祸，挣脱束缚的远古阴影，带着吞噬世界的欲望降临！——《龙裔之歌》</TRADUIT>
+    <TRADUIT>「卷轴已然预言，当寒天之上黑翼舒展，兄弟兵戎相见！奥杜因，诸王之灾祸，挣脱束缚的远古阴影，怀着吞噬世界的饥渴！」——《龙裔之歌》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1748,7 +1748,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonNamedOdahviing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Not much is known about Odahviing's life before his burial, but he is assumed to have served Alduin as a soldier during the Dragon War, in which he was likely slain.</ORIGINAL>
-    <TRADUIT>关于傲达威英被埋葬前的生活，人们所知不多，但据推测他曾在巨龙战争中作为士兵侍奉奥杜因，并很可能在那场战争中丧生。</TRADUIT>
+    <TRADUIT>关于傲达威英被埋葬前的生活，人们所知不多，但据推测他曾在巨龙战争中作为士兵侍奉奥杜因，并很可能殒命于那场战争。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1762,7 +1762,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonNamedPaarthurnax</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Originally the first lieutenant and brother of Alduin, Paarthurnax betrayed his kin and taught the power of the Voice to mankind, thereby creating the first Tongues.</ORIGINAL>
-    <TRADUIT>帕图纳克斯原本是奥杜因的第一副官兼兄弟，后来背叛了自己的同族，将吐'目之力传授给人类，从而造就了第一批发声者。</TRADUIT>
+    <TRADUIT>帕图纳克斯本是奥杜因的第一副官，也是他的兄弟，后来却背叛同族，将吐'目之力传授给人类，造就了第一批「发声者」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1776,7 +1776,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonVariantAncient</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Despite supposedly existing before time was a concept, some dragons are described as more ancient than others and are therefore not all equal in power.</ORIGINAL>
-    <TRADUIT>尽管据说巨龙在时间成为概念之前就已存在，但有些龙被描述得比其他龙更古老，因此它们的力量并不完全相同。</TRADUIT>
+    <TRADUIT>尽管据说巨龙在时间成为概念之前便已存在，但有些龙被描述得比其他龙更古老，因此力量并不均等。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1790,7 +1790,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonVariantBlood</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>While all dragons are fearsome, some are more powerful than others, with their might reflected by their hue. Beyond this, each dragon bears its own unique head shape, horns, and other attributes.</ORIGINAL>
-    <TRADUIT>虽然所有巨龙都令人畏惧，但有些比其他更强大，其力量通过色泽体现。除此之外，每条龙都有独特的头型、角和其他特征。</TRADUIT>
+    <TRADUIT>虽然所有巨龙都令人畏惧，但有些比其他更强大，其力量由色泽体现。除此之外，每条龙都有独特的头型、角与其他特征。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1804,7 +1804,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonVariantFrost</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Frost dragons are larger than their weaker brethren and harness the power of their namesake to deliver devastating breath attacks that drain their targets' stamina.</ORIGINAL>
-    <TRADUIT>霜龙比它们较弱的同类体型更大，能驾驭寒霜之力，发动毁灭性的吐息攻击，吸取目标耐力。</TRADUIT>
+    <TRADUIT>霜龙比它们较弱的同类体型更大，能驾驭寒霜之力，发动毁灭性的吐息攻击，吸取目标的耐力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1818,7 +1818,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonVariantSerpentine</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Found only on Solstheim, serpentine dragons are also unique for their lack of scutes and oversized lower jaws, which give them a distinctive underbite.</ORIGINAL>
-    <TRADUIT>蛇形龙仅见于索瑟海姆，它们还因缺少鳞甲和过大的下颚而独一无二，这使它们具有明显的下颌前突。</TRADUIT>
+    <TRADUIT>蛇形龙仅见于索瑟海姆，还因缺少鳞甲和过大的下颚而独一无二，这使它们有着明显的下颌前突。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1832,7 +1832,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyAyleid</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Restless dead still haunt Ayleid ruins, long after their kind was overthrown and then faded from Tamriel. The deadliest of these are formidable sorcerer liches.</ORIGINAL>
-    <TRADUIT>不得安息的亡者仍出没于亚历德废墟，尽管他们的种族早已被推翻并从泰姆瑞尔消失。其中最致命的是强大的巫妖法师。</TRADUIT>
+    <TRADUIT>亚历德早已被推翻并从泰姆瑞尔消失，不得安息的亡者却仍在其废墟中游荡。其中最致命的是强大的巫妖法师。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1846,7 +1846,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyBandit</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Even the most foolhardy adventurers must be cautious of bandits, who lead lives of plunder in Skyrim's less populated regions.</ORIGINAL>
-    <TRADUIT>即便最鲁莽的冒险者也必须提防强盗，他们在天际人烟稀少的地区以劫掠为生。</TRADUIT>
+    <TRADUIT>即便最鲁莽的冒险者也须提防强盗，他们在天际人烟稀少的地区以劫掠为生。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1860,7 +1860,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyCultPriest</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>In life, the Dragon Priests ruled over men with the power of kings in service to their dragon gods - alas for those who dare disturb their ages-long slumber.</ORIGINAL>
-    <TRADUIT>龙祭司生前以国王般的权力统治人类，侍奉他们的巨龙神明——那些胆敢打扰他们千年长眠的人可要倒霉了。</TRADUIT>
+    <TRADUIT>龙祭司生前以君王般的权力统治人类，侍奉他们的巨龙神明——胆敢打扰他们千年长眠的人可要倒霉了。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1888,7 +1888,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyMiraakCultist</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Cultists are enigmatic followers of Miraak who reside in his temple on Solstheim and carry out his wishes, whatever they may be.</ORIGINAL>
-    <TRADUIT>教徒是米拉克的神秘追随者，居住在他位于索瑟海姆的神庙中，执行他的任何旨意。</TRADUIT>
+    <TRADUIT>教徒是米拉克的神秘追随者，住在他索瑟海姆的神庙中，执行他的任何旨意。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1902,7 +1902,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDraugr01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>No one is certain why the draugr still walk the halls of their burial crypts, but some believe they served the dragons and their priests ages ago... and have been cursed with undeath for their treachery.</ORIGINAL>
-    <TRADUIT>无人确知尸鬼为何仍在墓葬的厅堂中游荡，但一些人相信它们曾在远古侍奉巨龙和龙祭司……并因背叛而被诅咒为亡灵。</TRADUIT>
+    <TRADUIT>无人确知尸鬼为何仍在墓葬的厅堂中游荡，但有人认为它们远古时曾侍奉巨龙与龙祭司……并因背叛而被诅咒为不死之身。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1916,7 +1916,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDraugrDeathlord</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Woe to the unwary explorer who delves deep into the burial crypts of the ancient Nords and disturbs the draugr that dwell within.</ORIGINAL>
-    <TRADUIT>粗心的探险者若深入古诺德人的墓葬、搅扰其中的尸鬼，必遭厄运。</TRADUIT>
+    <TRADUIT>粗心的探险者若深入古诺德人的墓葬、惊扰其中的尸鬼，必遭厄运。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1930,7 +1930,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDraugrHulking</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Draugr vary greatly in strength and skill - perhaps matching their battle prowess prior to undeath - with the more formidable among them wielding more impressive equipment.</ORIGINAL>
-    <TRADUIT>尸鬼的力量和技能差异很大——或许与它们成为亡灵前的战斗能力相符——其中更强悍者会使用更精良的装备。</TRADUIT>
+    <TRADUIT>尸鬼的力量与技艺差异悬殊——或许与它们成为亡灵前的战力相当——其中更强悍者会使用更精良的装备。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1944,7 +1944,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDraugrLookout</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Centuries of rot have undone even the best embalming techniques of the ancient Nords, slowly giving way to the draugr's present grotesque forms.</ORIGINAL>
-    <TRADUIT>数百年的腐朽连古诺德人最好的防腐技术也无法抵挡，尸鬼因此逐渐变成如今这副怪诞模样。</TRADUIT>
+    <TRADUIT>数百年的腐朽连古诺德人最好的防腐术也无法抵挡，尸鬼因此渐渐变成如今这副怪诞模样。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1958,7 +1958,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDwarven01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The long-vanished Dwemer built many automatons that continue to function to this day, thanks to the advanced magic and technology of their construction.</ORIGINAL>
-    <TRADUIT>早已消失的锻莫建造了许多自动机械，凭借其构造中先进的魔法与技术，这些机械至今仍在运转。</TRADUIT>
+    <TRADUIT>早已消失的锻莫制造了许多自动机械，凭借其构造中先进的魔法与技术，这些机械至今仍在运转。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1972,7 +1972,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDwarven02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dwarven animunculi tirelessly patrol the ruins of their time-lost masters, regarding any who venture within as trespassers to be attacked on sight.</ORIGINAL>
-    <TRADUIT>矮人机械体不知疲倦地巡逻着已被时间遗忘的主人的废墟，将任何闯入者视为应当立即攻击的入侵者。</TRADUIT>
+    <TRADUIT>矮人机械体不知疲倦地巡逻着已被时间遗忘的主人的废墟，将任何闯入者视为该当场攻击的入侵者。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -1986,7 +1986,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDwarvenCenturion</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Of all the automatons left behind by the Dwemer, Dwarven Centurions are among the most technologically impressive - and deadly. They guard Dwemer ruins as if their masters still walked the halls.</ORIGINAL>
-    <TRADUIT>在锻莫留下的所有自动机械中，矮人百夫长是技术上最令人惊叹——也最致命——的自动机械之一。它们守卫着锻莫废墟，仿佛它们的主人仍在厅堂中行走。</TRADUIT>
+    <TRADUIT>在锻莫留下的所有自动机械中，矮人百夫长是技术上最令人惊叹——也最致命——的造物之一。它们守卫着锻莫废墟，仿佛主人仍在厅堂中行走。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2000,7 +2000,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyDwarvenSphere</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>What the Dwarven Sphere lacks in strength, it makes up for in agility, attacking any foe who wanders too close with lunging strikes or bolts from its arm-mounted crossbow.</ORIGINAL>
-    <TRADUIT>矮人机械球力量不足，却以敏捷弥补，会以冲刺攻击或臂载弩炮射出的弩矢，攻击任何靠得太近的敌人。</TRADUIT>
+    <TRADUIT>矮人机械球力量不足，却以敏捷弥补：它会以冲刺攻击，或从臂载弩炮射出弩矢，攻击任何靠得太近的敌人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2028,7 +2028,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyFalmer01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Falmer are twisted creatures that dwell in Skyrim's deepest reaches. They have but one desire: to destroy the surface world and all who dwell above.</ORIGINAL>
-    <TRADUIT>伐莫是栖息在天际最深处的扭曲生物。它们只有一个愿望：摧毁地表世界以及所有生活在地表的人。</TRADUIT>
+    <TRADUIT>伐莫是栖息在天际最深处的扭曲生物。它们只有一个念头：摧毁地表世界，以及所有活在地表的人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2042,7 +2042,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyFalmerGloomlurker</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Falmer tend to make their lairs near Dwemer technology, as if unwilling to wander far from where their ancestors took shelter from the Nords.</ORIGINAL>
-    <TRADUIT>伐莫倾向于把巢穴建在锻莫技术附近，仿佛不愿远离祖先当年躲避诺德人的庇护所。</TRADUIT>
+    <TRADUIT>伐莫倾向于把巢穴建在锻莫造物附近，仿佛不愿远离祖先当年躲避诺德人的庇护所。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2070,7 +2070,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyFalmerShadowmaster</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Long thought extinct at the hands of the Nords, the Falmer are actually the disfigured remnants of the Snow Elves, twisted by centuries of subterranean slavery under the Dwemer.</ORIGINAL>
-    <TRADUIT>人们长期认为伐莫已在诺德人手中灭绝，但它们实际上是雪精灵的畸形残存者，在锻莫统治下经历数个世纪的地下奴役，因而被扭曲。</TRADUIT>
+    <TRADUIT>人们长期以为伐莫已被诺德人灭绝，它们实际上是雪精灵的畸形残存者——在锻莫统治下历经数世纪的地下奴役而被扭曲。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2084,7 +2084,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyUndeadColossus</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Bone colossi are large undead constructs made from assorted bones that can be summoned by powerful necromancers.</ORIGINAL>
-    <TRADUIT>骨巨像是由各种骨骼拼成的大型亡灵构造体，强大的死灵法师可以召唤它们。</TRADUIT>
+    <TRADUIT>骨巨像是由各种骨骼拼成的大型亡灵构造体，强大的死灵法师可以将其召唤出来。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2098,7 +2098,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyUndeadGhost01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The restless dead sometimes manifest as ghosts to exact their revenge upon the living. These disembodied souls are resistant to blows from non-magical weaponry.</ORIGINAL>
-    <TRADUIT>不得安息的亡者有时会以幽灵形态显现，向生者复仇。这些脱离肉体的灵魂能抵抗非魔法武器的打击。</TRADUIT>
+    <TRADUIT>不得安息的亡者有时会化作幽灵向生者复仇。这些脱离肉体的灵魂能抵抗非魔法武器的打击。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2112,7 +2112,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyUndeadGhostSoul</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>When souls trapped in black soul gems are used to power an enchantment, their remnants are sent to the Soul Cairn to wander for eternity.</ORIGINAL>
-    <TRADUIT>当被困在黑色灵魂石中的灵魂被用来为附魔提供能量时，它们的残迹会被送往灵魂石冢，永远游荡。</TRADUIT>
+    <TRADUIT>当困在黑色灵魂石中的灵魂被用来驱动附魔时，它们的残迹会被送往灵魂石冢，永远游荡。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2126,7 +2126,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyUndeadSkeleton01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>In some of Skyrim's darkest recesses, where the living fear to tread, the bones of the dead still walk. These skeletons feel no pain or remorse... and deserve no mercy.</ORIGINAL>
-    <TRADUIT>在天际活人罕至的黑暗深处，死者的骸骨仍在行走。这些骷髅不会感到痛苦或自责……因此也不配得到怜悯。</TRADUIT>
+    <TRADUIT>在天际活人不敢涉足的黑暗深处，死者的骸骨仍在行走。这些骷髅不觉痛苦，也无悔意……自然也不配得到怜悯。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2154,7 +2154,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyUndeadZombie</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Zombies are undead humanoids that sometimes roam in hordes, carry basic weapons, and are mostly vulnerable to fire.</ORIGINAL>
-    <TRADUIT>僵尸是亡灵人形生物，有时成群游荡，携带基础武器，大多惧怕火焰。</TRADUIT>
+    <TRADUIT>僵尸是亡灵人形生物，有时成群游荡，携带简陋武器，大多惧怕火焰。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2168,7 +2168,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionAlikr</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Redguard mercenaries from Hammerfell have recently been spotted in Skyrim. They claim to be searching for a fugitive, but remain secretive about their true motives.</ORIGINAL>
-    <TRADUIT>来自落锤的红卫雇佣兵最近出现在天际。他们声称在寻找一名逃犯，却对自己的真实动机守口如瓶。</TRADUIT>
+    <TRADUIT>来自落锤的红卫雇佣兵最近现身天际。他们声称在追捕一名逃犯，却对真实动机守口如瓶。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2182,7 +2182,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionMothPriest</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Moth Priests are members of the Cult of the Ancestor Moth who believe their sacred duty is to study the Elder Scrolls - an act that often renders them blind.</ORIGINAL>
-    <TRADUIT>蛾祭司是先祖蛾教团的成员，他们相信自己神圣的职责是研究上古卷轴——这一行为常使他们失明。</TRADUIT>
+    <TRADUIT>蛾祭司是先祖蛾教团的成员，他们相信自己神圣的职责是研读上古卷轴——而这一举动常使他们失明。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2196,7 +2196,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionMythicDawn</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Mythic Dawn was a cult that believed Tamriel was Lorkhan's realm, seized by the Aedra through betrayal. They called upon Mehrunes Dagon to liberate it by waging the Oblivion Crisis.</ORIGINAL>
-    <TRADUIT>神话黎明曾是一个教团，他们相信泰姆瑞尔是洛克汗的领域，被伊德拉通过背叛夺走。他们召唤梅鲁涅斯·大衮，通过发动湮灭危机来解放它。</TRADUIT>
+    <TRADUIT>神话黎明曾是一个教团，他们相信泰姆瑞尔是洛克汗的领域，被伊德拉以背叛手段夺走。他们召唤梅鲁涅斯·大衮，通过发动湮灭危机来解放它。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2210,7 +2210,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionBlades01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Blades Guard defended the Septim emperors for centuries as knights and spies. Sworn to serve the Dragonborn, they hold Talos as their patron deity.</ORIGINAL>
-    <TRADUIT>刀锋卫队作为骑士和间谍，守护塞普汀皇帝数百年。他们宣誓侍奉龙裔，并奉塔洛斯为守护神。</TRADUIT>
+    <TRADUIT>刀锋卫队以骑士与间谍的身份守护塞普汀皇帝数百年。他们宣誓侍奉龙裔，奉塔洛斯为守护神。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2224,7 +2224,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionBladesAkaviri</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Blades formed from a splinter faction of the Akaviri Dragonguard, which disbanded in disgrace following the assassination of Emperor Reman III at the end of the First Era.</ORIGINAL>
-    <TRADUIT>刀锋会由阿卡维尔龙卫的一个分裂派系组成，该派系在第一纪元末雷曼三世皇帝遇刺后蒙羞解散。</TRADUIT>
+    <TRADUIT>刀锋会由阿卡维尔龙卫的一个分支组成，该派系在第一纪元末雷曼三世皇帝遇刺后蒙羞解散。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2238,7 +2238,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionBladesDelphine</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Formally disbanded after the Great War and ruthlessly hunted by the Thalmor, the Blades' remaining members have gone into hiding to await the return of a worthy Dragonborn.</ORIGINAL>
-    <TRADUIT>浩大战争后，刀锋会被正式解散，并遭到梭默的无情追捕，其残存成员转入地下，等待一位值得效忠的龙裔回归。</TRADUIT>
+    <TRADUIT>浩大战争后，刀锋会被正式解散，并遭梭默无情追捕，残存成员转入地下，等待一位值得效忠的龙裔归来。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2252,7 +2252,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionBladesFlanker</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>With the Septim Dynasty sundered, the Blades no longer answer to the Empire. They have reformed following Alduin's return to assume the dragonslaying legacy of their forebears.</ORIGINAL>
-    <TRADUIT>随着塞普汀王朝分崩离析，刀锋会不再听命于帝国。在奥杜因回归后，他们重新集结，继承先辈的屠龙传承。</TRADUIT>
+    <TRADUIT>塞普汀王朝分崩离析后，刀锋会不再听命于帝国。奥杜因回归后他们重新集结，继承先辈的屠龙传承。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2266,7 +2266,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionGreybeard01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Greybeards are an honored cult of monks who live at the ancient monastery of High Hrothgar. They are the most famous of the Tongues, or masters of the Voice.</ORIGINAL>
-    <TRADUIT>灰胡子是一支受人尊敬的僧侣教团，居住在古老的霍斯加修道院。他们是最著名的发声者，即吐'目大师。</TRADUIT>
+    <TRADUIT>灰胡子是一支受人敬重的僧侣教团，居于古老的霍斯加修道院。他们是最负盛名的发声者，也就是吐'目的大师。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2280,7 +2280,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionGreybeardBalance</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Greybeards have long mistrusted and feared the Blades, viewing them as violent Akaviri barbarians bent on turning the Dragonborn away from the path of wisdom.</ORIGINAL>
-    <TRADUIT>灰胡子长期以来不信任并畏惧刀锋会，视他们为残暴的阿卡维尔蛮族，一心要让龙裔背离智慧之路。</TRADUIT>
+    <TRADUIT>灰胡子长期以来既不信任也畏惧刀锋会，视他们为残暴的阿卡维尔蛮族，一心要让龙裔背离智慧之路。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2294,7 +2294,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionGreybeardMentor</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Followers of the Way of the Voice are generally peaceful, tolerating violence only in times of "true need."</ORIGINAL>
-    <TRADUIT>吼声之道的追随者通常爱好和平，只在“真正需要”时才容忍暴力。</TRADUIT>
+    <TRADUIT>吼声之道的追随者通常爱好和平，只在「真正需要」时才容许暴力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2308,7 +2308,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionPenitusOculatus01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The primary task of the Penitus Oculatus (meaning "the Inner Eyes") is to protect the Emperor, serving as the eyes, sword, and shield of the Mede Dynasty.</ORIGINAL>
-    <TRADUIT>洞察眼（意为“内眼”）的主要任务是保护皇帝，充当迈德王朝的眼睛、剑与盾。</TRADUIT>
+    <TRADUIT>洞察眼（意为「内眼」）的首要职责是保护皇帝，充当迈德王朝的眼睛、剑与盾。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2322,7 +2322,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionPenitusOculatusRaid</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Penitus Oculatus demands its agents always be ready to kill, employing a brutal recruitment process to root out the squeamish and weak-willed.</ORIGINAL>
-    <TRADUIT>洞察眼要求其特工时刻准备杀戮，并采用残酷的招募流程来剔除胆小和意志薄弱者。</TRADUIT>
+    <TRADUIT>洞察眼要求其特工时刻准备杀戮，并以残酷的招募流程剔除胆小与意志薄弱者。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2336,7 +2336,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionThalmor01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Thalmor are the governing council of the Third Aldmeri Dominion. They maintain an embassy in Skyrim and are known to capture and imprison anyone who questions their doctrines.</ORIGINAL>
-    <TRADUIT>梭默是第三先祖神洲的统治议会。他们在天际设有一座大使馆，并以抓捕和囚禁任何质疑其教义者而闻名。</TRADUIT>
+    <TRADUIT>梭默是第三先祖神洲的统治议会。他们在天际设有大使馆，以抓捕并囚禁任何质疑其教义者而闻名。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2364,7 +2364,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralBard</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Bards can be heard playing and singing a variety of songs in taverns throughout Skyrim - sometimes at the request of patrons.</ORIGINAL>
-    <TRADUIT>在天际各地的酒馆中，都能听到吟游诗人演奏和演唱各种歌曲——有时是应顾客要求。</TRADUIT>
+    <TRADUIT>在天际各地的酒馆中，都能听到吟游诗人演奏吟唱各种歌曲——有时是应顾客之请。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2378,7 +2378,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralFaceSculptor</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Rumor has it that the sewers of Riften are home to a sculptor who works in the medium of flesh, able to alter faces beyond recognition.</ORIGINAL>
-    <TRADUIT>有传言说，裂谷城的下水道里住着一位以血肉为材料的雕刻师，能够将人的面容改变得面目全非。</TRADUIT>
+    <TRADUIT>有传言说，裂谷城的下水道里住着一位以血肉为材料的雕刻师，能把人的面容改得面目全非。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2392,7 +2392,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralFarmer</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Farmers tend to their land in rural areas outside of larger cities, sometimes seeking extra hands to help with their labors.</ORIGINAL>
-    <TRADUIT>农民在较大城市之外的乡村照料土地，有时会寻找额外的人手帮忙劳作。</TRADUIT>
+    <TRADUIT>农民在较大城市之外的乡间耕作，有时会找人手帮忙干活。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2406,7 +2406,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralGold</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"The Empire is Law. The Law is Sacred." - Imperial Septim inscription</ORIGINAL>
-    <TRADUIT>“帝国即法律。法律即神圣。”——帝国塞普汀铭文</TRADUIT>
+    <TRADUIT>「帝国即法律。法律即神圣。」——帝国塞普汀铭文</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2420,7 +2420,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralHighKing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The High King or Queen of Skyrim inherits the throne by birth and holds it for life. When no clear heir exists, a successor is chosen by a Moot of jarls.</ORIGINAL>
-    <TRADUIT>天际的至高王或至高女王依血统继承王位，并终身持有。若没有明确的继承人，则由领主议会选出继任者。</TRADUIT>
+    <TRADUIT>天际的至高王或至高女王依血统继承王位，并终身持有。若无明确继承人，则由领主议会推举继任者。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2434,7 +2434,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralHousecarl</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Housecarls are personal bodyguards appointed to jarls and their thanes, sworn to protect them with their very lives.</ORIGINAL>
-    <TRADUIT>侍卫是被指派给领主及其武卫的个人保镖，宣誓以生命保护他们。</TRADUIT>
+    <TRADUIT>侍卫是被指派给领主及其武卫的贴身护卫，宣誓以性命相护。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2462,7 +2462,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralKhajiitCaravan</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Caravans of Khajiit merchants travel across Skyrim, selling rare curios and items from other provinces. Their reputation for trading in illegal substances has led cities to forbid them entry.</ORIGINAL>
-    <TRADUIT>卡吉特商队穿越天际，出售稀有珍玩和来自其他省份的物品。由于他们经营非法物品的名声，一些城市禁止他们入内。</TRADUIT>
+    <TRADUIT>卡吉特商队穿行天际，出售稀有珍玩与来自其他省份的物品。由于他们经营违禁品的名声，一些城市禁止他们入内。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2476,7 +2476,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralMerchant01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Most merchants open their shops a few hours after dawn and close just after sunset. If a shop is closed, return in the morning... or pick the lock to browse for free.</ORIGINAL>
-    <TRADUIT>大多数商人会在天亮几小时后开店，并在日落后不久关门。如果店铺关门，可以早上再来……或者撬锁免费浏览。</TRADUIT>
+    <TRADUIT>大多数商人天亮后几小时开店，日落后不久打烊。若店铺已关，可以早上再来……或者撬锁进去白看。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2490,7 +2490,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralMerchantBarter</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Merchants offer a variety of goods for sale and may buy unwanted items at fair prices. Those skilled in persuasion can try bartering for more favorable deals.</ORIGINAL>
-    <TRADUIT>商人出售各种商品，也可能以公道价格收购不需要的物品。擅长说服的人可以尝试讨价还价，争取更有利的交易。</TRADUIT>
+    <TRADUIT>商人出售各种货物，也会以公道价格收购你不要的物品。擅长口才的人可以试着讨价还价，争取更划算的交易。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2504,7 +2504,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralMoons</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nirn is orbited by two moons: Masser, the larger of the two, and Secunda. Nordic myth relates them to a pair of twins who became lost inside a magical blizzard.</ORIGINAL>
-    <TRADUIT>奈恩被两颗卫星环绕：较大的马瑟尔和瑟坤达。诺德神话将它们与一对在魔法暴风雪中迷失的双胞胎联系起来。</TRADUIT>
+    <TRADUIT>奈恩被两颗卫星环绕：较大的马瑟尔与瑟坤达。诺德神话将它们与一对在魔法暴风雪中迷失的双胞胎联系起来。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2518,7 +2518,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralOblivionGate</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Oblivion Gates are otherworldly portals used by daedric forces to travel between their various realms and Mundus.</ORIGINAL>
-    <TRADUIT>湮灭之门是异界传送门，迪德拉势力利用它们在各个领域与梦达思之间往来。</TRADUIT>
+    <TRADUIT>湮灭之门是异界传送门，迪德拉势力借它在各个领域与梦达思之间往来。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2532,7 +2532,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralPlayerHome</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The sale and furnishing of houses are left to a jarl's steward. Several properties are available for purchase in Skyrim's major cities.</ORIGINAL>
-    <TRADUIT>房屋的出售和布置由领主的总管负责。天际的主要城市中有几处房产可供购买。</TRADUIT>
+    <TRADUIT>房屋的出售与布置由领主的总管负责。天际的主要城市中有几处房产可供购买。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2546,7 +2546,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralPrison</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>A bounty can be paid off or resolved by serving time in jail. Once imprisoned, an escape can always be attempted...</ORIGINAL>
-    <TRADUIT>赏金可以支付，也可以通过服刑来解决。一旦入狱，总还能尝试越狱……</TRADUIT>
+    <TRADUIT>赏金可以付清了事，也可以通过服刑抵偿。一旦入狱，总还能试着越狱……</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2560,7 +2560,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralReading</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Books are valuable resources for gaining knowledge, learning spells or skills, and catching a glimpse into the storied past.</ORIGINAL>
-    <TRADUIT>书籍是宝贵的资源，可用于获取知识、学习法术或技能，并一窥充满传奇的过去。</TRADUIT>
+    <TRADUIT>书籍是宝贵的资源，可用于获取知识、学习法术或技能，也能一窥充满传奇的往昔。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2574,7 +2574,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralShip</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The ports of Skyrim are filled with seaworthy ships, whereas the icy depths of the Sea of Ghosts are strewn with the wreckage of less fortunate sailors.</ORIGINAL>
-    <TRADUIT>天际的港口停满适航的船只，而幽灵海的冰冷深处则散落着不幸遇难水手的残骸。</TRADUIT>
+    <TRADUIT>天际的港口停满适航的船只，而幽灵海的冰冷深处则散落着不幸水手的残骸。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2588,7 +2588,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralStandingStone</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Throughout the wilderness stand runed stones attuned to the heavens. Although their origins are a mystery, they are reputed to grant power to those deemed worthy.</ORIGINAL>
-    <TRADUIT>荒野中矗立着与天象相应的立石。它们的起源是个谜，但据说会赐予被认为有资格者力量。</TRADUIT>
+    <TRADUIT>荒野中矗立着与天象相应的符文石。它们的起源是个谜，但据说会赐予被认为有资格者力量。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2602,7 +2602,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralStealing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Preferably done without detection or bloodshed, stealing is one of the easiest ways to acquire gold... or become a wanted criminal.</ORIGINAL>
-    <TRADUIT>偷窃最好在无人察觉、不见血的情况下进行，它是获取金币的最简单方法之一……也可能让你成为通缉犯。</TRADUIT>
+    <TRADUIT>偷窃最好做得无人察觉、不见血光，它是弄到金币最省事的法子之一……也可能让你成为通缉犯。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2616,7 +2616,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralSurvival</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Skyrim's harsh wilderness and unrelenting cold may pose great challenges to the ill-prepared. Only the hardiest explorers can survive her treacherous beauty and stave off hunger and fatigue.</ORIGINAL>
-    <TRADUIT>天际严酷的荒野与无情的严寒，可能给准备不足者带来巨大挑战。只有最强韧的探险者才能在她的险恶美景中生存，并抵御饥饿与疲惫。</TRADUIT>
+    <TRADUIT>天际严酷的荒野与无情的严寒，会给准备不足者带来巨大挑战。只有最强韧的探险者才能在她的险恶美景中活下来，并抵御饥饿与疲惫。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2630,7 +2630,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralThane</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Thane is an honorary title granted by the jarl of a hold to individuals of high esteem, oftentimes in recognition of heroic deeds.</ORIGINAL>
-    <TRADUIT>武卫是领主颁给德高望重者的荣誉头衔，通常用于表彰英勇事迹。</TRADUIT>
+    <TRADUIT>武卫是领主颁给德高望重者的荣誉头衔，往往用于表彰英勇事迹。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2644,7 +2644,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralTreasure</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Whatever lay beyond the door, she thought, must be of sufficient value to merit such protection." - Aniis Noru, Surfeit of Thieves</ORIGINAL>
-    <TRADUIT>“她想，门后无论有什么，都一定价值不菲，才配得上这样的保护。”——阿尼斯·诺鲁，《贪得无厌的盗贼》</TRADUIT>
+    <TRADUIT>「她想，门后无论放着什么，都一定贵重得配得上这样的防护。」——阿尼斯·诺鲁，《贪得无厌的盗贼》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2658,7 +2658,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBardCollege</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Many of Skyrim's bards are graduates of the Bards College in Solitude, a musical school that teaches tale-telling and song.</ORIGINAL>
-    <TRADUIT>天际的许多吟游诗人毕业于独孤城的吟游诗人学院，这是一所教授讲故事与歌唱的音乐学校。</TRADUIT>
+    <TRADUIT>天际的许多吟游诗人毕业于独孤城的吟游诗人学院——一所教授讲故事与歌唱的音乐学府。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2672,7 +2672,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhood01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>It is said that prospective members of the Dark Brotherhood must be contacted directly, indicating just how selective the shadowy assassins are in their recruitment.</ORIGINAL>
-    <TRADUIT>据说，有意加入黑暗兄弟会的人必须由兄弟会主动接触，这表明这些暗影刺客在招募时有多么挑剔。</TRADUIT>
+    <TRADUIT>据说有意加入黑暗兄弟会的人必须由兄弟会主动接触，可见这些暗影刺客在招募上有多么挑剔。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2686,7 +2686,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhoodAstrid</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Dark Brotherhood is but a shadow of its former self. Once a feared cult of assassins devoted to the Night Mother, it now operates as little more than a band of murderers for hire.</ORIGINAL>
-    <TRADUIT>黑暗兄弟会如今早已不复当年。它曾是一个侍奉夜母、令人恐惧的刺客教团，如今不过是一群受雇杀手。</TRADUIT>
+    <TRADUIT>黑暗兄弟会如今已不复当年。它曾是一个侍奉夜母、令人闻风丧胆的刺客教团，如今不过是一群受雇杀手。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2700,7 +2700,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhoodBlackHand</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The ruling council of the Dark Brotherhood, called the Black Hand, consists of four Speakers and one Listener, symbolizing four fingers and a thumb.</ORIGINAL>
-    <TRADUIT>黑暗兄弟会的统治议会被称为“黑手”，由四位发言者和一位聆听者组成，象征四根手指和一根拇指。</TRADUIT>
+    <TRADUIT>黑暗兄弟会的统治议会称为「黑手」，由四位发言者与一位聆听者组成，象征四指与一拇指。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2714,7 +2714,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhoodNightMother</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>When a person prays for the death of another, the Night Mother hears and relays the details to her Listener. She is believed to be voicing the will of Sithis.</ORIGINAL>
-    <TRADUIT>当一个人祈祷他人死亡时，夜母会听见，并将细节转告她的聆听者。人们相信她是在传达西帝斯的意志。</TRADUIT>
+    <TRADUIT>当一个人祈求他人死去，夜母便会听见，并将细节转告她的聆听者。人们相信她是在传达西帝斯的意志。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2728,7 +2728,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhoodSacrament</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Sweet Mother, sweet Mother, send your child unto me, for the sins of the unworthy must be baptized in blood and fear." - Black Sacrament chant</ORIGINAL>
-    <TRADUIT>“亲爱的母亲，亲爱的母亲，把你的孩子送到我身边吧，因为不配者的罪孽必须在鲜血与恐惧中受洗。”——黑色圣礼祷词</TRADUIT>
+    <TRADUIT>「亲爱的母亲，亲爱的母亲，把你的孩子送到我身边吧，因为不配者的罪孽必须在鲜血与恐惧中受洗。」——黑色圣礼祷词</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2756,7 +2756,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhoodShadowmere</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Long associated with the Dark Brotherhood, the mysterious black horse named Shadowmere will rise again within days of its supposed demise - if an enemy somehow manages to slay the resilient steed.</ORIGINAL>
-    <TRADUIT>神秘的黑马“微影”长期与黑暗兄弟会联系在一起；如果敌人设法杀死了这匹坚韧的坐骑，它会在据称死亡后的几天内再度现身。</TRADUIT>
+    <TRADUIT>神秘的黑马「微影」长期与黑暗兄弟会联系在一起；若敌人设法杀死了这匹坚韧的坐骑，它会在看似死亡后的几天内再度现身。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2770,7 +2770,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhoodShadowscale</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Shadowscales were a long-standing order of Argonian assassins born under the sign of the Shadow, offered to the Dark Brotherhood at birth for training in stealth and assassination.</ORIGINAL>
-    <TRADUIT>影鳞是一支历史悠久的阿尔贡刺客教团，成员出生在阴影星座之下，出生时便被献给黑暗兄弟会，接受潜行与刺杀训练。</TRADUIT>
+    <TRADUIT>影鳞是一支历史悠久的阿尔贡刺客教团，成员生于阴影星座之下，出生时便被献给黑暗兄弟会，接受潜行与刺杀训练。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2784,7 +2784,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBrotherhoodSpoils</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>As gruesome as the Black Sacrament ritual may be, more disturbing is its intention: the summoning of a mysterious assassin to kill an unsuspecting victim in exchange for gold.</ORIGINAL>
-    <TRADUIT>黑色圣礼仪式固然骇人，但其意图更令人不安：召唤一名神秘刺客去杀死毫无防备的受害者，以换取金币。</TRADUIT>
+    <TRADUIT>黑色圣礼仪式固然骇人，其意图却更令人不安：召唤一名神秘刺客去杀死毫无防备的受害者，以换取金币。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2798,7 +2798,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCollege01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Most of the city of Winterhold was lost to the sea in the Great Collapse of 4E 122, but the College was left mysteriously unharmed.</ORIGINAL>
-    <TRADUIT>在 4E 122 年的大坍陷中，冬堡城的大部分都沉入大海，但学院却神秘地毫发无损。</TRADUIT>
+    <TRADUIT>4E 122 年的大坍陷中，冬堡城的大部分都沉入大海，学院却神秘地毫发无损。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2812,7 +2812,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCollege02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The College of Winterhold is a school of magic where aspiring mages who prove their skill may study the arcane arts.</ORIGINAL>
-    <TRADUIT>冬堡学院是一所魔法学校，有抱负的法师若能证明自己的技艺，便可在此研习奥术。</TRADUIT>
+    <TRADUIT>冬堡学院是一所魔法学校，有志的法师若能证明自己的本领，便可在此研习奥术。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2826,7 +2826,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCollegeAncano</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The secretive nature of the College of Winterhold's mages has only deepened the local Nords' suspicion of magic, inciting widespread distrust of the institution and its members.</ORIGINAL>
-    <TRADUIT>冬堡学院法师的神秘作风，只会加深当地诺德人对魔法的猜疑，引发人们对这所机构及其成员的普遍不信任。</TRADUIT>
+    <TRADUIT>冬堡学院法师行事神秘，只会加深当地诺德人对魔法的猜疑，引发人们对这所机构及其成员的普遍不信任。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2840,7 +2840,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCollegePhinis</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Those granted admission to the College of Winterhold may further their studies in the arcane by attending lectures, held daily within the Hall of the Elements.</ORIGINAL>
-    <TRADUIT>获准进入冬堡学院的人，可以通过参加每日在元素大厅举行的讲座来进一步研习奥术。</TRADUIT>
+    <TRADUIT>获准进入冬堡学院的人，可以参加每日在元素大厅举行的讲座，进一步研习奥术。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2854,7 +2854,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCollegeTolfdir</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>While the mages of the College of Winterhold share knowledge freely amongst themselves, they do not typically offer their services to outsiders.</ORIGINAL>
-    <TRADUIT>冬堡学院的法师彼此之间自由分享知识，但通常不会向外人提供服务。</TRADUIT>
+    <TRADUIT>冬堡学院的法师彼此之间 freely 分享知识，但通常不向外人提供帮助。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2868,7 +2868,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCollegeUrag</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Arcaneum of the College of Winterhold contains a wealth of knowledge amassed over the course of centuries, accessible to those who require it, but kept under the ever-watchful eye of its librarian.</ORIGINAL>
-    <TRADUIT>冬堡学院的秘术馆收藏着数百年积累的丰富知识，有需要者可以查阅，但始终处于图书管理员的警惕目光之下。</TRADUIT>
+    <TRADUIT>冬堡学院的秘术馆收藏着数百年积累的丰富知识，需要者可以查阅，但始终处在图书管理员警惕的目光之下。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2882,7 +2882,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCompanion01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Warriors seeking adventure and kinship may join the Companions in Whiterun, a guild that traces its legacy back to the original Five Hundred Companions of Ysgramor.</ORIGINAL>
-    <TRADUIT>寻求冒险与归属感的战士可以加入白漫城的战友团，这个公会的传承可追溯到伊斯格拉默最初的五百战友。</TRADUIT>
+    <TRADUIT>寻求冒险与归属的战士可以加入白漫城的战友团，这个公会的传承可追溯到伊斯格拉默最初的五百战友。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2896,7 +2896,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCompanionCircle</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Circle of Jorrvaskr comprises the most trusted veterans among the ranks of the Companions. They venerate the old ways of "honor through blood" and secretly practice lycanthropy.</ORIGINAL>
-    <TRADUIT>月瓦斯卡圆环由战友团中最受信任的老兵组成。他们崇尚“以血证荣”的古道，并秘密修习狼人化。</TRADUIT>
+    <TRADUIT>月瓦斯卡圆环由战友团中最受信任的老兵组成。他们崇尚「以血证荣」的古道，并秘密修习狼人化。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2910,7 +2910,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCompanionIncendiary</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Companions' only recognized leader is the Harbinger, named after Ysgramor, the "harbinger of us all." Their word is highly respected both within Jorrvaskr and around all the nine holds.</ORIGINAL>
-    <TRADUIT>战友团唯一公认的领袖是“先驱”，这一称号源自伊斯格拉默——“我们所有人的先驱”。他的话在月瓦斯卡和九大领都备受尊重。</TRADUIT>
+    <TRADUIT>战友团唯一公认的领袖是「先驱」，这一称号源自伊斯格拉默——「我们所有人的先驱」。他的话在月瓦斯卡与九大领都备受敬重。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2924,7 +2924,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildCompanionInitiate</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>According to local legend, the time-honored mead hall of Jorrvaskr is the oldest building in Whiterun. It provides sanctuary to the warriors' guild of the Companions.</ORIGINAL>
-    <TRADUIT>根据当地传说，月瓦斯卡这座历史悠久的蜜酒大厅是白漫城最古老的建筑。它为战友团这一战士公会提供庇护。</TRADUIT>
+    <TRADUIT>据当地传说，月瓦斯卡这座历史悠久的蜜酒大厅是白漫城最古老的建筑，为战友团这一战士公会提供栖身之所。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2938,7 +2938,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThieves01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Though its influence has dwindled in recent years, the presence of the Thieves Guild beneath the streets of Riften has earned the city a rather unsavory reputation.</ORIGINAL>
-    <TRADUIT>尽管影响力近年来有所衰退，盗贼公会盘踞在裂谷城街道之下，仍让这座城市蒙上了相当不光彩的名声。</TRADUIT>
+    <TRADUIT>尽管影响力近年有所衰退，盗贼公会盘踞在裂谷城街道之下，仍让这座城市蒙上了相当不光彩的名声。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2952,7 +2952,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesBrynjolf</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Thieves Guild has a strong presence in the city of Riften and has been known to recruit those gifted in the art of stealth.</ORIGINAL>
-    <TRADUIT>盗贼公会在裂谷城影响力很大，并以招募潜行技艺出众者而闻名。</TRADUIT>
+    <TRADUIT>盗贼公会在裂谷城势力深厚，并以招募潜行技艺出众者闻名。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2966,7 +2966,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesGuard</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Thieves Guild maintains power in politics and law enforcement through the bribery, intimidation, and extortion of officials.</ORIGINAL>
-    <TRADUIT>盗贼公会通过对官员行贿、恐吓和敲诈，维持着在政治与执法中的影响力。</TRADUIT>
+    <TRADUIT>盗贼公会靠对官员行贿、恐吓与敲诈，维持着在政界与执法部门的影响力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2980,7 +2980,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesOpportunist</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Fences are discreet merchants who will purchase stolen items, erasing all evidence of theft. Members of the Thieves Guild are offered this service upon joining.</ORIGINAL>
-    <TRADUIT>销赃者是谨慎的商人，会收购赃物并抹去一切盗窃痕迹。盗贼公会成员在加入后即可获得这项服务。</TRADUIT>
+    <TRADUIT>销赃者是行事谨慎的商人，会收购赃物并抹去一切盗窃痕迹。盗贼公会成员入会后即可享受这项服务。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -2994,7 +2994,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesRecruit</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Although violence is more tolerated within Skyrim's branch, members of the Thieves Guild are generally bound not to rob each other, target the poor, or kill anyone while thieving.</ORIGINAL>
-    <TRADUIT>尽管天际分会更容忍暴力，盗贼公会成员通常仍受约束：不得互相抢劫，不得以穷人为目标，也不得在行窃时杀人。</TRADUIT>
+    <TRADUIT>尽管天际分会更容忍暴力，盗贼公会成员通常仍受约束：不得互相抢劫，不得对穷人下手，也不得在行窃时杀人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3008,7 +3008,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesShadowmark</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Shadowmarks work as a secret language among thieves, etched onto buildings to guide one another through the dangers of their trade and toward coveted treasures.</ORIGINAL>
-    <TRADUIT>暗影标记是盗贼之间的秘密语言，刻在建筑上，指引彼此避开行业中的危险，找到梦寐以求的财宝。</TRADUIT>
+    <TRADUIT>暗影标记是盗贼之间的秘密语言，刻在建筑上，指引彼此避开这一行的凶险，找到觊觎已久的财宝。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3022,7 +3022,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesSmuggler</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Like any trade guild, the Thieves Guild is an organization of professionals - except that, in this case, its members specialize in burglary, pickpocketing, and other illicit activities.</ORIGINAL>
-    <TRADUIT>与任何行业公会一样，盗贼公会是一个由专业人士组成的组织——只不过在这里，成员专精于入室盗窃、扒窃和其他非法活动。</TRADUIT>
+    <TRADUIT>与任何行业公会一样，盗贼公会是一个由专业人士组成的组织——只不过在这里，成员专精的是入室盗窃、扒窃与其他不法勾当。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3036,7 +3036,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildThievesUnderboss</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Authorities have historically turned a blind eye to the Thieves Guild, as long as it maintained order in the underworld and kept its members in check.</ORIGINAL>
-    <TRADUIT>当局历来对盗贼公会睁一只眼闭一只眼，只要它维持地下世界的秩序并约束其成员。</TRADUIT>
+    <TRADUIT>只要盗贼公会维持地下世界的秩序并管束好成员，当局历来对它睁一只眼闭一只眼。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3050,7 +3050,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemAmuletMara</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The hardships of life in Skyrim leave little room for lengthy courtship. Many seeking marriage simply wear an Amulet of Mara to signal their interest.</ORIGINAL>
-    <TRADUIT>天际生活的艰辛让人无暇谈情说爱。许多想结婚的人只需佩戴玛拉护符，便可表明自己的意愿。</TRADUIT>
+    <TRADUIT>天际生活的艰辛让人无暇长久谈情。许多想结婚的人只要戴上玛拉护符，便可表明心意。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3064,7 +3064,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemDwemerCube</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The devices left behind by the Dwemer mystify adventurers and scholars alike. Some are repositories of forgotten knowledge, while others reveal hidden chambers in the long-empty halls of their makers.</ORIGINAL>
-    <TRADUIT>锻莫留下的装置令冒险者和学者同样困惑。有些是失落知识的储藏库，另一些则能揭示其建造者空置已久的厅堂中的隐藏房间。</TRADUIT>
+    <TRADUIT>锻莫留下的装置令冒险者与学者同样困惑。有些是失落知识的储藏库，另一些则能揭示其建造者空置已久的厅堂中的隐藏房间。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3078,7 +3078,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemIngredient</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ingredients can be harvested from plants and slain creatures or purchased from vendors, and each possesses unique magical and alchemical potential.</ORIGINAL>
-    <TRADUIT>材料可以从植物和被杀死的生物身上采集，也可以从商人处购买，每种材料都具有独特的魔法与炼金潜力。</TRADUIT>
+    <TRADUIT>材料可以从植物与被杀死的生物身上采集，也可以向商人购买，每种都具有独特的魔法与炼金潜力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3092,7 +3092,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemTreasureMap</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>While adventuring, it is possible to come across maps that indicate the whereabouts of hidden treasures. Deciphering their clues takes a keen mind, familiar with Skyrim's less-traveled reaches.</ORIGINAL>
-    <TRADUIT>冒险途中，可能会发现标明隐藏宝藏位置的地图。解读其中的线索需要敏锐的头脑，并熟悉天际人迹罕至的地区。</TRADUIT>
+    <TRADUIT>冒险途中可能会发现标出隐藏宝藏位置的地图。解读其中的线索需要敏锐的头脑，并熟悉天际人迹罕至的地带。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3106,7 +3106,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemArmorBonemold</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Bonemold, as the name suggests, is a heavy crafting material made from bone reinforced with resin, commonly molded into armor in Morrowind.</ORIGINAL>
-    <TRADUIT>骨模，顾名思义，是一种沉重的制作材料，由骨骼以树脂加固制成，在晨风常被塑造成护甲。</TRADUIT>
+    <TRADUIT>骨模，顾名思义，是一种厚重的制作材料，由骨骼以树脂加固而成，在晨风常被塑成护甲。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3134,7 +3134,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemArmorDaedric</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Among the rarest and most coveted gear is that of daedric craft, wielded by the forces of Oblivion. Forged from ebony and infused with a daedra's essence, it requires the skill of a master smith.</ORIGINAL>
-    <TRADUIT>最稀有、最令人垂涎的装备之一是迪德拉制品，由湮灭势力使用。它以黑檀锻造，并注入迪德拉的精髓，需要大师级铁匠的技艺。</TRADUIT>
+    <TRADUIT>最稀有、最令人垂涎的装备之一便是迪德拉制品，为湮灭势力所持。它以黑檀锻造，注入迪德拉的精髓，需要大师级铁匠的技艺。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3148,7 +3148,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemArmorElven</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Elven weapons and armor are lightweight and ornately designed, forged from moonstone through techniques perfected by the High Elves.</ORIGINAL>
-    <TRADUIT>精灵武器和护甲轻巧且装饰精美，以月石锻造，采用高精灵完善的技术。</TRADUIT>
+    <TRADUIT>精灵武器与护甲轻巧且纹饰精美，以月石锻造，采用高精灵完善的技术。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3162,7 +3162,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemArmorGlass</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Glass weapons and armor, crafted from a rare volcanic crystal called malachite, are highly sought after for their durability and lightness.</ORIGINAL>
-    <TRADUIT>玻璃武器和护甲由一种名为孔雀石的稀有火山晶体制成，因其耐用与轻便而备受追捧。</TRADUIT>
+    <TRADUIT>玻璃武器与护甲由一种名为孔雀石的稀有火山晶体制成，因其耐用与轻便而备受追捧。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3176,7 +3176,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemArmorIron</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Iron may be a commonplace material, but it is battle-tried and true, often used in crafting for its durability and abundance.</ORIGINAL>
-    <TRADUIT>铁或许是一种普通材料，但久经战场考验，因其耐用且储量丰富而常用于制作。</TRADUIT>
+    <TRADUIT>铁或许是寻常材料，却久经战阵考验，因其耐用且储量丰富而常用于制作。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3190,7 +3190,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponBattleaxe</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Two-handed weapons deal more damage with greater reach than their one-handed counterparts. They are slower to wield, however, and poorly timed attacks can be easily evaded or countered.</ORIGINAL>
-    <TRADUIT>双手武器比单手武器伤害更高、攻击距离更远，但挥舞速度较慢，时机不当的攻击很容易被闪避或反击。</TRADUIT>
+    <TRADUIT>双手武器比单手武器伤害更高、攻击距离更远，但挥舞更慢，出手时机不当很容易被闪避或反击。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3204,7 +3204,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponDagger</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The short blade and hilt of a dagger allow for swift strikes in close quarters, making it a well-suited weapon for the nimble and stealthy.</ORIGINAL>
-    <TRADUIT>匕首的短刃和刀柄便于在近身距离快速出击，使其成为适合灵巧者与潜行者的武器。</TRADUIT>
+    <TRADUIT>匕首的短刃与刀柄便于在近身距离快速出击，是灵巧者与潜行者的称手武器。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3218,7 +3218,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponEnchanted</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The power of enchanted weapons may fade with use, but can be replenished at the expense of filled soul gems.</ORIGINAL>
-    <TRADUIT>附魔武器的力量会随着使用而衰减，但可以消耗装满的灵魂石来补充。</TRADUIT>
+    <TRADUIT>附魔武器的力量会随使用而衰减，但可以消耗装满的灵魂石来补充。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3232,7 +3232,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponPoison</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Poison coated on a blade will wear off between strikes and must be reapplied to maintain its potency.</ORIGINAL>
-    <TRADUIT>涂在刀刃上的毒药会在攻击间隙失效，必须重新涂抹才能保持效力。</TRADUIT>
+    <TRADUIT>涂在刀刃上的毒药会在两次攻击之间失效，必须重新涂抹才能保持效力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3246,7 +3246,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponSword</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Depending on their length and balance, swords are typically lighter and more agile to wield than axes or maces.</ORIGINAL>
-    <TRADUIT>根据长度和重心的不同，剑通常比斧或锤更轻、更灵活。</TRADUIT>
+    <TRADUIT>视长度与重心而定，剑通常比斧或锤更轻、更灵活。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3274,7 +3274,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemSpecialDaedric</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Every daedric artifact carries the essence of a Daedric Prince within. Mortals who wield them spread that Prince's reach a little further across the realms.</ORIGINAL>
-    <TRADUIT>每件迪德拉神器内部都承载着一位迪德拉君王的精髓。持有它们的凡人，会将那位君王的影响力在诸界中进一步扩散。</TRADUIT>
+    <TRADUIT>每件迪德拉神器内部都承载着一位迪德拉君王的精髓。持有它们的凡人，会把那位君王的影响力在诸界中再推远一分。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3288,7 +3288,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemSpecialDuskfang</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dawnfang and Duskfang are forms taken by an evidently sentient blood-drinker longsword, whose shapeshifting ability and serpent-like appearance are reminiscent of the Tsaesci who forged it.</ORIGINAL>
-    <TRADUIT>黎明之牙与黄昏之牙是一柄显然具有意识的饮血长剑的两种形态；它的变形能力和蛇一般的外形，令人想起锻造它的蛇人。</TRADUIT>
+    <TRADUIT>黎明之牙与黄昏之牙是一柄显然具有意识的饮血长剑的两种形态；它的变形能力与蛇一般的外形，令人想起锻造它的蛇人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3302,7 +3302,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemSpecialElderScroll</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Elder Scrolls are occasionally used to divine prophecies, be it only a portion of their power. All reflections witnessed within the Scrolls are true - especially the falsehoods - which drives many who read them to madness.</ORIGINAL>
-    <TRADUIT>上古卷轴有时被用来占卜预言，尽管只能动用其力量的一部分。在卷轴中看到的一切映象都是真实的——尤其是那些虚假之处——这使许多阅读者发疯。</TRADUIT>
+    <TRADUIT>上古卷轴有时被用来占卜预言，尽管只能动用其力量的一隅。卷轴中映出的一切都是真实的——尤其是那些虚假之处——这使许多读者发狂。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3316,7 +3316,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemSpecialPriestMask</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Legend holds that the highest-ranking Dragon Priests were granted magical masks - strange artifacts that defy the laws of time and grant their wearers powerful enchantments.</ORIGINAL>
-    <TRADUIT>传说中，最高阶的龙祭司会被授予魔法面具——一种无视时间法则的奇怪器物，能够赋予佩戴者强大的附魔效果。</TRADUIT>
+    <TRADUIT>传说最高阶的龙祭司会被授予魔法面具——一种无视时间法则的奇异器物，能赋予穿戴者强大的附魔效果。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3330,7 +3330,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationDragonLair</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dragons tend to make their lairs atop secluded mountain peaks or near Nordic ruins. They seem to guard - or are perhaps simply drawn to - word walls etched with the Dragon Language.</ORIGINAL>
-    <TRADUIT>巨龙倾向于把巢穴建在僻静的山峰之巅或诺德废墟附近。它们似乎在守护——或者只是被吸引到——刻满龙语的龙语墙。</TRADUIT>
+    <TRADUIT>巨龙倾向于把巢穴建在僻静的山巅或诺德废墟附近。它们似乎在守护——或者只是被吸引到——刻满龙语的龙语墙。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3344,7 +3344,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationDragonMound</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The wilds of Skyrim are scattered with large burial mounds, said to entomb the remains of ancient dragons that fell in the Dragon War - a tale once thought to be mere legend...</ORIGINAL>
-    <TRADUIT>天际的荒野散布着巨大的墓葬土丘，据说其中安葬着在巨龙战争中陨落的古代巨龙——这个传说曾被认为只是神话……</TRADUIT>
+    <TRADUIT>天际的荒野散布着巨大的墓葬土丘，据说其中安葬着在巨龙战争中陨落的古龙——这个传说曾被认为只是神话……</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3372,7 +3372,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldEastmarch</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Eastmarch lies along Skyrim's eastern border with Morrowind. Dominated by expansive hot springs, it is mostly rural apart from its capital, Windhelm.</ORIGINAL>
-    <TRADUIT>东陲领位于天际与晨风接壤的东部边境。这里遍布广阔的温泉，除首府风舵城外大多为乡村。</TRADUIT>
+    <TRADUIT>东陲领位于天际与晨风接壤的东部边境。这里遍布广阔的温泉，除首府风舵城外大多是乡野。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3386,7 +3386,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldFalkreath</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Falkreath Hold is well known for its dense pine forests and age-old connection to death, since its namesake capital features the largest graveyard in Skyrim.</ORIGINAL>
-    <TRADUIT>佛克瑞斯领以其茂密的松林和与死亡的古老联系而闻名，因为与其同名的首府拥有天际最大的墓地。</TRADUIT>
+    <TRADUIT>佛克瑞斯领以茂密的松林和与死亡的古老渊源闻名，因为与其同名的首府拥有天际最大的墓地。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3400,7 +3400,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldHaafingar</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Haafingar is a coastal hold in northwestern Skyrim featuring the famed city of Solitude. It borders High Rock to the west, where the Druadach Mountains begin to diminish.</ORIGINAL>
-    <TRADUIT>海芬加领是天际西北部的沿海领，拥有著名的独孤城。它西临高岩，德鲁阿达赫山脉在那里渐趋平缓。</TRADUIT>
+    <TRADUIT>海芬加领是天际西北部的沿海领，拥有著名的独孤城。它西邻高岩，德鲁阿达赫山脉在那里渐趋平缓。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3414,7 +3414,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldHjaalmarch</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dry ground can be difficult to find in the hold of Hjaalmarch, where eerie marshlands prevail. Its capital, Morthal, is said to be named after the legendary hero Morihaus.</ORIGINAL>
-    <TRADUIT>希雅陲领少有干燥土地，遍地是诡异的沼泽。据说其首府莫萨尔以传奇英雄莫里豪斯命名。</TRADUIT>
+    <TRADUIT>希雅陲领少有干地，遍地是诡异的沼泽。据说其首府莫萨尔得名于传奇英雄莫里豪斯。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3428,7 +3428,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldPale</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Pale was named for the hold's white tundra and the fair skin of the local Nords. Its capital, Dawnstar, is one of the busiest ports in Skyrim.</ORIGINAL>
-    <TRADUIT>苍原领因领内白色的苔原和当地诺德人白皙的皮肤而得名。其首府晨星是天际最繁忙的港口之一。</TRADUIT>
+    <TRADUIT>苍原领因领内白色的苔原与当地诺德人白皙的皮肤而得名。其首府晨星是天际最繁忙的港口之一。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3442,7 +3442,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldReach</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Reach is a mountainous hold in southwestern Skyrim adjacent to High Rock and Hammerfell. Markarth, its capital, was once a stronghold of the Dwemer.</ORIGINAL>
-    <TRADUIT>瑞驰领是天际西南部的山地领，毗邻高岩和落锤。其首府马卡斯城曾是锻莫的据点。</TRADUIT>
+    <TRADUIT>瑞驰领是天际西南部的山地领，毗邻高岩与落锤。其首府马卡斯城曾是锻莫的据点。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3456,7 +3456,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldRift</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>In southeastern Skyrim lies the Rift, a hold noted for its mild climate and autumnal forests. Riften, its capital, once hosted a vast trading network with Morrowind.</ORIGINAL>
-    <TRADUIT>裂谷领位于天际东南部，以温和的气候和秋色森林著称。其首府裂谷城曾与晨风维持着庞大的贸易网络。</TRADUIT>
+    <TRADUIT>裂谷领位于天际东南部，以温和的气候与秋色森林著称。其首府裂谷城曾与晨风维系着庞大的贸易网络。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3470,7 +3470,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldWhiterun</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>At the heart of Skyrim lies Whiterun Hold, with flat tundra plains and the Throat of the World. Its namesake capital sits amid fertile farmlands that feed much of the province.</ORIGINAL>
-    <TRADUIT>天际的中心是白漫领，拥有平坦的苔原和世界之喉。与其同名的首府坐落在肥沃的农田之间，供养着省内大部分人口。</TRADUIT>
+    <TRADUIT>天际的中心是白漫领，拥有平坦的苔原平原与世界之喉。与其同名的首府坐落在肥沃的农田之间，供养着省内大半人口。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3484,7 +3484,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationHoldWinterhold</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The northernmost reaches of Skyrim belong to Winterhold, marked by harsh and snow-blown landscapes. Most of its residents are fisherfolk who work on the Sea of Ghosts.</ORIGINAL>
-    <TRADUIT>天际最北端的地区属于冬堡领，以严酷、风雪弥漫的景观为特征。其大多数居民是在幽灵海上劳作的渔民。</TRADUIT>
+    <TRADUIT>天际最北端属于冬堡领，以严酷、风雪弥漫的景观为特征。其大多数居民是在幽灵海上讨生活的渔民。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3526,7 +3526,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationRealmDeadlands</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Mehrunes Dagon's realm is known as the Deadlands, rife with the destructive forces of change. It is carved by lakes of molten fire that are strewn with scorched islands and ruined structures.</ORIGINAL>
-    <TRADUIT>梅鲁涅斯·大衮的领域被称为死地，充满变革的破坏力量。熔火之湖纵横其间，湖中散布着焦黑的岛屿和毁坏的建筑。</TRADUIT>
+    <TRADUIT>梅鲁涅斯·大衮的领域被称为死地，充满变革的破坏之力。熔火之湖纵横其间，湖中散布着焦黑的岛屿与毁坏的建筑。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3582,7 +3582,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationRealmSoulCairn</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>There are planes of Oblivion unruled by any Daedric Prince. The Soul Cairn is one such place... though it is not without masters of its own.</ORIGINAL>
-    <TRADUIT>有些湮灭位面不受任何迪德拉君王统治。灵魂石冢就是这样的地方……不过它并非没有自己的主人。</TRADUIT>
+    <TRADUIT>有些湮灭位面不受任何迪德拉君王统治。灵魂石冢便是其中之一……不过它并非没有自己的主人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3596,7 +3596,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationTavern01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Taverns are establishments found throughout Skyrim that offer a respite from the elements, as well as the company of locals to mingle with.</ORIGINAL>
-    <TRADUIT>酒馆是天际各地可见的场所，人们可以在此躲避恶劣天气，并与当地人交往。</TRADUIT>
+    <TRADUIT>酒馆是天际各地常见的场所，人们在此躲避恶劣天气，也与当地人交往。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3610,7 +3610,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationTavernKeeper</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Innkeepers overhear many rumors and may provide valuable insights to the eager explorer, as well as food for trade.</ORIGINAL>
-    <TRADUIT>旅店老板会听到许多传闻，可能为热切的探险者提供宝贵的线索，也会出售食物。</TRADUIT>
+    <TRADUIT>旅店老板听得多、见得多，能为热切的探险者提供宝贵的线索，也会出售食物。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3624,7 +3624,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationTavernSuite</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Many inns offer lodgings for rent, granting the weary adventurer a restful night away from home. A proper bed usually allows for better sleep than a bedroll laid out in the cold.</ORIGINAL>
-    <TRADUIT>许多旅店提供房间出租，让疲惫的冒险者在旅途中享受一夜安眠。一张像样的床通常比在寒风中铺开的铺盖卷睡得更香。</TRADUIT>
+    <TRADUIT>许多旅店提供房间出租，让疲惫的冒险者离家在外也能安睡一夜。一张像样的床通常比在寒风中铺开的铺盖卷睡得更香。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3638,7 +3638,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationUniqueBlackreach01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Beneath Skyrim lies the legendary Blackreach: a long-forgotten realm of time-worn Dwarven ruins and monsters too horrible to venture into the light above.</ORIGINAL>
-    <TRADUIT>天际地下深处是传说中的黑境：一个早已被遗忘的领域，遍布饱经岁月侵蚀的矮人废墟，以及那些可怕到不敢踏入地上光明的怪物。</TRADUIT>
+    <TRADUIT>天际地下深处是传说中的黑境：一个久被遗忘的领域，遍布饱经岁月侵蚀的矮人废墟，以及那些可怕到不敢踏入地上光明的怪物。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3652,7 +3652,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationUniqueHighHrothgar</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The highest mountain in all of Tamriel is Skyrim's Throat of the World. The reclusive Greybeards reside near the summit, in the windswept halls of High Hrothgar.</ORIGINAL>
-    <TRADUIT>整个泰姆瑞尔最高的山峰是天际的世界之喉。离群索居的灰胡子住在接近山顶的地方，即霍斯加修道院那寒风肆虐的厅堂中。</TRADUIT>
+    <TRADUIT>全泰姆瑞尔最高的山峰是天际的世界之喉。离群索居的灰胡子住在接近山顶的地方，即霍斯加修道院那寒风肆虐的厅堂。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3694,7 +3694,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationUniqueSkuldafn</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Deep within the Velothi Mountains stands Skuldafn, an ancient Nord temple that holds the only known portal into Sovngarde. Through it, mortals may walk among the dead without dying - if they are able to open it.</ORIGINAL>
-    <TRADUIT>维洛锡山脉深处矗立着斯库达芬，一座古诺德神庙，拥有已知唯一通往松加德的传送门。通过它，凡人无须死去，便能行走于亡者之间——前提是他们能够打开它。</TRADUIT>
+    <TRADUIT>维洛锡山脉深处矗立着斯库达芬，一座古诺德神庙，拥有已知唯一通往松加德的传送门。通过它，凡人无须死去，便能行走于亡者之间——前提是他们能打开它。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3708,7 +3708,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationUniqueVale01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>What remains of the civilization of the Snow Elves lies hidden away in remote mountain passes, spared from Nordic conquest by their seclusion.</ORIGINAL>
-    <TRADUIT>雪精灵文明的残存部分隐藏在偏僻的山口之中，因与世隔绝而免遭诺德人的征服。</TRADUIT>
+    <TRADUIT>雪精灵文明的残存部分藏在偏僻的山口之中，因与世隔绝而免遭诺德人的征服。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3736,7 +3736,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreBarenziah</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Barenziah was a long-lived Dunmer woman who became the first Queen of Morrowind in the Third Era, serving as a vassal ruler to the Emperor of Tamriel.</ORIGINAL>
-    <TRADUIT>巴兰兹雅是一位长寿的暗精灵女性，在第三纪元成为晨风的第一位女王，臣属于泰姆瑞尔皇帝。</TRADUIT>
+    <TRADUIT>巴兰兹雅是一位长寿的暗精灵女性，在第三纪元成为晨风的第一位女王，作为泰姆瑞尔皇帝的藩属统治者。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3764,7 +3764,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreDragonWar</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Dragon War of the late Merethic Era began when the Nords rebelled against Alduin's great cruelty. After a long and dreadful struggle, they defeated their dragon overlords.</ORIGINAL>
-    <TRADUIT>精灵纪元晚期的巨龙战争始于诺德人反抗奥杜因的残暴统治。经过漫长而可怕的斗争，他们击败了巨龙霸主。</TRADUIT>
+    <TRADUIT>精灵纪元晚期的巨龙战争始于诺德人反抗奥杜因的残暴统治。经过漫长而可怖的斗争，他们击败了巨龙霸主。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3778,7 +3778,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreEmpireCompany</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Good business for the East Empire Company means all the more gold for the Empire." - Common phrase</ORIGINAL>
-    <TRADUIT>“东帝国公司生意兴隆，帝国的金币就更多。”——俗语</TRADUIT>
+    <TRADUIT>「东帝国公司生意兴隆，帝国的金币就更多。」——俗语</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3820,7 +3820,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreGreatWar02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Only by signing the peace treaty known as the White-Gold Concordat was the Empire able to survive the onslaught of the high-elven Aldmeri Dominion, and thus end the Great War.</ORIGINAL>
-    <TRADUIT>帝国只有签署名为《白金协定》的和平条约，才得以在高精灵先祖神洲的猛攻下幸存，从而结束浩大战争。</TRADUIT>
+    <TRADUIT>帝国只有签署名为《白金协定》的和约，才得以在高精灵先祖神洲的猛攻下幸存，从而结束浩大战争。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3848,7 +3848,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMannimarco</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Staff of Worms was once owned by Mannimarco, the King of Worms, an Altmer lich who founded the Order of the Black Worm.</ORIGINAL>
-    <TRADUIT>蠕虫之杖曾属于“蠕虫之王”曼尼马可，一位创立黑虫教团的傲特莫巫妖。</TRADUIT>
+    <TRADUIT>蠕虫之杖曾属于「蠕虫之王」曼尼马可，一位创立黑虫教团的傲特莫巫妖。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3890,7 +3890,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreRedEagle</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Myths passed down by the Reachmen tell of a mighty king who, armed with a flaming sword, rallied his people to repel the armies of Cyrodiil in the First Era.</ORIGINAL>
-    <TRADUIT>瑞驰人流传的神话说，一位强大的国王手持燃烧之剑，在第一纪元集结他的人民击退了希罗帝尔的军队。</TRADUIT>
+    <TRADUIT>瑞驰人流传的神话说，一位强大的国王手持燃烧之剑，在第一纪元集结族众击退了希罗帝尔的军队。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3904,7 +3904,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreRedYear</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The "Red Year" was the name given to the disaster of 4E 5 when the meteor Baar Dau crashed into Vivec City, leading to the eruption of Red Mountain.</ORIGINAL>
-    <TRADUIT>“红色之年”是 4E 5 年那场灾难的名称：流星巴尔·达乌坠入维威克城，引发红山喷发。</TRADUIT>
+    <TRADUIT>「红色之年」是 4E 5 年那场灾难的名称：流星巴尔·达乌撞入维威克城，引发红山喷发。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3918,7 +3918,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSaintJiub</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Saint Jiub the Eradicator is a hero of Morrowind, widely esteemed for driving the cliff racers from the island of Vvardenfell.</ORIGINAL>
-    <TRADUIT>“根除者”圣鸠步是晨风的英雄，因将峭壁行者赶出瓦登费尔岛而广受尊崇。</TRADUIT>
+    <TRADUIT>「根除者」圣鸠步是晨风的英雄，因将峭壁行者赶出瓦登费尔岛而广受尊崇。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3960,7 +3960,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSkyrim</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Skyrim, also known as the Old Kingdom or the Fatherland, was the first region of Tamriel settled by humans: the hardy, brave, warlike Nords, whose descendants still occupy this rugged land." - Pocket Guide to the Empire, 1st Edition/Skyrim</ORIGINAL>
-    <TRADUIT>“天际，又称旧王国或父土，是人类在泰姆瑞尔最早定居的地区：坚韧、勇敢、好战的诺德人，他们的后裔至今仍生活在这片崎岖的土地上。”——《帝国袖珍指南》第一版/天际</TRADUIT>
+    <TRADUIT>「天际，又称旧王国或父土，是人类在泰姆瑞尔最早定居的地区：坚韧、勇敢、好战的诺德人，他们的后裔至今仍生活在这片崎岖的土地上。」——《帝国袖珍指南》第一版·天际</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3974,7 +3974,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSoulburst</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Soulburst of 2E 578 was a massive arcane explosion caused when Emperor Varen Aquilarios attempted a ritual to become Dragonborn. It sundered the veil between Nirn and Oblivion, unleashing a daedric invasion known as the Planemeld.</ORIGINAL>
-    <TRADUIT>2E 578 年的灵魂爆发是一场巨大的奥术爆炸，起因是瓦伦·阿奎拉里奥斯皇帝试图举行仪式，使自己成为龙裔。它撕裂了奈恩与湮灭之间的帷幕，释放出一场被称为位面融合的迪德拉入侵。</TRADUIT>
+    <TRADUIT>2E 578 年的灵魂爆发是一场巨大的奥术爆炸，起因是瓦伦·阿奎拉里奥斯皇帝试图举行仪式使自己成为龙裔。它撕裂了奈恩与湮灭之间的帷幕，释放出一场被称为位面融合的迪德拉入侵。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -3988,7 +3988,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSovngardeHall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Hall of Valor, the legendary mead hall of Sovngarde, may only be entered by those honored Nord dead who triumph in battle against Tsun, Shor's mighty shield-thane.</ORIGINAL>
-    <TRADUIT>勇士大厅是松加德传说中的蜜酒大厅，只有荣耀的诺德亡者，在与舒尔的强大盾卫苏恩交战并获胜后，才能进入。</TRADUIT>
+    <TRADUIT>勇士大厅是松加德传说中的蜜酒大厅，只有荣耀的诺德亡者在与舒尔的强大盾卫苏恩交战并获胜后，才能进入。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4002,7 +4002,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreSwordSinger</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Sword-singers were Redguard warriors of long ago who followed the "Way of the Sword." They performed astonishing feats of swordsmanship, but today are regarded as little more than myth.</ORIGINAL>
-    <TRADUIT>剑歌者是古老的红卫战士，遵循“剑之道”。他们曾展现令人惊叹的剑术，但如今只被视为神话。</TRADUIT>
+    <TRADUIT>剑歌者是古老的红卫战士，遵循「剑之道」。他们曾展现令人惊叹的剑术，如今却多半只被视为神话。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4016,7 +4016,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreTitusMede</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Mede Dynasty seized the Ruby Throne in 4E 22 with the crowning of the warlord Titus Mede I. Their reign continues with Titus Mede II, the current Emperor of Tamriel.</ORIGINAL>
-    <TRADUIT>迈德王朝于 4E 22 年通过拥立军阀提图斯·迈德一世而夺取红宝石王座。其统治延续至现任泰姆瑞尔皇帝提图斯·迈德二世。</TRADUIT>
+    <TRADUIT>迈德王朝于 4E 22 年拥立军阀提图斯·迈德一世，夺取红宝石王座。其统治延续至现任泰姆瑞尔皇帝提图斯·迈德二世。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4030,7 +4030,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreWarRedDiamond</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The War of the Red Diamond began in 3E 121 when Uriel III seized the Imperial throne with his mother, Queen Potema. It ended in 3E 137 with her defeat at the Siege of Solitude.</ORIGINAL>
-    <TRADUIT>红钻战争始于 3E 121 年，尤瑞尔三世与其母波特玛王后夺取帝位。战争于 3E 137 年以波特玛在独孤城之围中失败而告终。</TRADUIT>
+    <TRADUIT>红钻战争始于 3E 121 年，尤瑞尔三世与其母波特玛王后夺取帝位。战争于 3E 137 年以波特玛在独孤城之围中败亡而告终。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4044,7 +4044,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMainAlduinAdrift</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Nord heroes Felldir the Old, Gormlaith Golden-Hilt, and Hakon One-Eye used the Dragonrend shout and an Elder Scroll to cast Alduin adrift through time - an act that granted mankind the edge to end the Dragon War.</ORIGINAL>
-    <TRADUIT>诺德英雄“老人”费迪尔、葛姆拉丝·金柄和“独眼”哈肯使用龙魂撕裂和一卷上古卷轴，将奥杜因放逐于时间洪流之中——这一举动为人类赢得了结束巨龙战争的优势。</TRADUIT>
+    <TRADUIT>诺德英雄「老人」费迪尔、葛姆拉丝·金柄与「独眼」哈肯使用龙魂撕裂和一卷上古卷轴，将奥杜因放逐于时间洪流之中——这一举动为人类赢得了终结巨龙战争的优势。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4058,7 +4058,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMainAlduinsWall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"...When the Dragonborn Ruler loses his throne and the White Tower falls, When the Snow Tower lies sundered, kingless, bleeding, The World-Eater wakes and the Wheel turns upon the Last Dragonborn." - Prophecy of the Dragonborn</ORIGINAL>
-    <TRADUIT>“……当龙裔统治者失去王位、白塔倾覆，当雪塔裂开、无王、流血，世界吞噬者苏醒，命运之轮转向最后的龙裔。”——龙裔预言</TRADUIT>
+    <TRADUIT>「……当龙裔统治者失去王位、白塔倾覆，当雪塔裂开、无王、流血，世界吞噬者苏醒，命运之轮转向最后的龙裔。」——龙裔预言</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4072,7 +4072,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMainDragonborn01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dragonborn, or Dovahkiin in the Dragon Language, are mortals who possess the soul of a dragon. They are believed to appear in the world during times of great need at the behest of the gods.</ORIGINAL>
-    <TRADUIT>龙裔，在龙语中称为“都瓦克因”，是拥有巨龙灵魂的凡人。人们相信，他们会在世界极度需要之时，应诸神之命出现。</TRADUIT>
+    <TRADUIT>龙裔，在龙语中称「都瓦克因」，是拥有巨龙灵魂的凡人。人们相信，他们会在世界极度需要之时，应诸神之命现身。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4086,7 +4086,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMainDragonborn02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Very few realize that being Dragonborn is not a simple matter of heredity - being the blessing of Akatosh Himself, it is beyond our understanding exactly how and why it is bestowed." - Emelene Madrine, The Book of the Dragonborn</ORIGINAL>
-    <TRADUIT>“很少有人意识到，成为龙裔并不是简单的血统问题——它是阿卡托什本人的祝福，其赐予的方式与原因超出了我们的理解。”——埃梅琳·马德林，《龙裔之书》</TRADUIT>
+    <TRADUIT>「很少有人意识到，成为龙裔并非单纯的血统问题——它是阿卡托什本人的祝福，其赐予的方式与缘由都超出我们的理解。」——埃梅琳·马德林，《龙裔之书》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4100,7 +4100,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreMainWindcaller</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Greybeards follow the teachings of Jurgen Windcaller, who believed that the power of the Voice was a means of attaining enlightenment.</ORIGINAL>
-    <TRADUIT>灰胡子遵循约根·唤风者的教诲，他认为吐'目之力是达到启迪的手段。</TRADUIT>
+    <TRADUIT>灰胡子遵循约根·唤风者的教诲。他认为吐'目之力是通往启迪的途径。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4114,7 +4114,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicAtromancy</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Atromancy is a branch of Conjuration focused on the summoning of atronachs, elemental daedra from the planes of Oblivion.</ORIGINAL>
-    <TRADUIT>侍灵召唤是召唤系的分支，专注于召唤侍灵——来自湮灭位面的元素迪德拉。</TRADUIT>
+    <TRADUIT>侍灵召唤是召唤系的一个分支，专注于召唤侍灵——来自湮灭位面的元素迪德拉。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4128,7 +4128,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicBattlemage</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Regarding combat versatility, battlemages are unmatched. As a fusion of soldier and scholar, they can resolve most conflicts with either spell or sword.</ORIGINAL>
-    <TRADUIT>就战斗的多面性而言，战斗法师无与伦比。作为士兵与学者的融合体，他们可以用法术或刀剑解决大多数冲突。</TRADUIT>
+    <TRADUIT>就战斗的多面性而言，战斗法师无与伦比。作为士兵与学者的融合体，他们能用法术或刀剑解决大多数冲突。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4142,7 +4142,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicConjurer</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Negative opinions on magic emerged in Skyrim's culture when the Nords blamed mages for the Oblivion Crisis. The old Nordic term for a mage was "clever man."</ORIGINAL>
-    <TRADUIT>当诺德人将湮灭危机归咎于法师时，天际文化中便出现了对魔法的负面看法。诺德人对法师的古老称呼是“聪明人”。</TRADUIT>
+    <TRADUIT>当诺德人把湮灭危机归咎于法师时，天际文化中便出现了对魔法的负面看法。诺德人对法师的古老称呼是「聪明人」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4170,7 +4170,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicNecromancy</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Necromancy is the practice of manipulating mortal souls and reanimating their corpses. Sometimes called the Dark Arts, it is deemed immoral for disrupting the natural order of life and death.</ORIGINAL>
-    <TRADUIT>死灵术是操纵凡人灵魂并使尸体复活的技艺。它有时被称为黑暗艺术，因扰乱生死的自然秩序而被视为不道德。</TRADUIT>
+    <TRADUIT>死灵术是操纵凡人灵魂并驱使尸体复生的技艺。它有时被称为黑暗艺术，因扰乱生死的自然秩序而被视为不道德。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4184,7 +4184,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicScroll</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Scrolls can be purchased from any court wizard in service to a jarl, as well as from certain members of the College of Winterhold.</ORIGINAL>
-    <TRADUIT>卷轴可从任何侍奉领主的宫廷法师或冬堡学院的某些成员处购得。</TRADUIT>
+    <TRADUIT>卷轴可以从任何侍奉领主的宫廷法师处购得，也可以向冬堡学院的某些成员购买。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4198,7 +4198,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicStaff</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Staves are powerful tools, but they are merely extensions of their wielders. A mage skilled in Destruction magic will make better use of a fire-spell staff than their peer in Conjuration.</ORIGINAL>
-    <TRADUIT>法杖是强大的工具，但只是持有者的延伸。擅长毁灭系魔法的法师，会比擅长召唤系的同僚更能发挥火焰法杖的效用。</TRADUIT>
+    <TRADUIT>法杖是强大的工具，但终究只是持有者的延伸。擅长毁灭系魔法的法师，会比擅长召唤系的同僚更能发挥火焰法杖的效用。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4212,7 +4212,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSchoolAlteration</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The School of Alteration focuses on the manipulation of the physical world. It can be used to breathe underwater, harden skin to metal, or create light in darkness.</ORIGINAL>
-    <TRADUIT>变化系专注于操纵物质世界。它可以用来在水下呼吸、将皮肤硬化如金属，或在黑暗中创造光明。</TRADUIT>
+    <TRADUIT>变化系专注于操纵物质世界。它可以用来在水下呼吸、将皮肤硬化如金属，或在黑暗中造出光明。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4240,7 +4240,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSchoolDestruction</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The School of Destruction focuses on the mastery of elemental forces. It can be used to launch ice shards, bathe enemies in flame, or strike them down with lightning.</ORIGINAL>
-    <TRADUIT>毁灭系专注于掌握元素力量。它可以用来发射冰锥、以火焰吞没敌人，或用闪电击倒他们。</TRADUIT>
+    <TRADUIT>毁灭系专注于掌握元素之力。它可以用来发射冰锥、以火焰吞没敌人，或用闪电将他们击倒。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4254,7 +4254,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSchoolIllusion</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The School of Illusion focuses on the manipulation of the mind. It can be used to calm or frighten targets, trick the senses, or turn oneself invisible.</ORIGINAL>
-    <TRADUIT>幻术系专注于操纵心智。它可以用来安抚或恐吓目标、欺骗感官，或使自己隐形。</TRADUIT>
+    <TRADUIT>幻术系专注于操纵心智。它可以用来安抚或惊吓目标、欺骗感官，或使自己隐形。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4282,7 +4282,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellFire</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Fire is one of the most destructive forces at a mage's disposal, inspiring fear in enemies and burning long after the initial burst of flame.</ORIGINAL>
-    <TRADUIT>火焰是法师可用的最具破坏性的力量之一，能令敌人恐惧，并在最初的火焰爆发后继续燃烧。</TRADUIT>
+    <TRADUIT>火焰是法师手中最具破坏性的力量之一，能令敌人恐惧，并在最初的爆焰之后继续燃烧。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4296,7 +4296,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellFlames</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Mastering Destruction magic requires practice in combat against real foes. To truly understand what it means to kill with fire, the target must be something that screams.</ORIGINAL>
-    <TRADUIT>掌握毁灭系魔法需要在与真正敌人的战斗中练习。要真正理解用火焰杀戮意味着什么，目标必须是会惨叫的目标。</TRADUIT>
+    <TRADUIT>掌握毁灭系魔法需要在与真正敌人的战斗中练习。要真正理解用火焰杀戮意味着什么，目标得是会惨叫的东西。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4310,7 +4310,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellIce</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ice serves as a powerful magical force that not only inflicts harm, but also weakens foes by draining their energy and slowing their movement.</ORIGINAL>
-    <TRADUIT>冰霜是一种强大的魔法力量，不仅能造成伤害，还能吸取敌人的能量、减缓其行动，从而削弱他们。</TRADUIT>
+    <TRADUIT>冰霜是一种强大的魔法力量，不仅造成伤害，还能吸取敌人的能量、减缓其行动，从而削弱他们。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4324,7 +4324,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellShock</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Shock spells and enchantments inflict damage while draining the target's magicka, making them particularly effective against spellcasters.</ORIGINAL>
-    <TRADUIT>闪电法术和附魔在造成伤害的同时吸取目标的魔力，因此对施法者尤其有效。</TRADUIT>
+    <TRADUIT>闪电法术与附魔在造成伤害的同时吸取目标的魔力，因此对施法者尤其有效。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4366,7 +4366,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellWard</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Wards are protective spells from the school of Restoration that help defend spellcasters from incoming magic and melee attacks.</ORIGINAL>
-    <TRADUIT>结界是恢复系的防护法术，帮助施法者抵御来袭的魔法和近战攻击。</TRADUIT>
+    <TRADUIT>结界是恢复系的防护法术，帮助施法者抵御来袭的魔法与近战攻击。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4380,7 +4380,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindAshlander01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Some of Morrowind's most hostile wilderness is home to the nomadic Dunmeri people known as Ashlanders, who have worshipped the three Good Daedra for millennia.</ORIGINAL>
-    <TRADUIT>晨风一些最险恶的荒野中，居住着被称为“灰地民”的游牧暗精灵，他们崇拜三位善神已有数千年之久。</TRADUIT>
+    <TRADUIT>晨风一些最险恶的荒野中，居住着被称为「灰地民」的游牧暗精灵，他们崇拜三位善神已有数千年。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4394,7 +4394,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindAshlanderAshkhan</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ashlanders practice the ancestor-worshipping tribal culture left behind by the House Dunmer. Each tribe is led by the strongest warrior among them, who serves as their Ashkhan.</ORIGINAL>
-    <TRADUIT>灰地民延续着大家族暗精灵留下的祖先崇拜部落文化。每个部落由其中最强大的战士领导，他被称为“灰地可汗”。</TRADUIT>
+    <TRADUIT>灰地民延续着大家族暗精灵留下的祖先崇拜部落文化。每个部落由其中最强的战士统领，称为「灰地可汗」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4408,7 +4408,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindMoragTong01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Morag Tong is an ancient guild of assassins who serve the Daedric Prince Mephala. The last Emperor of the Reman Dynasty, Reman Cyrodiil III, is counted among their victims.</ORIGINAL>
-    <TRADUIT>莫拉格堂是一支古老的刺客公会，侍奉迪德拉君王梅法拉。雷曼王朝的最后一位皇帝雷曼·希罗帝尔三世也在其受害者之列。</TRADUIT>
+    <TRADUIT>莫拉格堂是一支古老的刺客公会，侍奉迪德拉君王梅法拉。雷曼王朝的末代皇帝雷曼·希罗帝尔三世也在其受害者之列。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4422,7 +4422,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindMoragTongHouses</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Sanctioned to perform legal murder, the Morag Tong were frequently hired by the Great Houses to eliminate their rivals - a preferred alternative to open conflict.</ORIGINAL>
-    <TRADUIT>莫拉格堂获准执行合法谋杀，常被各大家族雇佣来除掉对手——这是比公开冲突更受青睐的选择。</TRADUIT>
+    <TRADUIT>莫拉格堂获准执行合法谋杀，常被各大家族雇来除掉对手——这比公开冲突更受青睐。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4436,7 +4436,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindOrdinator</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ordinators were guards and priest-soldiers of the Tribunal Temple. Once tasked with enforcing Temple law, they are now persecuted by the New Temple as heretics.</ORIGINAL>
-    <TRADUIT>审判席教团的守卫与祭司战士被称为“协调使”。他们曾负责执行教团法律，如今却被新神殿当作异端迫害。</TRADUIT>
+    <TRADUIT>审判席教团的守卫与祭司战士被称为「协调使」。他们曾负责执行教团律法，如今却被新神殿当作异端迫害。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4450,7 +4450,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindRavenRock</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Raven Rock, Solstheim's primary settlement, is firmly under the control of House Redoran, the most powerful of the Great Houses of Morrowind.</ORIGINAL>
-    <TRADUIT>鸦石镇是索瑟海姆的主要定居点，牢牢掌握在晨风最强大的大家族——瑞多然家族手中。</TRADUIT>
+    <TRADUIT>鸦石镇是索瑟海姆的主要聚落，牢牢掌握在晨风最强大的大家族——瑞多然家族手中。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4464,7 +4464,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindRedMountain</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Vvardenfell is dominated by a massive volcano called Red Mountain, said to have formed where the Heart of Lorkhan fell. Formerly the tallest mountain in Tamriel, its height was permanently reduced by the Red Year eruption.</ORIGINAL>
-    <TRADUIT>瓦登费尔岛被一座名为红山的巨大火山所主宰，据说它形成于洛克汗之心坠落之处。它曾是泰姆瑞尔最高的山，但红色之年的喷发永久降低了它的高度。</TRADUIT>
+    <TRADUIT>瓦登费尔岛被一座名为红山的巨大火山所主宰，据说它形成于洛克汗之心坠落之处。它曾是泰姆瑞尔最高的山，红色之年的喷发却永久削低了它的高度。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4478,7 +4478,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindTemple</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Following the disappearance of the Tribunal, the New Temple restored the original Dunmer faith: worship of the three Good Daedra - Azura, Mephala, and Boethiah - referred to as "the Reclamations."</ORIGINAL>
-    <TRADUIT>审判席消失后，新神殿恢复了暗精灵的原始信仰：崇拜阿祖拉、梅法拉和波耶西亚这三位善神，即所谓的“收复者”。</TRADUIT>
+    <TRADUIT>审判席消失后，新神殿恢复了暗精灵的原始信仰：崇拜阿祖拉、梅法拉与波耶西亚这三位善神，即所谓的「收复者」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4492,7 +4492,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindHouse01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Morrowind is governed by the Grand Council of five Great Houses, which function as political parties: House Redoran, House Telvanni, House Sadras, House Indoril, and House Dres.</ORIGINAL>
-    <TRADUIT>晨风由五个大家族的大议会统治，这些大家族如同政党：瑞多然家族、泰瓦尼家族、萨德拉斯家族、因多瑞尔家族和德莱斯家族。</TRADUIT>
+    <TRADUIT>晨风由五大家族的评议会统治，它们如同政党：瑞多然家族、泰瓦尼家族、萨德拉斯家族、因多瑞尔家族与德莱斯家族。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4506,7 +4506,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindHouseDres</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>House Dres is focused mainly on agriculture. Its members, despite their notorious history as slavers, have since accepted Imperial rule and renounced the trade.</ORIGINAL>
-    <TRADUIT>德莱斯家族主要专注于农业。其成员曾以奴隶主身份臭名昭著，但后来接受了帝国统治并放弃了奴隶贸易。</TRADUIT>
+    <TRADUIT>德莱斯家族主要经营农业。其成员曾以奴隶主身份臭名昭著，但后来接受了帝国统治并放弃了这门生意。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4520,7 +4520,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindHouseHlaalu</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>House Hlaalu was concerned with business and diplomacy. Its alliance with the Empire, amid rising anti-Imperial sentiment, left it stripped of its Great House status in the early Fourth Era.</ORIGINAL>
-    <TRADUIT>哈拉鲁家族关注商业与外交。在反帝国情绪高涨之际，它与帝国的结盟使其在第四纪元早期被剥夺了大家族地位。</TRADUIT>
+    <TRADUIT>哈拉鲁家族专注于商业与外交。在反帝国情绪高涨之际，它与帝国的结盟使自己在第四纪元早期被剥夺了大家族地位。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4534,7 +4534,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindHouseIndoril</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>House Indoril claims kinship with the Tribunal and boasts such heroes as Indoril Nerevar. Its members are now considered one and the same with the priesthood of the New Temple.</ORIGINAL>
-    <TRADUIT>因多瑞尔家族声称与审判席有亲缘关系，并以因多瑞尔·尼瑞瓦这样的英雄为傲。如今其成员已与新神殿的祭司阶层融为一体。</TRADUIT>
+    <TRADUIT>因多瑞尔家族声称与审判席有亲缘，并以因多瑞尔·尼瑞瓦这样的英雄为傲。如今其成员已与新神殿的祭司阶层融为一体。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4548,7 +4548,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindHouseRedoran</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Duty, gravity, and piety: these are our watchwords. We are the wartime defenders of the House Dunmer of Morrowind." - Vindamea Redoran, Crafting Motif 52</ORIGINAL>
-    <TRADUIT>“责任、庄重与虔诚：这些是我们的箴言。我们是晨风大家族暗精灵的战时保卫者。”——温达梅亚·瑞多然，《制作样式 52》</TRADUIT>
+    <TRADUIT>「责任、庄重与虔诚：这是我们的箴言。我们是晨风大家族暗精灵的战时保卫者。」——温达梅亚·瑞多然，《制作样式 52》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4562,7 +4562,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindHouseTelvanni</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The wizard-lords of House Telvanni have been mostly peaceful throughout history, tending to isolate themselves in mushroom-hut villages to pursue wisdom and arcane mastery.</ORIGINAL>
-    <TRADUIT>泰瓦尼家族的法师领主在历史上大多爱好和平，倾向于隐居在蘑菇屋村落中，追求智慧与奥术精通。</TRADUIT>
+    <TRADUIT>泰瓦尼家族的法师领主在历史上大多与世无争，倾向于隐居在蘑菇屋村落中，追求智慧与奥术造诣。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4577,7 +4577,7 @@ Flagged ESL</COMMENTAIRE>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Tribunal Temple venerated the three "living gods," who exploited Kagrenac's Tools to attain godhood. By the Fourth Era, they were demoted to saints and their worship branded heretical.
 </ORIGINAL>
-    <TRADUIT>审判席教团崇敬三位“活神”，他们利用卡格瑞纳克的工具获得神格。到第四纪元，他们被降格为圣徒，其崇拜被定为异端。</TRADUIT>
+    <TRADUIT>审判席教团敬奉三位「活神」，他们利用卡格瑞纳克的工具获得神格。到第四纪元，他们被降格为圣徒，对其崇拜被定为异端。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4619,7 +4619,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindTribunalVivec</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Vivec the warrior-poet was the guardian deity of the Tribunal who represented the duality of the Dunmer people with his half-Dunmer, half-Chimer appearance.</ORIGINAL>
-    <TRADUIT>战士诗人维威克是审判席的守护神，他以半暗精灵、半奇莫的外貌象征暗精灵的双重性。</TRADUIT>
+    <TRADUIT>战士诗人维威克是审判席的守护神，以半暗精灵、半奇莫的外貌象征暗精灵的双重性。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4647,7 +4647,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceAltmerAyrenn</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The term "high" in "High Elves" is understood to reflect their stature, pride, and cultural elitism. They have long endeavored to found empires on the belief in their own superiority.</ORIGINAL>
-    <TRADUIT>“高精灵”中的“高”被认为反映了他们的身高、骄傲与文化优越感。他们长期怀着自身优越的信念，力图建立帝国。</TRADUIT>
+    <TRADUIT>「高精灵」中的「高」被认为反映其身材、骄傲与文化优越感。他们长期怀着自身优越的信念，力图建立帝国。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4661,7 +4661,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceAltmerFireslinger</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The early Aldmer believed they descended from the Aedra (which roughly translates to "our ancestors"), who populated Mundus in the aftermath of Lorkhan's deception.</ORIGINAL>
-    <TRADUIT>早期奥德莫相信自己是伊德拉的后裔（大致意为“我们的祖先”），这些伊德拉在洛克汗的欺骗之后于梦达思繁衍生灵。</TRADUIT>
+    <TRADUIT>早期奥德莫相信自己是伊德拉的后裔（该词大致意为「我们的祖先」），这些伊德拉在洛克汗的欺骗之后为梦达思带来了生灵。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4689,7 +4689,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceArgonianHist</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Deep within the swamps of Black Marsh grows a race of giant spore trees called the Hist. They are believed to be sentient and to have given life to Argonians, who call themselves "the people of the root."</ORIGINAL>
-    <TRADUIT>黑沼泽的深处生长着一种名为“希斯特”的巨型孢子树。据信它们具有感知能力，并赋予阿尔贡生命，阿尔贡人称自己为“根之子民”。</TRADUIT>
+    <TRADUIT>黑沼泽的深处生长着一种名为「希斯特」的巨型孢子树。据信它们具有知觉，并赋予阿尔贡生命，阿尔贡人称自己为「根之子民」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4703,7 +4703,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceArgonianShadowscale</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Centuries of defending their borders have made Argonians masters of guerrilla warfare - fierce enough that, when Oblivion Gates opened in their homeland, the Daedra sealed them shut rather than be overrun.</ORIGINAL>
-    <TRADUIT>数百年的边境防卫使阿尔贡人成为游击战大师——他们强悍至极，当湮灭之门在家园开启时，迪德拉宁愿将门封死，也不愿被他们冲垮。</TRADUIT>
+    <TRADUIT>数百年的边境防卫使阿尔贡人成为游击战大师——他们强悍至极，当湮灭之门在家园开启时，迪德拉宁愿把门封死，也不愿被他们冲垮。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4717,7 +4717,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBosmer01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Bosmer, also known as Wood Elves, are the elven clanfolk of Valenwood. Well-suited for scouting and thievery, they have an affinity for archery and the ability to command simple-minded beasts.</ORIGINAL>
-    <TRADUIT>波斯莫，又称木精灵，是威伦森林的精灵部族。他们非常适合侦察与偷窃，擅长箭术，并能驱使头脑简单的野兽。</TRADUIT>
+    <TRADUIT>波斯莫，又称木精灵，是威伦森林的精灵部族。他们非常适合侦察与行窃，擅长箭术，并能驱使头脑简单的野兽。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4731,7 +4731,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBosmerGreenPact</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Green Pact is a strict code upheld by the Bosmer of Valenwood that forbids harming the forest. Its Meat Mandate involves strict carnivory and the rite of consuming the flesh of fallen foes.</ORIGINAL>
-    <TRADUIT>绿约是威伦森林的波斯莫所遵守的严格准则，禁止伤害森林。其中的“食肉令”要求严格食肉，并包括食用倒下的敌人之肉的仪式。</TRADUIT>
+    <TRADUIT>绿约是威伦森林的波斯莫所遵守的严格准则，禁止伤害森林。其中的「食肉令」要求严格食肉，并包括分食倒下敌人血肉的仪式。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4745,7 +4745,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBosmerImbued</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Regarded as the finest archers in Tamriel, Wood Elves can draw and release arrows in one seamless motion - a skill enhanced by their talent for blending into wooded environments.</ORIGINAL>
-    <TRADUIT>木精灵被视为泰姆瑞尔最优秀的弓箭手，能一气呵成地拉弓放箭——他们融入森林环境的天赋更增强了这项技能。</TRADUIT>
+    <TRADUIT>木精灵被视为泰姆瑞尔最优秀的弓箭手，能一气呵成地拉弓放箭——他们融入林间环境的天赋更强化了这项本领。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4773,7 +4773,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBretonKing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Although tales of warring kingdoms account for much of the history of High Rock, the Bretons maintain a rich cultural unity with shared language, bardic traditions, and fabled stories of heroism.</ORIGINAL>
-    <TRADUIT>尽管关于交战王国的传说构成了高岩历史的大部分，布莱顿人仍以共同的语言、吟游传统和传奇的英雄故事维持着丰富的文化统一。</TRADUIT>
+    <TRADUIT>尽管关于交战王国的传说构成了高岩历史的大部分，布莱顿人仍以共同的语言、吟游传统与传奇的英雄故事维系着深厚的文化认同。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4787,7 +4787,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBretonStalwart</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Knighthood is pivotal to the Breton identity, as knights of old liberated their forebears from elven rule and created a legacy for future generations through daring quests for glory.</ORIGINAL>
-    <TRADUIT>骑士精神对布莱顿人的身份至关重要，因为古代骑士将他们的祖先从精灵统治下解放出来，并通过勇敢追求荣耀的冒险为后代留下了传承。</TRADUIT>
+    <TRADUIT>骑士精神对布莱顿人的身份至关重要：古代骑士将他们的祖先从精灵统治下解放出来，并通过为荣耀而冒险的壮举为后代留下传承。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4815,7 +4815,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceDunmerChimer</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Dark Elves trace their origins to the bygone Chimer, who abandoned the ways of Summerset Isle in pursuit of religious freedom. Guided by the prophet Veloth, they undertook a great exodus to Morrowind.</ORIGINAL>
-    <TRADUIT>暗精灵的起源可追溯到已消失的奇莫，他们为了追求宗教自由而抛弃夏暮岛的生活方式。在先知维洛斯的引导下，他们向晨风踏上了大迁徙之路。</TRADUIT>
+    <TRADUIT>暗精灵的起源可追溯到已消逝的奇莫，他们为追求宗教自由而抛弃夏暮岛的生活方式。在先知维洛斯的引导下，他们向晨风踏上了大迁徙之路。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4829,7 +4829,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceDunmerCurse</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>As punishment for the betrayal of Indoril Nerevar, the Dunmer were cursed by the Daedric Prince Azura with ashen skin and fiery eyes, binding their fate to the Tribunal until the end of time.</ORIGINAL>
-    <TRADUIT>作为对背叛因多瑞尔·尼瑞瓦的惩罚，暗精灵被迪德拉君王阿祖拉诅咒，皮肤灰暗、双眼燃火，命运被束缚于审判席，直到时间终结。</TRADUIT>
+    <TRADUIT>作为对背叛因多瑞尔·尼瑞瓦的惩罚，暗精灵被迪德拉君王阿祖拉诅咒，皮肤灰暗、双眼燃火，命运被束缚于审判席，直到时间尽头。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4843,7 +4843,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceImperial01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Imperials are the well-spoken human denizens of Cyrodiil, known for the discipline and training of their citizen armies, as well as their respect for the rule of law.</ORIGINAL>
-    <TRADUIT>帝国人是希罗帝尔能言善辩的人类居民，以其公民军的纪律与训练以及对法治的尊重而闻名。</TRADUIT>
+    <TRADUIT>帝国人是希罗帝尔能言善辩的人类居民，以其公民军的纪律与训练，以及对法治的尊重而闻名。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4857,7 +4857,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceImperialLegate</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Many Imperials still venerate Tiber Septim as a god of the Nine Divines and, knowing well that dynasties rise and fall, hold faith that the Empire will one day reclaim its former glory.</ORIGINAL>
-    <TRADUIT>许多帝国人仍将泰伯·塞普汀尊为九圣灵之一，并且深知王朝兴衰无常，仍相信帝国终有一日会重拾昔日荣光。</TRADUIT>
+    <TRADUIT>许多帝国人仍将泰伯·塞普汀尊为九圣灵之一，也深知王朝兴衰无常，仍相信帝国终有一日会重拾昔日荣光。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4871,7 +4871,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceImperialThrone</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Along with their remarkable skills as light infantry, the Imperials are shrewd diplomats and traders - traits that have enabled them to conquer other nations and establish the Empire.</ORIGINAL>
-    <TRADUIT>除了出色的轻步兵技能，帝国人还是精明的外交家与商人——这些特质使他们能够征服其他国家并建立帝国。</TRADUIT>
+    <TRADUIT>除了出色的轻步兵本领，帝国人还是精明的外交家与商人——这些特质使他们能够征服其他国家并建立帝国。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4885,7 +4885,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceKhajiit01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Khajiit are a feline race of beastfolk native to Elsweyr. Their intelligence and agility make them natural thieves and acrobats, while their ferocity makes them equally capable warriors.</ORIGINAL>
-    <TRADUIT>卡吉特是原生于艾斯维尔的猫科兽族。他们的智慧与敏捷使他们成为天生的盗贼和杂技演员，而他们的凶猛也使他们同样成为出色的战士。</TRADUIT>
+    <TRADUIT>卡吉特是原生于艾斯维尔的猫科兽族。他们的智慧与敏捷使他们天生适合当盗贼和杂技演员，而他们的凶猛也让他们同样是出色的战士。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4899,7 +4899,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceKhajiitMane</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Mane is a rare furstock, born when the moons are eclipsed, who serves as the spiritual leader of the Khajiit. Tradition holds that only one can exist at a time, continuously reborn into different bodies.</ORIGINAL>
-    <TRADUIT>“鬃毛”是一种罕见的卡吉特形态，在双月食时出生，担任卡吉特的精神领袖。传统认为同一时间只能存在一位，并不断转生到不同的躯体中。</TRADUIT>
+    <TRADUIT>「鬃毛」是一种罕见的卡吉特形态，在双月食时出生，担任卡吉特的精神领袖。传统认为同一时间只能存在一位，并不断转生到不同的躯体中。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4913,7 +4913,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceKhajiitMoons</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nirn's two moons, Masser and Secunda, are venerated as divine in Khajiiti culture. Their phases determine what shape a Khajiit takes at birth, ranging from the diminutive Alfiq to the imposing Pahmar.</ORIGINAL>
-    <TRADUIT>奈恩的两颗卫星——马瑟尔和瑟坤达——在卡吉特文化中被奉为神明。它们的月相决定卡吉特出生时的形态，从微小的阿尔菲克到威猛的帕玛尔不等。</TRADUIT>
+    <TRADUIT>奈恩的两颗卫星——马瑟尔与瑟坤达——在卡吉特文化中被奉为神明。它们的月相决定卡吉特出生时的形态，从微小的阿尔菲克到威猛的帕玛尔不等。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4927,7 +4927,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceNord01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Nords are the tall and fair-haired human denizens of Skyrim, blessed with extraordinary resistance to cold and magical frost. They are renowned as fierce warriors who excel in all manner of warfare.</ORIGINAL>
-    <TRADUIT>诺德人是天际高大、浅发的人类居民，天生对寒冷和魔法冰霜有非凡抗性。他们以凶猛的战士著称，精通各种战斗方式。</TRADUIT>
+    <TRADUIT>诺德人是天际高大、浅发的人类居民，天生对寒冷与魔法冰霜有非凡抗性。他们以凶猛的战士著称，精通各种战法。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4955,7 +4955,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceNordZealot</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Wind is fundamental to Skyrim and the Nords; those that live in the far wastes always carry a wind with them." - Anonymous, Children of the Sky</ORIGINAL>
-    <TRADUIT>“风对天际和诺德人而言至关重要；生活在遥远荒原上的人总是随身带着风。”——佚名，《天空之子》</TRADUIT>
+    <TRADUIT>「风对天际和诺德人而言至关重要；生活在遥远荒原上的人，总是随身带着风。」——佚名，《天空之子》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4983,7 +4983,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceOrcCaptain</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Orsimer revere Malacath as the First Orc and live by his code of honor and vengeance, which includes respect for the forge, a "Blood Price" for crimes, and the belief that death in battle pleases their god.</ORIGINAL>
-    <TRADUIT>兽人崇奉玛拉凯斯为第一位兽人，并遵循他关于荣誉与复仇的准则，其中包括尊重锻炉、为罪行支付“血价”，以及相信战死能取悦他们的神。</TRADUIT>
+    <TRADUIT>兽人敬奉玛拉凯斯为第一位兽人，遵循他关于荣誉与复仇的准则：尊重锻炉、为罪行支付「血价」，并相信战死能取悦他们的神。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -4997,7 +4997,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceOrcClansman</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Not unlike their deity Malacath, the Orcs view themselves as outcasts. They uphold a distinct culture within secluded strongholds, where a single chieftain takes many wives.</ORIGINAL>
-    <TRADUIT>与他们的神明玛拉凯斯相似，兽人视自己为被放逐者。他们在僻静的堡垒中维持着独特的文化，一位酋长可以娶多位妻子。</TRADUIT>
+    <TRADUIT>与他们的神明玛拉凯斯相似，兽人视自己为被放逐者。他们在僻静的堡垒中维系着独特的文化，一位酋长可以娶多位妻子。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5011,7 +5011,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceRedguard01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Redguards are the dark-skinned human denizens of Hammerfell. Their pride and independence of spirit make them better suited as skirmishers or adventurers than as rank-and-file soldiers.</ORIGINAL>
-    <TRADUIT>红卫人是落锤的深肤色人类居民。他们的骄傲与独立精神，使他们更适合担任散兵或冒险者，而非普通士兵。</TRADUIT>
+    <TRADUIT>红卫人是落锤的深肤色人类居民。他们的骄傲与独立精神，使他们更适合充当散兵或冒险者，而非普通士兵。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5025,7 +5025,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceRedguardCaptain</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>As descendants of the "Warrior Waves," who sailed to Tamriel from the fated land of Yokuda in the First Era, Redguards are renowned for their love of adventure and sailing the high seas.</ORIGINAL>
-    <TRADUIT>作为第一纪元从命定之地尤库达航行至泰姆瑞尔的“战士之浪”的后裔，红卫人以热爱冒险和远洋航行而闻名。</TRADUIT>
+    <TRADUIT>作为第一纪元从命定之地尤库达渡海来到泰姆瑞尔的「战士之浪」的后裔，红卫人以热爱冒险与远洋航行闻名。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5039,7 +5039,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceRedguardRecruit</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The cultural identity of the Redguards is deeply rooted in the sands of the Alik'r Desert. The youth of Hammerfell must undergo a rite of passage in its desolate wastes to prove their endurance and discipline.</ORIGINAL>
-    <TRADUIT>红卫人的文化认同深深植根于阿里克’尔沙漠的沙土之中。落锤的年轻人必须在荒凉的沙漠中经历成年礼，以证明自己的耐力与纪律。</TRADUIT>
+    <TRADUIT>红卫人的文化认同深深植根于阿里克’尔沙漠的沙土之中。落锤的年轻人必须在荒凉的沙海中经历成年礼，以证明自己的耐力与纪律。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5081,7 +5081,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsAyleidStones</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Ayleid Empire fell in 1E 243 to the Slave-Queen Alessia, freeing the early Imperials from enslavement with the aid of Pelinal Whitestrake and the Demi-Prince Morihaus.</ORIGINAL>
-    <TRADUIT>亚历德帝国于 1E 243 年亡于奴隶女王阿莱西亚之手，她在“白轮”佩林纳尔与半神莫里豪斯的帮助下，将早期帝国人从奴役中解放出来。</TRADUIT>
+    <TRADUIT>亚历德帝国于 1E 243 年亡于奴隶女王阿莱西亚之手，她在「白轮」佩林纳尔与半神莫里豪斯的帮助下，将早期帝国人从奴役中解放出来。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5095,7 +5095,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsDwemer01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dwarven artifacts and ruins are remnants of an ancient race of elves known to historians as the Dwemer, which roughly translates to "Deep Elves." </ORIGINAL>
-    <TRADUIT>矮人器物与废墟是一个古老精灵种族的遗存，历史学家称之为锻莫，大致意为“深精灵”。</TRADUIT>
+    <TRADUIT>矮人器物与废墟是一个古老精灵种族的遗存，历史学家称之为锻莫，大致意为「深精灵」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5123,7 +5123,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsDwemerHall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Theories vary on why or how the Dwemer disappeared, but some believe that Lord Kagrenac, one of their chief architects, caused the event by tampering with the heart of a god.</ORIGINAL>
-    <TRADUIT>关于锻莫消失的原因与方式，众说纷纭，但一些人认为他们的首席建筑师之一、卡格瑞纳克领主因篡改一位神的心脏而引发了这一事件。</TRADUIT>
+    <TRADUIT>关于锻莫消失的原因与方式，众说纷纭，但有人认为他们的首席建筑师之一卡格瑞纳克领主因篡改一位神的心脏而引发了这一事件。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5137,7 +5137,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsNordic01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Dragon Cult built high temples to honor the dragons and inter the faithful. Many still stand as forsaken ruins, haunted in undeath by those entombed within.</ORIGINAL>
-    <TRADUIT>拜龙教建造高耸的神庙来崇敬巨龙并安葬信徒。许多神庙至今仍矗立为荒废的遗迹，埋葬其中的亡者化为亡灵，在此徘徊。</TRADUIT>
+    <TRADUIT>拜龙教建造高耸的神庙以崇敬巨龙、安葬信徒。许多神庙如今仍矗立为荒废的遗迹，埋葬其中的亡者化为亡灵在此徘徊。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5151,7 +5151,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsNordicPeak</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>In days of old, when dragons ruled over the land, there lived mortal men who worshipped them as gods. This Dragon Cult has long since died out, though their ruins still loom over Skyrim.</ORIGINAL>
-    <TRADUIT>古时，巨龙统治大地，有凡人将它们奉为神明。这个拜龙教早已消亡，但它的废墟仍耸立在天际大地上。</TRADUIT>
+    <TRADUIT>古时巨龙统治大地，有凡人将它们奉为神明。这个拜龙教早已消亡，其废墟却仍耸立在天际大地上。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5165,7 +5165,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsNordicValthume</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The ancient Nords followed the Old Ways: the worship of animal gods, most notably the dragon, in the form of totems.</ORIGINAL>
-    <TRADUIT>古诺德人遵循古道：以图腾形式崇拜动物神，其中最著名的是龙。</TRADUIT>
+    <TRADUIT>古诺德人遵循古道：以图腾形式崇拜动物神，其中最显赫的是龙。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5179,7 +5179,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RuinsNordicWordWall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nordic ruins often contain word walls, inscribed with long-forgotten power through words in the Dragon Language - a series of etched runes resembling claw marks.</ORIGINAL>
-    <TRADUIT>诺德废墟中常有龙语墙，上面用龙语刻着早已被遗忘的力量——一系列类似爪痕的符文。</TRADUIT>
+    <TRADUIT>诺德废墟中常有龙语墙，上面用龙语刻着久被遗忘的力量——一系列形似爪痕的符文。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5193,7 +5193,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>Shout01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Nords believe the Storm Voice is a gift from Kyne, through which a Tongue can channel their vital essence into a Shout - a powerful form of magic once unique to dragons.</ORIGINAL>
-    <TRADUIT>诺德人相信风暴之音是凯娜的恩赐，发声者可以通过它将自身生命力注入吼声——一种曾为巨龙独有的强大魔法。</TRADUIT>
+    <TRADUIT>诺德人相信风暴之音是凯娜的恩赐，发声者可以借它把自身生命力注入吼声——一种曾为巨龙独有的强大魔法。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5207,7 +5207,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutCallDragon</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Much like the names of dragons, a shout in the Dragon Language consists of three words of power, with each spoken word increasing the shout's strength.</ORIGINAL>
-    <TRADUIT>与巨龙的名字很像，龙语中的吼声由三个力量之词组成，每说出一个词都会增强吼声的威力。</TRADUIT>
+    <TRADUIT>与巨龙的名字相似，龙语中的吼声由三个力量之词组成，每说出一个词都会增强吼声的威力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5221,7 +5221,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutDragonAspect</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>By invoking Dragon Aspect, skilled wielders of the Voice can enhance their attack power, bolster their defense with spectral armor, and hasten shout recovery.</ORIGINAL>
-    <TRADUIT>通过唤起“龙之化身”，熟练的吐'目使用者能提升攻击力、以幽灵护甲强化防御，并加快吼声恢复。</TRADUIT>
+    <TRADUIT>唤起「龙之化身」后，娴熟的吐'目使用者能提升攻击力，以幽灵护甲强化防御，并加快吼声恢复。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5235,7 +5235,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutDrainVitality</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Shouts may turn the tide of battle when used strategically, but their application extends beyond combat - to swiftly crossing distances, sharpening blades, or altering the weather.</ORIGINAL>
-    <TRADUIT>吼声若运用得当，可以扭转战局，但其用途远不止战斗——还能快速跨越距离、磨利刀刃或改变天气。</TRADUIT>
+    <TRADUIT>吼声若运用得当可以扭转战局，其用途却远不止战斗——还能快速跨越距离、磨利刀刃或改变天气。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5249,7 +5249,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutFireBreath</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Learning to use the Thu'um typically demands many years of meditation and training. The most powerful Tongues can cause great devastation with so little as a whisper.</ORIGINAL>
-    <TRADUIT>学习使用“吐'目”通常需要多年冥想与训练。最强大的发声者只需低语，便能造成巨大破坏。</TRADUIT>
+    <TRADUIT>学习使用吐'目通常需要多年冥想与训练。最强大的发声者只需低语，便能造成巨大破坏。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5263,7 +5263,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutSoulTear</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Soul Tear shout binds the soul of its target, siphons their health, and - should they fall within two seconds - raises their corpse to fight for the caster.</ORIGINAL>
-    <TRADUIT>“灵魂撕裂”吼声会束缚目标的灵魂，吸取其生命，并且——如果目标在两秒内倒下——就会使尸体复活，为施法者作战。</TRADUIT>
+    <TRADUIT>「灵魂撕裂」吼声会束缚目标的灵魂、吸取其生命，并且——若目标在两秒内倒下——就会驱使尸体复生，为施法者作战。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5277,7 +5277,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutUnrelentingForce</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The three words of Unrelenting Force (Force, Balance, Push) chain together to hurl objects great distances and briefly render enemies helpless.</ORIGINAL>
-    <TRADUIT>“冷酷之力”的三个词（力、均衡、推）串联起来，能将物体抛向远方，并使敌人短暂失去行动能力。</TRADUIT>
+    <TRADUIT>「冷酷之力」的三个词（力、均衡、推）连成一气，能把物体抛向远处，并使敌人短暂失去行动能力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5291,7 +5291,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ShoutWordWall</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The ancient Nords erected many word walls across the land. Their true power lies dormant, awaiting a worthy Dragonborn - and the souls of slain dragons - to awaken it.</ORIGINAL>
-    <TRADUIT>古诺德人在大地上竖立了许多龙语墙。它们真正的力量处于休眠状态，等待一位配得上它的龙裔，以及被杀巨龙的灵魂，前来将它唤醒。</TRADUIT>
+    <TRADUIT>古诺德人在大地上竖起许多龙语墙。它们真正的力量处于沉眠，等待一位配得上它的龙裔——以及被杀巨龙的灵魂——前来唤醒。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5305,7 +5305,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillEnchanting</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Understanding the magical properties of enchanted gear requires study at an enchanting table - a process that ultimately results in the items' destruction.</ORIGINAL>
-    <TRADUIT>要理解附魔装备的魔法特性，需要在附魔台上进行研究——这一过程最终会摧毁物品。</TRADUIT>
+    <TRADUIT>要理解附魔装备的魔法特性，需要在附魔台上研究——而这一过程最终会摧毁物品。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5319,7 +5319,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillSmithing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The skills of a smith are used to craft new weapons and armor from raw materials, as well as to improve existing gear.</ORIGINAL>
-    <TRADUIT>铁匠的技能用于从原材料打造新的武器和护甲，也用于改进现有装备。</TRADUIT>
+    <TRADUIT>铁匠的技艺用于以原材料打造新的武器与护甲，也用于改良现有装备。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5333,7 +5333,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillSneaking</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The efficacy of stealth depends on several factors, such as enemy sightlines, cumbersomeness of worn armor, quickness of pace, and availability of shadow.</ORIGINAL>
-    <TRADUIT>潜行的效果取决于多种因素，例如敌人的视线、所穿护甲的笨重程度、移动速度以及可用的阴影。</TRADUIT>
+    <TRADUIT>潜行的效果取决于多种因素：敌人的视线、所穿护甲的累赘程度、脚步的快慢，以及是否有阴影可借。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5347,7 +5347,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillTraining</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Skills improve through experience and practical application, but may also be taught by those adept in their respective fields.</ORIGINAL>
-    <TRADUIT>技能通过经验与实际应用提高，但也可以由各自领域的能手传授。</TRADUIT>
+    <TRADUIT>技能通过经验与实际运用提高，也可以由各领域的行家传授。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5361,7 +5361,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillAlchemy01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Alchemy is the art of mixing, boiling, and distilling raw ingredients to harness their properties for the brewing of potions and poisons.</ORIGINAL>
-    <TRADUIT>炼金术是混合、煮沸和蒸馏原材料的技艺，利用其特性来调制药水与毒药。</TRADUIT>
+    <TRADUIT>炼金术是混合、煮沸与蒸馏原材料的技艺，借其特性调制药水与毒药。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5375,7 +5375,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillAlchemyAlchemist</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Alchemists commonly consume samples of ingredients to determine their properties - be they beneficial or harmful.</ORIGINAL>
-    <TRADUIT>炼金师通常会服用少量材料样品，以判断其特性——无论有益还是有害。</TRADUIT>
+    <TRADUIT>炼金师通常会亲口尝一点材料，以判断其特性——无论有益还是有害。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5389,7 +5389,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillAlchemyPoison</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Poisons are brewed substances that inflict detrimental effects upon their target, capable of damaging health, magicka, and stamina.</ORIGINAL>
-    <TRADUIT>毒药是调制出的物质，会对目标造成负面效果，能够伤害生命、魔力和耐力。</TRADUIT>
+    <TRADUIT>毒药是调制出的物质，会对目标造成负面效果，能损伤生命、魔力与耐力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5403,7 +5403,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillAlchemyPotion</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The strategic use of potions and other consumables can mean the difference between life and death, granting an upper hand in the midst of battle.</ORIGINAL>
-    <TRADUIT>战略性地使用药水和其他消耗品可能决定生死，在战斗中占据上风。</TRADUIT>
+    <TRADUIT>善用药水与其他消耗品，可能就是生死之别，能在战斗中占得先机。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5417,7 +5417,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatArchery01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>By letting down the bowstring, an archer can reconsider their aim and return an arrow to the quiver. A heavy blade is less forgiving mid-strike.</ORIGINAL>
-    <TRADUIT>弓箭手可以松开弓弦，重新考虑瞄准，并把箭收回箭袋。沉重的刀刃一旦挥出，便没那么容易收回。</TRADUIT>
+    <TRADUIT>弓箭手可以松开弓弦，重新考虑瞄准，把箭收回箭袋。沉重的刀刃一旦挥出，便没那么容易收回。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5431,7 +5431,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatArrow</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Fully drawing a bow before loosing an arrow results in a more precise and powerful shot with the greatest possible range.</ORIGINAL>
-    <TRADUIT>放箭前将弓完全拉满，能射出更精准、更有力、射程最远的箭。</TRADUIT>
+    <TRADUIT>放箭前把弓完全拉满，能射出更精准、更有力、射程最远的箭。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5445,7 +5445,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatBlocking</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>While a weapon in hand might suffice to block incoming blows, a shield provides a more effective means of defense.</ORIGINAL>
-    <TRADUIT>手中的武器或许足以格挡来袭的攻击，但盾牌能提供更有效的防御手段。</TRADUIT>
+    <TRADUIT>手中的武器或许足以格挡来袭的攻击，但盾牌能提供更有效的防御。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5459,7 +5459,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatBrawl</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Brawls can settle disputes or test an opponent's mettle with nothing but fists. Such contests showcase prowess, and establish respect and camaraderie among friends and rivals alike.</ORIGINAL>
-    <TRADUIT>斗殴可以只用拳头解决争端或试探对手的胆量。这种较量展示本领，并在朋友与对手之间建立尊重与情谊。</TRADUIT>
+    <TRADUIT>斗殴可以只用拳头解决争端或试探对手的胆量。这种较量展示本领，并在朋友与对手之间同样建立起尊重与情谊。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5473,7 +5473,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatOneHanded</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Those trained to use one-handed weapons can adeptly wield daggers, swords, maces, and war axes, leaving their off-hand free to hold a shield or an additional weapon.</ORIGINAL>
-    <TRADUIT>受过单手武器训练的人能熟练使用匕首、剑、锤和战斧，空出副手来持盾或另一件武器。</TRADUIT>
+    <TRADUIT>受过单手武器训练的人能熟练使用匕首、剑、锤与战斧，空出副手来持盾或另持一件武器。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5487,7 +5487,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatSneakAttack</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Surprise attacks against unsuspecting victims are generally more lethal than ones that are openly declared, even when the same level of force is used.</ORIGINAL>
-    <TRADUIT>对毫无防备的受害者发动突袭，通常比公开出手的攻击更致命，即使使用的力量相同。</TRADUIT>
+    <TRADUIT>对毫无防备者发动突袭，通常比公开出手更致命，即使使出的力道相同。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5501,7 +5501,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatTwoHanded</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Those trained to use two-handed weapons deliver deadlier blows with greatswords, battleaxes, and warhammers.</ORIGINAL>
-    <TRADUIT>受过双手武器训练的人，能用巨剑、战斧和战锤造成更致命的打击。</TRADUIT>
+    <TRADUIT>受过双手武器训练的人，能用巨剑、战斧与战锤打出更致命的攻击。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5515,7 +5515,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielEmpire</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Ruby Throne in Cyrodiil's White-Gold Tower has been the ruling seat of the Empire of Tamriel since the First Empire of Saint Alessia. As of the Fourth Era, the Third Empire comprises only Skyrim, High Rock, and Cyrodiil.</ORIGINAL>
-    <TRADUIT>希罗帝尔白金塔中的红宝石王座，自圣阿莱西亚的第一帝国以来一直是泰姆瑞尔帝国的统治中心。到第四纪元，第三帝国仅包括天际、高岩和希罗帝尔。</TRADUIT>
+    <TRADUIT>希罗帝尔白金塔中的红宝石王座，自圣阿莱西亚的第一帝国以来一直是泰姆瑞尔帝国的统治中心。到第四纪元，第三帝国仅剩下天际、高岩与希罗帝尔。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5529,7 +5529,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceBlackMarsh</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Black Marsh, also known as Argonia, is a dense swampland region in southeastern Tamriel inhabited by the Argonians. It is a land teeming with poisonous plants and violent predators.</ORIGINAL>
-    <TRADUIT>黑沼泽，又称阿尔戈尼亚，是泰姆瑞尔东南部一片茂密的沼泽地区，居住着阿尔贡人。这片土地上遍布有毒植物和凶猛的掠食者。</TRADUIT>
+    <TRADUIT>黑沼泽，又称阿尔戈尼亚，是泰姆瑞尔东南部一片茂密的沼泽地区，居住着阿尔贡人。这片土地上遍布有毒植物与凶猛的掠食者。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5543,7 +5543,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceCyrodiil</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Cyrodiil, sometimes called "the Heartland," is a temperate province in central Tamriel from which the Imperials hail. It holds the Empire's capital, the Imperial City, with the White-Gold Tower at its heart.</ORIGINAL>
-    <TRADUIT>希罗帝尔有时被称为“中心腹地”，是泰姆瑞尔中部一个气候温和的省份，帝国人便来自这里。帝国的首都帝都坐落于此，白金塔位于城市中心。</TRADUIT>
+    <TRADUIT>希罗帝尔有时被称为「中心腹地」，是泰姆瑞尔中部一个气候温和的省份，帝国人便来自这里。帝国的首都帝都坐落于此，白金塔位于城市中心。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5557,7 +5557,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceElsweyr</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Elsweyr lies on the southern coast of Tamriel and is home to the feline Khajiit. The land is divided by two distinct climates: arid wastes in the north, and fertile jungle in the south.</ORIGINAL>
-    <TRADUIT>艾斯维尔位于泰姆瑞尔南部海岸，是猫形种族卡吉特的家园。这片土地分为两种截然不同的气候带：北方干旱的荒原和南方肥沃的丛林。</TRADUIT>
+    <TRADUIT>艾斯维尔位于泰姆瑞尔南部海岸，是猫形种族卡吉特的家园。这片土地分为两种截然不同的气候：北方干旱的荒原与南方肥沃的丛林。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5571,7 +5571,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceHammerfell</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Hammerfell is a rugged province in western Tamriel from which the Redguards hail. The region boasts a variety of landscapes, including subtropical beaches, lush jungles, and the vast Alik'r Desert.</ORIGINAL>
-    <TRADUIT>落锤是泰姆瑞尔西部一个崎岖的省份，红卫人便来自这里。该地区拥有多样的地貌，包括亚热带海滩、茂密丛林和广袤的阿里克’尔沙漠。</TRADUIT>
+    <TRADUIT>落锤是泰姆瑞尔西部一个崎岖的省份，红卫人便来自这里。该地区地貌多样，包括亚热带海滩、茂密丛林与广袤的阿里克’尔沙漠。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5585,7 +5585,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceHighRock</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>High Rock in northwestern Tamriel is the homeland of the Bretons and once held the kingdom of the Orcs. Featuring temperate forests, dry badlands, and snowy mountains, it is a land as diverse as its people.</ORIGINAL>
-    <TRADUIT>泰姆瑞尔西北部的高岩是布莱顿人的家园，也曾是兽人王国的所在地。这里有温带森林、干燥的荒地和积雪的山脉，土地与其人民一样多样。</TRADUIT>
+    <TRADUIT>泰姆瑞尔西北部的高岩是布莱顿人的家园，也曾是兽人王国的所在地。这里有温带森林、干燥的荒地与积雪的山脉，土地与其人民一样多样。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5599,7 +5599,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceMorrowind</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Morrowind is a volcanic region in northeastern Tamriel from which the Dark Elves hail. The mainland is isolated by vast mountain ranges, with the island of Vvardenfell and the ash-spewing Red Mountain at its core.</ORIGINAL>
-    <TRADUIT>晨风是泰姆瑞尔东北部一个火山地区，暗精灵便来自这里。大陆被广袤的山脉隔断，核心是瓦登费尔岛和喷吐灰烬的红山。</TRADUIT>
+    <TRADUIT>晨风是泰姆瑞尔东北部一个火山地区，暗精灵便来自这里。大陆被广袤的山脉隔断，核心是瓦登费尔岛与喷吐灰烬的红山。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5627,7 +5627,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceSummersetIsles</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Summerset Isles lie southwest of Tamriel in the Sea of Pearls and are home to the High Elves. Consisting of fourteen islands, they make up a warm region with colorful forests and idyllic meadows.</ORIGINAL>
-    <TRADUIT>夏暮岛位于泰姆瑞尔西南方的珍珠海中，是高精灵的家园。它由十四座岛屿组成，构成一片拥有绚丽森林与田园般草甸的温暖地区。</TRADUIT>
+    <TRADUIT>夏暮岛位于泰姆瑞尔西南方的珍珠海中，是高精灵的家园。它由十四座岛屿组成，是一片拥有绚丽森林与田园般草甸的温暖地区。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5641,7 +5641,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>TamrielProvinceValenwood</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Valenwood is a densely forested region in southwestern Tamriel, inhabited by the Wood Elves. Its rainforests are roamed by gigantic, migratory trees whose branches host entire cities.</ORIGINAL>
-    <TRADUIT>威伦森林是泰姆瑞尔西南部一片森林茂密的地区，居住着木精灵。其雨林中游荡着巨大的迁徙树木，树枝上承载着整座城市。</TRADUIT>
+    <TRADUIT>威伦森林是泰姆瑞尔西南部一片森林茂密的地区，居住着木精灵。其雨林中游荡着巨大的迁徙树木，枝干上承载着整座城市。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5655,7 +5655,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalHorse01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Navigating the rugged northern landscape is easier astride a horse, available for purchase from the stables in any of Skyrim's major settlements.</ORIGINAL>
-    <TRADUIT>骑马穿行崎岖的北方大地更为轻松，天际任何主要定居点的马厩都出售马匹。</TRADUIT>
+    <TRADUIT>骑马穿行崎岖的北方大地更为轻松，天际任何主要聚落的马厩都出售马匹。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5669,7 +5669,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>AnimalHorse02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The horses of Skyrim may be slower than those from Cyrodiil, but what they lack in swiftness is made up for in hardiness.</ORIGINAL>
-    <TRADUIT>天际的马可能比希罗帝尔的马慢，但速度上的不足由坚韧弥补。</TRADUIT>
+    <TRADUIT>天际的马或许比希罗帝尔的马慢，但速度上的不足由坚韧弥补。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5697,7 +5697,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarCamp01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Soldiers from both sides of the civil war are known to establish camps in enemy-controlled regions, offering shelter and provisions for their faction's troops.</ORIGINAL>
-    <TRADUIT>内战双方的士兵都会在敌方控制的地区建立营地，为所属阵营的部队提供庇护和补给。</TRADUIT>
+    <TRADUIT>内战双方都会在敌方控制的地区扎营，为所属阵营的部队提供栖身之所与补给。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5711,7 +5711,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CreatureVampireLord01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Vampire Lords can assume a bat-like form at will, complete with deadly talons and leathery wings. While transformed, they wield powerful spells and evade danger by shifting into a cloud of bats.</ORIGINAL>
-    <TRADUIT>吸血鬼领主可以随意化作蝙蝠般的形态，拥有致命的利爪和皮革般的双翼。变身时，它们能施展强大法术，并通过化作一群蝙蝠来躲避危险。</TRADUIT>
+    <TRADUIT>吸血鬼领主可以随意化作蝙蝠般的形态，长有致命的利爪与皮革般的双翼。变身期间，它们能施展强大法术，并通过化作一群蝙蝠来躲避危险。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5739,7 +5739,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraDremoraGuardian</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The daedra known to themselves as "Kyn" use the term "Dremora" when dealing with mortals to prevent their true names from being weaponized against them.</ORIGINAL>
-    <TRADUIT>这些迪德拉自称“凯恩”，但在与凡人打交道时使用“魔人”一词，以防真名被用来对付它们。</TRADUIT>
+    <TRADUIT>这些迪德拉自称「凯恩」，与凡人打交道时才用「魔人」一词，以免真名被反过来对付它们。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5753,7 +5753,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DaedraDremoraOblivion</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dremora are fierce combatants not only due to their prowess as warriors and sorcerers, but also because, as creatures of Oblivion, they face no fear of death.</ORIGINAL>
-    <TRADUIT>魔人是凶猛的战斗者，不仅因为它们是骁勇的战士和法师，还因为作为湮灭生物，它们不惧怕死亡。</TRADUIT>
+    <TRADUIT>魔人是凶猛的战斗者，不仅因为它们是骁勇的战士与法师，更因为身为湮灭造物，它们对死亡毫无畏惧。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5767,7 +5767,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DivinePriestAkatosh</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"I begin every service in the temple with a prayer to praise Alduin (oh great god of time!), followed by a prayer to keep him at bay (may your slumber stretch on for a thousand generations!)." - High Priest Ingurt, Divines and the Nords</ORIGINAL>
-    <TRADUIT>“我在神庙的每一次礼拜都以赞美奥杜因的祈祷开始（哦，伟大的时间之神！），随后是让他远离的祈祷（愿您的长眠延续千秋万代！）。”——大祭司英古特，《圣灵与诺德人》</TRADUIT>
+    <TRADUIT>「我在神庙的每一次礼拜，都以赞美奥杜因的祈祷开场（哦，伟大的时间之神！），随后是请他远去的祈祷（愿您的长眠延续千秋万代！）。」——大祭司英古特，《圣灵与诺德人》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5781,7 +5781,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonIcewing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Once, the dragons sought to eliminate or enslave all mortal races. Given the chance, they would surely do so again...</ORIGINAL>
-    <TRADUIT>曾经，巨龙试图消灭或奴役所有凡人种族。一旦有机会，它们必定会再次这样做……</TRADUIT>
+    <TRADUIT>曾几何时，巨龙试图消灭或奴役所有凡人种族。一旦有机会，它们必定会故技重施……</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5795,7 +5795,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonVariantRevered</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Revered dragons stand out from their kin with a beaked mouth and distinct lack of teeth. The true danger lies in their unique shout, which drains the life force of its unlucky targets.</ORIGINAL>
-    <TRADUIT>庄严龙以其喙状嘴和明显缺少牙齿而在同类中脱颖而出。真正的危险在于它们独特的吼声，能吸取不幸目标的生命力。</TRADUIT>
+    <TRADUIT>庄严龙以喙状的嘴和明显缺失的牙齿在同类中独树一帜。真正的危险在于它们独特的吼声，能吸取不幸目标的生命力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5809,7 +5809,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>EnemyUndeadLich</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Liches are necromancers who have shed mortality itself to embrace the most sophisticated form of undeath. Dragon Priests are a particular Nordic variety.</ORIGINAL>
-    <TRADUIT>巫妖是舍去凡人之躯、拥抱最深奥的亡灵形态的死灵法师。龙祭司是诺德人中一种特殊的巫妖。</TRADUIT>
+    <TRADUIT>巫妖是舍弃了凡人之躯、拥抱最精深亡灵形态的死灵法师。龙祭司是诺德人中特殊的一类。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5823,7 +5823,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionVigilantStendarr</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Vigil of Stendarr is an order of holy warriors who dedicate themselves to eradicating daedra and other "abominations" in the name of the Divine they revere.</ORIGINAL>
-    <TRADUIT>斯丹达尔警戒者是一支神圣战士教团，以他们所崇敬的圣灵之名，致力于消灭迪德拉和其他“可憎之物”。</TRADUIT>
+    <TRADUIT>斯丹达尔警戒者是一支神圣战士教团，以他们所敬奉的圣灵之名，致力于铲除迪德拉与其他「可憎之物」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5837,7 +5837,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralCompanion</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Adventurers need not face the perils of their journeys alone. Many across the realm seek companions in the trials and triumphs of their quests, drawn together by common goals.</ORIGINAL>
-    <TRADUIT>冒险者不必独自面对旅途中的危险。这片土地上许多人都在任务的试炼与胜利中寻找同伴，因共同目标而走到一起。</TRADUIT>
+    <TRADUIT>冒险者不必独自面对旅途中的凶险。这片土地上许多人都在任务的试炼与胜利中寻觅同伴，因共同的目标走到一起。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5851,7 +5851,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralEncumbered</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Hoarding more loot than can be easily carried often proves unwise. An overburdened traveler will find their journey slowed and threats harder to evade.</ORIGINAL>
-    <TRADUIT>贪多囤积、超出负重，往往并不明智。负担过重的旅行者会发现旅途变慢，威胁更难躲避。</TRADUIT>
+    <TRADUIT>贪多囤积、超出负重，往往并不明智。负担过重的旅人会发觉脚步变慢，威胁也更难躲开。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5865,7 +5865,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralHunter</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Game is abundant in Skyrim's countryside, ripe for the harvest. Many hunters roam the wilds in pursuit of elk and other animals, occasionally trading their spoils along the way.</ORIGINAL>
-    <TRADUIT>天际的乡野间猎物丰富，可供收获。许多猎人游荡在荒野中追逐麋鹿和其他动物，偶尔沿途交易猎物。</TRADUIT>
+    <TRADUIT>天际的乡野间猎物丰富，正当收获之时。许多猎人游荡在荒野中追逐麋鹿和其他动物，偶尔沿途把猎物换些钱。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5893,7 +5893,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemSoulGem</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Soul gems are sized according to the strength of souls they can capture, ranging from petty to grand. Molag Bal is rumored to have created them with a portion of his infernal power.</ORIGINAL>
-    <TRADUIT>灵魂石按其能捕获的灵魂强度分为不同大小，从微型到特大。据传莫拉格·巴尔用自己的一部分地狱力量创造了它们。</TRADUIT>
+    <TRADUIT>灵魂石按其能捕获的灵魂强度分为不同大小，从微小到特大。据传莫拉格·巴尔用自己一部分地狱之力创造了它们。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5907,7 +5907,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemArmorEbony</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ebony is a durable volcanic glass refined by folding many times upon itself. Said to be the crystallized blood of Lorkhan, it is one of Tamriel's most precious substances.</ORIGINAL>
-    <TRADUIT>黑檀是一种耐用的火山玻璃，经过多次折叠精炼而成。据说它是洛克汗之血的结晶，是泰姆瑞尔最珍贵的物质之一。</TRADUIT>
+    <TRADUIT>黑檀是一种耐用的火山玻璃，经反复折叠精炼而成。据说它是洛克汗之血的结晶，是泰姆瑞尔最珍贵的物质之一。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5935,7 +5935,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LocationUniqueBlackreach02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Blackreach is an immense, naturally-lit cavern that can be accessed through certain Dwarven ruins and once served as a highway connecting several Dwemeri cities.</ORIGINAL>
-    <TRADUIT>黑境是一座巨大、有天然照明的洞窟，可通过某些矮人废墟进入，曾是连接数座锻莫城市的通道。</TRADUIT>
+    <TRADUIT>黑境是一座巨大、有天然照明的洞窟，可通过某些矮人废墟进入，曾是连接数座锻莫城市的通衢。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5949,7 +5949,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreDragonBreak</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dragon Breaks occur when the flow of time is fractured, historically blamed on mortals meddling in divine matters. They often precede significant changes in Tamriel that strain mortal comprehension.</ORIGINAL>
-    <TRADUIT>当时间之流发生断裂时，就会出现龙破，历史上常归咎于凡人干预神的事务。龙破往往预示着泰姆瑞尔将发生超出凡人理解的重大变化。</TRADUIT>
+    <TRADUIT>当时间之流发生断裂，便会出现龙破，历史上常归咎于凡人干预神的事务。龙破往往预示泰姆瑞尔将发生超出凡人理解的剧变。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5977,7 +5977,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicDualWield</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Spells may be prepared in either hand to be dual-wielded by skilled casters, or held in one hand while the other holds a weapon.</ORIGINAL>
-    <TRADUIT>熟练的施法者可以在两只手中各准备一个法术进行双持，也可以一手持法术、另一手持武器。</TRADUIT>
+    <TRADUIT>熟练的施法者可以在双手各准备一个法术进行双持，也可以一手持法术、另一手持武器。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -5991,7 +5991,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicMage</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Magicka is the raw energy of magic that flows from Aetherius into Mundus via the sun and stars. Known to mages as the Higher Arts, it has many purposes: to heal, to harm, or to fulfill selfish ends.</ORIGINAL>
-    <TRADUIT>魔力是从光界经由太阳与星辰流入梦达思的原始魔法能量。法师称之为高阶技艺，它有许多用途：治疗、伤害，或达成自私的目的。</TRADUIT>
+    <TRADUIT>魔力是从光界经由太阳与星辰流入梦达思的原始魔法能量。法师称之为高阶技艺，它用途繁多：治疗、伤害，或达成自私的目的。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6033,7 +6033,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellSoulTrap</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>By casting Soul Trap on a creature at the moment of its death, a spellcaster may capture its soul in a soul gem - provided one of suitable size is empty and available.</ORIGINAL>
-    <TRADUIT>在生物死亡的那一刻对其施放摄魂陷阱，施法者就可以将其灵魂捕获到灵魂石中——前提是有一块大小合适、空置且可用的灵魂石。</TRADUIT>
+    <TRADUIT>在生物死亡的那一刻对其施放摄魂陷阱，施法者就能把它的灵魂收进灵魂石——前提是有一块大小合适、空置可用的灵魂石。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6047,7 +6047,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MorrowindCulture</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"The people of Solstheim, the heirs of the Guardian, must remain wary, lest the dark influence of Herma-Mora, or even the Traitor himself, return someday." - Lucius Gallus, The Guardian and the Traitor</ORIGINAL>
-    <TRADUIT>“索瑟海姆的人民，守护者的继承者，必须保持警惕，以免赫玛-莫拉的黑暗影响再度降临，甚至叛徒本人有朝一日卷土重来。”——卢修斯·加卢斯，《守护者与叛徒》</TRADUIT>
+    <TRADUIT>「索瑟海姆的人民，守护者的继承者，必须保持警惕，以免赫玛-莫拉的黑暗影响，甚至叛徒本人，有朝一日卷土重来。」——卢修斯·加卢斯，《守护者与叛徒》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6075,7 +6075,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatArchery02</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Precision is vital for an archer faced with a long shot, as they might have only one chance to hit their target before it escapes.</ORIGINAL>
-    <TRADUIT>对面临远距离射击的弓箭手来说，精准至关重要，因为他们可能只有一次命中目标的机会，否则目标就会逃走。</TRADUIT>
+    <TRADUIT>对需要远射的弓箭手而言，精准至关重要——他们可能只有一次命中目标的机会，否则目标就会逃走。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6089,7 +6089,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatDualWield</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Dual wielding weapons can greatly enhance a combatant's melee damage by allowing both hands to strike simultaneously.</ORIGINAL>
-    <TRADUIT>双持武器可以让双手同时攻击，从而大幅提高战斗者的近战伤害。</TRADUIT>
+    <TRADUIT>双持武器能让双手同时出击，从而大幅提高战斗者的近战伤害。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6103,7 +6103,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarMessenger</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The old Nord phrase "season unending" casts war as an endless cycle, where combatants pause only to gather strength before the next battle.</ORIGINAL>
-    <TRADUIT>诺德古语“无休之季”将战争描绘成无休止的循环，交战者只是停下来积蓄力量，准备下一场战斗。</TRADUIT>
+    <TRADUIT>诺德古语「无休之季」把战争描绘成无尽的循环：交战双方只是停下积蓄力量，准备下一场厮杀。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6117,7 +6117,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarLegionReinforcements</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Serving under the authority of the Emperor, the Imperial Legion - with its vast numbers and strict discipline - is regarded as one of the most powerful fighting forces ever assembled.</ORIGINAL>
-    <TRADUIT>帝国军团在皇帝统辖下服役，以其庞大的数量和严明的纪律，被视为有史以来最强大的战斗力量之一。</TRADUIT>
+    <TRADUIT>帝国军团在皇帝统辖下服役，凭借庞大的数量与严明的纪律，被视为有史以来最强大的战斗力量之一。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6131,7 +6131,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>CivilWarStormcloakVanguard</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>No one agrees whether the Empire branded them "Stormcloaks" as an insult, or if Ulfric coined the name himself. Regardless, the rebels wear it like armor in their fight for a free Skyrim.</ORIGINAL>
-    <TRADUIT>没人能确定“风暴斗篷”是帝国为侮辱他们而起，还是乌弗瑞克自己创造的。无论如何，叛军在为自由天际而战时，将它像铠甲一样穿在身上。</TRADUIT>
+    <TRADUIT>没人说得清「风暴斗篷」是帝国为羞辱他们而起，还是乌弗瑞克自创的名号。无论如何，叛军在为自由的天际而战时，把它当作铠甲一样穿在身上。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6145,7 +6145,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>DragonMystic</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Stripped of their power in the Dragon War, dragons were largely killed off thereafter and vanished from Tamriel. The few who survived did so in seclusion and obscurity, believed extinct by almost all.</ORIGINAL>
-    <TRADUIT>巨龙在巨龙战争中被剥夺力量，此后大部分遭到杀戮，从泰姆瑞尔消失。少数幸存者隐姓埋名，与世隔绝，几乎所有人都认为它们已经灭绝。</TRADUIT>
+    <TRADUIT>巨龙在巨龙战争中被剥夺力量，此后大多遭到屠戮，从泰姆瑞尔消失。少数幸存者隐居藏形，几乎所有人都以为它们已经灭绝。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6159,7 +6159,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>Enemy01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>For all of Skyrim's beauty, her dangers are plentiful. Brave explorers will face all manner of enemies on their journeys, from restless spirits and vampires to otherworldly monsters.</ORIGINAL>
-    <TRADUIT>尽管天际美丽，危险也层出不穷。勇敢的探险者会在旅途中遭遇各种敌人，从不得安息的亡魂、吸血鬼到异界怪物。</TRADUIT>
+    <TRADUIT>天际固然美丽，危险也无处不在。勇敢的探险者会在旅途中遭遇各式敌人，从不得安息的亡魂、吸血鬼，到异界怪物。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6173,7 +6173,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionMythicDawnZealot</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Mythic Dawn called their enemies the "Dragon's Blood," evoking Queen Alessia's covenant with Akatosh that shielded Nirn from Oblivion - and the line of rulers who kept the Dragonfires burning.</ORIGINAL>
-    <TRADUIT>神话黎明将他们的敌人称为“龙之血”，这让人想起阿莱西亚女王与阿卡托什的盟约：盟约保护奈恩免受湮灭侵扰，而统治者的血脉则维持龙火不灭。</TRADUIT>
+    <TRADUIT>神话黎明称其敌人为「龙之血」，这一称呼源自阿莱西亚女王与阿卡托什的盟约——盟约护住奈恩不受湮灭侵扰，而历代统治者则维持龙火不灭。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6187,7 +6187,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>FactionBladesGrandmaster</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Operating in strict secrecy, the Blades shared their missions with only an elite few and maintained hidden strongholds across Tamriel where they could live and train unseen.</ORIGINAL>
-    <TRADUIT>刀锋会严格秘密行动，只向极少数精英透露任务，并在泰姆瑞尔各地维持隐秘据点，使他们能够在无人知晓的情况下生活和训练。</TRADUIT>
+    <TRADUIT>刀锋会严格秘密行事，只向极少数精英透露任务，并在泰姆瑞尔各地维持隐秘据点，以便在无人知晓的情况下生活与训练。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6201,7 +6201,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralCrime01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Breaking the law is frowned upon by most people. Those with a penchant for crime will quickly overstay their welcome among decent folk.</ORIGINAL>
-    <TRADUIT>大多数人都反感违法。有犯罪倾向的人在正派人中间会很快不受欢迎。</TRADUIT>
+    <TRADUIT>大多数人都反感违法乱纪。有犯罪倾向的人在正派人中间很快就不受欢迎。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6229,7 +6229,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralNavigation</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>A map is just one way to navigate Skyrim. Road signs are posted at crossroads throughout the province, pointing travelers toward cities, villages, and prominent landmarks.</ORIGINAL>
-    <TRADUIT>地图只是在天际导航的方式之一。省内各十字路口都设有路标，指引旅人前往城市、村庄和著名地标。</TRADUIT>
+    <TRADUIT>地图只是在天际认路的方式之一。省内各十字路口都设有路标，指引旅人前往城市、村庄与显眼的地标。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6243,7 +6243,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralQuestGiver</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Not all coin is honest, and not all work is clean. Those willing to get their hands dirty may find good pay either way.</ORIGINAL>
-    <TRADUIT>并非所有钱都来得正当，也不是所有工作都干净。愿意弄脏双手的人，无论如何都能找到不错的报酬。</TRADUIT>
+    <TRADUIT>不是所有的钱都来得正当，也不是所有的活都干净。愿意弄脏双手的人，两条路都能挣到不错的报酬。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6257,7 +6257,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GeneralStandingStoneConstellations</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The standing stones that dot Skyrim's landscape correspond to the constellations within Tamriel's night sky. Among them, the Warrior, the Mage, and the Thief stand together as the "guardians."</ORIGINAL>
-    <TRADUIT>点缀天际景观的立石与泰姆瑞尔夜空中的星座相对应。其中，战士、法师和盗贼三大星座并立，合称“守护者”。</TRADUIT>
+    <TRADUIT>点缀天际景观的立石与泰姆瑞尔夜空中的星座相对应。其中战士、法师与盗贼三大星座并立，合称「守护者」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6271,7 +6271,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>GuildBardCollegeSkald</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Bards College is Skyrim's foremost school for aspiring bards - or "skalds," as they are known in the province.</ORIGINAL>
-    <TRADUIT>吟游诗人学院是天际培养有抱负的吟游诗人的最高学府——这些人在该省被称为“吟唱者”。</TRADUIT>
+    <TRADUIT>吟游诗人学院是天际培养吟游诗人的最高学府——这些人在本省被称为「吟唱者」。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6285,7 +6285,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemArmorRobes</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>A mage's robes trade the protection of armor for greater freedom of spellcasting. They often carry enchantments to enhance the wearer's magical abilities.</ORIGINAL>
-    <TRADUIT>法师长袍以放弃护甲保护为代价，换取更大的施法自由度。它们通常带有附魔，以增强佩戴者的魔法能力。</TRADUIT>
+    <TRADUIT>法师长袍以放弃护甲防护为代价，换取更大的施法自由。它们通常带有附魔，以增强穿戴者的魔法能力。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6299,7 +6299,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponAxe</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>War axes strike a balance between speed and power, swinging faster than maces, and delivering more damage than swords.</ORIGINAL>
-    <TRADUIT>战斧在速度与力量之间取得平衡，挥舞比锤快，伤害比剑高。</TRADUIT>
+    <TRADUIT>战斧在速度与力量之间取得平衡，挥得比锤快，伤害比剑高。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6313,7 +6313,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponCrossbow</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Crossbows are slow to reload, but their bolts strike with a force few bows can match. They can be held at the ready without strain, lending the marksman more time to aim true.</ORIGINAL>
-    <TRADUIT>弩装填缓慢，但其弩矢的冲击力少有弓能匹敌。弩可以毫不费力地保持待发状态，让射手有更多时间瞄准。</TRADUIT>
+    <TRADUIT>弩装填缓慢，但其弩矢的冲击力少有弓能匹敌。弩可以毫不费力地保持待发，让射手有更多时间瞄准。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6327,7 +6327,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>ItemWeaponWarhammer</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Warhammers are slow and cumbersome, demanding two strong hands to wield them, but their power is devastating - a well-placed blow can stagger even the largest foes.</ORIGINAL>
-    <TRADUIT>战锤缓慢笨重，需要一双强壮的手才能挥舞，但其威力极具毁灭性——一记精准的打击甚至能让最大的敌人踉跄。</TRADUIT>
+    <TRADUIT>战锤缓慢笨重，需要一双强健的手臂才能挥舞，但威力极其可怕——一记精准的打击甚至能让最大的敌人踉跄。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6355,7 +6355,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>LoreDragonbornFirst</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Saint Alessia was long hailed as the first Dragonborn in history, until Miraak's reappearance in the Fourth Era raised a far older claim to the title.</ORIGINAL>
-    <TRADUIT>圣阿莱西亚长期被尊为历史上第一位龙裔，直到米拉克在第四纪元重现，声称自己更早拥有这一头衔。</TRADUIT>
+    <TRADUIT>圣阿莱西亚长期被尊为历史上第一位龙裔，直到米拉克在第四纪元重现，提出了远为古老的同一头衔主张。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6383,7 +6383,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicAtronach</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>"Are you in need of a flame spell? Conjure a Flame Atronach. You'll have command of a dozen such spells in the form of a fiery avatar." - Warlock Aldaale, Where Magical Paths Meet</ORIGINAL>
-    <TRADUIT>“你需要火焰法术吗？召唤一个火焰侍灵。你将指挥一个炽热的化身，它能施展十几种这样的法术。”——术士阿尔达勒，《魔法之路交汇处》</TRADUIT>
+    <TRADUIT>「你需要火焰法术吗？召唤一个火焰侍灵。你将指挥一个炽热的化身，它能施展十几种这样的法术。」——术士阿尔达勒，《魔法之路交汇处》</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6397,7 +6397,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicTome</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Spell tomes teach the reader a new spell, if they have sufficient skill in the relevant school. They can be purchased from merchants, court wizards, or specialists in the College of Winterhold.</ORIGINAL>
-    <TRADUIT>法术书能让读者学会新法术，前提是其在相关学派有足够技能。它们可以从商人、宫廷法师或冬堡学院的专家处购买。</TRADUIT>
+    <TRADUIT>法术书能让读者学会新法术，前提是他在相关学派有足够技能。它们可以从商人、宫廷法师或冬堡学院的专家处购买。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6411,7 +6411,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>MagicSpellReanimate</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Using Reanimate spells, resourceful mages can compel even corpses to fight for them. Whereas a conjurer is limited to the summons they've learned, fallen enemies are never in short supply.</ORIGINAL>
-    <TRADUIT>使用复活法术，足智多谋的法师甚至能迫使尸体为他们作战。召唤师受限于已学会的召唤物，而倒下的敌人却从不短缺。</TRADUIT>
+    <TRADUIT>使用复活法术，足智多谋的法师甚至能驱使尸体为自己作战。召唤师受限于已学会的召唤物，而倒下的敌人却从不短缺。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6425,7 +6425,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceAltmerAldmer</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>High Elves regard themselves as the purest, most unaltered heirs of the Aldmer - the ancient elves who first arrived on Tamriel from the mythical lost continent of Aldmeris.</ORIGINAL>
-    <TRADUIT>高精灵视自己为奥德莫最纯正、最未受改变的后裔——奥德莫是最早从传说中失落的奥德莫瑞斯大陆来到泰姆瑞尔的古老精灵。</TRADUIT>
+    <TRADUIT>高精灵视自己为奥德莫最纯正、最少改变的后裔——奥德莫是最早从传说中失落的奥德莫瑞斯大陆来到泰姆瑞尔的古老精灵。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6439,7 +6439,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceArgonianBlessing</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The Hist connects every Argonian in Black Marsh, where its sap is ingested to mark namings, bondings, and passages into death. The darkest rituals use sacrifice to keep lurking things beneath the mires...</ORIGINAL>
-    <TRADUIT>希斯特连接着黑沼泽的每一个阿尔贡人，其树液会被饮下，以标记命名、结合与死亡仪式。最黑暗的仪式会用献祭来安抚沼泽下潜伏的东西……</TRADUIT>
+    <TRADUIT>希斯特连接着黑沼泽的每一个阿尔贡人，其树液会被饮下，以标记命名、结合与死亡的仪式。最黑暗的仪式则用献祭安抚沼泽下潜伏的东西……</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6453,7 +6453,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBosmerNimble</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Wood Elves rejected stiff Aldmeri culture for a simpler existence in harmony with the land. Nimble of body and mind, they are dismissed by their more "civilized" cousins as unruly and naive.</ORIGINAL>
-    <TRADUIT>木精灵摒弃僵化的奥德莫文化，选择与土地和谐共处的简朴生活。他们身心敏捷，却被更“文明”的同族视为不守规矩、天真幼稚。</TRADUIT>
+    <TRADUIT>木精灵摒弃僵化的奥德莫文化，选择与土地和谐共处的简朴生活。他们身心敏捷，却被更「文明」的同族斥为不守规矩、天真幼稚。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6467,7 +6467,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceBretonMage</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Shorter lifespans put the Bretons at a disadvantage against elves, yet they have produced some of history's greatest mages - second only to the Altmer, with room to surpass them given the chance.</ORIGINAL>
-    <TRADUIT>布莱顿人的寿命较短，与精灵相比处于劣势，但他们孕育了历史上一些最伟大的法师——仅次于傲特莫，若有机会，甚至可能超越他们。</TRADUIT>
+    <TRADUIT>布莱顿人寿命较短，与精灵相比处于劣势，却孕育了历史上一些最伟大的法师——仅次于傲特莫，若有机会，甚至可能超越他们。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6481,7 +6481,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceDunmerBaron</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Outsiders may call the Dunmer proud, clannish, and quick-tempered, yet they value family and loyalty above all. Tempered by centuries of conflict, they remain a resilient and talented people.</ORIGINAL>
-    <TRADUIT>外人或许会说暗精灵骄傲、宗族观念重、脾气急躁，但他们最重视家庭与忠诚。历经数百年冲突磨炼，他们仍是坚韧而富有才华的民族。</TRADUIT>
+    <TRADUIT>外人或许会说暗精灵骄傲、宗族观念重、脾气急躁，但他们最看重家庭与忠诚。历经数百年冲突磨炼，他们仍是坚韧而富有才华的民族。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6495,7 +6495,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceImperialCommander</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Cosmopolitanism defines Imperial culture, itself a blend of Colovian, Nibenese, and Akaviri traditions. Amid their own divisions and bordering many provinces, the Imperials are practiced at building bridges and keeping order.</ORIGINAL>
-    <TRADUIT>世界主义定义了帝国文化，它本身融合了科洛文、尼本尼和阿卡维尔传统。尽管内部存在分裂，且与多个省份接壤，帝国人仍擅长沟通各方、维持秩序。</TRADUIT>
+    <TRADUIT>世界主义界定了帝国文化，它本身融合了科洛文、尼本尼与阿卡维尔传统。尽管内部存在分歧，且与多个省份接壤，帝国人仍擅长沟通各方、维持秩序。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6509,7 +6509,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceKhajiitAvatar</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Khajiit are a type of Betmeri, the so-called "beast races" - a term popularized by the Reman Empire to justify conquering them. Though their nature sometimes draws prejudice, they answer it with pride, not shame.</ORIGINAL>
-    <TRADUIT>卡吉特是贝特梅里的一支，即所谓“兽族”——这一术语由雷曼帝国推广，用以替征服他们辩护。尽管他们的天性有时招致偏见，他们以骄傲而非羞耻回应。</TRADUIT>
+    <TRADUIT>卡吉特是贝特梅里的一支，即所谓「兽族」——这一术语由雷曼帝国推广，用以替征服他们辩护。尽管他们的天性有时招致偏见，他们却以骄傲而非羞耻来回应。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6523,7 +6523,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceNordBerserker</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Ysgramor gathered the Five Hundred Companions to avenge the razing of Saarthal in the Night of Tears. Untold numbers of elves fell to their blades, leaving the Nords with a bitter resentment for elvenkind that endures still.</ORIGINAL>
-    <TRADUIT>伊斯格拉默召集五百战友，为“泪之夜”中萨瑟尔被焚毁而复仇。无数精灵死于他们的刀下，使诺德人对精灵怀有至今未消的深切怨恨。</TRADUIT>
+    <TRADUIT>伊斯格拉默召集五百战友，为「泪之夜」中萨瑟尔被焚毁而复仇。无数精灵死于他们的刀下，使诺德人对精灵怀有至今未消的深切怨恨。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6537,7 +6537,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceOrcShaman</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Despite their long-standing reputation as mere barbarians, Orcs are as cultured as any other race in Tamriel, having ever striven to be recognized as actual people.</ORIGINAL>
-    <TRADUIT>尽管长期以来背负着只是野蛮人的名声，兽人却和泰姆瑞尔其他任何种族一样文明，始终努力争取被承认为真正的人。</TRADUIT>
+    <TRADUIT>尽管长期以来背负着只是野蛮人的名声，兽人却和泰姆瑞尔其他任何种族一样有教养，始终努力争取被承认为真正的人。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6551,7 +6551,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>RaceRedguardQuartermaster</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Nearly all Redguards are taught to fight, but only the fittest become true warriors. They must face death to prove themselves, and it is never far - even their pastime of snake charming tempts its grasp.</ORIGINAL>
-    <TRADUIT>几乎所有红卫人都被教导战斗，但只有最强健者才能成为真正的战士。他们必须直面死亡来证明自己，而死亡从不遥远——甚至他们弄蛇的消遣，也会引来死神的魔爪。</TRADUIT>
+    <TRADUIT>几乎所有红卫人都被教导战斗，但只有最强健者才能成为真正的战士。他们必须直面死亡来证明自己，而死亡从不遥远——连他们弄蛇的消遣，也会引来死神的魔爪。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6565,7 +6565,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillSneakingDetection</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>The stealthiest approach can still be undone by a single careless footstep, a flickering torch, or the sharp eyes of a watchful guard.</ORIGINAL>
-    <TRADUIT>最隐秘的接近，也可能因一步失慎、一支摇曳的火把，或警惕守卫锐利的目光而败露。</TRADUIT>
+    <TRADUIT>最隐秘的接近，也可能因一步失慎、一支摇曳的火把，或警惕守卫的锐利目光而败露。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6579,7 +6579,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombat01</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Combat skills must be sharpened with practice, and are best tested when pitted against worthy opponents.</ORIGINAL>
-    <TRADUIT>战斗技能必须通过练习磨砺，最好在与值得一战的对手较量中检验。</TRADUIT>
+    <TRADUIT>战斗技能必须靠练习磨砺，最好在与值得一战的对手较量中检验。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>
@@ -6593,7 +6593,7 @@ Flagged ESL</COMMENTAIRE>
     <EDID>SkillCombatUnarmed</EDID>
     <CHAMP>DESC</CHAMP>
     <ORIGINAL>Unarmed combat requires only a fighter's fists, ready even when a blade is out of reach. Some hone this skill deliberately, while the beast races carry claws as weapons all their own.</ORIGINAL>
-    <TRADUIT>徒手战斗只需要战士的拳头，即使刀刃不在手边也能随时应战。有些人刻意磨练这项技能，而兽族则天生拥有爪子作为武器。</TRADUIT>
+    <TRADUIT>徒手战斗只需要一双拳头，即使刀刃不在手边也能随时应战。有些人刻意磨练这项本领，而兽族则天生带着爪子当武器。</TRADUIT>
     <PERSO />
     <INDEX>1</INDEX>
     <STATUS>90</STATUS>

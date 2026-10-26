@@ -4,6 +4,7 @@
   uv run dialogue_mod_translation/translate.py stats <xml-or-dir>
   uv run dialogue_mod_translation/translate.py pending <xml> [--fill-bdd]
   uv run dialogue_mod_translation/translate.py apply <pending.json>
+  uv run dialogue_mod_translation/translate.py rewrite <pending.json>
   uv run dialogue_mod_translation/translate.py bdd [--check|--normalize]
   uv run dialogue_mod_translation/translate.py --self-check
 """
@@ -371,7 +372,42 @@ def apply_pending(xml: str, items: list[dict], groups: list[dict] | None = None)
 
     return ESP_RE.sub(repl, xml), n
 
-# ponytail: scan one directory level; mod layout keeps XML beside pending.json.
+
+def rewrite_pending(xml: str, items: list[dict], groups: list[dict] | None = None) -> tuple[str, int]:
+    """Rewrite already-translated records from pending.json. Returns (xml, count).
+
+    `apply_pending` only fills STATUS 0 records; polishing existing wording needs
+    this path, which overwrites STATUS 90 text in place.
+    """
+    want = {item_key(it): it["traduit"] for it in items if (it.get("traduit") or "").strip()}
+    grouped_want: dict[tuple[str, str, str], str] = {}
+    grouped_targets: dict[tuple[str, str, str], set[tuple[str, str, str]]] = {}
+    for group in groups or []:
+        text = (group.get("traduit") or "").strip()
+        if not text:
+            continue
+        key = group_key(group)
+        grouped_want[key] = group["traduit"]
+        grouped_targets[key] = {item_key(target) for target in group.get("items", [])}
+    n = 0
+
+    def repl(m: re.Match) -> str:
+        nonlocal n
+        block = m.group(0)
+        rec = parse_esp(block)
+        text = None
+        if item_key(rec) in grouped_targets.get(group_key(rec), set()):
+            text = grouped_want[group_key(rec)]
+        if not text:
+            text = want.get(item_key(rec))
+        if not text or rec["traduit"] == text:
+            return block
+        validate_translation(rec["original"], text)
+        n += 1
+        return set_status(set_traduit(block, text), DONE_STATUS)
+
+    return ESP_RE.sub(repl, xml), n
+
 def xml_paths(path: str) -> list[str]:
     if not os.path.isdir(path):
         return [path]
@@ -484,6 +520,19 @@ def cmd_apply(pending_file: str) -> None:
     print(f"写入 {n} 条 -> {xml_path}；剩余待译 {left}")
 
 
+def cmd_rewrite(pending_file: str) -> None:
+    """Overwrite already-translated records from pending.json (polishing pass)."""
+    with open(pending_file, encoding="utf-8") as f:
+        payload = json.load(f)
+    xml_path = payload["xml"]
+    if not os.path.isabs(xml_path):
+        xml_path = os.path.join(ROOT, xml_path)
+    xml, has_bom = read_xml(xml_path)
+    xml, n = rewrite_pending(xml, payload.get("items", []), payload.get("groups", []))
+    write_xml(xml_path, xml, has_bom)
+    print(f"改写 {n} 条 -> {xml_path}")
+
+
 def _self_check() -> None:
     sample = """<?xml version="1.0" encoding="utf-8"?>
 <DocumentElement>
@@ -526,6 +575,13 @@ def _self_check() -> None:
         "id": "00000001", "champ": "FULL", "original": "Hello & Hi", "traduit": "旧译",
     }], groups)
     assert n3 == 1 and "<TRADUIT>你好</TRADUIT>" in applied_group
+
+    # rewrite 覆盖已译记录，apply 不碰；这是润色已译条目所需的路径。
+    done = sample.replace("<TRADUIT />", "<TRADUIT>旧译</TRADUIT>").replace("<STATUS>0</STATUS>", "<STATUS>90</STATUS>")
+    rewritten, n4 = rewrite_pending(done, pending)
+    assert n4 == 1 and "<TRADUIT>你好&amp;我</TRADUIT>" in rewritten, rewritten
+    unchanged, n5 = rewrite_pending(rewritten, pending)
+    assert n5 == 0, "重复改写必须无变化"
 
     import tempfile
 
@@ -612,6 +668,9 @@ def main(argv: list[str]) -> None:
         return
     if cmd == "apply":
         cmd_apply(argv[2])
+        return
+    if cmd == "rewrite":
+        cmd_rewrite(argv[2])
         return
     if cmd == "fill-bdd":
         cmd_pending(argv[2], grups, do_fill=True, out_path=pending_path_for(argv[2]))
