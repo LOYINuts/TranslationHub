@@ -173,6 +173,20 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "mod_interface_translation/inventoryreforged"
+source = "InventoryReforged_ENGLISH.txt"
+output = "InventoryReforged_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
+dir = "mod_interface_translation/knowyourskyrim"
+source = "KnowYourSkyrim_ENGLISH.txt"
+output = "KnowYourSkyrim_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "skse_menu_translation/skyprompt"
 source = "SkyPrompt_ENGLISH.txt"
 output = "SkyPrompt_CHINESE.txt"
