@@ -217,6 +217,13 @@
       "menu.value_source_fixed": "Fixed",
       "menu.value_source_global": "Global",
       "text.none": "None"
+    },
+    "json:menu_translation/dodgeall:SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json": {
+      "dodge.category": "{{$General}}",
+      "dodge.desc": "How many hits you dodged",
+      "dodge.desc2": "How many hits you perfect dodged",
+      "dodge.name": "Hits Dodged",
+      "dodge.name2": "Hits Perfect Dodged"
     }
   },
   "version": 1

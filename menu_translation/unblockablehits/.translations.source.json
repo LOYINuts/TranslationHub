@@ -35,6 +35,11 @@
       "menu.target_perk": "Target Perk",
       "menu.time_mult": "Time Multiplier",
       "menu.visual_effects": "Visual Effects"
+    },
+    "json:menu_translation/unblockablehits:SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json": {
+      "unblockable.category": "{{$General}}",
+      "unblockable.desc": "How many unblockable hits you took",
+      "unblockable.name": "Unblockable hits taken"
     }
   },
   "version": 1

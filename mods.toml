@@ -383,6 +383,7 @@ output = "Viny Mods/Dynamic Forms Generator/Language_zh.json"
 dir = "menu_translation/parryall"
 source = "Viny Mods/Parryall/Language.json"
 output = "Viny Mods/Parryall/Language_zh.json"
+translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/edf"
@@ -426,6 +427,7 @@ output = "SKSE/Plugins/BFCO NG/Language_zh.json"
 dir = "menu_translation/hmdp"
 source = "Viny Mods/HMDP/DaysPassed_Language.json"
 output = "Viny Mods/HMDP/DaysPassed_Language_zh.json"
+translation_section = "DaysPassed_Language.json"
 
 [[json]]
 dir = "menu_translation/just-a-block"
@@ -443,43 +445,43 @@ source = "interface/translations/en.json"
 output = "interface/translations/zh-cn.json"
 
 [[json]]
-dir = "menu_translation/statstracker/localization"
+dir = "menu_translation/dodgeall"
 source = "SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/DodgeAll_zh.json"
 translation_section = "DodgeAll.json"
 
 [[json]]
-dir = "menu_translation/statstracker/localization"
+dir = "menu_translation/hmdp"
 source = "SKSE/Plugins/Stats Tracker/Localization/HMDP.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/HMDP_zh.json"
 translation_section = "HMDP.json"
 
 [[json]]
-dir = "menu_translation/statstracker/localization"
+dir = "menu_translation/parryall"
 source = "SKSE/Plugins/Stats Tracker/Localization/ParryAll.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/ParryAll_zh.json"
 translation_section = "ParryAll.json"
 
 [[json]]
-dir = "menu_translation/statstracker/localization"
+dir = "menu_translation/statstracker"
 source = "SKSE/Plugins/Stats Tracker/Localization/STM_Localization.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/STM_Localization_zh.json"
 translation_section = "STM_Localization.json"
 
 [[json]]
-dir = "menu_translation/statstracker/localization"
+dir = "menu_translation/trickdeath"
 source = "SKSE/Plugins/Stats Tracker/Localization/TrickDeath.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/TrickDeath_zh.json"
 translation_section = "TrickDeath.json"
 
 [[json]]
-dir = "menu_translation/statstracker/localization"
+dir = "menu_translation/unblockablehits"
 source = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits_zh.json"
 translation_section = "UnblockableHits.json"
 
 [[json]]
-dir = "menu_translation/statstracker/localization"
+dir = "menu_translation/undodgeablehits"
 source = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits_zh.json"
 translation_section = "UndodgeableHits.json"
@@ -488,26 +490,31 @@ translation_section = "UndodgeableHits.json"
 dir = "menu_translation/trickdeath"
 source = "Viny Mods/TrickDeath/Language.json"
 output = "Viny Mods/TrickDeath/Language_zh.json"
+translation_section = "Language.json"
 
 [[json]]
-dir = "menu_translation/trickdeath/localization"
+dir = "menu_translation/trickdeath"
 source = "Viny Mods/Trick Death/Localization/en.json"
 output = "Viny Mods/Trick Death/Localization/zh.json"
+translation_section = "en.json"
 
 [[json]]
-dir = "menu_translation/trickdeath/localization"
+dir = "menu_translation/trickdeath"
 source = "Viny Mods/Trick Death/Localization/DeathMessages.json"
 output = "Viny Mods/Trick Death/Localization/DeathMessages_zh.json"
+translation_section = "DeathMessages.json"
 
 [[json]]
 dir = "menu_translation/unblockablehits"
 source = "Viny Mods/UnblockableHits/Language.json"
 output = "Viny Mods/UnblockableHits/Language_zh.json"
+translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/undodgeablehits"
 source = "Viny Mods/UndodgeableHits/Language.json"
 output = "Viny Mods/UndodgeableHits/Language_zh.json"
+translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/flightframework"
@@ -529,6 +536,7 @@ output = "Viny Mods/moreragdoll/Language_zh.json"
 dir = "menu_translation/dodgeall"
 source = "Viny Mods/Dodge for all/Language.json"
 output = "Viny Mods/Dodge for all/Language_zh.json"
+translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/logwatcher"

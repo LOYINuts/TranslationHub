@@ -35,6 +35,11 @@
       "menu.target_perk": "Target Perk",
       "menu.time_mult": "Time Multiplier",
       "menu.visual_effects": "Visual Effects"
+    },
+    "json:menu_translation/undodgeablehits:SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json": {
+      "undodgeable.category": "{{$General}}",
+      "undodgeable.desc": "How many undodgeable hits you took",
+      "undodgeable.name": "Undodgeable hits taken"
     }
   },
   "version": 1

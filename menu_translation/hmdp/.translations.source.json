@@ -47,6 +47,11 @@
       "menu.save_error": "Erro: Conflito detetado ou entrada inválida!",
       "menu.tap_window": "Janela de Toque",
       "menu.time_window": "Janela de Tempo"
+    },
+    "json:menu_translation/hmdp:SKSE/Plugins/Stats Tracker/Localization/HMDP.json": {
+      "HMDP.category": "{{$General}}",
+      "HMDP.desc": "How many days you survived.",
+      "HMDP.name": "Days Survived"
     }
   },
   "version": 1

@@ -1,29 +1,4 @@
 {
-  "DodgeAll.json": {
-    "dodge": {
-      "name": "闪避次数",
-      "name2": "完美闪避次数",
-      "desc": "你闪避了多少次攻击",
-      "desc2": "你完美闪避了多少次攻击",
-      "category": "{{$General}}"
-    }
-  },
-  "HMDP.json": {
-    "HMDP": {
-      "name": "存活天数",
-      "desc": "你存活了多少天。",
-      "category": "{{$General}}"
-    }
-  },
-  "ParryAll.json": {
-    "parry": {
-      "name": "格挡次数",
-      "name2": "完美格挡次数",
-      "desc": "你格挡了多少次攻击",
-      "desc2": "你完美格挡了多少次攻击",
-      "category": "{{$General}}"
-    }
-  },
   "STM_Localization.json": {
     "text": {
       "none": "无"
@@ -253,30 +228,6 @@
       "Tribal Orcs Bounty": "在兽人部落区域堡垒内积累的活跃犯罪赏金债务。",
       "Whiterun Bounty": "在白漫领管辖区内积累的活跃犯罪赏金债务。",
       "Winterhold Bounty": "在冬堡领管辖区内积累的活跃犯罪赏金债务。"
-    }
-  },
-  "TrickDeath.json": {
-    "trick_death": {
-      "stats": {
-        "deaths": {
-          "name": "死亡次数",
-          "description": "本次游戏中被 Trick Death 拦截的死亡次数。"
-        }
-      }
-    }
-  },
-  "UnblockableHits.json": {
-    "unblockable": {
-      "name": "承受的不可格挡攻击次数",
-      "desc": "你承受了多少次不可格挡攻击",
-      "category": "{{$General}}"
-    }
-  },
-  "UndodgeableHits.json": {
-    "undodgeable": {
-      "name": "承受的不可闪避攻击次数",
-      "desc": "你承受了多少次不可闪避攻击",
-      "category": "{{$General}}"
     }
   }
 }

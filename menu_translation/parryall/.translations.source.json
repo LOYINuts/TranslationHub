@@ -200,6 +200,13 @@
       "menu.w2w_recoil_mode": "W2W Recoil Mode",
       "menu.w2w_settings_header": "Weapon to Weapon (W2W) Settings",
       "menu.w2w_skill_mult": "Skill Mult"
+    },
+    "json:menu_translation/parryall:SKSE/Plugins/Stats Tracker/Localization/ParryAll.json": {
+      "parry.category": "{{$General}}",
+      "parry.desc": "How many hits you parried",
+      "parry.desc2": "How many hits you perfect parried",
+      "parry.name": "Hits Parried",
+      "parry.name2": "Hits Perfect Parried"
     }
   },
   "version": 1
