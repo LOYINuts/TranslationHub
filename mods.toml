@@ -30,7 +30,6 @@ sep = "\t"
 encoding = "utf-8"
 package = [
   "SKSE/Plugins/AchievementsData/Localizations/Dawnguard_EN.txt",
-  "SKSE/Plugins/AchievementsData/Localizations/Dawnguard_ZH.txt",
 ]
 
 [[line]]
@@ -41,7 +40,6 @@ sep = "\t"
 encoding = "utf-8"
 package = [
   "SKSE/Plugins/AchievementsData/Localizations/Dragonborn_EN.txt",
-  "SKSE/Plugins/AchievementsData/Localizations/Dragonborn_ZH.txt",
 ]
 
 [[line]]
@@ -52,7 +50,6 @@ sep = "\t"
 encoding = "utf-8"
 package = [
   "SKSE/Plugins/AchievementsData/Localizations/Hearthfire_EN.txt",
-  "SKSE/Plugins/AchievementsData/Localizations/Hearthfire_ZH.txt",
 ]
 
 [[line]]
@@ -63,7 +60,6 @@ sep = "\t"
 encoding = "utf-8"
 package = [
   "SKSE/Plugins/AchievementsData/Localizations/SkyrimSE_EN.txt",
-  "SKSE/Plugins/AchievementsData/Localizations/SkyrimSE_ZH.txt",
 ]
 
 [[line]]
