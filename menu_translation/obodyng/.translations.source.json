@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/obodyng:OBody_ENGLISH.txt": {
+    "line:menu_translation/obodyng:interface/translations/OBody_ENGLISH.txt": {
       "$obody_collapse_all": "Collapse All",
       "$obody_config_viewer_tab": "JSON Config Viewer",
       "$obody_copy_json": "Copy JSON",

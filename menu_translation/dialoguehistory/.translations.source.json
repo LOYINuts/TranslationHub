@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/dialoguehistory:DialogueHistory_ENGLISH.txt": {
+    "line:menu_translation/dialoguehistory:interface/translations/DialogueHistory_ENGLISH.txt": {
       "$DH_12HourFormat_Help": "Display time using 12 hour format",
       "$DH_12HourFormat_Text": "12 Hour Format",
       "$DH_AUTODETECT": "AUTO DETECT",

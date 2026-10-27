@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:mod_interface_translation/newskillmenu:NSM_Language.json": {
+    "json:mod_interface_translation/newskillmenu:interface/translations/NSM_Language.json": {
       "browser.current_location": "Current Location:",
       "browser.empty_folder": "Empty folder.",
       "browser.go_back": "[BACK]",

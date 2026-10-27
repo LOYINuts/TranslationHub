@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/coldbreathng:ColdBreathNG_Translation.ini": {
+    "line:menu_translation/coldbreathng:SKSE/Plugins/ColdBreathNG_Translation.ini": {
       "BlacklistAddButton": "Add",
       "BlacklistAddDisabledHelp": "Type an actor name or editor ID first",
       "BlacklistEmpty": "Blacklist is empty. Type an actor name or editor ID above and click Add.",

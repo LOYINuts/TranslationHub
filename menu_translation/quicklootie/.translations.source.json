@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/quicklootie:QuickLootIE_english.txt": {
+    "line:menu_translation/quicklootie:interface/translations/QuickLootIE_english.txt": {
       "$qlie_ArtifactIconsHeader": "Artifact Icons",
       "$qlie_Author1": "by <font color='#f7AC00'>Miss Corruption</font>",
       "$qlie_Author2": "and <font color='#f7AC00'>AtomCrafty</font>",

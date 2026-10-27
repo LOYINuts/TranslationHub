@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/tdm:TrueDirectionalMovement_english.txt": {
+    "line:menu_translation/tdm:interface/translations/TrueDirectionalMovement_english.txt": {
       "$TrueDirectionalMovement": "True Directional Movement",
       "$TrueDirectionalMovement_AcrobaticsGliding_InfoText": "The value to use while gliding (Paraglider mod) instead of the one above.",
       "$TrueDirectionalMovement_AcrobaticsGliding_OptionText": "Acrobatics While Gliding",

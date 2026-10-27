@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/morehud:ahzmorehud_english.txt": {
+    "line:menu_translation/morehud:interface/translations/ahzmorehud_english.txt": {
       "$V/W": "V/W",
       "$mHUD_AHZShowEnemyHealthStats": "Show Health Numbers",
       "$mHUD_AHZShowEnemyHealthStatsInfo": "Show's enemy health numbers on top of the health meter",

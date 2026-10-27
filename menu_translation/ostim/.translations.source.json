@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/ostim:OStim_ENGLISH.txt": {
+    "line:menu_translation/ostim:interface/translations/OStim_ENGLISH.txt": {
       "$ostim_actor_equip_object": "Actor equip object",
       "$ostim_actor_max_stimulation": "Actor max stimulation",
       "$ostim_actor_stimulation": "Actor stimulation",

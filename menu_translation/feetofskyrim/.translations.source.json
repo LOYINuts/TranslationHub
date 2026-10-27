@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/feetofskyrim:FeetOfSkyrim_ENGLISH.txt": {
+    "line:menu_translation/feetofskyrim:interface/translations/FeetOfSkyrim_ENGLISH.txt": {
       "$FOS_AutoDisableDesc": "Foot IK is switched off while any of these are active:",
       "$FOS_ClampAnkle": "Limit ankle travel",
       "$FOS_ClampAnkleTip": "Hard cap on how far IK may lift or drop a foot from its rest height. Applied on the next refresh.",

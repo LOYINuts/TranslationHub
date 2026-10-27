@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/skyparkour:SkyParkour_English.txt": {
+    "line:menu_translation/skyparkour:interface/translations/SkyParkour_English.txt": {
       "$AdvancedSlide": "Advanced Sneak Entry",
       "$AutoParkourList": "Auto Parkour",
       "$AutoParkourOpt0": "Disabled",

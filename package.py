@@ -16,6 +16,7 @@
 from __future__ import annotations
 
 import argparse
+import glob
 import logging
 import os
 import shutil
@@ -94,18 +95,24 @@ def _english_twin(filename: str) -> str | None:
     return None
 
 
+# 工作目录已做成游戏结构的前缀：带这些前缀时 output 就是游戏路径
+GAME_PREFIXES = ("interface/", "SKSE/", "Data/", "Viny Mods/", "Nemesis_Engine/",
+                 "Sound/", "Meshes/", "Textures/", "Scripts/", "MQ/")
+
+# 插件按固定文件名读取，只认英文名，多放中文名不会被加载
+PLUGIN_PREFIXES = ("SKSE/", "Viny Mods/", "Nemesis_Engine/")
+
+
 def _default_items(built: str, output: str, mod_dir: str) -> list[PackItem]:
     """未配 package 时的落点。
 
-    工作目录若已做成游戏结构（output 带 interface/ 或 SKSE/ 前缀），直接用
-    output 路径；中文产物同时落一份到同目录的英文名下（游戏可能跑英文环境）。
-    否则按旧规则推导。
+    工作目录若已做成游戏结构，直接用 output 路径；中文产物同时落一份到同目录
+    的英文名下（游戏可能跑英文环境）。否则按旧规则推导到 interface/translations/。
     """
-    if output.startswith(("interface/", "SKSE/", "Data/")):
+    if output.startswith(GAME_PREFIXES):
         directory, filename = os.path.split(output)
         twin = _english_twin(filename)
-        # SKSE 插件按固定文件名读取，只认英文名，多放中文名不会被加载
-        if output.startswith("SKSE/") and twin:
+        if output.startswith(PLUGIN_PREFIXES) and twin:
             return [PackItem(built=built, package_path=f"{directory}/{twin}")]
         items = [PackItem(built=built, package_path=output)]
         if twin and twin != filename:
@@ -126,9 +133,22 @@ def _default_items(built: str, output: str, mod_dir: str) -> list[PackItem]:
 
 def plan_line(cfg: ModConfig) -> list[PackItem]:
     """line 模组的打包计划。"""
-    # glob 型（如 descriptionmods 的 **/*.ini）产物是目录，结构特殊，暂不支持
     if "*" in cfg.source or not os.path.splitext(cfg.output)[1]:
-        return []
+        # glob 型：产物是平铺的 <源名>_zh<扩展名>，与源同目录
+        if cfg.package:
+            return _resolve(cfg, cfg.output, cfg.package)
+        items = []
+        mod_path = os.path.join(REPO, cfg.dir)
+        for source in sorted(glob.glob(os.path.join(mod_path, cfg.source), recursive=True)):
+            if not os.path.isfile(source):
+                continue
+            stem, ext = os.path.splitext(os.path.basename(source))
+            if stem.endswith("_zh"):
+                continue
+            built = f"{stem}_zh{ext}"
+            # 游戏读的是源文件名，打包时去掉 _zh 后缀，与源同名
+            items.append(PackItem(built=built, package_path=f"{stem}{ext}"))
+        return items
 
     if cfg.package:
         return _resolve(cfg, cfg.output, cfg.package)

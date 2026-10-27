@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/edf:Language.json": {
+    "json:menu_translation/edf:Viny Mods/EDF/Language.json": {
       "auto.0_normal_1_sleep_beta_2_both_beta": "0: Normal, 1: Sleep(beta), 2: Both(beta)",
       "auto.0_teach_1_cast_apply_2_both": "0: Teach, 1: Cast/Apply, 2: Both",
       "auto.acquaintance": "Acquaintance",

@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/trickdeath/localization:DeathMessages.json": {
+    "json:menu_translation/trickdeath/localization:Viny Mods/Trick Death/Localization/DeathMessages.json": {
       "death_messages.fall[0]": "The ground claimed {$player.name}.",
       "death_messages.fall[1]": "The fall at {$death.location} proved fatal.",
       "death_messages.generic[0]": "The journey of {$player.name} has ended.",
@@ -11,7 +11,7 @@
       "death_messages.sword[0]": "{$killer.name} cut short the journey of {$player.name}.",
       "death_messages.sword[1]": "The blade {$death.weapon} decided the battle."
     },
-    "json:menu_translation/trickdeath/localization:en.json": {
+    "json:menu_translation/trickdeath/localization:Viny Mods/Trick Death/Localization/en.json": {
       "menu.action_button_scale": "Button scale (%)",
       "menu.action_text_size": "Option text size (%)",
       "menu.api_debug": "Debug",

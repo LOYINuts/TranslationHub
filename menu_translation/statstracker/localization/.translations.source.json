@@ -1,26 +1,26 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/statstracker/localization:DodgeAll.json": {
+    "json:menu_translation/statstracker/localization:SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json": {
       "dodge.category": "{{$General}}",
       "dodge.desc": "How many hits you dodged",
       "dodge.desc2": "How many hits you perfect dodged",
       "dodge.name": "Hits Dodged",
       "dodge.name2": "Hits Perfect Dodged"
     },
-    "json:menu_translation/statstracker/localization:HMDP.json": {
+    "json:menu_translation/statstracker/localization:SKSE/Plugins/Stats Tracker/Localization/HMDP.json": {
       "HMDP.category": "{{$General}}",
       "HMDP.desc": "How many days you survived.",
       "HMDP.name": "Days Survived"
     },
-    "json:menu_translation/statstracker/localization:ParryAll.json": {
+    "json:menu_translation/statstracker/localization:SKSE/Plugins/Stats Tracker/Localization/ParryAll.json": {
       "parry.category": "{{$General}}",
       "parry.desc": "How many hits you parried",
       "parry.desc2": "How many hits you perfect parried",
       "parry.name": "Hits Parried",
       "parry.name2": "Hits Perfect Parried"
     },
-    "json:menu_translation/statstracker/localization:STM_Localization.json": {
+    "json:menu_translation/statstracker/localization:SKSE/Plugins/Stats Tracker/Localization/STM_Localization.json": {
       "common.base_type": "Base Type",
       "common.decimal_format": "Decimal Format",
       "common.delete": "DELETE",
@@ -235,16 +235,16 @@
       "vanilla_stats_desc.Words of Power Learned": "Individual words of the Thu'um located and transcribed from Word Walls.",
       "vanilla_stats_desc.Words of Power Unlocked": "Words of Power permanently activated utilizing collected dragon souls."
     },
-    "json:menu_translation/statstracker/localization:TrickDeath.json": {
+    "json:menu_translation/statstracker/localization:SKSE/Plugins/Stats Tracker/Localization/TrickDeath.json": {
       "trick_death.stats.deaths.description": "Defeats intercepted by Trick Death in this playthrough.",
       "trick_death.stats.deaths.name": "Deaths"
     },
-    "json:menu_translation/statstracker/localization:UnblockableHits.json": {
+    "json:menu_translation/statstracker/localization:SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json": {
       "unblockable.category": "{{$General}}",
       "unblockable.desc": "How many unblockable hits you took",
       "unblockable.name": "Unblockable hits taken"
     },
-    "json:menu_translation/statstracker/localization:UndodgeableHits.json": {
+    "json:menu_translation/statstracker/localization:SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json": {
       "undodgeable.category": "{{$General}}",
       "undodgeable.desc": "How many undodgeable hits you took",
       "undodgeable.name": "Undodgeable hits taken"

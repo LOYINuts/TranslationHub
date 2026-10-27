@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:mod_interface_translation/partysheet:PartySheet_en.txt": {
+    "line:mod_interface_translation/partysheet:interface/translations/PartySheet_en.txt": {
       "AI.Aggression.Aggressive": "Aggressive",
       "AI.Aggression.Frenzied": "Frenzied",
       "AI.Aggression.Label": "Aggression",

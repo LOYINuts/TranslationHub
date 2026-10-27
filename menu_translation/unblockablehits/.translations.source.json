@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/unblockablehits:Language.json": {
+    "json:menu_translation/unblockablehits:Viny Mods/UnblockableHits/Language.json": {
       "menu.add_rule": "Add Rule",
       "menu.aggro_mult": "Aggression Mult",
       "menu.base_weight": "Base Weight",

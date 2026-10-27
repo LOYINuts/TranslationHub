@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/consolecommander:ConsoleCommander_Translation.txt": {
+    "line:menu_translation/consolecommander:SKSE/Plugins/ConsoleCommander_Translation.txt": {
       "Actions": "Actions",
       "Add Command": "Add Command",
       "Cancel": "Cancel",

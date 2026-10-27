@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/qucikitemtransfer:Quick Item Transfer_english.txt": {
+    "line:menu_translation/qucikitemtransfer:interface/translations/Quick Item Transfer_english.txt": {
       "$QIT_1": "Take All Weapons",
       "$QIT_12": "Drop All Weapons",
       "$QIT_13": "Drop All Armors",

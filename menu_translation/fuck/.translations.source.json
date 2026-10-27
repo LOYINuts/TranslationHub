@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/fuck:FUCK_ENGLISH.txt": {
+    "line:menu_translation/fuck:interface/translations/FUCK_ENGLISH.txt": {
       "$FUCK_ALL": "ALL",
       "$FUCK_Camera_Cinematic": "Cinematic Camera",
       "$FUCK_Camera_Deadzone": "Stick Deadzone",

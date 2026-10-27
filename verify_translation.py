@@ -89,11 +89,21 @@ def verify_line_group(config, root: str) -> list[str]:
             issues.append(f"[过期] {path}")
     output_root = os.path.join(root, config.dir, config.output)
     expected_suffixes = {os.path.splitext(path)[1].lower() for path in expected}
+    source_names = {
+        os.path.normcase(os.path.basename(path))
+        for path in glob.glob(os.path.join(root, config.dir, config.source), recursive=True)
+    }
     for dirpath, _, filenames in os.walk(output_root):
         for name in filenames:
             path = os.path.join(dirpath, name)
-            if os.path.splitext(name)[1].lower() in expected_suffixes and os.path.normcase(path) not in expected:
-                issues.append(f"[多余] {path}")
+            if os.path.splitext(name)[1].lower() not in expected_suffixes:
+                continue
+            if os.path.normcase(path) in expected:
+                continue
+            # 产物与源同目录时，源文件不算多余
+            if os.path.normcase(name) in source_names:
+                continue
+            issues.append(f"[多余] {path}")
     return issues or ["[OK] 全部检查通过"]
 
 

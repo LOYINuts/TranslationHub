@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/fittingroom:Fitting Room_ENGLISH.txt": {
+    "line:menu_translation/fittingroom:interface/translations/Fitting Room_ENGLISH.txt": {
       "$FR_AddOutfitEmpty": "New empty outfit",
       "$FR_AddOutfitEmptyTip": "Starts nude with every slot hidden, so you dress this one from nothing",
       "$FR_AddOutfitFromBase": "New outfit from base gear",

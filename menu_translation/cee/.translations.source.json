@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/cee:Conditional Expressions_ENGLISH.txt": {
+    "line:menu_translation/cee:interface/translations/Conditional Expressions_ENGLISH.txt": {
       "$CEE_A2": "MCM menu initialized",
       "$CEE_A3": "Expressions",
       "$CEE_A4": "Settings",

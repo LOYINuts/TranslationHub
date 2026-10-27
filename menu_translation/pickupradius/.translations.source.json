@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/pickupradius:PickUpRadiusSKSE_Translation.ini": {
+    "line:menu_translation/pickupradius:interface/translations/PickUpRadiusSKSE_Translation.ini": {
       "AddCurrentCell": "Add Current Cell to Blacklist",
       "AddCurrentCellHelp": "Adds the cell you are currently standing in to the blacklist. Pick Up Radius will not function in blacklisted cells, even if resumed via hotkey.",
       "Ammo": "Ammo",

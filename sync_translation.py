@@ -76,12 +76,11 @@ def find_missing_keys(
     if is_glob:
         source_keys = {}
         source_paths = sorted(glob.glob(os.path.join(mod_path, mod_config.source), recursive=True))
-        output_root = os.path.join(mod_path, mod_config.output)
+        # 产物带 _zh 后缀，同目录时会混进 glob 结果，按后缀排除
         source_paths = [
             path for path in source_paths
             if os.path.isfile(path)
-            and os.path.commonpath([os.path.abspath(output_root), os.path.abspath(path)])
-            != os.path.abspath(output_root)
+            and not os.path.splitext(path)[0].endswith("_zh")
         ]
         if not source_paths:
             raise FileNotFoundError(f"没有文件匹配: {mod_config.source}")

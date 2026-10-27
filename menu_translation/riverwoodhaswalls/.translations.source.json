@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/riverwoodhaswalls:Riverwood Has Walls_english.txt": {
+    "line:menu_translation/riverwoodhaswalls:interface/translations/Riverwood Has Walls_english.txt": {
       "$AutoloadSettings_Header": "Autoload Settings",
       "$Enabled": "Enabled",
       "$EnabledMaintenance_Help": "Uncheck this option if you want mod-specific variables not to be loaded. This does not apply to variables in the settings file and when the script is upgraded to a newer version. Disabling this option is useful when there are conflicts with other mods during autoload.",

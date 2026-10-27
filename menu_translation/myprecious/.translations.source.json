@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/myprecious:config.json": {
+    "json:menu_translation/myprecious:interface/translations/config.json": {
       "$schema": "https://raw.githubusercontent.com/Exit-9B/MCM-Helper/main/docs/config.schema.json",
       "customContent.source": "MyPreciouses/logo.dds",
       "displayName": "MyPreciouses",
@@ -167,7 +167,7 @@
       "pages[4].cursorFillMode": "topToBottom",
       "pages[4].pageDisplayName": "Virtual Slots"
     },
-    "line:menu_translation/myprecious:MyPreciouses_ENGLISH.txt": {
+    "line:menu_translation/myprecious:interface/translations/MyPreciouses_ENGLISH.txt": {
       "$MYPRECIOUSES_FingerSelect_Action_Cancel": "Cancel",
       "$MYPRECIOUSES_FingerSelect_Action_Disabled": "Disabled",
       "$MYPRECIOUSES_FingerSelect_Action_Equip": "Equip",

@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/mapmenuredesigned:MapMenuRedesigned_english.txt": {
+    "line:menu_translation/mapmenuredesigned:interface/translations/MapMenuRedesigned_english.txt": {
       "$MRD_CloseMarkerMode": "Close Marker Mode",
       "$MRD_CustomMarker": "Custom Marker",
       "$MRD_EditorAddTitle": "Add Marker",

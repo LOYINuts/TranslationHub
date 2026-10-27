@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/legendarymapcomap:Legendary Map_english.txt": {
+    "line:menu_translation/legendarymapcomap:interface/translations/Legendary Map_english.txt": {
       "$LEGENDMAP_HIDEQUEST": "Toggle Quest Markers",
       "$LEGENDMAP_HIDEUNDISC": "Toggle Undiscovered",
       "$LEGENDMAP_HIDE_ALL": "Hide All",

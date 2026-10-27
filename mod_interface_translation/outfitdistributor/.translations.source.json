@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:mod_interface_translation/outfitdistributor:en.json": {
+    "json:mod_interface_translation/outfitdistributor:interface/translations/en.json": {
       "meta.author": "Outfit Distributor",
       "meta.code": "en",
       "meta.language": "English",

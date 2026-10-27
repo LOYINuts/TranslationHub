@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/showplayerininventory:ShowPlayerInInventory_ENGLISH.txt": {
+    "line:menu_translation/showplayerininventory:interface/translations/ShowPlayerInInventory_ENGLISH.txt": {
       "$SPII_Advanced": "Advanced",
       "$SPII_AllowMovement": "Allow Movement",
       "$SPII_AllowMovementTT": "Your character can walk while the menu is open, and the camera follows them.\\n[Skyrim Souls only, as the menus pause the game otherwise.]",

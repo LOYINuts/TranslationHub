@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:mod_interface_translation/knowyourskyrim:KnowYourSkyrim_ENGLISH.txt": {
+    "line:mod_interface_translation/knowyourskyrim:interface/translations/KnowYourSkyrim_ENGLISH.txt": {
       "$KYSK_# (dead)": "# (dead)",
       "$KYSK_# (done)": "# (done)",
       "$KYSK_# (failed)": "# (failed)",

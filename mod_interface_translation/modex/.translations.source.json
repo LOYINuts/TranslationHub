@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:mod_interface_translation/modex:english.json": {
+    "json:mod_interface_translation/modex:interface/translations/english.json": {
       "ACTIONS": "Actions",
       "ACTOR_SKILLS": "Actor Skills: Represents the base actor values of this form. Does not reflect changes made to copies or in-game references of this form.",
       "ADD_ALL": "Add All",

@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/journalredesigned:Journal Redesigned_english.txt": {
+    "line:menu_translation/journalredesigned:interface/translations/Journal Redesigned_english.txt": {
       "$APOCRYPHA_PLANE": "APOCRYPHA,",
       "$BRUMA_COUNTY": "COUNTY BRUMA,",
       "$COLDHARBOUR_PLANE": "COLDHARBOUR,",

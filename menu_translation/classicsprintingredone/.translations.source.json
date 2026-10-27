@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/classicsprintingredone:ClassicSprintingRedone_ENGLISH.txt": {
+    "line:menu_translation/classicsprintingredone:interface/translations/ClassicSprintingRedone_ENGLISH.txt": {
       "$CSR_Description": "Makes sprinting work the way it did in the original Skyrim: hold the key to sprint instead of toggling it. Works with keyboards and controllers alike.",
       "$CSR_ModActive": "Activate Mod",
       "$CSR_ModActive_Tooltip": "Turns the mod on and off. While it is off the game handles sprinting the way it does without the mod.",

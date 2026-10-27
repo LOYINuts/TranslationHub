@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/input-manager:Language.json": {
+    "json:menu_translation/input-manager:Viny Mods/Input Manager/Language.json": {
       "action.add_btn": "Add New Input",
       "action.adv_mode": "Advanced Mode (Disable Safe Guards)",
       "action.col_key": "Key / Trigger",

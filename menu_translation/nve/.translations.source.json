@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/nve:Language.json": {
+    "json:menu_translation/nve:Viny Mods/NPC Visual Editor - NVE/Language.json": {
       "debug.apply_editor_to_tesnpc": "Apply Editor Data to TESNPC",
       "debug.apply_editor_to_tesnpc_hint": "Applies the current Editor values directly to the TESNPC base form without resetting or modifying the actor's loaded 3D.",
       "debug.facegen_cache_status": "FaceGen cache: %u faces, %u baked geometries, %u duplicate geometries ignored.",

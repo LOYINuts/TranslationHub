@@ -108,11 +108,11 @@ def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, st
     translations = load_json(trans_path)
     output_root = os.path.join(mod_path, cfg.output)
     source_paths = sorted(glob.glob(os.path.join(mod_path, cfg.source), recursive=True))
+    # 产物带 _zh 后缀，同目录时会混进 glob 结果，按后缀排除
     source_paths = [
         path for path in source_paths
         if os.path.isfile(path)
-        and os.path.commonpath([os.path.abspath(output_root), os.path.abspath(path)])
-        != os.path.abspath(output_root)
+        and not os.path.splitext(path)[0].endswith("_zh")
     ]
     if not source_paths:
         raise FileNotFoundError(f"No files match: {os.path.join(mod_path, cfg.source)}")
@@ -146,7 +146,12 @@ def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, st
             output_lines.append(cfg.sep.join(fields))
             used.add(lookup)
             count += 1
-        artifacts.append((os.path.join(output_root, relative), "\r\n".join(output_lines) + "\r\n"))
+        # glob 模式下产物平铺到 output_root，文件名加 _zh 后缀避免覆盖源文件
+        stem, ext = os.path.splitext(os.path.basename(source_path))
+        artifacts.append(
+            (os.path.join(output_root, f"{stem}_zh{ext}"),
+             "\r\n".join(output_lines) + "\r\n")
+        )
     return artifacts, count, used
 
 

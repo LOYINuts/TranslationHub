@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/convenienthorses:convenient horses_english.txt": {
+    "line:menu_translation/convenienthorses:interface/translations/convenient horses_english.txt": {
       "$CHMCMButtonOK": "OK",
       "$CHMCMEquipmentName00": "UNAVAILABLE",
       "$CHMCMEquipmentName01": "Original Equipment",

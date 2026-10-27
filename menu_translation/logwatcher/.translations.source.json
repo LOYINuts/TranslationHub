@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/logwatcher:LogWatcherTranslation.json": {
+    "json:menu_translation/logwatcher:interface/translations/LogWatcherTranslation.json": {
       "Mailbox.Left.Table.Header.Summary": "Summary",
       "Mailbox.Left.Table.Header.Title": "Title",
       "Mailbox.Left.Table.Header.Type": "Type",

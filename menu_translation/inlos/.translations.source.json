@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/inlos:Language.json": {
+    "json:menu_translation/inlos:Viny Mods/inlos/Language.json": {
       "auto.archive_name": "Archive Name",
       "auto.both": "Death or Defeat",
       "auto.clear_selection": "Clear Selection",
