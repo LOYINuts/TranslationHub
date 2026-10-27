@@ -47,6 +47,18 @@ def _package_root(cfg) -> str:
     return os.path.basename(cfg.dir.rstrip("/"))
 
 
+def dist_name(mod_dir: str) -> str:
+    """dist 目录名。
+
+    嵌套目录（如 statstracker/localization）的 basename 会撞名，所以把
+    menu_translation/ 之后的各级用 - 连起来。
+    """
+    parts = mod_dir.replace("\\", "/").rstrip("/").split("/")
+    if len(parts) > 1:
+        parts = parts[1:]
+    return "-".join(parts)
+
+
 def _resolve(cfg, built: str, targets: list[str]) -> list[PackItem]:
     """把 package 配置解析成 (产物, 落点) 列表。
 
@@ -142,7 +154,7 @@ def find_seven_zip() -> str | None:
 def pack_group(mod_dir: str, items: list[PackItem], archive: bool,
                seven_zip: str | None, dry_run: bool) -> bool:
     """把一个模组的所有产物打到同一个 dist 目录。"""
-    mod_name = os.path.basename(mod_dir.rstrip("/"))
+    mod_name = dist_name(mod_dir)
     stage = os.path.join(DIST, mod_name)
 
     if dry_run:

@@ -5,35 +5,31 @@ description: Translate English game text into natural Simplified Chinese. Use fo
 
 # English-to-Chinese Game Translation
 
-Follow the file workflow selected by `AGENTS.md`. Write changes to repository
-files, not only to chat.
+Read the file workflow in `AGENTS.md`. Write changes to repository files, not
+only to chat.
 
-## Translation
+## Translate
 
-- Identify the purpose, speaker or user, tone, and context before translating
-  into natural Simplified Chinese.
-- Preserve meaning, logic, scope, conditions, tense, modality, and attitude.
-  Do not omit or invent content.
-- Make dialogue sound spoken. Keep UI concise. Preserve imagery and voice in
-  literary text.
-- Use terminology in this order: mod-local glossary or profile, nearby
-  translations, repository terminology, then established game translations.
-- Use natural Chinese grammar. Avoid literal English syntax and redundant
-  pronouns or articles.
+- Read the speaker or user, purpose, tone, and context first. Preserve meaning,
+  logic, scope, conditions, tense, modality, and attitude: omit and invent
+  nothing.
+- Make dialogue sound spoken, keep UI concise, preserve imagery and voice in
+  literary text. Use natural Chinese grammar, not literal English syntax or
+  redundant pronouns and articles.
+- Terminology order: mod-local glossary or profile > nearby translations >
+  `bdd.tsv` (dialogue XML) > established game translations.
+- `perk` stays English unless the surrounding game context localizes the term.
 
-## Immutable Content
+## Do not translate
 
-Preserve keys, code, links, paths, numbers, units, placeholders, escapes, and
-markup unless the source format explicitly translates them.
+Keys, code, links, paths, numbers, units, comments, and structural fields.
+Preserve placeholders and markup exactly, unless the source format translates
+them: `{name}`, `{0}`, `%s`, `%llu`, Qt `%1`, `$PLAYER$`, `<color>`, `[br]`,
+and literal `\n`.
 
-Examples: `{name}`, `{0}`, `%s`, `%llu`, Qt `%1`, `$PLAYER$`, `<color>`,
-`</color>`, `[br]`, and literal `\\n`.
+## Before finishing
 
-## Final Check
-
-1. Confirm the Chinese is natural and accurate. Keep names, terms, and register
-   consistent.
-2. Preserve numbers, tags, placeholders, escapes, and structural fields.
-3. Resolve ambiguity from context. Report only ambiguity that context cannot
-   resolve.
-4. Run the AGENTS.md gate for the file type and require exit code 0.
+Re-read the Chinese for naturalness and register consistency, confirm every
+placeholder and tag survived, resolve ambiguity from context, then run the
+AGENTS.md gate and require exit code 0. Report only ambiguity that context
+cannot resolve.

@@ -66,6 +66,10 @@ package = [
 dir = "menu_translation/fuck"
 source = "FUCK_ENGLISH.txt"
 output = "FUCK_CHINESE.txt"
+package = [
+  "interface/translations/FUCK_CHINESE.txt",
+  "interface/translations/FUCK_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -73,6 +77,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/ostim"
 source = "OStim_ENGLISH.txt"
 output = "OStim_CHINESE.txt"
+package = [
+  "interface/translations/OStim_CHINESE.txt",
+  "interface/translations/OStim_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -80,6 +88,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/fuckqty"
 source = "FUCK-QTY_ENGLISH.txt"
 output = "FUCK-QTY_CHINESE.txt"
+package = [
+  "interface/translations/FUCK-QTY_CHINESE.txt",
+  "interface/translations/FUCK-QTY_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -87,6 +99,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/fuckrace"
 source = "FUCK-RACE_ENGLISH.txt"
 output = "FUCK-RACE_CHINESE.txt"
+package = [
+  "interface/translations/FUCK-RACE_CHINESE.txt",
+  "interface/translations/FUCK-RACE_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -94,6 +110,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/myprecious"
 source = "MyPreciouses_ENGLISH.txt"
 output = "MyPreciouses_CHINESE.txt"
+package = [
+  "interface/translations/MyPreciouses_CHINESE.txt",
+  "interface/translations/MyPreciouses_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -101,6 +121,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/legendarymapcomap"
 source = "Legendary Map_english.txt"
 output = "Legendary Map_chinese.txt"
+package = [
+  "interface/translations/Legendary Map_chinese.txt",
+  "interface/translations/Legendary Map_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -108,6 +132,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/killfeed"
 source = "KillFeed_ENGLISH.txt"
 output = "KillFeed_CHINESE.txt"
+package = [
+  "interface/translations/KillFeed_CHINESE.txt",
+  "interface/translations/KillFeed_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -115,6 +143,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/feetofskyrim"
 source = "FeetOfSkyrim_ENGLISH.txt"
 output = "FeetOfSkyrim_CHINESE.txt"
+package = [
+  "interface/translations/FeetOfSkyrim_CHINESE.txt",
+  "interface/translations/FeetOfSkyrim_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -122,6 +154,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/fittingroom"
 source = "Fitting Room_ENGLISH.txt"
 output = "Fitting Room_CHINESE.txt"
+package = [
+  "interface/translations/Fitting Room_CHINESE.txt",
+  "interface/translations/Fitting Room_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -129,6 +165,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/morehud"
 source = "ahzmorehud_english.txt"
 output = "ahzmorehud_chinese.txt"
+package = [
+  "interface/translations/ahzmorehud_chinese.txt",
+  "interface/translations/ahzmorehud_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -136,6 +176,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/dialoguehistory"
 source = "DialogueHistory_ENGLISH.txt"
 output = "DialogueHistory_CHINESE.txt"
+package = [
+  "interface/translations/DialogueHistory_CHINESE.txt",
+  "interface/translations/DialogueHistory_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -143,6 +187,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/tdm"
 source = "TrueDirectionalMovement_english.txt"
 output = "TrueDirectionalMovement_chinese.txt"
+package = [
+  "interface/translations/TrueDirectionalMovement_chinese.txt",
+  "interface/translations/TrueDirectionalMovement_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -150,6 +198,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/convenienthorses"
 source = "convenient horses_english.txt"
 output = "convenient horses_chinese.txt"
+package = [
+  "interface/translations/convenient horses_chinese.txt",
+  "interface/translations/convenient horses_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -157,6 +209,10 @@ encoding = "utf16-le-bom"
 dir = "mod_interface_translation/musicconductor"
 source = "MusicConductor_en.txt"
 output = "MusicConductor_zh.txt"
+package = [
+  "interface/translations/MusicConductor_zh.txt",
+  "interface/translations/MusicConductor_en.txt",
+]
 sep = "="
 encoding = "utf-8"
 
@@ -164,6 +220,10 @@ encoding = "utf-8"
 dir = "mod_interface_translation/smartsearch"
 source = "SmartSearch_en.ini"
 output = "SmartSearch_zhcn.ini"
+package = [
+  "interface/translations/SmartSearch_zhcn.ini",
+  "interface/translations/SmartSearch_en.ini",
+]
 sep = " = "
 encoding = "utf-8"
 
@@ -171,6 +231,10 @@ encoding = "utf-8"
 dir = "mod_interface_translation/partysheet"
 source = "PartySheet_en.txt"
 output = "PartySheet_zh.txt"
+package = [
+  "interface/translations/PartySheet_zh.txt",
+  "interface/translations/PartySheet_en.txt",
+]
 sep = "="
 encoding = "utf-8"
 
@@ -178,6 +242,10 @@ encoding = "utf-8"
 dir = "mod_interface_translation/custommarkers"
 source = "CustomMarkers_en.txt"
 output = "CustomMarkers_zh.txt"
+package = [
+  "interface/translations/CustomMarkers_zh.txt",
+  "interface/translations/CustomMarkers_en.txt",
+]
 sep = "="
 encoding = "utf-8"
 
@@ -185,6 +253,10 @@ encoding = "utf-8"
 dir = "mod_interface_translation/veldunui"
 source = "skyui_se_english.txt"
 output = "skyui_se_chinese.txt"
+package = [
+  "interface/translations/skyui_se_chinese.txt",
+  "interface/translations/skyui_se_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -192,6 +264,10 @@ encoding = "utf16-le-bom"
 dir = "mod_interface_translation/inventoryreforged"
 source = "InventoryReforged_ENGLISH.txt"
 output = "InventoryReforged_CHINESE.txt"
+package = [
+  "interface/translations/InventoryReforged_CHINESE.txt",
+  "interface/translations/InventoryReforged_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -199,6 +275,10 @@ encoding = "utf16-le-bom"
 dir = "mod_interface_translation/knowyourskyrim"
 source = "KnowYourSkyrim_ENGLISH.txt"
 output = "KnowYourSkyrim_CHINESE.txt"
+package = [
+  "interface/translations/KnowYourSkyrim_CHINESE.txt",
+  "interface/translations/KnowYourSkyrim_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -206,6 +286,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/skyprompt"
 source = "SkyPrompt_ENGLISH.txt"
 output = "SkyPrompt_CHINESE.txt"
+package = [
+  "interface/translations/SkyPrompt_CHINESE.txt",
+  "interface/translations/SkyPrompt_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -213,6 +297,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/quicklootie"
 source = "QuickLootIE_english.txt"
 output = "QuickLootIE_chinese.txt"
+package = [
+  "interface/translations/QuickLootIE_chinese.txt",
+  "interface/translations/QuickLootIE_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -220,6 +308,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/obodyng"
 source = "OBody_ENGLISH.txt"
 output = "OBody_CHINESE.txt"
+package = [
+  "interface/translations/OBody_CHINESE.txt",
+  "interface/translations/OBody_ENGLISH.txt",
+]
 sep = ""
 output_sep = "\t"
 encoding = "utf16-le-bom"
@@ -228,6 +320,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/skyparkour"
 source = "SkyParkour_English.txt"
 output = "SkyParkour_Chinese.txt"
+package = [
+  "interface/translations/SkyParkour_Chinese.txt",
+  "interface/translations/SkyParkour_English.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -235,6 +331,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/pressftopayrespects"
 source = "PressFtoPayRespects_Translation.ini"
 output = "PressFtoPayRespects_Translation_zh.ini"
+package = [
+  "interface/translations/PressFtoPayRespects_Translation.ini",
+  "interface/translations/PressFtoPayRespects_Translation_zh.ini",
+]
 sep = "="
 encoding = "utf-8"
 
@@ -243,6 +343,10 @@ encoding = "utf-8"
 dir = "menu_translation/pickupradius"
 source = "PickUpRadiusSKSE_Translation.ini"
 output = "PickUpRadiusSKSE_Translation_zh.ini"
+package = [
+  "interface/translations/PickUpRadiusSKSE_Translation.ini",
+  "interface/translations/PickUpRadiusSKSE_Translation_zh.ini",
+]
 sep = " = "
 encoding = "utf-8"
 
@@ -250,6 +354,10 @@ encoding = "utf-8"
 dir = "menu_translation/cee"
 source = "Conditional Expressions_ENGLISH.txt"
 output = "Conditional Expressions_CHINESE.txt"
+package = [
+  "interface/translations/Conditional Expressions_CHINESE.txt",
+  "interface/translations/Conditional Expressions_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -258,6 +366,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/speedofstrolling"
 source = "styyx-move-speed_ENGLISH.txt"
 output = "styyx-move-speed_CHINESE.txt"
+package = [
+  "interface/translations/styyx-move-speed_CHINESE.txt",
+  "interface/translations/styyx-move-speed_ENGLISH.txt",
+]
 sep = ""  # 空字符串表示任意空白
 output_sep = "\t"
 encoding = "utf16-le-bom"
@@ -267,6 +379,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/classicsprintingredone"
 source = "ClassicSprintingRedone_ENGLISH.txt"
 output = "ClassicSprintingRedone_CHINESE.txt"
+package = [
+  "interface/translations/ClassicSprintingRedone_CHINESE.txt",
+  "interface/translations/ClassicSprintingRedone_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -274,6 +390,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/journalredesigned"
 source = "Journal Redesigned_english.txt"
 output = "Journal Redesigned_chinese.txt"
+package = [
+  "interface/translations/Journal Redesigned_chinese.txt",
+  "interface/translations/Journal Redesigned_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -281,6 +401,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/startmenuredesigned"
 source = "StartMenuRedesigned_english.txt"
 output = "StartMenuRedesigned_chinese.txt"
+package = [
+  "interface/translations/StartMenuRedesigned_chinese.txt",
+  "interface/translations/StartMenuRedesigned_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -288,6 +412,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/mapmenuredesigned"
 source = "MapMenuRedesigned_english.txt"
 output = "MapMenuRedesigned_chinese.txt"
+package = [
+  "interface/translations/MapMenuRedesigned_chinese.txt",
+  "interface/translations/MapMenuRedesigned_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -295,6 +423,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/consolecommander"
 source = "ConsoleCommander_Translation.txt"
 output = "ConsoleCommander_Translation_zh.txt"
+package = [
+  "interface/translations/ConsoleCommander_Translation.txt",
+  "interface/translations/ConsoleCommander_Translation_zh.txt",
+]
 sep = " = "
 encoding = "utf-8"
 
@@ -302,6 +434,10 @@ encoding = "utf-8"
 dir = "menu_translation/riverwoodhaswalls"
 source = "Riverwood Has Walls_english.txt"
 output = "Riverwood Has Walls_chinese.txt"
+package = [
+  "interface/translations/Riverwood Has Walls_chinese.txt",
+  "interface/translations/Riverwood Has Walls_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -309,6 +445,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/showplayerininventory"
 source = "ShowPlayerInInventory_ENGLISH.txt"
 output = "ShowPlayerInInventory_CHINESE.txt"
+package = [
+  "interface/translations/ShowPlayerInInventory_CHINESE.txt",
+  "interface/translations/ShowPlayerInInventory_ENGLISH.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -316,6 +456,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/qucikitemtransfer"
 source = "Quick Item Transfer_english.txt"
 output = "Quick Item Transfer_chinese.txt"
+package = [
+  "interface/translations/Quick Item Transfer_chinese.txt",
+  "interface/translations/Quick Item Transfer_english.txt",
+]
 sep = "\t"
 encoding = "utf16-le-bom"
 
@@ -323,6 +467,10 @@ encoding = "utf16-le-bom"
 dir = "menu_translation/coldbreathng"
 source = "ColdBreathNG_Translation.ini"
 output = "ColdBreathNG_Translation_zh.ini"
+package = [
+  "interface/translations/ColdBreathNG_Translation.ini",
+  "interface/translations/ColdBreathNG_Translation_zh.ini",
+]
 sep = "="
 encoding = "utf-8"
 
@@ -330,6 +478,10 @@ encoding = "utf-8"
 dir = "descriptionmods"
 source = "**/*.ini"
 output = "zh"
+package = [
+  "interface/translations/zh",
+  "interface/translations/*.ini",
+]
 sep = "|"
 encoding = "utf-8"
 value_field = 1
@@ -359,6 +511,7 @@ source = "SwiftPotionNG_Translation.json"
 dir = "menu_translation/timecontrol"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/timecontrol/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/timeisticking"
@@ -369,57 +522,68 @@ output = "zh.json"
 dir = "menu_translation/input-manager"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/Input Manager/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/dmk"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/DMK/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/nve"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/NPC Visual Editor - NVE/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/npc-stats-editor"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/NPC Stats Editor/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/npc-senses"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/NPC Senses/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/dfg"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/DFG/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/parryall"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/Parryall/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/edf"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/EDF/Language_zh.json"
 
 
 [[json]]
 dir = "menu_translation/inlos"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/inlos/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/booksofperks"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/booksofperks/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/quickcommands"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/quickcommands/Language_zh.json"
 
 [[json]]
 dir = "mod_interface_translation/modex"
@@ -441,21 +605,25 @@ output = "NSM_Language_zh.json"
 dir = "menu_translation/bfcong"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/BFCONG/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/hmdp"
 source = "DaysPassed_Language.json"
 output = "DaysPassed_Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/HMDP/DaysPassed_Language_zh.json"
 
 [[json]]
 dir = "menu_translation/just-a-block"
 source = "JusBlock_Language.json"
 output = "JusBlock_Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/Just a block/JusBlock_Language_zh.json"
 
 [[json]]
 dir = "menu_translation/quick-swap"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/Quick Swap/Language_zh.json"
 
 [[json]]
 dir = "mod_interface_translation/outfitdistributor"
@@ -466,48 +634,56 @@ output = "zh-cn.json"
 dir = "menu_translation/statstracker/localization"
 source = "DodgeAll.json"
 output = "DodgeAll_zh.json"
+package = "SKSE/Plugins/Stats Tracker/Localization/DodgeAll_zh.json"
 translation_section = "DodgeAll.json"
 
 [[json]]
 dir = "menu_translation/statstracker/localization"
 source = "HMDP.json"
 output = "HMDP_zh.json"
+package = "SKSE/Plugins/Stats Tracker/Localization/HMDP_zh.json"
 translation_section = "HMDP.json"
 
 [[json]]
 dir = "menu_translation/statstracker/localization"
 source = "ParryAll.json"
 output = "ParryAll_zh.json"
+package = "SKSE/Plugins/Stats Tracker/Localization/ParryAll_zh.json"
 translation_section = "ParryAll.json"
 
 [[json]]
 dir = "menu_translation/statstracker/localization"
 source = "STM_Localization.json"
 output = "STM_Localization_zh.json"
+package = "SKSE/Plugins/Stats Tracker/Localization/STM_Localization_zh.json"
 translation_section = "STM_Localization.json"
 
 [[json]]
 dir = "menu_translation/statstracker/localization"
 source = "TrickDeath.json"
 output = "TrickDeath_zh.json"
+package = "SKSE/Plugins/Stats Tracker/Localization/TrickDeath_zh.json"
 translation_section = "TrickDeath.json"
 
 [[json]]
 dir = "menu_translation/statstracker/localization"
 source = "UnblockableHits.json"
 output = "UnblockableHits_zh.json"
+package = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits_zh.json"
 translation_section = "UnblockableHits.json"
 
 [[json]]
 dir = "menu_translation/statstracker/localization"
 source = "UndodgeableHits.json"
 output = "UndodgeableHits_zh.json"
+package = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits_zh.json"
 translation_section = "UndodgeableHits.json"
 
 [[json]]
 dir = "menu_translation/trickdeath"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/TrickDeath/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/trickdeath/localization"
@@ -523,11 +699,13 @@ output = "DeathMessages_zh.json"
 dir = "menu_translation/unblockablehits"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/UnblockableHits/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/undodgeablehits"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/UndodgeableHits/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/flightframework"
@@ -543,12 +721,14 @@ output = "Localization_zh.json"
 dir = "menu_translation/moreragdoll"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/moreragdoll/Language_zh.json"
 
 
 [[json]]
 dir = "menu_translation/dodgeall"
 source = "Language.json"
 output = "Language_zh.json"
+package = "SKSE/Plugins/Viny Mods/Dodgeall/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/logwatcher"

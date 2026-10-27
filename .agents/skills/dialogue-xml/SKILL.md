@@ -6,52 +6,35 @@ description: Translate Skyrim xTranslator XML under dialogue_mod_translation/. U
 # Dialogue XML Translation
 
 Read `game-translation` first. Write translations to XML or `pending.json`,
-not only in chat.
+not only in chat. Command order and `bdd.tsv` rules are in AGENTS.md.
 
 ## Scope
 
 - Input: `dialogue_mod_translation/<mod>/*.xml`.
-- Glossary: repository-root `bdd.tsv`. Prefer mod-local references and
-  character profiles when they exist.
-- Default GRUP types: `BOOK`, `INFO`, `DIAL`, and `NPC_`. Process `SCPT`,
-  `TES4`, `MESG`, `QUST`, and `FACT` only when the user asks.
-- STATUS `0` means pending. STATUS `80`, `98`, and `99` contain existing
-  translations for reference. Write translated records with STATUS `90`.
+- Default GRUP types: `BOOK`, `INFO`, `DIAL`, `NPC_`. Process `SCPT`, `TES4`,
+  `MESG`, `QUST`, `FACT` only when the user asks.
+- STATUS `0` means pending. STATUS `80`, `98`, `99` hold existing translations
+  for reference. Write translated records with STATUS `90`.
 
-## Workflow (same gate shape: stats → pending → apply → stats)
-
-```bash
-uv run dialogue_mod_translation/translate.py stats XML_OR_DIR
-uv run dialogue_mod_translation/translate.py pending XML --fill-bdd
-uv run dialogue_mod_translation/translate.py apply MOD/pending.json
-uv run dialogue_mod_translation/translate.py stats XML_OR_DIR
-```
+## Translating
 
 Read context and existing translations before translating `groups[].traduit` in
-`pending.json`. Keep translations consistent across `edids` in the same group.
-Split a group when context changes. Preserve HTML, `[pagebreak]`, and paragraph
-structure in `BOOK DESC`. Match the speaker's voice in `INFO NAM1`.
+`pending.json`. Keep translations consistent across `edids` in the same group,
+and split a group when context changes. Preserve HTML, `[pagebreak]`, and
+paragraph structure in `BOOK DESC`. Match the speaker's voice in `INFO NAM1`.
 
-Use `jq` to inspect or update JSON when available. Otherwise, use Python's
-standard-library `json` module. Use `sd` only for confirmed literal replacements.
-Otherwise, edit the JSON precisely. Never use regex to edit XML.
+Use `jq` to inspect or update JSON when available, otherwise Python's
+standard-library `json` module. Use `sd` only for confirmed literal
+replacements; otherwise edit the JSON precisely. Never use regex to edit XML.
 
-## Protection and Checks
+## Protection
 
 Do not change `ORIGINAL`, `ID`, `EDID`, `CHAMP`, `GRUP`, tags, or placeholders
-such as `<mag>`, `%s`, `{...}`, and `$Player`. Do not rewrite the full XML with
-ElementTree. Use only `translate.py` to write XML. Stop and report decoding
-errors, tag or placeholder check failures, or pending records that remain after
-the final stats check.
+such as `<mag>`, `%s`, `{...}`, `$Player`. Do not rewrite the full XML with
+ElementTree; write XML only through `translate.py`.
 
-`bdd.tsv` is a quoted TSV whose fields may span lines. Never split it by line
-and tab by hand. Use the `bdd` subcommand:
+Stop and report decoding errors, tag or placeholder check failures, or pending
+records that remain after the final stats check.
 
-```bash
-uv run dialogue_mod_translation/translate.py bdd              # report
-uv run dialogue_mod_translation/translate.py bdd --check      # nonzero on duplicates
-uv run dialogue_mod_translation/translate.py bdd --normalize  # drop duplicate records
-```
-
-Run `--normalize` after appending records. It deletes only byte-identical
-duplicate records, so kept lines never change.
+Appending records to `bdd.tsv` needs `translate.py bdd --normalize` afterwards.
+It deletes only byte-identical duplicate records, so kept lines never change.
