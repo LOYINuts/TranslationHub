@@ -1,0 +1,43 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "json:menu_translation/vinymods/npc-senses:Language.json": {
+      "btn.save_apply": "Save and Apply",
+      "col.formid": "FormID",
+      "col.name": "Name / EditorID",
+      "col.status": "Status (Applied Rule)",
+      "db.build": "Refresh Database (Build DB)",
+      "db.default": "Default",
+      "db.filter": "Filter Name/EditorID",
+      "db.force_scan": "Force Scan",
+      "db.modified": "MODIFIED: %s",
+      "db.no_npcs": "No NPCs loaded into memory.",
+      "db.only_modified": "Only Modified NPCs",
+      "db.showing": "Showing %d NPCs",
+      "debug.desc_all": "Enable All: Logs EVERYTHING that enters/exits (Actors, Projectiles, etc).",
+      "debug.desc_disable": "Disable: No trigger logs are recorded.",
+      "debug.desc_player": "Enable Player: Logs IN-GAME and to LOG only if the Caster is the Player.",
+      "debug.enable_log": "Enable Log in UI",
+      "debug.title": "Debug Settings",
+      "menu.database": "Database",
+      "menu.debug": "Debug",
+      "menu.rules": "Rules",
+      "menu.section": "NPC Senses",
+      "msg.rules_updated": "Vision Rules updated!",
+      "rule.aura": "Aura:",
+      "rule.dup_name": "[!] Duplicate Name",
+      "rule.enabled": "Enabled",
+      "rule.filter": "Filter Rules by Name",
+      "rule.name": "Name",
+      "rule.new": "New Rule",
+      "rule.new_default": "New Rule",
+      "rule.node": "Node",
+      "rule.remove": "Remove",
+      "rule.target": "Target",
+      "rule.type": "Type",
+      "rule.use_los": "Vision uses Line of Sight (LOS)",
+      "rule.vision": "Vision:"
+    }
+  },
+  "version": 1
+}

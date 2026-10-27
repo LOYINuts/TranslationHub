@@ -11,7 +11,7 @@
   - 转义、printf/Python/Qt 占位符和标记
   - 生成产物是否等于当前 translations.json 构建结果
   - translations.json 键覆盖、格式和构建产物状态
-  - Eslifer Qt TS 结构和占位符
+  - eslifer Qt TS 结构和占位符
 """
 
 import glob

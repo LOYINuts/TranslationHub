@@ -1,0 +1,35 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "line:menu_translation/consolecommander:ConsoleCommander_Translation.txt": {
+      "Actions": "Actions",
+      "Add Command": "Add Command",
+      "Cancel": "Cancel",
+      "Close Console after Executing Command": "Close Console after Executing Command",
+      "Command": "Command",
+      "Command Manager": "Command Manager",
+      "Command Name": "Command Name",
+      "Commands:": "Commands:",
+      "Console Commander": "Console Commander",
+      "Console Commands:": "Console Commands:",
+      "Custom Commands": "Custom Commands",
+      "Delete": "Delete",
+      "Enter Variable": "Enter Variable",
+      "Execute": "Execute",
+      "Hide": "Hide",
+      "Hide Hidden": "Hide Hidden",
+      "MultiCommand Example: Command1,Command2,Command3": "MultiCommand Example: Command1,Command2,Command3",
+      "Name": "Name",
+      "No commands configured. Click 'Add Command' to create one.": "No commands configured. Click 'Add Command' to create one.",
+      "OK": "OK",
+      "Reload Config": "Reload Config",
+      "Search:": "Search:",
+      "Show Hidden": "Show Hidden",
+      "Tooltip (optional - shown on hover over Execute):": "Tooltip (optional - shown on hover over Execute):",
+      "Unhide": "Unhide",
+      "Value": "Value",
+      "Variable Command [Ex: pleyer.additem f (without value)]": "Variable Command [Ex: pleyer.additem f (without value)]"
+    }
+  },
+  "version": 1
+}

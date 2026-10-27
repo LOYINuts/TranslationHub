@@ -1,0 +1,42 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "line:menu_translation/obodyng:OBody_ENGLISH.txt": {
+      "$obody_collapse_all": "Collapse All",
+      "$obody_config_viewer_tab": "JSON Config Viewer",
+      "$obody_copy_json": "Copy JSON",
+      "$obody_current_preset": "Current Preset",
+      "$obody_expand_all": "Expand All",
+      "$obody_highlight_force_application_immediate": "Due to a Racemenu/SSE Engine Fixes bug, sometimes the preset application from the preset list menu is not visually immediate. OBody works around this by redressing the main outfit piece of the character, which forces the new body morphs to apply immediately. If you don't like the visual effect this causes, turn this option off.",
+      "$obody_highlight_genitals": "Randomizes genitals with procedural generation. Supposedly only works in CBBE 3BA body.",
+      "$obody_highlight_legacy_storage_util_usage": "Before version 4.4.0 of OBody NG, the preset assigned to an NPC was saved using only StorageUtil. Now, OBody NG stores the preset assignment to its own SKSE cosave. For backwards compatibility with mods that read the preset assignment saved using StorageUtil, preset assignments are still saved using StorageUtil when this option is enabled. Disabling this option will reduce the size of your saves slightly, but may cause incompatibilities with older mods.",
+      "$obody_highlight_nipple": "Randomizes nipples with procedural generation. Supposedly only works in CBBE based bodies.",
+      "$obody_highlight_nipple_sliders_orefit": "If you get sunken or weird nipples/areolas with ORefit, turn off this option to alleviate the problem. Character redressing is required for this to take effect.",
+      "$obody_highlight_performance_mode": "With performance mode enabled, you may see body morphs being applied to the NPCs when you meet them for the first time, which can look jarring. However, this happens very rarely, and only when you meet them for the first time! Performance mode enabled may also result in frequent crashes, please refer to the mod page for more information. If you turn off Performance Mode, it may result in stutters/FPS dips in large mod lists or older hardware setups. It is recommended to keep it off for most cases.",
+      "$obody_highlight_preset_key": "Set the key which shows the menu of all installed presets.\\nIf an NPC is in your crosshair, it will apply the preset to the NPC. If an NPC is NOT in your crosshair, it will apply the preset to your Player Character.\\nSet to Esc to unbind.",
+      "$obody_highlight_refit": "Makes it so that when an actor is clothed, sliders are changed to simulate the effect clothes have on the different body parts. Works fine with CBBE and UNP based bodies, including CBBE 3BA and BHUNP from my tests. Disable if you get weird results. Character redressing is required for changes to this setting to take effect.",
+      "$obody_highlight_reset_distribution": "Reset the presets that have been distributed to NPCs. This will respect the rules you set in the JSON configuration. Please do this on a cell with no other NPCs or with as few NPCs as possible, such as a player home. Also please note this will only take effect after you save and then reload the game.",
+      "$obody_message_box_option_no": "No",
+      "$obody_message_box_option_yes": "Yes",
+      "$obody_message_performance_mode": "Performance mode will be enabled. This might result in more frequent crashes. Refer to the mod page for more info.\\n\\nIt is NOT recommended to turn on Performance Mode unless you know what you are doing.\\n\\nIf you want to proceed, click Accept.",
+      "$obody_message_reset_distribution": "All presets that have been distributed to NPCs will be reset. Your JSON configuration rules will be respected.\\n\\nPLEASE do this on a cell with no other NPCs or with as few NPCs as possible, such as a player home or even a dungeon.\\n\\nYou will need to save and exit the game afterwards. Do you want to proceed?",
+      "$obody_message_reset_distribution_success": "OBody NG will reset the presets that have been distributed.\\n\\n PLEASE SAVE THE GAME AND EXIT THE GAME NOW! Then start Skyrim and reload your save again. This is needed for the reset to work!",
+      "$obody_none": "None",
+      "$obody_option_force_preset_application_immediate": "Force immediate preset application",
+      "$obody_option_genitals": "Enable genitals randomization",
+      "$obody_option_legacy_storage_util_usage": "Enable legacy StorageUtil usage",
+      "$obody_option_nipple": "Enable nipple randomization",
+      "$obody_option_nipple_sliders_orefit": "Enable ORefit nipple morphing",
+      "$obody_option_performance_mode": "Enable Performance Mode",
+      "$obody_option_preset_key": "Presets list key",
+      "$obody_option_refit": "Enable ORefit",
+      "$obody_option_reset_distribution": "Reset all distributed presets",
+      "$obody_preset_list_failure": "A critical error has occurred while parsing the Bodyslide presets files. This most likely means you have a corrupt bodyslide preset, or a bodyslide preset where the name contains special/incompatible characters. As a result, the presets list in the OBody menu will be empty. Please exit the game now and refer to the OBody NG mod page for more information.",
+      "$obody_presets_tab": "Preset Selection",
+      "$obody_reset_morphs_button": "Reset Morphs",
+      "$obody_search_presets": "Search Presets",
+      "$obody_skse_menu_framework_failure": "SKSE Menu Framework was not found, which is needed to display the OBody preset selection menu. This means you didn't install SKSE Menu Framework or installed it incorrectly. Please exit the game now and refer to the mod page for instructions."
+    }
+  },
+  "version": 1
+}

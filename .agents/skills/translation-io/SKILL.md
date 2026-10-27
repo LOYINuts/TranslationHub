@@ -9,8 +9,8 @@ description: Inspect and process translation text files safely, including UTF-16
 
 1. For configured mods, edit only `translations.json`, then build the output
    files.
-2. For `Descriptionmods`, edit `Descriptionmods/translations.json`, then run
-   `uv run build_all.py Descriptionmods`.
+2. For `descriptionmods`, edit `descriptionmods/translations.json`, then run
+   `uv run build_all.py descriptionmods`.
 
 ## New or Unconfigured Folders
 
@@ -57,7 +57,7 @@ Use the separator and encoding in `mods.toml`. Do not assume that all files use
 Preserve keys, sections, order, comments, placeholders, tags, escaped `\\n`,
 and other non-translated fields.
 
-For `Descriptionmods`, preserve every `key|description|metadata...` record.
-Run the same gate with `<name>` = `Descriptionmods`.
+For `descriptionmods`, preserve every `key|description|metadata...` record.
+Run the same gate with `<name>` = `descriptionmods`.
 
 Any nonzero exit code means the work is incomplete.

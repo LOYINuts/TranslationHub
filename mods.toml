@@ -12,126 +12,126 @@
 # ── LINE-BASED MODS ────────────────────────────────────────────────────────
 
 [[line]]
-dir = "mcm_flick_translation/achievementinjector"
+dir = "menu_translation/achievementinjector"
 source = "AchievementInjector_english.txt"
 output = "AchievementInjector_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/achievementinjector"
+dir = "menu_translation/achievementinjector"
 source = "AchievementsData/Localizations/Dawnguard_EN.txt"
 output = "AchievementsData/Localizations/Dawnguard_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
 
 [[line]]
-dir = "mcm_flick_translation/achievementinjector"
+dir = "menu_translation/achievementinjector"
 source = "AchievementsData/Localizations/Dragonborn_EN.txt"
 output = "AchievementsData/Localizations/Dragonborn_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
 
 [[line]]
-dir = "mcm_flick_translation/achievementinjector"
+dir = "menu_translation/achievementinjector"
 source = "AchievementsData/Localizations/Hearthfire_EN.txt"
 output = "AchievementsData/Localizations/Hearthfire_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
 
 [[line]]
-dir = "mcm_flick_translation/achievementinjector"
+dir = "menu_translation/achievementinjector"
 source = "AchievementsData/Localizations/SkyrimSE_EN.txt"
 output = "AchievementsData/Localizations/SkyrimSE_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
 
 [[line]]
-dir = "mcm_flick_translation/FUCK"
+dir = "menu_translation/fuck"
 source = "FUCK_ENGLISH.txt"
 output = "FUCK_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/ostim"
+dir = "menu_translation/ostim"
 source = "OStim_ENGLISH.txt"
 output = "OStim_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/FUCKQTY"
+dir = "menu_translation/fuckqty"
 source = "FUCK-QTY_ENGLISH.txt"
 output = "FUCK-QTY_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/FUCKRACE"
+dir = "menu_translation/fuckrace"
 source = "FUCK-RACE_ENGLISH.txt"
 output = "FUCK-RACE_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/myprecious"
+dir = "menu_translation/myprecious"
 source = "MyPreciouses_ENGLISH.txt"
 output = "MyPreciouses_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/legendarymapcomap"
+dir = "menu_translation/legendarymapcomap"
 source = "Legendary Map_english.txt"
 output = "Legendary Map_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/KillFeed"
+dir = "menu_translation/killfeed"
 source = "KillFeed_ENGLISH.txt"
 output = "KillFeed_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/feetofskyrim"
+dir = "menu_translation/feetofskyrim"
 source = "FeetOfSkyrim_ENGLISH.txt"
 output = "FeetOfSkyrim_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/fittingroom"
+dir = "menu_translation/fittingroom"
 source = "Fitting Room_ENGLISH.txt"
 output = "Fitting Room_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/morehud"
+dir = "menu_translation/morehud"
 source = "ahzmorehud_english.txt"
 output = "ahzmorehud_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/DialogueHistory"
+dir = "menu_translation/dialoguehistory"
 source = "DialogueHistory_ENGLISH.txt"
 output = "DialogueHistory_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/TDM"
+dir = "menu_translation/tdm"
 source = "TrueDirectionalMovement_english.txt"
 output = "TrueDirectionalMovement_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/ConvenientHorses"
+dir = "menu_translation/convenienthorses"
 source = "convenient horses_english.txt"
 output = "convenient horses_chinese.txt"
 sep = "\t"
@@ -152,7 +152,7 @@ sep = " = "
 encoding = "utf-8"
 
 [[line]]
-dir = "mod_interface_translation/PartySheet"
+dir = "mod_interface_translation/partysheet"
 source = "PartySheet_en.txt"
 output = "PartySheet_zh.txt"
 sep = "="
@@ -187,21 +187,21 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/skyprompt"
+dir = "menu_translation/skyprompt"
 source = "SkyPrompt_ENGLISH.txt"
 output = "SkyPrompt_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/quicklootie"
+dir = "menu_translation/quicklootie"
 source = "QuickLootIE_english.txt"
 output = "QuickLootIE_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/obodyng"
+dir = "menu_translation/obodyng"
 source = "OBody_ENGLISH.txt"
 output = "OBody_CHINESE.txt"
 sep = ""
@@ -209,14 +209,14 @@ output_sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/skyparkour"
+dir = "menu_translation/skyparkour"
 source = "SkyParkour_English.txt"
 output = "SkyParkour_Chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/pressftopayrespects"
+dir = "menu_translation/pressftopayrespects"
 source = "PressFtoPayRespects_Translation.ini"
 output = "PressFtoPayRespects_Translation_zh.ini"
 sep = "="
@@ -224,14 +224,14 @@ encoding = "utf-8"
 
 
 [[line]]
-dir = "skse_menu_translation/pickupradius"
+dir = "menu_translation/pickupradius"
 source = "PickUpRadiusSKSE_Translation.ini"
 output = "PickUpRadiusSKSE_Translation_zh.ini"
 sep = " = "
 encoding = "utf-8"
 
 [[line]]
-dir = "mcm_flick_translation/CEE"
+dir = "menu_translation/cee"
 source = "Conditional Expressions_ENGLISH.txt"
 output = "Conditional Expressions_CHINESE.txt"
 sep = "\t"
@@ -239,7 +239,7 @@ encoding = "utf16-le-bom"
 
 # 特殊：输入用任意空白分隔，输出用制表符
 [[line]]
-dir = "skse_menu_translation/speedofstrolling"
+dir = "menu_translation/speedofstrolling"
 source = "styyx-move-speed_ENGLISH.txt"
 output = "styyx-move-speed_CHINESE.txt"
 sep = ""  # 空字符串表示任意空白
@@ -248,70 +248,70 @@ encoding = "utf16-le-bom"
 
 
 [[line]]
-dir = "mcm_flick_translation/classicsprintingredone"
+dir = "menu_translation/classicsprintingredone"
 source = "ClassicSprintingRedone_ENGLISH.txt"
 output = "ClassicSprintingRedone_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/journalredesigned"
+dir = "menu_translation/journalredesigned"
 source = "Journal Redesigned_english.txt"
 output = "Journal Redesigned_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/startmenuredesigned"
+dir = "menu_translation/startmenuredesigned"
 source = "StartMenuRedesigned_english.txt"
 output = "StartMenuRedesigned_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/mapmenuredesigned"
+dir = "menu_translation/mapmenuredesigned"
 source = "MapMenuRedesigned_english.txt"
 output = "MapMenuRedesigned_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/consolecommander"
+dir = "menu_translation/consolecommander"
 source = "ConsoleCommander_Translation.txt"
 output = "ConsoleCommander_Translation_zh.txt"
 sep = " = "
 encoding = "utf-8"
 
 [[line]]
-dir = "mcm_flick_translation/riverwoodhaswalls"
+dir = "menu_translation/riverwoodhaswalls"
 source = "Riverwood Has Walls_english.txt"
 output = "Riverwood Has Walls_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/showplayerininventory"
+dir = "menu_translation/showplayerininventory"
 source = "ShowPlayerInInventory_ENGLISH.txt"
 output = "ShowPlayerInInventory_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mcm_flick_translation/qucikitemtransfer"
+dir = "menu_translation/qucikitemtransfer"
 source = "Quick Item Transfer_english.txt"
 output = "Quick Item Transfer_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "skse_menu_translation/coldbreathng"
+dir = "menu_translation/coldbreathng"
 source = "ColdBreathNG_Translation.ini"
 output = "ColdBreathNG_Translation_zh.ini"
 sep = "="
 encoding = "utf-8"
 
 [[line]]
-dir = "Descriptionmods"
+dir = "descriptionmods"
 source = "**/*.ini"
 output = "zh"
 sep = "|"
@@ -323,96 +323,96 @@ trim_trailing_fields = true
 # ── JSON-BASED MODS ────────────────────────────────────────────────────────
 
 [[json]]
-dir = "skse_menu_translation/sksemenuframework"
+dir = "menu_translation/sksemenuframework"
 source = "SKSEMenuFrameworkStrings.json"
 
 [[json]]
-dir = "skse_menu_translation/hudng"
+dir = "menu_translation/hudng"
 source = "english.json"
 output = "chinese.json"
 
 [[json]]
-dir = "skse_menu_translation/mcmmemory"
+dir = "menu_translation/mcmmemory"
 source = "Translation.json"
 
 [[json]]
-dir = "skse_menu_translation/swiftpotionng"
+dir = "menu_translation/swiftpotionng"
 source = "SwiftPotionNG_Translation.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/timecontrol"
+dir = "menu_translation/vinymods/timecontrol"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/timeisticking"
+dir = "menu_translation/vinymods/timeisticking"
 source = "en.json"
 output = "zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/Input Manager"
+dir = "menu_translation/vinymods/input-manager"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/DMK"
+dir = "menu_translation/vinymods/dmk"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/NPC Visual Editor - NVE"
+dir = "menu_translation/vinymods/nve"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/NPC Stats Editor"
+dir = "menu_translation/vinymods/npc-stats-editor"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/NPC Senses"
+dir = "menu_translation/vinymods/npc-senses"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/DFG"
+dir = "menu_translation/vinymods/dfg"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/Parryall"
+dir = "menu_translation/vinymods/parryall"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/EDF"
+dir = "menu_translation/vinymods/edf"
 source = "Language.json"
 output = "Language_zh.json"
 
 
 [[json]]
-dir = "skse_menu_translation/vinymods/inlos"
+dir = "menu_translation/vinymods/inlos"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/booksofperks"
+dir = "menu_translation/vinymods/booksofperks"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/quickcommands"
+dir = "menu_translation/vinymods/quickcommands"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "mod_interface_translation/Modex"
+dir = "mod_interface_translation/modex"
 source = "english.json"
 output = "chinese.json"
 
 
 [[json]]
-dir = "mcm_flick_translation/myprecious"
+dir = "menu_translation/myprecious"
 source = "config.json"
 output = "config_zh.json"
 
@@ -422,22 +422,22 @@ source = "NSM_Language.json"
 output = "NSM_Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/BFCONG"
+dir = "menu_translation/vinymods/bfcong"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/HMDP"
+dir = "menu_translation/vinymods/hmdp"
 source = "DaysPassed_Language.json"
 output = "DaysPassed_Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/Just a block"
+dir = "menu_translation/vinymods/just-a-block"
 source = "JusBlock_Language.json"
 output = "JusBlock_Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/Quick Swap"
+dir = "menu_translation/vinymods/quick-swap"
 source = "Language.json"
 output = "Language_zh.json"
 
@@ -447,99 +447,99 @@ source = "en.json"
 output = "zh-cn.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/statstracker/Localization"
+dir = "menu_translation/vinymods/statstracker/localization"
 source = "DodgeAll.json"
 output = "DodgeAll_zh.json"
 translation_section = "DodgeAll.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/statstracker/Localization"
+dir = "menu_translation/vinymods/statstracker/localization"
 source = "HMDP.json"
 output = "HMDP_zh.json"
 translation_section = "HMDP.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/statstracker/Localization"
+dir = "menu_translation/vinymods/statstracker/localization"
 source = "ParryAll.json"
 output = "ParryAll_zh.json"
 translation_section = "ParryAll.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/statstracker/Localization"
+dir = "menu_translation/vinymods/statstracker/localization"
 source = "STM_Localization.json"
 output = "STM_Localization_zh.json"
 translation_section = "STM_Localization.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/statstracker/Localization"
+dir = "menu_translation/vinymods/statstracker/localization"
 source = "TrickDeath.json"
 output = "TrickDeath_zh.json"
 translation_section = "TrickDeath.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/statstracker/Localization"
+dir = "menu_translation/vinymods/statstracker/localization"
 source = "UnblockableHits.json"
 output = "UnblockableHits_zh.json"
 translation_section = "UnblockableHits.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/statstracker/Localization"
+dir = "menu_translation/vinymods/statstracker/localization"
 source = "UndodgeableHits.json"
 output = "UndodgeableHits_zh.json"
 translation_section = "UndodgeableHits.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/TrickDeath"
+dir = "menu_translation/vinymods/trickdeath"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/TrickDeath/Localization"
+dir = "menu_translation/vinymods/trickdeath/localization"
 source = "en.json"
 output = "zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/TrickDeath/Localization"
+dir = "menu_translation/vinymods/trickdeath/localization"
 source = "DeathMessages.json"
 output = "DeathMessages_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/UnblockableHits"
+dir = "menu_translation/vinymods/unblockablehits"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/UndodgeableHits"
+dir = "menu_translation/vinymods/undodgeablehits"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/flightframework"
+dir = "menu_translation/flightframework"
 source = "FlightFrameworkStrings.json"
 output = "FlightFrameworkStrings_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/inventoryextension"
+dir = "menu_translation/vinymods/inventoryextension"
 source = "Localization.json"
 output = "Localization_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/vinymods/moreragdoll"
+dir = "menu_translation/vinymods/moreragdoll"
 source = "Language.json"
 output = "Language_zh.json"
 
 
 [[json]]
-dir = "skse_menu_translation/vinymods/Dodgeall"
+dir = "menu_translation/vinymods/dodgeall"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "skse_menu_translation/logwatcher"
+dir = "menu_translation/logwatcher"
 source = "LogWatcherTranslation.json"
 output = "LogWatcherTranslation_zh.json"
 
 [[qt]]
-dir = "Eslifer"
+dir = "eslifer"
 source = "origin/eslifier_translation.ts"
 output = "eslifier_translation.ts"

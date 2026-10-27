@@ -15,7 +15,7 @@ uv run verify_translation.py <name>
 ```
 
 `check_all.py` 按 gate 顺序一次跑完：四个脚本的自检 → `bdd --check` → sync → build → verify，共 8 步。
-单模组用上面四条命令。`verify_translation.py` 覆盖已登记模组、Eslifer 和 Descriptionmods。
+单模组用上面四条命令。`verify_translation.py` 覆盖已登记模组、eslifer 和 descriptionmods。
 `<name>` 接受 `mods.toml` 中的完整 `dir` 或目录 basename；未知名称和验证错误都返回非零退出码。
 
 ## 文件角色与路由
@@ -24,10 +24,15 @@ uv run verify_translation.py <name>
 |---|---|---|---|
 | `mods.toml` 的 line / json / qt | 模组目录内 `translations.json` | 配置生成的 TXT/INI/JSON/TS | 任意模组目录，`translation-io` + `game-translation` |
 | xTranslator XML | `pending.json` | XML 的 `TRADUIT` 字段 | `dialogue_mod_translation/`，`dialogue-xml` + `game-translation` |
-| Description 文件 | `Descriptionmods/translations.json` | `Descriptionmods/zh/...` | `translation-io` + `game-translation` |
-| Qt TS | `Eslifer/translations.json` | `Eslifer/eslifier_translation.ts` | 共用 `qt` 处理器 |
+| Description 文件 | `descriptionmods/translations.json` | `descriptionmods/zh/...` | `translation-io` + `game-translation` |
+| Qt TS | `eslifer/translations.json` | `eslifer/eslifier_translation.ts` | 共用 `qt` 处理器 |
 | 新类型或未知文件 | — | — | `translation-io` 先做准入，再按类型处理 |
 | 任意游戏文本 | — | — | `game-translation` |
+
+目录名统一为小写，不含空格。需要分隔时用连字符（如 `input-manager`、`just-a-block`）。
+`menu_translation/` 同时容纳 MCM 与 SKSE Menu Framework 两类配置菜单，两者的文件格式不同，
+一个模组走哪条构建路径只由 `mods.toml` 的 `line` / `json` 条目决定，不要按目录名推断。
+模组从 MCM 换成 SKSE Menu Framework 时，改 `mods.toml` 的 `source` / `output` / `sep` / `encoding`，目录不必动。
 
 除 `dialogue_mod_translation/` 外，所有模组都以 `translations.json` 为唯一可编辑源。
 禁止直接编辑构建产物。英文源默认只读，只在同步上游版本时修改。Dialogue XML 不登记在 `mods.toml`。
@@ -104,9 +109,9 @@ output = "target.json"
 
 - Dialogue XML：按 `.agents/skills/dialogue-xml/SKILL.md` 执行，顺序为 `stats → pending → apply → stats → --self-check`。
   词典 `bdd.tsv` 是带引号的 TSV，字段可跨行；只能用 `translate.py bdd` 子命令维护，不要手工按行拆。
-- Descriptionmods：编辑 `Descriptionmods/translations.json`，运行 `uv run build_all.py Descriptionmods`，再运行对应验证命令。
-- Qt TS：编辑 `Eslifer/translations.json`，运行 `uv run build_all.py Eslifer`，再运行对应验证命令。
-- 全量验证覆盖所有已登记模组、Eslifer 和 Descriptionmods。
+- descriptionmods：编辑 `descriptionmods/translations.json`，运行 `uv run build_all.py descriptionmods`，再运行对应验证命令。
+- Qt TS：编辑 `eslifer/translations.json`，运行 `uv run build_all.py eslifer`，再运行对应验证命令。
+- 全量验证覆盖所有已登记模组、eslifer 和 descriptionmods。
 
 ## 术语与风格
 
