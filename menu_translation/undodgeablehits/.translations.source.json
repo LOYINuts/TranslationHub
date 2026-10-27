@@ -1,0 +1,41 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "json:menu_translation/undodgeablehits:Language.json": {
+      "menu.add_rule": "Add Rule",
+      "menu.aggro_mult": "Aggression Mult",
+      "menu.base_weight": "Base Weight",
+      "menu.difficulty": "Global Difficulty",
+      "menu.duration_ms": "Duration (ms)",
+      "menu.effect_shader": "Effect Shader",
+      "menu.enabled": "Enabled",
+      "menu.exclusion_normal": "Exclusion Perk (Disable Normal Attacks)",
+      "menu.exclusion_power": "Exclusion Perk (Disable Power Attacks)",
+      "menu.global_normal_title": "Normal Attacks Global Settings",
+      "menu.global_power_title": "Power Attacks Global Settings",
+      "menu.health_mult": "Missing Health Mult",
+      "menu.magnetism": "Attack Magnetism",
+      "menu.magnetism_tooltip": "Only works if TCB is installed.",
+      "menu.normal_label": "Normal Attack",
+      "menu.power_label": "Power Attack",
+      "menu.probability_logic": "Probability Logic:",
+      "menu.remove_rule": "Remove Rule",
+      "menu.rule_name": "Rule Name",
+      "menu.rules_header": "Rules (By Perk)",
+      "menu.settings": "Settings",
+      "menu.shader_duration": "Shader Duration (s)",
+      "menu.sim_bandit_injured": "Normal Bandit - HP: 25%% -> Chance: %.2f%%",
+      "menu.sim_bandit_normal": "Normal Bandit - HP: 100%% -> Chance: %.2f%%",
+      "menu.sim_high_skill_npc": "High Skill NPC - HP: 50%%, Aggro: 3.0, Weapon Skill: 100 -> Chance: %.2f%%",
+      "menu.sim_skilled_npc": "Skilled NPC - HP: 100%%, Aggro: 2.0, Weapon Skill: 40 -> Chance: %.2f%%",
+      "menu.skill_mult": "Skill Mult",
+      "menu.slow_time": "Slow Time on Trigger",
+      "menu.sound_effects": "Sound Effects",
+      "menu.stagger_hit": "Stagger on Hit",
+      "menu.target_perk": "Target Perk",
+      "menu.time_mult": "Time Multiplier",
+      "menu.visual_effects": "Visual Effects"
+    }
+  },
+  "version": 1
+}

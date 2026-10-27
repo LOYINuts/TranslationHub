@@ -340,68 +340,68 @@ dir = "menu_translation/swiftpotionng"
 source = "SwiftPotionNG_Translation.json"
 
 [[json]]
-dir = "menu_translation/vinymods/timecontrol"
+dir = "menu_translation/timecontrol"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/timeisticking"
+dir = "menu_translation/timeisticking"
 source = "en.json"
 output = "zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/input-manager"
+dir = "menu_translation/input-manager"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/dmk"
+dir = "menu_translation/dmk"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/nve"
+dir = "menu_translation/nve"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/npc-stats-editor"
+dir = "menu_translation/npc-stats-editor"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/npc-senses"
+dir = "menu_translation/npc-senses"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/dfg"
+dir = "menu_translation/dfg"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/parryall"
+dir = "menu_translation/parryall"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/edf"
+dir = "menu_translation/edf"
 source = "Language.json"
 output = "Language_zh.json"
 
 
 [[json]]
-dir = "menu_translation/vinymods/inlos"
+dir = "menu_translation/inlos"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/booksofperks"
+dir = "menu_translation/booksofperks"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/quickcommands"
+dir = "menu_translation/quickcommands"
 source = "Language.json"
 output = "Language_zh.json"
 
@@ -422,22 +422,22 @@ source = "NSM_Language.json"
 output = "NSM_Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/bfcong"
+dir = "menu_translation/bfcong"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/hmdp"
+dir = "menu_translation/hmdp"
 source = "DaysPassed_Language.json"
 output = "DaysPassed_Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/just-a-block"
+dir = "menu_translation/just-a-block"
 source = "JusBlock_Language.json"
 output = "JusBlock_Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/quick-swap"
+dir = "menu_translation/quick-swap"
 source = "Language.json"
 output = "Language_zh.json"
 
@@ -447,69 +447,69 @@ source = "en.json"
 output = "zh-cn.json"
 
 [[json]]
-dir = "menu_translation/vinymods/statstracker/localization"
+dir = "menu_translation/statstracker/localization"
 source = "DodgeAll.json"
 output = "DodgeAll_zh.json"
 translation_section = "DodgeAll.json"
 
 [[json]]
-dir = "menu_translation/vinymods/statstracker/localization"
+dir = "menu_translation/statstracker/localization"
 source = "HMDP.json"
 output = "HMDP_zh.json"
 translation_section = "HMDP.json"
 
 [[json]]
-dir = "menu_translation/vinymods/statstracker/localization"
+dir = "menu_translation/statstracker/localization"
 source = "ParryAll.json"
 output = "ParryAll_zh.json"
 translation_section = "ParryAll.json"
 
 [[json]]
-dir = "menu_translation/vinymods/statstracker/localization"
+dir = "menu_translation/statstracker/localization"
 source = "STM_Localization.json"
 output = "STM_Localization_zh.json"
 translation_section = "STM_Localization.json"
 
 [[json]]
-dir = "menu_translation/vinymods/statstracker/localization"
+dir = "menu_translation/statstracker/localization"
 source = "TrickDeath.json"
 output = "TrickDeath_zh.json"
 translation_section = "TrickDeath.json"
 
 [[json]]
-dir = "menu_translation/vinymods/statstracker/localization"
+dir = "menu_translation/statstracker/localization"
 source = "UnblockableHits.json"
 output = "UnblockableHits_zh.json"
 translation_section = "UnblockableHits.json"
 
 [[json]]
-dir = "menu_translation/vinymods/statstracker/localization"
+dir = "menu_translation/statstracker/localization"
 source = "UndodgeableHits.json"
 output = "UndodgeableHits_zh.json"
 translation_section = "UndodgeableHits.json"
 
 [[json]]
-dir = "menu_translation/vinymods/trickdeath"
+dir = "menu_translation/trickdeath"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/trickdeath/localization"
+dir = "menu_translation/trickdeath/localization"
 source = "en.json"
 output = "zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/trickdeath/localization"
+dir = "menu_translation/trickdeath/localization"
 source = "DeathMessages.json"
 output = "DeathMessages_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/unblockablehits"
+dir = "menu_translation/unblockablehits"
 source = "Language.json"
 output = "Language_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/undodgeablehits"
+dir = "menu_translation/undodgeablehits"
 source = "Language.json"
 output = "Language_zh.json"
 
@@ -519,18 +519,18 @@ source = "FlightFrameworkStrings.json"
 output = "FlightFrameworkStrings_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/inventoryextension"
+dir = "menu_translation/inventoryextension"
 source = "Localization.json"
 output = "Localization_zh.json"
 
 [[json]]
-dir = "menu_translation/vinymods/moreragdoll"
+dir = "menu_translation/moreragdoll"
 source = "Language.json"
 output = "Language_zh.json"
 
 
 [[json]]
-dir = "menu_translation/vinymods/dodgeall"
+dir = "menu_translation/dodgeall"
 source = "Language.json"
 output = "Language_zh.json"
 
