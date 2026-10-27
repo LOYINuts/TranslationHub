@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/mcmmemory:interface/translations/Translation.json": {
+    "json:menu_translation/mcmmemory:SKSE/Plugins/MCMMemory/Translation/Translation.json": {
       "Activity.Column.AlreadySet": "Already set",
       "Activity.Column.Changed": "Changed",
       "Activity.Column.Result": "Result",

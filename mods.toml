@@ -328,12 +328,12 @@ source = "interface/translations/SKSEMenuFrameworkStrings.json"
 
 [[json]]
 dir = "menu_translation/hudng"
-source = "interface/translations/english.json"
-output = "interface/translations/chinese.json"
+source = "SKSE/Plugins/HudNG/Translations/english.json"
+output = "SKSE/Plugins/HudNG/Translations/chinese.json"
 
 [[json]]
 dir = "menu_translation/mcmmemory"
-source = "interface/translations/Translation.json"
+source = "SKSE/Plugins/MCMMemory/Translation/Translation.json"
 
 [[json]]
 dir = "menu_translation/swiftpotionng"
@@ -404,8 +404,8 @@ output = "Viny Mods/quickcommands/Language_zh.json"
 
 [[json]]
 dir = "mod_interface_translation/modex"
-source = "interface/translations/english.json"
-output = "interface/translations/chinese.json"
+source = "Interface/Modex/language/english.json"
+output = "Interface/Modex/language/chinese.json"
 
 
 [[json]]
@@ -415,8 +415,8 @@ output = "interface/translations/config_zh.json"
 
 [[json]]
 dir = "mod_interface_translation/newskillmenu"
-source = "interface/translations/NSM_Language.json"
-output = "interface/translations/NSM_Language_zh.json"
+source = "Viny Mods/NSM/Localization/NSM_Language.json"
+output = "Viny Mods/NSM/Localization/NSM_Language_zh.json"
 
 [[json]]
 dir = "menu_translation/bfcong"
@@ -441,8 +441,8 @@ output = "Viny Mods/Quick Swap/Language_zh.json"
 
 [[json]]
 dir = "mod_interface_translation/outfitdistributor"
-source = "interface/translations/en.json"
-output = "interface/translations/zh-cn.json"
+source = "SKSE/Plugins/OutfitDist/Localization/en.json"
+output = "SKSE/Plugins/OutfitDist/Localization/zh-cn.json"
 
 [[json]]
 dir = "menu_translation/dodgeall"
@@ -516,15 +516,11 @@ source = "Viny Mods/UndodgeableHits/Language.json"
 output = "Viny Mods/UndodgeableHits/Language_zh.json"
 translation_section = "Language.json"
 
-[[json]]
-dir = "menu_translation/flightframework"
-source = "interface/translations/FlightFrameworkStrings.json"
-output = "interface/translations/FlightFrameworkStrings_zh.json"
 
 [[json]]
 dir = "menu_translation/inventoryextension"
-source = "interface/translations/Localization.json"
-output = "interface/translations/Localization_zh.json"
+source = "Viny Mods/Inventory Extension/Localization/Localization.json"
+output = "Viny Mods/Inventory Extension/Localization/Localization_zh.json"
 
 [[json]]
 dir = "menu_translation/moreragdoll"
@@ -540,8 +536,8 @@ translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/logwatcher"
-source = "interface/translations/LogWatcherTranslation.json"
-output = "interface/translations/LogWatcherTranslation_zh.json"
+source = "SKSE/Plugins/LogWatcher/Translation/LogWatcherTranslation.json"
+output = "SKSE/Plugins/LogWatcher/Translation/LogWatcherTranslation_zh.json"
 
 [[qt]]
 dir = "eslifer"

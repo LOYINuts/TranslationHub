@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/inventoryextension:interface/translations/Localization.json": {
+    "json:menu_translation/inventoryextension:Viny Mods/Inventory Extension/Localization/Localization.json": {
       "input.action_name": "Action name",
       "input.add": "+ Add Input",
       "input.cancel": "Cancel",
