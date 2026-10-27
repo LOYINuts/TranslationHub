@@ -18,6 +18,30 @@ uv run verify_translation.py <name>
 单模组用上面四条命令。`verify_translation.py` 覆盖已登记模组、eslifer 和 descriptionmods。
 `<name>` 接受 `mods.toml` 中的完整 `dir` 或目录 basename；未知名称和验证错误都返回非零退出码。
 
+## 打包
+
+```bash
+uv run package.py <name>              # 构建 + 打包成 dist/<name>/ 与 dist/<name>.7z
+uv run package.py <name> --list       # 只看打包计划，不执行
+uv run package.py --all --no-archive  # 全量，只生成目录
+```
+
+中文玩家既可能跑英文环境（游戏读 `*_english.*` / `*_EN.*`），也可能跑中文环境
+（读 `*_chinese.*` / `*_ZH.*`）。两种文件名都打包，内容都是中文。
+
+产物落到哪个游戏路径由 `mods.toml` 的 `package` 字段决定，可写多个落点：
+
+```toml
+package = [
+  "interface/translations/X_english.txt",
+  "interface/translations/X_chinese.txt",
+]
+```
+
+未写 `package` 时按 `interface/translations/<output 文件名>` 推导并警告。
+游戏路径不在 `interface/translations/` 的模组（如 SKSE 插件）必须手配，
+否则打包结果会被游戏忽略。`dist/` 已在 `.gitignore` 中。
+
 ## 文件角色与路由
 
 | 文件类型 | 可编辑源 | 产物 / 目标 | 路径与所需技能 |

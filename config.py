@@ -2,9 +2,21 @@
 
 import os
 import tomllib
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from locale_utils import WRITE_ENCODINGS
+
+
+def normalize_package(value) -> list[str]:
+    """把 package 配置统一成字符串列表。
+
+    TOML 里可以写单个字符串或字符串数组，两种都接受。
+    """
+    if not value:
+        return []
+    if isinstance(value, str):
+        return [value]
+    return [str(item) for item in value]
 
 
 def setup_cli_logging(verbose: bool = False) -> None:
@@ -36,6 +48,8 @@ class ModConfig:
     output_sep: str | None = None
     value_field: int = 1
     trim_trailing_fields: bool = False
+    # 打包落点：产物要复制到哪些游戏路径（相对打包根目录）
+    package: list[str] = field(default_factory=list)
 
     def __post_init__(self):
         if self.output_sep is None:
@@ -48,6 +62,7 @@ class ModJson:
     source: str
     output: str = ""
     translation_section: str | None = None
+    package: list[str] = field(default_factory=list)
 
     def __post_init__(self):
         if not self.output:
@@ -61,6 +76,7 @@ class ModQt:
     dir: str
     source: str
     output: str
+    package: list[str] = field(default_factory=list)
 
 def matches_filter(mod_dir: str, filters) -> bool:
     """No filter = all. Accept full path or basename."""
@@ -116,6 +132,7 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             output_sep=item.get("output_sep"),
             value_field=item.get("value_field", 1),
             trim_trailing_fields=item.get("trim_trailing_fields", False),
+            package=normalize_package(item.get("package")),
         )
         line_configs.append(cfg)
     json_configs = []
@@ -131,6 +148,7 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             source=item["source"],
             output=item.get("output", ""),
             translation_section=item.get("translation_section"),
+            package=normalize_package(item.get("package")),
         )
         json_configs.append(cfg)
     qt_configs = []
@@ -139,6 +157,11 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
             if field not in item:
                 raise ValueError(f"qt[{idx}]: missing required field '{field}'")
         qt_configs.append(
-            ModQt(dir=item["dir"], source=item["source"], output=item["output"])
+            ModQt(
+                dir=item["dir"],
+                source=item["source"],
+                output=item["output"],
+                package=normalize_package(item.get("package")),
+            )
         )
     return line_configs, json_configs, qt_configs

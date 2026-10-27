@@ -17,6 +17,10 @@ source = "AchievementInjector_english.txt"
 output = "AchievementInjector_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
+package = [
+  "interface/translations/AchievementInjector_english.txt",
+  "interface/translations/AchievementInjector_chinese.txt",
+]
 
 [[line]]
 dir = "menu_translation/achievementinjector"
@@ -24,6 +28,10 @@ source = "AchievementsData/Localizations/Dawnguard_EN.txt"
 output = "AchievementsData/Localizations/Dawnguard_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
+package = [
+  "SKSE/Plugins/AchievementsData/Localizations/Dawnguard_EN.txt",
+  "SKSE/Plugins/AchievementsData/Localizations/Dawnguard_ZH.txt",
+]
 
 [[line]]
 dir = "menu_translation/achievementinjector"
@@ -31,6 +39,10 @@ source = "AchievementsData/Localizations/Dragonborn_EN.txt"
 output = "AchievementsData/Localizations/Dragonborn_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
+package = [
+  "SKSE/Plugins/AchievementsData/Localizations/Dragonborn_EN.txt",
+  "SKSE/Plugins/AchievementsData/Localizations/Dragonborn_ZH.txt",
+]
 
 [[line]]
 dir = "menu_translation/achievementinjector"
@@ -38,6 +50,10 @@ source = "AchievementsData/Localizations/Hearthfire_EN.txt"
 output = "AchievementsData/Localizations/Hearthfire_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
+package = [
+  "SKSE/Plugins/AchievementsData/Localizations/Hearthfire_EN.txt",
+  "SKSE/Plugins/AchievementsData/Localizations/Hearthfire_ZH.txt",
+]
 
 [[line]]
 dir = "menu_translation/achievementinjector"
@@ -45,6 +61,10 @@ source = "AchievementsData/Localizations/SkyrimSE_EN.txt"
 output = "AchievementsData/Localizations/SkyrimSE_ZH.txt"
 sep = "\t"
 encoding = "utf-8"
+package = [
+  "SKSE/Plugins/AchievementsData/Localizations/SkyrimSE_EN.txt",
+  "SKSE/Plugins/AchievementsData/Localizations/SkyrimSE_ZH.txt",
+]
 
 [[line]]
 dir = "menu_translation/fuck"
