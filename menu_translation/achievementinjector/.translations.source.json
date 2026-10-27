@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/achievementinjector:AchievementInjector_english.txt": {
+    "line:menu_translation/achievementinjector:interface/translations/AchievementInjector_english.txt": {
       "$ACH_HIDDEN": "Hidden Description",
       "$ACH_LEFT": "Move To Groups",
       "$ACH_LOCKED": "Locked",
@@ -23,7 +23,7 @@
       "$ACH_UNLOCK": "Unlocked <month> <day>, <year> at <hour>:<minute>",
       "$ACH_UPDOWN": "Move up/down"
     },
-    "line:menu_translation/achievementinjector:AchievementsData/Localizations/Dawnguard_EN.txt": {
+    "line:menu_translation/achievementinjector:SKSE/Plugins/AchievementsData/Localizations/Dawnguard_EN.txt": {
       "$DESC_A New You": "Change your face",
       "$DESC_Auriel's Bow": "Use the special power of Auriel's Bow",
       "$DESC_Awakening": "Complete 'Awakening'",
@@ -46,7 +46,7 @@
       "$NAME_Vampire Mastered": "Vampire Mastered",
       "$NAME_Werewolf Mastered": "Werewolf Mastered"
     },
-    "line:menu_translation/achievementinjector:AchievementsData/Localizations/Dragonborn_EN.txt": {
+    "line:menu_translation/achievementinjector:SKSE/Plugins/AchievementsData/Localizations/Dragonborn_EN.txt": {
       "$DESC_At the Summit of Apocrypha": "Complete 'At the Summit of Apocrypha'",
       "$DESC_Dragon Aspect": "Learn all 3 words of Dragon Aspect",
       "$DESC_Dragonrider": "Tame and ride 5 dragons",
@@ -68,7 +68,7 @@
       "$NAME_The Path of Knowledge": "The Path of Knowledge",
       "$NAME_The Temple of Miraak": "The Temple of Miraak"
     },
-    "line:menu_translation/achievementinjector:AchievementsData/Localizations/Hearthfire_EN.txt": {
+    "line:menu_translation/achievementinjector:SKSE/Plugins/AchievementsData/Localizations/Hearthfire_EN.txt": {
       "$DESC_Architect": "Build three wings on a house",
       "$DESC_Land Baron": "Buy three plots of land",
       "$DESC_Landowner": "Buy a plot of land",
@@ -80,7 +80,7 @@
       "$NAME_Master Architect": "Master Architect",
       "$NAME_Proud Parent": "Proud Parent"
     },
-    "line:menu_translation/achievementinjector:AchievementsData/Localizations/SkyrimSE_EN.txt": {
+    "line:menu_translation/achievementinjector:SKSE/Plugins/AchievementsData/Localizations/SkyrimSE_EN.txt": {
       "$Apprentice Stone": "The Apprentice Stone",
       "$Atronach Stone": "The Atronach Stone",
       "$DESC_Adept": "Reach Level 10",

@@ -69,10 +69,22 @@ uv run package.py <name> --list       # 只看打包计划，不执行
 uv run package.py --all --no-archive  # 全量，只生成目录
 ```
 
-落点由 `mods.toml` 的 `package` 字段决定，可写多个；未写时按 `interface/translations/<output>` 推导并警告，
-实际游戏路径不在该目录的模组（如 SKSE 插件）必须手配，否则被游戏忽略。
-玩家可能跑英文环境（读 `*_english.*` / `*_EN.*`）或中文环境（读 `*_chinese.*` / `*_ZH.*`），
-两种文件名都打包，内容都是中文。`dist/` 已在 `.gitignore` 中。
+落点由 `mods.toml` 的 `package` 字段决定，可写多个。未写时按 `output` 推导：
+`output` 带 `interface/` 或 `SKSE/` 前缀则直接沿用，否则拼 `interface/translations/` 并警告。
+
+模组目录默认把工作目录做成游戏结构，`source` / `output` / `package` 三者路径一致，不用再手写 `package`：
+
+```text
+menu_translation/<mod>/
+  interface/translations/X_english.txt      ← source
+  interface/translations/X_chinese.txt      ← output
+  SKSE/Plugins/<plugin>/Y_EN.txt            ← source
+  SKSE/Plugins/<plugin>/Y_ZH.txt            ← output
+```
+
+玩家可能跑英文环境（读 `*_english.*` / `*_EN.*`）或中文环境（读 `*_chinese.*` / `*_ZH.*`）。
+`interface/translations/` 下两种文件名都打包；`SKSE/Plugins/` 下只打英文名，
+插件按固定文件名读取，中文名放进去不会被加载。内容都是中文。`dist/` 已在 `.gitignore` 中。
 
 ## 代码约定
 

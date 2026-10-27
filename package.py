@@ -95,7 +95,23 @@ def _english_twin(filename: str) -> str | None:
 
 
 def _default_items(built: str, output: str, mod_dir: str) -> list[PackItem]:
-    """未配 package 时的默认落点：中文名 + 英文名各一份。"""
+    """未配 package 时的落点。
+
+    工作目录若已做成游戏结构（output 带 interface/ 或 SKSE/ 前缀），直接用
+    output 路径；中文产物同时落一份到同目录的英文名下（游戏可能跑英文环境）。
+    否则按旧规则推导。
+    """
+    if output.startswith(("interface/", "SKSE/", "Data/")):
+        directory, filename = os.path.split(output)
+        twin = _english_twin(filename)
+        # SKSE 插件按固定文件名读取，只认英文名，多放中文名不会被加载
+        if output.startswith("SKSE/") and twin:
+            return [PackItem(built=built, package_path=f"{directory}/{twin}")]
+        items = [PackItem(built=built, package_path=output)]
+        if twin and twin != filename:
+            items.append(PackItem(built=built, package_path=f"{directory}/{twin}"))
+        return items
+
     filename = os.path.basename(output)
     items = [PackItem(built=built, package_path=f"{DEFAULT_DIR}/{filename}")]
     twin = _english_twin(filename)
