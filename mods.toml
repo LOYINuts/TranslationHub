@@ -348,10 +348,6 @@ output = "Viny Mods/Time Control/Language_zh.json"
 dir = "menu_translation/time-is-ticking"
 source = "Viny Mods/Time is Ticking/Localization/en.json"
 output = "Viny Mods/Time is Ticking/Localization/zh.json"
-package = [
-  "Viny Mods/Time is Ticking/Localization/zh.json",
-  "interface/translations/en.json",
-]
 
 [[json]]
 dir = "menu_translation/input-manager"
