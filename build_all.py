@@ -4,7 +4,7 @@
 用法：
   uv run build_all.py                 # Build all mods
   uv run build_all.py --stats          # Show stats without building
-  uv run build_all.py FUCK KillFeed    # Short names or relative paths are accepted
+  uv run build_all.py inventory-reforged hud-ng   # Short names or relative paths are accepted
 
 数据驱动：翻译源位于各模组的 translations.json，构建配置位于 mods.toml。
 数据源统一为各模组的 `translations.json`，配置统一放在 `mods.toml`。

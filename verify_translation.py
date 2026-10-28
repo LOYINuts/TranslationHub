@@ -2,9 +2,9 @@
 翻译校验脚本：检查单个模组或所有模组的翻译完整性。
 
 用法：
-  uv run verify_translation.py              # 校验所有模组
-  uv run verify_translation.py FUCKRACE     # 校验指定模组
-  uv run verify_translation.py FUCK FUCKRACE  # 校验多个
+  uv run verify_translation.py                # 校验所有模组
+  uv run verify_translation.py hud-ng         # 校验指定模组
+  uv run verify_translation.py hud-ng eslifer # 校验多个
 
 检查项：
   - 翻译键覆盖

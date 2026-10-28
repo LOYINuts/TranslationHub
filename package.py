@@ -105,8 +105,8 @@ def _default_items(built: str, source: str, output: str, mod_dir: str) -> list[P
 
 def plan_line(cfg: ModConfig) -> list[PackItem]:
     """line 模组的打包计划。"""
-    if "*" in cfg.source or not os.path.splitext(cfg.output)[1]:
-        # glob 型：产物是平铺的 <源名>_zh<扩展名>，与源同目录
+    if glob.has_magic(cfg.source) or not os.path.splitext(cfg.output)[1]:
+        # glob 型：产物是平铺的 <源名>_zh<扩展名>，落在 output 目录
         if cfg.package:
             return _resolve(cfg, cfg.output, cfg.package)
         items = []
@@ -117,7 +117,7 @@ def plan_line(cfg: ModConfig) -> list[PackItem]:
             stem, ext = os.path.splitext(os.path.basename(source))
             if stem.endswith("_zh"):
                 continue
-            built = f"{stem}_zh{ext}"
+            built = os.path.normpath(os.path.join(cfg.output, f"{stem}_zh{ext}"))
             # 游戏读的是源文件名，打包时去掉 _zh 后缀，与源同名
             items.append(PackItem(built=built, package_path=f"{stem}{ext}"))
         return items
@@ -261,10 +261,20 @@ def main() -> int:
 
     # 同一个模组目录下的多个配置条目要合成一个包
     grouped: dict[str, list[PackItem]] = {}
+    skipped: set[str] = set()
     for cfg in targets:
         items = plan_for(cfg)
         if items:
             grouped.setdefault(cfg.dir, []).extend(items)
+        else:
+            skipped.add(cfg.dir)
+
+    for mod_dir in sorted(skipped - set(grouped)):
+        log.info(f"[跳过] {mod_dir}: 未配置 package，没有可打包的产物")
+
+    if not grouped:
+        log.error("没有可打包的产物")
+        return 1
 
     ok = 0
     for mod_dir, items in grouped.items():
