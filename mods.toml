@@ -330,6 +330,7 @@ source = "SKSE/Plugins/SKSEMenuFrameworkStrings.json"
 dir = "menu_translation/hud-ng"
 source = "SKSE/Plugins/HudNG/Translations/english.json"
 output = "SKSE/Plugins/HudNG/Translations/chinese.json"
+package = "SKSE/Plugins/HudNG/Translations/chinese.json"
 
 [[json]]
 dir = "menu_translation/mcm-memory"
