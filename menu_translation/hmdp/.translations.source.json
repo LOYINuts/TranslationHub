@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/hmdp:Viny Mods/HMDP/DaysPassed_Language.json": {
+    "json:menu_translation/hmdp:SKSE/Plugins/DaysPassed_Language.json": {
       "common.action": "Ação",
       "common.actions": "Ações",
       "common.cancel": "Cancelar",

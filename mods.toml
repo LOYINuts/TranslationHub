@@ -361,8 +361,8 @@ output = "Viny Mods/DMK/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/nve"
-source = "Viny Mods/NPC Visual Editor - NVE/Language.json"
-output = "Viny Mods/NPC Visual Editor - NVE/Language_zh.json"
+source = "Viny Mods/NPC Visual/Language.json"
+output = "Viny Mods/NPC Visual/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/npc-stats-editor"
@@ -381,8 +381,8 @@ output = "Viny Mods/Dynamic Forms Generator/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/parryall"
-source = "Viny Mods/Parryall/Language.json"
-output = "Viny Mods/Parryall/Language_zh.json"
+source = "Viny Mods/Parry for all/Language.json"
+output = "Viny Mods/Parry for all/Language_zh.json"
 translation_section = "Language.json"
 
 [[json]]
@@ -393,8 +393,8 @@ output = "Viny Mods/EDF/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/inlos"
-source = "Viny Mods/inlos/Language.json"
-output = "Viny Mods/inlos/Language_zh.json"
+source = "Viny Mods/INLOS/Language.json"
+output = "Viny Mods/INLOS/Language_zh.json"
 
 
 [[json]]
@@ -425,14 +425,14 @@ output = "SKSE/Plugins/BFCO NG/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/hmdp"
-source = "Viny Mods/HMDP/DaysPassed_Language.json"
-output = "Viny Mods/HMDP/DaysPassed_Language_zh.json"
+source = "SKSE/Plugins/DaysPassed_Language.json"
+output = "SKSE/Plugins/DaysPassed_Language_zh.json"
 translation_section = "DaysPassed_Language.json"
 
 [[json]]
 dir = "menu_translation/just-a-block"
-source = "Viny Mods/Just a block/JusBlock_Language.json"
-output = "Viny Mods/Just a block/JusBlock_Language_zh.json"
+source = "SKSE/Plugins/JusBlock_Language.json"
+output = "SKSE/Plugins/JusBlock_Language_zh.json"
 
 [[json]]
 dir = "menu_translation/quick-swap"
@@ -524,8 +524,8 @@ output = "Viny Mods/Inventory Extension/Localization/Localization_zh.json"
 
 [[json]]
 dir = "menu_translation/moreragdoll"
-source = "Viny Mods/moreragdoll/Language.json"
-output = "Viny Mods/moreragdoll/Language_zh.json"
+source = "Viny Mods/More Ragdoll/Language.json"
+output = "Viny Mods/More Ragdoll/Language_zh.json"
 
 
 [[json]]
