@@ -57,9 +57,9 @@ uv run dialogue_mod_translation/translate.py apply <mod>/pending.json
 ## 打包
 
 ```bash
-uv run package.py <name>              # 构建 + dist/<name>/ 与 dist/<name>.7z
+uv run package.py <name>              # 构建 + dist/<name>/
 uv run package.py <name> --list       # 只看计划
-uv run package.py --all --no-archive  # 全量，只出目录
+uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 ```
 
 落点取 `mods.toml` 的 `package`（可多个）；未写时按 `output` 推导：带 `interface/` / `SKSE/` 前缀直接沿用，

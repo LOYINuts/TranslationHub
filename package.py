@@ -3,13 +3,13 @@
 中文玩家既可能在英文环境（游戏读 `*_english.*` / `*_EN.*`），也可能在中文
 环境（读 `*_chinese.*` / `*_ZH.*`），所以两个文件都打包，内容都是中文。
 
-产物落到 dist/<mod>/，压缩包是 dist/<mod>.7z。
+产物落到 dist/<mod>/；要 dist/<mod>.7z 就加 --archive。
 
 用法:
     uv run package.py achievementinjector
     uv run package.py achievementinjector obodyng
     uv run package.py --all
-    uv run package.py --all --no-archive
+    uv run package.py --all --archive     # 额外压成 dist/<mod>.7z
     uv run package.py --all --list        # 只列出会打包什么，不执行
 """
 
@@ -220,7 +220,7 @@ def main() -> int:
     )
     parser.add_argument("mods", nargs="*", help="模组目录名或 basename")
     parser.add_argument("--all", action="store_true", help="打包全部已登记模组")
-    parser.add_argument("--no-archive", action="store_true", help="只生成目录，不压 7z")
+    parser.add_argument("--archive", action="store_true", help="额外压成 dist/<mod>.7z")
     parser.add_argument("--list", action="store_true", help="只列出打包计划，不执行")
     parser.add_argument("--skip-build", action="store_true", help="不重新构建，直接用现有产物")
     parser.add_argument("--verbose", action="store_true", help="输出 DEBUG 日志")
@@ -238,9 +238,9 @@ def main() -> int:
         log.error("没有匹配的模组")
         return 1
 
-    seven_zip = None if (args.no_archive or args.list) else find_seven_zip()
-    if not args.no_archive and not args.list and not seven_zip:
-        log.error("未找到 7z 命令，请安装 7-Zip 或加 --no-archive")
+    seven_zip = None if (args.list or not args.archive) else find_seven_zip()
+    if args.archive and not args.list and not seven_zip:
+        log.error("未找到 7z 命令，请安装 7-Zip 或去掉 --archive")
         return 1
 
     if not args.skip_build and not args.list:
@@ -268,7 +268,7 @@ def main() -> int:
 
     ok = 0
     for mod_dir, items in grouped.items():
-        if pack_group(mod_dir, items, not args.no_archive, seven_zip, args.list):
+        if pack_group(mod_dir, items, args.archive, seven_zip, args.list):
             ok += 1
 
     log.info(f"打包完成：{ok}/{len(grouped)}")
