@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/quick-swap:Viny Mods/Quick Swap/Language.json": {
+    "json:menu_translation/quickswap:Viny Mods/Quick Swap/Language.json": {
       "common.none": "None",
       "common.search_placeholder": "Filter...",
       "menu.enable_non_cancel_attack": "Enable Non Cancel Attack",

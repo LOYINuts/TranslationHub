@@ -32,7 +32,8 @@ uv run verify_translation.py <name>
 line/json 模组目录下的 `.translations.source.json` 是英文基线，由 `sync_translation.py` 维护并提交，不要手改；
 Qt TS 不用基线，因为源文本本身就是键。
 
-目录名小写、不含空格，需要分隔时用连字符（如 `input-manager`）。
+目录名小写、不含空格，多词直接连写（如 `inputmanager`、`justablock`、`npcstatseditor`）。
+模组目录名只用于仓库内部和 `dist/<name>`，不影响游戏路径；游戏路径由 `source` / `output` 决定。
 `menu_translation/` 同时容纳 MCM 与 SKSE Menu Framework 两类配置菜单，走哪条构建路径只由
 `mods.toml` 的 `line` / `json` 条目决定，不要按目录名推断。换框架时改 `source` / `output` / `sep` / `encoding`，目录不必动。
 

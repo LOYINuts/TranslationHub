@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/parryall:Viny Mods/Parry for all/Language.json": {
+    "json:menu_translation/parryforall:Viny Mods/Parry for all/Language.json": {
       "menu.add_rule": "+ Add Rule",
       "menu.arrow_cost": "Arrow Cost",
       "menu.arrow_cost_global": "Use Global For Arrow Cost",
@@ -201,7 +201,7 @@
       "menu.w2w_settings_header": "Weapon to Weapon (W2W) Settings",
       "menu.w2w_skill_mult": "Skill Mult"
     },
-    "json:menu_translation/parryall:SKSE/Plugins/Stats Tracker/Localization/ParryAll.json": {
+    "json:menu_translation/parryforall:SKSE/Plugins/Stats Tracker/Localization/ParryAll.json": {
       "parry.category": "{{$General}}",
       "parry.desc": "How many hits you parried",
       "parry.desc2": "How many hits you perfect parried",

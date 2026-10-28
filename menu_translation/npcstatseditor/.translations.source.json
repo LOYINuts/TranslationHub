@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/npc-stats-editor:Viny Mods/NPC Stats Editor/Language.json": {
+    "json:menu_translation/npcstatseditor:Viny Mods/NPC Stats Editor/Language.json": {
       "btn.add": "Add",
       "btn.apply": "Apply in-game",
       "btn.apply_preset": "Apply",

@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/just-a-block:SKSE/Plugins/JusBlock_Language.json": {
+    "json:menu_translation/justablock:SKSE/Plugins/JusBlock_Language.json": {
       "common.action": "Action",
       "common.actions": "Actions",
       "common.cancel": "Cancel",

@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/dodgeall:Viny Mods/Dodge for all/Language.json": {
+    "json:menu_translation/dodgeforall:Viny Mods/Dodge for all/Language.json": {
       "common.action": "Action",
       "common.actions": "Actions",
       "common.cancel": "Cancel",
@@ -218,7 +218,7 @@
       "menu.value_source_global": "Global",
       "text.none": "None"
     },
-    "json:menu_translation/dodgeall:SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json": {
+    "json:menu_translation/dodgeforall:SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json": {
       "dodge.category": "{{$General}}",
       "dodge.desc": "How many hits you dodged",
       "dodge.desc2": "How many hits you perfect dodged",

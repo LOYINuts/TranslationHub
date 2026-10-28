@@ -297,7 +297,7 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "menu_translation/qucikitemtransfer"
+dir = "menu_translation/quickitemtransfer"
 source = "interface/translations/Quick Item Transfer_english.txt"
 output = "interface/translations/Quick Item Transfer_chinese.txt"
 sep = "\t"
@@ -350,7 +350,7 @@ source = "interface/translations/en.json"
 output = "interface/translations/zh.json"
 
 [[json]]
-dir = "menu_translation/input-manager"
+dir = "menu_translation/inputmanager"
 source = "Viny Mods/Input Manager/Language.json"
 output = "Viny Mods/Input Manager/Language_zh.json"
 
@@ -365,12 +365,12 @@ source = "Viny Mods/NPC Visual/Language.json"
 output = "Viny Mods/NPC Visual/Language_zh.json"
 
 [[json]]
-dir = "menu_translation/npc-stats-editor"
+dir = "menu_translation/npcstatseditor"
 source = "Viny Mods/NPC Stats Editor/Language.json"
 output = "Viny Mods/NPC Stats Editor/Language_zh.json"
 
 [[json]]
-dir = "menu_translation/npc-senses"
+dir = "menu_translation/npcsenses"
 source = "Viny Mods/NPC Senses/Language.json"
 output = "Viny Mods/NPC Senses/Language_zh.json"
 
@@ -380,7 +380,7 @@ source = "Viny Mods/Dynamic Forms Generator/Language.json"
 output = "Viny Mods/Dynamic Forms Generator/Language_zh.json"
 
 [[json]]
-dir = "menu_translation/parryall"
+dir = "menu_translation/parryforall"
 source = "Viny Mods/Parry for all/Language.json"
 output = "Viny Mods/Parry for all/Language_zh.json"
 translation_section = "Language.json"
@@ -430,12 +430,12 @@ output = "SKSE/Plugins/DaysPassed_Language_zh.json"
 translation_section = "DaysPassed_Language.json"
 
 [[json]]
-dir = "menu_translation/just-a-block"
+dir = "menu_translation/justablock"
 source = "SKSE/Plugins/JusBlock_Language.json"
 output = "SKSE/Plugins/JusBlock_Language_zh.json"
 
 [[json]]
-dir = "menu_translation/quick-swap"
+dir = "menu_translation/quickswap"
 source = "Viny Mods/Quick Swap/Language.json"
 output = "Viny Mods/Quick Swap/Language_zh.json"
 
@@ -445,7 +445,7 @@ source = "SKSE/Plugins/OutfitDist/Localization/en.json"
 output = "SKSE/Plugins/OutfitDist/Localization/zh-cn.json"
 
 [[json]]
-dir = "menu_translation/dodgeall"
+dir = "menu_translation/dodgeforall"
 source = "SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/DodgeAll_zh.json"
 translation_section = "DodgeAll.json"
@@ -457,7 +457,7 @@ output = "SKSE/Plugins/Stats Tracker/Localization/HMDP_zh.json"
 translation_section = "HMDP.json"
 
 [[json]]
-dir = "menu_translation/parryall"
+dir = "menu_translation/parryforall"
 source = "SKSE/Plugins/Stats Tracker/Localization/ParryAll.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/ParryAll_zh.json"
 translation_section = "ParryAll.json"
@@ -529,7 +529,7 @@ output = "Viny Mods/More Ragdoll/Language_zh.json"
 
 
 [[json]]
-dir = "menu_translation/dodgeall"
+dir = "menu_translation/dodgeforall"
 source = "Viny Mods/Dodge for all/Language.json"
 output = "Viny Mods/Dodge for all/Language_zh.json"
 translation_section = "Language.json"
