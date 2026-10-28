@@ -1,0 +1,22 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "line:menu_translation/start-menu-redesigned:interface/translations/StartMenuRedesigned_english.txt": {
+      "$SMR_START_CHARACTERS": "CHARACTERS",
+      "$SMR_START_CHECKING_SAVE": "Checking save...",
+      "$SMR_START_CONTINUE_CONFIRM": "Continue with this save?",
+      "$SMR_START_DATE": "DATE",
+      "$SMR_START_LOADING_SAVE": "Loading latest save...",
+      "$SMR_START_LOCATION": "LOCATION",
+      "$SMR_START_NO_SAVES": "No saved games are available.",
+      "$SMR_START_PLAYTIME": "PLAYTIME",
+      "$SMR_START_PREVIEW_FAILED": "The latest save could not be previewed.",
+      "$SMR_START_QUIT_CONFIRM": "Quit to desktop?",
+      "$SMR_START_SAVES": "SAVES",
+      "$SMR_START_SAVE_CORRUPT": "This save is corrupt and cannot be loaded.",
+      "$SMR_START_SAVE_OBSOLETE": "This save is from an older version and cannot be loaded.",
+      "$SMR_START_SELECT_CHARACTER_TO_VIEW_SAVES": "Select a character to view their saves."
+    }
+  },
+  "version": 1
+}

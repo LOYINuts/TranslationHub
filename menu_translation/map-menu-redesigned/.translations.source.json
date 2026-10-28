@@ -1,0 +1,31 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "line:menu_translation/map-menu-redesigned:interface/translations/MapMenuRedesigned_english.txt": {
+      "$MRD_CloseMarkerMode": "Close Marker Mode",
+      "$MRD_CustomMarker": "Custom Marker",
+      "$MRD_EditorAddTitle": "Add Marker",
+      "$MRD_EditorCancel": "Cancel",
+      "$MRD_EditorEditTitle": "Edit Marker",
+      "$MRD_EditorMarkerSize": "Marker Size",
+      "$MRD_EditorName": "Name",
+      "$MRD_EditorNote": "Note",
+      "$MRD_EditorRemove": "Remove",
+      "$MRD_EditorSave": "Save",
+      "$MRD_HoldTravel": "Hold to Travel",
+      "$MRD_MarkerDeleted": "Marker removed",
+      "$MRD_MarkerFailed": "Unable to save marker",
+      "$MRD_MarkerLimit": "The custom marker limit has been reached",
+      "$MRD_MarkerPlacementFailed": "Unable to place a marker here",
+      "$MRD_MarkerSaved": "Marker saved",
+      "$MRD_NativeUnavailable": "Map controls are unavailable",
+      "$MRD_OpenMarkerMode": "Open Marker Mode",
+      "$MRD_PermanentOnCompass": "Permanent on Compass",
+      "$MRD_PermanentOnCompassHelp": "Keeps this marker on the compass at any distance.",
+      "$MRD_SearchHint": "Select a location to show it on the map",
+      "$MRD_TravelBlocked": "You cannot fast travel there",
+      "$MRD_TravelUnavailable": "Fast travel is unavailable"
+    }
+  },
+  "version": 1
+}
