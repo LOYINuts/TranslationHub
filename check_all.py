@@ -35,6 +35,52 @@ GATE = (
     ("verify_translation.py",),
 )
 
+# 检查空目录的根：移动文件后父目录常留下空壳，git 不跟踪空目录所以
+# git status 看不到，只能主动扫
+STRUCTURE_ROOTS = (
+    "menu_translation",
+    "mod_interface_translation",
+    "descriptionmods",
+    "dialogue_mod_translation",
+    "eslifer",
+)
+
+SKIP_DIRS = {"__pycache__", ".git", ".venv"}
+
+
+def empty_dirs() -> list[str]:
+    """返回子树里没有任何文件的目录（相对路径）。"""
+    found = []
+    for root in STRUCTURE_ROOTS:
+        base = os.path.join(ROOT, root)
+        if not os.path.isdir(base):
+            continue
+        for dirpath, dirnames, filenames in os.walk(base):
+            dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+            if filenames:
+                continue
+            # 子目录里也没有文件才算无用
+            has_file = False
+            for sub, _subdirs, subfiles in os.walk(dirpath):
+                if subfiles:
+                    has_file = True
+                    break
+            if not has_file:
+                found.append(os.path.relpath(dirpath, ROOT).replace("\\", "/"))
+    return sorted(found)
+
+
+def check_structure() -> int:
+    """探测无用空目录，退出码非零即失败。"""
+    found = empty_dirs()
+    if not found:
+        log.info("目录结构检查通过：无空目录")
+        return 0
+    log.error("发现 %d 个空目录，删掉再提交：", len(found))
+    for path in found:
+        log.error("  %s", path)
+    return 1
+
 
 def run(script: str, *args: str, verbose: bool = False) -> int:
     """Run one project CLI with the current interpreter. Return its exit code."""
@@ -55,12 +101,16 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     setup_cli_logging(verbose=args.verbose)
 
-    steps = list(SELF_CHECKS)
+    steps = [("__structure__",)]
+    steps += list(SELF_CHECKS)
     if not args.self_check:
         steps += list(GATE)
 
     for step in steps:
-        code = run(*step, verbose=args.verbose)
+        if step == ("__structure__",):
+            code = check_structure()
+        else:
+            code = run(*step, verbose=args.verbose)
         if code != 0:
             return code
     log.info("全部门禁通过（%d 步）", len(steps))

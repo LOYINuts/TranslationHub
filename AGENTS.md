@@ -7,7 +7,7 @@
 按顺序执行，任一非零退出码即失败。
 
 ```bash
-uv run check_all.py                          # 全仓库：4 个自检 → bdd --check → sync → build → verify
+uv run check_all.py                          # 全仓库：空目录 → 4 个自检 → bdd --check → sync → build → verify
 uv run sync_translation.py <name> --check    # 单模组：缺键 + 英文基线变更
 uv run build_all.py --dry-run <name>
 uv run build_all.py <name1> <name2>
