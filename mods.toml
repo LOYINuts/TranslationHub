@@ -506,14 +506,14 @@ translation_section = "DeathMessages.json"
 
 [[json]]
 dir = "menu_translation/unblockable-hits"
-source = "Viny Mods/UnblockableHits/Language.json"
-output = "Viny Mods/UnblockableHits/Language_zh.json"
+source = "SKSE/Plugins/Unblock/Language.json"
+output = "SKSE/Plugins/Unblock/Language_zh.json"
 translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/undodgeable-hits"
-source = "Viny Mods/UndodgeableHits/Language.json"
-output = "Viny Mods/UndodgeableHits/Language_zh.json"
+source = "SKSE/Plugins/Undodge/Language.json"
+output = "SKSE/Plugins/Undodge/Language_zh.json"
 translation_section = "Language.json"
 
 
