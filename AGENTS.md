@@ -9,6 +9,7 @@
 ```bash
 uv run check_all.py                          # 全仓库：空目录 → 4 个自检 → bdd --check → sync → build → verify
 uv run sync_translation.py <name> --check    # 单模组：缺键 + 英文基线变更
+uv run sync_translation.py <name> --changed  # 列出原文变更的键、旧/新英文与现译文
 uv run build_all.py --dry-run <name>
 uv run build_all.py <name1> <name2>
 uv run verify_translation.py <name>
@@ -56,6 +57,10 @@ encoding = "utf16-le-bom"
 
 `--check` 发现已翻译键的英文原文变化返回 `[变更]`，没有基线返回 `[未基线]`，两者都非零。
 `--sync` 补缺失键并把新键写入基线，但不接受已有键的英文变更；`--accept-source` 只更新基线，不动 `translations.json`。
+
+上游改文案后的完整顺序：`--check` 看有多少 `[变更]` → `--changed` 逐条看旧英文、新英文和现译文，
+据此改 `translations.json` → `--sync` 补新键 → 译新键 → `--accept-source` 让基线接受新英文 → build → verify。
+`--changed` 只读，不写文件也不判失败，不能与 `--check` / `--sync` / `--accept-source` 同时用。
 
 ## Dialogue XML
 

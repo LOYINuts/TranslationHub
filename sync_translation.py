@@ -6,6 +6,7 @@
   uv run sync_translation.py custommarkers --sync         # 自动添加缺失词条（英文原文作为占位）
   uv run sync_translation.py custommarkers --interactive  # 交互式添加翻译
   uv run sync_translation.py custommarkers --accept-source # 确认英文变更并更新基线
+  uv run sync_translation.py custommarkers --changed        # 列出原文变更的键及现译文
   uv run sync_translation.py --all --check                # 检查所有模组
 """
 
@@ -220,6 +221,40 @@ def sync_translations(
     return added
 
 
+def _short(value: str, limit: int = 160) -> str:
+    """压缩成一行，用于 --changed 输出。"""
+    text = " ".join(value.split())
+    return text if len(text) <= limit else text[:limit] + "…"
+
+
+def translation_values(kind: str, cfg, mod_path: str) -> dict[str, str]:
+    """当前译文，键空间与 find_missing_* 返回的 current 一致。"""
+    trans_path = os.path.join(mod_path, "translations.json")
+    if not os.path.exists(trans_path):
+        return {}
+    data = load_json(trans_path)
+    if not isinstance(data, dict):
+        return {}
+    if kind == "json":
+        section = getattr(cfg, "translation_section", None)
+        if section:
+            data = data.get(section, {})
+        return flatten_json_values(data)
+    return {k: v for k, v in data.items() if isinstance(v, str)}
+
+
+def print_changed(changed: dict[str, tuple[str, str]], zh: dict[str, str]) -> None:
+    """逐条列出原文变更的键、旧/新英文和现译文，供人工对照修改。"""
+    if not changed:
+        return
+    print(f"\n[变更] {len(changed)} 个已翻译键的英文原文已变化，逐条核对现译文：")
+    for key, (old, new) in sorted(changed.items()):
+        print(f"\n  {key}")
+        print(f"    旧英文: {_short(old)}")
+        print(f"    新英文: {_short(new)}")
+        print(f"    现译文: {zh.get(key, '（缺失）')}")
+
+
 def process_task(
     kind: str,
     cfg,
@@ -229,6 +264,7 @@ def process_task(
     *,
     accept_source: bool = False,
     allow_write: bool = False,
+    show_changed: bool = False,
 ) -> bool:
     """Process one task. Return True when issues remain or processing fails."""
     log.info(f"\n检查模组: {cfg.dir} ({kind})")
@@ -249,13 +285,23 @@ def process_task(
         log.error(f"检查失败: {exc}")
         return True
 
-    for line in describe_baseline(changed, unbaselined, initialized):
-        print(line)
+    if show_changed:
+        # 详细逐条模式：不再重复 describe_baseline 的变更摘要
+        for line in describe_baseline({}, unbaselined, initialized):
+            print(line)
+        print_changed(changed, translation_values(kind, cfg, mod_path))
+    else:
+        for line in describe_baseline(changed, unbaselined, initialized):
+            print(line)
 
     if missing:
         print(f"\n发现 {len(missing)} 个新词条需要翻译：")
         for key, en_value in sorted(missing.items()):
             print(f"  {key} = \"{en_value}\"")
+
+    if show_changed:
+        # 只读：列完就走，不写基线、不判失败
+        return False
 
     if check_only:
         return bool(missing or changed or unbaselined or (current and not initialized))
@@ -316,12 +362,19 @@ def main():
         action="store_true",
         help="确认英文源变更并更新基线（首次运行即初始化）",
     )
+    parser.add_argument(
+        "--changed",
+        action="store_true",
+        help="列出英文原文已变更的键及其现译文，便于人工核对修改",
+    )
     parser.add_argument("--verbose", "-v", action="store_true", help="显示详细日志")
 
     args = parser.parse_args()
     setup_cli_logging(verbose=args.verbose)  # ponytail: logging set up in main, not at import
-    if args.check and (args.sync or args.interactive or args.accept_source):
-        parser.error("--check 不能与 --sync/--interactive/--accept-source 同时使用")
+    if args.check and (args.sync or args.interactive or args.accept_source or args.changed):
+        parser.error("--check 不能与 --sync/--interactive/--accept-source/--changed 同时使用")
+    if args.changed and (args.sync or args.interactive or args.accept_source):
+        parser.error("--changed 只读，不能与 --sync/--interactive/--accept-source 同时使用")
 
     root_dir = os.path.dirname(os.path.abspath(__file__))
     line_configs, json_configs, qt_configs = load_repo_configs(root_dir)
@@ -341,7 +394,8 @@ def main():
         parser.print_help()
         return 0
     allow_write = args.sync or args.interactive
-    check_only = not (allow_write or args.accept_source)
+    # --changed 只读，列出变更供人工核对，不写文件也不判失败
+    check_only = not (allow_write or args.accept_source or args.changed)
     failed = False
     for kind, cfg in picked:
         failed = process_task(
@@ -352,6 +406,7 @@ def main():
             args.interactive,
             accept_source=args.accept_source,
             allow_write=allow_write,
+            show_changed=args.changed,
         ) or failed
     return 1 if failed or selection_failed else 0
 
