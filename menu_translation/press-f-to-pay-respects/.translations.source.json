@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/press-f-to-pay-respects:interface/translations/PressFtoPayRespects_Translation.ini": {
+    "line:menu_translation/press-f-to-pay-respects:SKSE/Plugins/PressFtoPayRespects_Translation.ini": {
       "$DebugCheckbox$": "Debug",
       "$DebugHelp$": "Enables detailed log output for troubleshooting.",
       "$GPHotkeyHelp$": "Gamepad button to hold over dead bodies. Set to [NONE] to disable.",

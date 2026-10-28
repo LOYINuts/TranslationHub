@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/skse-menu-framework:interface/translations/SKSEMenuFrameworkStrings.json": {
+    "json:menu_translation/skse-menu-framework:SKSE/Plugins/SKSEMenuFrameworkStrings.json": {
       "Gamepad.Actions": "Actions",
       "Gamepad.Adjust": "Adjust",
       "Gamepad.Back": "Back",

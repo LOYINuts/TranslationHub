@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "line:menu_translation/sky-prompt:interface/translations/SkyPrompt_ENGLISH.txt": {
+    "line:menu_translation/skyprompt:interface/translations/SkyPrompt_ENGLISH.txt": {
       "$SkyPromptButtonEnd": "End",
       "$SkyPromptButtonOK": "Ok",
       "$SkyPromptButtonPass": "Pass...",

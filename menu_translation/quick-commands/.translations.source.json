@@ -1,7 +1,7 @@
 {
   "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
   "sources": {
-    "json:menu_translation/quick-commands:Viny Mods/quickcommands/Language.json": {
+    "json:menu_translation/quick-commands:Viny Mods/Console Commands/Language.json": {
       "action.gesture": "Gesture",
       "action.hold": "Hold",
       "action.ignore": "Ignore",

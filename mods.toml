@@ -187,7 +187,7 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "menu_translation/sky-prompt"
+dir = "menu_translation/skyprompt"
 source = "interface/translations/SkyPrompt_ENGLISH.txt"
 output = "interface/translations/SkyPrompt_CHINESE.txt"
 sep = "\t"
@@ -209,7 +209,7 @@ output_sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "menu_translation/sky-parkour"
+dir = "menu_translation/skyparkour"
 source = "interface/translations/SkyParkour_English.txt"
 output = "interface/translations/SkyParkour_Chinese.txt"
 sep = "\t"
@@ -217,16 +217,16 @@ encoding = "utf16-le-bom"
 
 [[line]]
 dir = "menu_translation/press-f-to-pay-respects"
-source = "interface/translations/PressFtoPayRespects_Translation.ini"
-output = "interface/translations/PressFtoPayRespects_Translation_zh.ini"
+source = "SKSE/Plugins/PressFtoPayRespects_Translation.ini"
+output = "SKSE/Plugins/PressFtoPayRespects_Translation_zh.ini"
 sep = "="
 encoding = "utf-8"
 
 
 [[line]]
 dir = "menu_translation/pickup-radius"
-source = "interface/translations/PickUpRadiusSKSE_Translation.ini"
-output = "interface/translations/PickUpRadiusSKSE_Translation_zh.ini"
+source = "SKSE/Plugins/PickUpRadiusSKSE_Translation.ini"
+output = "SKSE/Plugins/PickUpRadiusSKSE_Translation_zh.ini"
 sep = " = "
 encoding = "utf-8"
 
@@ -324,7 +324,7 @@ trim_trailing_fields = true
 
 [[json]]
 dir = "menu_translation/skse-menu-framework"
-source = "interface/translations/SKSEMenuFrameworkStrings.json"
+source = "SKSE/Plugins/SKSEMenuFrameworkStrings.json"
 
 [[json]]
 dir = "menu_translation/hud-ng"
@@ -337,17 +337,21 @@ source = "SKSE/Plugins/MCMMemory/Translation/Translation.json"
 
 [[json]]
 dir = "menu_translation/swift-potion-ng"
-source = "interface/translations/SwiftPotionNG_Translation.json"
+source = "SKSE/Plugins/SwiftPotionNG_Translation.json"
 
 [[json]]
 dir = "menu_translation/time-control"
-source = "Viny Mods/timecontrol/Language.json"
-output = "Viny Mods/timecontrol/Language_zh.json"
+source = "Viny Mods/Time Control/Language.json"
+output = "Viny Mods/Time Control/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/time-is-ticking"
-source = "interface/translations/en.json"
-output = "interface/translations/zh.json"
+source = "Viny Mods/Time is Ticking/Localization/en.json"
+output = "Viny Mods/Time is Ticking/Localization/zh.json"
+package = [
+  "Viny Mods/Time is Ticking/Localization/zh.json",
+  "interface/translations/en.json",
+]
 
 [[json]]
 dir = "menu_translation/input-manager"
@@ -399,8 +403,8 @@ output = "Viny Mods/INLOS/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/quick-commands"
-source = "Viny Mods/quickcommands/Language.json"
-output = "Viny Mods/quickcommands/Language_zh.json"
+source = "Viny Mods/Console Commands/Language.json"
+output = "Viny Mods/Console Commands/Language_zh.json"
 
 [[json]]
 dir = "mod_interface_translation/modex"
@@ -488,8 +492,8 @@ translation_section = "UndodgeableHits.json"
 
 [[json]]
 dir = "menu_translation/trick-death"
-source = "Viny Mods/TrickDeath/Language.json"
-output = "Viny Mods/TrickDeath/Language_zh.json"
+source = "Viny Mods/Trick Death/Language.json"
+output = "Viny Mods/Trick Death/Language_zh.json"
 translation_section = "Language.json"
 
 [[json]]
