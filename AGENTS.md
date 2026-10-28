@@ -2,6 +2,10 @@
 
 仓库唯一的流程规范源：命令、文件角色、编码与提交规则。翻译风格与术语见 skills。
 
+- `translation-io`：读文件、判编码、新目录准入。
+- `game-translation`：所有译文的中文风格与术语。
+- `dialogue-xml`：`dialogue_mod_translation/` 下的 xTranslator XML。
+
 ## 门禁
 
 按顺序执行，任一非零退出码即失败。
@@ -16,7 +20,10 @@ uv run verify_translation.py <name>
 ```
 
 `<name>` 接受 `mods.toml` 的完整 `dir` 或目录 basename；未知名称和验证错误都返回非零。
-`verify_translation.py` 覆盖已登记模组、eslifer 和 descriptionmods。
+`verify_translation.py` 覆盖所有已登记条目。
+
+`--check` 命中三种情况都非零：缺键、已译键的英文原文变更（`[变更]`）、无基线（`[未基线]`）。
+`--changed` 只读，不写文件也不判失败，不能与 `--check` / `--sync` / `--accept-source` 同时用。
 
 ## 文件角色与路由
 
@@ -24,7 +31,7 @@ uv run verify_translation.py <name>
 |---|---|---|---|
 | `mods.toml` 的 line / json / qt | 模组目录内 `translations.json` | 配置生成的 TXT/INI/JSON/TS | 任意模组目录，`translation-io` + `game-translation` |
 | xTranslator XML | `pending.json` | XML 的 `TRADUIT` 字段 | `dialogue_mod_translation/`，`dialogue-xml` + `game-translation` |
-| Description 文件 | `descriptionmods/translations.json` | `descriptionmods/zh/...` | `translation-io` + `game-translation` |
+| Description 文件 | `descriptionmods/translations.json` | 同目录 `*_zh.ini` | `translation-io` + `game-translation` |
 | Qt TS | `eslifer/translations.json` | `eslifer/eslifier_translation.ts` | 共用 `qt` 处理器 |
 | 新类型或未知文件 | — | — | `translation-io` 先做准入，再按类型处理 |
 
@@ -46,25 +53,49 @@ Qt TS 不用基线，因为源文本本身就是键。
 ```toml
 [[line]]
 dir = "path/to/mod"
-source = "source.txt"
-output = "target.txt"
+source = "interface/translations/X_english.txt"
+output = "interface/translations/X_chinese.txt"
 sep = "\\t"
 encoding = "utf16-le-bom"
+
+[[json]]
+dir = "path/to/mod"
+source = "SKSE/Plugins/Plugin_Translation.json"
+
+[[qt]]
+dir = "eslifer"
+source = "origin/eslifier_translation.ts"
+output = "eslifier_translation.ts"
 ```
+
+line 的 `sep` 只能是 `"\t"`、`"="`、`" = "`、`"|"`，或 `""`（按任意空白切分，通常配 `output_sep = "\t"` 写出）；
+`encoding` 只能是 `utf-8`、`utf-8-bom`、`utf16-le-bom`。
+`source` 支持 glob（如 `*.ini`）：产物平铺到 `output` 目录并加 `_zh` 后缀，
+`translations.json` 的键是 `<相对路径>::<键>#<同键出现序号>`，`value_field` 指定替换第几列，
+`trim_trailing_fields = true` 去掉该列之后的尾随空白——`descriptionmods` 走这条路径。
+json 条目不读 `sep` / `encoding`；`translations.json` 分节存放时用 `translation_section` 指定节名。
+qt 条目由共用的 TS 处理器处理，只需 `dir` / `source` / `output`。
 
 首次启用后先 `uv run sync_translation.py --all --accept-source`（或对单模组运行）并提交基线，
 再 `--dry-run`、构建、验证。
 
-`--check` 发现已翻译键的英文原文变化返回 `[变更]`，没有基线返回 `[未基线]`，两者都非零。
 `--sync` 补缺失键并把新键写入基线，但不接受已有键的英文变更；`--accept-source` 只更新基线，不动 `translations.json`。
 
 上游改文案后的完整顺序：`--check` 看有多少 `[变更]` → `--changed` 逐条看旧英文、新英文和现译文，
 据此改 `translations.json` → `--sync` 补新键 → 译新键 → `--accept-source` 让基线接受新英文 → build → verify。
-`--changed` 只读，不写文件也不判失败，不能与 `--check` / `--sync` / `--accept-source` 同时用。
 
 ## Dialogue XML
 
-按 `.agents/skills/dialogue-xml/SKILL.md` 执行，顺序为 `stats → pending --fill-bdd → apply → stats`。
+按 `.agents/skills/dialogue-xml/SKILL.md` 执行，顺序为 `stats → pending --fill-bdd → apply → stats`：
+
+```bash
+uv run dialogue_mod_translation/translate.py stats <xml>
+uv run dialogue_mod_translation/translate.py pending <xml> --fill-bdd
+uv run dialogue_mod_translation/translate.py apply <mod>/pending.json
+uv run dialogue_mod_translation/translate.py stats <xml>
+```
+
+译文写进 XML 的 `TRADUIT` 或 `pending.json`，STATUS 记 `90`。
 词典 `bdd.tsv` 是带引号的 TSV，字段可跨行；只能用 `translate.py bdd` 维护，不要手工按行拆。
 
 ## 打包
@@ -102,10 +133,12 @@ menu_translation/<mod>/
 
 ## 翻译约束
 
-- 术语优先级：模组术语表/档案 > 附近已有译文 > `bdd.tsv`（Dialogue XML）> 游戏既有译名。
+- 术语优先级：本模组既有译文（自己的 `translations.json` / `pending.json`）> 相邻模组同名词 > `bdd.tsv`
+  （Dialogue XML）> 游戏既有译名。
 - 占位符必须与源文件逐条对齐：`%s`、`%llu`、`%1`、`{0}`、`$VAR$`、`<font>`、`[br]`、字面量 `\n`。
   漏一个就可能让游戏崩溃或显示错乱。
 - 只改翻译源，不改生成产物；改动写入仓库文件，不要在对话里返回只有译文的转储。
+- `translations.json` 就地增改相关键：不整表重排、不重新格式化；删键时同一提交里从基线移除。
 
 ## 提交与推送
 
