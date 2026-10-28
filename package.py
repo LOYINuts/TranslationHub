@@ -75,41 +75,6 @@ def _resolve(cfg, built: str, targets: list[str]) -> list[PackItem]:
     return items
 
 
-def _english_twin(filename: str) -> str | None:
-    """由中文产物名推出对应的英文文件名。
-
-    中文玩家可能跑英文环境，游戏只读 `*_english.*` / `*_EN.*`，所以默认
-    打包时同时落一份到英文名下。文件名不一定带后缀，有些模组整个文件就叫
-    `chinese.json` / `zh-cn.json`，也有把语言写在中间的（如 `zh-cn/xx.json`）。
-    """
-    base, ext = os.path.splitext(filename)
-    # 整个文件名（去掉扩展名）就是语言标记的情形
-    whole = {
-        "chinese": "english",
-        "zh": "en",
-        "zh-cn": "en",
-        "zhcn": "en",
-        "zh_cn": "en",
-        "en-us": "en",
-    }
-    if base.lower() in whole and base.lower() != whole[base.lower()]:
-        return f"{whole[base.lower()]}{ext}"
-    # 后缀式
-    for chinese, english in (
-        ("_chinese", "_english"),
-        ("_CHINESE", "_ENGLISH"),
-        ("_Chinese", "_English"),
-        ("_zhcn", "_en"),
-        ("_ZHCN", "_EN"),
-        ("_zh-cn", "_en"),
-        ("_zh_cn", "_en"),
-        ("_zh", "_en"),
-        ("_ZH", "_EN"),
-    ):
-        if base.endswith(chinese):
-            return f"{base[: -len(chinese)]}{english}{ext}"
-    return None
-
 
 # 工作目录已做成游戏结构的前缀：带这些前缀时 output 就是游戏路径
 # 大小写无关，游戏目录习惯首字母大写（Interface/、SKSE/）
@@ -117,7 +82,7 @@ GAME_PREFIXES = ("interface/", "skse/", "data/", "viny mods/", "nemesis_engine/"
                  "sound/", "meshes/", "textures/", "scripts/", "mq/", "source/",
                  "calientetools/")
 
-# 插件按固定文件名读取，只认英文名，多放中文名不会被加载
+# 插件按固定文件名读取，不认语言后缀，只放源文件名那一份
 PLUGIN_PREFIXES = ("skse/", "viny mods/", "nemesis_engine/")
 
 
@@ -129,31 +94,27 @@ def _is_plugin_path(path: str) -> bool:
     return path.replace("\\", "/").lower().startswith(PLUGIN_PREFIXES)
 
 
-def _default_items(built: str, output: str, mod_dir: str) -> list[PackItem]:
+def _default_items(built: str, source: str, output: str, mod_dir: str) -> list[PackItem]:
     """未配 package 时的落点。
 
-    工作目录若已做成游戏结构，直接用 output 路径；中文产物同时落一份到同目录
-    的英文名下（游戏可能跑英文环境）。否则按旧规则推导到 interface/translations/。
-    """
-    if _is_game_path(output):
-        directory, filename = os.path.split(output)
-        twin = _english_twin(filename)
-        if _is_plugin_path(output) and twin:
-            return [PackItem(built=built, package_path=f"{directory}/{twin}")]
-        items = [PackItem(built=built, package_path=output)]
-        if twin and twin != filename:
-            items.append(PackItem(built=built, package_path=f"{directory}/{twin}"))
-        return items
+    落点文件名用**源文件名**，也就是游戏本来就认的那个名字（如 Language.json、
+    OBody_ENGLISH.txt），内容换成译文。
 
-    filename = os.path.basename(output)
-    items = [PackItem(built=built, package_path=f"{DEFAULT_DIR}/{filename}")]
-    twin = _english_twin(filename)
-    if twin:
-        items.append(PackItem(built=built, package_path=f"{DEFAULT_DIR}/{twin}"))
-    log.warning(
-        f"  [未配 package] {mod_dir}: 按默认推导 {DEFAULT_DIR}/，"
-        f"若游戏路径不同请在 mods.toml 补 package"
-    )
+    interface/translations/ 下游戏按语言挑文件，英文名与中文名各需要一份，
+    所以额外再落一份产物名。SKSE/、Viny Mods/ 下插件按固定文件名读取，
+    多放一份中文名不会被加载，因此只出源文件名。
+    """
+    directory, output_name = os.path.split(output)
+    if not directory:
+        directory = DEFAULT_DIR
+        log.warning(
+            f"  [未配 package] {mod_dir}: output 没有游戏路径，按 {DEFAULT_DIR}/ 推测"
+        )
+    source_name = os.path.basename(source)
+
+    items = [PackItem(built=built, package_path=f"{directory}/{source_name}")]
+    if not _is_plugin_path(output) and output_name != source_name:
+        items.append(PackItem(built=built, package_path=f"{directory}/{output_name}"))
     return items
 
 
@@ -178,7 +139,7 @@ def plan_line(cfg: ModConfig) -> list[PackItem]:
 
     if cfg.package:
         return _resolve(cfg, cfg.output, cfg.package)
-    return _default_items(cfg.output, cfg.output, cfg.dir)
+    return _default_items(cfg.output, cfg.source, cfg.output, cfg.dir)
 
 
 def plan_json(cfg: ModJson) -> list[PackItem]:
@@ -186,7 +147,7 @@ def plan_json(cfg: ModJson) -> list[PackItem]:
         return []
     if cfg.package:
         return _resolve(cfg, cfg.output, cfg.package)
-    return _default_items(cfg.output, cfg.output, cfg.dir)
+    return _default_items(cfg.output, cfg.source, cfg.output, cfg.dir)
 
 
 def plan_qt(cfg: ModQt) -> list[PackItem]:
