@@ -407,6 +407,7 @@ output = "Viny Mods/Console Commands/Language_zh.json"
 dir = "mod_interface_translation/modex"
 source = "Interface/Modex/language/english.json"
 output = "Interface/Modex/language/chinese.json"
+package = "Interface/Modex/language/chinese.json"
 
 
 [[json]]
