@@ -235,19 +235,22 @@ def detect_encoding(path: str) -> str:
 def _self_check() -> None:
     import tempfile
 
-    dir_ = tempfile.mkdtemp()
-    path = os.path.join(dir_, "t.txt")
-    write_utf16le_bom(path, "k\tv\r\n")
-    assert detect_encoding(path) == "utf16-le-bom"
-    assert read_text(path) == "k\tv\r\n"
-    assert read_lines(path) == ["k\tv"]
-    assert translation_format_issues(r"a\n", r"中\n", line_based=True) == []
-    assert translation_format_issues(r"a\n", "中\n", line_based=True) == ["real newline", "missing \\n escape"]
-    assert translation_format_issues("%llu %zu %1 {name}", "%llu %zu %1 {name}") == []
-    assert translation_format_issues("<Select Type>", "<选择类型>") == []
-    assert translation_format_issues("<font color='red'>x</font>", "<font color='red'>中</font>") == []
-    assert translation_format_issues("a[br]b", "甲[br]乙") == []
-    assert translation_format_issues("a[br]b", "甲乙") == ["placeholder or tag mismatch"]
+    dir_ = tempfile.TemporaryDirectory()
+    path = os.path.join(dir_.name, "t.txt")
+    try:
+        write_utf16le_bom(path, "k\tv\r\n")
+        assert detect_encoding(path) == "utf16-le-bom"
+        assert read_text(path) == "k\tv\r\n"
+        assert read_lines(path) == ["k\tv"]
+        assert translation_format_issues(r"a\n", r"中\n", line_based=True) == []
+        assert translation_format_issues(r"a\n", "中\n", line_based=True) == ["real newline", "missing \\n escape"]
+        assert translation_format_issues("%llu %zu %1 {name}", "%llu %zu %1 {name}") == []
+        assert translation_format_issues("<Select Type>", "<选择类型>") == []
+        assert translation_format_issues("<font color='red'>x</font>", "<font color='red'>中</font>") == []
+        assert translation_format_issues("a[br]b", "甲[br]乙") == []
+        assert translation_format_issues("a[br]b", "甲乙") == ["placeholder or tag mismatch"]
+    finally:
+        dir_.cleanup()
     print("ok")
 
 

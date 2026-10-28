@@ -37,6 +37,14 @@ def setup_cli_logging(verbose: bool = False) -> None:
         handlers=[logging.StreamHandler(sys.stdout)],
         force=True,
     )
+def _reject_source_overwrite(mod_dir: str, source: str, output: str) -> None:
+    """构建先读源再写产物，两者同路径会静默覆盖英文源。"""
+    if os.path.normcase(source) == os.path.normcase(output):
+        raise ValueError(
+            f"{mod_dir}: output 与 source 相同（{source}），构建会覆盖英文源"
+        )
+
+
 @dataclass
 class ModConfig:
     """行分隔文件模组配置（TXT/INI）。"""
@@ -54,6 +62,7 @@ class ModConfig:
     def __post_init__(self):
         if self.output_sep is None:
             self.output_sep = self.sep if self.sep is not None else "\t"
+        _reject_source_overwrite(self.dir, self.source, self.output)
 
 @dataclass
 class ModJson:
@@ -68,6 +77,7 @@ class ModJson:
         if not self.output:
             base, ext = os.path.splitext(self.source)
             self.output = f"{base}_zh{ext}"
+        _reject_source_overwrite(self.dir, self.source, self.output)
 
 
 @dataclass
@@ -77,6 +87,9 @@ class ModQt:
     source: str
     output: str
     package: list[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        _reject_source_overwrite(self.dir, self.source, self.output)
 
 def matches_filter(mod_dir: str, filters) -> bool:
     """No filter = all. Accept full path or basename."""

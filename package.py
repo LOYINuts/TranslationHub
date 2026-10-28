@@ -43,11 +43,6 @@ class PackItem:
     package_path: str
 
 
-def _package_root(cfg) -> str:
-    """打包根目录名，用模组目录的 basename。"""
-    return os.path.basename(cfg.dir.rstrip("/"))
-
-
 def dist_name(mod_dir: str) -> str:
     """dist 目录名。
 
@@ -76,18 +71,8 @@ def _resolve(cfg, built: str, targets: list[str]) -> list[PackItem]:
 
 
 
-# 工作目录已做成游戏结构的前缀：带这些前缀时 output 就是游戏路径
-# 大小写无关，游戏目录习惯首字母大写（Interface/、SKSE/）
-GAME_PREFIXES = ("interface/", "skse/", "data/", "viny mods/", "nemesis_engine/",
-                 "sound/", "meshes/", "textures/", "scripts/", "mq/", "source/",
-                 "calientetools/")
-
 # 插件按固定文件名读取，不认语言后缀，只放源文件名那一份
 PLUGIN_PREFIXES = ("skse/", "viny mods/", "nemesis_engine/")
-
-
-def _is_game_path(path: str) -> bool:
-    return path.replace("\\", "/").lower().startswith(GAME_PREFIXES)
 
 
 def _is_plugin_path(path: str) -> bool:

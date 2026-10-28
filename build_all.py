@@ -483,6 +483,21 @@ def show_stats(root_dir: str):
 
 def _self_check() -> None:
     assert set(WRITERS) == set(WRITE_ENCODINGS), "WRITERS 与 WRITE_ENCODINGS 不同步"
+
+    # output 与 source 同路径会让构建静默覆盖英文源
+    for build in (
+        lambda: ModConfig("m", "x.txt", "x.txt"),
+        lambda: ModJson("m", "x.json", "x.json"),
+        lambda: ModQt("m", "x.ts", "x.ts"),
+    ):
+        try:
+            build()
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("同路径 source/output 未被拒绝")
+    ModJson("m", "x.json")  # 自动推导 _zh 名，应当通过
+
     source = {"section": {"label": "nested"}, "label": "root"}
     translations = flatten_json_values({"section": {"label": "嵌套"}, "label": "根"})
     assert apply_translations_to_json(source, translations) == {

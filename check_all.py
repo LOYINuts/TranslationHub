@@ -48,8 +48,20 @@ STRUCTURE_ROOTS = (
 SKIP_DIRS = {"__pycache__", ".git", ".venv"}
 
 
+def _subtree_has_file(dirpath: str) -> bool:
+    """子树（含自身）里是否存在任何文件。"""
+    for _root, dirnames, filenames in os.walk(dirpath):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        if filenames:
+            return True
+    return False
+
+
 def empty_dirs() -> list[str]:
-    """返回子树里没有任何文件的目录（相对路径）。"""
+    """返回子树里没有任何文件的目录。
+
+    只报最外层：父目录已经无用，删它就连带带走了整棵子树，不再重复报子目录。
+    """
     found = []
     for root in STRUCTURE_ROOTS:
         base = os.path.join(ROOT, root)
@@ -57,16 +69,10 @@ def empty_dirs() -> list[str]:
             continue
         for dirpath, dirnames, filenames in os.walk(base):
             dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
-            if filenames:
+            if filenames or _subtree_has_file(dirpath):
                 continue
-            # 子目录里也没有文件才算无用
-            has_file = False
-            for sub, _subdirs, subfiles in os.walk(dirpath):
-                if subfiles:
-                    has_file = True
-                    break
-            if not has_file:
-                found.append(os.path.relpath(dirpath, ROOT).replace("\\", "/"))
+            found.append(os.path.relpath(dirpath, ROOT).replace("\\", "/"))
+            dirnames[:] = []  # 整个子树都无用，不再往下走
     return sorted(found)
 
 

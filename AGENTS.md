@@ -96,6 +96,8 @@ menu_translation/<mod>/
 
 - 所有 CLI 走 `config.setup_cli_logging`：一个 UTF-8 stdout handler，默认 INFO，`--verbose` 时 DEBUG。
   只用具名 logger；`print` 只用于表格、摘要和用户提示；不要打印 `translations.json` 的值。
+  例外：`sync_translation.py --changed` 的用途就是逐条列出原文变更的键与现译文，供人工核对，
+  不属于日志噪音。
 - 门禁判断依赖退出码，不依赖输出文本。
 
 ## 翻译约束
