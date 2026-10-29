@@ -152,11 +152,12 @@ sep = " = "
 encoding = "utf-8"
 
 [[line]]
-dir = "mod_interface_translation/party-sheet"
-source = "interface/translations/PartySheet_en.txt"
-output = "interface/translations/PartySheet_zh.txt"
+dir = "mod_interface_translation/skyrim-party-sheet"
+source = "SKSE/Plugins/translations/PartySheet_en.txt"
+output = "SKSE/Plugins/translations/PartySheet_zh.txt"
 sep = "="
 encoding = "utf-8"
+package = "SKSE/Plugins/translations/PartySheet_zh.txt"
 
 [[line]]
 dir = "mod_interface_translation/custom-markers"
