@@ -547,3 +547,11 @@ output = "SKSE/Plugins/LogWatcher/Translation/LogWatcherTranslation_zh.json"
 dir = "eslifer"
 source = "origin/eslifier_translation.ts"
 output = "eslifier_translation.ts"
+
+[[line]]
+dir = "menu_translation/reticle-arcs"
+source = "SKSE/Plugins/ReticleArcs/Translation.ini"
+output = "SKSE/Plugins/ReticleArcs/Translation_zh.ini"
+sep = " = "
+encoding = "utf-8"
+package = "SKSE/Plugins/ReticleArcs/Translation.ini"
