@@ -446,6 +446,7 @@ output = "Viny Mods/Quick Swap/Language_zh.json"
 dir = "mod_interface_translation/outfit-distributor"
 source = "SKSE/Plugins/OutfitDist/Localization/en.json"
 output = "SKSE/Plugins/OutfitDist/Localization/zh-cn.json"
+package = "SKSE/Plugins/OutfitDist/Localization/zh-cn.json"
 
 [[json]]
 dir = "menu_translation/dodge-for-all"
