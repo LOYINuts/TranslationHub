@@ -325,7 +325,9 @@ trim_trailing_fields = true
 
 [[json]]
 dir = "menu_translation/skse-menu-framework"
-source = "SKSE/Plugins/SKSEMenuFrameworkStrings.json"
+source = "SKSE/Plugins/SKSEMenuFrameworkStrings_EN.json"
+output = "SKSE/Plugins/SKSEMenuFrameworkStrings_ZH.json"
+package = "SKSE/Plugins/SKSEMenuFrameworkStrings.json"
 
 [[json]]
 dir = "menu_translation/hud-ng"
