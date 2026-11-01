@@ -131,13 +131,6 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "menu_translation/convenient-horses"
-source = "interface/translations/convenient horses_english.txt"
-output = "interface/translations/convenient horses_chinese.txt"
-sep = "\t"
-encoding = "utf16-le-bom"
-
-[[line]]
 dir = "mod_interface_translation/music-conductor"
 source = "interface/translations/MusicConductor_en.txt"
 output = "interface/translations/MusicConductor_zh.txt"
