@@ -550,3 +550,10 @@ output = "SKSE/Plugins/ReticleArcs/Translation_zh.ini"
 sep = " = "
 encoding = "utf-8"
 package = "SKSE/Plugins/ReticleArcs/Translation.ini"
+
+[[line]]
+dir = "menu_translation/notification-tweaks"
+source = "interface/translations/NotificationTweaks_ENGLISH.txt"
+output = "interface/translations/NotificationTweaks_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
