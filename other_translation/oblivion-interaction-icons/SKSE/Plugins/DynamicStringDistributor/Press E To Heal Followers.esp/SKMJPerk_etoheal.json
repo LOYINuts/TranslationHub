@@ -1,0 +1,14 @@
+[
+{
+"form_id": "FE001802|Press E To Heal Followers.esp",
+"type": "PERK EPFD",
+"index": 0,
+"string": " <font face='$Iconographia' color='#989180'>g</font> <br> Downed Follower "
+},
+{
+"form_id": "FE001802|Press E To Heal Followers.esp",
+"type": "PERK EPFD",
+"index": 1,
+"string": " <font face='$Iconographia' color='#989180'>g</font> <br> Downed Follower "
+}
+]

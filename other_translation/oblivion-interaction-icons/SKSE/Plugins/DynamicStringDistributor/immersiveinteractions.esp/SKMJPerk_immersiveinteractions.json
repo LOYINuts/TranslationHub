@@ -1,0 +1,26 @@
+[
+{
+"form_id": "0b000802|ImmersiveInteractions.esp",
+"type": "PERK EPFD",
+"index": 0,
+"string": " <font face='$Iconographia' color='#989180'>y</font> <br> Beast "
+},
+{
+"form_id": "0b000802|ImmersiveInteractions.esp",
+"type": "PERK EPFD",
+"index": 1,
+"string": " <font face='$Iconographia' color='#989180'>y</font> <br> Animal "
+},
+{
+"form_id": "0b000802|ImmersiveInteractions.esp",
+"type": "PERK EPFD",
+"index": 2,
+"string": " <font face='$Iconographia' color='#989180'>y</font> <br> Child "
+},
+{
+"form_id": "0b000802|ImmersiveInteractions.esp",
+"type": "PERK EPFD",
+"index": 3,
+"string": " <font face='$Iconographia' color='#989180'>z</font> <br> Bard's Performance "
+}
+]

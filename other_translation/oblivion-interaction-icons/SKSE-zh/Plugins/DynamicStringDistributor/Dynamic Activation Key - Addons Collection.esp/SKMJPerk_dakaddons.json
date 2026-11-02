@@ -1,0 +1,92 @@
+[
+  {
+    "form_id": "FE007800|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>m</font> <br> 商人的商品 "
+  },
+  {
+    "form_id": "FE007803|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 1,
+    "string": " <font face='$Iconographia' color='#989180'>m</font> <br> 训练服务 "
+  },
+  {
+    "form_id": "FE007803|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 2,
+    "string": " <font face='$Iconographia' color='#989180'>m</font> <br> 训练服务 "
+  },
+  {
+    "form_id": "FE007806|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>V</font> <br> 追随者的背包 "
+  },
+  {
+    "form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#64544B'>N</font> <br> 种植盆 "
+  },
+  {
+    "form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>Q</font> <br> 种植盆 "
+  },
+  {
+    "form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 1,
+    "string": " <font face='$Iconographia' color='#989180'>N</font> <br> 种植盆 "
+  },
+  {
+    "form_id": "FE007809|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>m</font> <br> 马 "
+  },
+  {
+    "form_id": "FE00780A|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>V</font> <br> 马鞍袋 "
+  },
+  {
+    "form_id": "FE00780E|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>S</font> <br> 书籍 "
+  },
+  {
+    "form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>M</font> <br> 装备 "
+  },
+  {
+    "form_id": "FE007809|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>M</font> <br> 武器 "
+  },
+  {
+    "form_id": "FE00780A|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>K</font> <br> 食物 "
+  },
+  {
+    "form_id": "FE00780B|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>K</font> <br> 药材 "
+  },
+  {
+    "form_id": "FE00780C|Dynamic Activation Key - Addons Collection.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>M</font> <br> 卷轴 "
+  }
+]

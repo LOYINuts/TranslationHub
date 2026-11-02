@@ -1,0 +1,92 @@
+[
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 0,
+    "string": " <font face='$Iconographia' color='#989180'>r</font> <br> 炼金台 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 1,
+    "string": " <font face='$Iconographia' color='#989180'>q</font> <br> 烹饪器具 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 2,
+    "string": " <font face='$Iconographia' color='#989180'>q</font> <br> 烹饪架 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 3,
+    "string": " <font face='$Iconographia' color='#989180'>o</font> <br> 奥术附魔台 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 4,
+    "string": " <font face='$Iconographia' color='#989180'>k</font> <br> 锻炉 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 5,
+    "string": " <font face='$Iconographia' color='#989180'>k</font> <br> 天空锻炉 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 6,
+    "string": " <font face='$Iconographia' color='#989180'>M</font> <br> 磨刀石 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 7,
+    "string": " <font face='$Iconographia' color='#989180'>s</font> <br> 熔炉 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 8,
+    "string": " <font face='$Iconographia' color='#989180'>k</font> <br> 工作台 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 9,
+    "string": " <font face='$Iconographia' color='#989180'>N</font> <br> 美瑞蒂亚的信标 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 10,
+    "string": " <font face='$Iconographia' color='#989180'>s</font> <br> 护符碎片 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 11,
+    "string": " <font face='$Iconographia' color='#989180'>N</font> <br> 聚焦水晶 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 12,
+    "string": " <font face='$Iconographia' color='#989180'>N</font> <br> 格仑摩利女巫的头 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 13,
+    "string": " <font face='$Iconographia' color='#989180'>D</font> <br> 拉杆 "
+  },
+  {
+    "form_id": "FE000800|skymoji.esp",
+    "type": "PERK EPFD",
+    "index": 14,
+    "string": " <font face='$Iconographia' color='#989180'>F</font> <br> 可疑的地方 "
+  }
+]

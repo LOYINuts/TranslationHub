@@ -558,3 +558,116 @@ source = "interface/translations/NotificationTweaks_ENGLISH.txt"
 output = "interface/translations/NotificationTweaks_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
+
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json"
+translation_section = "AlchemyActivator.esp/SKMJPerk_dakalchemy.json"
+package = "SKSE/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/Dynamic Activation Key - Addons Collection.esp/SKMJPerk_dakaddons.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/Dynamic Activation Key - Addons Collection.esp/SKMJPerk_dakaddons.json"
+translation_section = "Dynamic Activation Key - Addons Collection.esp/SKMJPerk_dakaddons.json"
+package = "SKSE/Plugins/DynamicStringDistributor/Dynamic Activation Key - Addons Collection.esp/SKMJPerk_dakaddons.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/EatFromFlora.esp/SKMJPerk_eatfromflora.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/EatFromFlora.esp/SKMJPerk_eatfromflora.json"
+translation_section = "EatFromFlora.esp/SKMJPerk_eatfromflora.json"
+package = "SKSE/Plugins/DynamicStringDistributor/EatFromFlora.esp/SKMJPerk_eatfromflora.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/Growl - Werebeasts of Skyrim.esp/SKMJPerk_growl.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/Growl - Werebeasts of Skyrim.esp/SKMJPerk_growl.json"
+translation_section = "Growl - Werebeasts of Skyrim.esp/SKMJPerk_growl.json"
+package = "SKSE/Plugins/DynamicStringDistributor/Growl - Werebeasts of Skyrim.esp/SKMJPerk_growl.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/Home Cloud Storage.esp/SKMJPerk_dakcloud.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/Home Cloud Storage.esp/SKMJPerk_dakcloud.json"
+translation_section = "Home Cloud Storage.esp/SKMJPerk_dakcloud.json"
+package = "SKSE/Plugins/DynamicStringDistributor/Home Cloud Storage.esp/SKMJPerk_dakcloud.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/Press E To Heal Followers.esp/SKMJPerk_etoheal.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/Press E To Heal Followers.esp/SKMJPerk_etoheal.json"
+translation_section = "Press E To Heal Followers.esp/SKMJPerk_etoheal.json"
+package = "SKSE/Plugins/DynamicStringDistributor/Press E To Heal Followers.esp/SKMJPerk_etoheal.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/Simple Hunting Overhaul.esp/SKMJPerk_simple hunting overhaul.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/Simple Hunting Overhaul.esp/SKMJPerk_simple hunting overhaul.json"
+translation_section = "Simple Hunting Overhaul.esp/SKMJPerk_simple hunting overhaul.json"
+package = "SKSE/Plugins/DynamicStringDistributor/Simple Hunting Overhaul.esp/SKMJPerk_simple hunting overhaul.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/Take A Nap.esp/SKMJPerk_takeanap.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/Take A Nap.esp/SKMJPerk_takeanap.json"
+translation_section = "Take A Nap.esp/SKMJPerk_takeanap.json"
+package = "SKSE/Plugins/DynamicStringDistributor/Take A Nap.esp/SKMJPerk_takeanap.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/Take A Peek - New Stealth Mechanic.esp/SKMJPerk_takeapeekdsd.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/Take A Peek - New Stealth Mechanic.esp/SKMJPerk_takeapeekdsd.json"
+translation_section = "Take A Peek - New Stealth Mechanic.esp/SKMJPerk_takeapeekdsd.json"
+package = "SKSE/Plugins/DynamicStringDistributor/Take A Peek - New Stealth Mechanic.esp/SKMJPerk_takeapeekdsd.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/VampireFeedingTweaks.esp/SKMJPerk_vft.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/VampireFeedingTweaks.esp/SKMJPerk_vft.json"
+translation_section = "VampireFeedingTweaks.esp/SKMJPerk_vft.json"
+package = "SKSE/Plugins/DynamicStringDistributor/VampireFeedingTweaks.esp/SKMJPerk_vft.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/firstpersoninteractions.esp/SKMJPerk_fpinonaddon.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/firstpersoninteractions.esp/SKMJPerk_fpinonaddon.json"
+translation_section = "firstpersoninteractions.esp/SKMJPerk_fpinonaddon.json"
+package = "SKSE/Plugins/DynamicStringDistributor/firstpersoninteractions.esp/SKMJPerk_fpinonaddon.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/immersiveinteractions.esp/SKMJPerk_immersiveinteractions.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/immersiveinteractions.esp/SKMJPerk_immersiveinteractions.json"
+translation_section = "immersiveinteractions.esp/SKMJPerk_immersiveinteractions.json"
+package = "SKSE/Plugins/DynamicStringDistributor/immersiveinteractions.esp/SKMJPerk_immersiveinteractions.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/simplyknock.esp/SKMJPerk_skknockicon.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/simplyknock.esp/SKMJPerk_skknockicon.json"
+translation_section = "simplyknock.esp/SKMJPerk_skknockicon.json"
+package = "SKSE/Plugins/DynamicStringDistributor/simplyknock.esp/SKMJPerk_skknockicon.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/skymoji.esp/SKMJPerk_skymojifurniture.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/skymoji.esp/SKMJPerk_skymojifurniture.json"
+translation_section = "skymoji.esp/SKMJPerk_skymojifurniture.json"
+package = "SKSE/Plugins/DynamicStringDistributor/skymoji.esp/SKMJPerk_skymojifurniture.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimvampfeed.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimvampfeed.json"
+translation_section = "skyrim.esm/SKMJ_skyrimvampfeed.json"
+package = "SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimvampfeed.json"
+
+[[json]]
+dir = "other_translation/oblivion-interaction-icons"
+source = "SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.json"
+output = "SKSE-zh/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.json"
+translation_section = "skyrim.esm/SKMJ_skyrimwolffeed.json"
+package = "SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.json"

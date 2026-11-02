@@ -1,0 +1,20 @@
+[
+{
+"form_id": "FE001801|FirstPersonInteractions.esp",
+"type": "PERK EPFD",
+"index": 0,
+"string": " <font face='$Iconographia' color='#989180'>z</font> <br> Bard's Performance "
+},
+{
+"form_id": "FE001801|FirstPersonInteractions.esp",
+"type": "PERK EPFD",
+"index": 1,
+"string": " <font face='$Iconographia' color='#989180'>y</font> <br> Animal "
+},
+{
+"form_id": "FE001801|FirstPersonInteractions.esp",
+"type": "PERK EPFD",
+"index": 2,
+"string": " <font face='$Iconographia' color='#989180'>y</font> <br> Child "
+}
+]
