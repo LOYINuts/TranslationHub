@@ -21,7 +21,7 @@
     "form_id": "FE007806|Dynamic Activation Key - Addons Collection.esp",
     "type": "PERK EPFD",
     "index": 0,
-    "string": " <font face='$Iconographia' color='#989180'>V</font> <br> 追随者的背包 "
+    "string": " <font face='$Iconographia' color='#989180'>V</font> <br> 随从的背包 "
   },
   {
     "form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
@@ -57,7 +57,7 @@
     "form_id": "FE00780E|Dynamic Activation Key - Addons Collection.esp",
     "type": "PERK EPFD",
     "index": 0,
-    "string": " <font face='$Iconographia' color='#989180'>S</font> <br> 书籍 "
+    "string": " <font face='$Iconographia' color='#989180'>S</font> <br> 法术书 "
   },
   {
     "form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
@@ -81,7 +81,7 @@
     "form_id": "FE00780B|Dynamic Activation Key - Addons Collection.esp",
     "type": "PERK EPFD",
     "index": 0,
-    "string": " <font face='$Iconographia' color='#989180'>K</font> <br> 药材 "
+    "string": " <font face='$Iconographia' color='#989180'>K</font> <br> 材料 "
   },
   {
     "form_id": "FE00780C|Dynamic Activation Key - Addons Collection.esp",

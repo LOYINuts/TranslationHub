@@ -16,7 +16,7 @@
     "[2].string": " <font face='$Iconographia' color='#989180'>m</font> <br> 训练服务 ",
     "[3].form_id": "FE007806|Dynamic Activation Key - Addons Collection.esp",
     "[3].type": "PERK EPFD",
-    "[3].string": " <font face='$Iconographia' color='#989180'>V</font> <br> 追随者的背包 ",
+    "[3].string": " <font face='$Iconographia' color='#989180'>V</font> <br> 随从的背包 ",
     "[4].form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
     "[4].type": "PERK EPFD",
     "[4].string": " <font face='$Iconographia' color='#64544B'>N</font> <br> 种植盆 ",
@@ -34,7 +34,7 @@
     "[8].string": " <font face='$Iconographia' color='#989180'>V</font> <br> 马鞍袋 ",
     "[9].form_id": "FE00780E|Dynamic Activation Key - Addons Collection.esp",
     "[9].type": "PERK EPFD",
-    "[9].string": " <font face='$Iconographia' color='#989180'>S</font> <br> 书籍 ",
+    "[9].string": " <font face='$Iconographia' color='#989180'>S</font> <br> 法术书 ",
     "[10].form_id": "FE007808|Dynamic Activation Key - Addons Collection.esp",
     "[10].type": "PERK EPFD",
     "[10].string": " <font face='$Iconographia' color='#989180'>M</font> <br> 装备 ",
@@ -46,7 +46,7 @@
     "[12].string": " <font face='$Iconographia' color='#989180'>K</font> <br> 食物 ",
     "[13].form_id": "FE00780B|Dynamic Activation Key - Addons Collection.esp",
     "[13].type": "PERK EPFD",
-    "[13].string": " <font face='$Iconographia' color='#989180'>K</font> <br> 药材 ",
+    "[13].string": " <font face='$Iconographia' color='#989180'>K</font> <br> 材料 ",
     "[14].form_id": "FE00780C|Dynamic Activation Key - Addons Collection.esp",
     "[14].type": "PERK EPFD",
     "[14].string": " <font face='$Iconographia' color='#989180'>M</font> <br> 卷轴 "
@@ -94,10 +94,10 @@
   "Press E To Heal Followers.esp/SKMJPerk_etoheal.json": {
     "[0].form_id": "FE001802|Press E To Heal Followers.esp",
     "[0].type": "PERK EPFD",
-    "[0].string": " <font face='$Iconographia' color='#989180'>g</font> <br> 倒下的追随者 ",
+    "[0].string": " <font face='$Iconographia' color='#989180'>g</font> <br> 倒下的随从 ",
     "[1].form_id": "FE001802|Press E To Heal Followers.esp",
     "[1].type": "PERK EPFD",
-    "[1].string": " <font face='$Iconographia' color='#989180'>g</font> <br> 倒下的追随者 "
+    "[1].string": " <font face='$Iconographia' color='#989180'>g</font> <br> 倒下的随从 "
   },
   "Simple Hunting Overhaul.esp/SKMJPerk_simple hunting overhaul.json": {
     "[0].form_id": "FE052839|Simple Hunting Overhaul.esp",
@@ -160,7 +160,7 @@
     "[11].string": " <font face='$Iconographia' color='#989180'>N</font> <br> 聚焦水晶 ",
     "[12].form_id": "FE000800|skymoji.esp",
     "[12].type": "PERK EPFD",
-    "[12].string": " <font face='$Iconographia' color='#989180'>N</font> <br> 格仑摩利女巫的头 ",
+    "[12].string": " <font face='$Iconographia' color='#989180'>N</font> <br> 格伦摩利女巫的头 ",
     "[13].form_id": "FE000800|skymoji.esp",
     "[13].type": "PERK EPFD",
     "[13].string": " <font face='$Iconographia' color='#989180'>D</font> <br> 拉杆 ",
