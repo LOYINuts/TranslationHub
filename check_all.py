@@ -39,7 +39,7 @@ GATE = (
 # git status 看不到，只能主动扫
 STRUCTURE_ROOTS = (
     "menu_translation",
-    "mod_interface_translation",
+    "other_translation",
     "descriptionmods",
     "dialogue_mod_translation",
     "eslifer",

@@ -131,21 +131,21 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mod_interface_translation/music-conductor"
+dir = "other_translation/music-conductor"
 source = "interface/translations/MusicConductor_en.txt"
 output = "interface/translations/MusicConductor_zh.txt"
 sep = "="
 encoding = "utf-8"
 
 [[line]]
-dir = "mod_interface_translation/smart-search"
+dir = "other_translation/smart-search"
 source = "interface/translations/SmartSearch_en.ini"
 output = "interface/translations/SmartSearch_zhcn.ini"
 sep = " = "
 encoding = "utf-8"
 
 [[line]]
-dir = "mod_interface_translation/skyrim-party-sheet"
+dir = "other_translation/skyrim-party-sheet"
 source = "SKSE/Plugins/translations/PartySheet_en.txt"
 output = "SKSE/Plugins/translations/PartySheet_zh.txt"
 sep = "="
@@ -153,7 +153,7 @@ encoding = "utf-8"
 package = "SKSE/Plugins/translations/PartySheet_zh.txt"
 
 [[line]]
-dir = "mod_interface_translation/custom-markers"
+dir = "other_translation/custom-markers"
 source = "SKSE/Plugins/Translations/CustomMarkers_en.txt"
 output = "SKSE/Plugins/Translations/CustomMarkers_zh.txt"
 sep = "="
@@ -161,21 +161,21 @@ encoding = "utf-8"
 package = "SKSE/Plugins/Translations/CustomMarkers_zh.txt"
 
 [[line]]
-dir = "mod_interface_translation/veldunui"
+dir = "other_translation/veldunui"
 source = "interface/translations/skyui_se_english.txt"
 output = "interface/translations/skyui_se_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mod_interface_translation/inventory-reforged"
+dir = "other_translation/inventory-reforged"
 source = "interface/translations/InventoryReforged_ENGLISH.txt"
 output = "interface/translations/InventoryReforged_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "mod_interface_translation/know-your-skyrim"
+dir = "other_translation/know-your-skyrim"
 source = "interface/translations/KnowYourSkyrim_ENGLISH.txt"
 output = "interface/translations/KnowYourSkyrim_CHINESE.txt"
 sep = "\t"
@@ -401,7 +401,7 @@ source = "Viny Mods/Console Commands/Language.json"
 output = "Viny Mods/Console Commands/Language_zh.json"
 
 [[json]]
-dir = "mod_interface_translation/modex"
+dir = "other_translation/modex"
 source = "Interface/Modex/language/english.json"
 output = "Interface/Modex/language/chinese.json"
 package = "Interface/Modex/language/chinese.json"
@@ -413,7 +413,7 @@ source = "interface/translations/config.json"
 output = "interface/translations/config_zh.json"
 
 [[json]]
-dir = "mod_interface_translation/new-skill-menu"
+dir = "other_translation/new-skill-menu"
 source = "Viny Mods/NSM/Localization/NSM_Language.json"
 output = "Viny Mods/NSM/Localization/NSM_Language_zh.json"
 
@@ -439,7 +439,7 @@ source = "Viny Mods/Quick Swap/Language.json"
 output = "Viny Mods/Quick Swap/Language_zh.json"
 
 [[json]]
-dir = "mod_interface_translation/outfit-distributor"
+dir = "other_translation/outfit-distributor"
 source = "SKSE/Plugins/OutfitDist/Localization/en.json"
 output = "SKSE/Plugins/OutfitDist/Localization/zh-cn.json"
 package = "SKSE/Plugins/OutfitDist/Localization/zh-cn.json"
