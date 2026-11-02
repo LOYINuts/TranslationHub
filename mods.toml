@@ -154,10 +154,11 @@ package = "SKSE/Plugins/translations/PartySheet_zh.txt"
 
 [[line]]
 dir = "mod_interface_translation/custom-markers"
-source = "interface/translations/CustomMarkers_en.txt"
-output = "interface/translations/CustomMarkers_zh.txt"
+source = "SKSE/Plugins/Translations/CustomMarkers_en.txt"
+output = "SKSE/Plugins/Translations/CustomMarkers_zh.txt"
 sep = "="
 encoding = "utf-8"
+package = "SKSE/Plugins/Translations/CustomMarkers_zh.txt"
 
 [[line]]
 dir = "mod_interface_translation/veldunui"
