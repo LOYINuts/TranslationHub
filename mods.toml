@@ -264,6 +264,14 @@ sep = " = "
 encoding = "utf-8"
 
 [[line]]
+dir = "menu_translation/dmenu"
+source = "SKSE/Plugins/dMenu/translations.txt"
+output = "SKSE/Plugins/dMenu/translations_zh.txt"
+package = "SKSE/Plugins/dMenu/translations.txt"
+sep = " = "
+encoding = "utf-8"
+
+[[line]]
 dir = "menu_translation/riverwood-has-walls"
 source = "interface/translations/Riverwood Has Walls_english.txt"
 output = "interface/translations/Riverwood Has Walls_chinese.txt"
