@@ -334,6 +334,10 @@ def fill_bdd(xml: str, index: dict[tuple[str, str], list[str]], grups: set[str])
         hits = bdd_hits(index, rec["grup"], rec["original"])
         if len(hits) != 1:
             return block
+        try:
+            validate_translation(rec["original"], hits[0])
+        except ValueError:
+            return block
         n += 1
         return set_status(set_traduit(block, hits[0]), DONE_STATUS)
 
@@ -551,6 +555,10 @@ def _self_check() -> None:
     assert rec["original"] == "Hello & Hi", rec
     filled, n = fill_bdd(sample, {("NPC_", "Hello & Hi"): ["你好"]}, {"NPC_"})
     assert n == 1 and "<TRADUIT>你好</TRADUIT>" in filled and "<STATUS>90</STATUS>" in filled
+    # 词典译文占位符不符时必须跳过，不能把 STATUS 写成 90
+    bad_sample = sample.replace("Hello &amp; Hi", "Hello %s")
+    skipped, n_bad = fill_bdd(bad_sample, {("NPC_", "Hello %s"): ["你好"]}, {"NPC_"})
+    assert n_bad == 0 and "<TRADUIT />" in skipped
     pending = [{"id": "00000001", "champ": "FULL", "original": "Hello & Hi", "traduit": "你好&我"}]
     applied, n2 = apply_pending(sample, pending)
     assert n2 == 1 and "&amp;" in applied and "<TRADUIT>你好&amp;我</TRADUIT>" in applied

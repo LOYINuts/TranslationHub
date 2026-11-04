@@ -1,0 +1,14 @@
+# 构建产物按字节存储：CRLF / BOM / UTF-16 全由脚本决定，Git 不做换行转换。
+# 之前 core.autocrlf=true 把 CRLF 产物转成 LF 存进仓库，换机器 checkout 得到 LF，
+# verify_translation.py 会把每个产物误判为「过期」。字节即真相，跨机器、跨配置一致。
+* -text
+
+# 纯文本源与数据统一 LF，避免本机 autocrlf 把代码检出成 CRLF。
+*.py   text eol=lf
+*.md   text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.tsv  text eol=lf
+*.xml  text eol=lf
+*.ts   text eol=lf
+.gitignore text eol=lf

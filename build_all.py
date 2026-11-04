@@ -91,14 +91,15 @@ def render_line_one(cfg: ModConfig, root_dir: str) -> tuple[str, int, set[str]]:
         if key is not None:
             lookup_key = key.strip()
             resolved = resolve_key_with_section(lookup_key, current_section, translations)
-            if resolved:
-                translated = translations[resolved]
-                format_issues = translation_format_issues(value, translated, line_based=True)
-                if format_issues:
-                    raise ValueError(f"{cfg.dir} {lookup_key}: {'; '.join(format_issues)}")
-                out_lines.append(f"{key}{cfg.output_sep}{translated}")
-                used.add(resolved)
-                continue
+            if resolved is None:
+                raise ValueError(f"{cfg.dir}: 缺少译文 {lookup_key}")
+            translated = translations[resolved]
+            format_issues = translation_format_issues(value, translated, line_based=True)
+            if format_issues:
+                raise ValueError(f"{cfg.dir} {lookup_key}: {'; '.join(format_issues)}")
+            out_lines.append(f"{key}{cfg.output_sep}{translated}")
+            used.add(resolved)
+            continue
         out_lines.append(line)
     return "\r\n".join(out_lines) + "\r\n", len(translations), used
 
@@ -530,6 +531,20 @@ def _self_check() -> None:
         )
         assert auto == reused, (auto, reused)
         assert auto == {cfg.dir: ["extra"]}, auto
+
+        # 单文件 line 缺键必须报错，不能静默把英文混进产物
+        lc = os.path.join(root, "lc")
+        os.mkdir(lc)
+        with open(os.path.join(lc, "en.txt"), "w", encoding="utf-8") as file:
+            file.write("a\tA\nb\tB\n")
+        with open(os.path.join(lc, "translations.json"), "w", encoding="utf-8") as file:
+            json.dump({"a": "甲"}, file, ensure_ascii=False)
+        try:
+            render_line_one(ModConfig("lc", "en.txt", "zh.txt", sep="\t", encoding="utf-8"), root)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("单文件 line 缺键未被拒绝")
     print("self-check OK")
 
 

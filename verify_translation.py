@@ -39,7 +39,13 @@ from source_baseline import (
     source_key,
     update_baseline,
 )
-from sync_translation import find_missing_json, find_missing_keys, find_missing_qt
+from sync_translation import (
+    english_sentence_like,
+    find_missing_json,
+    find_missing_keys,
+    find_missing_qt,
+    untranslated_keys,
+)
 
 log = logging.getLogger(__name__)  # ponytail: named logger per spec
 
@@ -183,6 +189,10 @@ def verify_translation_registry(root: str, registered_dirs: set[str]) -> list[st
 def _self_check() -> None:
     import tempfile
 
+    assert english_sentence_like("Left index only")
+    assert not english_sentence_like("True Directional Movement")
+    assert not english_sentence_like("condition[%zu]: kind=%d function=%u")
+
     with tempfile.TemporaryDirectory() as root:
         mod_path = os.path.join(root, "mod")
         os.mkdir(mod_path)
@@ -324,6 +334,17 @@ def main(argv=None):
     for issue in verify_dir_extra_keys(configs + json_mods + qt_mods, root, filters):
         log.error(issue)
         exit_code = 1
+
+    untranslated: set[tuple[str, str]] = set()
+    for mod_dir, mod_type, config in tasks:
+        if matches_filter(mod_dir, filters):
+            untranslated.update(
+                (mod_dir, key) for key in untranslated_keys(mod_type, config, root)
+            )
+    for mod_dir, key in sorted(untranslated):
+        log.error(f"[未译] {mod_dir}: {key}")
+        exit_code = 1
+
     print(f"\n{'='*60}")
     if exit_code:
         log.error("存在未通过项，请修复。")

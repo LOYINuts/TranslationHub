@@ -171,30 +171,28 @@ def pack_group(mod_dir: str, items: list[PackItem], archive: bool,
             log.info(f"    {item.built}  ->  {item.package_path}")
         return True
 
+    if not items:
+        log.error(f"[失败] {mod_dir}: 没有可打包的产物")
+        return False
+    missing = [
+        item.built for item in items
+        if not os.path.isfile(os.path.join(REPO, mod_dir, item.built))
+    ]
+    if missing:
+        log.error(f"[失败] {mod_dir}: 产物缺失 {', '.join(missing)}，先运行 build_all.py")
+        return False
+
     if os.path.isdir(stage):
         shutil.rmtree(stage)
 
-    copied = 0
-    missing = []
     for item in items:
         source = os.path.join(REPO, mod_dir, item.built)
-        if not os.path.isfile(source):
-            missing.append(item.built)
-            continue
         target = os.path.join(stage, item.package_path)
         os.makedirs(os.path.dirname(target), exist_ok=True)
         shutil.copy2(source, target)
-        copied += 1
         log.debug(f"    {item.built} -> {item.package_path}")
 
-    if missing:
-        log.warning(f"  [缺失] {mod_dir}: {', '.join(missing)}，先运行 build_all.py")
-
-    if copied == 0:
-        log.error(f"[失败] {mod_dir}: 没有可打包的产物")
-        return False
-
-    log.info(f"[OK] {mod_dir}: {copied} 个文件 -> dist/{mod_name}/")
+    log.info(f"[OK] {mod_dir}: {len(items)} 个文件 -> dist/{mod_name}/")
 
     if archive and seven_zip:
         archive_path = os.path.join(DIST, f"{mod_name}.7z")
@@ -224,7 +222,12 @@ def main() -> int:
     parser.add_argument("--list", action="store_true", help="只列出打包计划，不执行")
     parser.add_argument("--skip-build", action="store_true", help="不重新构建，直接用现有产物")
     parser.add_argument("--verbose", action="store_true", help="输出 DEBUG 日志")
+    parser.add_argument("--self-check", action="store_true", help="运行打包逻辑自检")
     args = parser.parse_args()
+
+    if args.self_check:
+        _self_check()
+        return 0
 
     setup_cli_logging(args.verbose)
     line_mods, json_mods, qt_mods = load_repo_configs(REPO)
@@ -283,6 +286,27 @@ def main() -> int:
 
     log.info(f"打包完成：{ok}/{len(grouped)}")
     return 0 if ok == len(grouped) else 1
+
+
+def _self_check() -> None:
+    """产物缺失必须失败，且不能清空已有 dist 目录。"""
+    global DIST
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmp:
+        saved = DIST
+        DIST = tmp
+        log.disabled = True
+        try:
+            assert pack_group(
+                "__self_check__",
+                [PackItem("missing.txt", "x/missing.txt")],
+                False, None, False,
+            ) is False
+        finally:
+            log.disabled = False
+            DIST = saved
+    print("self-check OK")
 
 
 if __name__ == "__main__":

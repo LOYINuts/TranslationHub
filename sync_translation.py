@@ -243,6 +243,36 @@ def translation_values(kind: str, cfg, mod_path: str) -> dict[str, str]:
     return {k: v for k, v in data.items() if isinstance(v, str)}
 
 
+def english_sentence_like(text: str) -> bool:
+    """像普通英文句子；模组名、ID、URL、格式串不算。"""
+    if not isinstance(text, str) or len(text) < 15:
+        return False
+    words = re.findall(r"[A-Za-z]+", text)
+    if len(words) < 3 or any(char in text for char in ":/|%{}[]=_\\.$"):
+        return False
+    return sum(1 for word in words if word.islower() and len(word) > 2) >= 2
+
+
+def untranslated_keys(kind: str, cfg, mod_path: str) -> list[str]:
+    """译文仍等于英文原文的普通句子键。"""
+    # shortcut: Qt TS 键即源文且术语多为英文，只有 eslifer 一个配置；需要时再补
+    if kind == "qt":
+        return []
+    try:
+        current = (
+            find_missing_keys(cfg, mod_path)[2]
+            if kind == "line"
+            else find_missing_json(cfg, mod_path)[2]
+        )
+        zh = translation_values(kind, cfg, mod_path)
+    except (OSError, ValueError, TypeError, json.JSONDecodeError, UnicodeDecodeError):
+        return []
+    return sorted(
+        key for key, en in current.items()
+        if zh.get(key) == en and english_sentence_like(en)
+    )
+
+
 def print_changed(changed: dict[str, tuple[str, str]], zh: dict[str, str]) -> None:
     """逐条列出原文变更的键、旧/新英文和现译文，供人工对照修改。"""
     if not changed:

@@ -26,6 +26,7 @@ SELF_CHECKS = (
     ("build_all.py", "--self-check"),
     ("verify_translation.py", "--self-check"),
     ("dialogue_mod_translation/translate.py", "--self-check"),
+    ("package.py", "--self-check"),
 )
 
 GATE = (
@@ -33,6 +34,7 @@ GATE = (
     ("sync_translation.py", "--all", "--check"),
     ("build_all.py",),
     ("verify_translation.py",),
+    ("package.py", "--all", "--list"),
 )
 
 # 检查空目录的根：移动文件后父目录常留下空壳，git 不跟踪空目录所以
