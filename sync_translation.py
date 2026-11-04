@@ -297,6 +297,7 @@ def process_task(
     accept_source: bool = False,
     allow_write: bool = False,
     show_changed: bool = False,
+    assume_yes: bool = False,
 ) -> bool:
     """Process one task. Return True when issues remain or processing fails."""
     log.info(f"\n检查模组: {cfg.dir} ({kind})")
@@ -341,7 +342,8 @@ def process_task(
     added: set[str] = set()
     if missing and allow_write:
         prompt = "交互式添加翻译？[y/N] " if interactive else "自动添加（英文占位）？[y/N] "
-        if input(f"\n{prompt}").strip().lower() == "y":
+        answer = "y" if assume_yes else input(f"\n{prompt}").strip().lower()
+        if answer == "y":
             try:
                 added = sync_translations(
                     mod_path,
@@ -402,6 +404,7 @@ def main():
         action="store_true",
         help="列出英文原文已变更的键及其现译文，便于人工核对修改",
     )
+    parser.add_argument("--yes", action="store_true", help="配合 --sync/--interactive 跳过同步确认")
     parser.add_argument("--verbose", "-v", action="store_true", help="显示详细日志")
 
     args = parser.parse_args()
@@ -410,6 +413,8 @@ def main():
         parser.error("--check 不能与 --sync/--interactive/--accept-source/--changed 同时使用")
     if args.changed and (args.sync or args.interactive or args.accept_source):
         parser.error("--changed 只读，不能与 --sync/--interactive/--accept-source 同时使用")
+    if args.yes and not (args.sync or args.interactive):
+        parser.error("--yes 只能配合 --sync 或 --interactive")
 
     root_dir = os.path.dirname(os.path.abspath(__file__))
     line_configs, json_configs, qt_configs = load_repo_configs(root_dir)
@@ -442,6 +447,7 @@ def main():
             accept_source=args.accept_source,
             allow_write=allow_write,
             show_changed=args.changed,
+            assume_yes=args.yes,
         ) or failed
     return 1 if failed or selection_failed else 0
 
