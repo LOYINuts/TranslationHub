@@ -60,6 +60,8 @@ def extract_keys_from_source(source_path: str, sep: str | None) -> dict[str, str
                 full_key = f"{current_section}.{lookup_key}"
             else:
                 full_key = lookup_key
+            if full_key in keys and keys[full_key] != val.strip():
+                log.warning(f"重复键且英文不同：{full_key}")
             keys[full_key] = val.strip()
 
     return keys
@@ -352,7 +354,8 @@ def process_task(
                 return True
             current.update({key: missing[key] for key in added})
 
-    if kind in ("line", "json") and current:
+    remaining = set(missing) - added
+    if kind in ("line", "json") and current and not remaining:
         try:
             if accept_source:
                 update_baseline(mod_path, source_key(kind, cfg), current, replace=True)
@@ -370,6 +373,8 @@ def process_task(
         except (OSError, ValueError) as exc:
             log.error(f"英文基线处理失败: {exc}")
             return True
+    elif remaining:
+        log.warning(f"{len(remaining)} 条缺键未译，基线未写入；补齐后重跑 --accept-source")
 
     if not missing and not changed and not unbaselined and (initialized or not current):
         log.info(f"[OK] 无缺失词条（已有 {len(existing)} 条翻译）")

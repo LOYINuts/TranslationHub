@@ -40,7 +40,8 @@ Dialogue XML 不登记 `mods.toml`；Qt TS 不用基线，源文本即键。
 
 `mods.toml` 加 `[[line]]` / `[[json]]` / `[[qt]]`；不要在模组目录放脚本，不要在 Python 里维护模组列表。
 字段白名单（`sep`、`encoding`、`output_sep`、`value_field`、`translation_section`、glob 键格式）见 `translation-io`。
-首次启用后 `uv run sync_translation.py --all --accept-source` 并提交基线，再 `--dry-run`、build、verify。
+首次启用后 `uv run sync_translation.py <name> --accept-source` 并提交基线，再 `--dry-run`、build、verify。
+缺键未补齐时该命令不写基线，先补译再重跑；不要用 `--all` 接受全部英文变更。
 
 ## Dialogue XML
 

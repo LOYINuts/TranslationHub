@@ -47,9 +47,11 @@ Edit only `translations.json`, then build. `descriptionmods` uses
 5. Stop and ask if the encoding, file type, source/target roles, or output
    encoding is unclear. Do not try random encodings, and do not edit the source
    to make parsing succeed.
-6. Register the mod in `mods.toml` (fields above), then create and translate
-   `translations.json` from confirmed source keys. Run
-   `uv run build_all.py --dry-run <mod>`, then build and verify.
+6. Register the mod in `mods.toml` (fields above). Run
+   `uv run sync_translation.py <mod> --sync` to create `translations.json` with
+   English placeholders, translate every value, then `--accept-source`. A run
+   with untranslated keys leaves the baseline unwritten on purpose: finish the
+   keys and rerun. Then `uv run build_all.py --dry-run <mod>`, build and verify.
 
 ## Format
 
