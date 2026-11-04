@@ -17,8 +17,10 @@ only to chat.
   literary text. Use natural Chinese grammar, not literal English syntax or
   redundant pronouns and articles.
 - Terminology order: mod-local glossary or profile > nearby translations >
-  `bdd.tsv` (dialogue XML) > established game translations.
+  `bdd.tsv` (dialogue XML and place/weather names) > established game translations.
 - `perk` stays English unless the surrounding game context localizes the term.
+- Mod names, framework names, and tool names stay English (SimpleIME, Frostfall,
+  AddItemMenu); translate their descriptions instead.
 
 ## Do not translate
 

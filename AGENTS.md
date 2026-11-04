@@ -1,7 +1,7 @@
 # TranslationHub 项目规范
 
-命令、文件角色、编码与提交规则的唯一来源。翻译风格见 `game-translation`，文件读写与新模组准入见
-`translation-io`，XML 见 `dialogue-xml`（都在 `.agents/skills/`，按需加载）。
+命令、文件角色、编码与提交规则的唯一来源。翻译风格见 `game-translation`（动译文前先加载），文件读写与新模组准入见
+`translation-io`，XML 见 `dialogue-xml`（按需加载）。
 
 ## 门禁
 
@@ -40,7 +40,7 @@ Dialogue XML 不登记 `mods.toml`；Qt TS 不用基线，源文本即键。
 
 `mods.toml` 加 `[[line]]` / `[[json]]` / `[[qt]]`；不要在模组目录放脚本，不要在 Python 里维护模组列表。
 字段白名单（`sep`、`encoding`、`output_sep`、`value_field`、`translation_section`、glob 键格式）见 `translation-io`。
-首次启用后 `uv run sync_translation.py <name> --accept-source` 并提交基线，再 `--dry-run`、build、verify。
+全新模组先 `uv run sync_translation.py <name> --sync` 生成英文骨架（会询问确认），补译后再 `--accept-source`。
 缺键未补齐时该命令不写基线，先补译再重跑；不要用 `--all` 接受全部英文变更。
 
 ## Dialogue XML
@@ -66,6 +66,7 @@ uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 落点取 `mods.toml` 的 `package`（可多个）；未写时按 `output` 推导：带 `interface/` / `SKSE/` 前缀直接沿用，
 否则拼 `interface/translations/` 并警告。`interface/translations/` 的英文名与中文名都打包，
 `SKSE/Plugins/` 只打英文名（插件按固定名读）；两种内容都是中文。
+插件自解析文本（如 dMenu 的 `translations.txt`）：产物加 `_zh`，`package` 写回源文件名，安装即替换。
 
 ## 翻译约束
 

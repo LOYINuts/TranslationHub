@@ -56,6 +56,6 @@ Edit only `translations.json`, then build. `descriptionmods` uses
 ## Format
 
 Use the separator and encoding in `mods.toml`; do not assume all files use `=`.
-The generated output keeps the configured encoding and newline convention.
-For `descriptionmods`, preserve every `key|description|metadata...` record.
+The generated output keeps the configured encoding; line outputs are written
+with CRLF. For `descriptionmods`, preserve every `key|description|metadata...` record.
 Preserve keys, sections, order, comments, placeholders, tags, and escaped `\n`.
