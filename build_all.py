@@ -16,6 +16,7 @@ import glob
 import json
 import logging
 import os
+import re
 import tomllib
 import xml.etree.ElementTree as ET
 
@@ -252,13 +253,18 @@ def render_json_one(jcfg: ModJson, root_dir: str) -> tuple[object, int, set[str]
     return translated_data, count_leaves(translations), used
 
 
+def _escape_private_use(text: str) -> str:
+    """私有区字形按 \\uXXXX 输出，与上游源文件写法一致。"""
+    return re.sub("[\ue000-\uf8ff]", lambda m: f"\\u{ord(m.group()):04x}", text)
+
+
 def build_json_one(jcfg: ModJson, root_dir: str) -> tuple[int, set[str]]:
     """Build one JSON mod. Returns (translation count, consumed keys)."""
     translated_data, count, used = render_json_one(jcfg, root_dir)
     out_path = os.path.join(root_dir, jcfg.dir, jcfg.output)
+    text = _escape_private_use(json.dumps(translated_data, ensure_ascii=False, indent=2))
     with open(out_path, "w", encoding="utf-8", newline="\n") as file:
-        json.dump(translated_data, file, ensure_ascii=False, indent=2)
-        file.write("\n")
+        file.write(text + "\n")
     log.info(f"[OK] {jcfg.dir}: {count} 条 -> {jcfg.output}")
     return count, used
 def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int, set[str]]:
