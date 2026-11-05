@@ -67,6 +67,7 @@ uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 否则拼 `interface/translations/` 并警告。`interface/translations/` 的英文名与中文名都打包，
 `SKSE/Plugins/` 只打英文名（插件按固定名读）；两种内容都是中文。
 插件自解析文本（如 dMenu 的 `translations.txt`）：产物加 `_zh`，`package` 写回源文件名，安装即替换。
+更新译文后必须重新 `uv run package.py <name>`，再提交；`dist/` 不入库。
 
 ## 翻译约束
 

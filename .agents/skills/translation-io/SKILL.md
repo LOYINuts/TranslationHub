@@ -52,6 +52,8 @@ Edit only `translations.json`, then build. `descriptionmods` uses
    with English placeholders, translate every value, then build. A run
    with untranslated keys leaves the baseline unwritten on purpose: finish the
    keys and rerun. Then `uv run build_all.py --dry-run <mod>`, build and verify.
+   Finally `uv run package.py <mod>`: an updated translation is not finished
+   until `dist/<mod>/` is regenerated. `dist/` stays out of git.
 
 ## Format
 

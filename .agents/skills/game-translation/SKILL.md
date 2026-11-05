@@ -33,5 +33,5 @@ and literal `\n`.
 
 Re-read the Chinese for naturalness and register consistency, confirm every
 placeholder and tag survived, resolve ambiguity from context, then run the
-AGENTS.md gate and require exit code 0. Report only ambiguity that context
+AGENTS.md gate, package the mod, and require exit code 0. Report only ambiguity that context
 cannot resolve.
