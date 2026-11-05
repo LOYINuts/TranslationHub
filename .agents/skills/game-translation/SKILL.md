@@ -25,6 +25,8 @@ only to chat.
 ## Do not translate
 
 Keys, code, links, paths, numbers, units, comments, and structural fields.
+In SSE-AT DSD exports, `FACT` records stay English: faction names are normally
+not shown in game.
 Preserve placeholders and markup exactly, unless the source format translates
 them: `{name}`, `{0}`, `%s`, `%llu`, Qt `%1`, `$PLAYER$`, `<color>`, `[br]`,
 and literal `\n`.

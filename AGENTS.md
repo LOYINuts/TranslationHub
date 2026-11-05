@@ -73,6 +73,7 @@ uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 
 - 术语优先级：本模组既有译文 > 相邻模组同名词 > `bdd.tsv` > 游戏既有译名。
 - 占位符与标记逐条对齐：`%s`、`%llu`、`%1`、`{0}`、`$VAR$`、`<font>`、`[br]`、字面量 `\n`。
+- SSE-AT 导出的 DSD 文件不译 `FACT` 记录（阵营名一般不显示），保留英文原样；其余记录按 `string == original` 判断是否待译。
 - 只改翻译源，改动写进仓库文件，不在对话里返回纯译文转储；`translations.json` 就地增改，不整表重排或重格式化。
 
 ## 代码约定
