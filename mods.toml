@@ -190,6 +190,14 @@ output_sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "menu_translation/svg-and-png-icon-injector"
+source = "SKSE/Plugins/Translations/PNGIconInjector_en.txt"
+output = "SKSE/Plugins/Translations/PNGIconInjector_zh.txt"
+sep = "="
+encoding = "utf-8"
+package = "SKSE/Plugins/Translations/PNGIconInjector_zh.txt"
+
+[[line]]
 dir = "menu_translation/skyparkour"
 source = "interface/translations/SkyParkour_English.txt"
 output = "interface/translations/SkyParkour_Chinese.txt"

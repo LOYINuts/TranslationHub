@@ -1,0 +1,154 @@
+; SVG and PNG Icon Injector - English strings.
+; Translate the right side of "=" only. Do not rename keys or [Sections].
+; Untranslated lines fall back to English. Copy as PNGIconInjector_<code>.txt.
+; Non-Latin text needs the matching Enable... option in SKSEMenuFramework.ini.
+
+[Meta]
+Name=English
+
+[Pages]
+Settings=Settings
+Colors=Colors
+
+[Page]
+SavesAtOnce=Changes save at once and apply the next time a menu opens.
+
+[Messages]
+ReadFailed=PNGIconInjector.ini could not be read.
+SaveFailed=Saving failed. Is PNGIconInjector.ini read-only?
+
+[Tabs]
+Menus=Menus
+Status=Status icons
+Other=Other
+Stats=Stats
+Debug=Debug
+
+[Menus]
+ItemIcons=Item icons
+Inventory=Inventory
+Container=Container
+Barter=Barter
+Gift=Gift
+Magic=Magic (spells, powers, shouts)
+Favorites=Favorites
+Crafting=Crafting (forge, smelter, tanning, enchanting, alchemy)
+CategoryIcons=Category icons
+ItemMenuTabs=Item menu category bar
+CraftingTabs=Crafting categories
+
+[Status]
+Enable=Enable status icons
+Sources=Sources
+Museum=Museum (Legacy of the Dragonborn)
+QuestItem=Quest item
+Enchantment=Enchantment (known, unknown, cannot disenchant)
+NewItem=New item
+Ingredients=Ingredients
+IngredientProgress=Learned-effects progress
+EffectIcons=Discovered-effect icons
+MaxEffectIcons=Effect icons per ingredient
+Size=Size
+IconSize=Status icon size (fraction of row)
+
+[Other]
+Language=Language
+LanguageCombo=Language
+OtherMods=Other mods
+TrueHUD=TrueHUD Recent Loot
+QuickLoot=QuickLoot loot window
+WorldMap=World map markers
+LocalMap=Local map markers
+Rendering=Rendering
+SharpSVG=Sharp SVG icons (applies after restart)
+
+[Stats]
+RuleFiles=Rule files
+Rules=Rules
+StatusIconRules=Status icon rules
+Skipped=Skipped
+MapMarkerRules=Map marker rules
+CategoryIcons=Category icons
+TCC=The Curator's Companion
+Detected=Detected
+NotInstalled=Not installed
+ColFile=File
+ColRules=Rules
+ColSkipped=Skipped
+Invalid=invalid
+
+[Debug]
+LogLevel=Log level
+LevelDebug=debug
+LevelInfo=info
+LevelOff=off
+LogMatches=Log rule matches (for rule authors)
+LogTiming=Log menu and rule timing
+
+[Colors]
+UseCustom=Use custom colors
+ApplyPreset=Apply preset
+TabStatus=Status icons
+TabItems=Item icons
+TabMapMarkers=Map markers
+ItemsHelp=Color a whole category, or a subcategory on its own. White = no tint.
+NewItem=New item
+BestInClass=Best in class
+QuestItem=Quest item
+Favorite=Favorite
+HarmfulEffect=Harmful ingredient effect
+MapMarkerWorld=World map
+MapMarkerLocal=Local map
+
+[Presets]
+Default=Default
+
+[ItemTints]
+sItemWeapons=Weapons
+sItemArmor=Armor
+sItemAmmo=Ammo
+sItemPotions=Potions
+sItemPoisons=Poisons
+sItemFood=Food and drink
+sItemIngredients=Ingredients
+sItemBooks=Books
+sItemScrolls=Scrolls
+sItemSoulGems=Soul gems
+sItemKeys=Keys
+sItemMisc=Misc
+sItemWeaponsSwords=Swords
+sItemWeaponsDaggers=Daggers
+sItemWeaponsAxes=Axes
+sItemWeaponsBlunt=Blunt
+sItemWeaponsBows=Bows
+sItemWeaponsCrossbows=Crossbows
+sItemWeaponsStaves=Staves
+sItemWeaponsTools=Tools
+sItemArmorShields=Shields
+sItemArmorHeavy=Heavy
+sItemArmorLight=Light
+sItemArmorClothing=Clothing
+sItemArmorJewelry=Jewelry
+sItemAmmoArrows=Arrows
+sItemAmmoBolts=Bolts
+sItemPotionsHealth=Health
+sItemPotionsMagicka=Magicka
+sItemPotionsStamina=Stamina
+sItemPotionsResist=Resist
+sItemFoodFood=Food
+sItemFoodDrinks=Drinks
+sItemBooksBooks=Books
+sItemBooksSpellTomes=Spell tomes
+sItemBooksNotes=Notes
+sItemSoulGemsEmpty=Empty
+sItemSoulGemsPartial=Partial
+sItemSoulGemsFilled=Filled
+sItemMiscGems=Gems
+sItemMiscGold=Gold
+sItemMiscIngots=Ingots
+sItemMiscHides=Hides
+sItemMiscAnimalParts=Animal parts
+sItemMiscArtifacts=Artifacts
+sItemMiscClutter=Clutter
+sItemMiscFirewood=Firewood
+sItemMiscLockpicks=Lockpicks
