@@ -26,7 +26,6 @@
   "$SPII_SliderX": "左 / 右",
   "$SPII_SliderY": "拉近 / 拉远",
   "$SPII_SliderZ": "下 / 上",
-  "$SPII_SliderFOV": "视野",
   "$SPII_SlidersClosed": "显示角色的菜单打开时，位置滑块才会生效。",
   "$SPII_Items": "菜单",
   "$SPII_ItemCard": "物品卡片",
@@ -36,7 +35,7 @@
   "$SPII_ItemPreview": "物品预览",
   "$SPII_ItemPreviewTT": "调整各物品菜单中所选物品 3D 模型的位置与大小。滑动时即可看到变化，下方保持菜单打开。",
   "$SPII_AutoAdjust": "自动调整 3D 与卡片",
-  "$SPII_AutoAdjustTT": "按屏幕比例（16:9 至 32:9）自动摆放并缩放物品卡片与 3D 模型。",
+  "$SPII_AutoAdjustTT": "按屏幕比例（16:9 至 32:9）自动摆放并缩放物品卡片与 3D 模型。\\n[非原版布局下默认关闭。]",
   "$SPII_HideApparelPreviewItems": "服装预览时隐藏",
   "$SPII_HideApparelPreviewItemsTT": "用“服装预览”在角色身上试穿时隐藏物品卡片与 3D 模型，以免挡住试穿效果。",
   "$SPII_SliderScale": "大小",
@@ -62,5 +61,7 @@
   "$SPII_Reset": "重置镜头",
   "$SPII_ResetDoubleClick": "重置镜头（双击）",
   "$SPII_MoreControls": "更多控制",
-  "$SPII_Confirm": "确认"
+  "$SPII_Confirm": "确认",
+  "$SPII_StartFov": "初始视野",
+  "$SPII_StartFovTT": "菜单打开时的视野角度。用镜头控制所做的更改会持续到菜单关闭，除非启用「记住镜头」将其保留。"
 }
