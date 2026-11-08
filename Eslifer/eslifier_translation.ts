@@ -4,243 +4,244 @@
   <context>
     <name>CFIDs</name>
     <message>
-        <location filename="src\compact_form_ids.py" line="102" />
-        <source>Getting files to hash...</source>
-        <translation>正在计算要哈希的文件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="174" />
-        <source>Failed to hash file: </source>
-        <translation>无法哈希文件： </translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="197" />
-        <source>Editing Plugin: %1...</source>
-        <translation>正在编辑插件：%1…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="202" />
-        <source>Patching %1 Dependent Plugins...</source>
-        <translation>正在修补 %1 个依赖插件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="213" />
-        <source>Temporarily Extracting FaceGen/Voice files from BSA for patching...</source>
-        <translation>正在从 BSA 临时解压 FaceGen/语音文件以进行修补…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="255" />
-        <source>Patching %1 Dependent Files...</source>
-        <translation>正在修补 %1 个依赖文件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="260" />
-        <source>Renaming/Patching %1 Dependent Files...</source>
-        <translation>正在重命名/修补 %1 个依赖文件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="265" />
-        <source>Deleting temporarily Extracted FaceGen/Voice Files...</source>
-        <translation>正在删除临时解压的 FaceGen/语音文件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="273" />
-        <source>Changing ESL flag in: </source>
-        <translation>正在更改 ESL 标记于： </translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="287" />
-        <source>Patching new plugins and files for %1...</source>
-        <translation>正在为 %1 修补新的插件和文件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="292" />
-        <source>Patching New Dependent Plugins...</source>
-        <translation>正在修补新的依赖插件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="298" />
-        <source>Patching %1 New Dependent Files...</source>
-        <translation>正在修补 %1 个新的依赖文件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="303" />
-        <source>Renaming/Patching %1 New Dependent Files...</source>
-        <translation>正在重命名/修补 %1 个新的依赖文件…</translation>
-    </message>
-    <message>
-        <location filename="src\compact_form_ids.py" line="513" />
-        <location filename="src\compact_form_ids.py" line="391" />
+        <location filename="src\compact_form_ids.py" line="65" />
         <source>Percentage: %1%</source>
         <translation>百分比：%1%</translation>
     </message>
     <message>
-        <location filename="src\compact_form_ids.py" line="514" />
-        <location filename="src\compact_form_ids.py" line="392" />
+        <location filename="src\compact_form_ids.py" line="66" />
         <source>Files: %2/%3</source>
         <translation>文件：%2/%3</translation>
     </message>
     <message>
-        <location filename="src\compact_form_ids.py" line="567" />
+        <location filename="src\compact_form_ids.py" line="120" />
+        <source>Getting files to hash...</source>
+        <translation>正在计算要哈希的文件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="189" />
+        <source>Failed to hash file: </source>
+        <translation>无法哈希文件： </translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="218" />
+        <source>Editing Plugin: %1...</source>
+        <translation>正在编辑插件：%1…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="223" />
+        <source>Patching %1 Dependent Plugins...</source>
+        <translation>正在修补 %1 个依赖插件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="234" />
+        <source>Temporarily Extracting FaceGen/Voice files from %0 for patching...</source>
+        <translation>正在从 %0 临时解压 FaceGen/语音文件以进行修补…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="272" />
+        <source>Patching %1 Dependent Files...</source>
+        <translation>正在修补 %1 个依赖文件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="275" />
+        <source>Renaming/Patching %1 Dependent Files...</source>
+        <translation>正在重命名/修补 %1 个依赖文件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="278" />
+        <source>Deleting temporarily Extracted FaceGen/Voice Files...</source>
+        <translation>正在删除临时解压的 FaceGen/语音文件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="286" />
+        <source>Changing ESL flag in: </source>
+        <translation>正在更改 ESL 标记于： </translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="296" />
+        <source>Failed to set ESL flag in </source>
+        <translation>无法设置 ESL 标记于 </translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="303" />
+        <source>Patching new plugins and files for %1...</source>
+        <translation>正在为 %1 修补新的插件和文件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="308" />
+        <source>Patching New Dependent Plugins...</source>
+        <translation>正在修补新的依赖插件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="314" />
+        <source>Patching %1 New Dependent Files...</source>
+        <translation>正在修补 %1 个新的依赖文件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="317" />
+        <source>Renaming/Patching %1 New Dependent Files...</source>
+        <translation>正在重命名/修补 %1 个新的依赖文件…</translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="346" />
+        <source>Failed to hash </source>
+        <translation>无法计算哈希： </translation>
+    </message>
+    <message>
+        <location filename="src\compact_form_ids.py" line="626" />
         <source>Error decompressing form: %1
  at Header: %2 at Index: %3</source>
         <translation>解压表单时出错：%1
 位置 Header：%2 位置 Index：%3</translation>
     </message>
     <message>
-        <location filename="src\compact_form_ids.py" line="941" />
+        <location filename="src\compact_form_ids.py" line="1013" />
         <source>Failed to patch dependent's SEQ file: </source>
         <translation>无法修补依赖项的 SEQ 文件： </translation>
     </message>
 </context><context>
     <name>CompactorWorker</name>
     <message>
-        <location filename="src\main_page.py" line="1546" />
+        <location filename="src\main\workers.py" line="98" />
         <source>Hashing any existing files for changes...</source>
         <translation>正在为更改而计算任何现有文件的哈希…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1549" />
+        <location filename="src\main\workers.py" line="101" />
         <source>%0% Patching: %1/%2</source>
         <translation>%0% 正在修补：%1/%2</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1576" />
+        <location filename="src\main\workers.py" line="128" />
         <source>Creating/Updating ESLifier_Cell_Master.esm...</source>
         <translation>正在创建/更新 ESLifier_Cell_Master.esm…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1578" />
+        <location filename="src\main\workers.py" line="130" />
         <source>Saving Data...</source>
         <translation>正在保存数据…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1581" />
+        <location filename="src\main\workers.py" line="133" />
         <source>Hashing output files for checking later changes...</source>
         <translation>正在计算输出文件的哈希以在之后检查更改…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1583" />
+        <location filename="src\main\workers.py" line="135" />
         <source>Patching Complete</source>
         <translation>修补完成</translation>
     </message>
 </context><context>
     <name>FlagWorker</name>
     <message>
-        <location filename="src\main_page.py" line="1610" />
+        <location filename="src\main\workers.py" line="162" />
         <source>Hashing any existing files for changes...</source>
         <translation>正在为更改而计算任何现有文件的哈希…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1615" />
+        <location filename="src\main\workers.py" line="167" />
         <source>Hashing output files for checking later changes...</source>
         <translation>正在计算输出文件的哈希以在之后检查更改…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1629" />
+        <location filename="src\main\workers.py" line="181" />
         <source>Failed to dump data to </source>
         <translation>无法将数据转储到 </translation>
     </message>
 </context><context>
     <name>Global</name>
     <message>
-        <location filename="src\cell_changed_scanner.py" line="52" />
-        <source>Failed to read data of </source>
-        <translation>无法读取数据： </translation>
-    </message>
-    <message>
-        <location filename="src\patch_new.py" line="538" />
-        <location filename="src\dependency_getter.py" line="33" />
-        <location filename="src\compact_form_ids.py" line="85" />
-        <location filename="src\compact_form_ids.py" line="74" />
-        <location filename="src\cell_changed_scanner.py" line="95" />
+        <location filename="src\scanners\dependency_getter.py" line="37" />
+        <location filename="src\scanners\cell_changed_scanner.py" line="131" />
+        <location filename="src\compact_form_ids.py" line="103" />
+        <location filename="src\compact_form_ids.py" line="92" />
         <source>Failed to dump data to </source>
         <translation>无法将数据转储到 </translation>
     </message>
     <message>
-        <location filename="src\file_defined_patcher_conditions.py" line="122" />
-        <location filename="src\compact_form_ids.py" line="551" />
+        <location filename="src\compact_form_ids.py" line="609" />
         <source>Failed to patch file: </source>
         <translation>无法修补文件： </translation>
     </message>
     <message>
-        <location filename="src\compact_form_ids.py" line="933" />
+        <location filename="src\compact_form_ids.py" line="1005" />
         <source>Failed to patch dependent: </source>
         <translation>无法修补依赖项： </translation>
     </message>
     <message>
-        <location filename="src\data_holder.py" line="157" />
+        <location filename="src\data_holder.py" line="235" />
         <source>Failed to get necessary paths, see ESLifier.log</source>
         <translation>无法获取必要的路径，请查看 ESLifier.log</translation>
     </message>
     <message>
-        <location filename="src\data_holder.py" line="206" />
+        <location filename="src\data_holder.py" line="284" />
         <source>No relative file path method for file: %1, aborting program execution for safety. Report this to the GitHub with your settings.json.</source>
         <translation>文件 %1 没有相对文件路径方法，出于安全考虑中止程序执行。请附带你的 settings.json 将此问题报告到 GitHub。</translation>
     </message>
     <message>
-        <location filename="src\dependency_getter.py" line="69" />
-        <source>Failed to get master list of </source>
-        <translation>无法获取主插件列表： </translation>
-    </message>
-    <message>
-        <location filename="src\eslifier_app.py" line="36" />
+        <location filename="src\eslifier_app.py" line="46" />
         <source>File likely Corrupt</source>
         <translation>文件可能已损坏</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="39" />
-        <location filename="src\eslifier_app.py" line="37" />
+        <location filename="src\eslifier_app.py" line="49" />
+        <location filename="src\eslifier_app.py" line="47" />
         <source>The file is likely corrupt! Checksum mismatch. Redownload the file, if the issue persists then report this to the GitHub.</source>
         <translation>该文件可能已损坏！校验和不匹配。请重新下载该文件，如果问题持续存在，请将其报告到 GitHub。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="63" />
-        <location filename="src\eslifier_app.py" line="52" />
+        <location filename="src\eslifier_app.py" line="73" />
+        <location filename="src\eslifier_app.py" line="62" />
         <source>File Access Error</source>
         <translation>文件访问错误</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="53" />
-        <source>Cannot access ESLifier_Data/settings.json</source>
-        <translation>无法访问 ESLifier_Data/settings.json</translation>
+        <location filename="src\eslifier_app.py" line="63" />
+        <source>Cannot access %0</source>
+        <translation>无法访问 %0</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="64" />
-        <source>Cannot access/create ESLifier_Data/settings.json</source>
-        <translation>无法访问/创建 ESLifier_Data/settings.json</translation>
+        <location filename="src\eslifier_app.py" line="74" />
+        <source>Cannot access/create %0</source>
+        <translation>无法访问/创建 %0</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="81" />
+        <location filename="src\eslifier_app.py" line="85" />
         <source>ESLifier Outdated</source>
         <translation>ESLifier 已过时</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="82" />
-        <source>There exists a new version of ESLifier (v%1).
+        <location filename="src\eslifier_app.py" line="86" />
+        <source>There exists a new version of %0 (v%1).
 It is recommended to update as it could contain critical changes,
 bug fixes, or additional file patchers.</source>
-        <translation>存在一个较新版本的 ESLifier（v%1）。
+        <translation>存在新版本的 %0（v%1）。
 建议更新，因为它可能包含关键更改、
-错误修复或额外的文件修补器。</translation>
+bug 修复或额外的文件修补器。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="93" />
+        <location filename="src\eslifier_app.py" line="91" />
+        <source>Changelog:</source>
+        <translation>更新日志：</translation>
+    </message>
+    <message>
+        <location filename="src\eslifier_app.py" line="101" />
         <source>Open Nexus</source>
         <translation>打开 Nexus</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="95" />
+        <location filename="src\eslifier_app.py" line="103" />
         <source>Open GitHub</source>
         <translation>打开 GitHub</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="126" />
+        <location filename="src\eslifier_app.py" line="134" />
         <source>Master Patcher Conditions Update Failed</source>
         <translation>主修补器条件更新失败</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="127" />
+        <location filename="src\eslifier_app.py" line="135" />
         <source>Failed to download latest patcher conditions from GitHub.
 Ensure you have an active internet connection.
 Using outdated patcher conditions may cause certain files to not be patched.</source>
@@ -249,236 +250,251 @@ Using outdated patcher conditions may cause certain files to not be patched.</so
 使用过时的修补器条件可能导致某些文件不会被修补。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="133" />
+        <location filename="src\eslifier_app.py" line="141" />
         <source>Master Ignored Files Update Failed</source>
         <translation>主忽略文件更新失败</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="134" />
+        <location filename="src\eslifier_app.py" line="142" />
         <source>Failed to download latest ignored files list from GitHub.
 Ensure you have an active internet connection.</source>
         <translation>从 GitHub 下载最新忽略文件列表失败。
 请确保你有有效的网络连接。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="624" />
-        <location filename="src\eslifier_app.py" line="619" />
-        <location filename="src\eslifier_app.py" line="608" />
+        <location filename="src\eslifier_app.py" line="631" />
+        <location filename="src\eslifier_app.py" line="626" />
+        <location filename="src\eslifier_app.py" line="615" />
         <source>ESLifier Error</source>
         <translation>ESLifier 错误</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="609" />
-        <source>Check latest crash log in ESLifier_Data/Crash Logs</source>
-        <translation>查看 ESLifier_Data/Crash Logs 中的最新崩溃日志</translation>
-    </message>
-    <message>
-        <location filename="src\eslifier_app.py" line="620" />
+        <location filename="src\eslifier_app.py" line="627" />
         <source>Failed to open crash log directory, creating crash log at: </source>
         <translation>打开崩溃日志目录失败，正在于以下位置创建崩溃日志： </translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="625" />
+        <location filename="src\eslifier_app.py" line="632" />
         <source>Failed to create crash log, error: %1
 crash cause: %2</source>
         <translation>创建崩溃日志失败，错误：%1
 崩溃原因：%2</translation>
     </message>
     <message>
-        <location filename="src\file_defined_patcher_conditions.py" line="27" />
+        <location filename="src\patchers\file_defined_patcher_conditions.py" line="35" />
         <source>Issue in conditions file %1:</source>
         <translation>条件文件 %1 中存在问题：</translation>
     </message>
     <message>
-        <location filename="src\file_defined_patcher_conditions.py" line="78" />
+        <location filename="src\patchers\file_defined_patcher_conditions.py" line="92" />
         <source>A condtion in %1 is missing required fields or has an invalid patcher method.</source>
         <translation>%1 中的某个条件缺少必需字段，或修补器方法无效。</translation>
     </message>
     <message>
-        <location filename="src\plugin_qualification_checker.py" line="120" />
+        <location filename="src\scanners\cell_changed_scanner.py" line="57" />
+        <source>Failed to read data of </source>
+        <translation>无法读取数据： </translation>
+    </message>
+    <message>
+        <location filename="src\scanners\dependency_getter.py" line="83" />
+        <source>Failed to get master list of </source>
+        <translation>无法获取主插件列表： </translation>
+    </message>
+    <message>
+        <location filename="src\scanners\plugin_qualification_checker.py" line="163" />
         <source>Failed to read plugin: </source>
         <translation>无法读取插件： </translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="244" />
+        <location filename="src\scanners\scanner.py" line="271" />
         <source>Failed to dump data to: </source>
         <translation>无法将数据转储到： </translation>
     </message>
 </context><context>
     <name>HashWorker</name>
     <message>
-        <location filename="src\main_page.py" line="1697" />
-        <location filename="src\main_page.py" line="1680" />
-        <location filename="src\compact_form_ids.py" line="149" />
-        <location filename="src\compact_form_ids.py" line="134" />
+        <location filename="src\main\workers.py" line="269" />
+        <location filename="src\main\workers.py" line="243" />
+        <location filename="src\compact_form_ids.py" line="69" />
         <source>Processed: %1%</source>
         <translation>已处理：%1%</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1698" />
-        <location filename="src\main_page.py" line="1681" />
-        <location filename="src\compact_form_ids.py" line="150" />
-        <location filename="src\compact_form_ids.py" line="135" />
+        <location filename="src\main\workers.py" line="270" />
+        <location filename="src\main\workers.py" line="244" />
+        <location filename="src\compact_form_ids.py" line="70" />
         <source>Files: %2/%3</source>
         <translation>文件：%2/%3</translation>
+    </message>
+    <message>
+        <location filename="src\main\workers.py" line="258" />
+        <source>Failed while hashing output files.</source>
+        <translation>计算输出文件哈希失败。</translation>
     </message>
 </context><context>
     <name>PatchNewScannerWorker</name>
     <message>
-        <location filename="src\patch_new.py" line="179" />
+        <location filename="src\patch_new.py" line="228" />
         <source>Scanning All Files:</source>
         <translation>正在扫描所有文件：</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="181" />
+        <location filename="src\patch_new.py" line="230" />
         <source>Getting Dependencies</source>
         <translation>正在获取依赖项</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="209" />
-        <source>Issue reading an ESLifier_Data file.</source>
-        <translation>读取 ESLifier_Data 文件时出现问题。</translation>
+        <location filename="src\patch_new.py" line="258" />
+        <source>Issue reading an %0 file.</source>
+        <translation>读取 %0 文件时出现问题。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="214" />
+        <location filename="src\patch_new.py" line="264" />
         <source>Detecting Hash Changes...</source>
         <translation>正在检测哈希更改…</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="228" />
+        <location filename="src\patch_new.py" line="272" />
         <source>Found %0 Hash changes.</source>
         <translation>发现 %0 处哈希更改。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="232" />
+        <location filename="src\patch_new.py" line="276" />
         <source>Detecting Conflict Changes...</source>
         <translation>正在检测冲突更改…</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="241" />
+        <location filename="src\patch_new.py" line="285" />
         <source>Found %0 Conflict Changes.</source>
         <translation>发现 %0 处冲突更改。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="326" />
+        <location filename="src\patch_new.py" line="369" />
         <source>Confirming files that need deleting...</source>
         <translation>正在确认需要删除的文件…</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="340" />
+        <location filename="src\patch_new.py" line="382" />
         <source>Continuing will delete %1 files from ESLifier's output</source>
         <translation>继续将删除 ESLifier 输出中的 %1 个文件</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="342" />
+        <location filename="src\patch_new.py" line="384" />
         <source> of which %1 are game plugins. </source>
         <translation> 其中 %1 个是游戏插件。 </translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="345" />
+        <location filename="src\patch_new.py" line="387" />
         <source>This action is destructive and cannot be undone. If you have made any edits to files in the ESLifier Output it is not advised to do so nor to continue.
 Are you sure you want to continue?</source>
         <translation>该操作具有破坏性且无法撤销。如果你对 ESLifier 输出中的文件做过任何编辑，不建议这样做也不建议继续。
 你确定要继续吗？</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="350" />
+        <location filename="src\patch_new.py" line="392" />
         <source>Some plugins that will be deleted include:</source>
         <translation>将删除的部分插件包括：</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="352" />
+        <location filename="src\patch_new.py" line="394" />
         <source>The plugins that will be deleted are:</source>
         <translation>将被删除的插件是：</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="361" />
+        <location filename="src\patch_new.py" line="403" />
         <source>and %1 more...</source>
         <translation>以及另外 %1 个…</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="419" />
+        <location filename="src\patch_new.py" line="461" />
         <source>Getting New Dependencies and Files</source>
         <translation>正在获取新的依赖项和文件</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="430" />
+        <location filename="src\patch_new.py" line="472" />
         <source>Failed to find a required dictionary.</source>
         <translation>找不到必需的字典。</translation>
+    </message>
+    <message>
+        <location filename="src\patch_new.py" line="521" />
+        <source>Failed to hash %0</source>
+        <translation>无法计算 %0 的哈希</translation>
     </message>
 </context><context>
     <name>PatchNewWorker</name>
     <message>
-        <location filename="src\patch_new.py" line="501" />
+        <location filename="src\patch_new.py" line="555" />
         <source>Hashing any existing files for changes...</source>
         <translation>正在为更改而计算任何现有文件的哈希…</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="504" />
+        <location filename="src\patch_new.py" line="558" />
         <source>%0% Patching: %1/%2</source>
         <translation>%0% 正在修补：%1/%2</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="522" />
+        <location filename="src\patch_new.py" line="572" />
         <source>Saving Data...</source>
         <translation>正在保存数据…</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="525" />
+        <location filename="src\patch_new.py" line="575" />
         <source>Hashing output files for checking later changes...</source>
         <translation>正在计算输出文件的哈希以在之后检查更改…</translation>
     </message>
 </context><context>
     <name>ScannerWorker</name>
     <message>
-        <location filename="src\main_page.py" line="1496" />
+        <location filename="src\main\workers.py" line="44" />
         <source>Scanning All Files:</source>
         <translation>正在扫描所有文件：</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1501" />
+        <location filename="src\main\workers.py" line="51" />
         <source>Checking if New CELLs are Changed</source>
         <translation>正在检查新的 CELL 是否已更改</translation>
+    </message>
+    <message>
+        <location filename="src\main\workers.py" line="53" />
+        <source>Checking if New CELLs have PreVis/PreCombined</source>
+        <translation>正在检查新的 CELL 是否带有 PreVis/PreCombined</translation>
     </message>
 </context><context>
     <name>list_compactable</name>
     <message>
-        <location filename="src\list_compact.py" line="36" />
+        <location filename="src\lists\list_compact.py" line="44" />
         <source>Import Compacted List Selection</source>
         <translation>导入压缩列表选择</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="39" />
+        <location filename="src\lists\list_compact.py" line="87" />
+        <location filename="src\lists\list_compact.py" line="50" />
         <source>*   Mod</source>
         <translation>*   模组</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="39" />
+        <location filename="src\lists\list_compact.py" line="50" />
         <source>CELL Records</source>
         <translation>CELL 记录</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="39" />
+        <location filename="src\lists\list_compact.py" line="50" />
         <source>WRLD Records</source>
         <translation>WRLD 记录</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="40" />
+        <location filename="src\lists\list_compact.py" line="50" />
         <source>WTHR Records</source>
         <translation>WTHR 记录</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="40" />
+        <location filename="src\lists\list_compact.py" line="87" />
+        <location filename="src\lists\list_compact.py" line="51" />
         <source>Dependencies</source>
         <translation>依赖项</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="41" />
-        <source>This is the plugin name. Select which plugins you wish to compact.</source>
-        <translation>这是插件名称。选择你希望压缩的插件。</translation>
-    </message>
-    <message>
-        <location filename="src\list_compact.py" line="42" />
+        <location filename="src\lists\list_compact.py" line="52" />
         <source>This is the CELL Record Flag. It can be completely ignored for users
 with SSE Engine Fixes v7+ on Skyrim 1.6.1170+.
 Otherwise, if an ESM+ESL plugin creates a new CELL and another mod
@@ -506,7 +522,7 @@ as a master for the ESL+ESM cell bug and ESL worldspace bug workarounds.</source
 作为主插件以用于 ESL+ESM cell bug 和 ESL worldspace bug 的变通方案。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="56" />
+        <location filename="src\lists\list_compact.py" line="66" />
         <source>This is the WRLD Record Flag. It can be completely ignored for users
 with SSE Engine Fixes v7+ on Skyrim 1.6.1170+.
 Otherwise, if an plugin is flagged ESL
@@ -516,7 +532,7 @@ then the new worldspace may have landscape issues (no ground).</source>
 那么新的 worldspace 可能出现地表问题（无地面）。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="61" />
+        <location filename="src\lists\list_compact.py" line="71" />
         <source>This is the WTHR Record Flag. This is an indicator if a mod has a new weather record
 Some mods weathers are referenced in ENB Presets which cannot be patched by ESLifier
 It is at the user's discretion if a plugin with new weather should be compacted.</source>
@@ -525,14 +541,7 @@ It is at the user's discretion if a plugin with new weather should be compacted.
 对于带有新天气的插件是否应该压缩，由用户自行决定。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="65" />
-        <source>This is the skse DLL flag. If a dll has the plugin name in it then it may
-have a LookUpForm() call that may break after compacting a flagged plugin.</source>
-        <translation>这是 skse DLL 标志。如果某个 dll 中包含插件名称，那么它可能
-包含 LookUpForm() 调用，在压缩被标记的插件后该调用可能会失效。</translation>
-    </message>
-    <message>
-        <location filename="src\list_compact.py" line="68" />
+        <location filename="src\lists\list_compact.py" line="75" />
         <source>Mods with SEQ files can be subject to the quest bug that prevents dialogue from
 working, all that needs to be done in game is save and reload and the bug will
 be fixed. This flag exists so users who don't want to deal with this bug can
@@ -543,7 +552,7 @@ avoid ESLifiying mods with SEQ files.</source>
 避开对带有 SEQ 文件的模组进行 ESLify。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="73" />
+        <location filename="src\lists\list_compact.py" line="80" />
         <source>Mods with PEX files that call the papyrus function "GetModByName" and use it to
 determine if a plugin is installed may partially break if the plugin is flagged ESL
 as said function only works for non-ESL plugins. This flag indicates that the plugin
@@ -554,12 +563,44 @@ has one or more PEX files that call the function on the relevant plugin (see fla
 有一个或多个 PEX 文件对相关插件调用此函数（参见标志工具提示）。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="78" />
+        <location filename="src\lists\list_compact.py" line="87" />
+        <source>PreVis/Precombine</source>
+        <translation>PreVis/Precombine</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="88" />
+        <source>This is the new CELL + PreVis/PreCombined flag. Cells originating in
+an ESL plugin cannot use the PreVis/PreCombine system. Mods with this flag
+have both a new CELL and there exists a mod in your modlist that references
+the new CELL and uses the PreVis/PreCombine system on that CELL.
+I will probably see if enabling and adapting Cell Master Generation
+for FO4 can circumvent this issue. For now it will be disabled.</source>
+        <translation>这是新的 CELL + PreVis/PreCombined 标志。源自 ESL 插件的
+cell 无法使用 PreVis/PreCombine 系统。带有此标志的模组
+既有新的 CELL，且你的模组列表中存在引用了该新 CELL 并对该 CELL
+使用 PreVis/PreCombine 系统的模组。
+我可能会研究为 FO4 启用并适配 Cell Master 生成
+能否绕过此问题。目前它将保持禁用。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="96" />
+        <source>This is the plugin name. Select which plugins you wish to compact.</source>
+        <translation>这是插件名称。选择你希望压缩的插件。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="98" />
+        <source>This is the %0 DLL flag. If a dll has the plugin name in it then it may
+have a LookUpForm() call that may break after compacting a flagged plugin.</source>
+        <translation>这是 %0 DLL 标志。如果某个 dll 中包含插件名称，那么它可能
+包含 LookUpForm() 调用，在压缩被标记的插件后该调用可能失效。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="103" />
         <source>This is the ESM flag. If a plugin is an ESM then it will be flagged here.</source>
         <translation>这是 ESM 标志。如果某个插件是 ESM，将在此处标记。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="79" />
+        <location filename="src\lists\list_compact.py" line="105" />
         <source>If a plugin has other plugins with it as a master, they will appear when
 the button is clicked. These will also have their Form IDs automatically
 patched to reflect the Master plugin's changes.</source>
@@ -568,34 +609,45 @@ patched to reflect the Master plugin's changes.</source>
 修补以反映主插件的更改。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="206" />
+        <location filename="src\lists\list_compact.py" line="327" />
+        <location filename="src\lists\list_compact.py" line="178" />
+        <source>Show</source>
+        <translation>显示</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="191" />
+        <source>Hide</source>
+        <translation>隐藏</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="212" />
         <source>more...</source>
         <translation>更多…</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="229" />
+        <location filename="src\lists\list_compact.py" line="236" />
         <source>New CELL</source>
         <translation>新 CELL</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="231" />
+        <location filename="src\lists\list_compact.py" line="238" />
         <source>This mod has a new CELL record and no mods currently modify it.
 It is currently safe to ESL flag it.</source>
         <translation>此模组有新的 CELL 记录且目前没有模组修改它。
 目前可以安全地对其标记 ESL。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="234" />
+        <location filename="src\lists\list_compact.py" line="241" />
         <source>This mod has a new CELL record. It is currently safe to ESL flag it</source>
         <translation>此模组有新的 CELL 记录。目前可以安全地对其标记 ESL</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="238" />
+        <location filename="src\lists\list_compact.py" line="245" />
         <source>!!New CELL Changed!!</source>
         <translation>!!新 CELL 已更改!!</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="239" />
+        <location filename="src\lists\list_compact.py" line="246" />
         <source>This mod is an ESM with a new CELL record that is modified by
 a dependent plugin. It is NOT recommended to ESL flag it as doing so
 will break temporary references in the new CELL.</source>
@@ -603,12 +655,12 @@ will break temporary references in the new CELL.</source>
 不建议对其标记 ESL，因为这样做会破坏新 CELL 中的临时引用。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="246" />
+        <location filename="src\lists\list_compact.py" line="253" />
         <source>!!Maxed Masters!!</source>
         <translation>!!主插件已满!!</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="247" />
+        <location filename="src\lists\list_compact.py" line="254" />
         <source>This mod is an ESM with a new CELL record that is modified by
 a dependent plugin. It or one of its dependents has the max of
 254 masters and cannot have the ESLifier_Cell_Master.esm plugin
@@ -623,12 +675,12 @@ break temporary references in its new CELL(s).</source>
 破坏其新 CELL 中的临时引用。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="256" />
+        <location filename="src\lists\list_compact.py" line="263" />
         <source>!New Interior CELL!</source>
         <translation>!新室内 CELL!</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="257" />
+        <location filename="src\lists\list_compact.py" line="264" />
         <source>This mod has at least one new CELL record that is an interior cell.
 ESL interior cells do not reload gameplay changed references properly
 on a save game load unless the game itself has restarted.</source>
@@ -637,164 +689,172 @@ ESL 室内 cell 在加载存档时不会正确重新加载
 游戏内被更改的引用，除非游戏本身已重新启动。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="266" />
+        <location filename="src\lists\list_compact.py" line="273" />
         <source>!!New WRLD!!</source>
         <translation>!!新 WRLD!!</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="267" />
+        <location filename="src\lists\list_compact.py" line="274" />
         <source>This mod has a new WRLD (worldspace) record which may lose landscape (the ground) when ESL flagged.</source>
         <translation>此模组有新的 WRLD（世界空间）记录，标记为 ESL 时可能丢失地表（地面）。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="272" />
+        <location filename="src\lists\list_compact.py" line="279" />
         <source>!New WTHR!</source>
         <translation>!新 WTHR!</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="273" />
+        <location filename="src\lists\list_compact.py" line="280" />
         <source>This mod has a new WTHR (weather) record which can be referenced in
 ENB presets which are not patched.</source>
         <translation>此模组有新的 WTHR（天气）记录，可能会在
 未被修补的 ENB 预设中被引用。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="279" />
-        <source>!!SKSE DLL!!</source>
-        <translation>!!SKSE DLL!!</translation>
-    </message>
-    <message>
-        <location filename="src\list_compact.py" line="280" />
-        <source>This mod's plugin name is present in the following SKSE dlls and
-may break their FormLookup() function calls if a hard-coded form id is present:</source>
-        <translation>此模组的插件名称出现在以下 SKSE dll 中，
-如果存在硬编码的表单 ID，可能会破坏其 FormLookup() 函数调用：</translation>
-    </message>
-    <message>
-        <location filename="src\list_compact.py" line="289" />
-        <source>This mod has an SEQ file which may cause dialogue for it to not work until you save and reload in game.</source>
-        <translation>此模组有 SEQ 文件，可能导致它的对话在你于游戏中保存并重新加载之前无法正常工作。</translation>
-    </message>
-    <message>
-        <location filename="src\list_compact.py" line="295" />
+        <location filename="src\lists\list_compact.py" line="287" />
         <source>This plugin has one or more PEX files that call 'GetModByName' on this plugin: </source>
         <translation>此插件有一个或多个 PEX 文件对该插件调用 GetModByName： </translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="304" />
+        <location filename="src\lists\list_compact.py" line="298" />
+        <source>PreVis/PreCombine</source>
+        <translation>PreVis/PreCombine</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="299" />
+        <source>This mod has a new cell and either itself or another mod uses the
+precombine system with it, which will break if this mod is ESL flagged.</source>
+        <translation>此模组有新的 cell，且它本身或其他模组对其使用了
+precombine 系统，如果将此模组标记为 ESL 会使其失效。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="305" />
+        <source>!!%0 DLL!!</source>
+        <translation>!!%0 DLL!!</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="306" />
+        <source>This mod's plugin name is present in the following %0 dlls and
+may break their FormLookup() function calls if a hard-coded form id is present:</source>
+        <translation>此模组的插件名称出现在以下 %0 dll 中，
+如果存在硬编码的表单 ID，可能会破坏其 FormLookup() 函数调用：</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="316" />
+        <source>This mod has an SEQ file which may cause dialogue for it to not work until you save and reload in game.</source>
+        <translation>此模组有 SEQ 文件，可能导致它的对话在你于游戏中保存并重新加载之前无法正常工作。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_compact.py" line="322" />
         <source>This mod is an ESM.</source>
         <translation>此模组是 ESM。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="360" />
+        <location filename="src\lists\list_compact.py" line="364" />
         <source>Select All</source>
         <translation>全选</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="361" />
+        <location filename="src\lists\list_compact.py" line="365" />
         <source>Check All</source>
         <translation>全部勾选</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="362" />
+        <location filename="src\lists\list_compact.py" line="366" />
         <source>Uncheck All</source>
         <translation>全部取消勾选</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="363" />
+        <location filename="src\lists\list_compact.py" line="367" />
         <source>Invert Selection Checks</source>
         <translation>反转选择勾选</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="365" />
+        <location filename="src\lists\list_compact.py" line="369" />
         <source>Check Previously Compacted</source>
         <translation>勾选已压缩项</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="366" />
+        <location filename="src\lists\list_compact.py" line="370" />
         <source>Import Check State From File</source>
         <translation>从文件导入勾选状态</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="367" />
+        <location filename="src\lists\list_compact.py" line="371" />
         <source>Export Check State To File</source>
         <translation>将勾选状态导出到文件</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="368" />
+        <location filename="src\lists\list_compact.py" line="372" />
         <source>Open in File Explorer</source>
         <translation>在文件资源管理器中打开</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="369" />
+        <location filename="src\lists\list_compact.py" line="373" />
         <source>Add Highlighted Mod(s) to Blacklist</source>
         <translation>将高亮模组添加到黑名单</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="418" />
+        <location filename="src\lists\list_compact.py" line="422" />
         <source>The following plugins cannot be re-compacted because they have dependents that are missing Skyrim.esm as a master and the dependent references records from the master (this limits the master to record space 0x800-0xFFF or 2048 records since the dependent cannot be record header 1.71 without Skyrim.esm as a master):</source>
         <translation>以下插件无法重新压缩，因为它们的依赖项缺少 Skyrim.esm 作为主插件，且该依赖项引用了主插件的记录（这将主插件记录空间限制为 0x800-0xFFF，或 2048 条记录，因为该依赖项在没有 Skyrim.esm 作为主插件的情况下不能是 1.71 记录头）：</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="422" />
+        <location filename="src\lists\list_compact.py" line="426" />
         <source>The following plugins cannot be re-compacted because they no longer meet the conditions (maybe new records exceed max count or it is now filtered out from settings or it is already ESL):</source>
         <translation>以下插件无法重新压缩，因为它们不再满足条件（可能是新记录超过最大数量，或现在被设置过滤掉，或已经是 ESL）：</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="424" />
+        <location filename="src\lists\list_compact.py" line="428" />
         <source>The following plugins cannot be re-compacted because they no-longer exist or have been blacklisted (this should be okay assuming you deleted these on purpose):</source>
         <translation>以下插件无法重新压缩，因为它们不再存在或已被加入黑名单（若你是故意删除的，这应该没问题）：</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="455" />
+        <location filename="src\lists\list_compact.py" line="459" />
         <source>Plugins that cannot be re-compacted can have adverse effects on ongoing saves. Please be careful.</source>
         <translation>无法重新压缩的插件可能对正在进行的存档产生不利影响。请小心。</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="463" />
-        <location filename="src\list_compact.py" line="457" />
+        <location filename="src\lists\list_compact.py" line="467" />
+        <location filename="src\lists\list_compact.py" line="461" />
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="459" />
+        <location filename="src\lists\list_compact.py" line="463" />
         <source>Could not select the following files either due to filters, the files not existing, or the file is already compacted:</source>
         <translation>无法选择以下文件，可能是由于筛选器、文件不存在或该文件已被压缩：</translation>
     </message>
     <message>
-        <location filename="src\list_compact.py" line="465" />
+        <location filename="src\lists\list_compact.py" line="469" />
         <source>Failed to get previously_compacted.json</source>
         <translation>无法获取 previously_compacted.json</translation>
     </message>
 </context><context>
     <name>list_eslable</name>
     <message>
-        <location filename="src\list_eslify.py" line="33" />
+        <location filename="src\lists\list_eslify.py" line="36" />
         <source>Import ESLify List Selection</source>
         <translation>导入 ESLify 列表选择</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="36" />
+        <location filename="src\lists\list_eslify.py" line="71" />
+        <location filename="src\lists\list_eslify.py" line="40" />
         <source>*   Mod</source>
         <translation>*   模组</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="36" />
+        <location filename="src\lists\list_eslify.py" line="40" />
         <source>CELL Records</source>
         <translation>CELL 记录</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="36" />
+        <location filename="src\lists\list_eslify.py" line="40" />
         <source>WRLD Records</source>
         <translation>WRLD 记录</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="37" />
-        <source>This is the plugin name. Select which plugins you wish to flag as light.</source>
-        <translation>这是插件名称。选择你希望标记为 light 的插件。</translation>
-    </message>
-    <message>
-        <location filename="src\list_eslify.py" line="38" />
+        <location filename="src\lists\list_eslify.py" line="41" />
         <source>This is the CELL Record Flag. It can be completely ignored for users
 with SSE Engine Fixes v7+ on Skyrim 1.6.1170+.
 Otherwise, if an ESM+ESL plugin creates a new CELL and another mod
@@ -822,7 +882,7 @@ as a master for the ESL+ESM cell bug and ESL worldspace bug workarounds.</source
 作为主插件以用于 ESL+ESM cell bug 和 ESL worldspace bug 的变通方案。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="52" />
+        <location filename="src\lists\list_eslify.py" line="55" />
         <source>This is the WRLD Record Flag. It can be completely ignored for users
 with SSE Engine Fixes v7+ on Skyrim 1.6.1170+.
 Otherwise, if an plugin is flagged ESL
@@ -832,18 +892,7 @@ then the new worldspace may have landscape issues (no ground).</source>
 那么新的 worldspace 可能出现地表问题（无地面）。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="57" />
-        <source>Mods with SEQ files can be subject to the quest bug that prevents dialogue from
-working, all that needs to be done in game is save and reload and the bug will
-be fixed. This flag exists so users who don't want to deal with this bug can
-avoid ESLifiying mods with SEQ files.</source>
-        <translation>带有 SEQ 文件的模组可能受制于会导致对话无法正常工作的任务 bug，
-在游戏中只需保存并重新加载即可修复该 bug。
-此标志的存在是为了让不想处理此 bug 的用户能够
-避开对带有 SEQ 文件的模组进行 ESLify。</translation>
-    </message>
-    <message>
-        <location filename="src\list_eslify.py" line="62" />
+        <location filename="src\lists\list_eslify.py" line="60" />
         <source>Mods with PEX files that call the papyrus function "GetModByName" and use it to
 determine if a plugin is installed may partially break if the plugin is flagged ESL
 as said function only works for non-ESL plugins. This flag indicates that the plugin
@@ -854,34 +903,71 @@ has one or more PEX files that call the function on the relevant plugin (see fla
 有一个或多个 PEX 文件对相关插件调用此函数（参见标志工具提示）。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="67" />
+        <location filename="src\lists\list_eslify.py" line="65" />
+        <source>Mods with SEQ files can be subject to the quest bug that prevents dialogue from
+working, all that needs to be done in game is save and reload and the bug will
+be fixed. This flag exists so users who don't want to deal with this bug can
+avoid ESLifiying mods with SEQ files.</source>
+        <translation>带有 SEQ 文件的模组可能受制于会导致对话无法正常工作的任务 bug，
+在游戏中只需保存并重新加载即可修复该 bug。
+此标志的存在是为了让不想处理此 bug 的用户能够
+避开对带有 SEQ 文件的模组进行 ESLify。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_eslify.py" line="208" />
+        <location filename="src\lists\list_eslify.py" line="71" />
+        <source>PreVis/PreCombine</source>
+        <translation>PreVis/PreCombine</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_eslify.py" line="72" />
+        <source>This is the new CELL + PreVis/PreCombined flag. Cells originating in
+an ESL plugin cannot use the PreVis/Precombine system. Mods with this flag
+have both a new CELL and there exists a mod in your modlist that references
+the new CELL and uses the PreVis/PreCombine system on that CELL.
+I will probably see if enabling and adapting Cell Master Generation
+for FO4 can circumvent this issue. For now it will be disabled.</source>
+        <translation>这是新的 CELL + PreVis/PreCombined 标志。源自 ESL 插件的
+cell 无法使用 PreVis/Precombine 系统。带有此标志的模组
+既有新的 CELL，且你的模组列表中存在引用了该新 CELL 并对该 CELL
+使用 PreVis/PreCombine 系统的模组。
+我可能会研究为 FO4 启用并适配 Cell Master 生成
+能否绕过此问题。目前它将保持禁用。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_eslify.py" line="80" />
+        <source>This is the plugin name. Select which plugins you wish to flag as light.</source>
+        <translation>这是插件名称。选择你希望标记为 light 的插件。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_eslify.py" line="82" />
         <source>This is the ESM flag.</source>
         <translation>这是 ESM 标志。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="149" />
+        <location filename="src\lists\list_eslify.py" line="152" />
         <source>New CELL</source>
         <translation>新 CELL</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="151" />
+        <location filename="src\lists\list_eslify.py" line="154" />
         <source>This mod has a new CELL record and no mods currently modify it.
 It is currently safe to ESL flag it.</source>
         <translation>此模组有新的 CELL 记录且目前没有模组修改它。
 目前可以安全地对其标记 ESL。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="155" />
+        <location filename="src\lists\list_eslify.py" line="158" />
         <source>This mod has a new CELL record. It is currently safe to ESL flag it</source>
         <translation>此模组有新的 CELL 记录。目前可以安全地对其标记 ESL</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="159" />
+        <location filename="src\lists\list_eslify.py" line="162" />
         <source>!!New CELL Changed!!</source>
         <translation>!!新 CELL 已更改!!</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="160" />
+        <location filename="src\lists\list_eslify.py" line="163" />
         <source>This mod is an ESM with a new CELL record that is modified by
 a dependent plugin. It is NOT recommended to ESL flag it as doing so
 will break temporary references in the new CELL.</source>
@@ -889,12 +975,12 @@ will break temporary references in the new CELL.</source>
 不建议对其标记 ESL，因为这样做会破坏新 CELL 中的临时引用。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="167" />
+        <location filename="src\lists\list_eslify.py" line="170" />
         <source>!!Maxed Masters!!</source>
         <translation>!!主插件已满!!</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="168" />
+        <location filename="src\lists\list_eslify.py" line="171" />
         <source>This mod is an ESM with a new CELL record that is modified by
 a dependent plugin. It or one of its dependents has the max of
 254 masters and cannot have the ESLifier_Cell_Master.esm plugin
@@ -909,12 +995,12 @@ break temporary references in its new CELL(s).</source>
 破坏其新 CELL 中的临时引用。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="177" />
+        <location filename="src\lists\list_eslify.py" line="180" />
         <source>!New Interior CELL!</source>
         <translation>!新室内 CELL!</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="178" />
+        <location filename="src\lists\list_eslify.py" line="181" />
         <source>This mod has at least one new CELL record that is an interior cell.
 ESL interior cells do not reload gameplay changed references properly
 on a save game load unless the game itself has restarted.</source>
@@ -923,199 +1009,206 @@ ESL 室内 cell 在加载存档时不会正确重新加载
 游戏内被更改的引用，除非游戏本身已重新启动。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="187" />
+        <location filename="src\lists\list_eslify.py" line="190" />
         <source>!!New WRLD!!</source>
         <translation>!!新 WRLD!!</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="188" />
+        <location filename="src\lists\list_eslify.py" line="191" />
         <source>This mod has a new WRLD (worldspace) record which may lose landscape (the ground) when ESL flagged.</source>
         <translation>此模组有新的 WRLD（世界空间）记录，标记为 ESL 时可能丢失地表（地面）。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="194" />
-        <source>This mod has an SEQ file which may cause dialogue for it to not work until you save and reload in game.</source>
-        <translation>此模组有 SEQ 文件，可能导致它的对话在你于游戏中保存并重新加载之前无法正常工作。</translation>
-    </message>
-    <message>
-        <location filename="src\list_eslify.py" line="200" />
+        <location filename="src\lists\list_eslify.py" line="197" />
         <source>This plugin has one or more PEX files that call 'GetModByName' on this plugin: </source>
         <translation>此插件有一个或多个 PEX 文件对该插件调用 GetModByName： </translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="209" />
+        <location filename="src\lists\list_eslify.py" line="209" />
+        <source>This mod has a new cell and either itself or another mod uses the
+precombine system with it, which will break if this mod is ESL flagged.</source>
+        <translation>此模组有新的 cell，且它本身或其他模组对其使用了
+precombine 系统，如果将此模组标记为 ESL 会使其失效。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_eslify.py" line="216" />
+        <source>This mod has an SEQ file which may cause dialogue for it to not work until you save and reload in game.</source>
+        <translation>此模组有 SEQ 文件，可能导致它的对话在你于游戏中保存并重新加载之前无法正常工作。</translation>
+    </message>
+    <message>
+        <location filename="src\lists\list_eslify.py" line="222" />
         <source>This mod is an ESM.</source>
         <translation>此模组是 ESM。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="241" />
+        <location filename="src\lists\list_eslify.py" line="240" />
         <source>Select All</source>
         <translation>全选</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="242" />
+        <location filename="src\lists\list_eslify.py" line="241" />
         <source>Check All</source>
         <translation>全部勾选</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="243" />
+        <location filename="src\lists\list_eslify.py" line="242" />
         <source>Uncheck All</source>
         <translation>全部取消勾选</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="244" />
+        <location filename="src\lists\list_eslify.py" line="243" />
         <source>Invert Selection Checks</source>
         <translation>反转选择勾选</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="246" />
+        <location filename="src\lists\list_eslify.py" line="245" />
         <source>Check Previously ESL Flagged</source>
         <translation>勾选已 ESL 标记项</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="247" />
+        <location filename="src\lists\list_eslify.py" line="246" />
         <source>Import Check State From File</source>
         <translation>从文件导入勾选状态</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="248" />
+        <location filename="src\lists\list_eslify.py" line="247" />
         <source>Export Check State To File</source>
         <translation>将勾选状态导出到文件</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="249" />
+        <location filename="src\lists\list_eslify.py" line="248" />
         <source>Open in File Explorer</source>
         <translation>在文件资源管理器中打开</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="250" />
+        <location filename="src\lists\list_eslify.py" line="249" />
         <source>Add Highlighted Mod(s) to Blacklist</source>
         <translation>将高亮模组添加到黑名单</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="299" />
+        <location filename="src\lists\list_eslify.py" line="298" />
         <source>The following plugins cannot be re-ESL flagged because they have dependents that are missing Skyrim.esm as a master and the dependent references records from the master (this limits the master to record space 0x800-0xFFF or 2048 records since the dependent cannot be record header 1.71 without Skyrim.esm as a master):</source>
         <translation>以下插件无法重新 ESL 标记，因为它们的依赖项缺少 Skyrim.esm 作为主插件，且该依赖项引用了主插件的记录（这将主插件记录空间限制为 0x800-0xFFF，或 2048 条记录，因为该依赖项在没有 Skyrim.esm 作为主插件的情况下不能是 1.71 记录头）：</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="303" />
+        <location filename="src\lists\list_eslify.py" line="302" />
         <source>The following plugins cannot be re-ESL flagged because they no longer meet the conditions (maybe new records exceed max count or it is now filtered out from settings or it is already ESL):</source>
         <translation>以下插件无法重新 ESL 标记，因为它们不再满足条件（可能是新记录超过最大数量，或现在被设置过滤掉，或已经是 ESL）：</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="305" />
+        <location filename="src\lists\list_eslify.py" line="304" />
         <source>The following plugins cannot be re-ESL flagged because they no-longer exist (this should be okay assuming you deleted these on purpose):</source>
         <translation>以下插件无法重新 ESL 标记，因为它们不再存在（若你是故意删除的，这应该没问题）：</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="336" />
-        <source>Plugins that cannot be re-compacted can have adverse effects on ongoing saves. Please be careful.</source>
-        <translation>无法重新压缩的插件可能对正在进行的存档产生不利影响。请小心。</translation>
+        <location filename="src\lists\list_eslify.py" line="335" />
+        <source>Plugins that cannot be re-ESL flagged can have adverse effects on ongoing saves. Please be careful.</source>
+        <translation>无法重新 ESL 标记的插件可能对正在进行的存档产生不利影响。请小心。</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="344" />
-        <location filename="src\list_eslify.py" line="338" />
+        <location filename="src\lists\list_eslify.py" line="343" />
+        <location filename="src\lists\list_eslify.py" line="337" />
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="340" />
+        <location filename="src\lists\list_eslify.py" line="339" />
         <source>Could not select the following files either due to filters, the files not existing, or the file is already flagged ESL:</source>
         <translation>无法选择以下文件，可能是由于筛选器、文件不存在或该文件已被标记为 ESL：</translation>
     </message>
     <message>
-        <location filename="src\list_eslify.py" line="347" />
+        <location filename="src\lists\list_eslify.py" line="346" />
         <source>Failed to get previously_esl_flagged.json</source>
         <translation>无法获取 previously_esl_flagged.json</translation>
     </message>
 </context><context>
     <name>list_parent_class</name>
     <message>
-        <location filename="src\list_parent.py" line="170" />
+        <location filename="src\lists\list_parent.py" line="220" />
         <source>Error opening file explorer: </source>
         <translation>打开文件资源管理器时出错： </translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="199" />
+        <location filename="src\lists\list_parent.py" line="249" />
         <source>Ok</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="203" />
+        <location filename="src\lists\list_parent.py" line="253" />
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="204" />
+        <location filename="src\lists\list_parent.py" line="254" />
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="253" />
-        <location filename="src\list_parent.py" line="225" />
+        <location filename="src\lists\list_parent.py" line="303" />
+        <location filename="src\lists\list_parent.py" line="275" />
         <source>Success</source>
         <translation>成功</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="226" />
+        <location filename="src\lists\list_parent.py" line="276" />
         <source>Import successful. Any items both in the imported list and scanned list have been selected.</source>
         <translation>导入成功。同时在导入列表和扫描列表中的任何项目都已被选中。</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="230" />
+        <location filename="src\lists\list_parent.py" line="280" />
         <source>Failed</source>
         <translation>失败</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="231" />
+        <location filename="src\lists\list_parent.py" line="281" />
         <source>Import Failed. File is empty or invalid.</source>
         <translation>导入失败。文件为空或无效。</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="258" />
-        <location filename="src\list_parent.py" line="236" />
+        <location filename="src\lists\list_parent.py" line="308" />
+        <location filename="src\lists\list_parent.py" line="286" />
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="237" />
+        <location filename="src\lists\list_parent.py" line="287" />
         <source>Selected file does not exist.</source>
         <translation>所选文件不存在。</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="248" />
+        <location filename="src\lists\list_parent.py" line="298" />
         <source>Export Check State File As...</source>
         <translation>将勾选状态文件导出为…</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="254" />
+        <location filename="src\lists\list_parent.py" line="304" />
         <source>Export successful. Current check state saved to %0</source>
         <translation>导出成功。当前勾选状态已保存到 %0</translation>
     </message>
     <message>
-        <location filename="src\list_parent.py" line="259" />
+        <location filename="src\lists\list_parent.py" line="309" />
         <source>Error while exporting: </source>
         <translation>导出时出错： </translation>
     </message>
 </context><context>
     <name>log_stream</name>
     <message>
-        <location filename="src\log_stream.py" line="119" />
+        <location filename="src\log_stream.py" line="148" />
         <source>[Error] </source>
         <translation>[错误] </translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="120" />
+        <location filename="src\log_stream.py" line="149" />
         <source>[Warning] </source>
         <translation>[警告] </translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="227" />
+        <location filename="src\log_stream.py" line="275" />
         <source>Possible Missing Patcher</source>
         <translation>可能缺少修补器</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="234" />
+        <location filename="src\log_stream.py" line="282" />
         <source>ESLifier has come across one or more files it currently doesn't have a patcher or exclusion for.
 Check the ESLifier.log for more details.
 Please create a patcher request in the GitHub.</source>
@@ -1124,25 +1217,25 @@ Please create a patcher request in the GitHub.</source>
 请在 GitHub 创建修补器请求。</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="317" />
-        <location filename="src\log_stream.py" line="286" />
-        <location filename="src\log_stream.py" line="244" />
+        <location filename="src\log_stream.py" line="365" />
+        <location filename="src\log_stream.py" line="334" />
+        <location filename="src\log_stream.py" line="292" />
         <source>and %1 more.</source>
         <translation>以及另外 %1 个。</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="272" />
-        <location filename="src\log_stream.py" line="247" />
+        <location filename="src\log_stream.py" line="320" />
+        <location filename="src\log_stream.py" line="295" />
         <source>Open GitHub Issue Page</source>
         <translation>打开 GitHub 问题页</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="260" />
+        <location filename="src\log_stream.py" line="308" />
         <source>Errors Encountered</source>
         <translation>遇到错误</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="267" />
+        <location filename="src\log_stream.py" line="315" />
         <source>ESLifier has experienced one or more errors.
 Check the ESLifier.log for more details.
 Any .pex files listed are likely corrupt and you need to find a patch to fix them.</source>
@@ -1151,22 +1244,22 @@ Any .pex files listed are likely corrupt and you need to find a patch to fix the
 列出的任何 .pex 文件可能已损坏，你需要找到补丁来修复它们。</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="277" />
+        <location filename="src\log_stream.py" line="325" />
         <source>User needs to download and install the following mod, click reset BSA, and then re-scan:</source>
         <translation>用户需要下载并安装以下模组，点击重置 BSA，然后重新扫描：</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="279" />
+        <location filename="src\log_stream.py" line="327" />
         <source>Open OCW Script Fix mod page</source>
         <translation>打开 OCW Script Fix 模组页面</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="305" />
+        <location filename="src\log_stream.py" line="353" />
         <source>Cell Master Patching Warning</source>
         <translation>Cell Master 修补警告</translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="306" />
+        <location filename="src\log_stream.py" line="354" />
         <source>ESLifier has either come across one or more pex/ini files that are currently unpatchable.
 This is because there is currently no programmed method to replace a necessary
 plugin name with ESLifier_Cell_Master.esm in pex files and, certain ini files assume that
@@ -1182,86 +1275,90 @@ ini 中的每个表单 ID 都来自同一个插件。错误信息显示了需要
 </translation>
     </message>
     <message>
-        <location filename="src\log_stream.py" line="354" />
-        <location filename="src\log_stream.py" line="334" />
-        <source>An exception has occured, please report this bug to the github and include the ESLifier.log file found in ESLifier_Data.</source>
-        <translation>发生了一个异常，请将此 bug 报告到 GitHub，并附上位于 ESLifier_Data 中的 ESLifier.log 文件。</translation>
+        <location filename="src\log_stream.py" line="385" />
+        <source>Error opening file:: </source>
+        <translation>打开文件时出错： </translation>
+    </message>
+    <message>
+        <location filename="src\log_stream.py" line="390" />
+        <source>An exception has occured, please report this bug to the github and include the ESLifier.log file found in %0.</source>
+        <translation>发生了异常。请到 GitHub 反馈此 bug，并附上位于 %0 的 ESLifier.log 文件。</translation>
     </message>
 </context><context>
     <name>main</name>
     <message>
-        <location filename="src\main_page.py" line="91" />
+        <location filename="src\main\main_page.py" line="71" />
         <source>ESLify</source>
         <translation>ESLify</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="92" />
+        <location filename="src\main\main_page.py" line="72" />
         <source>List of plugins that meet ESL conditions.</source>
         <translation>符合 ESL 条件的插件列表。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="93" />
+        <location filename="src\main\main_page.py" line="73" />
         <source>Compact + ESLify</source>
         <translation>压缩 + ESLify</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="95" />
+        <location filename="src\main\main_page.py" line="75" />
         <source>List of plugins that can be compacted to fit ESL conditions.
 The 'Compact/ESLify Selected' button will also ESL the selected plugin(s).</source>
         <translation>可以被压缩以符合 ESL 条件的插件列表。
 “压缩/ESLify 所选”按钮也将对所选插件进行 ESL。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="99" />
+        <location filename="src\main\main_page.py" line="79" />
         <source>ESLify Selected</source>
         <translation>ESLify 所选</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="101" />
+        <location filename="src\main\main_page.py" line="81" />
         <source>This button will ESL flag all selected files. If the update plugin headers setting
-is on then it will also update the plugin headers to 1.71.</source>
+is on then it will also update the plugin headers to %0.</source>
         <translation>此按钮将对所有所选文件进行 ESL 标记。如果“更新插件头”设置
-开启，则还会将插件头更新到 1.71。</translation>
+开启，则还会将插件头更新到 %0。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="106" />
+        <location filename="src\main\main_page.py" line="86" />
         <source>Compact/ESLify Selected</source>
         <translation>压缩/ESLify 所选</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="108" />
+        <location filename="src\main\main_page.py" line="88" />
         <source>This button will first compact a selected file, patch the plugins that have it as a
 master, then patch and rename loose files that are dependent on the compacted plugin.
 If the update plugin headers setting is enabled then it will also update the plugin
-headers of the compacted and dependent plugins to 1.71.</source>
+headers of the compacted and dependent plugins to %0</source>
         <translation>此按钮将首先压缩所选文件，修补以它为主插件的插件，
 然后修补并重命名依赖被压缩插件的松散文件。
-如果“更新插件头”设置已启用，则还会将被压缩插件和
-依赖插件的插件头更新到 1.71。</translation>
+如果“更新插件头”设置已启用，则还会将被压缩
+插件及其依赖插件的插件头更新到 %0</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="116" />
+        <location filename="src\main\main_page.py" line="96" />
         <source> Scan Mod Files </source>
         <translation> 扫描模组文件 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="117" />
-        <source>This will scan the entire Skyrim Special Edition folder.
+        <location filename="src\main\main_page.py" line="97" />
+        <source>This will scan the entire %0 folder.
 Depending on the cell and header settings, what is displayed
 in the below lists will change.</source>
-        <translation>这将对整个 Skyrim Special Edition 文件夹进行扫描。
+        <translation>这将对整个 %0 文件夹进行扫描。
 根据 cell 和头设置，下方列表
 所显示的内容会发生变化。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="125" />
+        <location filename="src\main\main_page.py" line="105" />
         <source> Scan and Rebuild 
  ESLifier's Output </source>
         <translation> 扫描并重建 
  ESLifier 的输出 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="126" />
+        <location filename="src\main\main_page.py" line="106" />
         <source>This will delete the existing output folder's contents
 then scan and re-patch all curently ESLified mods
 that fit the current filters in the settings.
@@ -1276,42 +1373,19 @@ an option to keep or remove them.</source>
 保留或删除它们的选项。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="136" />
+        <location filename="src\main\main_page.py" line="116" />
         <source> Scan and Patch New 
  or Changed Files </source>
         <translation> 扫描并修补新的 
  或已更改的文件 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="137" />
-        <source>Scan for new plugins and files that were not
-present during intial compacting and patching
-and then patch those new plugins and files.
-If in MO2/Vortex mode, it will also detect file
-conflict changes but requires the output mod
-in MO2/Vortex to match the exact same name as the
-output folder in the settings.
-This cannot detect changes in BSA and will NOT
-check if the files in the output have been
-changed since ESLifier patched them.</source>
-        <translation>扫描在初始压缩和修补时
-未出现的新插件和文件，
-然后修补这些新的插件和文件。
-如果在 MO2/Vortex 模式下，它还会检测文件
-冲突更改，但要求 MO2/Vortex 中的输出模组
-与设置中的输出文件夹名称
-完全一致。
-这无法检测 BSA 中的更改，并且不会
-检查输出中的文件在
-ESLifier 修补过之后是否被更改。</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="151" />
+        <location filename="src\main\main_page.py" line="131" />
         <source> Reset ESLifier's Output </source>
         <translation> 重置 ESLifier 的输出 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="152" />
+        <location filename="src\main\main_page.py" line="132" />
         <source>This will delete the existing output folder's contents and
 the data used to patch new files.
 It will also confirm if any files that are in the output
@@ -1324,92 +1398,73 @@ an option to keep or remove them.</source>
 保留或删除它们的选项。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="161" />
-        <source> Delete extracted BSA files  
- Rescan BSA on next Scan </source>
-        <translation> 删除已解压的 BSA 文件  
- 下次扫描时重新扫描 BSA </translation>
+        <location filename="src\main\main_page.py" line="141" />
+        <source> Delete extracted %0 files  
+ Rescan %0 on next Scan </source>
+        <translation> 删除已解压的 %0 文件  
+ 下次扫描时重新扫描 %0 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="162" />
-        <source>ESLifier only extracts seq and script files from a BSA once so as not to
-go through the tedious process of extracting the releveant files in BSAs
+        <location filename="src\main\main_page.py" line="142" />
+        <source>ESLifier only extracts seq and script files from a %0 once so as not to
+go through the tedious process of extracting the releveant files in %0s
 each time it scans (others are extracted during patching). Use this button
-if a BSA has new files or you have deleted a mod that had a BSA.</source>
-        <translation>ESLifier 只从 BSA 解压一次 seq 和脚本文件，以避免
-在每次扫描时都经历在 BSA 中解压相关文件的繁琐过程
-（其他文件在修补时解压）。如果 BSA 中有新文件
-或你删除了一个带有 BSA 的模组，请使用此按钮。</translation>
+if a %0 has new files or you have deleted a mod that had a %0.</source>
+        <translation>ESLifier 只从 %0 解压一次 seq 和脚本文件，以避免每次扫描时
+都经历在 %0s 中解压相关文件的繁琐过程（其他文件在修补时解压）。
+当某个 %0 有新增文件，或者你删除了含有 %0 的模组时，
+请使用此按钮。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="170" />
+        <location filename="src\main\main_page.py" line="150" />
         <source> Open Output </source>
         <translation> 打开输出 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="171" />
+        <location filename="src\main\main_page.py" line="151" />
         <source>Opens the Output Folder</source>
         <translation>打开输出文件夹</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="176" />
+        <location filename="src\main\main_page.py" line="156" />
         <source> Open Log </source>
         <translation> 打开日志 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="177" />
+        <location filename="src\main\main_page.py" line="157" />
         <source>Opens ESLifier.log</source>
         <translation>打开 ESLifier.log</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="194" />
-        <location filename="src\main_page.py" line="183" />
+        <location filename="src\main\main_page.py" line="174" />
+        <location filename="src\main\main_page.py" line="163" />
         <source>Filter </source>
         <translation>筛选 </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="195" />
-        <location filename="src\main_page.py" line="184" />
+        <location filename="src\main\main_page.py" line="175" />
+        <location filename="src\main\main_page.py" line="164" />
         <source>Search Bar</source>
         <translation>搜索栏</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="455" />
-        <location filename="src\main_page.py" line="454" />
-        <location filename="src\main_page.py" line="361" />
-        <location filename="src\main_page.py" line="360" />
+        <location filename="src\main\main_page.py" line="346" />
+        <source>Confirmation: Patching %1 Mod(s)</source>
+        <translation>确认：修补 %1 个模组</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="350" />
+        <source>Confirmation: ESL Flagging %1 Mod(s)</source>
+        <translation>确认：ESL 标记 %1 个模组</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="388" />
+        <location filename="src\main\main_page.py" line="387" />
         <source>Getting estimated disk usage...</source>
         <translation>正在估算磁盘占用…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="399" />
-        <source>This may generate up to %1 %2 of new files
-(this may be inaccurate due to unpacking compressed BSA)
-and you have %3 GBs of space left.
-Are you sure you want to continue?</source>
-        <translation>这最多可能生成 %1 %2 的新文件
-（由于解压压缩的 BSA，这可能不准确）
-并且你可用的空间为 %3 GB。
-你确定要继续吗?</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="406" />
-        <source>GBs</source>
-        <translation>GB</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="409" />
-        <source>MBs</source>
-        <translation>MB</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="412" />
-        <source>KBs</source>
-        <translation>KB</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="501" />
-        <location filename="src\main_page.py" line="414" />
+        <location filename="src\main\main_page.py" line="410" />
         <source>Not enough space!
 Needed space: %1
 Space left: %2 GBs</source>
@@ -1418,85 +1473,68 @@ Space left: %2 GBs</source>
 可用空间：%2 GB</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="416" />
-        <source>Confirmation: Patching %1 Mod(s)</source>
-        <translation>确认：修补 %1 个模组</translation>
+        <location filename="src\main\main_page.py" line="418" />
+        <source>This may generate up to %1 %2 of new files
+(this may be inaccurate due to unpacking compressed %0)
+and you have %3 GBs of space left.
+Are you sure you want to continue?</source>
+        <translation>这最多可能生成 %1 %2 的新文件
+（由于要解包压缩的 %0，此估算可能不准确），
+而你只剩 %3 GB 空间。
+你确定要继续吗？</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="493" />
-        <source>This may generate up to %1 GBs of new files
+        <location filename="src\main\main_page.py" line="427" />
+        <source>This may generate up to %0 %1 of new files
 and you have %2 GBs of space left.
 Are you sure you want to continue?</source>
-        <translation>这最多可能生成 %1 GB 的新文件
-并且你可用的空间为 %2 GB。
-你确定要继续吗?</translation>
+        <translation>这最多可能生成 %0 %1 的新文件，
+而你只剩 %2 GB 空间。
+你确定要继续吗？</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="496" />
-        <source>This may generate up to %1 MBs of new files
-and you have %2 GBs of space left.
-Are you sure you want to continue?</source>
-        <translation>这最多可能生成 %1 MB 的新文件
-并且你可用的空间为 %2 GB。
-你确定要继续吗?</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="499" />
-        <source>This may generate up to %1 KBs of new files
-and you have %2 GBs of space left.
-Are you sure you want to continue?</source>
-        <translation>这最多可能生成 %1 KB 的新文件
-并且你可用的空间为 %2 GB。
-你确定要继续吗?</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="503" />
-        <source>Confirmation: ESL Flagging %1 Mod(s)</source>
-        <translation>确认：ESL 标记 %1 个模组</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="544" />
+        <location filename="src\main\main_page.py" line="482" />
         <source>Failed to save esl_flagged.json</source>
         <translation>无法保存 esl_flagged.json</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="563" />
+        <location filename="src\main\main_page.py" line="499" />
         <source>File(s) ESL Flagged</source>
         <translation>文件已 ESL 标记</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="585" />
+        <location filename="src\main\main_page.py" line="517" />
         <source>Finished</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="588" />
+        <location filename="src\main\main_page.py" line="520" />
         <source>ESLifier has finished. The altered files are in your ESLifier Output.</source>
         <translation>ESLifier 已完成。被更改的文件位于你的 ESLifier 输出中。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="590" />
+        <location filename="src\main\main_page.py" line="522" />
         <source>Make sure the ESLifier Output is installed as a mod and let it win any file conflicts by making the output go 'After All' conflicts. Make sure to re-deploy your mods. If you generate the output folder in your mod staging folder for the first time, then make sure to restart Vortex to install the output. Make sure that all of your plugins are still enabled.</source>
         <translation>请确保 ESLifier 输出作为模组安装，并让它赢得所有文件冲突，使输出位于 “After All”（最后）冲突之后。请确保重新部署你的模组。如果你第一次在模组暂存文件夹中生成输出文件夹，请确保重启 Vortex 以安装输出。请确保你的所有插件仍然启用。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="595" />
+        <location filename="src\main\main_page.py" line="527" />
         <source>Make sure the ESLifier Output is installed as a mod and let it win any file conflicts. If you generate the output folder in your mods folder for the first time, then make sure to hit refresh in MO2.</source>
         <translation>请确保 ESLifier 输出作为模组安装，并让它赢得所有文件冲突。如果你第一次在模组文件夹中生成输出文件夹，请确保在 MO2 中点击刷新。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="608" />
-        <location filename="src\main_page.py" line="598" />
+        <location filename="src\main\main_page.py" line="540" />
+        <location filename="src\main\main_page.py" line="530" />
         <source>Ok</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="603" />
+        <location filename="src\main\main_page.py" line="535" />
         <source>Activate ESLifier_Cell_Master.esm and Sort Your Plugins</source>
         <translation>激活 ESLifier_Cell_Master.esm 并排序你的插件</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="605" />
+        <location filename="src\main\main_page.py" line="537" />
         <source>Do not forget to activate ESLifier_Cell_Master.esm and re-sort
 your plugins to put the ESM above all of it's dependents. You
 likely can put it at the top of your plugins list.</source>
@@ -1505,136 +1543,149 @@ likely can put it at the top of your plugins list.</source>
 很可能可以把它放在插件列表的顶部。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="622" />
+        <location filename="src\main\main_page.py" line="559" />
         <source>Total Elapsed Time: %1 Seconds</source>
         <translation>总耗时：%1 秒</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="723" />
-        <location filename="src\main_page.py" line="672" />
+        <location filename="src\main\main_page.py" line="592" />
         <source>Please close Vortex or install the Vortex extension from ESLifier's mod page. ESLifier cannot read Vortex's database unless Vortex is closed or the extension is installed.</source>
         <translation>请关闭 Vortex，或从 ESLifier 模组页面安装 Vortex 扩展。除非 Vortex 已关闭或已安装该扩展，否则 ESLifier 无法读取 Vortex 的数据库。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="726" />
-        <location filename="src\main_page.py" line="675" />
+        <location filename="src\main\main_page.py" line="595" />
         <source>Vortex is open but the Vortex extension is unresponsive. Please close or restart Vortex.</source>
         <translation>Vortex 已打开，但 Vortex 扩展没有响应。请关闭或重启 Vortex。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="677" />
+        <location filename="src\main\main_page.py" line="597" />
         <source>Vortex is in the process of deploying your modlist, please wait for it to complete and try again.</source>
         <translation>Vortex 正在部署你的模组列表，请等待部署完成后再试。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="679" />
+        <location filename="src\main\main_page.py" line="599" />
         <source>ESLifier has detected you are currently purging your modlist. You will need to redeploy before running ESLifier.</source>
         <translation>ESLifier 检测到你当前正在清理模组列表。运行 ESLifier 前需要重新部署。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="681" />
+        <location filename="src\main\main_page.py" line="601" />
+        <source>ESLifier detected that a cyclic rule is set in Vortex, please correct it first.</source>
+        <translation>ESLifier 检测到 Vortex 中设置了循环规则，请先更正它。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="603" />
+        <source>Vortex's Mod Staging Folder and ESLifier's Output Folder must be on the same drive.</source>
+        <translation>Vortex 的模组暂存文件夹与 ESLifier 的输出文件夹必须在同一驱动器上。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="605" />
+        <source>Failed to get the Vortex Mod Staging Folder.</source>
+        <translation>无法获取 Vortex 的模组暂存文件夹。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="607" />
+        <source>No last used %0 profile detected.</source>
+        <translation>未检测到最近使用的 %0 配置文件。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="609" />
+        <source>Failed to get the %0 Game folder.</source>
+        <translation>无法获取 %0 游戏文件夹。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="611" />
         <source>ESLifier has come across an error while scanning Vortex data: %0</source>
         <translation>ESLifier 扫描 Vortex 数据时遇到错误：%0</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="711" />
+        <location filename="src\main\main_page.py" line="612" />
+        <source>ESLifier has run into an unknown error: %0</source>
+        <translation>ESLifier 遇到了未知错误：%0</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="648" />
         <source>You have already scanned this session.
 Would you like to scan again?</source>
         <translation>你本会话已经扫描过。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="728" />
-        <source>ESLifier detected that a cyclic rule is set in Vortex, please correct it first.</source>
-        <translation>ESLifier 检测到 Vortex 中设置了循环规则，请先更正它。</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="730" />
-        <source>Vortex's Mod Staging Folder and ESLifier's Output Folder must be on the same drive.</source>
-        <translation>Vortex 的模组暂存文件夹与 ESLifier 的输出文件夹必须在同一驱动器上。</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="732" />
-        <source>Failed to get the Vortex Mod Staging Folder.</source>
-        <translation>无法获取 Vortex 的模组暂存文件夹。</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="734" />
-        <source>No last used Skyrim SE profile detected.</source>
-        <translation>未检测到最近使用的 Skyrim SE 配置文件。</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="736" />
-        <source>Failed to get the Skyrim Game folder.</source>
-        <translation>无法获取 Skyrim 游戏文件夹。</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="752" />
+        <location filename="src\main\main_page.py" line="674" />
         <source>The MO2 instance's Mods folder and the Output Folder Path must be on the same drive.</source>
         <translation>MO2 实例的 Mods 文件夹与输出文件夹路径必须在同一驱动器上。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="754" />
+        <location filename="src\main\main_page.py" line="676" />
         <source>The MO2 instance's Overwrite folder and the Output Folder Path must be on the same drive.</source>
         <translation>MO2 实例的 Overwrite 文件夹与输出文件夹路径必须在同一驱动器上。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="776" />
+        <location filename="src\main\main_page.py" line="678" />
+        <source>ESLifier has come across an error while reading MO2's ini: %0</source>
+        <translation>ESLifier 读取 MO2 的 ini 时遇到错误：%0</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="699" />
         <source>Populating Tables</source>
         <translation>正在填充表格</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="780" />
+        <location filename="src\main\main_page.py" line="703" />
         <source>Failed to create "ESLify" list</source>
         <translation>创建 “ESLify” 列表失败</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="785" />
+        <location filename="src\main\main_page.py" line="708" />
         <source>Failed to create "Compact + ESLify" list</source>
         <translation>创建 “压缩 + ESLify” 列表失败</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="787" />
+        <location filename="src\main\main_page.py" line="710" />
         <source>Done Scanning</source>
         <translation>扫描完成</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="832" />
+        <location filename="src\main\main_page.py" line="750" />
+        <source>Failed in Compacted and Patched deletion process.</source>
+        <translation>压缩且已修补项的删除过程失败。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="759" />
+        <source>Failed to archive the ESL flagged list.</source>
+        <translation>无法归档 ESL 标记列表。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="785" />
         <source>Failed to open new_file_hashes.json</source>
         <translation>无法打开 new_file_hashes.json</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="839" />
+        <location filename="src\main\main_page.py" line="792" />
         <source>Issue occured getting the output folder during output reset.</source>
         <translation>在输出重置期间获取输出文件夹时出现问题。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1133" />
-        <location filename="src\main_page.py" line="883" />
-        <location filename="src\main_page.py" line="882" />
-        <location filename="src\main_page.py" line="876" />
-        <location filename="src\main_page.py" line="855" />
+        <location filename="src\main\main_page.py" line="1046" />
+        <location filename="src\main\main_page.py" line="836" />
+        <location filename="src\main\main_page.py" line="835" />
+        <location filename="src\main\main_page.py" line="829" />
+        <location filename="src\main\main_page.py" line="808" />
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="858" />
+        <location filename="src\main\main_page.py" line="811" />
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="891" />
+        <location filename="src\main\main_page.py" line="844" />
         <source>Are you sure you want to delete the output folder %1's contents and all data used to patch new files?
 This action will delete %2 files and %3 MBs of data from the output.</source>
         <translation>你确定要删除输出文件夹 %1 的内容以及用于修补新文件的所有数据吗?
 此操作将删除输出中的 %2 个文件和 %3 MB 的数据。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="910" />
-        <source>Failed in Compacted and Patched deletion process.</source>
-        <translation>压缩且已修补项的删除过程失败。</translation>
-    </message>
-    <message>
-        <location filename="src\main_page.py" line="933" />
+        <location filename="src\main\main_page.py" line="865" />
         <source>Would you like to remove the ESLifier Data that stores
 info used to reselect your previously ESL flagged/compacted
 mods? Do this only if you are performing a full reset.</source>
@@ -1642,7 +1693,7 @@ mods? Do this only if you are performing a full reset.</source>
 模组信息的 ESLifier 数据吗? 仅当你执行完全重置时才执行此操作。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="945" />
+        <location filename="src\main\main_page.py" line="877" />
         <source>Would you like to remove the ESLifier Output hash info?
 This is how ESLifier can tell if a file in the output
 has been changed after ESLifier patched it.
@@ -1655,138 +1706,154 @@ ESLifier 修补后是否被更改的方式。
 被更改的文件时。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="971" />
+        <location filename="src\main\main_page.py" line="903" />
         <source>Issue occured getting the output folder during output rebuild.</source>
         <translation>在输出重建期间获取输出文件夹时出现问题。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="988" />
+        <location filename="src\main\main_page.py" line="920" />
         <source>Are you sure you want to recreate the output folder %1?
-This action will delete %2 files and %3 MBs of data from the output and
-re-scan, flag, compact, and patch all previously output files that fit the current filters.
-If deletion of the output folder takes more than 5 seconds, blame your anti-virus
-and maybe move your output/game install to a non-protected folder.</source>
-        <translation>你确定要重新创建输出文件夹 %1 吗?
-此操作将删除输出中的 %2 个文件和 %3 MB 的数据，并
-重新扫描、标记、压缩和修补所有符合当前筛选器的先前输出文件。
-如果删除输出文件夹耗时超过 5 秒，请归咎于你的杀毒软件，
-也许将你的输出/游戏安装移动到一个不受保护的文件夹。</translation>
+This action will delete %2 files and %3 MBs of data
+from the output and re-scan, flag, compact, and patch
+all previously output files that fit the current filters.
+Anti-Virus can cause output deletion to take 5+ seconds.</source>
+        <translation>你确定要重新创建输出文件夹 %1 吗？
+此操作将删除输出中的 %2 个文件和 %3 MB 的数据，
+并重新扫描、标记、压缩和修补所有符合当前筛选器的已输出文件。
+杀毒软件可能导致删除输出耗时 5 秒以上。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1031" />
+        <location filename="src\main\main_page.py" line="941" />
         <source>No Existing Output Data</source>
         <translation>没有现有输出数据</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1031" />
+        <location filename="src\main\main_page.py" line="941" />
         <source>There is no existing output data for ESLifier to use.</source>
         <translation>没有可供 ESLifier 使用的现有输出数据。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1048" />
-        <source>Are you sure you want to reset the Extracted BSA List?
-This will cause the next scan to take significantly longer as the BSA files will
+        <location filename="src\main\main_page.py" line="964" />
+        <source>Are you sure you want to reset the Extracted %0 List?
+This will cause the next scan to take significantly longer as the %0 files will
 need to be extracted again and irrelevant script files will need to be filtered.
 
 This can take a short bit and may freeze the UI
-or you can manually delete the "bsa_extracted/" folder
+or you can manually delete the "%1/" folder
 and then click this button.</source>
-        <translation>你确定要重置已解压的 BSA 列表吗?
-这会使下次扫描耗时显著变长，因为需要
-重新解压 BSA 文件并过滤无关的脚本文件。
+        <translation>你确定要重置已解压的 %0 列表吗？
+这会使下次扫描显著变慢，因为需要重新解压 %0 文件
+并重新筛选无关的脚本文件。
 
-这可能需要一小段时间并可能导致 UI 卡顿，
-或者你也可以手动删除 “bsa_extracted/” 文件夹
+这可能需要一点时间，并可能使界面卡死，
+你也可以手动删除“%1/”文件夹
 然后点击此按钮。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1102" />
+        <location filename="src\main\main_page.py" line="1015" />
         <source>Error opening folder: </source>
         <translation>打开文件夹时出错： </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1115" />
+        <location filename="src\main\main_page.py" line="1028" />
         <source>Error opening file:: </source>
         <translation>打开文件时出错： </translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1132" />
+        <location filename="src\main\main_page.py" line="1045" />
         <source>Confirmation</source>
         <translation>确认</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1134" />
+        <location filename="src\main\main_page.py" line="1047" />
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1175" />
+        <location filename="src\main\main_page.py" line="1103" />
         <source>Hashing output for changes...</source>
         <translation>正在为更改计算输出的哈希…</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1213" />
+        <location filename="src\main\main_page.py" line="1141" />
+        <source>Hashing the output failed: %1</source>
+        <translation>计算输出的哈希失败：%1</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="1142" />
+        <source>Hashing Failed</source>
+        <translation>哈希失败</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="1143" />
+        <source>Hashing the output failed.
+See the log for details.</source>
+        <translation>计算输出的哈希失败。
+详见日志。</translation>
+    </message>
+    <message>
+        <location filename="src\main\main_page.py" line="1147" />
         <source>Hashing for changes complete.</source>
         <translation>为更改计算的哈希完成。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1214" />
+        <location filename="src\main\main_page.py" line="1148" />
         <source>Found %1 changed files.</source>
         <translation>发现 %1 个已更改的文件。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1223" />
+        <location filename="src\main\main_page.py" line="1156" />
         <source>Select files to remove.</source>
         <translation>选择要移除的文件。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1233" />
+        <location filename="src\main\main_page.py" line="1166" />
         <source>Filter</source>
         <translation>筛选</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1234" />
+        <location filename="src\main\main_page.py" line="1167" />
         <source>Search bar</source>
         <translation>搜索栏</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1337" />
-        <location filename="src\main_page.py" line="1333" />
-        <location filename="src\main_page.py" line="1329" />
-        <location filename="src\main_page.py" line="1272" />
+        <location filename="src\main\main_page.py" line="1270" />
+        <location filename="src\main\main_page.py" line="1266" />
+        <location filename="src\main\main_page.py" line="1262" />
+        <location filename="src\main\main_page.py" line="1205" />
         <source>Delete Selected</source>
         <translation>删除所选</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1272" />
+        <location filename="src\main\main_page.py" line="1205" />
         <source>Deletes only the selected files.</source>
         <translation>仅删除所选文件。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1339" />
-        <location filename="src\main_page.py" line="1334" />
-        <location filename="src\main_page.py" line="1330" />
-        <location filename="src\main_page.py" line="1279" />
+        <location filename="src\main\main_page.py" line="1272" />
+        <location filename="src\main\main_page.py" line="1267" />
+        <location filename="src\main\main_page.py" line="1263" />
+        <location filename="src\main\main_page.py" line="1212" />
         <source>Delete All</source>
         <translation>全部删除</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1279" />
+        <location filename="src\main\main_page.py" line="1212" />
         <source>Deletes all files regardless of selection.</source>
         <translation>删除所有文件，与选择无关。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1286" />
+        <location filename="src\main\main_page.py" line="1219" />
         <source>Keep All</source>
         <translation>全部保留</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1286" />
+        <location filename="src\main\main_page.py" line="1219" />
         <source>Keeps all files regardless of selection.</source>
         <translation>保留所有文件，与选择无关。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1311" />
+        <location filename="src\main\main_page.py" line="1244" />
         <source>The following plugins have had their hashes change since they were patched by ESLifier.
 This could be because you or another program changed them. Be VERY careful as deleting
 or not deleting these could have consequences.</source>
@@ -1795,14 +1862,14 @@ or not deleting these could have consequences.</source>
 或不删除它们都可能产生后果。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1317" />
+        <location filename="src\main\main_page.py" line="1250" />
         <source>The following files have had their hashes change since they were patched by ESLifier.
 These files could be config or data storage files that you may want to keep.</source>
         <translation>以下文件的哈希在它们被 ESLifier 修补后发生了变化。
 这些文件可能是你想保留的配置或数据存储文件。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1321" />
+        <location filename="src\main\main_page.py" line="1254" />
         <source>Select the files you would like to remove and select "Delete Selected",
 select "Delete All" to delete all files regardless of selection,
 or select "Keep All" to not delete any files.</source>
@@ -1811,7 +1878,7 @@ or select "Keep All" to not delete any files.</source>
 或选择 “全部保留” 不删除任何文件。</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1454" />
+        <location filename="src\main\main_page.py" line="1389" />
         <source>Output Stats:
   Size:
     &gt; %1
@@ -1824,7 +1891,7 @@ or select "Keep All" to not delete any files.</source>
     &gt; %2</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1462" />
+        <location filename="src\main\main_page.py" line="1397" />
         <source>Scanned Stats:
   Flaggable:
     &gt; %1
@@ -1837,146 +1904,146 @@ or select "Keep All" to not delete any files.</source>
     &gt; %2</translation>
     </message>
     <message>
-        <location filename="src\main_page.py" line="1477" />
+        <location filename="src\main\main_page.py" line="1412" />
         <source>Are you sure you want to scan and patch new/changed files?</source>
         <translation>你确定要扫描并修补新的/已更改的文件吗?</translation>
     </message>
 </context><context>
     <name>main_window</name>
     <message>
-        <location filename="src\eslifier_app.py" line="237" />
+        <location filename="src\eslifier_app.py" line="214" />
         <source>EXE is in a Protected Folder!</source>
         <translation>EXE 位于受保护的文件夹中!</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="238" />
+        <location filename="src\eslifier_app.py" line="215" />
         <source>ESLifier is in a protected folder, please move its exe outside of any C:/User/USERNAME/ folder or program files folder.</source>
         <translation>ESLifier 位于受保护的文件夹中，请将其 exe 移动到任何 C:/User/USERNAME/ 文件夹或程序文件文件夹之外。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="244" />
-        <source>ESLifier v%0</source>
-        <translation>ESLifier v%0</translation>
+        <location filename="src\eslifier_app.py" line="221" />
+        <source>%0 v%1</source>
+        <translation>%0 v%1</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="320" />
+        <location filename="src\eslifier_app.py" line="302" />
         <source>  Main  </source>
         <translation>  主页  </translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="321" />
-        <source>This is the Main Page, scan your skyrim folder and select plugins to flag or compress.</source>
-        <translation>这是主页，扫描你的 Skyrim 文件夹并选择要标记或压缩的插件。</translation>
+        <location filename="src\eslifier_app.py" line="303" />
+        <source>This is the Main Page, scan your %0 folder and select plugins to flag or compress.</source>
+        <translation>这是主页，扫描你的 %0 文件夹并选择要标记或压缩的插件。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="322" />
+        <location filename="src\eslifier_app.py" line="304" />
         <source>  Settings  </source>
         <translation>  设置  </translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="323" />
+        <location filename="src\eslifier_app.py" line="305" />
         <source>This is the settings page. Certain settings will effect what plugins will display after scanning.</source>
         <translation>这是设置页。某些设置会影响扫描后显示的插件。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="324" />
+        <location filename="src\eslifier_app.py" line="306" />
         <source>  Help?  </source>
         <translation>  帮助?  </translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="372" />
+        <location filename="src\eslifier_app.py" line="356" />
         <source>Invalid Folder Name</source>
         <translation>无效的文件夹名称</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="372" />
+        <location filename="src\eslifier_app.py" line="356" />
         <source>Enter a valid output folder name.</source>
         <translation>请输入一个有效的输出文件夹名称。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="391" />
+        <location filename="src\eslifier_app.py" line="375" />
         <source>The included BSArch.exe must be present in a folder
 named bsarch adjactent to ESLifier:</source>
         <translation>附带的 BSArch.exe 必须存在于
 名为 bsarch 且与 ESLifier 相邻的文件夹中：</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="398" />
+        <location filename="src\eslifier_app.py" line="382" />
         <source>Invalid Output Directory, it does not exist.</source>
         <translation>无效的输出目录，它不存在。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="406" />
+        <location filename="src\eslifier_app.py" line="390" />
         <source>Invalid plugins.txt, the path should be to the file not directory.</source>
         <translation>无效的 plugins.txt，路径应指向文件而不是目录。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="408" />
+        <location filename="src\eslifier_app.py" line="392" />
         <source>Invalid plugins.txt, the file does not exist.</source>
         <translation>无效的 plugins.txt，该文件不存在。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="410" />
-        <source>Invalid Skyrim Data Directory, it does not exist.</source>
-        <translation>无效的 Skyrim 数据目录，它不存在。</translation>
+        <location filename="src\eslifier_app.py" line="394" />
+        <source>Invalid %0 Data Directory, it does not exist.</source>
+        <translation>无效的 %0 数据目录，它不存在。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="414" />
+        <location filename="src\eslifier_app.py" line="398" />
         <source>The Data Folder Path and the Output Folder Path must be on the same drive.</source>
         <translation>数据文件夹路径与输出文件夹路径必须在同一驱动器上。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="418" />
+        <location filename="src\eslifier_app.py" line="402" />
         <source>Invalid Vortex Data Directory, it does not exist.</source>
         <translation>无效的 Vortex 数据目录，它不存在。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="421" />
+        <location filename="src\eslifier_app.py" line="405" />
         <source>Invalid Vortex Data Directory, it exists but is invalid as the folder 'state.v2' does not exist in it.</source>
         <translation>无效的 Vortex 数据目录，它存在但无效，因为其中不存在 ‘state.v2’ 文件夹。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="423" />
-        <source>Invalid Vortex Data Directory, it exists but is invalid as the folder 'skyrimse' does not exist in it.</source>
-        <translation>无效的 Vortex 数据目录，它存在但无效，因为其中不存在 ‘skyrimse’ 文件夹。</translation>
+        <location filename="src\eslifier_app.py" line="407" />
+        <source>Invalid Vortex Data Directory, it exists but is invalid as the folder '%0' does not exist in it.</source>
+        <translation>无效的 Vortex 数据目录，它存在但无效，因为其中不存在 ‘%0’ 文件夹。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="427" />
+        <location filename="src\eslifier_app.py" line="411" />
         <source>Invalid MO2 Directory, it does not exist.</source>
         <translation>无效的 MO2 目录，它不存在。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="430" />
+        <location filename="src\eslifier_app.py" line="414" />
         <source>Invalid MO2 Directory, it exists but does not contain the file 'ModOrganizer.ini' in it.</source>
         <translation>无效的 MO2 目录，它存在但不包含文件 ‘ModOrganizer.ini’。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="433" />
+        <location filename="src\eslifier_app.py" line="417" />
         <source>Invalid MO2 Profile, it does not exist.</source>
         <translation>无效的 MO2 配置，它不存在。</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="436" />
+        <location filename="src\eslifier_app.py" line="420" />
         <source>Invalid MO2 Profile, it does exist but it doesn't contain 'plugins.txt'</source>
         <translation>无效的 MO2 配置，它确实存在但不包含 ‘plugins.txt’</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="438" />
+        <location filename="src\eslifier_app.py" line="422" />
         <source>Invalid MO2 Profile, it does exist but it doesn't contain 'modlist.txt'</source>
         <translation>无效的 MO2 配置，它确实存在但不包含 ‘modlist.txt’</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="444" />
+        <location filename="src\eslifier_app.py" line="428" />
         <source>Path Validation Error</source>
         <translation>路径验证错误</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="462" />
+        <location filename="src\eslifier_app.py" line="446" />
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="464" />
+        <location filename="src\eslifier_app.py" line="448" />
         <source>Almost every element in the program has a tool tip that explains it.
 Tool tips can be seen by hovering over elements with the mouse.
 It is advised to read what everything does before doing anything.
@@ -1987,24 +2054,44 @@ It is advised to read what everything does before doing anything.
 </translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="477" />
+        <location filename="src\eslifier_app.py" line="461" />
         <source>Missing Paths Error</source>
         <translation>路径缺失错误</translation>
     </message>
     <message>
-        <location filename="src\eslifier_app.py" line="485" />
+        <location filename="src\eslifier_app.py" line="469" />
         <source>All paths must be set to leave the settings page!</source>
         <translation>必须设置所有路径才能离开设置页!</translation>
+    </message>
+    <message>
+        <location filename="src\eslifier_app.py" line="483" />
+        <source>%0 v%1 (Mode: No Manager)</source>
+        <translation>%0 v%1（模式：无模组管理器）</translation>
+    </message>
+    <message>
+        <location filename="src\eslifier_app.py" line="487" />
+        <source>%0 v%1 (Mode: Vortex)</source>
+        <translation>%0 v%1（模式：Vortex）</translation>
+    </message>
+    <message>
+        <location filename="src\eslifier_app.py" line="491" />
+        <source>%0 v%1 (Mode: MO2 | Instance: %2 | Profile: %3)</source>
+        <translation>%0 v%1（模式：MO2 | 实例：%2 | 配置：%3）</translation>
     </message>
 </context><context>
     <name>patch_new</name>
     <message>
-        <location filename="src\patch_new.py" line="27" />
+        <location filename="src\patch_new.py" line="44" />
+        <source>Patch New failed unexpectedly.</source>
+        <translation>“修补新的”意外失败。</translation>
+    </message>
+    <message>
+        <location filename="src\patch_new.py" line="57" />
         <source>No Compacted/Patched Mods</source>
         <translation>没有已压缩/已修补的模组</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="28" />
+        <location filename="src\patch_new.py" line="58" />
         <source>There are no existing compacted/patched mods for
 ESLifier to check for new files that need patching.
 Compact a mod on the Main page first. This button is for
@@ -2017,383 +2104,425 @@ ESLifier 检查需要修补的新文件。
 整个输出时。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="43" />
+        <location filename="src\patch_new.py" line="73" />
         <source>Output is from outdated build.</source>
         <translation>输出来自过时的构建。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="44" />
+        <location filename="src\patch_new.py" line="74" />
         <source>ESLifier cannot find the file master_byte_data.json
-in ESLifier_Data/, this is likely because the current
+in %0, this is likely because the current
 ESLifier output was made on a version older than v0.12.0.
 This button needs an output made from v0.12.0+.</source>
-        <translation>ESLifier 无法在 ESLifier_Data/ 中找到文件 master_byte_data.json，
-这可能是因为当前的
-ESLifier 输出是在早于 v0.12.0 的版本上制作的。
-此按钮需要一个由 v0.12.0+ 制作的输出。</translation>
+        <translation>ESLifier 无法在 %0 中找到文件 master_byte_data.json，
+这可能是因为当前的 ESLifier 输出由早于 v0.12.0 的版本生成。
+此按钮需要 v0.12.0+ 生成的输出。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="70" />
+        <location filename="src\patch_new.py" line="105" />
         <source>Delete %1 files?</source>
         <translation>删除 %1 个文件?</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="83" />
+        <location filename="src\patch_new.py" line="118" />
         <source>User canceled Patch New file deletion, aborting.</source>
         <translation>用户取消了“修补新文件”的删除，正在中止。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="97" />
+        <location filename="src\patch_new.py" line="132" />
         <source>The following mods have been compacted by ESLifier and have a dll that references their name.These mods are likely referenced by a Form ID look up which means if the Form ID has been changedby ESLifier, the SKSE dll may not function correctly. Mods:</source>
         <translation>以下模组已被 ESLifier 压缩，并且有一个引用其名称的 dll。这些模组可能被表单 ID 查找所引用，这意味着如果表单 ID 已被 ESLifier 更改，SKSE dll 可能无法正常工作。模组：</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="102" />
+        <location filename="src\patch_new.py" line="137" />
         <source>Mod: </source>
         <translation>模组： </translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="103" />
+        <location filename="src\patch_new.py" line="138" />
         <source>DLLs: </source>
         <translation>DLL： </translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="108" />
+        <location filename="src\patch_new.py" line="143" />
         <source>Compacted mod referenced in SKSE dll.</source>
         <translation>被压缩的模组在 SKSE dll 中被引用。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="111" />
-        <source>Checking if New CELLs are Changed...</source>
-        <translation>正在检查新的 CELL 是否已更改…</translation>
+        <location filename="src\patch_new.py" line="166" />
+        <source>Patch New Failed</source>
+        <translation>修补新的失败</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="130" />
+        <location filename="src\patch_new.py" line="167" />
+        <source>Patch New hit an unexpected error and stopped. Please check the ESLifier log for details.</source>
+        <translation>“修补新的”遇到意外错误并已停止。请查看 ESLifier 日志了解详情。</translation>
+    </message>
+    <message>
+        <location filename="src\patch_new.py" line="175" />
         <source>Finished Patching New or Changed Dependencies and Files</source>
         <translation>新的或已更改的依赖项和文件修补完成</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="137" />
+        <location filename="src\patch_new.py" line="182" />
         <source>Patch New Done</source>
         <translation>新补丁完成</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="141" />
+        <location filename="src\patch_new.py" line="186" />
         <source>%1 new files that needed patching have been patched.</source>
         <translation>已修补 %1 个需要修补的新文件。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="143" />
+        <location filename="src\patch_new.py" line="188" />
         <source>No new files that need patching have been found.</source>
         <translation>未发现需要修补的新文件。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="145" />
+        <location filename="src\patch_new.py" line="190" />
         <source>(or they were patched due to a conflict change)</source>
         <translation>（或者它们因冲突更改而被修补）</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="147" />
+        <location filename="src\patch_new.py" line="192" />
         <source>%1 files had hash mismatches and were corrected.</source>
         <translation>%1 个文件的哈希不匹配，已更正。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="149" />
+        <location filename="src\patch_new.py" line="194" />
         <source>No files with a hash mismatched were found.</source>
         <translation>未发现哈希不匹配的文件。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="152" />
+        <location filename="src\patch_new.py" line="197" />
         <source>%1 files had winning conflicts change and were corrected.</source>
         <translation>%1 个文件的获胜冲突发生变化，已更正。</translation>
     </message>
     <message>
-        <location filename="src\patch_new.py" line="154" />
+        <location filename="src\patch_new.py" line="199" />
         <source>No files with a winning conflict change were found.</source>
         <translation>未发现获胜冲突发生变化。</translation>
+    </message>
+    <message>
+        <location filename="src\patch_new.py" line="543" />
+        <source>Checking if New CELLs are Changed...</source>
+        <translation>正在检查新的 CELL 是否已更改…</translation>
     </message>
 </context><context>
     <name>patcher_conditions</name>
     <message>
-        <location filename="src\patcher_conditions.py" line="222" />
-        <location filename="src\patcher_conditions.py" line="210" />
-        <location filename="src\patcher_conditions.py" line="195" />
-        <location filename="src\patcher_conditions.py" line="186" />
-        <location filename="src\patcher_conditions.py" line="167" />
-        <location filename="src\patcher_conditions.py" line="61" />
+        <location filename="src\patchers\sse_patcher_conditions.py" line="226" />
+        <location filename="src\patchers\sse_patcher_conditions.py" line="216" />
+        <location filename="src\patchers\sse_patcher_conditions.py" line="201" />
+        <location filename="src\patchers\sse_patcher_conditions.py" line="192" />
+        <location filename="src\patchers\sse_patcher_conditions.py" line="173" />
+        <location filename="src\patchers\sse_patcher_conditions.py" line="65" />
+        <location filename="src\patchers\fo4_patcher_conditions.py" line="36" />
+        <location filename="src\patchers\fo4_patcher_conditions.py" line="30" />
+        <location filename="src\patchers\fo4_patcher_conditions.py" line="19" />
         <source>Possible missing patcher for: </source>
         <translation>可能缺少修补器： </translation>
     </message>
 </context><context>
     <name>scanner</name>
     <message>
-        <location filename="src\scanner.py" line="137" />
+        <location filename="src\scanners\scanner.py" line="155" />
         <source>Gathered %0 total files.</source>
         <translation>共收集了 %0 个文件。</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="139" />
+        <location filename="src\scanners\scanner.py" line="158" />
         <source>Getting Dependencies</source>
         <translation>正在获取依赖项</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="141" />
+        <location filename="src\scanners\scanner.py" line="160" />
         <source>Scanning Plugins</source>
         <translation>正在扫描插件</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="154" />
+        <location filename="src\scanners\scanner.py" line="172" />
         <source>Time taken: %1 seconds</source>
         <translation>耗时：%1 秒</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="173" />
+        <location filename="src\scanners\scanner.py" line="191" />
         <source>Extracting: </source>
         <translation>正在解压： </translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="198" />
-        <source>Extracting %0/%1 BSA files (%2)</source>
-        <translation>正在解压 %0/%1 个 BSA 文件（%2）</translation>
+        <location filename="src\scanners\scanner.py" line="223" />
+        <source>Extracting %0/%1 %2 files (%3)</source>
+        <translation>正在解压 %0/%1 个 %2 文件（%3）</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="638" />
-        <location filename="src\scanner.py" line="210" />
-        <source>Error Reading BSA: </source>
-        <translation>读取 BSA 时出错： </translation>
+        <location filename="src\scanners\scanner.py" line="236" />
+        <source>Error Reading archive: </source>
+        <translation>读取归档时出错： </translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="225" />
+        <location filename="src\scanners\scanner.py" line="252" />
         <source>Failed to get plugins list at: </source>
         <translation>在以下位置获取插件列表失败： </translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="275" />
+        <location filename="src\scanners\scanner.py" line="298" />
         <source>Getting masters of loose files...</source>
         <translation>正在获取松散文件的主插件…</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="285" />
+        <location filename="src\scanners\scanner.py" line="303" />
         <source>Scanning .pex files</source>
         <translation>正在扫描 .pex 文件</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="308" />
-        <source>Scanning .dll SKSE plugins</source>
-        <translation>正在扫描 .dll SKSE 插件</translation>
+        <location filename="src\scanners\scanner.py" line="318" />
+        <source>Scanning .dll %0 plugins</source>
+        <translation>正在扫描 .dll %0 插件</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="317" />
+        <location filename="src\scanners\scanner.py" line="327" />
         <source>Sorting .seq files</source>
         <translation>正在排序 .seq 文件</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="320" />
-        <source>Scanning .bsa files</source>
-        <translation>正在扫描 .bsa 文件</translation>
+        <location filename="src\scanners\scanner.py" line="330" />
+        <source>Scanning %0 files</source>
+        <translation>正在扫描 %0 文件</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="361" />
-        <location filename="src\scanner.py" line="344" />
+        <location filename="src\scanners\scanner.py" line="370" />
+        <location filename="src\scanners\scanner.py" line="350" />
         <source>Processed: %0 %</source>
         <translation>已处理：%0 %</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="362" />
-        <location filename="src\scanner.py" line="345" />
+        <location filename="src\scanners\scanner.py" line="371" />
+        <location filename="src\scanners\scanner.py" line="351" />
         <source>Files: %1/%2</source>
         <translation>文件：%1/%2</translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="580" />
+        <location filename="src\scanners\scanner.py" line="636" />
         <source>Missing file scan type for </source>
         <translation>缺少文件扫描类型： </translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="582" />
+        <location filename="src\scanners\scanner.py" line="650" />
+        <location filename="src\scanners\scanner.py" line="639" />
         <source>Error reading file </source>
         <translation>读取文件时出错： </translation>
     </message>
     <message>
-        <location filename="src\scanner.py" line="584" />
+        <location filename="src\scanners\scanner.py" line="640" />
         <source>!pex file is likely corrupt.</source>
         <translation>!pex 文件可能已损坏。</translation>
     </message>
     <message>
-        <location filename="src\scanner_mo2.py" line="25" />
+        <location filename="src\scanners\scanner.py" line="644" />
+        <source>Path is %0 characters long which requires "Long Path Support" to be enabled in Windows (see Google for more info).
+File: %1</source>
+        <translation>路径长度为 %0 个字符，需要在 Windows 中启用“长路径支持”（详见 Google）。
+文件：%1</translation>
+    </message>
+    <message>
+        <location filename="src\scanners\scanner.py" line="734" />
+        <source>Error Reading BSA: </source>
+        <translation>读取 BSA 时出错： </translation>
+    </message>
+    <message>
+        <location filename="src\scanners\scanner.py" line="817" />
+        <source>Error Reading BA2: </source>
+        <translation>读取 BA2 时出错： </translation>
+    </message>
+    <message>
+        <location filename="src\scanners\scanner_mo2.py" line="26" />
         <source>Failed to get modlist at </source>
         <translation>在以下位置获取 modlist 失败： </translation>
     </message>
     <message>
-        <location filename="src\scanner_vortex.py" line="470" />
-        <location filename="src\scanner_mo2.py" line="67" />
+        <location filename="src\scanners\scanner_vortex.py" line="460" />
+        <location filename="src\scanners\scanner_mo2.py" line="63" />
         <source>Winning Files Processed: </source>
         <translation>已处理的获胜文件： </translation>
     </message>
     <message>
-        <location filename="src\scanner_vortex.py" line="331" />
-        <location filename="src\scanner_none.py" line="20" />
-        <location filename="src\scanner_mo2.py" line="131" />
+        <location filename="src\scanners\scanner_vortex.py" line="346" />
+        <location filename="src\scanners\scanner_none.py" line="27" />
+        <location filename="src\scanners\scanner_mo2.py" line="134" />
         <source>Gathered: </source>
         <translation>已收集： </translation>
     </message>
 </context><context>
     <name>settings</name>
     <message>
-        <location filename="src\settings_page.py" line="786" />
-        <location filename="src\settings_page.py" line="76" />
+        <location filename="src\settings_page.py" line="832" />
+        <location filename="src\settings_page.py" line="79" />
         <source>Mod Manager: None</source>
         <translation>模组管理器：无</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="77" />
+        <location filename="src\settings_page.py" line="80" />
         <source>Users without a mod manager should get a mod manager. ESLifier is not
 meant to be used with manual modding but should still work at least once.</source>
         <translation>没有模组管理器的用户应该获取一个模组管理器。ESLifier 并非
 专为手动装模组而设计，但至少应该还能用一次。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="87" />
+        <location filename="src\settings_page.py" line="90" />
         <source>Data Folder Path</source>
         <translation>数据文件夹路径</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="88" />
-        <source>Set this to your Skyrim Special Edition Data folder that holds Skyrim.esm.</source>
-        <translation>将其设置为存放 Skyrim.esm 的 Skyrim Special Edition 数据文件夹。</translation>
+        <location filename="src\settings_page.py" line="91" />
+        <source>Set this to your %0 Data folder that holds %1.</source>
+        <translation>将其设置为存放 %1 的 %0 数据文件夹。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="89" />
-        <source>C:/Path/To/Skyrim Special Edition/Data</source>
-        <translation>C:/Path/To/Skyrim Special Edition/Data</translation>
+        <location filename="src\settings_page.py" line="92" />
+        <source>C:/Path/To/%0/Data</source>
+        <translation>C:/Path/To/%0/Data</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="94" />
+        <location filename="src\settings_page.py" line="97" />
         <source>Output Folder Path</source>
         <translation>输出文件夹路径</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="787" />
-        <location filename="src\settings_page.py" line="95" />
+        <location filename="src\settings_page.py" line="833" />
+        <location filename="src\settings_page.py" line="98" />
         <source>Set where you want the Output Folder to be generated.</source>
         <translation>设置你想要生成输出文件夹的位置。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="96" />
+        <location filename="src\settings_page.py" line="99" />
         <source>C:/Path/To/The/Output/Folder/</source>
         <translation>C:/Path/To/The/Output/Folder/</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="102" />
+        <location filename="src\settings_page.py" line="105" />
         <source>Output Folder Name</source>
         <translation>输出文件夹名称</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="103" />
+        <location filename="src\settings_page.py" line="106" />
         <source>Change this to what you want to be the name of the Output Folder.</source>
         <translation>将其更改为你想要作为输出文件夹名称的名称。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="107" />
+        <location filename="src\settings_page.py" line="110" />
         <source>MO2 Instance Directory</source>
         <translation>MO2 实例目录</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="108" />
+        <location filename="src\settings_page.py" line="111" />
         <source>Set this to your modlist's MO2 Instance folder, the folder that holds 'ModOrganizer.ini'.</source>
         <translation>将其设置为你 modlist 的 MO2 实例文件夹，即存放 ‘ModOrganizer.ini’ 的文件夹。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="109" />
+        <location filename="src\settings_page.py" line="112" />
         <source>C:/Path/To/MO2/Instance</source>
         <translation>C:/Path/To/MO2/Instance</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="116" />
+        <location filename="src\settings_page.py" line="119" />
         <source>MO2 Profile</source>
         <translation>MO2 配置</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="117" />
+        <location filename="src\settings_page.py" line="120" />
         <source>Set this to your modlist's MO2 profile.</source>
         <translation>将其设置为你 modlist 的 MO2 配置。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="118" />
+        <location filename="src\settings_page.py" line="121" />
         <source>Select Profile</source>
         <translation>选择配置</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="125" />
+        <location filename="src\settings_page.py" line="128" />
         <source>Vortex Data Path</source>
         <translation>Vortex 数据路径</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="126" />
-        <source>Set this to Vortex's data folder (the folder that holds the "state.v2" and "skyrimse" folders).</source>
-        <translation>将其设置为 Vortex 的数据文件夹（该文件夹存放 “state.v2” 和 “skyrimse” 文件夹）。</translation>
+        <location filename="src\settings_page.py" line="129" />
+        <source>Set this to Vortex's data folder (the folder that holds the "state.v2" and "%0" folders).</source>
+        <translation>将其设置为 Vortex 的数据文件夹（该文件夹存放 “state.v2” 和 “%0” 文件夹）。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="127" />
+        <location filename="src\settings_page.py" line="130" />
         <source>C:/Users/USER/AppData/Roaming/Vortex or C:/ProgramData/vortex</source>
         <translation>C:/Users/USER/AppData/Roaming/Vortex 或 C:/ProgramData/vortex</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="134" />
+        <location filename="src\settings_page.py" line="137" />
         <source>Restore '.vortex_backup' Files</source>
         <translation>还原 “.vortex_backup” 文件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="135" />
-        <source>If a file exists in your SSE Data folder and it conflicts with a new file in a Mod Staging Folder mod, such as the ESLifier Output mod then Vortex creates a .vortex_backup file of the original Data Folder file. This setting allows ESLifier to restore the .vortex_backup file when the one in the output is deleted since the backup file is not restored unless you disable the output and redeploy in Vortex or completely purge your mods and redeploy in Vortex. You should probably leave this enabled.</source>
-        <translation>如果某个文件存在于你的 SSE 数据文件夹中，并且与模组暂存文件夹模组（例如 ESLifier 输出模组）中的新文件冲突，那么 Vortex 会为原始数据文件夹文件创建一个 .vortex_backup 文件。此设置允许 ESLifier 在输出中的文件被删除时还原 .vortex_backup 文件，因为除非你禁用输出并在 Vortex 中重新部署，或完全清除你的模组并在 Vortex 中重新部署，否则备份文件不会被还原。你最好让它保持启用。</translation>
+        <location filename="src\settings_page.py" line="138" />
+        <source>If a file exists in your game's Data folder and it conflicts with a new file in a Mod Staging Folder mod, such as the ESLifier Output mod then Vortex creates a .vortex_backup file of the original Data Folder file. This setting allows ESLifier to restore the .vortex_backup file when the one in the output is deleted since the backup file is not restored unless you disable the output and redeploy in Vortex or completely purge your mods and redeploy in Vortex. You should probably leave this enabled.</source>
+        <translation>如果某个文件存在于你游戏的 Data 文件夹中，并与模组暂存文件夹模组（例如 ESLifier 输出模组）中的新文件冲突，Vortex 会为该 Data 文件夹中的原文件创建 .vortex_backup 文件。此设置允许 ESLifier 在输出中的对应文件被删除时还原该 .vortex_backup 文件——因为除非你停用输出并在 Vortex 中重新部署，或者完全清除模组并重新部署，否则这个备份文件不会被还原。你大概应该保持启用此项。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="144" />
+        <location filename="src\settings_page.py" line="147" />
         <source>Plugins.txt Path</source>
         <translation>Plugins.txt 路径</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="145" />
+        <location filename="src\settings_page.py" line="148" />
         <source>Set this to your modlist's plugins.txt</source>
         <translation>将其设置为你 modlist 的 plugins.txt</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="146" />
+        <location filename="src\settings_page.py" line="149" />
         <source>C:/Path/To/plugins.txt</source>
         <translation>C:/Path/To/plugins.txt</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="151" />
+        <location filename="src\settings_page.py" line="155" />
         <source>Allow Form IDs below 0x000800 + Update plugin headers to 1.71</source>
         <translation>允许低于 0x000800 的表单 ID + 将插件头更新到 1.71</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="152" />
+        <location filename="src\settings_page.py" line="156" />
         <source>Allow scanning and patching to use the new 1.71 header.
 Requires Backported Extended ESL Support on Skyrim versions below 1.6.1130.
-Changing this settings requires a re-scan.</source>
+Changing this setting requires a re-scan.</source>
         <translation>允许扫描和修补使用新的 1.71 头。
 在低于 1.6.1130 的 Skyrim 版本上需要 Backported Extended ESL Support。
 更改此设置需要重新扫描。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="159" />
+        <location filename="src\settings_page.py" line="164" />
+        <source>Allow Form IDs below 0x000800 + Update plugin headers to 1.0</source>
+        <translation>允许低于 0x000800 的表单 ID + 将插件头更新到 1.0</translation>
+    </message>
+    <message>
+        <location filename="src\settings_page.py" line="165" />
+        <source>Allow scanning and patching to use the new 1.0 header.
+Requires your Fallout to be at least version 1.10.162+Changing this setting requires a re-scan.</source>
+        <translation>允许扫描和修补使用新的 1.0 头。
+需要你的 Fallout 至少为 1.10.162+ 版本。
+更改此设置需要重新扫描。</translation>
+    </message>
+    <message>
+        <location filename="src\settings_page.py" line="172" />
         <source>Show ESM Plugins</source>
         <translation>显示 ESM 插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="160" />
+        <location filename="src\settings_page.py" line="173" />
         <source>Display ESM plugins (.esm/ESM flagged).</source>
         <translation>显示 ESM 插件（.esm/ESL 标记）。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="165" />
+        <location filename="src\settings_page.py" line="178" />
         <source>Show plugins with new CELL records</source>
         <translation>显示带有新 CELL 记录的插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="166" />
+        <location filename="src\settings_page.py" line="179" />
         <source>Bugs related to cells have been fixed by SSE Engine Fixes v7+ for Skyrim 1.6.1170+.
 For users of SSE Engine Fixes v7+ ESLifier will ignore this setting and show them regardless.
 Display plugins with new CELL records.</source>
@@ -2402,12 +2531,12 @@ Display plugins with new CELL records.</source>
 显示带有新 CELL 记录的插件。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="173" />
+        <location filename="src\settings_page.py" line="187" />
         <source>Hide ESM plugins with new CELL records that are overwritten</source>
         <translation>隐藏被覆盖的、带有新 CELL 记录的 ESM 插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="174" />
+        <location filename="src\settings_page.py" line="188" />
         <source>The related bug has been fixed by SSE Engine Fixes v7+ for Skyrim 1.6.1170+. Disable this filter.
 For users of SSE Engine Fixes v7+ ESLifier will ignore this setting and show them regardless.
 Hide ESM plugins with new CELL records that have been changed by a dependent plugin.</source>
@@ -2416,12 +2545,12 @@ Hide ESM plugins with new CELL records that have been changed by a dependent plu
 隐藏带有新 CELL 记录且被依赖插件更改过的 ESM 插件。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="181" />
+        <location filename="src\settings_page.py" line="196" />
         <source>Hide plugins with new interior CELL records</source>
         <translation>隐藏带有新室内 CELL 记录的插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="182" />
+        <location filename="src\settings_page.py" line="197" />
         <source>This bug has been fixed by SSE Engine Fixes v7+ for Skyrim 1.6.1170+.
 For users of SSE Engine Fixes v7+ ESLifier will ignore this setting and show them regardless.
 Hide plugins with new interior CELL records as they can have issues when reloading
@@ -2432,57 +2561,62 @@ a save without restarting the game.</source>
 重新加载存档时可能会有问题。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="190" />
+        <location filename="src\settings_page.py" line="206" />
         <source>Hide plugins with new WRLD (worldspace) records</source>
         <translation>隐藏带有新 WRLD（世界空间）记录的插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="818" />
-        <location filename="src\settings_page.py" line="191" />
+        <location filename="src\settings_page.py" line="864" />
+        <location filename="src\settings_page.py" line="207" />
         <source>Hide plugins with new worldspaces records as they can have the landscape disappear
 (no ground) when flagged as ESL.</source>
         <translation>隐藏带有新世界空间记录的插件，因为它们在标记为 ESL 后可能发生地表消失
 （无地面）的情况。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="197" />
+        <location filename="src\settings_page.py" line="214" />
         <source>Hide plugins with new WTHR (weather) records</source>
         <translation>隐藏带有新 WTHR（天气）记录的插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="198" />
+        <location filename="src\settings_page.py" line="215" />
         <source>Hide plugins with new weather records as they can be referenced in ENB presets which are not patched.</source>
         <translation>隐藏带有新天气记录的插件，因为它们可能会在未被修补的 ENB 预设中被引用。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="203" />
+        <location filename="src\settings_page.py" line="221" />
+        <source>Hide plugins with PreVis/PreCombine</source>
+        <translation>隐藏带有 PreVis/PreCombine 的插件</translation>
+    </message>
+    <message>
+        <location filename="src\settings_page.py" line="222" />
+        <source>Hide plugins with new cells that have PreVis/PreCombine as that system breaks for them.</source>
+        <translation>隐藏带有新 cell 且其中含 PreVis/PreCombine 的插件，因为该系统对它们会失效。</translation>
+    </message>
+    <message>
+        <location filename="src\settings_page.py" line="228" />
         <source>Hide plugins that have SEQ files</source>
         <translation>隐藏带有 SEQ 文件的插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="204" />
+        <location filename="src\settings_page.py" line="229" />
         <source>Hide plugins that have SEQ files as ESL flagging it may cause dialogue for it to not work until you save and reload in game.</source>
         <translation>隐藏带有 SEQ 文件的插件，因为对其标记 ESL 可能导致对话在你于游戏中保存并重新加载之前无法正常工作。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="209" />
+        <location filename="src\settings_page.py" line="234" />
         <source>Hide plugins that have PEX files with GetModByName</source>
         <translation>隐藏带有 GetModByName 的 PEX 文件的插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="210" />
+        <location filename="src\settings_page.py" line="235" />
         <source>Hide plugins that have PEX files that call the papyrus function 'GetModByName' on
 '                    'them as that function only works properly on non-ESL plugins.</source>
         <translation>隐藏带有调用 papyrus 函数 GetModByName 的 PEX 文件的插件，
 因为该函数只对非 ESL 插件正常工作。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="216" />
-        <source>Hide left list columns visually</source>
-        <translation>在视觉上隐藏左侧列表列</translation>
-    </message>
-    <message>
-        <location filename="src\settings_page.py" line="217" />
+        <location filename="src\settings_page.py" line="243" />
         <source>Hide specified columns visually. This does not affect what plugins are displayed.
 Specify the column names, comma separated. Available: CELL, WRLD, SEQ, PEX, ESM
 Example, hides the CELL and ESM flags: CELL,ESM</source>
@@ -2491,12 +2625,21 @@ Example, hides the CELL and ESM flags: CELL,ESM</source>
 例如，隐藏 CELL 和 ESM 标志：CELL,ESM</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="225" />
-        <source>Hide right list columns visually</source>
-        <translation>在视觉上隐藏右侧列表列</translation>
+        <location filename="src\settings_page.py" line="247" />
+        <source>Hide specified columns visually. This does not affect what plugins are displayed.
+Specify the column names, comma separated. Available: PREVIS, ESM
+Example, hides the PREVIS and ESM flags: PREVIS,ESM</source>
+        <translation>在视觉上隐藏指定的列。这不影响显示哪些插件。
+指定列名，以逗号分隔。可用：PREVIS、ESM
+例如，隐藏 PREVIS 和 ESM 标志：PREVIS,ESM</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="226" />
+        <location filename="src\settings_page.py" line="251" />
+        <source>Hide left list columns visually</source>
+        <translation>在视觉上隐藏左侧列表列</translation>
+    </message>
+    <message>
+        <location filename="src\settings_page.py" line="259" />
         <source>Hide specified columns visually. This does not affect what plugins are displayed.
 Specify the column names, comma separated. Available: CELL, WRLD, WTHR, SEQ, PEX, ESM, DEPENDENTS
 Example, hides the ESM flag and the dependent plugins: ESM,DEPENDENT</source>
@@ -2505,22 +2648,36 @@ Example, hides the ESM flag and the dependent plugins: ESM,DEPENDENT</source>
 例如，隐藏 ESM 标志和依赖插件：ESM,DEPENDENTS</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="234" />
-        <source>Show plugins that are in SKSE dlls</source>
-        <translation>显示位于 SKSE dll 中的插件</translation>
+        <location filename="src\settings_page.py" line="263" />
+        <source>Hide specified columns visually. This does not affect what plugins are displayed.
+Specify the column names, comma separated. Available: PREVIS, ESM, DEPENDENTS
+Example, hides the ESM flag and the dependent plugins: ESM,DEPENDENT</source>
+        <translation>在视觉上隐藏指定的列。这不影响显示哪些插件。
+指定列名，以逗号分隔。可用：PREVIS、ESM、DEPENDENTS
+例如，隐藏 ESM 标志和依赖插件：ESM,DEPENDENT</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="235" />
-        <source>Show or hide plugins that may have Form IDs hard-coded in SKSE dlls.</source>
-        <translation>显示或隐藏可能将表单 ID 硬编码在 SKSE dll 中的插件。</translation>
+        <location filename="src\settings_page.py" line="267" />
+        <source>Hide right list columns visually</source>
+        <translation>在视觉上隐藏右侧列表列</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="240" />
+        <location filename="src\settings_page.py" line="274" />
+        <source>Show plugins that are in %0 dlls</source>
+        <translation>显示位于 %0 dll 中的插件</translation>
+    </message>
+    <message>
+        <location filename="src\settings_page.py" line="275" />
+        <source>Show or hide plugins that may have Form IDs hard-coded in %0 dlls.</source>
+        <translation>显示或隐藏可能将表单 ID 硬编码在 %0 dll 中的插件。</translation>
+    </message>
+    <message>
+        <location filename="src\settings_page.py" line="280" />
         <source>Persist Form IDs between rebuilds</source>
         <translation>在重建之间保留表单 ID</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="241" />
+        <location filename="src\settings_page.py" line="281" />
         <source>Make Form IDs re-compact to the same compacted Form IDs as the previous
 run, regardless of changes to the plugin such as adding a new Form ID in
 the middle of the existing Form IDs. (Doesn't work after clicking Reset Output)
@@ -2537,12 +2694,12 @@ but 0x9A0B did not and 0x90C is the next available compacted Form ID.)</source>
 但 0x9A0B 不存在，而 0x90C 是下一个可用的压缩表单 ID。）</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="253" />
+        <location filename="src\settings_page.py" line="293" />
         <source>Free Non-Existent Form IDs</source>
         <translation>释放不存在的表单 ID</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="254" />
+        <location filename="src\settings_page.py" line="294" />
         <source>Allow ESLifier to free the allocation of a compacted Form ID if the
 original Form ID that the compacted Form ID is allocated to no longer exists.
 (i.e. if 0x9A0A no longer exists in the theoretical mod in the toolTip example
@@ -2555,12 +2712,12 @@ instead of 0x80C since 0x80A is free)</source>
 而不是 0x80C，因为 0x80A 是空闲的）</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="263" />
+        <location filename="src\settings_page.py" line="303" />
         <source>Enable the Patch New or Changed Files Button</source>
         <translation>启用“修补新的或已更改的文件”按钮</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="264" />
+        <location filename="src\settings_page.py" line="304" />
         <source>Show the patch new button on the main page. Personally, I think it is useless
 and annoying to maintain. However, I'm sure there is someone who uses it so I'm
 keeping the option here to keep it enabled. Doesn't hash check if output has changed.</source>
@@ -2569,12 +2726,12 @@ keeping the option here to keep it enabled. Doesn't hash check if output has cha
 把它作为选项保留在这里以供启用。不会哈希检查输出是否已更改。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="271" />
+        <location filename="src\settings_page.py" line="311" />
         <source>Hash the Output Folder to Detect Changes</source>
         <translation>对输出文件夹进行哈希以检测更改</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="272" />
+        <location filename="src\settings_page.py" line="312" />
         <source>Hash the output folder during certain actions to detect if a file has been changed
 since ESLifier last patched it. Enabling this after you have already created an output will
 not work correctly. Can be time consuming.</source>
@@ -2583,89 +2740,89 @@ not work correctly. Can be time consuming.</source>
 将无法正确工作。可能耗时。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="279" />
+        <location filename="src\settings_page.py" line="319" />
         <source>Warn About Changed Plugins in Output Folder</source>
         <translation>警告输出文件夹中已更改的插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="280" />
+        <location filename="src\settings_page.py" line="320" />
         <source>Uses the output hash to also warn about plugins that have changed in the output.</source>
         <translation>使用输出哈希同时警告输出中已更改的插件。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="285" />
+        <location filename="src\settings_page.py" line="325" />
         <source>Check for updates on start</source>
         <translation>启动时检查更新</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="286" />
+        <location filename="src\settings_page.py" line="326" />
         <source>Connect to GitHub on program start to check for updates</source>
         <translation>在程序启动时连接 GitHub 以检查更新</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="292" />
+        <location filename="src\settings_page.py" line="332" />
         <source>Remove Plugins From Blacklist</source>
         <translation>从黑名单中移除插件</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="293" />
+        <location filename="src\settings_page.py" line="333" />
         <source>Show window to remove plugins from the blacklist. You can add
 plugins to the blacklist by right clicking them on the Main page.</source>
         <translation>显示从黑名单中移除插件的窗口。你可以通过
 在主页上右键点击插件来将其添加到黑名单。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="295" />
+        <location filename="src\settings_page.py" line="335" />
         <source>Edit Blacklist</source>
         <translation>编辑黑名单</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="299" />
+        <location filename="src\settings_page.py" line="339" />
         <source>Open ESLifier's Data Folder</source>
         <translation>打开 ESLifier 的数据文件夹</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="300" />
+        <location filename="src\settings_page.py" line="340" />
         <source>This opens the folder where all of the dictionaries and Form ID maps are stored.</source>
         <translation>这会打开存放所有字典和表单 ID 映射的文件夹。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="301" />
+        <location filename="src\settings_page.py" line="341" />
         <source>Open Folder</source>
         <translation>打开文件夹</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="305" />
+        <location filename="src\settings_page.py" line="345" />
         <source>Reset All Settings</source>
         <translation>重置所有设置</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="307" />
+        <location filename="src\settings_page.py" line="347" />
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="311" />
+        <location filename="src\settings_page.py" line="351" />
         <source>Change Background Colors</source>
         <translation>更改背景颜色</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="312" />
+        <location filename="src\settings_page.py" line="352" />
         <source>This opens a color picker for the background colors</source>
         <translation>这会为背景颜色打开一个颜色选择器</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="313" />
+        <location filename="src\settings_page.py" line="353" />
         <source>Open Color Picker</source>
         <translation>打开颜色选择器</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="317" />
+        <location filename="src\settings_page.py" line="357" />
         <source>Generate Cell Master</source>
         <translation>生成 Cell Master</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="318" />
+        <location filename="src\settings_page.py" line="358" />
         <source>As of SSE Engine Fixes v7+ this is no longer necessary
 for Skyrim version 1.6.1170+ and can be left disabled.
 This generates a master cell plugin to circumvent
@@ -2690,90 +2847,93 @@ ESM + ESL cell bug 和 ESL worldspace bug。
 新的 worldspace 标志/筛选器。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="335" />
+        <location filename="src\settings_page.py" line="376" />
         <source>Skip Confirmations</source>
         <translation>跳过确认</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="336" />
+        <location filename="src\settings_page.py" line="377" />
         <source>Confirmations that can be automatically skipped
 Specify the confirmations to skip, comma separated.
-Available: FLAG, COMPACT, RE-SCAN, OUTPUT-RESET, OUTPUT-REBUILD, BSA-RESET, TIMERS
-TIMERS skips the confirmation countdowns but doesn't skip the confirmation boxes.
-</source>
-        <translation>可自动跳过的确认项
-指定要跳过的确认项，以逗号分隔。
-可用项：FLAG、COMPACT、RE-SCAN、OUTPUT-RESET、OUTPUT-REBUILD、BSA-RESET、TIMERS
-TIMERS 会跳过确认倒计时，但不会跳过确认对话框。</translation>
+Available: FLAG, COMPACT, RE-SCAN, OUTPUT-RESET, 
+OUTPUT-REBUILD, %0-RESET, TIMERS
+TIMERS skips the confirmation countdowns but doesn't
+skip the confirmation boxes.</source>
+        <translation>可自动跳过的确认
+指定要跳过的确认，以逗号分隔。
+可用：FLAG、COMPACT、RE-SCAN、OUTPUT-RESET、
+OUTPUT-REBUILD、%0-RESET、TIMERS
+TIMERS 会跳过确认倒计时，但不会
+跳过确认框。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="413" />
+        <location filename="src\settings_page.py" line="454" />
         <source>Select Inner Color</source>
         <translation>选择内侧颜色</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="416" />
+        <location filename="src\settings_page.py" line="457" />
         <source>Select Outer Color</source>
         <translation>选择外侧颜色</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="439" />
-        <source>Select the Skyrim Special Edition Data folder</source>
-        <translation>选择 Skyrim Special Edition 数据文件夹</translation>
+        <location filename="src\settings_page.py" line="480" />
+        <source>Select the %0 Data folder</source>
+        <translation>选择 %0 数据文件夹</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="441" />
+        <location filename="src\settings_page.py" line="482" />
         <source>Select your MO2 mods folder</source>
         <translation>选择你的 MO2 mods 文件夹</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="444" />
+        <location filename="src\settings_page.py" line="485" />
         <source>Select where you want the output folder</source>
         <translation>选择你希望生成输出文件夹的位置</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="573" />
+        <location filename="src\settings_page.py" line="618" />
         <source>Select your MO2 instance folder</source>
         <translation>选择你的 MO2 实例文件夹</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="577" />
+        <location filename="src\settings_page.py" line="622" />
         <source>Select your vortex data folder</source>
         <translation>选择你的 vortex 数据文件夹</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="580" />
+        <location filename="src\settings_page.py" line="625" />
         <source>Select your plugins.txt</source>
         <translation>选择你的 plugins.txt</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="580" />
+        <location filename="src\settings_page.py" line="625" />
         <source>Load Order</source>
         <translation>加载顺序</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="680" />
-        <location filename="src\settings_page.py" line="608" />
+        <location filename="src\settings_page.py" line="725" />
+        <location filename="src\settings_page.py" line="653" />
         <source>Explore...</source>
         <translation>浏览…</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="745" />
+        <location filename="src\settings_page.py" line="791" />
         <source>Mod Manager: MO2</source>
         <translation>模组管理器：MO2</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="746" />
+        <location filename="src\settings_page.py" line="792" />
         <source>Set where you want the Output Folder to be generated. For example: MO2's 'mods' folder.</source>
         <translation>设置你想要生成输出文件夹的位置。例如：MO2 的 ‘mods’ 文件夹。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="747" />
+        <location filename="src\settings_page.py" line="793" />
         <source>'C:/Path/To/The/Output/Folder/' Suggestion: 'C:/MO2/mods/'</source>
         <translation>‘C:/Path/To/The/Output/Folder/’ 建议：‘C:/MO2/mods/’</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="749" />
+        <location filename="src\settings_page.py" line="795" />
         <source>MO2 users should not launch this executible through MO2,
 Launching this program through MO2 drastically slows it down and may
 break certain functions.</source>
@@ -2782,34 +2942,34 @@ break certain functions.</source>
 破坏某些功能。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="766" />
+        <location filename="src\settings_page.py" line="812" />
         <source>Mod Manager: Vortex</source>
         <translation>模组管理器：Vortex</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="767" />
+        <location filename="src\settings_page.py" line="813" />
         <source>Set where you want the Output Folder to be generated. For example: Vortex's 'Mod Staging Folder'.</source>
         <translation>设置你想要生成输出文件夹的位置。例如：Vortex 的 ‘Mod Staging Folder’。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="768" />
+        <location filename="src\settings_page.py" line="814" />
         <source>'C:/Path/To/The/Output/Folder/' Suggestion: 'C:/Path/To/Mod Staging Folder/'</source>
         <translation>‘C:/Path/To/The/Output/Folder/’ 建议：‘C:/Path/To/Mod Staging Folder/’</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="770" />
+        <location filename="src\settings_page.py" line="816" />
         <source>Vortex users can also set this to None to scan the way ESLiifer originally
 dealth with Vortex if you prefer/need that.</source>
         <translation>Vortex 用户还可以将其设置为 None，以使用 ESLifier 原本
 处理 Vortex 的方式来扫描，如果你更喜欢/需要的话。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="788" />
+        <location filename="src\settings_page.py" line="834" />
         <source>'C:/Path/To/The/Output/Folder/'</source>
         <translation>C:/Path/To/The/Output/Folder/</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="790" />
+        <location filename="src\settings_page.py" line="836" />
         <source>Users without a mod manager should get a mod manager. ESLifier is not
 meant to be used with manual modding but should still work at least once.
 You can also use this mode for the original way Vortex was dealt with.</source>
@@ -2818,53 +2978,53 @@ You can also use this mode for the original way Vortex was dealt with.</source>
 你也可以使用此模式来处理 Vortex 的原始方式。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="811" />
-        <location filename="src\settings_page.py" line="808" />
+        <location filename="src\settings_page.py" line="857" />
+        <location filename="src\settings_page.py" line="854" />
         <source>Disabled by Generate Cell Master setting.</source>
         <translation>由“生成 Cell Master”设置禁用。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="815" />
+        <location filename="src\settings_page.py" line="861" />
         <source>Hide ESM plugins with new CELL records that have been changed by a dependent plugin.</source>
         <translation>隐藏带有新 CELL 记录且被依赖插件更改过的 ESM 插件。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="867" />
+        <location filename="src\settings_page.py" line="913" />
         <source>Invalid Output Name</source>
         <translation>无效的输出名称</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="867" />
+        <location filename="src\settings_page.py" line="913" />
         <source>'%1' is not a valid folder name.</source>
         <translation>‘%1’ 不是有效的文件夹名称。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="869" />
+        <location filename="src\settings_page.py" line="915" />
         <source>Output Name missing 'ESLifier'</source>
         <translation>输出名称缺少 ‘ESLifier’</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="869" />
+        <location filename="src\settings_page.py" line="915" />
         <source>The output name must have 'ESLifier' (case insenstive) in it for safety purposes.</source>
         <translation>出于安全目的，输出名称必须包含 ‘ESLifier’（不区分大小写）。</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="924" />
+        <location filename="src\settings_page.py" line="970" />
         <source>Error opening file explorer: </source>
         <translation>打开文件资源管理器时出错： </translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="933" />
+        <location filename="src\settings_page.py" line="991" />
         <source>Are you sure you want to reset all settings?</source>
         <translation>你确定要重置所有设置吗?</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="934" />
+        <location filename="src\settings_page.py" line="992" />
         <source>Confirmation</source>
         <translation>确认</translation>
     </message>
     <message>
-        <location filename="src\settings_page.py" line="977" />
+        <location filename="src\settings_page.py" line="1045" />
         <source>Failed to save settings.</source>
         <translation>无法保存设置。</translation>
     </message>
