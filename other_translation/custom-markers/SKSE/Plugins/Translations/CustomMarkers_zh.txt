@@ -65,6 +65,7 @@ Loot=战利品
 Modded=模组内容
 
 [ListPanel]
+MarkerFallback=标记
 Title=地图标记
 Hint=列表面板
 Overview=概览
@@ -82,6 +83,56 @@ NoDestination=（未设置目的地）
 NoNotes=（没有备注）
 NoOverview=（概览已禁用）
 Settings=设置
+
+[Picker]
+; Icon names in the Add Marker picker
+PickCustomMarker=自定义标记
+PickCity=城市
+PickTown=城镇
+PickSettlement=聚落
+PickCave=洞穴
+PickCamp=营地
+PickFort=堡垒
+PickNordicRuin=诺德遗迹
+PickDwemerRuin=锻莫遗迹
+PickShipwreck=沉船
+PickGrove=林地
+PickLandmark=地标
+PickDragonLair=龙巢
+PickFarm=农场
+PickWoodMill=锯木厂
+PickMine=矿场
+PickImperialCamp=帝国军营
+PickStormcloakCamp=风暴斗篷营地
+PickDoomstone=命运石
+PickWheatMill=小麦磨坊
+PickSmelter=熔炉
+PickTemple=神殿
+PickStable=马厩
+PickClearing=空地
+PickAltar=祭坛
+PickRock=岩石
+PickLighthouse=灯塔
+PickDwelling=住所
+PickDocks=码头
+PickShrine=神龛
+PickImperialTower=帝国塔楼
+PickPass=山口
+PickOrcStronghold=兽人要塞
+PickGiantCamp=巨人营地
+PickNordicTower=诺德塔楼
+PickMiraakTemple=米拉克神殿
+PickRavenRock=鸦石镇
+PickStandingStone=立石
+PickTelvanniTower=泰尔瓦尼塔楼
+PickCastleKarstaag=卡斯塔格城堡
+PickRed=红
+PickGreen=绿
+PickBlue=蓝
+PickYellow=黄
+PickStar=星
+PickShack=小屋
+PickAnimalDen=野兽巢穴
 
 [Dialog]
 RenameMarker=编辑标记
@@ -159,6 +210,7 @@ CardinalN=N
 CardinalE=E
 CardinalS=S
 CardinalW=W
+NoTarget=无目标
 
 [PathTracking]
 LegendOn=路径追踪：开启  [{} 暂停]
@@ -304,8 +356,12 @@ ShowRimMarkers=在小型雷达上显示
 HideMapMarkersInCombat=战斗中隐藏地图标记
 HideCompass=隐藏罗盘
 HideCNOQuestList=隐藏 CNO 任务列表
+ShareDestination=自动旅行整合
 MinHeightPct=最小高度
 MinGoldValue=最低金币价值
+GoldOff=关闭
+; Keep %d, it is replaced by the gold amount
+GoldValueFormat=%d 金
 NearHeight=近处高度
 NotesScale=备注缩放
 OffScreenArrow=屏幕外箭头

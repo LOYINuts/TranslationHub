@@ -104,12 +104,11 @@
   "$FUCK_Styles_HoverActive": "悬停/激活",
   "$FUCK_Styles_FrameBG": "框架背景",
   "$FUCK_Styles_FrameBGActive": "框架背景激活",
-  "$FUCK_Styles_ButtonColor": "按钮颜色",
   "$FUCK_Styles_TabBG": "标签背景",
   "$FUCK_Styles_TabBGActive": "标签背景激活",
   "$FUCK_Styles_TabBorder": "标签边框",
   "$FUCK_Styles_TabBorderActive": "标签边框激活",
-  "$FUCK_Styles_TextBoxBG": "文本框背景",
+  "$FUCK_Styles_TextBoxBG": "控件背景",
   "$FUCK_Styles_ComboText": "下拉文本",
   "$FUCK_Styles_SeparatorColor": "分隔线颜色",
   "$FUCK_Styles_WidgetBorder": "控件边框",
@@ -177,5 +176,9 @@
   "$FUCK_Camera_SpeedRoll": "滚转速度",
   "$FUCK_Camera_SpeedZoom": "缩放速度",
   "$FUCK_Camera_TabGP": "手柄",
-  "$FUCK_Camera_TabKBM": "键盘和鼠标"
+  "$FUCK_Camera_TabKBM": "键盘和鼠标",
+  "$FUCK_Styles_GameFont": "游戏字体",
+  "$FUCK_Styles_GameFontTT": "你的游戏菜单所使用的字体，由界面模组或语言设置决定。",
+  "$FUCK_Camera_Help_KBM_NoMod": "键盘控制：\\n  [WASD]/[QE]/[RF] - 平移、环绕与俯仰\\n  [SHIFT] + [WASD]/[QE] - 缩放、视野与滚转\\n\\n鼠标控制：\\n  [中键] + [拖动] - 平移镜头\\n  [中键] + [右键] + [拖动] - 环绕镜头\\n  [中键] + [CTRL] + [拖动] - 俯仰镜头\\n  [中键] + [CTRL] + [SHIFT] + [拖动] - 滚转镜头\\n  [滚轮] - 缩放镜头\\n  [SHIFT] + [滚轮] - 调整视野\\n  [右键] + [拖动] - 旋转角色\\n  [中键] x2 - 重置镜头",
+  "$FUCK_Camera_Help_Mouse_NoMod": "鼠标控制：\\n  [中键] + [拖动] - 平移镜头\\n  [中键] + [右键] + [拖动] - 环绕镜头\\n  [中键] + [CTRL] + [拖动] - 俯仰镜头\\n  [中键] + [CTRL] + [SHIFT] + [拖动] - 滚转镜头\\n  [滚轮] - 缩放镜头\\n  [SHIFT] + [滚轮] - 调整视野\\n  [右键] + [拖动] - 旋转角色\\n  [中键] x2 - 重置镜头"
 }

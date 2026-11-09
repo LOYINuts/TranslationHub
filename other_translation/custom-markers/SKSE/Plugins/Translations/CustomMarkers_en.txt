@@ -65,6 +65,7 @@ Loot=Loot
 Modded=Modded
 
 [ListPanel]
+MarkerFallback=Marker
 Title=Map Markers
 Hint=List Panel
 Overview=Overview
@@ -82,6 +83,56 @@ NoDestination=(no destination set)
 NoNotes=(no notes)
 NoOverview=(overview disabled)
 Settings=Settings
+
+[Picker]
+; Icon names in the Add Marker picker
+PickCustomMarker=Custom Marker
+PickCity=City
+PickTown=Town
+PickSettlement=Settlement
+PickCave=Cave
+PickCamp=Camp
+PickFort=Fort
+PickNordicRuin=Nordic Ruin
+PickDwemerRuin=Dwemer Ruin
+PickShipwreck=Shipwreck
+PickGrove=Grove
+PickLandmark=Landmark
+PickDragonLair=Dragon Lair
+PickFarm=Farm
+PickWoodMill=Wood Mill
+PickMine=Mine
+PickImperialCamp=Imperial Camp
+PickStormcloakCamp=Stormcloak Camp
+PickDoomstone=Doomstone
+PickWheatMill=Wheat Mill
+PickSmelter=Smelter
+PickTemple=Temple
+PickStable=Stable
+PickClearing=Clearing
+PickAltar=Altar
+PickRock=Rock
+PickLighthouse=Lighthouse
+PickDwelling=Dwelling
+PickDocks=Docks
+PickShrine=Shrine
+PickImperialTower=Imperial Tower
+PickPass=Pass
+PickOrcStronghold=Orc Stronghold
+PickGiantCamp=Giant Camp
+PickNordicTower=Nordic Tower
+PickMiraakTemple=Miraak Temple
+PickRavenRock=Raven Rock
+PickStandingStone=Standing Stone
+PickTelvanniTower=Telvanni Tower
+PickCastleKarstaag=Castle Karstaag
+PickRed=Red
+PickGreen=Green
+PickBlue=Blue
+PickYellow=Yellow
+PickStar=Star
+PickShack=Shack
+PickAnimalDen=Animal Den
 
 [Dialog]
 RenameMarker=Edit Marker
@@ -159,6 +210,7 @@ CardinalN=N
 CardinalE=E
 CardinalS=S
 CardinalW=W
+NoTarget=No target
 
 [PathTracking]
 LegendOn=Path Tracking: ON  [{} to Pause]
@@ -304,8 +356,12 @@ ShowRimMarkers=Show on Mini Radar
 HideMapMarkersInCombat=Hide Map Markers in Combat
 HideCompass=Hide Compass
 HideCNOQuestList=Hide CNO Quest List
+ShareDestination=Auto-Travel Integration
 MinHeightPct=Min Height
 MinGoldValue=Min Gold Value
+GoldOff=Off
+; Keep %d, it is replaced by the gold amount
+GoldValueFormat=%d g
 NearHeight=Near Height
 NotesScale=Notes Scale
 OffScreenArrow=Off-Screen Arrow
