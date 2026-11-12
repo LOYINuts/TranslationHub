@@ -294,6 +294,13 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
+dir = "menu_translation/horsepower"
+source = "Interface/Translations/HorsePower_English.txt"
+output = "Interface/Translations/HorsePower_CHINESE.txt"
+sep = "\t"
+encoding = "utf16-le-bom"
+
+[[line]]
 dir = "menu_translation/quick-item-transfer"
 source = "interface/translations/Quick Item Transfer_english.txt"
 output = "interface/translations/Quick Item Transfer_chinese.txt"

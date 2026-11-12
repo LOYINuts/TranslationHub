@@ -1,0 +1,39 @@
+{
+  "_comment": "由 sync_translation.py 维护，请勿手改。记录上次确认时每个已翻译键的英文原文。",
+  "sources": {
+    "line:menu_translation/horsepower:Interface/Translations/HorsePower_English.txt": {
+      "$DownStage0": "is Too Hungry and Can't Knock Enemies",
+      "$DownStage1": "is Getting Hungry",
+      "$DownStage2": "Could Eat Something",
+      "$Horsepower_FeedTutorial": "Press the \"feed\" key to feed your horse on \"grass\" surfaces. This will provide certain buffs and remove debuffs. Keep it fed before your journeys!",
+      "$Horsepower_FeedTutorialHeader": "Horsepower Feed Tutorial",
+      "$MCM_AllowRagdoll_Desc": "Remove the \"No Knockdowns\" flag of the horses. Changes will take effect after the game loads another horse with the same horse race (Form ID).",
+      "$MCM_AllowRagdoll_Label": "Restored Ragdolls",
+      "$MCM_Graze_Desc": "Enable the hunger / grazing system. Feed your horse when on grassy surfaces with sneak key. Horses will graze on their own as well.",
+      "$MCM_Graze_Label": "Graze System",
+      "$MCM_HitToleration_Desc": "Horses do a rearup after taking hits between 5-20 randomly, including spells. There's a cooldown window to prevent stunlock. The horse has to be hit, not the rider.",
+      "$MCM_HitToleration_Label": "Hit Toleration",
+      "$MCM_HorseAttack_Desc": "Tap the shout key to command an attack. Damage scales with your unarmed damage. Hold the key instead to command a backwards kick. Assault against neutral NPCs will give you a bounty.",
+      "$MCM_HorseAttack_Label": "Command Horse to Attack",
+      "$MCM_MinJumpClamp_Desc": "By default, your minimum jump height is increased. For compatibility with other mods that lower the default jump height, keep it off unless you see other issues.",
+      "$MCM_MinJumpClamp_Label": "Allow Lower Jump Heights While Moving",
+      "$MCM_Petting_Desc": "Pet the horse with sneak key on horseback",
+      "$MCM_Petting_Label": "Manual Horseback Petting",
+      "$MCM_SlopeSlide_Desc": "Slide down from steep slopes. Ragdoll if the steep is too steep. Ragdoll only works with restored ragdoll option is turned on.",
+      "$MCM_SlopeSlide_Label": "Slide off Slopes",
+      "$MCM_SprintInterrupt_Desc": "Getting too slow with your horse will cause it to rear-up",
+      "$MCM_SprintInterrupt_Label": "Sprint Interruption",
+      "$MCM_SprintKnock_Desc": "Knock actors with a sprinting jump, requires graze level 1 or above if grazing is enabled.",
+      "$MCM_SprintKnock_Label": "Sprint Jump Knock",
+      "$MCM_SprintStop_Desc": "Plays when you stop moving while sprinting. Sprint to run transition is not affected.",
+      "$MCM_SprintStop_Label": "Sprint to Stop Animation",
+      "$MCM_SwapInput_Desc": "Left click to attack left, right click to attack right.",
+      "$MCM_SwapInput_Label": "Swap Horseback Attack Inputs",
+      "$UpStage1": "is No Longer Hungry and Can Sprint Normally",
+      "$UpStage3": "is Well Fed and Can Sprint Longer",
+      "$UpStage4": "Feels Vigorous and Has Extra Health",
+      "$UpStage5": "is Fully Sated"
+    }
+  },
+  "version": 1
+}
