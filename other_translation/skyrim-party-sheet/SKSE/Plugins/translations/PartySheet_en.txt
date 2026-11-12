@@ -265,6 +265,31 @@ ls_fatigue_3=Very Tired
 ls_fatigue_4=Haggard
 ls_fatigue_5=Exhausted
 
+; RND (Realistic Needs and Diseases) stage words, from its own stage effect names
+rnd_hunger_0=Gluttony
+rnd_hunger_1=Satiated
+rnd_hunger_2=Peckish
+rnd_hunger_3=Hungry
+rnd_hunger_4=Very Hungry
+rnd_hunger_5=Starving
+rnd_thirst_0=Quenched
+rnd_thirst_1=Slightly Thirsty
+rnd_thirst_2=Thirsty
+rnd_thirst_3=Very Thirsty
+rnd_thirst_4=Dehydrated
+rnd_fatigue_0=Not Tired
+rnd_fatigue_1=Slightly Tired
+rnd_fatigue_2=Tired
+rnd_fatigue_3=Very Tired
+rnd_fatigue_4=Exhausted
+
+; Survival stacking warnings (HUD message and V2 NEEDS line)
+StackWarnRND=RND + Survival Mode: double penalties.
+StackWarnLastSeed=Last Seed + Survival Mode: double penalties.
+StackWarnFrostfall=Frostfall + Survival Mode: double cold.
+StackWarnSunHelmCold=Frostfall + SunHelm: double cold.
+RndNotStarted=RND not started. Start it in its MCM.
+
 [Disease]
 ; Tier words are per-backend. CC Survival / SMI / Starfrost ladder
 ; Infected -> Severe -> Crippling; SunHelmDiseases.esp ladders
@@ -382,12 +407,28 @@ AI.Assistance.Label=Assistance
 EffectsAndSpells=Effects & Spells
 Inventory=Inventory
 ControlsHint=[ TAB ]  RETURN
+PauseGame=PAUSE GAME
 SpellTypeAbility=Ability
 SpellTypePower=Power
 SpellTypeLesserPower=Lesser Power
 SpellTypeSpell=Spell
 SectionRace=Race
 SectionPassive=Passive
+NoStone=No Stone
+StoneLabel=Stone
+StandingStone=Standing Stone
+Experience=Experience
+LevelsWithYou=Levels with you
+MaxLevel=Max level
+FixedLevel=Fixed level
+SourceEquipment=Equipment
+SourceBlessing=Blessing
+SourcePassive=Passive
+SourcePotion=Potion
+SourceRace=Race
+Vampire=Vampire
+Werewolf=Werewolf
+Stage=Stage
 SectionEquipment=Equipment
 SectionBlessings=Blessings
 SectionActive=Active
@@ -443,3 +484,9 @@ LowAlterationEssence=Inspection failed. Your Alteration is too low.
 ModAlt=Alt
 ModCtrl=Ctrl
 ModShift=Shift
+
+[Symptom]
+Symptom.LoweredBy=Lowered by
+Symptom.KindDisease=Disease
+Symptom.KindNeed=Need
+Symptom.KindEffect=Effect
