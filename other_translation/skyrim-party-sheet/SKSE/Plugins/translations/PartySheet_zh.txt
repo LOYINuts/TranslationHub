@@ -179,8 +179,8 @@ fatigue_4=疲惫
 fatigue_5=筋疲力尽
 ; Starfrost survival overhaul
 sf_hunger_0=不饿
-sf_hunger_1=中性
-sf_hunger_2=中性
+sf_hunger_1=正常
+sf_hunger_2=正常
 sf_hunger_3=饥饿
 sf_hunger_4=很饿
 sf_hunger_5=饥饿难耐
