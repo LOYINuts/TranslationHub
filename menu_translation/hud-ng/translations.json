@@ -724,6 +724,9 @@
     "Normal fading still applies. A rule cannot show artwork hidden by the game or another mod.": "常规淡出仍会生效。规则无法显示被游戏或其他模组隐藏的图像。",
     "Hidden by its visibility rule.": "已按可见性规则隐藏。",
     "Invalid visibility rule.": "可见性规则无效。",
-    "Unknown visibility condition.": "未知的可见性条件。"
+    "Unknown visibility condition.": "未知的可见性条件。",
+    "This item's preview did not finish loading. Reopen the editor to try again.": "此物品的预览未能加载完成。请重新打开编辑器再试。",
+    "This item's preview is still loading.": "此物品的预览仍在加载。",
+    "This widget changed while opening its preview. Reopen the editor.": "打开预览时此小部件发生了变化。请重新打开编辑器。"
   }
 }

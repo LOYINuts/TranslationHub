@@ -1,6 +1,9 @@
 {
   "language": "chinese",
   "strings": {
+    "This item's preview is still loading.": "此物品的预览仍在加载。",
+    "This item's preview did not finish loading. Reopen the editor to try again.": "此物品的预览未能加载完成。请重新打开编辑器再试。",
+    "This widget changed while opening its preview. Reopen the editor.": "打开预览时此小部件发生了变化。请重新打开编辑器。",
     "Stress and Fear": "压力与恐惧",
     "Stress": "压力",
     "Hunger": "饥饿",

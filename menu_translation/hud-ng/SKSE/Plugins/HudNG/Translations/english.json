@@ -1,6 +1,9 @@
 {
   "language": "english",
   "strings": {
+    "This item's preview is still loading.": "This item's preview is still loading.",
+    "This item's preview did not finish loading. Reopen the editor to try again.": "This item's preview did not finish loading. Reopen the editor to try again.",
+    "This widget changed while opening its preview. Reopen the editor.": "This widget changed while opening its preview. Reopen the editor.",
     "Stress and Fear": "Stress and Fear",
     "Stress": "Stress",
     "Hunger": "Hunger",
