@@ -562,6 +562,11 @@ dir = "menu_translation/log-watcher"
 source = "SKSE/Plugins/LogWatcher/Translation/LogWatcherTranslation.json"
 output = "SKSE/Plugins/LogWatcher/Translation/LogWatcherTranslation_zh.json"
 
+[[json]]
+dir = "menu_translation/load-time-profiler"
+source = "SKSE/Plugins/LoadTimeProfiler/Localization.json"
+output = "SKSE/Plugins/LoadTimeProfiler/Localization_zh.json"
+
 [[qt]]
 dir = "eslifer"
 source = "origin/eslifier_translation.ts"
