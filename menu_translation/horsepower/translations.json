@@ -29,5 +29,18 @@
   "$UpStage1": "不再饥饿，可以正常冲刺",
   "$UpStage3": "吃得很好，冲刺时间更长",
   "$UpStage4": "精神饱满，生命值提升",
-  "$UpStage5": "完全吃饱了"
+  "$UpStage5": "完全吃饱了",
+  "$MCM_ResetSpeedMatch_Label": "重置速度",
+  "$MCM_RunSpeed_Desc": "请让此值与 ESP 文件所定义移动类型记录中 Horse_Default_MT 的 Forward Run 数值完全一致。",
+  "$MCM_RunSpeed_Label": "奔跑速度混合权重",
+  "$MCM_Sect_Debug": "调试",
+  "$MCM_Sect_Settings": "设置",
+  "$MCM_SprintSpeed_Desc": "请让此值与 ESP 文件所定义移动类型记录中 Horse_Sprint_MT 的 Forward Walk 与 Forward Run 数值完全一致。",
+  "$MCM_SprintSpeed_Label": "冲刺速度混合权重",
+  "$MCM_Tab_Anim": "动画速度匹配",
+  "$MCM_Tab_Combat": "战斗",
+  "$MCM_Tab_Interact": "马匹互动",
+  "$MCM_Tab_Movement": "移动",
+  "$MCM_WalkSpeed_Desc": "请让此值与 ESP 文件所定义移动类型记录中 Horse_Default_MT 的 Forward Walk 数值完全一致。",
+  "$MCM_WalkSpeed_Label": "步行速度混合权重"
 }
