@@ -169,8 +169,8 @@ encoding = "utf16-le-bom"
 
 [[line]]
 dir = "other_translation/romantasy"
-source = "origin/strings.js"
-output = "Magelight/Romantasy/js/strings.js"
+source = "Magelight/Romantasy/js/strings.js"
+output = "Magelight/Romantasy/js/strings_zh.js"
 sep = "':"
 encoding = "utf-8"
 package = "Magelight/Romantasy/js/strings.js"
