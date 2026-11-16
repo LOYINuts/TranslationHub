@@ -567,6 +567,12 @@ dir = "menu_translation/load-time-profiler"
 source = "SKSE/Plugins/LoadTimeProfiler/Localization.json"
 output = "SKSE/Plugins/LoadTimeProfiler/Localization_zh.json"
 
+[[json]]
+dir = "menu_translation/ppa"
+source = "ppa-translations/english.json"
+output = "ppa-translations/chinese.json"
+package = "ppa-translations/chinese.json"
+
 [[qt]]
 dir = "eslifer"
 source = "origin/eslifier_translation.ts"
