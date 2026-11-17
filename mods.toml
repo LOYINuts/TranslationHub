@@ -273,13 +273,6 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "menu_translation/console-commander"
-source = "SKSE/Plugins/ConsoleCommander_Translation.txt"
-output = "SKSE/Plugins/ConsoleCommander_Translation_zh.txt"
-sep = " = "
-encoding = "utf-8"
-
-[[line]]
 dir = "menu_translation/dmenu"
 source = "SKSE/Plugins/dMenu/translations.txt"
 output = "SKSE/Plugins/dMenu/translations_zh.txt"
@@ -539,11 +532,6 @@ source = "SKSE/Plugins/Undodge/Language.json"
 output = "SKSE/Plugins/Undodge/Language_zh.json"
 translation_section = "Language.json"
 
-
-[[json]]
-dir = "menu_translation/inventory-extension"
-source = "Viny Mods/Inventory Extension/Localization/Localization.json"
-output = "Viny Mods/Inventory Extension/Localization/Localization_zh.json"
 
 [[json]]
 dir = "menu_translation/more-ragdoll"
