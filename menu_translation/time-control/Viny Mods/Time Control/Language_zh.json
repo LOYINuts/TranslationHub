@@ -1,12 +1,12 @@
 {
   "menu": {
-    "section": "时间控制",
+    "section": "Time Control",
     "settings": "设置",
     "mode": "模式",
     "disabled_hint": "时间流速控制已禁用",
     "runtime_status": "运行状态",
     "external_control": "外部控制",
-    "external_control_hint": "仅当此选项启用时, 时间控制才可运行",
+    "external_control_hint": "仅当此选项启用时，Time Control 才可运行",
     "override_pause": "时间流速覆盖保护",
     "override_pause_hint": "激活表示另一个时间流速源正在被尊重",
     "override_depth": "覆盖深度",

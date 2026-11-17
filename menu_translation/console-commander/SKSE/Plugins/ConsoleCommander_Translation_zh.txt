@@ -1,5 +1,5 @@
 [Translations]
-Console Commander = 控制台命令
+Console Commander = Console Commander
 Command Manager = 命令管理器
 Add Command = 添加命令
 Reload Config = 重新加载配置

@@ -14,7 +14,7 @@
     "name": "名称"
   },
   "menu": {
-    "input_manager_missing": "[内存中未找到输入管理器]",
+    "input_manager_missing": "[内存中未找到 Input Manager]",
     "editing_action": "正在编辑操作",
     "left_stick": "左摇杆",
     "right_stick": "右摇杆",
@@ -51,7 +51,7 @@
     "enable_magic_block": "启用魔法格挡",
     "disable_block_left": "禁用左手格挡",
     "cancel_dodge_with_block": "格挡取消闪避",
-    "cancel_dodge_with_block_hover": "此功能仅适用于「通用闪避」。"
+    "cancel_dodge_with_block_hover": "此功能仅适用于「Dodge for All」。"
   },
   "direction": {
     "up": "上",

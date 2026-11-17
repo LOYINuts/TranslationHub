@@ -22,7 +22,7 @@
     "tap_window": "点击窗口",
     "taps": "点击次数",
     "thumbstick": " 手势摇杆:",
-    "title": "输入管理器 - 动作",
+    "title": "Input Manager - 动作",
     "tooltip_delay": "如果未勾选会怎样？\n",
     "use_custom": "为此动作使用自定义时间",
     "warning_state": "[警告] 所选状态不被此Mod支持!"
@@ -65,7 +65,7 @@
     "col_keys": "按键与组合",
     "col_timings": "时间",
     "desc": "按物理按键分组的概览, 便于识别",
-    "header": "输入管理器 - 控制面板",
+    "header": "Input Manager - 控制面板",
     "no_keys": "未配置任何按键",
     "no_mods": "当前没有连接的Mod",
     "no_results": "没有与选定筛选条件匹配的结果",
@@ -81,7 +81,7 @@
     "method_hook": "输入钩子 (备选)",
     "method_sink": "事件接收器 (默认)",
     "show_log": "在屏幕 (HUD) 和控制台显示日志",
-    "title": "输入管理器 - 调试"
+    "title": "Input Manager - 调试"
   },
   "error": {
     "conflict_pad": "手柄冲突: '%s' 和 '%s' 使用了完全相同的按键, 状态和点击次数",
@@ -109,13 +109,13 @@
     "show_trail": "在游戏中显示手势轨迹 (界面)",
     "test_btn": "验证动作 (测试)",
     "test_result": "上次测试: %.1f%% 精度 (要求: %.1f%%)",
-    "title": "输入管理器 - 手势 (Beta)"
+    "title": "Input Manager - 手势 (Beta)"
   },
   "input": {
     "no_gesture": "[ 未选择手势 ]"
   },
   "menu": {
-    "section": "输入管理器",
+    "section": "Input Manager",
     "tab_dashboard": "按键概览",
     "tab_debug": "调试",
     "tab_gestures": "手势",
@@ -151,7 +151,7 @@
     "testing": ">>> 测试中 <<<",
     "test_inputs": "已输入的按键:",
     "time_window": "时间窗口 (秒)",
-    "title": "输入管理器 - 连招 (格斗游戏风格)"
+    "title": "Input Manager - 连招 (格斗游戏风格)"
   },
   "state": {
     "gesture": "手势",

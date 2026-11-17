@@ -47,11 +47,11 @@
     "col_action": "动作 / ID",
     "col_keys": "按键与组合",
     "col_timings": "时间",
-    "header": "输入管理器 - 控制面板",
+    "header": "Input Manager - 控制面板",
     "no_keys": "未配置任何按键"
   },
   "motion": {
-    "title": "输入管理器 - 连招 (格斗游戏风格)",
+    "title": "Input Manager - 连招 (格斗游戏风格)",
     "save_btn": "保存连招",
     "add_btn": "添加新连招",
     "default_name": "新建连招",
@@ -82,7 +82,7 @@
     "test_inputs": "已输入的按键:"
   },
   "gesture": {
-    "title": "输入管理器 - 手势 (Beta)",
+    "title": "Input Manager - 手势 (Beta)",
     "save_btn": "保存并应用手势",
     "add_btn": "添加新手势",
     "default_name": "新手势",
@@ -98,7 +98,7 @@
     "test_result": "上次测试: %.1f%% 精度 (要求: %.1f%%)"
   },
   "action": {
-    "title": "输入管理器 - 动作",
+    "title": "Input Manager - 动作",
     "adv_mode": "高级模式 (禁用安全保护)",
     "safe_on": "(保护已启用: 防止逻辑冲突)",
     "safe_off": "(警告: 保护已禁用. 存在不稳定风险! )",
@@ -141,7 +141,7 @@
     "no_gesture": "[ 未选择手势 ]"
   },
   "debug": {
-    "title": "输入管理器 - 调试",
+    "title": "Input Manager - 调试",
     "show_log": "在屏幕 (HUD) 和控制台显示日志",
     "desc": "启用后, 触发的动作和连招将显示在游戏屏幕上并记录到SKSE日志文件中. (对Mod制作者有用)",
     "action_triggered": "动作已触发:",
@@ -158,6 +158,6 @@
     "tab_gestures": "手势",
     "tab_dashboard": "按键概览",
     "tab_debug": "调试",
-    "section": "输入管理器"
+    "section": "Input Manager"
   }
 }

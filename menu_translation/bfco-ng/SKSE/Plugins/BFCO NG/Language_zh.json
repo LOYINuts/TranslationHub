@@ -29,7 +29,7 @@
   },
   "menu": {
     "title": "BFCO 战斗设置",
-    "input_manager_missing": "[内存中未找到输入管理器]",
+    "input_manager_missing": "[内存中未找到 Input Manager]",
     "editing_action": "正在编辑操作",
     "left_stick": "左摇杆",
     "right_stick": "右摇杆",
