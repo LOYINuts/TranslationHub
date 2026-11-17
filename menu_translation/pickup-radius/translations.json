@@ -11,7 +11,7 @@
   "BlacklistHelp": "名称与此处任何条目匹配的物品将不会被自动拾取。不区分大小写。",
   "CategoryEnabled": "启用",
   "CategoryEnabledHelp": "开启或关闭此分类。",
-  "CategoryRadius": "拾取半径",
+  "CategoryRadius": "Pickup Radius",
   "CategoryRadiusHelp": "围绕你搜索匹配物品的范围。数字越大 = 范围越广。",
   "CategoryMatchSpecific": "匹配特定物品",
   "CategoryMatchSpecificHelp": "开启：仅拾取完全相同的物品。关闭：拾取此类型的所有物品。",
@@ -27,7 +27,7 @@
   "SoulGems": "灵魂石",
   "Weapons": "武器",
   "Harvest": "采集",
-  "ModName": "拾取半径",
+  "ModName": "Pick Up Radius",
   "DisableModCheckbox": "禁用模组",
   "DisableModHelp": "完全禁用所有自动拾取和采集功能。用于临时关闭模组而无需卸载。",
   "StealCheckbox": "允许偷窃",
@@ -52,6 +52,6 @@
   "SkipSweepKBHelp": "激活物品时按住此键可跳过半径扫描。用于与 UseOrTake 等模组兼容。",
   "SkipSweepGPLabel": "手柄跳过键",
   "SkipSweepGPHelp": "激活物品时按住此手柄按钮可跳过半径扫描。",
-    "HoldToSweepCheckbox": "按住模式",
-    "HoldToSweepHelp": "启用后，仅在激活物品时按住跳过扫描键才会自动拾取。普通拾取无效。"
+  "HoldToSweepCheckbox": "按住模式",
+  "HoldToSweepHelp": "启用后，仅在激活物品时按住跳过扫描键才会自动拾取。普通拾取无效。"
 }

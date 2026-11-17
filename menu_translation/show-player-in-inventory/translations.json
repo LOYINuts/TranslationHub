@@ -1,5 +1,5 @@
 {
-  "$SPII_Title": "在物品栏中显示玩家角色",
+  "$SPII_Title": "Show Player In Inventory",
   "$SPII_General": "常规",
   "$SPII_Enable": "启用",
   "$SPII_EnableTT": "开启或关闭“在物品栏中显示玩家角色”。",
@@ -49,7 +49,7 @@
   "$SPII_ShowControlsTT": "显示控制说明弹窗。",
   "$SPII_ResetDefaults": "恢复默认",
   "$SPII_ResetDefaultsTT": "恢复内置默认设置。",
-  "$SPII_ControlsTitle": "“在物品栏中显示玩家角色”控制说明",
+  "$SPII_ControlsTitle": "Show Player In Inventory Controls",
   "$SPII_TabKBM": "键盘和鼠标",
   "$SPII_TabGamepad": "手柄",
   "$SPII_Turn": "转动角色",
