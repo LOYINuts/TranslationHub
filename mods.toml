@@ -569,9 +569,9 @@ output = "SKSE/Plugins/LoadTimeProfiler/Localization_zh.json"
 
 [[json]]
 dir = "menu_translation/ppa"
-source = "ppa-translations/english.json"
-output = "ppa-translations/chinese.json"
-package = "ppa-translations/chinese.json"
+source = "SKSE/Plugins/ppa-translations/english.json"
+output = "SKSE/Plugins/ppa-translations/chinese.json"
+package = "SKSE/Plugins/ppa-translations/chinese.json"
 
 [[qt]]
 dir = "eslifer"
