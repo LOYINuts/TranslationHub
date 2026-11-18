@@ -693,3 +693,17 @@ source = "SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.j
 output = "SKSE-zh/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.json"
 translation_section = "skyrim.esm/SKMJ_skyrimwolffeed.json"
 package = "SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.json"
+
+[[json]]
+dir = "other_translation/risas"
+source = "SKSE/Plugins/RisaAllInOneMenu/Translations/en.json"
+output = "SKSE/Plugins/RisaAllInOneMenu/Translations/zh-cn.json"
+translation_section = "RisaAllInOneMenu"
+package = "SKSE/Plugins/RisaAllInOneMenu/Translations/zh-cn.json"
+
+[[json]]
+dir = "other_translation/risas"
+source = "SKSE/Plugins/RisaUI/Translations/en.json"
+output = "SKSE/Plugins/RisaUI/Translations/zh-cn.json"
+translation_section = "RisaUI"
+package = "SKSE/Plugins/RisaUI/Translations/zh-cn.json"
