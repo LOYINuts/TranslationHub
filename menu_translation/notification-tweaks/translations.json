@@ -13,7 +13,6 @@
   "$NT_HistoryTime": "此消息的显示时长（数字可匹配任意数字）。右键：恢复为通用设置。",
   "$NT_HistoryTimeDefault": "默认",
   "$NT_HistoryTimeOff": "仅当开启“替换原版通知”时，单独设置的显示时长才生效。",
-  "$NT_HeadAdvanced": "高级",
   "$NT_Enabled": "替换原版通知",
   "$NT_EnabledTip": "关闭：恢复由原版 HUD 显示通知。",
   "$NT_DragButton": "编辑布局...",
@@ -23,7 +22,7 @@
   "$NT_CenterSkill": "技能与等级",
   "$NT_CenterShout": "力量之语",
   "$NT_NewestOnTop": "最新一行显示在顶部",
-  "$NT_ShowInMenus": "在菜单中显示",
+  "$NT_ShowInMenus": "显示在菜单之上（物品栏、地图、日志……）",
   "$NT_ShowInMenusTip": "关闭：打开物品栏、地图或其他全屏菜单时，通知会等待，待菜单关闭后再显示。",
   "$NT_MaxWidth": "行最大宽度",
   "$NT_MaxVisible": "最多可见消息数",
@@ -76,5 +75,7 @@
   "$NT_PosWindowHint": "拖动边框可移动，方向键微调（Shift 加快），滚轮调整大小，右键复位。",
   "$NT_Done": "完成",
   "$NT_TestText": "这是一条测试通知。",
-  "$NT_TestManyText": "消息"
+  "$NT_TestManyText": "消息",
+  "$NT_HeadLayout": "布局",
+  "$NT_HeadMenus": "菜单"
 }
