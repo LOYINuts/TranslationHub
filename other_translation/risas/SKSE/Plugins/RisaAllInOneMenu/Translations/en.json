@@ -1,4 +1,12 @@
 {
+  "setting.show_save_load_rail": "Show save/load rail",
+  "native_menu.quicksave": "Save",
+  "native_menu.quickload": "Load",
+  "advanced.easy_close.menu_key": "MenuKey",
+  "advanced.easy_close.escape": "EscKey",
+  "tooltip.easy_close.menu_key": "Controls Risa's menu key shown above, not this mod's opening shortcut. On: tap to close this menu. Off: hold for half a second. Typing keys still require holding to protect text input.",
+  "tooltip.easy_close.escape": "On: a single tap asks Risa to close this menu. Warning: this can interrupt Back, Cancel, or Clear Key actions. Off: hold for half a second for Risa to close it. Short taps still reach the mod and may close it natively.",
+  "tooltip.easy_close.keyboard_only": "Keyboard only. Controller bindings and B/Circle close behavior are unaffected.",
   "advanced.hold_shortcut_close": "Hold shortcut to close",
   "tooltip.hold_shortcut_close": "Hold this menu's assigned shortcut for half a second to close it. Short presses still reach text fields. MenuKey, Escape, and controller Back remain available.",
   "advanced.clear_key": "Clear",

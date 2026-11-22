@@ -1,4 +1,12 @@
 {
+  "setting.show_save_load_rail": "显示存档/读档菜单栏",
+  "native_menu.quicksave": "存档",
+  "native_menu.quickload": "读档",
+  "advanced.easy_close.menu_key": "菜单键",
+  "advanced.easy_close.escape": "Esc 键",
+  "tooltip.easy_close.menu_key": "只控制上方显示的 Risa 菜单键，不影响本模组的打开快捷键。开：轻按即可关闭此菜单。关：需长按半秒。输入文字时仍需长按，以免误触。",
+  "tooltip.easy_close.escape": "开：轻按一次即由 Risa 关闭此菜单。注意：这会打断返回、取消或清除按键的操作。关：长按半秒由 Risa 关闭。短按仍会传给模组，可能由模组自身关闭。",
+  "tooltip.easy_close.keyboard_only": "仅对键盘生效。手柄绑定与 B / 圆圈 的关闭行为不受影响。",
   "advanced.hold_shortcut_close": "长按快捷键关闭",
   "tooltip.hold_shortcut_close": "长按本菜单所分配的快捷键半秒即可关闭。短按仍会作用于文本输入框。菜单键、Esc 与手柄返回键依然可用。",
   "advanced.clear_key": "清除",

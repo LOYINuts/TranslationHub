@@ -474,7 +474,15 @@
     "virtualkey.test.remove_all_fake_buttons": "移除所有假按钮",
     "virtualkey.title": "MCM 绑定",
     "virtualkey.unavailable_binding": "不可用的绑定",
-    "virtualkey.waiting_for_mcm_tooltip": "需要扫描 MCM。请打开完整管理器并扫描 MCM。"
+    "virtualkey.waiting_for_mcm_tooltip": "需要扫描 MCM。请打开完整管理器并扫描 MCM。",
+    "advanced.easy_close.menu_key": "菜单键",
+    "advanced.easy_close.escape": "Esc 键",
+    "native_menu.quicksave": "存档",
+    "native_menu.quickload": "读档",
+    "setting.show_save_load_rail": "显示存档/读档菜单栏",
+    "tooltip.easy_close.menu_key": "只控制上方显示的 Risa 菜单键，不影响本模组的打开快捷键。开：轻按即可关闭此菜单。关：需长按半秒。输入文字时仍需长按，以免误触。",
+    "tooltip.easy_close.escape": "开：轻按一次即由 Risa 关闭此菜单。注意：这会打断返回、取消或清除按键的操作。关：长按半秒由 Risa 关闭。短按仍会传给模组，可能由模组自身关闭。",
+    "tooltip.easy_close.keyboard_only": "仅对键盘生效。手柄绑定与 B / 圆圈 的关闭行为不受影响。"
   },
   "RisaUI": {
     "language": "Chinese (Simplified)",
