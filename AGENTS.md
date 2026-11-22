@@ -69,14 +69,6 @@ uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 插件自解析文本（如 dMenu 的 `translations.txt`）：产物加 `_zh`，`package` 写回源文件名，安装即替换。
 更新译文后必须重新 `uv run package.py <name>`，再提交；`dist/` 不入库。
 
-## 翻译约束
-
-- 术语优先级：本模组既有译文 > 相邻模组同名词 > `bdd.tsv` > 游戏既有译名。
-- 种族名按英文原文选词，两套不混用：`Dark Elf` → 暗精灵 / `Dunmer` → 丹莫；`Wood Elf` → 木精灵 / `Bosmer` → 波斯莫；`High Elf` → 高精灵 / `Altmer` → 傲特莫；`Khajiit` → 卡吉特（不用虎人）；`Argonian` → 阿尔贡。
-- 占位符与标记逐条对齐：`%s`、`%llu`、`%1`、`{0}`、`$VAR$`、`<font>`、`[br]`、字面量 `\n`。
-- SSE-AT 导出的 DSD 文件不译 `FACT` 记录（阵营名一般不显示），保留英文原样；其余记录按 `string == original` 判断是否待译。
-- 只改翻译源，改动写进仓库文件，不在对话里返回纯译文转储；`translations.json` 就地增改，不整表重排或重格式化。
-
 ## 代码约定
 
 CLI 一律走 `config.setup_cli_logging`（UTF-8 stdout，`--verbose` 转 DEBUG），用具名 logger；
