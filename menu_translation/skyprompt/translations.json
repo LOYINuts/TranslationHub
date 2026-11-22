@@ -236,5 +236,7 @@
   "$SkyPromptMCPSettingsAttachedOffsetY": "附着偏移 Y",
   "$SkyPromptMCPSettingsAttachedOffsetYHelp": "相对附着对象的垂直偏移，单位为游戏单位。正值向上，负值向下。不影响 HUD 提示。",
   "$SkyPromptMCPThemeEffectFrame": "边框",
-  "$SkyPromptMCPThemeEffectSeparator": "分隔符"
+  "$SkyPromptMCPThemeEffectSeparator": "分隔符",
+  "$SkyPromptMCPSettingsAttachedFixedSize": "附着提示固定大小",
+  "$SkyPromptMCPSettingsAttachedFixedSizeHelp": "关闭后，附着在世界中物体上的提示会随镜头拉远而变小。"
 }
