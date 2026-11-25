@@ -335,6 +335,7 @@ LookPinHeader=Look & Pin
 LookPinKey=Look & Pin
 LooseIngredients=Loose Ingredients
 LooseLoot=Loose Loot
+OreVeins=Ore Veins
 LootBeamsHeader=Loot Beams
 LootBeamDesign=Design
 LootBeamModern=Modern

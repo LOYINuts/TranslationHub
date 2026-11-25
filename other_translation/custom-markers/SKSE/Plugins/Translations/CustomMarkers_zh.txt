@@ -335,6 +335,7 @@ LookPinHeader=注视与标记
 LookPinKey=注视与标记
 LooseIngredients=散落材料
 LooseLoot=散落战利品
+OreVeins=矿脉
 LootBeamsHeader=战利品光束
 LootBeamDesign=设计
 LootBeamModern=现代
