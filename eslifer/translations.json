@@ -318,7 +318,6 @@
   "Hide plugins that have SEQ files": "隐藏带有 SEQ 文件的插件",
   "Hide plugins that have SEQ files as ESL flagging it may cause dialogue for it to not work until you save and reload in game.": "隐藏带有 SEQ 文件的插件，因为对其标记 ESL 可能导致对话在你于游戏中保存并重新加载之前无法正常工作。",
   "Hide plugins that have PEX files with GetModByName": "隐藏带有 GetModByName 的 PEX 文件的插件",
-  "Hide plugins that have PEX files that call the papyrus function 'GetModByName' on\n'                    'them as that function only works properly on non-ESL plugins.": "隐藏带有调用 papyrus 函数 GetModByName 的 PEX 文件的插件，\n因为该函数只对非 ESL 插件正常工作。",
   "Hide left list columns visually": "在视觉上隐藏左侧列表列",
   "Hide specified columns visually. This does not affect what plugins are displayed.\nSpecify the column names, comma separated. Available: CELL, WRLD, SEQ, PEX, ESM\nExample, hides the CELL and ESM flags: CELL,ESM": "在视觉上隐藏指定的列。这不影响显示哪些插件。\n指定列名，以逗号分隔。可用：CELL、WRLD、SEQ、PEX、ESM\n例如，隐藏 CELL 和 ESM 标志：CELL,ESM",
   "Hide right list columns visually": "在视觉上隐藏右侧列表列",
@@ -447,5 +446,8 @@
   "This may generate up to %1 %2 of new files\n(this may be inaccurate due to unpacking compressed %0)\nand you have %3 GBs of space left.\nAre you sure you want to continue?": "这最多可能生成 %1 %2 的新文件\n（由于要解包压缩的 %0，此估算可能不准确），\n而你只剩 %3 GB 空间。\n你确定要继续吗？",
   "This mod has a new cell and either itself or another mod uses the\nprecombine system with it, which will break if this mod is ESL flagged.": "此模组有新的 cell，且它本身或其他模组对其使用了\nprecombine 系统，如果将此模组标记为 ESL 会使其失效。",
   "This mod's plugin name is present in the following %0 dlls and\nmay break their FormLookup() function calls if a hard-coded form id is present:": "此模组的插件名称出现在以下 %0 dll 中，\n如果存在硬编码的表单 ID，可能会破坏其 FormLookup() 函数调用：",
-  "This will scan the entire %0 folder.\nDepending on the cell and header settings, what is displayed\nin the below lists will change.": "这将对整个 %0 文件夹进行扫描。\n根据 cell 和头设置，下方列表\n所显示的内容会发生变化。"
+  "This will scan the entire %0 folder.\nDepending on the cell and header settings, what is displayed\nin the below lists will change.": "这将对整个 %0 文件夹进行扫描。\n根据 cell 和头设置，下方列表\n所显示的内容会发生变化。",
+  "Enable Debug Prints": "启用调试打印",
+  "Enables certain debug prints to the log file.": "将部分调试信息打印到日志文件。",
+  "Hide plugins that have PEX files that call the papyrus function 'GetModByName' on\nthem as logic in the PEX using the returned index may not work properlly for ESL indicies.": "隐藏带有调用 papyrus 函数 GetModByName 的 PEX 文件的插件，\n因为 PEX 中依据返回索引的逻辑对 ESL 索引可能无法正常工作。"
 }
