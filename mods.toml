@@ -561,6 +561,12 @@ source = "SKSE/Plugins/ppa-translations/english.json"
 output = "SKSE/Plugins/ppa-translations/chinese.json"
 package = "SKSE/Plugins/ppa-translations/chinese.json"
 
+[[json]]
+dir = "menu_translation/orbit-menu-ng"
+source = "SKSE/Plugins/Orbit Menu/lang/Orbit Menu Translation Example.json"
+output = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
+package = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
+
 [[qt]]
 dir = "eslifer"
 source = "origin/eslifier_translation.ts"
