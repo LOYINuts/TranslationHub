@@ -152,6 +152,7 @@ dir = "other_translation/music-conductor"
 source = "SKSE/Plugins/translations/MusicConductor_en.txt"
 upstream = "Music Conductor/SKSE/Plugins/translations/MusicConductor_en.txt"
 output = "SKSE/Plugins/translations/MusicConductor_zh.txt"
+package = "SKSE/Plugins/translations/MusicConductor_zh.txt"
 sep = "="
 encoding = "utf-8"
 
@@ -491,6 +492,7 @@ dir = "menu_translation/my-precious"
 source = "interface/translations/config.json"
 upstream = "MyPreciouses - MCM Addon/MCM/Config/MyPreciouses/config.json"
 output = "interface/translations/config_zh.json"
+package = "interface/translations/config.json"
 
 [[json]]
 dir = "other_translation/new-skill-menu"
@@ -682,6 +684,7 @@ encoding = "utf16-le-bom"
 
 [[json]]
 dir = "other_translation/oblivion-interaction-icons"
+deploy = false
 source = "SKSE/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json"
 upstream = "Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json"
 output = "SKSE-zh/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json"
