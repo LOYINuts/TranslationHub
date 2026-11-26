@@ -50,22 +50,22 @@
 | other_translation/custom-markers | `Custom Markers - Map - Mini Radar - Beacons/SKSE/Plugins/Translations/CustomMarkers_en.txt` |
 | other_translation/modex | `Modex - A Mod Explorer Menu (AddItemMenu)/Interface/Modex/language/english.json` |
 | other_translation/music-conductor | `Music Conductor/SKSE/Plugins/translations/MusicConductor_en.txt` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/Dynamic Activation Key - Addons Collection.esp/SKMJPerk_dakaddons.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/EatFromFlora.esp/SKMJPerk_eatfromflora.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/Growl - Werebeasts of Skyrim.esp/SKMJPerk_growl.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/Home Cloud Storage.esp/SKMJPerk_dakcloud.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/Press E To Heal Followers.esp/SKMJPerk_etoheal.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/Simple Hunting Overhaul.esp/SKMJPerk_simple hunting overhaul.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/Take A Nap.esp/SKMJPerk_takeanap.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/Take A Peek - New Stealth Mechanic.esp/SKMJPerk_takeapeekdsd.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/VampireFeedingTweaks.esp/SKMJPerk_vft.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/firstpersoninteractions.esp/SKMJPerk_fpinonaddon.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/immersiveinteractions.esp/SKMJPerk_immersiveinteractions.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/simplyknock.esp/SKMJPerk_skknockicon.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/skymoji.esp/SKMJPerk_skymojifurniture.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimvampfeed.json` |
-| other_translation/oblivion-interaction-icons | `[PATCH]Oblivion Interaction Icons/SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/AlchemyActivator.esp/SKMJPerk_dakalchemy.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/Dynamic Activation Key - Addons Collection.esp/SKMJPerk_dakaddons.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/EatFromFlora.esp/SKMJPerk_eatfromflora.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/Growl - Werebeasts of Skyrim.esp/SKMJPerk_growl.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/Home Cloud Storage.esp/SKMJPerk_dakcloud.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/Press E To Heal Followers.esp/SKMJPerk_etoheal.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/Simple Hunting Overhaul.esp/SKMJPerk_simple hunting overhaul.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/Take A Nap.esp/SKMJPerk_takeanap.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/Take A Peek - New Stealth Mechanic.esp/SKMJPerk_takeapeekdsd.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/VampireFeedingTweaks.esp/SKMJPerk_vft.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/firstpersoninteractions.esp/SKMJPerk_fpinonaddon.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/immersiveinteractions.esp/SKMJPerk_immersiveinteractions.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/simplyknock.esp/SKMJPerk_skknockicon.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/skymoji.esp/SKMJPerk_skymojifurniture.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimvampfeed.json` |
+| other_translation/oblivion-interaction-icons | `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.json` |
 | other_translation/outfit-distributor | `Outfit Distributor SKSE/SKSE/Plugins/OutfitDist/Localization/en.json` |
 | other_translation/romantasy | `Romantasy - An Elegant Romance System/Magelight/Romantasy/js/strings.js` |
 
@@ -94,10 +94,18 @@ Viny 家族共用同一套布局：`<MO2 目录>/Viny Mods/<子目录>/Language.
 | menu_translation/input-manager | Input Manager | `Viny Mods/Input Manager/Language.json` |
 | menu_translation/trick-death | Trick Death - A checkpoint and respawn system | `Viny Mods/Trick Death/Language.json`、`Viny Mods/Trick Death/Localization/en.json`、`Viny Mods/Trick Death/Localization/DeathMessages.json` |
 
-另有 6 个条目共用 `Stats Tracker Menu - STM` 目录下的 `SKSE/Plugins/Stats Tracker/Localization/*.json`：
-`dodge-for-all`（`DodgeAll.json`）、`hmdp`（`HMDP.json`）、`parry-for-all`（`ParryAll.json`）、
-`trick-death`（`TrickDeath.json`）、`unblockable-hits`（`UnblockableHits.json`）、
-`undodgeable-hits`（`UndodgeableHits.json`）。`stats-tracker` 自己的 `STM_Localization.json` 已写入。
+另有 6 个条目引用 `Stats Tracker` 的 Localization json，分布在各模组自己的目录（不在 `Stats Tracker Menu - STM` 里）：
+
+| 我们的 dir | 相对源文件 |
+| --- | --- |
+| menu_translation/dodge-for-all | `Dodge for all/SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json` |
+| menu_translation/hmdp | `How many days passed - HMDP/SKSE/Plugins/Stats Tracker/Localization/HMDP.json` |
+| menu_translation/parry-for-all | `Parry for all/SKSE/Plugins/Stats Tracker/Localization/ParryAll.json` |
+| menu_translation/trick-death | `Trick Death - A checkpoint and respawn system/SKSE/Plugins/Stats Tracker/Localization/TrickDeath.json` |
+| menu_translation/unblockable-hits | `Unblockable Hits/SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json` |
+| menu_translation/undodgeable-hits | `Undodgeable Hits/SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json` |
+
+`stats-tracker` 自己的 `SKSE/Plugins/Stats Tracker/Localization/STM_Localization.json` 在 `Stats Tracker Menu - STM` 下，已写入。
 
 ## 本机没找到
 
@@ -116,10 +124,10 @@ Viny 家族共用同一套布局：`<MO2 目录>/Viny Mods/<子目录>/Language.
 
 ## 校对发现
 
-- `check_upstream.py --all --dry`：41 条一致、21 条有差异、0 条报错。
+- `check_upstream.py --all --dry`：57 条一致、5 条有差异、0 条报错。
 - `just-a-block`、`mcm-memory`、`log-watcher`、`bfco-ng`：整文件差异只是 CRLF ↔ LF，内容一致。
 - `pickup-radius`：上游多 4 个键（`ScriptedSlowdown*`、`ScriptedDelay*`），待同步。
-- `oblivion-interaction-icons` 的 16 个 json 与 `[PATCH]Oblivion Interaction Icons` 版**内容不同**
-  （本地多 `color='#989180'` 等属性），但与 `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/` 下的副本**字节一致**。
-  即这批源文件是从 Vel'dun UI 抄的，`[PATCH]` 那份可能是另一版本。这 16 条目前按 `[PATCH]` 写，`--check` 会一直报原文变更。
+- `oblivion-interaction-icons` 的 16 个 json 与 `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/` 下的副本字节一致，
+  与 `[PATCH]Oblivion Interaction Icons` 版内容不同（本地多 `color='#989180'` 等属性）。
+  即这批源文件是从 Vel'dun UI 抄的，`upstream` 按 Vel'dun UI 写。
 - `music-conductor`：仓库布局已改为与上游一致（`SKSE/Plugins/translations/`），基线已用 `--sync --yes` 重建。
