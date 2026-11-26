@@ -183,6 +183,7 @@ package = "SKSE/Plugins/Translations/CustomMarkers_zh.txt"
 
 [[line]]
 dir = "other_translation/veldunui"
+deploy = false
 source = "interface/translations/skyui_se_english.txt"
 upstream = "Vel'dun UI/Interface/translations/skyui_se_english.txt"
 output = "interface/translations/skyui_se_chinese.txt"
