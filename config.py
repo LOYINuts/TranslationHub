@@ -86,6 +86,7 @@ class ModQt:
     dir: str
     source: str
     output: str
+    qm: str = ""
     package: list[str] = field(default_factory=list)
 
     def __post_init__(self):
@@ -174,6 +175,7 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
                 dir=item["dir"],
                 source=item["source"],
                 output=item["output"],
+                qm=item.get("qm", ""),
                 package=normalize_package(item.get("package")),
             )
         )

@@ -17,6 +17,8 @@ import json
 import logging
 import os
 import re
+import shutil
+import subprocess
 import tomllib
 import xml.etree.ElementTree as ET
 
@@ -305,12 +307,27 @@ def render_qt_one(config: ModQt, root_dir: str) -> tuple[str, int, set[str]]:
     return source_text[:start] + body + source_text[end:], len(translations), used
 
 
+def release_qt_qm(ts_path: str, qm_path: str) -> None:
+    """ts -> qm 交给 Qt 的 lrelease；找不到就报错，不静默跳过。"""
+    exe = os.environ.get("LRELEASE") or shutil.which("pyside6-lrelease") or shutil.which("lrelease")
+    if not exe:
+        raise RuntimeError("未找到 lrelease：uv sync 装 PySide6-Essentials，或设置 LRELEASE")
+    result = subprocess.run(
+        [exe, "-silent", ts_path, "-qm", qm_path], capture_output=True, text=True, encoding="utf-8", errors="replace"
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"lrelease 失败：{result.stderr.strip() or result.stdout.strip()}")
+
+
 def build_qt_one(config: ModQt, root_dir: str) -> tuple[int, set[str]]:
     """Build one Qt TS mod. Returns (translation count, consumed keys)."""
     content, count, used = render_qt_one(config, root_dir)
     output_path = os.path.join(root_dir, config.dir, config.output)
     write_utf8(output_path, content)
     log.info(f"[OK] {config.dir}: {count} 条 -> {config.output}")
+    if config.qm:
+        release_qt_qm(output_path, os.path.join(root_dir, config.dir, config.qm))
+        log.info(f"[OK] {config.dir}: {config.output} -> {config.qm}")
     return count, used
 
 

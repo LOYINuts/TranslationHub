@@ -568,9 +568,11 @@ output = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
 package = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
 
 [[qt]]
-dir = "eslifer"
+dir = "other_translation/eslifer"
 source = "origin/eslifier_translation.ts"
 output = "eslifier_translation.ts"
+qm = "translation.qm"
+package = "translation.qm"
 
 [[line]]
 dir = "menu_translation/reticle-arcs"
