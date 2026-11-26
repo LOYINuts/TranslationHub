@@ -109,7 +109,7 @@
 | `descriptionmods` | `*.ini` | 英文本就在仓库内，无上游 |
 | `menu_translation/cee` | `interface/translations/Conditional Expressions_ENGLISH.txt` | 模组已删除（本机已无对应目录） |
 | `menu_translation/feet-of-skyrim` | `interface/translations/FeetOfSkyrim_ENGLISH.txt` | 模组已删除（本机已无对应目录） |
-| `menu_translation/hmdp` | `SKSE/Plugins/DaysPassed_Language.json` | 本机只有 `DaysPassed.dll`，无语言文件 |
+| `menu_translation/hmdp` | `SKSE/Plugins/DaysPassed_Language.json` | 现版模组不再发布该文件（旧版在 `Viny Mods/HMDP/`，内容是葡语），只剩 `DaysPassed.dll` |
 | `menu_translation/inlos` | `Viny Mods/INLOS/Language.json` | 模组已删除（本机已无对应目录） |
 | `menu_translation/ppa` | `SKSE/Plugins/ppa-translations/english.json` | 本机只有 `ppa-animation-tagging/*.json` |
 | `menu_translation/press-f-to-pay-respects` | `SKSE/Plugins/PressFtoPayRespects_Translation.ini` | 模组已删除（本机已无对应目录） |
@@ -126,7 +126,7 @@
 ## 校对发现
 
 - `check_upstream.py --all --dry`：68 条一致、23 条字节有差异、0 条报错，全程约 6 秒。
-- 23 条差异里 22 条只是缩进或 CRLF ↔ LF，JSON 规范化后内容完全一致（含 `my-precious` 的 `config.json`）。
+- 23 条差异全部只是缩进或 CRLF ↔ LF，JSON 规范化后内容完全一致（含 `my-precious` 的 `config.json`），无需覆盖。
 - `pickup-radius`：上游多 4 个键（`ScriptedSlowdown*`、`ScriptedDelay*`），已同步并补译。
 - `more-hud`：英文原件在 `moreHUD SE/AHZmoreHUD.bsa` 内，`upstream` 直接指 BSA；解包内容与仓库源字节一致。
 - `oblivion-interaction-icons` 的 16 个 json 与 `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/` 下的副本字节一致，
