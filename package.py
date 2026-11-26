@@ -137,7 +137,8 @@ def plan_json(cfg: ModJson) -> list[PackItem]:
 
 def plan_qt(cfg: ModQt) -> list[PackItem]:
     if cfg.package:
-        return _resolve(cfg, cfg.output, cfg.package)
+        # qm 是独立产物，打包的对象是它而不是 ts
+        return _resolve(cfg, cfg.qm or cfg.output, cfg.package)
     return []
 
 
