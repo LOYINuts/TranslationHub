@@ -83,9 +83,9 @@ SectionArmor=护甲
 Unarmed=徒手
 Arrows=箭矢
 ArrowsCount=(%d) 支箭矢
-BadgeLeft=左
-BadgeRight=右
-BadgeShout=吼
+BadgeLeft=L
+BadgeRight=R
+BadgeShout=Z
 
 [Skills]
 Title=技能
