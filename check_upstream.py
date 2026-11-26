@@ -2,13 +2,16 @@
 
 不解析格式：源文件原样覆盖，`sync_translation.py --check` 按条目类型自己比缺键 / 原文变更 / 无基线。
 
+`upstream` 可以是 URL，也可以是本机路径：绝对路径直接用，相对路径到 mods.toml 的
+`[upstream] local_roots` 里逐个拼（MO2 mods 目录那种），先找到先用。
+
 用法：
     uv run check_upstream.py orbit-menu-ng          # 拉取、有变化就覆盖、再跑 --check
-    uv run check_upstream.py orbit-menu-ng --dry    # 只比字节，不写文件
+    uv run check_upstream.py <name> --dry           # 只比字节，不写文件
     uv run check_upstream.py --all                  # 所有配了 upstream 的模组
 
-退出码沿用 sync 的语义：0 无差异、1 有差异、2 网络或写入失败。
-默认走本地代理 http://127.0.0.1:7890，用 UPSTREAM_PROXY 覆盖（空字符串 = 直连）。
+退出码沿用 sync 的语义：0 无差异、1 有差异、2 网络 / 路径 / 写入失败。
+URL 默认走本地代理 http://127.0.0.1:7890，用 UPSTREAM_PROXY 覆盖（空字符串 = 直连）。
 """
 
 import argparse
@@ -26,23 +29,46 @@ DEFAULT_PROXY = "http://127.0.0.1:7890"
 TIMEOUT = 30
 
 
-def load_upstream_entries() -> list[dict]:
-    """mods.toml 里带 upstream 字段的条目。"""
+def load_toml() -> dict:
     with open(os.path.join(repo_root(), "mods.toml"), "rb") as file:
-        data = tomllib.load(file)
+        return tomllib.load(file)
+
+
+def load_upstream_entries() -> tuple[list[dict], list[str]]:
+    """带 upstream 字段的条目，以及本机查找用的根目录。"""
+    data = load_toml()
+    roots = data.get("upstream", {}).get("local_roots", [])
     entries = []
     for kind in ("line", "json", "qt"):
         entries.extend(item for item in data.get(kind, []) if item.get("upstream"))
-    return entries
+    return entries, roots
 
 
-def fetch(url: str) -> bytes:
-    """下载 upstream 源文件，失败直接抛错（不静默当作没有更新）。"""
+def resolve_source(upstream: str, roots: list[str]) -> tuple[str, str]:
+    """把 upstream 解成 ('url' | 'file', 目标)，本机路径优先直给。"""
+    if upstream.startswith(("http://", "https://")):
+        return "url", upstream
+    if os.path.isabs(upstream):
+        if os.path.exists(upstream):
+            return "file", upstream
+        raise FileNotFoundError(f"上游文件不存在: {upstream}")
+    for root in roots:
+        candidate = os.path.join(root, upstream)
+        if os.path.exists(candidate):
+            return "file", candidate
+    raise FileNotFoundError(f"本机找不到上游: {upstream}（已试 {len(roots)} 个 local_roots）")
+
+
+def fetch(kind: str, target: str) -> bytes:
+    """取上游内容，失败直接抛错（不静默当作没有更新）。"""
+    if kind == "file":
+        with open(target, "rb") as file:
+            return file.read()
     proxy = os.environ.get("UPSTREAM_PROXY", DEFAULT_PROXY)
     opener = urllib.request.build_opener(
         urllib.request.ProxyHandler({"http": proxy, "https": proxy} if proxy else {})
     )
-    request = urllib.request.Request(url, headers={"User-Agent": "TranslationHub-upstream-check"})
+    request = urllib.request.Request(target, headers={"User-Agent": "TranslationHub-upstream-check"})
     with opener.open(request, timeout=TIMEOUT) as response:
         return response.read()
 
@@ -55,11 +81,12 @@ def run_check(mod_dir: str) -> int:
     return result.returncode
 
 
-def process(entry: dict, dry: bool) -> int:
+def process(entry: dict, roots: list[str], dry: bool) -> int:
     """返回该模组的退出码：0 无差异、1 有差异、2 失败。"""
     source_path = os.path.join(repo_root(), entry["dir"], entry["source"])
     log.info("检查模组: %s (%s)", entry["dir"], entry["upstream"])
-    raw = fetch(entry["upstream"])
+    kind, target = resolve_source(entry["upstream"], roots)
+    raw = fetch(kind, target)
     local = b""
     if os.path.exists(source_path):
         with open(source_path, "rb") as file:
@@ -89,7 +116,7 @@ def main() -> int:
     args = parser.parse_args()
     setup_cli_logging(args.verbose)
 
-    entries = load_upstream_entries()
+    entries, roots = load_upstream_entries()
     if not args.all and args.names:
         entries = [entry for entry in entries if matches_filter(entry["dir"], args.names)]
     if not entries:
@@ -99,7 +126,7 @@ def main() -> int:
     codes = []
     for entry in entries:
         try:
-            codes.append(process(entry, args.dry))
+            codes.append(process(entry, roots, args.dry))
         except Exception as error:  # 网络或写入错误要说清是哪个模组
             log.error("%s: %s", entry["dir"], error)
             codes.append(2)

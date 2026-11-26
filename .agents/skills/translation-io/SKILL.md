@@ -22,11 +22,14 @@ Edit only `translations.json`, then build. `descriptionmods` uses
 - `[[qt]]`: `dir`, `source`, `output`, `qm`, `package`. `qm` makes the build run `lrelease`
   after the TS; `package` must then point at the qm (packing the TS under a `.qm` name
   produces a file QTranslator rejects silently).
-- `upstream` (any type): URL for `uv run check_upstream.py <mod>`. It overwrites the local
-  source byte-for-byte, then runs `sync_translation.py <mod> --check` and returns that exit
-  code, so missing keys / changed English are reported by the existing pipeline — no format
-  parsing here. `--dry` only compares bytes. Goes through the proxy `127.0.0.1:7890` unless
-  `UPSTREAM_PROXY` says otherwise.
+- `upstream` (any type): source of truth for the mod's English file, used by
+  `uv run check_upstream.py <mod>`. Either a URL or a local path: an absolute path is used as
+  is, a relative one is joined against `[upstream] local_roots` in `mods.toml` (MO2 mods
+  folder) and the first hit wins. It overwrites the local source byte-for-byte, then runs
+  `sync_translation.py <mod> --check` and returns that exit code, so missing keys / changed
+  English are reported by the existing pipeline — no format parsing here. `--dry` only
+  compares bytes. URLs go through the proxy `127.0.0.1:7890` unless `UPSTREAM_PROXY` says
+  otherwise.
 - Glob `source` (e.g. `*.ini`): output lands flat in `output` with a `_zh` suffix, keys are
   `<relative path>::<key>#<occurrence>`, `value_field` chooses the column to replace,
   `trim_trailing_fields = true` strips the fields after it.

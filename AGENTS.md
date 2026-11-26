@@ -15,10 +15,13 @@ uv run build_all.py --dry-run <name>
 uv run build_all.py <name>
 uv run verify_translation.py <name>
 uv run check_upstream.py <name>             # 拉上游源覆盖本地，再跑 sync --check（退出码同 sync）
-uv run check_upstream.py <name> --dry       # 只比字节，不写（走 127.0.0.1:7890 代理）
+uv run check_upstream.py <name> --dry       # 只比字节，不写
 ```
 
 `<name>` 用 `mods.toml` 的 `dir` 或目录 basename。
+
+`upstream` 可为 URL 或本机路径：绝对路径直用，相对路径按 `mods.toml` 的 `[upstream] local_roots`
+逐个拼（MO2 mods 目录），先找到先用；URL 走 `127.0.0.1:7890` 代理（`UPSTREAM_PROXY` 可改）。
 
 上游改文案后：`--check` 看有几条 `[变更]` → `--changed` 逐条核对并改 `translations.json` →
 `--sync` 补新键 → 译新键 → `--accept-source` 让基线接受新英文 → build → verify。

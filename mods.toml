@@ -150,6 +150,7 @@ source = "SKSE/Plugins/translations/PartySheet_en.txt"
 output = "SKSE/Plugins/translations/PartySheet_zh.txt"
 sep = "="
 encoding = "utf-8"
+upstream = "Skyrim Party Sheet/SKSE/Plugins/translations/PartySheet_en.txt"
 package = "SKSE/Plugins/translations/PartySheet_zh.txt"
 
 [[line]]
@@ -572,6 +573,7 @@ package = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
 dir = "other_translation/eslifer"
 source = "origin/eslifier_translation.ts"
 output = "eslifier_translation.ts"
+upstream = "https://raw.githubusercontent.com/MaskPlague/ESLifier/main/eslifier_translation.ts"
 qm = "translation.qm"
 package = "translation.qm"
 
@@ -716,3 +718,9 @@ source = "SKSE/Plugins/RisaUI/Translations/en.json"
 output = "SKSE/Plugins/RisaUI/Translations/zh-cn.json"
 translation_section = "RisaUI"
 package = "SKSE/Plugins/RisaUI/Translations/zh-cn.json"
+
+# ── 上游源文件（check_upstream.py）──────────────────────────────────────────
+# 条目里的 upstream 可为 URL，也可为本机相对路径；相对路径按 local_roots 逐个拼，先找到先用。
+
+[upstream]
+local_roots = ["F:/games/MO2data/MYSSE/mods"]
