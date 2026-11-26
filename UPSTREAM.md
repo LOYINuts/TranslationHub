@@ -2,7 +2,8 @@
 
 `mods.toml` 的 `[upstream] local_roots = ["F:/games/MO2data/MYSSE/mods"]` 下手工核对的结果。
 路径 = MO2 目录 + 文件，相对 `local_roots`；URL 直连，走 `127.0.0.1:7890` 代理。
-同一模组有多个源文件就多行，全放在同一节里。校对日期：2026-11-26。
+同一模组有多个源文件就多行，全放在同一节里；`mods.toml` 的 78 个 dir、107 个条目全部覆盖。
+校对日期：2026-11-26。
 
 ## 已写入 `upstream`（62 条）
 
@@ -71,7 +72,7 @@
 | `other_translation/romantasy` | `Romantasy - An Elegant Romance System/Magelight/Romantasy/js/strings.js` |
 | `other_translation/skyrim-party-sheet` | `Skyrim Party Sheet/SKSE/Plugins/translations/PartySheet_en.txt` |
 
-## 待定（本机已确认路径，暂未写入，23 条）
+## 待定（本机已确认路径，未经 review、未写入，31 条）
 
 | 我们的 dir | 源文件（相对 `local_roots`） |
 | --- | --- |
@@ -80,9 +81,13 @@
 | `menu_translation/dodge-for-all` | `Dodge for all/SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json` |
 | `menu_translation/dodge-for-all` | `Dodge for all/Viny Mods/Dodge for all/Language.json` |
 | `menu_translation/edf` | `Easy Distribution Framework - EDF/Viny Mods/EDF/Language.json` |
+| `menu_translation/fuck` | `Fuzz's Legally Intelligible Core Kit/Interface/Translations/FUCK_ENGLISH.txt` |
+| `menu_translation/fuck-qty` | `Selling of Stacks or Singles/Interface/Translations/FUCK-QTY_ENGLISH.txt` |
+| `menu_translation/fuck-race` | `Racemenu Enhancer/Interface/Translations/FUCK-RACE_ENGLISH.txt` |
 | `menu_translation/hmdp` | `How many days passed - HMDP/SKSE/Plugins/Stats Tracker/Localization/HMDP.json` |
 | `menu_translation/input-manager` | `Input Manager/Viny Mods/Input Manager/Language.json` |
 | `menu_translation/more-ragdoll` | `More Ragdoll Control/Viny Mods/More Ragdoll/Language.json` |
+| `menu_translation/my-precious` | `MyPreciouses - MCM Addon/MCM/Config/MyPreciouses/config.json` |
 | `menu_translation/npc-senses` | `NPC Senses/Viny Mods/NPC Senses/Language.json` |
 | `menu_translation/npc-stats-editor` | `NPC Stats Editor/Viny Mods/NPC Stats Editor/Language.json` |
 | `menu_translation/nve` | `NPC Visual Editor - NVE/Viny Mods/NPC Visual/Language.json` |
@@ -90,6 +95,7 @@
 | `menu_translation/parry-for-all` | `Parry for all/Viny Mods/Parry for all/Language.json` |
 | `menu_translation/quick-commands` | `Quick Commands/Viny Mods/Console Commands/Language.json` |
 | `menu_translation/quick-swap` | `Quick Swap/Viny Mods/Quick Swap/Language.json` |
+| `menu_translation/show-player-in-inventory` | `Show Player In Inventory/Interface/Translations/ShowPlayerInInventory_ENGLISH.txt` |
 | `menu_translation/time-control` | `Time Control/Viny Mods/Time Control/Language.json` |
 | `menu_translation/time-is-ticking` | `Time is Ticking/Viny Mods/Time is Ticking/Localization/en.json` |
 | `menu_translation/trick-death` | `Trick Death - A checkpoint and respawn system/SKSE/Plugins/Stats Tracker/Localization/TrickDeath.json` |
@@ -98,36 +104,36 @@
 | `menu_translation/trick-death` | `Trick Death - A checkpoint and respawn system/Viny Mods/Trick Death/Localization/en.json` |
 | `menu_translation/unblockable-hits` | `Unblockable Hits/SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json` |
 | `menu_translation/undodgeable-hits` | `Undodgeable Hits/SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json` |
+| `other_translation/risas` | `Risas All In One Menu/SKSE/Plugins/RisaAllInOneMenu/Translations/en.json` |
+| `other_translation/risas` | `Risas All In One Menu/SKSE/Plugins/RisaUI/Translations/en.json` |
+| `other_translation/veldunui` | `Vel'dun UI/Interface/translations/skyui_se_english.txt` |
 
-## 本机未找到（18 条）
+## 本机未找到（14 条）
 
-路径列是仓库里配置的源文件；未找到指本机没有这台英文原件。
+路径列是仓库里配置的源文件。
 
 | 我们的 dir | 源文件（相对 `local_roots`） | 情况 |
 | --- | --- | --- |
+| `descriptionmods` | `*.ini` | 英文本就在仓库内，无上游 |
 | `menu_translation/cee` | `interface/translations/Conditional Expressions_ENGLISH.txt` | 无对应模组目录 |
 | `menu_translation/feet-of-skyrim` | `interface/translations/FeetOfSkyrim_ENGLISH.txt` | 无对应模组目录 |
-| `menu_translation/fuck` | `interface/translations/FUCK_ENGLISH.txt` | 无对应模组目录 |
-| `menu_translation/fuck-qty` | `interface/translations/FUCK-QTY_ENGLISH.txt` | 无对应模组目录 |
-| `menu_translation/fuck-race` | `interface/translations/FUCK-RACE_ENGLISH.txt` | 无对应模组目录 |
-| `menu_translation/hmdp` | `SKSE/Plugins/DaysPassed_Language.json` | 只有 `DaysPassed.dll` |
+| `menu_translation/hmdp` | `SKSE/Plugins/DaysPassed_Language.json` | 本机只有 `DaysPassed.dll` |
 | `menu_translation/inlos` | `Viny Mods/INLOS/Language.json` | `Viny Mods/INLOS` 不存在 |
-| `menu_translation/more-hud` | `interface/translations/ahzmorehud_english.txt` | 只有 BSA，无明文 txt |
-| `menu_translation/my-precious` | `interface/translations/config.json` | 同目录只有 `MyPreciouses_ENGLISH.txt` |
-| `menu_translation/new-skill-menu` | `Viny Mods/NSM/Localization/NSM_Language.json` | `Viny Mods/NSM` 不存在 |
+| `menu_translation/more-hud` | `interface/translations/ahzmorehud_english.txt` | 只有 BSA（`moreHUD SE/AHZmoreHUD.bsa`） |
 | `menu_translation/ppa` | `SKSE/Plugins/ppa-translations/english.json` | 只有 `ppa-animation-tagging/*.json` |
 | `menu_translation/press-f-to-pay-respects` | `SKSE/Plugins/PressFtoPayRespects_Translation.ini` | 无对应模组目录 |
-| `menu_translation/show-player-in-inventory` | `interface/translations/ShowPlayerInInventory_ENGLISH.txt` | 未核对 |
-| `menu_translation/speed-of-strolling` | `interface/translations/styyx-move-speed_ENGLISH.txt` | 文件不存在 |
-| `menu_translation/swift-potion-ng` | `SKSE/Plugins/SwiftPotionNG_Translation.json` | 文件不存在 |
-| `menu_translation/unblockable-hits` | `SKSE/Plugins/Unblock/Language.json` | 只有 BDI 的 json |
-| `menu_translation/undodgeable-hits` | `SKSE/Plugins/Undodge/Language.json` | 只有 BDI 的 json |
+| `menu_translation/speed-of-strolling` | `interface/translations/styyx-move-speed_ENGLISH.txt` | 无对应模组目录 |
+| `menu_translation/swift-potion-ng` | `SKSE/Plugins/SwiftPotionNG_Translation.json` | 无对应模组目录 |
+| `menu_translation/unblockable-hits` | `SKSE/Plugins/Unblock/Language.json` | 无此文件 |
+| `menu_translation/undodgeable-hits` | `SKSE/Plugins/Undodge/Language.json` | 无此文件 |
+| `other_translation/new-skill-menu` | `Viny Mods/NSM/Localization/NSM_Language.json` | `Viny Mods/NSM` 不存在 |
 | `other_translation/smart-search` | `interface/translations/SmartSearch_en.ini` | 无对应模组目录 |
 
 ## 校对发现
 
-- `check_upstream.py --all --dry`：57 条一致、5 条有差异、0 条报错。
+- `check_upstream.py --all --dry`（仅已写入的 62 条）：57 条一致、5 条有差异、0 条报错。
 - `just-a-block`、`mcm-memory`、`log-watcher`、`bfco-ng`：整文件差异只是 CRLF ↔ LF，内容一致。
+- `my-precious` 的 `config.json`（待定）：JSON 规范化后与上游完全一致，差异只是缩进。
 - `pickup-radius`：上游多 4 个键（`ScriptedSlowdown*`、`ScriptedDelay*`），待同步。
 - `oblivion-interaction-icons` 的 16 个 json 与 `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/` 下的副本字节一致，
   与 `[PATCH]Oblivion Interaction Icons` 版内容不同（本地多 `color='#989180'` 等属性），所以 `upstream` 按 Vel'dun UI 写。
