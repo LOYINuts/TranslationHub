@@ -5,7 +5,7 @@
 同一模组有多个源文件就多行；`mods.toml` 的 78 个 dir、107 个条目全部覆盖。
 校对日期：2026-11-26。
 
-## 已写入 `upstream`（95 条）
+## 已写入 `upstream`（90 条）
 
 | 我们的 dir | 源文件（相对 `local_roots`） |
 | --- | --- |
@@ -56,7 +56,6 @@
 | `menu_translation/pickup-radius` | `Pick Up Radius SKSE/SKSE/Plugins/PickUpRadiusSKSE_Translation.ini` |
 | `menu_translation/quick-commands` | `Quick Commands/Viny Mods/Console Commands/Language.json` |
 | `menu_translation/quick-item-transfer` | `Quick Item Transfer/interface/translations/Quick Item Transfer_english.txt` |
-| `menu_translation/quick-swap` | `Quick Swap/Viny Mods/Quick Swap/Language.json` |
 | `menu_translation/quicklootie` | `QuickLoot IE - A QuickLoot EE Fork/interface/translations/QuickLootIE_english.txt` |
 | `menu_translation/reticle-arcs` | `Reticle Arcs/SKSE/Plugins/ReticleArcs/Translation.ini` |
 | `menu_translation/riverwood-has-walls` | `Riverwood Has Walls - A Full Overhaul/interface/translations/Riverwood Has Walls_english.txt` |
@@ -74,10 +73,6 @@
 | `menu_translation/trick-death` | `Trick Death - A checkpoint and respawn system/Viny Mods/Trick Death/Language.json` |
 | `menu_translation/trick-death` | `Trick Death - A checkpoint and respawn system/Viny Mods/Trick Death/Localization/DeathMessages.json` |
 | `menu_translation/trick-death` | `Trick Death - A checkpoint and respawn system/Viny Mods/Trick Death/Localization/en.json` |
-| `menu_translation/unblockable-hits` | `Unblockable Hits/SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json` |
-| `menu_translation/unblockable-hits` | `https://raw.githubusercontent.com/vinymayan/Unblockable/main/Data/Viny%20Mods/Unblockable%20Hits/Language.json` |
-| `menu_translation/undodgeable-hits` | `Undodgeable Hits/SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json` |
-| `menu_translation/undodgeable-hits` | `https://raw.githubusercontent.com/vinymayan/Undodgeable/main/Data/Viny%20Mods/Undodgeable%20Hits/Language.json` |
 | `other_translation/custom-markers` | `Custom Markers - Map - Mini Radar - Beacons/SKSE/Plugins/Translations/CustomMarkers_en.txt` |
 | `other_translation/eslifer` | `https://raw.githubusercontent.com/MaskPlague/ESLifier/main/eslifier_translation.ts` |
 | `other_translation/modex` | `Modex - A Mod Explorer Menu (AddItemMenu)/Interface/Modex/language/english.json` |
@@ -105,7 +100,7 @@
 | `other_translation/skyrim-party-sheet` | `Skyrim Party Sheet/SKSE/Plugins/translations/PartySheet_en.txt` |
 | `other_translation/veldunui` | `Vel'dun UI/Interface/translations/skyui_se_english.txt` |
 
-## 本机没有英文原件（12 条）
+## 没有上游（17 条）
 
 | 我们的 dir | 源文件（相对 `local_roots`） | 情况 |
 | --- | --- | --- |
@@ -117,17 +112,21 @@
 | `menu_translation/more-hud` | `interface/translations/ahzmorehud_english.txt` | 英文原件在 BSA 内（`moreHUD SE/AHZmoreHUD.bsa`） |
 | `menu_translation/ppa` | `SKSE/Plugins/ppa-translations/english.json` | 本机只有 `ppa-animation-tagging/*.json` |
 | `menu_translation/press-f-to-pay-respects` | `SKSE/Plugins/PressFtoPayRespects_Translation.ini` | 模组已删除（本机已无对应目录） |
+| `menu_translation/quick-swap` | `Viny Mods/Quick Swap/Language.json` | 模组目录已从本机移除 |
 | `menu_translation/speed-of-strolling` | `interface/translations/styyx-move-speed_ENGLISH.txt` | 模组已删除（本机已无对应目录） |
 | `menu_translation/swift-potion-ng` | `SKSE/Plugins/SwiftPotionNG_Translation.json` | 模组已删除（本机已无对应目录） |
+| `menu_translation/unblockable-hits` | `SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json` | 模组目录已从本机移除 |
+| `menu_translation/unblockable-hits` | `SKSE/Plugins/Unblock/Language.json` | 上游已取消（本地为旧版 33 键） |
+| `menu_translation/undodgeable-hits` | `SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json` | 模组目录已从本机移除 |
+| `menu_translation/undodgeable-hits` | `SKSE/Plugins/Undodge/Language.json` | 上游已取消（本地为旧版 33 键） |
 | `other_translation/new-skill-menu` | `Viny Mods/NSM/Localization/NSM_Language.json` | 模组已删除（本机已无对应目录） |
 | `other_translation/smart-search` | `interface/translations/SmartSearch_en.ini` | 模组已删除（本机已无对应目录） |
 
 ## 校对发现
 
-- `check_upstream.py --all --dry`：66 条一致、29 条字节有差异、0 条报错。
-- 29 条差异里 26 条只是缩进或 CRLF ↔ LF，JSON 规范化后内容完全一致（含 `my-precious` 的 `config.json`）。
+- `check_upstream.py --all --dry`：67 条一致、23 条字节有差异、0 条报错。
+- 23 条差异里 22 条只是缩进或 CRLF ↔ LF，JSON 规范化后内容完全一致（含 `my-precious` 的 `config.json`）。
 - `pickup-radius`：上游多 4 个键（`ScriptedSlowdown*`、`ScriptedDelay*`），已同步并补译。
-- `unblockable-hits`、`undodgeable-hits` 的 `Language.json`：上游各多 7 个键，尚未同步。
 - `oblivion-interaction-icons` 的 16 个 json 与 `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/` 下的副本字节一致，
   与 `[PATCH]Oblivion Interaction Icons` 版内容不同（本地多 `color='#989180'` 等属性），所以 `upstream` 按 Vel'dun UI 写。
 - `music-conductor`：仓库布局已改为与上游一致（`SKSE/Plugins/translations/`），基线已用 `--sync --yes` 重建。

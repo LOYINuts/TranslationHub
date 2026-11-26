@@ -507,7 +507,6 @@ output = "SKSE/Plugins/JusBlock_Language_zh.json"
 [[json]]
 dir = "menu_translation/quick-swap"
 source = "Viny Mods/Quick Swap/Language.json"
-upstream = "Quick Swap/Viny Mods/Quick Swap/Language.json"
 output = "Viny Mods/Quick Swap/Language_zh.json"
 
 [[json]]
@@ -555,14 +554,12 @@ translation_section = "TrickDeath.json"
 [[json]]
 dir = "menu_translation/unblockable-hits"
 source = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json"
-upstream = "Unblockable Hits/SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits_zh.json"
 translation_section = "UnblockableHits.json"
 
 [[json]]
 dir = "menu_translation/undodgeable-hits"
 source = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json"
-upstream = "Undodgeable Hits/SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits_zh.json"
 translation_section = "UndodgeableHits.json"
 
@@ -590,14 +587,12 @@ translation_section = "DeathMessages.json"
 [[json]]
 dir = "menu_translation/unblockable-hits"
 source = "SKSE/Plugins/Unblock/Language.json"
-upstream = "https://raw.githubusercontent.com/vinymayan/Unblockable/main/Data/Viny%20Mods/Unblockable%20Hits/Language.json"
 output = "SKSE/Plugins/Unblock/Language_zh.json"
 translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/undodgeable-hits"
 source = "SKSE/Plugins/Undodge/Language.json"
-upstream = "https://raw.githubusercontent.com/vinymayan/Undodgeable/main/Data/Viny%20Mods/Undodgeable%20Hits/Language.json"
 output = "SKSE/Plugins/Undodge/Language_zh.json"
 translation_section = "Language.json"
 
