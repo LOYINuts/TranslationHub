@@ -588,7 +588,7 @@ ModCtrl=Ctrl
 ModShift=Shift
 
 [Symptom]
-Symptom.LoweredBy=降低来源
+Symptom.LoweredBy=影响因素
 Symptom.KindDisease=疾病
 Symptom.KindNeed=需求
 Symptom.KindEffect=效果
