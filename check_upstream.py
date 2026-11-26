@@ -4,6 +4,7 @@
 
 `upstream` 可以是 URL，也可以是本机路径：绝对路径直接用，相对路径到 mods.toml 的
 `[upstream] local_roots` 里逐个拼（MO2 mods 目录那种），先找到先用。
+`upstream` 指向 `.bsa` 时按条目自己的 `source` 路径从包里取同名文件（仓库目录结构与包内一致）。
 
 用法：
     uv run check_upstream.py orbit-menu-ng          # 拉取、有变化就覆盖、再跑 --check
@@ -19,6 +20,7 @@ import logging
 import os
 import subprocess
 import sys
+import tempfile
 import tomllib
 import urllib.request
 
@@ -26,6 +28,7 @@ from config import matches_filter, repo_root, setup_cli_logging
 
 log = logging.getLogger("check_upstream")
 DEFAULT_PROXY = "http://127.0.0.1:7890"
+DEFAULT_BSARCH = "F:/games/MO2TOOLS/BSArch/BSArch.exe"
 TIMEOUT = 30
 
 
@@ -73,6 +76,24 @@ def fetch(kind: str, target: str) -> bytes:
         return response.read()
 
 
+def read_bsa_member(archive: str, member: str) -> bytes:
+    """解包到临时目录，取包内与 source 同路径的文件。"""
+    bsarch = os.environ.get("BSARCH_EXE", DEFAULT_BSARCH)
+    if not os.path.exists(bsarch):
+        raise FileNotFoundError(f"找不到 BSArch: {bsarch}（用 BSARCH_EXE 覆盖）")
+    with tempfile.TemporaryDirectory() as tmp:
+        result = subprocess.run(
+            [bsarch, "unpack", archive, tmp], capture_output=True, text=True
+        )
+        if result.returncode != 0:
+            raise RuntimeError(f"BSArch 解包失败: {result.stderr.strip() or result.stdout.strip()}")
+        path = os.path.join(tmp, member)
+        if not os.path.exists(path):
+            raise FileNotFoundError(f"包内没有 {member}: {os.path.basename(archive)}")
+        with open(path, "rb") as file:
+            return file.read()
+
+
 def run_check(mod_dir: str) -> int:
     """写完后用 sync_translation 判断差异，返回它的退出码。"""
     result = subprocess.run(
@@ -86,7 +107,10 @@ def process(entry: dict, roots: list[str], dry: bool) -> int:
     source_path = os.path.join(repo_root(), entry["dir"], entry["source"])
     log.info("检查模组: %s (%s)", entry["dir"], entry["upstream"])
     kind, target = resolve_source(entry["upstream"], roots)
-    raw = fetch(kind, target)
+    if target.lower().endswith(".bsa"):
+        raw = read_bsa_member(target, entry["source"])
+    else:
+        raw = fetch(kind, target)
     local = b""
     if os.path.exists(source_path):
         with open(source_path, "rb") as file:

@@ -1,11 +1,12 @@
 # 上游源文件对照表
 
 `mods.toml` 的 `[upstream] local_roots = ["F:/games/MO2data/MYSSE/mods"]` 下手工核对的结果。
-路径 = MO2 目录 + 文件，相对 `local_roots`；URL 直连，走 `127.0.0.1:7890` 代理。
+路径 = MO2 目录 + 文件，相对 `local_roots`；URL 直连，走 `127.0.0.1:7890` 代理；
+指向 `.bsa` 时按条目的 `source` 路径从包内取（`check_upstream.py` 调 BSArch 解包）。
 同一模组有多个源文件就多行；`mods.toml` 的 78 个 dir、107 个条目全部覆盖。
 校对日期：2026-11-26。
 
-## 已写入 `upstream`（90 条）
+## 已写入 `upstream`（91 条）
 
 | 我们的 dir | 源文件（相对 `local_roots`） |
 | --- | --- |
@@ -41,6 +42,7 @@
 | `menu_translation/log-watcher` | `Log Watcher - Real-time Analysis of SKSE Logs/SKSE/Plugins/LogWatcher/Translation/LogWatcherTranslation.json` |
 | `menu_translation/map-menu-redesigned` | `Map Menu Redesigned/interface/translations/MapMenuRedesigned_english.txt` |
 | `menu_translation/mcm-memory` | `MCM Memory - Settings Backup and Restore/SKSE/Plugins/MCMMemory/Translation/Translation.json` |
+| `menu_translation/more-hud` | `moreHUD SE/AHZmoreHUD.bsa` |
 | `menu_translation/more-ragdoll` | `More Ragdoll Control/Viny Mods/More Ragdoll/Language.json` |
 | `menu_translation/my-precious` | `My Precious...es - Multiple Rings SKSE/interface/translations/MyPreciouses_ENGLISH.txt` |
 | `menu_translation/my-precious` | `MyPreciouses - MCM Addon/MCM/Config/MyPreciouses/config.json` |
@@ -100,7 +102,7 @@
 | `other_translation/skyrim-party-sheet` | `Skyrim Party Sheet/SKSE/Plugins/translations/PartySheet_en.txt` |
 | `other_translation/veldunui` | `Vel'dun UI/Interface/translations/skyui_se_english.txt` |
 
-## 没有上游（17 条）
+## 没有上游（16 条）
 
 | 我们的 dir | 源文件（相对 `local_roots`） | 情况 |
 | --- | --- | --- |
@@ -109,7 +111,6 @@
 | `menu_translation/feet-of-skyrim` | `interface/translations/FeetOfSkyrim_ENGLISH.txt` | 模组已删除（本机已无对应目录） |
 | `menu_translation/hmdp` | `SKSE/Plugins/DaysPassed_Language.json` | 本机只有 `DaysPassed.dll`，无语言文件 |
 | `menu_translation/inlos` | `Viny Mods/INLOS/Language.json` | 模组已删除（本机已无对应目录） |
-| `menu_translation/more-hud` | `interface/translations/ahzmorehud_english.txt` | 英文原件在 BSA 内（`moreHUD SE/AHZmoreHUD.bsa`） |
 | `menu_translation/ppa` | `SKSE/Plugins/ppa-translations/english.json` | 本机只有 `ppa-animation-tagging/*.json` |
 | `menu_translation/press-f-to-pay-respects` | `SKSE/Plugins/PressFtoPayRespects_Translation.ini` | 模组已删除（本机已无对应目录） |
 | `menu_translation/quick-swap` | `Viny Mods/Quick Swap/Language.json` | 模组目录已从本机移除 |
@@ -124,9 +125,10 @@
 
 ## 校对发现
 
-- `check_upstream.py --all --dry`：67 条一致、23 条字节有差异、0 条报错。
+- `check_upstream.py --all --dry`：68 条一致、23 条字节有差异、0 条报错，全程约 6 秒。
 - 23 条差异里 22 条只是缩进或 CRLF ↔ LF，JSON 规范化后内容完全一致（含 `my-precious` 的 `config.json`）。
 - `pickup-radius`：上游多 4 个键（`ScriptedSlowdown*`、`ScriptedDelay*`），已同步并补译。
+- `more-hud`：英文原件在 `moreHUD SE/AHZmoreHUD.bsa` 内，`upstream` 直接指 BSA；解包内容与仓库源字节一致。
 - `oblivion-interaction-icons` 的 16 个 json 与 `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/` 下的副本字节一致，
   与 `[PATCH]Oblivion Interaction Icons` 版内容不同（本地多 `color='#989180'` 等属性），所以 `upstream` 按 Vel'dun UI 写。
 - `music-conductor`：仓库布局已改为与上游一致（`SKSE/Plugins/translations/`），基线已用 `--sync --yes` 重建。

@@ -22,6 +22,8 @@ uv run check_upstream.py <name> --dry       # 只比字节，不写
 
 `upstream` 可为 URL 或本机路径：绝对路径直用，相对路径按 `mods.toml` 的 `[upstream] local_roots`
 逐个拼（MO2 mods 目录），先找到先用；URL 走 `127.0.0.1:7890` 代理（`UPSTREAM_PROXY` 可改）。
+`upstream` 指向 `.bsa` 时，按条目自己的 `source` 路径从包里取同名文件（仓库目录与包内结构一致），
+解包调 `BSARCH_EXE`（默认 `F:/games/MO2TOOLS/BSArch/BSArch.exe`）。
 
 上游改文案后：`--check` 看有几条 `[变更]` → `--changed` 逐条核对并改 `translations.json` →
 `--sync` 补新键 → 译新键 → `--accept-source` 让基线接受新英文 → build → verify。

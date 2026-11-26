@@ -125,6 +125,7 @@ encoding = "utf16-le-bom"
 [[line]]
 dir = "menu_translation/more-hud"
 source = "interface/translations/ahzmorehud_english.txt"
+upstream = "moreHUD SE/AHZmoreHUD.bsa"
 output = "interface/translations/ahzmorehud_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
