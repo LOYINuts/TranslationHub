@@ -1,11 +1,12 @@
 ; =============================================================================
 ; PartySheet Translation File - English
 ; =============================================================================
-; IMPORTANT: Do NOT remove or modify the format specifiers (%d, %s) in values!
+; IMPORTANT: Do NOT remove or modify the format specifiers (%d, %s, %1, %2) in values!
 ; These are placeholders for dynamic values:
-;   %d = number (e.g., level, count)
-;   %s = text (e.g., race name, item name)
-; Removing or reordering them will cause the game to CRASH!
+;   %d = number (e.g level, count)
+;   %s = text (e.g race name, item name)
+;   %1, %2, %3 = values filled in by the game, they can be moved to suit your word order
+; Removing or reordering %d or %s will cause the game to CRASH!
 ; =============================================================================
 
 [Common]
@@ -47,6 +48,26 @@ Reach=Reach
 Stagger=Stagger
 Defense=Defense
 Combat=Combat
+; Weapon card hover breakdown
+DmgBase=Weapon base
+DmgAmmo=Arrow
+DmgSkill=Skill
+DmgFortify=Fortify
+DmgPerks=Perks
+DmgSetting=Game setting
+DmgOther=Other
+DmgOtherNote=tempering, mods
+DmgTempering=Tempering
+DmgPhysical=Physical
+DmgEnchant=Enchantment
+DmgSpellBase=Spell base
+DmgPerSecond=per second
+DmgConditional=conditional
+SpellRankNovice=Novice
+SpellRankApprentice=Apprentice
+SpellRankAdept=Adept
+SpellRankExpert=Expert
+SpellRankMaster=Master
 ; Regen / multiplier AVs
 HealthRegen=Health Regen
 MagickaRegen=Magicka Regen
@@ -87,6 +108,10 @@ Lockpicking=Lockpicking
 Pickpocket=Pickpocket
 Speech=Speech
 Alchemy=Alchemy
+AllSkills=All skills
+CombatSkills=Combat skills
+MagicSkills=Magic skills
+StealthSkills=Stealth skills
 
 [Resistances]
 Title=RESIST
@@ -378,13 +403,14 @@ barenziah=Stones of Barenziah
 nirnroot=Crimson Nirnroot
 jiub=Jiubs Opus Pages
 lockpick=Lockpicks
-health_potion=Health Potions
-magicka_potion=Magicka Potions
-stamina_potion=Stamina Potions
+health_potion=Health
+magicka_potion=Magicka
+stamina_potion=Stamina
 dragonpriest_mask=Dragon Priest Masks
 dragon_claw=Dragon Claws
 vale_paragon=Vale Paragons
 black_book=Black Books
+kyne-feather=Kyne's Feathers
 
 [AI]
 AI.Aggression.Unaggressive=Unaggressive
@@ -402,10 +428,15 @@ AI.Assistance.FriendsAndAllies=Friends+Allies
 AI.Aggression.Label=Aggression
 AI.Confidence.Label=Confidence
 AI.Assistance.Label=Assistance
+AI.Morality.Label=Morality
+AI.Morality.AnyCrime=Any crime
+AI.Morality.ViolenceAgainstEnemy=Violence against enemies
+AI.Morality.PropertyCrimeOnly=Property crime only
+AI.Morality.NoCrime=No crime
 
 [PartySheetV2]
-EffectsAndSpells=Effects & Spells
-Inventory=Inventory
+EffectsAndSpells=Spells [P]
+Inventory=Inventory [I]
 ControlsHint=[ TAB ]  RETURN
 PauseGame=PAUSE GAME
 SpellTypeAbility=Ability
@@ -428,14 +459,55 @@ SourcePotion=Potion
 SourceRace=Race
 Vampire=Vampire
 Werewolf=Werewolf
+MsgEquipped=%1 equipped %2
+MsgUnequipped=%1 unequipped %2
+MsgDrank=%1 drank %2
+MsgAte=%1 ate %2
+MsgSent=%1 sent to %2
+MsgInCombat=%1 is in combat, equip skipped
+SpellSkillTooLow=Skill too low, will not cast this in combat
+SpellTagFire=Fire
+SpellTagFrost=Frost
+SpellTagShock=Shock
+SpellTagPoison=Poison
+SpellTagDamage=Damage
+SpellTagHeal=Heal
+SpellTagBuff=Buff
+SpellTagDebuff=Debuff
+SpellTagResist=Resist
+SpellTagControl=Control
+SpellTagSummon=Summon
+SpellTagBound=Bound
+SpellTagStealth=Stealth
+SpellTagCloak=Cloak
+SpellTagRune=Rune
+SpellTagAoE=Area
+SpellTagConcentration=Channel
+SpellTagNoMatch=No spells match the picked tags
+SpellRightHandOnly=Right hand only
+SpellLeftHandOnly=Left hand only
+PoisonDoses=%1 doses
 Stage=Stage
 SectionEquipment=Equipment
 SectionBlessings=Blessings
 SectionActive=Active
+ActiveEffects=Active Effects
+Behavior=Behavior
+SectionBuffs=Buffs
+SectionDebuffs=Debuffs
 SectionSpells=Spells
+GroupPowers=Powers
+GroupShouts=Shouts
 SectionNeeds=Needs
 SectionVitality=Vitality
+PartySheetV2.SectionCondition=Survival & Needs
+PartySheetV2.AtLeast=at least
 SectionDiseases=Diseases
+SectionEffects=Effects
+SectionPerks=Perks
+SectionEnchantment=Enchantment
+SectionKnowYourEnemy=Know Your Enemy
+ArmorRating=%1 armor
 
 [Inventory]
 TypeWeapon=Weapon
@@ -449,6 +521,9 @@ TypeKey=Key
 TypeBook=Book
 TypeScroll=Scroll
 TypeMisc=Misc
+Summary=Inventory · %1 items · %2 / %3 weight
+SpellSummary=Spells · %1 known
+SendOk=OK
 TabAll=All
 TabWeapons=Weapons
 TabArmor=Armor
@@ -457,6 +532,33 @@ TabFood=Food
 TabIngredients=Ingredients
 TabBooks=Books
 TabMisc=Misc
+UnknownEffects=%1 unknown
+HintConsume=Click to consume
+HintSend=Right-click to send
+HintQuest=Quest item
+TagOneHanded=One-Handed
+TagTwoHanded=Two-Handed
+TagDaggers=Daggers
+TagBows=Bows
+TagCrossbows=Crossbows
+TagStaves=Staves
+TagShields=Shields
+TagTorches=Torches
+TagArrows=Arrows
+TagBolts=Bolts
+TagHelmets=Helmets
+TagHoods=Hoods
+TagCirclets=Circlets
+TagHeavy=Heavy
+TagLight=Light
+TagClothing=Clothing
+TagHealth=Health
+TagMagicka=Magicka
+TagStamina=Stamina
+TagFortify=Fortify
+TagResist=Resist
+TagCure=Cure
+TagPoison=Poison
 ColName=Name
 ColType=Type
 ColWeight=Wgt
@@ -490,3 +592,76 @@ Symptom.LoweredBy=Lowered by
 Symptom.KindDisease=Disease
 Symptom.KindNeed=Need
 Symptom.KindEffect=Effect
+
+[Condition]
+Condition.Improving=improving
+Condition.Declining=declining
+Condition.Sheltered=Sheltered
+Condition.PartlySheltered=Partly sheltered
+Condition.WarmArea=Warm area
+Condition.CoolArea=Cool area
+Condition.FreezingArea=Freezing area
+Condition.Night=Night
+Condition.GettingColder=getting colder
+Condition.WarmingUp=warming up
+Condition.ColdRising=cold rising
+Condition.Region=Region
+Condition.MaxHealth=Max health
+Condition.MaxStamina=Max stamina
+Condition.MaxMagicka=Max magicka
+Condition.MagickaRegenSlowed=Magicka regen slowed
+Condition.StaminaRegenSlowed=Stamina regen slowed
+Condition.HealthRegenSlowed=Health regen slowed
+Condition.Cost=Cost
+Condition.WorseIn=worse in
+Condition.Outlook=Outlook
+Condition.Food=food
+Condition.Drinks=drinks
+Condition.DirtyWater=dirty water, boil first
+Condition.Firewood=firewood
+Condition.Tent=tent
+Condition.Tents=tents
+Condition.WaterskinSips=waterskin sips
+Condition.Torch=torch
+Condition.Torches=torches
+Condition.Supplies=Supplies
+Condition.Slept=Slept
+Condition.Ago=ago
+Condition.Rested=Rested
+Condition.Left=left
+Condition.Rest=Rest
+Condition.NoSurvival=No survival mod running
+Condition.Environment=ENVIRONMENT
+Condition.Needs=NEEDS
+Condition.CostHeading=COST
+Condition.SuppliesHeading=SUPPLIES
+Condition.HungerGettingBad=hunger is getting bad
+Condition.ThirstGettingBad=thirst is getting bad
+Condition.DirtyWaterShort=dirty water
+Condition.BoilFirst=boil first
+Condition.Indoors=Indoors
+Condition.Day=Day
+Condition.FireNotEnough=not warming you
+Condition.Warmth=Warmth
+Condition.NearAFire=near a fire
+Condition.ShelterPartly=dry
+Condition.ShelterFull=fully dry
+Condition.Mild=Mild
+Condition.Cool=Cool
+Condition.Cold=Cold
+Condition.Freezing=Freezing
+Condition.HeadWarming=Warming up
+Condition.HeadColder=Getting colder
+Condition.WarmingByFire=Warming by the fire
+Condition.ByFire=By the fire
+Condition.NotWarming=Not warming up
+Condition.FreezingWater=Freezing water
+
+[Supplies]
+Supplies.Food=Food
+Supplies.Drinks=Drinks
+Supplies.DirtyWater=Dirty water
+Supplies.Firewood=Firewood
+Supplies.Tents=Tents
+Supplies.Waterskin=Waterskin
+Supplies.Torches=Torches

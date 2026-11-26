@@ -1,21 +1,22 @@
 ; =============================================================================
 ; PartySheet Translation File - English
 ; =============================================================================
-; IMPORTANT: Do NOT remove or modify the format specifiers (%d, %s) in values!
+; IMPORTANT: Do NOT remove or modify the format specifiers (%d, %s, %1, %2) in values!
 ; These are placeholders for dynamic values:
-;   %d = number (e.g., level, count)
-;   %s = text (e.g., race name, item name)
-; Removing or reordering them will cause the game to CRASH!
+;   %d = number (e.g level, count)
+;   %s = text (e.g race name, item name)
+;   %1, %2, %3 = values filled in by the game, they can be moved to suit your word order
+; Removing or reordering %d or %s will cause the game to CRASH!
 ; =============================================================================
 
 [Common]
-XP=XP
+XP=经验
 Unknown=未知
 None=无
 Other=其他
-Level=Lv
-LevelShort=Lv %d
-LevelFull=Lv %d (%s)
+Level=等级
+LevelShort=等级 %d
+LevelFull=等级 %d（%s）
 Empty=(空)
 NoParty=无小队成员
 PartyMembers=小队成员
@@ -47,6 +48,26 @@ Reach=攻击范围
 Stagger=硬直
 Defense=防御
 Combat=战斗
+; Weapon card hover breakdown
+DmgBase=武器基础
+DmgAmmo=箭矢
+DmgSkill=技能
+DmgFortify=强化
+DmgPerks=特长
+DmgSetting=游戏设置
+DmgOther=其他
+DmgOtherNote=磨砺、模组
+DmgTempering=磨砺
+DmgPhysical=物理
+DmgEnchant=附魔
+DmgSpellBase=法术基础
+DmgPerSecond=每秒
+DmgConditional=条件性
+SpellRankNovice=新手
+SpellRankApprentice=学徒
+SpellRankAdept=老手
+SpellRankExpert=专家
+SpellRankMaster=大师
 ; Regen / multiplier AVs
 HealthRegen=生命恢复
 MagickaRegen=魔力恢复
@@ -62,9 +83,9 @@ SectionArmor=护甲
 Unarmed=徒手
 Arrows=箭矢
 ArrowsCount=(%d) 支箭矢
-BadgeLeft=L
-BadgeRight=R
-BadgeShout=Z
+BadgeLeft=左
+BadgeRight=右
+BadgeShout=吼
 
 [Skills]
 Title=技能
@@ -87,6 +108,10 @@ Lockpicking=开锁
 Pickpocket=扒窃
 Speech=口才
 Alchemy=炼金
+AllSkills=全部技能
+CombatSkills=战斗技能
+MagicSkills=魔法技能
+StealthSkills=潜行技能
 
 [Resistances]
 Title=抗性
@@ -378,13 +403,14 @@ barenziah=巴兰兹亚宝石
 nirnroot=深红奈恩根
 jiub=鸠步的巨著
 lockpick=开锁器
-health_potion=生命药水
-magicka_potion=魔力药水
-stamina_potion=耐力药水
+health_potion=生命
+magicka_potion=魔力
+stamina_potion=耐力
 dragonpriest_mask=龙祭司面具
 dragon_claw=龙爪
 vale_paragon=遗忘山谷圣石
 black_book=黑暗经书
+kyne-feather=凯娜的羽毛
 
 [AI]
 AI.Aggression.Unaggressive=无攻击性
@@ -402,10 +428,15 @@ AI.Assistance.FriendsAndAllies=协助朋友与盟友
 AI.Aggression.Label=攻击性
 AI.Confidence.Label=自信
 AI.Assistance.Label=协助
+AI.Morality.Label=道德
+AI.Morality.AnyCrime=任何罪行
+AI.Morality.ViolenceAgainstEnemy=对敌人施暴
+AI.Morality.PropertyCrimeOnly=仅财产罪行
+AI.Morality.NoCrime=无罪行
 
 [PartySheetV2]
-EffectsAndSpells=效果 & 法术
-Inventory=背包
+EffectsAndSpells=法术 [P]
+Inventory=背包 [I]
 ControlsHint=[ TAB ] 返回
 PauseGame=暂停游戏
 SpellTypeAbility=天赋
@@ -428,14 +459,55 @@ SourcePotion=药水
 SourceRace=种族
 Vampire=吸血鬼
 Werewolf=狼人
+MsgEquipped=%1 装备了 %2
+MsgUnequipped=%1 卸下了 %2
+MsgDrank=%1 喝了 %2
+MsgAte=%1 吃了 %2
+MsgSent=%1 已交给 %2
+MsgInCombat=%1 正在战斗，已跳过装备
+SpellSkillTooLow=技能等级不足，战斗中不会施放
+SpellTagFire=火焰
+SpellTagFrost=寒霜
+SpellTagShock=闪电
+SpellTagPoison=毒素
+SpellTagDamage=伤害
+SpellTagHeal=治疗
+SpellTagBuff=增益
+SpellTagDebuff=减益
+SpellTagResist=抗性
+SpellTagControl=控制
+SpellTagSummon=召唤
+SpellTagBound=束缚
+SpellTagStealth=潜行
+SpellTagCloak=斗篷
+SpellTagRune=符文
+SpellTagAoE=范围
+SpellTagConcentration=引导
+SpellTagNoMatch=没有符合所选标签的法术
+SpellRightHandOnly=仅右手
+SpellLeftHandOnly=仅左手
+PoisonDoses=%1 剂
 Stage=阶段
 SectionEquipment=装备
 SectionBlessings=祝福
 SectionActive=主动效果
+ActiveEffects=主动效果
+Behavior=行为
+SectionBuffs=增益
+SectionDebuffs=减益
 SectionSpells=法术列表
+GroupPowers=能力
+GroupShouts=龙吼
 SectionNeeds=需求
 SectionVitality=活力
+PartySheetV2.SectionCondition=生存与需求
+PartySheetV2.AtLeast=至少
 SectionDiseases=疾病
+SectionEffects=效果
+SectionPerks=特长
+SectionEnchantment=附魔
+SectionKnowYourEnemy=Know Your Enemy
+ArmorRating=%1 点护甲
 
 [Inventory]
 TypeWeapon=武器
@@ -449,6 +521,9 @@ TypeKey=钥匙
 TypeBook=书籍
 TypeScroll=卷轴
 TypeMisc=杂项
+Summary=背包 · %1 件 · %2 / %3 负重
+SpellSummary=法术 · 已知 %1 个
+SendOk=确定
 TabAll=全部
 TabWeapons=武器
 TabArmor=护甲
@@ -457,6 +532,33 @@ TabFood=食物
 TabIngredients=材料
 TabBooks=书籍
 TabMisc=杂项
+UnknownEffects=%1 未知
+HintConsume=点击使用
+HintSend=右键转交
+HintQuest=任务物品
+TagOneHanded=单手
+TagTwoHanded=双手
+TagDaggers=匕首
+TagBows=弓
+TagCrossbows=弩
+TagStaves=法杖
+TagShields=盾牌
+TagTorches=火把
+TagArrows=箭矢
+TagBolts=弩矢
+TagHelmets=头盔
+TagHoods=兜帽
+TagCirclets=头环
+TagHeavy=重甲
+TagLight=轻甲
+TagClothing=衣物
+TagHealth=生命
+TagMagicka=魔力
+TagStamina=耐力
+TagFortify=强化
+TagResist=抗性
+TagCure=治愈
+TagPoison=毒素
 ColName=名称
 ColType=类型
 ColWeight=重量
@@ -486,7 +588,80 @@ ModCtrl=Ctrl
 ModShift=Shift
 
 [Symptom]
-Symptom.LoweredBy=降低因素
+Symptom.LoweredBy=降低来源
 Symptom.KindDisease=疾病
 Symptom.KindNeed=需求
 Symptom.KindEffect=效果
+
+[Condition]
+Condition.Improving=好转中
+Condition.Declining=恶化中
+Condition.Sheltered=有遮蔽
+Condition.PartlySheltered=部分遮蔽
+Condition.WarmArea=温暖区域
+Condition.CoolArea=凉爽区域
+Condition.FreezingArea=冰冻区域
+Condition.Night=夜晚
+Condition.GettingColder=越来越冷
+Condition.WarmingUp=正在回暖
+Condition.ColdRising=寒冷加剧
+Condition.Region=地区
+Condition.MaxHealth=最大生命值
+Condition.MaxStamina=最大耐力
+Condition.MaxMagicka=最大魔力
+Condition.MagickaRegenSlowed=魔力恢复减慢
+Condition.StaminaRegenSlowed=耐力恢复减慢
+Condition.HealthRegenSlowed=生命恢复减慢
+Condition.Cost=消耗
+Condition.WorseIn=后恶化
+Condition.Outlook=前景
+Condition.Food=食物
+Condition.Drinks=饮品
+Condition.DirtyWater=脏水，需先煮沸
+Condition.Firewood=柴火
+Condition.Tent=帐篷
+Condition.Tents=帐篷
+Condition.WaterskinSips=口水袋
+Condition.Torch=火把
+Condition.Torches=火把
+Condition.Supplies=补给
+Condition.Slept=已睡
+Condition.Ago=前
+Condition.Rested=已休息
+Condition.Left=剩余
+Condition.Rest=休息
+Condition.NoSurvival=未检测到生存模组
+Condition.Environment=环境
+Condition.Needs=需求
+Condition.CostHeading=消耗
+Condition.SuppliesHeading=补给
+Condition.HungerGettingBad=饥饿正在加剧
+Condition.ThirstGettingBad=口渴正在加剧
+Condition.DirtyWaterShort=脏水
+Condition.BoilFirst=需先煮沸
+Condition.Indoors=室内
+Condition.Day=白天
+Condition.FireNotEnough=取暖不足
+Condition.Warmth=温暖度
+Condition.NearAFire=靠近火焰
+Condition.ShelterPartly=干燥
+Condition.ShelterFull=完全干燥
+Condition.Mild=温和
+Condition.Cool=凉爽
+Condition.Cold=寒冷
+Condition.Freezing=冰冻
+Condition.HeadWarming=正在回暖
+Condition.HeadColder=正在变冷
+Condition.WarmingByFire=在火边取暖
+Condition.ByFire=火边
+Condition.NotWarming=未在回暖
+Condition.FreezingWater=冰冷的水
+
+[Supplies]
+Supplies.Food=食物
+Supplies.Drinks=饮品
+Supplies.DirtyWater=脏水
+Supplies.Firewood=柴火
+Supplies.Tents=帐篷
+Supplies.Waterskin=水袋
+Supplies.Torches=火把
