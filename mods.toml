@@ -651,9 +651,9 @@ package = "SKSE/Plugins/ppa-translations/chinese.json"
 dir = "menu_translation/orbit-menu-ng"
 deploy = "Orbit Menu NG - A Quick Access Menu 汉化"
 source = "SKSE/Plugins/Orbit Menu/lang/Orbit Menu Translation Example.json"
-output = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
+output = "SKSE/Plugins/Orbit Menu/lang/zh_cn.json"
 upstream = "https://raw.githubusercontent.com/Abi822/Orbit-Menu-NG/main/lang/Orbit%20Menu%20Translation%20Example.json"
-package = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
+package = "SKSE/Plugins/Orbit Menu/lang/zh_cn.json"
 
 [[qt]]
 dir = "other_translation/eslifer"
