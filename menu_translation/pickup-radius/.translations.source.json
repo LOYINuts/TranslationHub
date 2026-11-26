@@ -56,6 +56,10 @@
       "SoulGems": "Soul Gems",
       "StealCheckbox": "Allow Stealing",
       "StealHelp": "When enabled, items that would normally be stolen are also auto-picked up. Disabled by default to avoid crime.",
+      "Strings.ScriptedDelayHelp": "Safety cap in milliseconds (34-2000) for the wait above. The sweep continues as soon as the conversion is confirmed; this only bounds the wait if a script never finishes.",
+      "Strings.ScriptedDelayLabel": "Scripted Harvest Timeout",
+      "Strings.ScriptedSlowdownCheckbox": "Slow Down Scripted Yields",
+      "Strings.ScriptedSlowdownHelp": "Plants whose harvest yield is a script conversion item instead of a direct ingredient (e.g. Hearthfire planter crops) are harvested one at a time. The sweep waits until the conversion item leaves your inventory before harvesting the next plant, so the script always finishes first.",
       "Weapons": "Weapons"
     }
   },
