@@ -374,7 +374,14 @@ def main() -> int:
                 failed_deploy.append(mod_dir)
             continue
         if args.list:
-            log.info(f"[部署] {mod_dir} -> {os.path.basename(target)}/")
+            planned = [item.package_path for item in items]
+            existing = [p for p in planned if os.path.exists(os.path.join(target, p))]
+            log.info(
+                f"[部署] {mod_dir} -> {os.path.basename(target)}/（覆盖 {len(existing)} / 新增 "
+                f"{len(planned) - len(existing)}）"
+            )
+            for path in planned:
+                log.debug(f"    {'覆盖' if path in existing else '新增'} {path}")
             continue
         count = deploy_to(os.path.join(DIST, dist_name(mod_dir)), target)
         log.info(f"[部署] {mod_dir} -> {os.path.basename(target)}/（{count} 个文件）")
