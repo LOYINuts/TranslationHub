@@ -4,6 +4,9 @@
 环境（读 `*_chinese.*` / `*_ZH.*`），所以两个文件都打包，内容都是中文。
 
 产物落到 dist/<mod>/；要 dist/<mod>.7z 就加 --archive。
+打包后还会同步一份到 MO2 里对应的汉化目录（`--no-deploy` 可关）。
+汉化目录名默认从 upstream 的 MO2 目录名推导（`<目录> 汉化` / `<目录> 和光汉化`），
+推不出来或对上多个时在 `mods.toml` 条目里写 `deploy = "<目录名>"` 指定。
 
 用法:
     uv run package.py achievementinjector
@@ -22,6 +25,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tomllib
 from dataclasses import dataclass
 
 from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
@@ -53,6 +57,73 @@ def dist_name(mod_dir: str) -> str:
     if len(parts) > 1:
         parts = parts[1:]
     return "-".join(parts)
+
+
+HAN_SUFFIXES = (" 和光汉化", " 汉化")
+
+
+def load_deploy_meta() -> tuple[str | None, dict[str, str | bool], dict[str, str]]:
+    """MO2 mods 根目录、deploy 覆盖表、各模组 upstream 的 MO2 目录名。
+
+    `deploy` 写目录名 = 指定落点，写 `false` = 不部署（如自己维护 FOMOD 的模组）。
+    """
+    with open(os.path.join(REPO, "mods.toml"), "rb") as file:
+        data = tomllib.load(file)
+    roots = data.get("upstream", {}).get("local_roots", [])
+    deploy: dict[str, str | bool] = {}
+    upstream: dict[str, str] = {}
+    for kind in ("line", "json", "qt"):
+        for item in data.get(kind, []):
+            if "deploy" in item:
+                deploy[item["dir"]] = item["deploy"]
+            target = item.get("upstream")
+            if target and not target.startswith(("http://", "https://")):
+                upstream.setdefault(item["dir"], target.split("/")[0])
+    return (roots[0] if roots else None), deploy, upstream
+
+
+def resolve_deploy(mod_dir: str, root: str | None, deploy: dict[str, str | bool],
+                   upstream: dict[str, str]) -> str | None:
+    """找到该模组在 MO2 里的汉化目录；找不到或对上多个就返回 None。"""
+    if not root or not os.path.isdir(root):
+        return None
+    override = deploy.get(mod_dir)
+    if isinstance(override, str):
+        path = os.path.join(root, override)
+        return path if os.path.isdir(path) else None
+    base = upstream.get(mod_dir)
+    if not base:
+        return None
+    folded = base.casefold()
+    exact, prefixed = [], []
+    for name in os.listdir(root):
+        if not os.path.isdir(os.path.join(root, name)):
+            continue
+        for suffix in HAN_SUFFIXES:
+            if not name.endswith(suffix):
+                continue
+            stem = name[: -len(suffix)].casefold()
+            if len(stem) >= 5 and folded == stem:
+                exact.append(os.path.join(root, name))
+            elif len(stem) >= 5 and folded.startswith(stem):
+                prefixed.append(os.path.join(root, name))
+            break
+    hits = exact or prefixed
+    return hits[0] if len(hits) == 1 else None
+
+
+def deploy_to(stage: str, target: str) -> int:
+    """把 dist 内容覆盖拷贝到汉化目录，只覆盖同名文件。"""
+    copied = 0
+    for folder, _, files in os.walk(stage):
+        for name in files:
+            source = os.path.join(folder, name)
+            relative = os.path.relpath(source, stage)
+            destination = os.path.join(target, relative)
+            os.makedirs(os.path.dirname(destination), exist_ok=True)
+            shutil.copy2(source, destination)
+            copied += 1
+    return copied
 
 
 def _resolve(cfg, built: str, targets: list[str]) -> list[PackItem]:
@@ -222,6 +293,7 @@ def main() -> int:
     parser.add_argument("--archive", action="store_true", help="额外压成 dist/<mod>.7z")
     parser.add_argument("--list", action="store_true", help="只列出打包计划，不执行")
     parser.add_argument("--skip-build", action="store_true", help="不重新构建，直接用现有产物")
+    parser.add_argument("--no-deploy", action="store_true", help="不同步到 MO2 汉化目录")
     parser.add_argument("--verbose", action="store_true", help="输出 DEBUG 日志")
     parser.add_argument("--self-check", action="store_true", help="运行打包逻辑自检")
     args = parser.parse_args()
@@ -281,11 +353,35 @@ def main() -> int:
         return 1
 
     ok = 0
+    root, deploy, upstream = load_deploy_meta()
+    failed_deploy = []
     for mod_dir, items in grouped.items():
-        if pack_group(mod_dir, items, args.archive, seven_zip, args.list):
-            ok += 1
+        if not pack_group(mod_dir, items, args.archive, seven_zip, args.list):
+            continue
+        ok += 1
+        if args.no_deploy:
+            continue
+        if deploy.get(mod_dir) is False:
+            log.info(f"[部署] {mod_dir}: 跳过（mods.toml 里 deploy = false）")
+            continue
+        target = resolve_deploy(mod_dir, root, deploy, upstream)
+        if not target:
+            message = f"[部署] {mod_dir}: 找不到对应汉化目录，请在 mods.toml 里加 deploy = \"<目录名>\""
+            if args.list:
+                log.warning(message)
+            else:
+                log.error(message)
+                failed_deploy.append(mod_dir)
+            continue
+        if args.list:
+            log.info(f"[部署] {mod_dir} -> {os.path.basename(target)}/")
+            continue
+        count = deploy_to(os.path.join(DIST, dist_name(mod_dir)), target)
+        log.info(f"[部署] {mod_dir} -> {os.path.basename(target)}/（{count} 个文件）")
 
     log.info(f"打包完成：{ok}/{len(grouped)}")
+    if failed_deploy:
+        return 1
     return 0 if ok == len(grouped) else 1
 
 

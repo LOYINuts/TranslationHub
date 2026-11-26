@@ -13,13 +13,13 @@ Edit only `translations.json`, then build. `descriptionmods` uses
 ## mods.toml fields
 
 - `[[line]]`: `dir`, `source`, `output`, `sep`, `encoding`, `output_sep`,
-  `value_field`, `trim_trailing_fields`, `package`.
+  `value_field`, `trim_trailing_fields`, `package`, `deploy`, `upstream`.
   `sep` ∈ `"\t"` (default), `"="`, `" = "`, `"|"`, or `""` (any whitespace; pair with
   `output_sep = "\t"`). `encoding` ∈ `utf-8`, `utf-8-bom`, `utf16-le-bom` (default last).
 - `[[json]]`: `dir`, `source`, `output` (default `<source stem>_zh<ext>`),
   `translation_section`, `upstream`, `package`. No `sep` / `encoding`; `translation_section` picks a
   section when `translations.json` nests them.
-- `[[qt]]`: `dir`, `source`, `output`, `qm`, `package`. `qm` makes the build run `lrelease`
+- `[[qt]]`: `dir`, `source`, `output`, `qm`, `package`, `deploy`, `upstream`. `qm` makes the build run `lrelease`
   after the TS; `package` must then point at the qm (packing the TS under a `.qm` name
   produces a file QTranslator rejects silently).
 - `upstream` (any type): source of truth for the mod's English file, used by
@@ -29,7 +29,11 @@ Edit only `translations.json`, then build. `descriptionmods` uses
   `sync_translation.py <mod> --check` and returns that exit code, so missing keys / changed
   English are reported by the existing pipeline — no format parsing here. `--dry` only
   compares bytes. URLs go through the proxy `127.0.0.1:7890` unless `UPSTREAM_PROXY` says
-  otherwise.
+  otherwise. A `.bsa` target is unpacked with `BSARCH_EXE` and the member at the entry's
+  own `source` path is compared.
+- `deploy` (any type): where `package.py` copies the built files inside MO2. A directory
+  name pins the 汉化 folder; `false` skips deploying (self-maintained FOMOD, mod not
+  installed). Omitted, the folder is derived from the `upstream` MO2 directory name.
 - Glob `source` (e.g. `*.ini`): output lands flat in `output` with a `_zh` suffix, keys are
   `<relative path>::<key>#<occurrence>`, `value_field` chooses the column to replace,
   `trim_trailing_fields = true` strips the fields after it.

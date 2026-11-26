@@ -109,6 +109,7 @@ encoding = "utf16-le-bom"
 
 [[line]]
 dir = "menu_translation/feet-of-skyrim"
+deploy = false
 source = "interface/translations/FeetOfSkyrim_ENGLISH.txt"
 output = "interface/translations/FeetOfSkyrim_CHINESE.txt"
 sep = "\t"
@@ -156,6 +157,7 @@ encoding = "utf-8"
 
 [[line]]
 dir = "other_translation/smart-search"
+deploy = false
 source = "interface/translations/SmartSearch_en.ini"
 output = "interface/translations/SmartSearch_zhcn.ini"
 sep = " = "
@@ -240,6 +242,7 @@ encoding = "utf16-le-bom"
 
 [[line]]
 dir = "menu_translation/press-f-to-pay-respects"
+deploy = false
 source = "SKSE/Plugins/PressFtoPayRespects_Translation.ini"
 output = "SKSE/Plugins/PressFtoPayRespects_Translation_zh.ini"
 sep = "="
@@ -256,6 +259,7 @@ encoding = "utf-8"
 
 [[line]]
 dir = "menu_translation/cee"
+deploy = false
 source = "interface/translations/Conditional Expressions_ENGLISH.txt"
 output = "interface/translations/Conditional Expressions_CHINESE.txt"
 sep = "\t"
@@ -264,6 +268,7 @@ encoding = "utf16-le-bom"
 # 特殊：输入用任意空白分隔，输出用制表符
 [[line]]
 dir = "menu_translation/speed-of-strolling"
+deploy = false
 source = "interface/translations/styyx-move-speed_ENGLISH.txt"
 output = "interface/translations/styyx-move-speed_CHINESE.txt"
 sep = ""  # 空字符串表示任意空白
@@ -304,7 +309,7 @@ sep = "\t"
 encoding = "utf16-le-bom"
 
 [[line]]
-dir = "menu_translation/dmenu"
+dir = "menu_translation/dmenu-ng"
 source = "SKSE/Plugins/dMenu/translations.txt"
 upstream = "dMenu NG/SKSE/Plugins/dMenu/translations.txt"
 output = "SKSE/Plugins/dMenu/translations_zh.txt"
@@ -314,6 +319,7 @@ encoding = "utf-8"
 
 [[line]]
 dir = "menu_translation/riverwood-has-walls"
+deploy = false
 source = "interface/translations/Riverwood Has Walls_english.txt"
 upstream = "Riverwood Has Walls - A Full Overhaul/interface/translations/Riverwood Has Walls_english.txt"
 output = "interface/translations/Riverwood Has Walls_chinese.txt"
@@ -354,6 +360,7 @@ encoding = "utf-8"
 
 [[line]]
 dir = "descriptionmods"
+deploy = false
 source = "*.ini"
 output = "."
 sep = "|"
@@ -392,6 +399,7 @@ upstream = "MCM Memory - Settings Backup and Restore/SKSE/Plugins/MCMMemory/Tran
 
 [[json]]
 dir = "menu_translation/swift-potion-ng"
+deploy = false
 source = "SKSE/Plugins/SwiftPotionNG_Translation.json"
 
 [[json]]
@@ -458,6 +466,7 @@ output = "Viny Mods/EDF/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/inlos"
+deploy = false
 source = "Viny Mods/INLOS/Language.json"
 output = "Viny Mods/INLOS/Language_zh.json"
 
@@ -484,6 +493,7 @@ output = "interface/translations/config_zh.json"
 
 [[json]]
 dir = "other_translation/new-skill-menu"
+deploy = false
 source = "Viny Mods/NSM/Localization/NSM_Language.json"
 output = "Viny Mods/NSM/Localization/NSM_Language_zh.json"
 
@@ -507,6 +517,7 @@ output = "SKSE/Plugins/JusBlock_Language_zh.json"
 
 [[json]]
 dir = "menu_translation/quick-swap"
+deploy = false
 source = "Viny Mods/Quick Swap/Language.json"
 output = "Viny Mods/Quick Swap/Language_zh.json"
 
@@ -554,12 +565,14 @@ translation_section = "TrickDeath.json"
 
 [[json]]
 dir = "menu_translation/unblockable-hits"
+deploy = false
 source = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits_zh.json"
 translation_section = "UnblockableHits.json"
 
 [[json]]
 dir = "menu_translation/undodgeable-hits"
+deploy = false
 source = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits_zh.json"
 translation_section = "UndodgeableHits.json"
@@ -626,12 +639,14 @@ output = "SKSE/Plugins/LoadTimeProfiler/Localization_zh.json"
 
 [[json]]
 dir = "menu_translation/ppa"
+deploy = "PPA - Procedural Penis Animations 汉化"
 source = "SKSE/Plugins/ppa-translations/english.json"
 output = "SKSE/Plugins/ppa-translations/chinese.json"
 package = "SKSE/Plugins/ppa-translations/chinese.json"
 
 [[json]]
 dir = "menu_translation/orbit-menu-ng"
+deploy = "Orbit Menu NG - A Quick Access Menu 汉化"
 source = "SKSE/Plugins/Orbit Menu/lang/Orbit Menu Translation Example.json"
 output = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
 upstream = "https://raw.githubusercontent.com/Abi822/Orbit-Menu-NG/main/lang/Orbit%20Menu%20Translation%20Example.json"
@@ -639,6 +654,7 @@ package = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
 
 [[qt]]
 dir = "other_translation/eslifer"
+deploy = false
 source = "origin/eslifier_translation.ts"
 output = "eslifier_translation.ts"
 upstream = "https://raw.githubusercontent.com/MaskPlague/ESLifier/main/eslifier_translation.ts"

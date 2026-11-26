@@ -65,8 +65,9 @@ uv run dialogue_mod_translation/translate.py apply <mod>/pending.json
 ## 打包
 
 ```bash
-uv run package.py <name>              # 构建 + dist/<name>/
-uv run package.py <name> --list       # 只看计划
+uv run package.py <name>              # 构建 + dist/<name>/ + 同步到 MO2 汉化目录
+uv run package.py <name> --list       # 只看计划（含部署目标），不写文件
+uv run package.py <name> --no-deploy  # 只出 dist/
 uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 ```
 
@@ -76,6 +77,19 @@ uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 插件自解析文本（如 dMenu 的 `translations.txt`）：产物加 `_zh`，`package` 写回源文件名，安装即替换。
 更新译文后必须重新 `uv run package.py <name>`，再提交；`dist/` 不入库。
 `[[qt]]` 配了 `qm` 时，构建会调 `lrelease` 出 `qm`，`package` 写 qm 的落点（打包 qm，不是 ts）。
+
+## 部署到 MO2
+
+打包后默认把 `dist/<name>/` 覆盖拷贝到 MO2 里对应的汉化目录（同名文件覆盖，不删多余文件）。
+目标默认由 `upstream` 的 MO2 目录名推导：找 `<目录> 汉化` / `<目录> 和光汉化`，先全名大小写不敏感匹配，
+再退到前缀匹配；唯一命中才用。
+
+例外在条目里写 `deploy`：
+
+- `deploy = "<目录名>"`：手动指定（如 `dmenu-ng` 的 `dmenu NG 汉化`）
+- `deploy = false`：不部署（自己维护 FOMOD、模组未安装、产物落点特殊）
+
+推不出且没写 `deploy` 时报错退出（`--list` 只警告）。
 
 ## 代码约定
 
