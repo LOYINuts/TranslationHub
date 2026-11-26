@@ -54,6 +54,7 @@ encoding = "utf-8"
 [[line]]
 dir = "menu_translation/fuck"
 source = "interface/translations/FUCK_ENGLISH.txt"
+upstream = "Fuzz's Legally Intelligible Core Kit/Interface/Translations/FUCK_ENGLISH.txt"
 output = "interface/translations/FUCK_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
@@ -69,6 +70,7 @@ encoding = "utf16-le-bom"
 [[line]]
 dir = "menu_translation/fuck-qty"
 source = "interface/translations/FUCK-QTY_ENGLISH.txt"
+upstream = "Selling of Stacks or Singles/Interface/Translations/FUCK-QTY_ENGLISH.txt"
 output = "interface/translations/FUCK-QTY_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
@@ -76,6 +78,7 @@ encoding = "utf16-le-bom"
 [[line]]
 dir = "menu_translation/fuck-race"
 source = "interface/translations/FUCK-RACE_ENGLISH.txt"
+upstream = "Racemenu Enhancer/Interface/Translations/FUCK-RACE_ENGLISH.txt"
 output = "interface/translations/FUCK-RACE_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
@@ -178,6 +181,7 @@ package = "SKSE/Plugins/Translations/CustomMarkers_zh.txt"
 [[line]]
 dir = "other_translation/veldunui"
 source = "interface/translations/skyui_se_english.txt"
+upstream = "Vel'dun UI/Interface/translations/skyui_se_english.txt"
 output = "interface/translations/skyui_se_chinese.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
@@ -318,6 +322,7 @@ encoding = "utf16-le-bom"
 [[line]]
 dir = "menu_translation/show-player-in-inventory"
 source = "interface/translations/ShowPlayerInInventory_ENGLISH.txt"
+upstream = "Show Player In Inventory/Interface/Translations/ShowPlayerInInventory_ENGLISH.txt"
 output = "interface/translations/ShowPlayerInInventory_CHINESE.txt"
 sep = "\t"
 encoding = "utf16-le-bom"
@@ -391,52 +396,62 @@ source = "SKSE/Plugins/SwiftPotionNG_Translation.json"
 [[json]]
 dir = "menu_translation/time-control"
 source = "Viny Mods/Time Control/Language.json"
+upstream = "Time Control/Viny Mods/Time Control/Language.json"
 output = "Viny Mods/Time Control/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/time-is-ticking"
 source = "Viny Mods/Time is Ticking/Localization/en.json"
+upstream = "Time is Ticking/Viny Mods/Time is Ticking/Localization/en.json"
 output = "Viny Mods/Time is Ticking/Localization/zh.json"
 
 [[json]]
 dir = "menu_translation/input-manager"
 source = "Viny Mods/Input Manager/Language.json"
+upstream = "Input Manager/Viny Mods/Input Manager/Language.json"
 output = "Viny Mods/Input Manager/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/dmk"
 source = "Viny Mods/DMK/Language.json"
+upstream = "Directional Movement Keys - DMK/Viny Mods/DMK/Language.json"
 output = "Viny Mods/DMK/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/nve"
 source = "Viny Mods/NPC Visual/Language.json"
+upstream = "NPC Visual Editor - NVE/Viny Mods/NPC Visual/Language.json"
 output = "Viny Mods/NPC Visual/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/npc-stats-editor"
 source = "Viny Mods/NPC Stats Editor/Language.json"
+upstream = "NPC Stats Editor/Viny Mods/NPC Stats Editor/Language.json"
 output = "Viny Mods/NPC Stats Editor/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/npc-senses"
 source = "Viny Mods/NPC Senses/Language.json"
+upstream = "NPC Senses/Viny Mods/NPC Senses/Language.json"
 output = "Viny Mods/NPC Senses/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/dfg"
 source = "Viny Mods/Dynamic Forms Generator/Language.json"
+upstream = "Dynamic Forms Generator - DFG/Viny Mods/Dynamic Forms Generator/Language.json"
 output = "Viny Mods/Dynamic Forms Generator/Language_zh.json"
 
 [[json]]
 dir = "menu_translation/parry-for-all"
 source = "Viny Mods/Parry for all/Language.json"
+upstream = "Parry for all/Viny Mods/Parry for all/Language.json"
 output = "Viny Mods/Parry for all/Language_zh.json"
 translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/edf"
 source = "Viny Mods/EDF/Language.json"
+upstream = "Easy Distribution Framework - EDF/Viny Mods/EDF/Language.json"
 output = "Viny Mods/EDF/Language_zh.json"
 
 
@@ -449,6 +464,7 @@ output = "Viny Mods/INLOS/Language_zh.json"
 [[json]]
 dir = "menu_translation/quick-commands"
 source = "Viny Mods/Console Commands/Language.json"
+upstream = "Quick Commands/Viny Mods/Console Commands/Language.json"
 output = "Viny Mods/Console Commands/Language_zh.json"
 
 [[json]]
@@ -462,6 +478,7 @@ package = "Interface/Modex/language/chinese.json"
 [[json]]
 dir = "menu_translation/my-precious"
 source = "interface/translations/config.json"
+upstream = "MyPreciouses - MCM Addon/MCM/Config/MyPreciouses/config.json"
 output = "interface/translations/config_zh.json"
 
 [[json]]
@@ -490,6 +507,7 @@ output = "SKSE/Plugins/JusBlock_Language_zh.json"
 [[json]]
 dir = "menu_translation/quick-swap"
 source = "Viny Mods/Quick Swap/Language.json"
+upstream = "Quick Swap/Viny Mods/Quick Swap/Language.json"
 output = "Viny Mods/Quick Swap/Language_zh.json"
 
 [[json]]
@@ -502,18 +520,21 @@ package = "SKSE/Plugins/OutfitDist/Localization/zh-cn.json"
 [[json]]
 dir = "menu_translation/dodge-for-all"
 source = "SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json"
+upstream = "Dodge for all/SKSE/Plugins/Stats Tracker/Localization/DodgeAll.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/DodgeAll_zh.json"
 translation_section = "DodgeAll.json"
 
 [[json]]
 dir = "menu_translation/hmdp"
 source = "SKSE/Plugins/Stats Tracker/Localization/HMDP.json"
+upstream = "How many days passed - HMDP/SKSE/Plugins/Stats Tracker/Localization/HMDP.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/HMDP_zh.json"
 translation_section = "HMDP.json"
 
 [[json]]
 dir = "menu_translation/parry-for-all"
 source = "SKSE/Plugins/Stats Tracker/Localization/ParryAll.json"
+upstream = "Parry for all/SKSE/Plugins/Stats Tracker/Localization/ParryAll.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/ParryAll_zh.json"
 translation_section = "ParryAll.json"
 
@@ -527,48 +548,56 @@ translation_section = "STM_Localization.json"
 [[json]]
 dir = "menu_translation/trick-death"
 source = "SKSE/Plugins/Stats Tracker/Localization/TrickDeath.json"
+upstream = "Trick Death - A checkpoint and respawn system/SKSE/Plugins/Stats Tracker/Localization/TrickDeath.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/TrickDeath_zh.json"
 translation_section = "TrickDeath.json"
 
 [[json]]
 dir = "menu_translation/unblockable-hits"
 source = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json"
+upstream = "Unblockable Hits/SKSE/Plugins/Stats Tracker/Localization/UnblockableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UnblockableHits_zh.json"
 translation_section = "UnblockableHits.json"
 
 [[json]]
 dir = "menu_translation/undodgeable-hits"
 source = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json"
+upstream = "Undodgeable Hits/SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits.json"
 output = "SKSE/Plugins/Stats Tracker/Localization/UndodgeableHits_zh.json"
 translation_section = "UndodgeableHits.json"
 
 [[json]]
 dir = "menu_translation/trick-death"
 source = "Viny Mods/Trick Death/Language.json"
+upstream = "Trick Death - A checkpoint and respawn system/Viny Mods/Trick Death/Language.json"
 output = "Viny Mods/Trick Death/Language_zh.json"
 translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/trick-death"
 source = "Viny Mods/Trick Death/Localization/en.json"
+upstream = "Trick Death - A checkpoint and respawn system/Viny Mods/Trick Death/Localization/en.json"
 output = "Viny Mods/Trick Death/Localization/zh.json"
 translation_section = "en.json"
 
 [[json]]
 dir = "menu_translation/trick-death"
 source = "Viny Mods/Trick Death/Localization/DeathMessages.json"
+upstream = "Trick Death - A checkpoint and respawn system/Viny Mods/Trick Death/Localization/DeathMessages.json"
 output = "Viny Mods/Trick Death/Localization/DeathMessages_zh.json"
 translation_section = "DeathMessages.json"
 
 [[json]]
 dir = "menu_translation/unblockable-hits"
 source = "SKSE/Plugins/Unblock/Language.json"
+upstream = "https://raw.githubusercontent.com/vinymayan/Unblockable/main/Data/Viny%20Mods/Unblockable%20Hits/Language.json"
 output = "SKSE/Plugins/Unblock/Language_zh.json"
 translation_section = "Language.json"
 
 [[json]]
 dir = "menu_translation/undodgeable-hits"
 source = "SKSE/Plugins/Undodge/Language.json"
+upstream = "https://raw.githubusercontent.com/vinymayan/Undodgeable/main/Data/Viny%20Mods/Undodgeable%20Hits/Language.json"
 output = "SKSE/Plugins/Undodge/Language_zh.json"
 translation_section = "Language.json"
 
@@ -576,12 +605,14 @@ translation_section = "Language.json"
 [[json]]
 dir = "menu_translation/more-ragdoll"
 source = "Viny Mods/More Ragdoll/Language.json"
+upstream = "More Ragdoll Control/Viny Mods/More Ragdoll/Language.json"
 output = "Viny Mods/More Ragdoll/Language_zh.json"
 
 
 [[json]]
 dir = "menu_translation/dodge-for-all"
 source = "Viny Mods/Dodge for all/Language.json"
+upstream = "Dodge for all/Viny Mods/Dodge for all/Language.json"
 output = "Viny Mods/Dodge for all/Language_zh.json"
 translation_section = "Language.json"
 
@@ -767,6 +798,7 @@ package = "SKSE/Plugins/DynamicStringDistributor/skyrim.esm/SKMJ_skyrimwolffeed.
 [[json]]
 dir = "other_translation/risas"
 source = "SKSE/Plugins/RisaAllInOneMenu/Translations/en.json"
+upstream = "Risas All In One Menu/SKSE/Plugins/RisaAllInOneMenu/Translations/en.json"
 output = "SKSE/Plugins/RisaAllInOneMenu/Translations/zh-cn.json"
 translation_section = "RisaAllInOneMenu"
 package = "SKSE/Plugins/RisaAllInOneMenu/Translations/zh-cn.json"
@@ -774,6 +806,7 @@ package = "SKSE/Plugins/RisaAllInOneMenu/Translations/zh-cn.json"
 [[json]]
 dir = "other_translation/risas"
 source = "SKSE/Plugins/RisaUI/Translations/en.json"
+upstream = "Risas All In One Menu/SKSE/Plugins/RisaUI/Translations/en.json"
 output = "SKSE/Plugins/RisaUI/Translations/zh-cn.json"
 translation_section = "RisaUI"
 package = "SKSE/Plugins/RisaUI/Translations/zh-cn.json"
