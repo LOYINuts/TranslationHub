@@ -132,4 +132,3 @@
 - `oblivion-interaction-icons` 的 16 个 json 与 `Vel'dun UI/SKSE/Plugins/DynamicStringDistributor/` 下的副本字节一致，
   与 `[PATCH]Oblivion Interaction Icons` 版内容不同（本地多 `color='#989180'` 等属性），所以 `upstream` 按 Vel'dun UI 写。
 - `music-conductor`：仓库布局已改为与上游一致（`SKSE/Plugins/translations/`），基线已用 `--sync --yes` 重建。
-- `unblockable-hits`、`undodgeable-hits` 另有 `SKSE/Plugins/Stats Tracker/Rules/*.json`，未纳入配置。
