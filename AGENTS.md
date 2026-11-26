@@ -14,8 +14,8 @@ uv run sync_translation.py <name> --changed # 逐条列出原文变更的键与�
 uv run build_all.py --dry-run <name>
 uv run build_all.py <name>
 uv run verify_translation.py <name>
-uv run check_upstream.py <name>                # 源文件与上游比，有差异退出码 1
-uv run check_upstream.py <name> --write        # 拉上游覆盖本地源（默认走 127.0.0.1:7890）
+uv run check_upstream.py <name>             # 拉上游源覆盖本地，再跑 sync --check（退出码同 sync）
+uv run check_upstream.py <name> --dry       # 只比字节，不写（走 127.0.0.1:7890 代理）
 ```
 
 `<name>` 用 `mods.toml` 的 `dir` 或目录 basename。
@@ -28,7 +28,7 @@ uv run check_upstream.py <name> --write        # 拉上游覆盖本地源（默�
 
 | 类型 | 唯一可编辑源 | 产物 |
 |---|---|---|
-| line / json / qt | 模组目录 `translations.json` | 配置生成的 TXT/INI/JSON/TS |
+| line / json / qt | 模组目录 `translations.json` | 配置生成的 TXT/INI/JSON/TS（qt 另出 `qm`） |
 | xTranslator XML | `pending.json` | XML 的 `TRADUIT`，STATUS 记 `90` |
 | Description | `descriptionmods/translations.json` | 同目录 `*_zh.ini` |
 
@@ -41,7 +41,7 @@ Dialogue XML 不登记 `mods.toml`；Qt TS 不用基线，源文本即键。
 ## 加模组
 
 `mods.toml` 加 `[[line]]` / `[[json]]` / `[[qt]]`；不要在模组目录放脚本，不要在 Python 里维护模组列表。
-字段白名单（`sep`、`encoding`、`output_sep`、`value_field`、`translation_section`、glob 键格式）见 `translation-io`。
+字段白名单（`sep`、`encoding`、`output_sep`、`value_field`、`translation_section`、`qm`、`upstream`、glob 键格式）见 `translation-io`。
 全新模组先 `uv run sync_translation.py <name> --sync --yes` 生成英文骨架，补译后直接 build（手动建 `translations.json` 才需 `--accept-source`）。
 缺键未补齐时该命令不写基线，先补译再重跑；不要用 `--all` 接受全部英文变更。
 
@@ -70,6 +70,7 @@ uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
 `SKSE/Plugins/` 只打英文名（插件按固定名读）；两种内容都是中文。
 插件自解析文本（如 dMenu 的 `translations.txt`）：产物加 `_zh`，`package` 写回源文件名，安装即替换。
 更新译文后必须重新 `uv run package.py <name>`，再提交；`dist/` 不入库。
+`[[qt]]` 配了 `qm` 时，构建会调 `lrelease` 出 `qm`，`package` 写 qm 的落点（打包 qm，不是 ts）。
 
 ## 代码约定
 

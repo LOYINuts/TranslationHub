@@ -17,9 +17,16 @@ Edit only `translations.json`, then build. `descriptionmods` uses
   `sep` ∈ `"\t"` (default), `"="`, `" = "`, `"|"`, or `""` (any whitespace; pair with
   `output_sep = "\t"`). `encoding` ∈ `utf-8`, `utf-8-bom`, `utf16-le-bom` (default last).
 - `[[json]]`: `dir`, `source`, `output` (default `<source stem>_zh<ext>`),
-  `translation_section`, `package`. No `sep` / `encoding`; `translation_section` picks a
+  `translation_section`, `upstream`, `package`. No `sep` / `encoding`; `translation_section` picks a
   section when `translations.json` nests them.
-- `[[qt]]`: `dir`, `source`, `output`, `package`.
+- `[[qt]]`: `dir`, `source`, `output`, `qm`, `package`. `qm` makes the build run `lrelease`
+  after the TS; `package` must then point at the qm (packing the TS under a `.qm` name
+  produces a file QTranslator rejects silently).
+- `upstream` (any type): URL for `uv run check_upstream.py <mod>`. It overwrites the local
+  source byte-for-byte, then runs `sync_translation.py <mod> --check` and returns that exit
+  code, so missing keys / changed English are reported by the existing pipeline — no format
+  parsing here. `--dry` only compares bytes. Goes through the proxy `127.0.0.1:7890` unless
+  `UPSTREAM_PROXY` says otherwise.
 - Glob `source` (e.g. `*.ini`): output lands flat in `output` with a `_zh` suffix, keys are
   `<relative path>::<key>#<occurrence>`, `value_field` chooses the column to replace,
   `trim_trailing_fields = true` strips the fields after it.

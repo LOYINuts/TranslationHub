@@ -1,17 +1,20 @@
-"""检查 mods.toml 里配了 upstream 的模组，源文件在远端有没有变化。
+"""拉上游源文件覆盖本地，再交给 sync_translation 判断变没变。
+
+不解析格式：源文件原样覆盖，`sync_translation.py --check` 按条目类型自己比缺键 / 原文变更 / 无基线。
 
 用法：
-    uv run check_upstream.py orbit-menu-ng          # 只看差异，有变化退出码 1
-    uv run check_upstream.py orbit-menu-ng --write  # 拉取并覆盖本地源文件
+    uv run check_upstream.py orbit-menu-ng          # 拉取、有变化就覆盖、再跑 --check
+    uv run check_upstream.py orbit-menu-ng --dry    # 只比字节，不写文件
     uv run check_upstream.py --all                  # 所有配了 upstream 的模组
 
+退出码沿用 sync 的语义：0 无差异、1 有差异、2 网络或写入失败。
 默认走本地代理 http://127.0.0.1:7890，用 UPSTREAM_PROXY 覆盖（空字符串 = 直连）。
 """
 
 import argparse
-import json
 import logging
 import os
+import subprocess
 import sys
 import tomllib
 import urllib.request
@@ -34,7 +37,7 @@ def load_upstream_entries() -> list[dict]:
 
 
 def fetch(url: str) -> bytes:
-    """下载 upstream 文件，失败直接抛错（不静默当作没有更新）。"""
+    """下载 upstream 源文件，失败直接抛错（不静默当作没有更新）。"""
     proxy = os.environ.get("UPSTREAM_PROXY", DEFAULT_PROXY)
     opener = urllib.request.build_opener(
         urllib.request.ProxyHandler({"http": proxy, "https": proxy} if proxy else {})
@@ -44,84 +47,44 @@ def fetch(url: str) -> bytes:
         return response.read()
 
 
-def load_pairs(raw: bytes, label: str) -> dict[str, str]:
-    """把 JSON 拍平成 key -> 译文，非扁平结构就在路径里点开。"""
-    data = json.loads(raw.decode("utf-8"))
-    flat: dict[str, str] = {}
-
-    def walk(node, path: str = "") -> None:
-        if isinstance(node, dict):
-            for key, value in node.items():
-                walk(value, f"{path}.{key}" if path else key)
-        elif isinstance(node, list):
-            for index, value in enumerate(node):
-                walk(value, f"{path}[{index}]")
-        elif isinstance(node, str):
-            flat[path] = node
-
-    walk(data)
-    if not flat:
-        raise ValueError(f"{label}: 没有可比较的字符串")
-    return flat
+def run_check(mod_dir: str) -> int:
+    """写完后用 sync_translation 判断差异，返回它的退出码。"""
+    result = subprocess.run(
+        [sys.executable, "sync_translation.py", mod_dir, "--check"], cwd=repo_root()
+    )
+    return result.returncode
 
 
-def diff(local: dict[str, str], remote: dict[str, str]) -> tuple[list, list, list]:
-    added = sorted(remote.keys() - local.keys())
-    removed = sorted(local.keys() - remote.keys())
-    changed = sorted(key for key in local.keys() & remote.keys() if local[key] != remote[key])
-    return added, removed, changed
-
-
-def _show(title: str, keys: list[str], remote: dict[str, str]) -> None:
-    if not keys:
-        return
-    log.warning(f"[{title}] {len(keys)} 条")
-    for key in keys[:40]:
-        print(f"  {key} = {remote.get(key, '')!r}")
-    if len(keys) > 40:
-        print(f"  …还有 {len(keys) - 40} 条")
-
-
-def process(entry: dict, write: bool) -> bool:
-    """返回是否有差异。"""
-    mod_path = os.path.join(repo_root(), entry["dir"])
-    source_path = os.path.join(mod_path, entry["source"])
+def process(entry: dict, dry: bool) -> int:
+    """返回该模组的退出码：0 无差异、1 有差异、2 失败。"""
+    source_path = os.path.join(repo_root(), entry["dir"], entry["source"])
     log.info("检查模组: %s (%s)", entry["dir"], entry["upstream"])
     raw = fetch(entry["upstream"])
-    remote = load_pairs(raw, "upstream")
-    if not os.path.exists(source_path):
-        log.warning("[缺文件] 本地源不存在: %s", entry["source"])
-        if write:
-            write_source(source_path, raw)
-        return True
-    with open(source_path, "rb") as file:
-        local = load_pairs(file.read(), "local")
-    added, removed, changed = diff(local, remote)
-    if not (added or removed or changed):
-        log.info("[OK] 与 upstream 一致（%d 条）", len(remote))
-        return False
-    _show("新增", added, remote)
-    _show("删除", removed, remote)
-    _show("英文改动", changed, remote)
-    if write:
-        write_source(source_path, raw)
-        log.info("[写入] %s", entry["source"])
-    else:
-        log.warning("本地源与 upstream 不同，加 --write 拉取")
-    return True
-
-
-def write_source(path: str, raw: bytes) -> None:
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "wb") as file:
-        file.write(raw if raw.endswith(b"\n") else raw + b"\n")
+    local = b""
+    if os.path.exists(source_path):
+        with open(source_path, "rb") as file:
+            local = file.read()
+    if local == raw:
+        log.info("[OK] 与 upstream 一致")
+        return 0
+    log.warning(
+        "[变化] upstream %d 字节 / 本地 %d 字节", len(raw), len(local)
+    )
+    if dry:
+        log.warning("--dry：没有写入，去掉 --dry 才覆盖")
+        return 1
+    os.makedirs(os.path.dirname(source_path), exist_ok=True)
+    with open(source_path, "wb") as file:
+        file.write(raw)
+    log.info("[写入] %s", entry["source"])
+    return run_check(entry["dir"])
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="检查配了 upstream 的模组源文件是否有更新")
+    parser = argparse.ArgumentParser(description="拉取 upstream 源文件并检查译文差异")
     parser.add_argument("names", nargs="*", help="模组目录或 basename，留空等于 --all")
     parser.add_argument("--all", action="store_true", help="检查所有配了 upstream 的模组")
-    parser.add_argument("--write", action="store_true", help="把 upstream 内容写入本地源文件")
+    parser.add_argument("--dry", action="store_true", help="只比字节，不覆盖本地源")
     parser.add_argument("--verbose", action="store_true", help="输出 DEBUG 日志")
     args = parser.parse_args()
     setup_cli_logging(args.verbose)
@@ -133,17 +96,16 @@ def main() -> int:
         log.warning("没有配 upstream 的模组")
         return 0
 
-    changed = 0
-    failed = 0
+    codes = []
     for entry in entries:
         try:
-            changed += 1 if process(entry, args.write) else 0
-        except Exception as error:  # 网络或格式错误要说清是哪个模组
+            codes.append(process(entry, args.dry))
+        except Exception as error:  # 网络或写入错误要说清是哪个模组
             log.error("%s: %s", entry["dir"], error)
-            failed += 1
-    if failed:
+            codes.append(2)
+    if 2 in codes:
         return 2
-    return 1 if changed else 0
+    return 1 if 1 in codes else 0
 
 
 if __name__ == "__main__":
