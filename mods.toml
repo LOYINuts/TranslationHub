@@ -565,6 +565,7 @@ package = "SKSE/Plugins/ppa-translations/chinese.json"
 dir = "menu_translation/orbit-menu-ng"
 source = "SKSE/Plugins/Orbit Menu/lang/Orbit Menu Translation Example.json"
 output = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
+upstream = "https://raw.githubusercontent.com/Abi822/Orbit-Menu-NG/main/lang/Orbit%20Menu%20Translation%20Example.json"
 package = "SKSE/Plugins/Orbit Menu/lang/chinese.json"
 
 [[qt]]

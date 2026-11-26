@@ -14,6 +14,8 @@ uv run sync_translation.py <name> --changed # 逐条列出原文变更的键与�
 uv run build_all.py --dry-run <name>
 uv run build_all.py <name>
 uv run verify_translation.py <name>
+uv run check_upstream.py <name>                # 源文件与上游比，有差异退出码 1
+uv run check_upstream.py <name> --write        # 拉上游覆盖本地源（默认走 127.0.0.1:7890）
 ```
 
 `<name>` 用 `mods.toml` 的 `dir` 或目录 basename。
