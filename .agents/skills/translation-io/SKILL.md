@@ -49,8 +49,7 @@ Edit only `translations.json`, then build. `descriptionmods` uses
 
 ## New or unconfigured folders
 
-1. List files with `rg --files <mod-dir>`. Do not use Pi `read` before you
-   know the encoding.
+1. List files with `rg --files <mod-dir>`.
 2. For likely text files, run:
    `uv run locale_utils.py detect PATH`
    `uv run locale_utils.py dump PATH`

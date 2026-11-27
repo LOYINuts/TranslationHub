@@ -7,7 +7,7 @@ dialogue_mod_translation/<mod>/Something_XXXXXXXX.xml
 ```
 
 Tell the agent "Translate smalltalk" or "Translate this XML". Follow
-`.agents/skills/dialogue-xml/SKILL.md` for the process and
+`AGENTS.md` for the workflow and
 `.agents/skills/game-translation/SKILL.md` for translation style.
 
 手工命令：

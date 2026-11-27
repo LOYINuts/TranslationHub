@@ -1,101 +1,47 @@
 # TranslationHub 项目规范
 
-命令、文件角色、编码与提交规则的唯一来源。翻译风格见 `game-translation`（动译文前先加载），文件读写与新模组准入见
-`translation-io`，XML 见 `dialogue-xml`（按需加载）。
+英文源文件是全部输入，`translations.json` 是唯一可编辑源；产物与英文源只读，
+`.translations.source.json` 由 `sync_translation.py` 维护。风格见 `game-translation`，
+字段、编码与 `upstream` 见 `translation-io`。
 
-## 门禁
+## 翻译一个模组
 
-任一非零退出码即失败，只看退出码。
-
-```bash
-uv run check_all.py                         # 全量：空目录 → 自检 → bdd --check → sync → build → verify
-uv run sync_translation.py <name> --check   # 缺键 / 原文变更 / 无基线，命中都非零
-uv run sync_translation.py <name> --changed # 逐条列出原文变更的键与现译文，只读
-uv run build_all.py --dry-run <name>
-uv run build_all.py <name>
-uv run verify_translation.py <name>
-uv run check_upstream.py <name>             # 拉上游源覆盖本地，再跑 sync --check（退出码同 sync）
-uv run check_upstream.py <name> --dry       # 只比字节，不写
-```
-
-`<name>` 用 `mods.toml` 的 `dir` 或目录 basename。
-
-`upstream` 可为 URL 或本机路径：绝对路径直用，相对路径按 `mods.toml` 的 `[upstream] local_roots`
-逐个拼（MO2 mods 目录），先找到先用；URL 走 `127.0.0.1:7890` 代理（`UPSTREAM_PROXY` 可改）。
-`upstream` 指向 `.bsa` 时，按条目自己的 `source` 路径从包里取同名文件（仓库目录与包内结构一致），
-解包调 `BSARCH_EXE`（默认 `F:/games/MO2TOOLS/BSArch/BSArch.exe`）。
-
-上游改文案后：`--check` 看有几条 `[变更]` → `--changed` 逐条核对并改 `translations.json` →
-`--sync` 补新键 → 译新键 → `--accept-source` 让基线接受新英文 → build → verify。
-`--sync` 不接受已有键的英文变更，`--accept-source` 不动 `translations.json`；`--changed` 不能与其他写命令同用。
-
-## 文件角色
-
-| 类型 | 唯一可编辑源 | 产物 |
-|---|---|---|
-| line / json / qt | 模组目录 `translations.json` | 配置生成的 TXT/INI/JSON/TS（qt 另出 `qm`） |
-| xTranslator XML | `pending.json` | XML 的 `TRADUIT`，STATUS 记 `90` |
-| Description | `descriptionmods/translations.json` | 同目录 `*_zh.ini` |
-
-产物与英文源只读；`.translations.source.json` 由 `sync_translation.py` 维护，不手改。
-Dialogue XML 不登记 `mods.toml`；Qt TS 不用基线，源文本即键。
-目录名小写、无空格、多词连字符（`input-manager`）。游戏路径只由 `source` / `output` / `package` 决定；
-`menu_translation/` 下 MCM 与 SKSE Menu Framework 的区别只看 `mods.toml` 条目，不按目录名推断，
-换框架只改路径与字段，目录不动。
-
-## 加模组
-
-`mods.toml` 加 `[[line]]` / `[[json]]` / `[[qt]]`；不要在模组目录放脚本，不要在 Python 里维护模组列表。
-字段白名单（`sep`、`encoding`、`output_sep`、`value_field`、`translation_section`、`qm`、`upstream`、glob 键格式）见 `translation-io`。
-全新模组先 `uv run sync_translation.py <name> --sync --yes` 生成英文骨架，补译后直接 build（手动建 `translations.json` 才需 `--accept-source`）。
-缺键未补齐时该命令不写基线，先补译再重跑；不要用 `--all` 接受全部英文变更。
-
-## Dialogue XML
-
-顺序 `stats → pending --fill-bdd → apply → stats`：
+`<name>` = `mods.toml` 的 `dir` 或目录 basename；类型只由 `mods.toml` 条目决定。
 
 ```bash
-uv run dialogue_mod_translation/translate.py stats <xml>
-uv run dialogue_mod_translation/translate.py pending <xml> --fill-bdd
-uv run dialogue_mod_translation/translate.py apply <mod>/pending.json
+uv run sync_translation.py <name> --check       # 已有：缺键 / 原文变更 / 无基线，命中非零
+uv run sync_translation.py <name> --sync --yes  # 新模组：生成英文骨架（缺键未补齐不写基线）
+uv run build_all.py <name> && uv run verify_translation.py <name>
+uv run package.py <name>                        # dist/ + 部署到 MO2 汉化目录
 ```
 
-`bdd.tsv` 是带引号的 TSV，字段可跨行，只用 `translate.py bdd` 维护。
+| 源 | 只改这里 |
+|---|---|
+| line / json / qt | 模组目录 `translations.json`（qt 源文本即键，无基线） |
+| Description | `descriptionmods/translations.json` |
 
-## 打包
+上游改文案：`--check` → `--changed` 核对 → `--sync` 补新键 → `--accept-source` 接受新英文；
+`--changed` 不能与其他写命令同用。新模组在 `mods.toml` 加 `[[line]]` / `[[json]]` / `[[qt]]`，
+不要在模组目录放脚本，不要在 Python 里维护模组列表，字段白名单见 `translation-io`。
+专有名词查全局表 `bdd.tsv`（grup / original / traduit，只读）：`rg -N "\tX\t" bdd.tsv`。
 
-```bash
-uv run package.py <name>              # 构建 + dist/<name>/ + 同步到 MO2 汉化目录
-uv run package.py <name> --list       # 只看计划（含部署目标），不写文件
-uv run package.py <name> --no-deploy  # 只出 dist/
-uv run package.py --all --archive     # 全量，额外压 dist/<name>.7z
-```
+## 提交前
 
-落点取 `mods.toml` 的 `package`（可多个）；未写时按 `output` 推导：带 `interface/` / `SKSE/` 前缀直接沿用，
-否则拼 `interface/translations/` 并警告。`interface/translations/` 的英文名与中文名都打包，
-`SKSE/Plugins/` 只打英文名（插件按固定名读）；两种内容都是中文。
-插件自解析文本（如 dMenu 的 `translations.txt`）：产物加 `_zh`，`package` 写回源文件名，安装即替换。
-更新译文后必须重新 `uv run package.py <name>`，再提交；`dist/` 不入库。
-`[[qt]]` 配了 `qm` 时，构建会调 `lrelease` 出 `qm`，`package` 写 qm 的落点（打包 qm，不是 ts）。
+`uv run check_all.py`（全量：空目录 → 自检 → sync → build → verify → package --list）退出码 0 才提交。
+只暂存本次相关文件；禁止强推，远端正分叉先整合。
 
-## 部署到 MO2
+## 打包与部署
 
-打包后默认把 `dist/<name>/` 覆盖拷贝到 MO2 里对应的汉化目录（同名文件覆盖，不删多余文件）。
-目标默认由 `upstream` 的 MO2 目录名推导：找 `<目录> 汉化` / `<目录> 和光汉化`，先全名大小写不敏感匹配，
-再退到前缀匹配；唯一命中才用。
+落点取 `mods.toml` 的 `package`；未写时按 `output` 推导：带 `interface/` / `SKSE/` 前缀沿用，
+否则拼 `interface/translations/`。`interface/translations/` 英中同名都打，`SKSE/Plugins/`
+只打英文名（内容都是中文）；插件自解析文本（如 dMenu 的 `translations.txt`）产物加 `_zh`，
+`package` 写回源文件名。更新译文后必须重跑 `package.py`；`dist/` 不入库；`[[qt]]` 配了 `qm` 时打包 qm。
 
-例外在条目里写 `deploy`：
+部署默认把 `dist/<name>/` 覆盖到由 `upstream` 推导的 `<目录> 汉化`（或 `和光汉化`），
+例外写 `deploy = "<目录名>"` / `deploy = false`，推不出且没写报错退出（`--list` 只警告）。
 
-- `deploy = "<目录名>"`：手动指定（如 `dmenu-ng` 的 `dmenu NG 汉化`）
-- `deploy = false`：不部署（自己维护 FOMOD、模组未安装、产物落点特殊）
+## 约定
 
-推不出且没写 `deploy` 时报错退出（`--list` 只警告）。
-
-## 代码约定
-
-CLI 一律走 `config.setup_cli_logging`（UTF-8 stdout，`--verbose` 转 DEBUG），用具名 logger；
-`print` 只用于表格与用户提示，不打印 `translations.json` 的值（`--changed` 除外）。
-
-## 提交
-
-检查全过后提交并推送到当前分支跟踪的远端。只暂存本次相关文件，保留无关改动；禁止强推，远端正分叉时先整合。
+目录名小写连字符；`menu_translation/` 下 MCM 与 SKSE Menu Framework 的区别只看 `mods.toml` 条目，
+换框架只改路径与字段，目录不动。CLI 走 `config.setup_cli_logging`，`print` 只用于表格，
+不打印译文值（`--changed` 除外）。

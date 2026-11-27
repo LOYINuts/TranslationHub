@@ -16,8 +16,10 @@ only to chat.
 - Make dialogue sound spoken, keep UI concise, preserve imagery and voice in
   literary text. Use natural Chinese grammar, not literal English syntax or
   redundant pronouns and articles.
-- Terminology order: mod-local glossary or profile > nearby translations >
-  `bdd.tsv` (dialogue XML and place/weather names) > established game translations.
+- Terminology: reuse wording already in the same `translations.json` first.
+  For a proper noun (person, place, item, faction) look it up once:
+  `rg -N "\tAloe Vera\t" bdd.tsv` (`-i` for case-insensitive). If absent, decide
+  from context. Plain words, UI strings and descriptions need no lookup.
 - `perk` stays English unless the surrounding game context localizes the term.
 - Mod names, framework names, and tool names stay English (SimpleIME, Frostfall,
   AddItemMenu); translate their descriptions instead.
@@ -25,8 +27,6 @@ only to chat.
 ## Do not translate
 
 Keys, code, links, paths, numbers, units, comments, and structural fields.
-In SSE-AT DSD exports, `FACT` records stay English: faction names are normally
-not shown in game.
 Preserve placeholders and markup exactly, unless the source format translates
 them: `{name}`, `{0}`, `%s`, `%llu`, Qt `%1`, `$PLAYER$`, `<color>`, `[br]`,
 and literal `\n`.
