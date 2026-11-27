@@ -351,8 +351,9 @@ def main(argv=None):
     untranslated: set[tuple[str, str]] = set()
     for mod_dir, mod_type, config in tasks:
         if matches_filter(mod_dir, filters):
+            mod_path = os.path.join(root, mod_dir)
             untranslated.update(
-                (mod_dir, key) for key in untranslated_keys(mod_type, config, root)
+                (mod_dir, key) for key in untranslated_keys(mod_type, config, mod_path)
             )
     for mod_dir, key in sorted(untranslated):
         log.error(f"[未译] {mod_dir}: {key}")

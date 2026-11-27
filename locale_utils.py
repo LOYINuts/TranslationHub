@@ -5,6 +5,7 @@
 在多个翻译脚本中重复出现的功能。
 """
 
+import glob
 import json
 import os
 import re
@@ -75,6 +76,46 @@ def write_utf8(path: str, content: str) -> None:
     """以纯 UTF-8 格式写入文件（无 BOM）。"""
     with open(path, "wb") as f:
         f.write(content.encode("utf-8"))
+
+
+def glob_line_sources(mod_path: str, pattern: str) -> list[str]:
+    """匹配 glob 型 line 源文件，按路径排序并排除 _zh 产物。"""
+    paths = sorted(glob.glob(os.path.join(mod_path, pattern), recursive=True))
+    sources = [
+        path for path in paths
+        if os.path.isfile(path)
+        and not os.path.splitext(path)[0].endswith("_zh")
+    ]
+    if not sources:
+        raise FileNotFoundError(f"没有文件匹配: {pattern}")
+    return sources
+
+
+def iter_glob_line_entries(
+    source_path: str,
+    mod_path: str,
+    sep: str,
+    value_field: int,
+    *,
+    strict: bool = False,
+):
+    """逐行解析 glob 型 line 文件，产出 (原始行, 作用域键或 None, 拆分字段或 None)。"""
+    relative = os.path.relpath(source_path, mod_path).replace(os.sep, "/")
+    occurrences: dict[str, int] = {}
+    for line in read_lines(source_path):
+        if not line or sep not in line:
+            yield line, None, None
+            continue
+        fields = line.split(sep)
+        if value_field >= len(fields):
+            if strict:
+                raise ValueError(f"Missing field {value_field}: {relative}")
+            yield line, None, None
+            continue
+        key = fields[0].strip()
+        index = occurrences.get(key, 0)
+        occurrences[key] = index + 1
+        yield line, f"{relative}::{key}#{index}", fields
 
 
 def split_line(line: str, sep: str | None = "\t") -> tuple[str | None, str]:
@@ -249,6 +290,12 @@ def _self_check() -> None:
         assert translation_format_issues("<font color='red'>x</font>", "<font color='red'>中</font>") == []
         assert translation_format_issues("a[br]b", "甲[br]乙") == []
         assert translation_format_issues("a[br]b", "甲乙") == ["placeholder or tag mismatch"]
+        write_utf8(os.path.join(dir_.name, "a.ini"), "k|v1\nk|v2\n")
+        write_utf8(os.path.join(dir_.name, "a_zh.ini"), "k|忽略\n")
+        sources = glob_line_sources(dir_.name, "*.ini")
+        assert [os.path.basename(p) for p in sources] == ["a.ini"]
+        entries = list(iter_glob_line_entries(sources[0], dir_.name, "|", 1))
+        assert [(k, f) for _, k, f in entries] == [("a.ini::k#0", ["k", "v1"]), ("a.ini::k#1", ["k", "v2"])]
     finally:
         dir_.cleanup()
     print("ok")

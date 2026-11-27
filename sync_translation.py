@@ -26,7 +26,14 @@ from config import (
     matches_filter,
     setup_cli_logging,
 )
-from locale_utils import load_json, read_lines, read_text, split_line
+from locale_utils import (
+    glob_line_sources,
+    iter_glob_line_entries,
+    load_json,
+    read_lines,
+    read_text,
+    split_line,
+)
 from source_baseline import (
     compare_baseline,
     describe_baseline,
@@ -85,29 +92,12 @@ def find_missing_keys(
     is_glob = glob.has_magic(mod_config.source)
     if is_glob:
         source_keys = {}
-        source_paths = sorted(glob.glob(os.path.join(mod_path, mod_config.source), recursive=True))
-        # 产物带 _zh 后缀，同目录时会混进 glob 结果，按后缀排除
-        source_paths = [
-            path for path in source_paths
-            if os.path.isfile(path)
-            and not os.path.splitext(path)[0].endswith("_zh")
-        ]
-        if not source_paths:
-            raise FileNotFoundError(f"没有文件匹配: {mod_config.source}")
-        for source_path in source_paths:
-            relative = os.path.relpath(source_path, mod_path).replace(os.sep, "/")
-            occurrences = {}
-            for line in read_lines(source_path):
-                if mod_config.sep not in line:
-                    continue
-                fields = line.split(mod_config.sep)
-                if mod_config.value_field >= len(fields):
-                    continue
-                key = fields[0].strip()
-                index = occurrences.get(key, 0)
-                occurrences[key] = index + 1
-                glob_key = f"{relative}::{key}#{index}"
-                source_keys[glob_key] = fields[mod_config.value_field].strip()
+        for source_path in glob_line_sources(mod_path, mod_config.source):
+            for _line, glob_key, fields in iter_glob_line_entries(
+                source_path, mod_path, mod_config.sep, mod_config.value_field, strict=False
+            ):
+                if glob_key is not None:
+                    source_keys[glob_key] = fields[mod_config.value_field].strip()
     else:
         source_path = os.path.join(mod_path, mod_config.source)
         if not os.path.exists(source_path):
@@ -223,9 +213,15 @@ def sync_translations(
         else:
             target[key] = target_value
         added.add(key)
-    with open(trans_path, "w", encoding="utf-8") as f:
-        json.dump(translations, f, ensure_ascii=False, indent=2)
-        f.write("\n")
+    tmp_path = trans_path + ".tmp"
+    try:
+        with open(tmp_path, "w", encoding="utf-8", newline="\n") as f:
+            json.dump(translations, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        os.replace(tmp_path, trans_path)
+    finally:
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)
     log.info(f"已更新 {trans_path}，新增 {len(added)} 条")
     return added
 

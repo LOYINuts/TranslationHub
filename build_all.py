@@ -32,6 +32,8 @@ from config import (
 )
 from locale_utils import (
     WRITE_ENCODINGS,
+    glob_line_sources,
+    iter_glob_line_entries,
     load_json,
     read_lines,
     read_text,
@@ -118,33 +120,17 @@ def render_line_group(cfg: ModConfig, root_dir: str) -> tuple[list[tuple[str, st
     trans_path = os.path.join(mod_path, "translations.json")
     translations = load_json(trans_path)
     output_root = os.path.join(mod_path, cfg.output)
-    source_paths = sorted(glob.glob(os.path.join(mod_path, cfg.source), recursive=True))
-    # 产物带 _zh 后缀，同目录时会混进 glob 结果，按后缀排除
-    source_paths = [
-        path for path in source_paths
-        if os.path.isfile(path)
-        and not os.path.splitext(path)[0].endswith("_zh")
-    ]
-    if not source_paths:
-        raise FileNotFoundError(f"No files match: {os.path.join(mod_path, cfg.source)}")
     artifacts = []
     used = set()
     count = 0
-    for source_path in source_paths:
-        relative = os.path.relpath(source_path, mod_path).replace(os.sep, "/")
-        occurrences = {}
+    for source_path in glob_line_sources(mod_path, cfg.source):
         output_lines = []
-        for line in read_lines(source_path):
-            if not line or (line.startswith("#") and cfg.sep not in line) or cfg.sep not in line:
+        for line, lookup, fields in iter_glob_line_entries(
+            source_path, mod_path, cfg.sep, cfg.value_field, strict=True
+        ):
+            if lookup is None:
                 output_lines.append(line)
                 continue
-            fields = line.split(cfg.sep)
-            if cfg.value_field >= len(fields):
-                raise ValueError(f"Missing field {cfg.value_field}: {relative}")
-            key = fields[0].strip()
-            index = occurrences.get(key, 0)
-            occurrences[key] = index + 1
-            lookup = f"{relative}::{key}#{index}"
             if lookup not in translations:
                 raise ValueError(f"Missing translation: {lookup}")
             translated = translations[lookup]

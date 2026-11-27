@@ -36,6 +36,7 @@ from config import (
     matches_filter,
     setup_cli_logging,
 )
+from locale_utils import glob_line_sources
 
 log = logging.getLogger(__name__)
 
@@ -189,12 +190,8 @@ def plan_line(cfg: ModConfig) -> list[PackItem]:
             return _resolve(cfg, cfg.output, cfg.package)
         items = []
         mod_path = os.path.join(REPO, cfg.dir)
-        for source in sorted(glob.glob(os.path.join(mod_path, cfg.source), recursive=True)):
-            if not os.path.isfile(source):
-                continue
+        for source in glob_line_sources(mod_path, cfg.source):
             stem, ext = os.path.splitext(os.path.basename(source))
-            if stem.endswith("_zh"):
-                continue
             built = os.path.normpath(os.path.join(cfg.output, f"{stem}_zh{ext}"))
             # 游戏读的是源文件名，打包时去掉 _zh 后缀，与源同名
             items.append(PackItem(built=built, package_path=f"{stem}{ext}"))
