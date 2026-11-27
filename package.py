@@ -28,7 +28,14 @@ import sys
 import tomllib
 from dataclasses import dataclass
 
-from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
+from config import (
+    ModConfig,
+    ModJson,
+    ModQt,
+    load_repo_configs,
+    matches_filter,
+    setup_cli_logging,
+)
 
 log = logging.getLogger(__name__)
 
@@ -272,7 +279,7 @@ def pack_group(mod_dir: str, items: list[PackItem], archive: bool,
             os.remove(archive_path)
         result = subprocess.run(
             [seven_zip, "a", "-t7z", "-mx=9", archive_path, "."],
-            cwd=stage, capture_output=True, text=True,
+            cwd=stage, capture_output=True, text=True, check=False,
         )
         if result.returncode != 0:
             log.error(f"[失败] 压缩 {mod_name}: {result.stderr.strip()[:200]}")
@@ -321,16 +328,11 @@ def main() -> int:
 
     if not args.skip_build and not args.list:
         log.info("先构建产物")
-        from build_all import main as build_main
-        build_args = ["build_all.py"] + [c.dir for c in targets]
-        old_argv = sys.argv
-        try:
-            sys.argv = build_args
-            if build_main() != 0:
-                log.error("构建失败，终止打包")
-                return 1
-        finally:
-            sys.argv = old_argv
+        command = [sys.executable, os.path.join(REPO, "build_all.py")] + [c.dir for c in targets]
+        result = subprocess.run(command, cwd=REPO, check=False)
+        if result.returncode != 0:
+            log.error("构建失败，终止打包")
+            return 1
 
     if not args.list:
         os.makedirs(DIST, exist_ok=True)

@@ -18,7 +18,14 @@ import re
 import xml.etree.ElementTree as ET
 
 from build_all import flatten_json_values
-from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
+from config import (
+    ModConfig,
+    ModJson,
+    ModQt,
+    load_repo_configs,
+    matches_filter,
+    setup_cli_logging,
+)
 from locale_utils import load_json, read_lines, read_text, split_line
 from source_baseline import (
     compare_baseline,

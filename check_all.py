@@ -1,4 +1,4 @@
-"""一次性本地门禁：自检 + 词典检查 + 同步检查 + 构建 + 校验。
+"""一次性本地门禁：lint + 自检 + 词典检查 + 同步检查 + 构建 + 校验。
 
 用法：
   uv run check_all.py              # 全部门禁
@@ -43,7 +43,6 @@ STRUCTURE_ROOTS = (
     "other_translation",
     "descriptionmods",
     "dialogue_mod_translation",
-    "eslifer",
 )
 
 SKIP_DIRS = {"__pycache__", ".git", ".venv"}
@@ -95,7 +94,7 @@ def run(script: str, *args: str, verbose: bool = False) -> int:
     if verbose:
         command.append("--verbose")
     log.info("uv run %s", " ".join((script, *args, *(["--verbose"] if verbose else []))))
-    result = subprocess.run(command, cwd=ROOT)
+    result = subprocess.run(command, cwd=ROOT, check=False)
     if result.returncode != 0:
         log.error("%s %s -> exit %d", script, " ".join(args), result.returncode)
     return result.returncode
@@ -108,13 +107,18 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     setup_cli_logging(verbose=args.verbose)
 
-    steps = [("__structure__",)]
+    steps = [("__lint__",), ("__structure__",)]
     steps += list(SELF_CHECKS)
     if not args.self_check:
         steps += list(GATE)
 
     for step in steps:
-        if step == ("__structure__",):
+        if step == ("__lint__",):
+            # ruff 是 dev 依赖，版本锁在 uv.lock，规则集随版本变化需重跑 --fix
+            code = subprocess.run(
+                [sys.executable, "-m", "ruff", "check", "."], cwd=ROOT, check=False
+            ).returncode
+        elif step == ("__structure__",):
             code = check_structure()
         else:
             code = run(*step, verbose=args.verbose)

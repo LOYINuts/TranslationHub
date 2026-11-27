@@ -22,7 +22,14 @@ import subprocess
 import tomllib
 import xml.etree.ElementTree as ET
 
-from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
+from config import (
+    ModConfig,
+    ModJson,
+    ModQt,
+    load_repo_configs,
+    matches_filter,
+    setup_cli_logging,
+)
 from locale_utils import (
     WRITE_ENCODINGS,
     load_json,
@@ -313,7 +320,7 @@ def release_qt_qm(ts_path: str, qm_path: str) -> None:
     if not exe:
         raise RuntimeError("未找到 lrelease：uv sync 装 PySide6-Essentials，或设置 LRELEASE")
     result = subprocess.run(
-        [exe, "-silent", ts_path, "-qm", qm_path], capture_output=True, text=True, encoding="utf-8", errors="replace"
+        [exe, "-silent", ts_path, "-qm", qm_path], capture_output=True, text=True, encoding="utf-8", errors="replace", check=False
     )
     if result.returncode != 0:
         raise RuntimeError(f"lrelease 失败：{result.stderr.strip() or result.stdout.strip()}")
@@ -576,7 +583,6 @@ def main():
 本地门禁 (sync→build→verify, 非零即失败):
   uv run sync_translation.py <mod> --check
   uv run build_all.py --dry-run <mod> && uv run build_all.py <mod> && uv run verify_translation.py <mod>
-对话 XML 另走 translate.py: stats → pending --fill-bdd → apply → stats
 '''
     )
     parser.add_argument('mods', nargs='*', help='要构建的模组（完整路径或 basename），留空则构建所有')

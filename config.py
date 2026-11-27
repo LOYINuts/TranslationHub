@@ -167,9 +167,9 @@ def load_configs_from_toml(toml_path: str) -> tuple[list[ModConfig], list[ModJso
         json_configs.append(cfg)
     qt_configs = []
     for idx, item in enumerate(data.get("qt", [])):
-        for field in ("dir", "source", "output"):
-            if field not in item:
-                raise ValueError(f"qt[{idx}]: missing required field '{field}'")
+        for name in ("dir", "source", "output"):
+            if name not in item:
+                raise ValueError(f"qt[{idx}]: missing required field '{name}'")
         qt_configs.append(
             ModQt(
                 dir=item["dir"],

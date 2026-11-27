@@ -83,7 +83,7 @@ def read_bsa_member(archive: str, member: str) -> bytes:
         raise FileNotFoundError(f"找不到 BSArch: {bsarch}（用 BSARCH_EXE 覆盖）")
     with tempfile.TemporaryDirectory() as tmp:
         result = subprocess.run(
-            [bsarch, "unpack", archive, tmp], capture_output=True, text=True
+            [bsarch, "unpack", archive, tmp], capture_output=True, text=True, check=False
         )
         if result.returncode != 0:
             raise RuntimeError(f"BSArch 解包失败: {result.stderr.strip() or result.stdout.strip()}")
@@ -97,7 +97,7 @@ def read_bsa_member(archive: str, member: str) -> bytes:
 def run_check(mod_dir: str) -> int:
     """写完后用 sync_translation 判断差异，返回它的退出码。"""
     result = subprocess.run(
-        [sys.executable, "sync_translation.py", mod_dir, "--check"], cwd=repo_root()
+        [sys.executable, "sync_translation.py", mod_dir, "--check"], cwd=repo_root(), check=False
     )
     return result.returncode
 
@@ -151,7 +151,7 @@ def main() -> int:
     for entry in entries:
         try:
             codes.append(process(entry, roots, args.dry))
-        except Exception as error:  # 网络或写入错误要说清是哪个模组
+        except Exception as error:  # noqa: BLE001 —— 网络/写入错误逐模组报告后继续
             log.error("%s: %s", entry["dir"], error)
             codes.append(2)
     if 2 in codes:

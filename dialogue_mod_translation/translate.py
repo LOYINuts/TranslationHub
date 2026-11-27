@@ -588,7 +588,7 @@ def _self_check() -> None:
     done = sample.replace("<TRADUIT />", "<TRADUIT>旧译</TRADUIT>").replace("<STATUS>0</STATUS>", "<STATUS>90</STATUS>")
     rewritten, n4 = rewrite_pending(done, pending)
     assert n4 == 1 and "<TRADUIT>你好&amp;我</TRADUIT>" in rewritten, rewritten
-    unchanged, n5 = rewrite_pending(rewritten, pending)
+    _, n5 = rewrite_pending(rewritten, pending)
     assert n5 == 0, "重复改写必须无变化"
 
     import tempfile

@@ -31,13 +31,13 @@ def source_key(kind: str, cfg) -> str:
 def _validate_sources(data: dict, path: str) -> dict:
     sources = data.get("sources")
     if not isinstance(sources, dict):
-        raise ValueError(f"英文基线缺少 sources 对象: {path}")
+        raise TypeError(f"英文基线缺少 sources 对象: {path}")
     for source, mapping in sources.items():
         if not isinstance(source, str) or not isinstance(mapping, dict):
-            raise ValueError(f"英文基线格式无效: {path}")
+            raise TypeError(f"英文基线格式无效: {path}")
         for key, value in mapping.items():
             if not isinstance(key, str) or not isinstance(value, str):
-                raise ValueError(f"英文基线条目格式无效: {path}")
+                raise TypeError(f"英文基线条目格式无效: {path}")
     return sources
 
 
@@ -48,7 +48,7 @@ def load_baseline(mod_path: str) -> dict:
         return {"version": BASELINE_VERSION, "sources": {}}
     data = load_json(path)
     if not isinstance(data, dict):
-        raise ValueError(f"英文基线必须是 JSON 对象: {path}")
+        raise TypeError(f"英文基线必须是 JSON 对象: {path}")
     if data.get("version") != BASELINE_VERSION:
         raise ValueError(f"英文基线版本不支持: {path}")
     _validate_sources(data, path)

@@ -30,8 +30,21 @@ from build_all import (
 )
 
 # ── 从 config.py 加载配置 ─────────────────────────────────────────────────
-from config import ModConfig, ModJson, ModQt, load_repo_configs, matches_filter, setup_cli_logging
-from locale_utils import detect_encoding, load_json, read_text, write_utf8, write_utf16le_bom
+from config import (
+    ModConfig,
+    ModJson,
+    ModQt,
+    load_repo_configs,
+    matches_filter,
+    setup_cli_logging,
+)
+from locale_utils import (
+    detect_encoding,
+    load_json,
+    read_text,
+    write_utf8,
+    write_utf16le_bom,
+)
 from source_baseline import (
     baseline_issues,
     baseline_path,
@@ -61,7 +74,7 @@ def verify_line_single(config, root: str) -> list[str]:
         missing, _, current = find_missing_keys(config, mod_path)
         expected, _, _ = render_line_one(config, root)
         baseline = baseline_issues("line", config, mod_path, current)
-    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+    except (OSError, ValueError, TypeError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] 无法重建行文件: {exc}"]
     issues = list(baseline)
     if missing:
@@ -82,7 +95,7 @@ def verify_line_group(config, root: str) -> list[str]:
         _, _, current = find_missing_keys(config, os.path.join(root, config.dir))
         artifacts, _, _ = render_line_group(config, root)
         baseline = baseline_issues("line", config, os.path.join(root, config.dir), current)
-    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+    except (OSError, ValueError, TypeError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] 无法重建行文件: {exc}"]
     expected = {os.path.normcase(path): content for path, content in artifacts}
     issues = list(baseline)
@@ -126,7 +139,7 @@ def verify_json_mod(mod_config, root: str) -> list[str]:
         expected, _, _ = render_json_one(mod_config, root)
         actual = load_json(os.path.join(mod_path, mod_config.output))
         baseline = baseline_issues("json", mod_config, mod_path, current)
-    except (OSError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+    except (OSError, ValueError, TypeError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         return [f"[错误] JSON 无法验证: {exc}"]
     issues = list(baseline)
     if missing:
@@ -210,7 +223,7 @@ def _self_check() -> None:
         issues = verify_json_mod(cfg, root)
         assert any(issue.startswith("[过期]") for issue in issues), issues
         assert not any(
-            issue.startswith("[变更]") or issue.startswith("[未基线]") for issue in issues
+            issue.startswith(("[变更]", "[未基线]")) for issue in issues
         ), issues
 
         changed, unbaselined, initialized = compare_baseline(
