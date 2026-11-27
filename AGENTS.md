@@ -25,9 +25,18 @@ uv run package.py <name>                        # dist/ + 部署到 MO2 汉化�
 不要在模组目录放脚本，不要在 Python 里维护模组列表，字段白名单见 `translation-io`。
 专有名词查全局表 `bdd.tsv`（grup / original / traduit，只读）：`rg -N "\tX\t" bdd.tsv`。
 
+## 上游更新
+
+`uv run check_upstream.py <name> [--dry]` 拉上游覆盖本地英文源，再自动跑 `--check`。
+退出码：0 无差异、1 有差异、2 网络/路径/失败；`--dry` 只比字节不写。
+URL 走 `UPSTREAM_PROXY`（默认 127.0.0.1:7890，空 = 直连）；`.bsa` 用 `BSARCH_EXE` 解包。
+变化落地后按上面「上游改文案」流程核对，并同步更新 `UPSTREAM.md` 台账对应行。
+
 ## 提交前
 
-`uv run check_all.py`（全量：空目录 → 自检 → sync → build → verify → package --list）退出码 0 才提交。
+`uv run check_all.py`（全量：lint → 空目录 → 自检 → sync → build → verify → package --list）退出码 0 才提交。
+提交信息 `type(scope): 中文描述`：type 取 feat/fix/chore/docs/refactor，scope 用模组短名或工具名
+（package/upstream/agents），一句话讲清变更，带数量更好（如「跟进上游 17 条新词条」）。
 只暂存本次相关文件；禁止强推，远端正分叉先整合。
 
 ## 打包与部署
@@ -45,3 +54,6 @@ uv run package.py <name>                        # dist/ + 部署到 MO2 汉化�
 目录名小写连字符；`menu_translation/` 下 MCM 与 SKSE Menu Framework 的区别只看 `mods.toml` 条目，
 换框架只改路径与字段，目录不动。CLI 走 `config.setup_cli_logging`，`print` 只用于表格，
 不打印译文值（`--changed` 除外）。
+
+`dsd/` 是随手翻的小东西（DSD 导出的 ESP 字符串），没接构建流程：直接改 JSON 里的 `string`
+字段即可，不建 mods.toml 条目，不用门禁。
