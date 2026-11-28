@@ -57,6 +57,9 @@ LanguageCombo=语言
 OtherMods=其他模组
 TrueHUD=TrueHUD 最近战利品
 QuickLoot=QuickLoot 战利品窗口
+PartySheetPacks=菜单中的 Party Sheet 物品图
+PartySheetPacksRecentLoot=最近战利品中的 Party Sheet 物品图
+RecentLootIconScale=最近战利品图标大小
 WorldMap=世界地图标记
 LocalMap=本地地图标记
 Rendering=渲染
@@ -102,6 +105,9 @@ MapMarkerLocal=本地地图
 
 [Presets]
 Default=默认
+PaperMap=纸质地图
+ItemColored=彩色
+ItemVivid=鲜艳
 
 [ItemTints]
 sItemWeapons=武器
@@ -152,3 +158,16 @@ sItemMiscArtifacts=神器
 sItemMiscClutter=杂物
 sItemMiscFirewood=木柴
 sItemMiscLockpicks=开锁器
+
+[MapTints]
+sMapCities=城市
+sMapTravel=旅行
+sMapDungeons=地下城
+sMapCamps=营地
+sMapIndustry=产业
+sMapLandmarks=地标
+sMapDwellings=住宅
+sMapQuests=任务
+sMapShops=商店
+sMapLoot=战利品
+sMapModded=模组

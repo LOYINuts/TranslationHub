@@ -122,5 +122,22 @@
   "Tabs.Menus": "菜单",
   "Tabs.Other": "其他",
   "Tabs.Stats": "统计",
-  "Tabs.Status": "状态图标"
+  "Tabs.Status": "状态图标",
+  "MapTints.sMapCamps": "营地",
+  "MapTints.sMapCities": "城市",
+  "MapTints.sMapDungeons": "地下城",
+  "MapTints.sMapDwellings": "住宅",
+  "MapTints.sMapIndustry": "产业",
+  "MapTints.sMapLandmarks": "地标",
+  "MapTints.sMapLoot": "战利品",
+  "MapTints.sMapModded": "模组",
+  "MapTints.sMapQuests": "任务",
+  "MapTints.sMapShops": "商店",
+  "MapTints.sMapTravel": "旅行",
+  "Other.PartySheetPacks": "菜单中的 Party Sheet 物品图",
+  "Other.PartySheetPacksRecentLoot": "最近战利品中的 Party Sheet 物品图",
+  "Other.RecentLootIconScale": "最近战利品图标大小",
+  "Presets.ItemColored": "彩色",
+  "Presets.ItemVivid": "鲜艳",
+  "Presets.PaperMap": "纸质地图"
 }

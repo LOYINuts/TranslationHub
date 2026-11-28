@@ -57,6 +57,9 @@ LanguageCombo=Language
 OtherMods=Other mods
 TrueHUD=TrueHUD Recent Loot
 QuickLoot=QuickLoot loot window
+PartySheetPacks=Party Sheet item art in menus
+PartySheetPacksRecentLoot=Party Sheet item art in Recent Loot
+RecentLootIconScale=Recent Loot icon size
 WorldMap=World map markers
 LocalMap=Local map markers
 Rendering=Rendering
@@ -102,6 +105,9 @@ MapMarkerLocal=Local map
 
 [Presets]
 Default=Default
+PaperMap=Paper map
+ItemColored=Colored
+ItemVivid=Vivid
 
 [ItemTints]
 sItemWeapons=Weapons
@@ -152,3 +158,16 @@ sItemMiscArtifacts=Artifacts
 sItemMiscClutter=Clutter
 sItemMiscFirewood=Firewood
 sItemMiscLockpicks=Lockpicks
+
+[MapTints]
+sMapCities=Cities
+sMapTravel=Travel
+sMapDungeons=Dungeons
+sMapCamps=Camps
+sMapIndustry=Industry
+sMapLandmarks=Landmarks
+sMapDwellings=Dwellings
+sMapQuests=Quests
+sMapShops=Shops
+sMapLoot=Loot
+sMapModded=Modded
