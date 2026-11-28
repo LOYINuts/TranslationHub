@@ -333,6 +333,8 @@ def main() -> int:
 
     if not args.list:
         os.makedirs(DIST, exist_ok=True)
+    else:
+        log.info("--list：只列计划，不写 dist，不部署")
 
     # 同一个模组目录下的多个配置条目要合成一个包
     grouped: dict[str, list[PackItem]] = {}
@@ -361,11 +363,14 @@ def main() -> int:
         if args.no_deploy:
             continue
         if deploy.get(mod_dir) is False:
-            log.info(f"[部署] {mod_dir}: 跳过（mods.toml 里 deploy = false）")
+            log.info(f"[{'部署计划' if args.list else '部署'}] {mod_dir}: 跳过（mods.toml 里 deploy = false）")
             continue
         target = resolve_deploy(mod_dir, root, deploy, upstream)
         if not target:
-            message = f"[部署] {mod_dir}: 找不到对应汉化目录，请在 mods.toml 里加 deploy = \"<目录名>\""
+            message = (
+                f"[{'部署计划' if args.list else '部署'}] {mod_dir}: 找不到对应汉化目录，"
+                "请在 mods.toml 里加 deploy = \"<目录名>\""
+            )
             if args.list:
                 log.warning(message)
             else:
@@ -376,7 +381,7 @@ def main() -> int:
             planned = [item.package_path for item in items]
             existing = [p for p in planned if os.path.exists(os.path.join(target, p))]
             log.info(
-                f"[部署] {mod_dir} -> {os.path.basename(target)}/（覆盖 {len(existing)} / 新增 "
+                f"[部署计划] {mod_dir} -> {os.path.basename(target)}/（覆盖 {len(existing)} / 新增 "
                 f"{len(planned) - len(existing)}）"
             )
             for path in planned:
