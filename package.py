@@ -4,7 +4,8 @@
 环境（读 `*_chinese.*` / `*_ZH.*`），所以两个文件都打包，内容都是中文。
 
 产物落到 dist/<mod>/；要 dist/<mod>.7z 就加 --archive。
-打包后还会同步一份到 MO2 里对应的汉化目录（`--no-deploy` 可关）。
+打包后还会同步一份到 MO2 里对应的汉化目录（`--no-deploy` 可关），
+并把汉化目录 meta.ini 的 `version=` 改成与本体一致。
 汉化目录名默认从 upstream 的 MO2 目录名推导（`<目录> 汉化` / `<目录> 和光汉化`），
 推不出来或对上多个时在 `mods.toml` 条目里写 `deploy = "<目录名>"` 指定。
 
@@ -22,6 +23,7 @@ import argparse
 import glob
 import logging
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -118,6 +120,43 @@ def resolve_deploy(mod_dir: str, root: str | None, deploy: dict[str, str | bool]
             break
     hits = exact or prefixed
     return hits[0] if len(hits) == 1 else None
+
+
+def read_version(meta_path: str) -> str | None:
+    """meta.ini 里的 version=；文件或字段缺失就返回 None。"""
+    try:
+        # newline="" 保住原有的 CRLF，不能依赖默认的通用换行（会把 \r 吃掉）
+        with open(meta_path, encoding="utf-8", errors="surrogateescape", newline="") as file:
+            text = file.read()
+    except OSError:
+        return None
+    match = re.search(r"^version=([^\r\n]*)", text, re.MULTILINE)
+    return match.group(1).strip() if match else None
+
+
+def sync_version(target: str, base: str) -> None:
+    """汉化目录 meta.ini 的 version 跟本体对齐，MO2 列表才不会显示旧版本。"""
+    version = read_version(os.path.join(base, "meta.ini"))
+    if not version:
+        log.debug("[版本] %s: 本体没有 version=，跳过", os.path.basename(base))
+        return
+    path = os.path.join(target, "meta.ini")
+    if read_version(path) == version:
+        return
+    try:
+        with open(path, encoding="utf-8", errors="surrogateescape", newline="") as file:
+            text = file.read()
+    except OSError:
+        text = ""
+    if re.search(r"^version=", text, re.MULTILINE):
+        text = re.sub(r"^version=[^\r\n]*", f"version={version}", text, count=1, flags=re.MULTILINE)
+    elif "[General]" in text:
+        text = text.replace("[General]", f"[General]\r\nversion={version}", 1)
+    else:
+        text = f"[General]\r\nversion={version}\r\n" + text
+    with open(path, "w", encoding="utf-8", errors="surrogateescape", newline="") as file:
+        file.write(text)
+    log.info("[版本] %s: version=%s", os.path.basename(target), version)
 
 
 def deploy_to(stage: str, target: str) -> int:
@@ -389,6 +428,9 @@ def main() -> int:
             continue
         count = deploy_to(os.path.join(DIST, dist_name(mod_dir)), target)
         log.info(f"[部署] {mod_dir} -> {os.path.basename(target)}/（{count} 个文件）")
+        base = os.path.join(root, upstream[mod_dir]) if root and mod_dir in upstream else None
+        if base and os.path.isdir(base):
+            sync_version(target, base)
 
     log.info(f"打包完成：{ok}/{len(grouped)}")
     if failed_deploy:
@@ -414,6 +456,29 @@ def _self_check() -> None:
         finally:
             log.disabled = False
             DIST = saved
+
+    with tempfile.TemporaryDirectory() as tmp:
+        log.disabled = True
+        try:
+            base = os.path.join(tmp, "base")
+            target = os.path.join(tmp, "target")
+            os.makedirs(base)
+            os.makedirs(target)
+            with open(os.path.join(base, "meta.ini"), "w", encoding="utf-8", newline="") as file:
+                file.write("[General]\r\nversion=2.0\r\n")
+            with open(os.path.join(target, "meta.ini"), "w", encoding="utf-8", newline="") as file:
+                file.write("[General]\r\nmodid=0\r\nversion=1.0\r\n")
+            sync_version(target, base)
+            assert read_version(os.path.join(target, "meta.ini")) == "2.0"
+            with open(os.path.join(target, "meta.ini"), "rb") as file:
+                raw = file.read()
+            assert b"modid=0" in raw, "只改 version 行"
+            assert raw.count(b"\n") == raw.count(b"\r\n"), "CRLF 不能变成 LF"
+            os.remove(os.path.join(base, "meta.ini"))
+            sync_version(target, base)
+            assert read_version(os.path.join(target, "meta.ini")) == "2.0", "本体无 version 时不碰"
+        finally:
+            log.disabled = False
     print("self-check OK")
 
 
